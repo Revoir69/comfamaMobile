@@ -381,7 +381,7 @@ header{
     display: block;
 }
 .invisibleMenu{
-    width: 20%;
+    width: 100%;
     
     
 }
@@ -432,6 +432,7 @@ header{
     position: fixed;
     bottom: 0;
     font-family: 'oswaldmedium';
+    z-index: 999;
 }
 /*===================================0
             TEXTOS
@@ -759,7 +760,7 @@ footer{
     .invisibleMenu ul{
         overflow-x: hidden;
         overflow-y: scroll;
-        height: 550px;
+        height: 100%;
     }
   
   .main-title, .main-presentation-title{

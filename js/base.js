@@ -18,10 +18,10 @@ $(document).ready(function(){
     
     $('.mobile-menu').click(function(){
         if ($(".menu").is(":visible")){
-             $(".menu").slideDown(500);
+             $(".menu").slideUp(500);
                
         } else{
-            $(".menu").slideUp(500);
+            $(".menu").slideDown(500);
             
         }
     })
