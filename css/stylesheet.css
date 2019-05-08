@@ -381,7 +381,7 @@ header{
     display: block;
 }
 .invisibleMenu{
-    width: 100%;
+    width: 20%;
     
     
 }
@@ -760,7 +760,7 @@ footer{
     .invisibleMenu ul{
         overflow-x: hidden;
         overflow-y: scroll;
-        height: 100%;
+        position: absolute;
     }
   
   .main-title, .main-presentation-title{
