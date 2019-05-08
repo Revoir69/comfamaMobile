@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palabras rodantes</title>
+    
+<!-- estilos -->    
+<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+    
+<!-- acciones -->
+<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+<script src="js/jq-sticky-anything.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/base.js" type="text/javascript"></script>     
+<script type="text/javascript" src="js/queryloader2.min.js"></script>
+<script type="text/javascript">
+window.addEventListener("DOMContentLoaded", function() {
+    new QueryLoader2(document.querySelector("html"), {
+        barColor: "#fff",
+        backgroundColor: "#000",
+        percentage: true,
+        barHeight: 0,
+        minimumTime: 1000,
+        maxTime: 50000,
+        fadeOutTime: 1000
+    });
+});
+
+</script>
+</head>
+    
+<style>
+.menu li:hover{
+    background-color: #D3AC8E;;
+    color: #000;
+    
+    }
+    
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 24%;
+    padding-top: 4%;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url(img/btnLect.png);
+    background-repeat: no-repeat;
+    width: 305px;
+    height: 100px;
+}
+    
+.first-paragraph::first-letter{
+    font-size: 5em;
+    line-height: 0;
+    font-family: 'oswaldmedium';
+    color: #D3AC8E;
+    
+}
+
+.section-title{
+   color: #D3AC8E; 
+}
+    
+    
+.menu-selected{
+    color: #fff;
+    background-color: #D3AC8E;
+}
+   
+.line-orange{
+    border: 1px solid #D3AC8E;
+    margin-top: 6%;
+    margin-bottom: 30px;
+}    
+    .chapter-title{
+        margin-top: 5%;
+        font-size: 1.45em;
+    }
+    </style>
+    
+<body class="bg-book9">
+<header>
+    <a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+    <h1 class="brand">Comfama</h1>
+    
+    <img class="botonA" src="img/buttonA.png" alt="boton cambio">
+    
+    <div class="slideHeader">
+         
+        <img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+        <img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+        <img class="resetFont" src="img/reset.png" alt="resetear">
+        <br>
+        <img class="blanco" src="img/blanco.png" alt="btn blanco">
+        <img class="morado" src="img/morado.png" alt="btn morado">
+        <img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+        
+    </div>
+    
+</header>
+     
+    <div class="presentation">
+        
+        <div class="main-container presentation-container">
+            <button id="presentation-close">Cerrar</button>
+            <div class="presentation-scroll">
+                
+                <h1 class="presentation-title">Créditos</h1>
+                
+
+               <p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía</p>
+				
+				<p>Ilustración carátula:<br><br> Diego Arboleda</p>
+                
+                <p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+                <p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+				
+				<p>Agradecimiento especial a la fundación plagio de chile</p>
+
+                
+            </div>
+            
+        </div>
+    </div>   
+    
+     
+    <div class="global-container">
+        <hr class="line-separator line-title" />
+        <h1 class="cafe main-title">Medellín en<br/> <span class="cafe oswald-light">100 palabras</span></h1>
+        <hr class="line-separator line-title" />
+        <!--<div class="main-credits"><p>Roald Dahl, Rudyard Kipling, Aleksandr Pushkin</p><p>María gripe, Ray Bradbury, Selma Lagerlöf, Gianni Rodari</p></div>-->
+        
+        <img class="img-fluid" src="img/imagenlibro9.png" alt="imagenLibro">
+        
+        
+        
+        
+        <div class="main-container-flex" id="container-controls">
+
+            <div class="mobile-menu"></div>
+
+            <div class="invisibleMenu">
+                
+            <div class="menu "></div>
+            
+            </div>
+            <div class="content-container">
+                
+                
+                
+                
+                <!--Prologo -->
+                <div class="slides">
+                    <h2 class="section-title naranjaOs">Prólogo</h2>
+                
+                    <div class="content-text">
+                        
+
+                        <p class="first-paragraph">Decimos «Medellín» y queremos decir habitantes de este valle de Aburrá, incluidos todos los que hemos sido tocados por las historias en estos años en que se ha construido el pueblo antioqueño. Decimos «Medellín en 100» y queremos decir cientos, miles de medellines. El concurso de cuentos cortos Medellín en 100 Palabras es la ventana desde donde vemos la vida de nuestra gente. Es un testimonio de la época actual, ahora que podemos decir que sobrevivimos a tiempos oscuros y celebramos que volvimos a creer en el futuro. </p>
+                        <p>
+
+                        Estamos en 2018 y esta es la primera edición del concurso que acaba de premiar a los autores en tres categorías: infantil —menores de trece años—, juvenil —entre los trece y los diecisiete años— y adultos —mayores de dieciocho años—. Era el momento de pedirles a quienes viven en este territorio cercado por las montañas que nos contaran cómo es su mundo, qué sueñan, a qué le temen. Y lo hicieron. La cifra de cuentos participantes que se inscribieron en la plataforma digital del concurso fue casi 11.000. Llegaron 10.834, tecleados letra por letra con la certeza de que en ellas estaba el relato de su propia existencia. </p>
+                        <p>
+
+                        Medellín en 100 Palabras llegó de la mano de la Fundación Plagio, de Chile, que empezó en Santiago hace dieciocho años y ahora tiene presencia en todo el país y en ciudades de México, Hungría y Colombia. COMFAMA y Metro de Medellín tomaron la iniciativa y convocaron a todas las personas que sintieran el deseo de expresarse. Organizaron talleres en sedes de COMFAMA, en bibliotecas, en instituciones educativas, en el espacio público, en lugares donde la gente quisiera reunirse para oír hablar a los escritores que daban consejos acerca de cómo hacer un cuento corto, cómo crear un personaje, cómo construir el relato de la vida. Tal vez este sea el mayor logro de la iniciativa que busca contagiar el amor por la escritura y, al mismo tiempo, por la lectura, pues es claro que quienes escriben para que otros lean, por lo general sienten deseos de leer a otros que también escribieron. Y no hay dudas de que, en este lugar de Colombia, de cuyo nombre cada vez nos sentimos más orgullosos, hubo una gran movilización alrededor de las historias.</p>
+                        <p>
+
+                        Diez lectores de probado criterio seleccionaron mil cuentos que deberían leer los tres jurados. Y al final, María del Sol Peralta, Pablo Montoya y Juan José Hoyos tuvieron la difícil tarea de escoger a los ganadores. El acta del concurso nos muestra gratas sorpresas. La calidad de los cuentos participantes mereció un alto elogio de los tres escritores que debían juzgarlos. Ahora presentamos el libro completo con los mejores relatos de esta primera edición de Medellín en 100 Palabras. Es el momento de mirarnos por dentro y saber cómo nos vemos a través de los ojos de los autores de esta historia colectiva. </p>
+                        <p>
+
+                        El actual título de la colección Palabras Rodantes lleva en sus páginas los relatos de la gente de Envigado, Caldas, La Estrella, Itagüí, Sabaneta, Bello, Copacabana, Girardota, Barbosa y Medellín con sus corregimientos. Viajarán de mano en mano. Los lectores se sentirán reflejados en ellos y seguramente esperarán con ansias una nueva oportunidad para escribir sus propias experiencias.</p>
+
+
+                        <p class="text-align-right">Juan Diego Mejía</p>
+
+                        <div class="leerMas">¡Comienza tu lectura!</div>
+
+
+                        <hr class="line-separator line-orange" />
+
+                    </div>
+                </div>
+                 <!--Cuento 1 -->
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Acta del jurado</h2>
+                    <h1 class="chapter-title cafe">Medellín en<br/><span class="oswald-light cafe">100 palabras</span></h1>
+                    
+                    <div class="content-text">
+                        <p class="first-paragraph">Los jurados María del Sol Peralta, Juan José Hoyos y Pablo Montoya, luego de leer los cuentos seleccionados en las categorías adulto, juvenil e infantil, han decidido por unanimidad otorgar los tres primeros premios en cada categoría a los siguientes cuentos: </p>
+                        
+                        <div class="cuento9_ganadores">
+                            <h3>Categoría adultos</h3>
+                            <ol>
+                                <li>Dos veces sí, tres no (4669)</li>
+                                <li>Como un gallinazo en la noche (2999)</li>
+                                <li>Historias negras (3941)</li>
+                            </ol>
+
+                            <h3>Categoría adultos</h3>
+                            <ol>
+                                <li>Dos veces sí, tres no (4669)</li>
+                                <li>Como un gallinazo en la noche (2999)</li>
+                                <li>Historias negras (3941)</li>
+                            </ol>
+
+                            <h3>Categoría juvenil</h3>
+                            <ol>
+                                <li>¿Dónde está mamá? (7447)</li>
+                                <li>Entregar una carta de amor cruzando fronteras invisibles (1588)</li>
+                                <li>Calle 34 (7490)</li>
+                            </ol>
+
+                            <h3>Categoría infantil</h3>
+                            <ol>
+                                <li>Amor muy animal (5723)</li>
+                                <li>Inicio y desenlace: la visita del conde Fane a Medellín (9789)</li>
+                                <li>Ovnis florecidos (6127)</li>
+                            </ol>
+                        </div>
+                            <p>Igualmente, el jurado seleccionó 91 cuentos en las diferentes categorías para que sean publicados en el libro Medellín en 100 palabras que saldrá en la colección Palabras Rodantes de Comfama y el Metro de Medellín. </p>
+                        
+                            <p>El jurado considera que el nivel de los cuentos presentados en la categoría adultos es el de más alta calidad y, en vista de ello, la mayor parte de los textos seleccionados para el libro pertenecen a esta categoría. En la categoría juvenil, señala una calidad desigual. Y en la categoría infantil, aunque se presentaron muy buenos cuentos, el jurado considera que en muchos de ellos es notoria, de una manera u otra, la intervención de los adultos. </p>
+                        
+                            <p>En general, los participantes han logrado condensar en sus cuentos las tantas y complejas facetas de una ciudad como Medellín: una ciudad que crece llena de conflictos, pero también en medio de una vitalidad desbordante. Las temáticas de los cuentos leídos son varias, pero el jurado señala algunos motivos recurrentes: la violencia a la que ha sido y siguen siendo sometidos los espacios urbanos y sus habitantes, la cotidianidad del Metro y su universo de idas y venidas, la presencia afro, los lazos míticos y literarios que sugieren algunas de estas pequeñas historias, la realidad sentimental —el ensueño, la nostalgia, la soledad, el deseo—. Otro aspecto importante, además de la alta participación —se presentaron más de 13.000 cuentos—, es el origen popular de estas historias, lo cual significa que la escritura literaria definitivamente está permeando profundamente nuevos estratos sociales. </p>
+                        
+                            <p>El jurado, por último, celebra la convocatoria de este concurso recordando que una ciudad existe en la medida en que es narrada y anima a Comfama a que siga estimulando la creatividad artística.</p>
+                        
+                            <p>Esta deliberación se dio el día 8 de octubre de 2018 en la ciudad de Medellín.</p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                 <!-- /Cuento 1 -->
+                
+
+                
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Categoría Adultos</h2>
+                    <h1 class="chapter-title cafe">Cuentos ganadores</h1>
+                    <div class="content-text">
+                        
+                        <p class="cuento9_number">N.° 4669</p>
+                        <p class="cuento9_title"><span>Título:</span> Dos veces sí, tres no.</p>
+
+                        <p>El cielo de ayer anocheció extrañamente despejado. Desde el Doce siempre vi a Santo Domingo alumbrarse con bastante rapidez. A las 7:30, la hora que acordamos, estiré la mano para bajar el breaker. Todo lo oscurecí y lo encendí dos veces. Luego, en la montaña de enfrente, vi tu calle iluminada y en ella la luz de tu casa, que se apagó y se encendió también dos veces. Anoche me dijiste que sí y el aire de hoy bajó limpio.</p>
+
+                        <p><strong>Estiben Valencia Agudelo, </strong>22 años, Medellín.</p>
+                        
+                        <p class="cuento9_number">N.° 2999</p>
+                        <p class="cuento9_title"><span>Título:</span> Como un gallinazo en la noche</p>
+
+                        <p>La vuelta con Ícaro fue distinta. Él se cansó de andar entre callejones, parchar en esquinas y jugar futbolito con arcos de piedritas. De andar con pintas y verles la cara a las cuchas de mala cara. Un día dejó de tirar carreta, se puso unas alas grandes que tenía muy bien guardadas y pensó: «Donde me vean a esta hora, me tumban». Entonces esperó que fuera de noche y se fue volando arriba, suavecito, para no destechar las casas ni despeinar a la gente, hasta que se vio como un puntico diminuto en medio de la luna toda brillante.</p>
+
+                        <p><strong>Santiago Gallego Franco, </strong>36 años, Medellín. </p>
+                        
+                        
+                        <p class="cuento9_number">N.° 3941</p>
+                            <p class="cuento9_title"><span>Título:</span> Historias negras</p>
+
+                        <p>Esa construcción, ahí como usté la ve, no sale del piso no más. Eso pa’l fondo tiene su raíz, su oscuridad, su negramenta. Esas columnas no son hechas de cemento, sino a fuerza de chontaduro y borojó. Este negro se vino con su pica al hombro. Con su historia de mina y río. De brujos y santos. Con su músculo y su luz interior pa alumbrar huecos. Negro de oscuridades, de raíces. Negro cantor. Trabajé en los socavones del Metro de Medellín. Yo cantaba allá abajo. Otros se asfixiaban. Yo puse los huecos. Y, desde arriba, otros echaron el cascajo.</p>
+
+                        <p><strong>Juliana Henao Alcaraz, </strong>27 años, Medellín.</p>
+                        
+                        <hr class="line-separator line-orange" />
+                    </div>
+                </div>
+                
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Categoría Juvenil</h2>
+                    <h1 class="chapter-title cafe">Cuentos ganadores</h1>
+                    <div class="content-text">
+                        
+                        <p class="cuento9_number">N.° 7447</p>
+                        <p class="cuento9_title"><span>Título:</span> ¿Dónde está mamá?</p>
+
+                        <p>¿Y si mamá no nos abandonó? ¿Y si fue un accidente que jamás hubiese vuelto? De seguro no alcanzó un taxi, el bus la dejó donde no era. Y no porque el conductor así lo deseara, sino porque mamá era [es] muy despistada y se quedó dormida. ¿Y si olvidó el camino a casa? Le apuesto a que los pájaros se comieron las migas de pan que la hacían volver. Por eso decidí seguir tirando piedras, no creo que las aves o algún otro animal quisiera piedras para cenar. </p>
+
+                        <p><strong>Leidy Xiomara Arias Uribe, </strong>17 años, Itagüí. </p>
+                        
+                        <p class="cuento9_number">N.° 1588</p>
+                        <p class="cuento9_title"><span>Título:</span> Entregar una carta de amor cruzando fronteras invisibles.</p>
+
+                        <p>¿Toco el timbre o solo la puerta? Si escojo el timbre, ¿entonces qué tanto lo debería presionar? ¡Ah! —se ríe, recordando las bromas de niño—. Definitivamente no debo dejarlo presionado con un chicle… Bien. ¿Y si toco la puerta? Entonces toco suave. Vacilando en voz alta, carta en mano, se da cuenta de que es sospechoso que un joven esté parado en medio de la calle a esa hora. Se dirige hacia la casa, levanta la mano, y antes de tocar la puerta con los nudillos, la toca con la cabeza. La bala queda incrustada en la puerta.</p>
+
+                        <p><strong>Samuel Restrepo Agudelo, </strong>17 años, Medellín. </p>
+                        
+                        
+                        <p class="cuento9_number">N.° 7490</p>
+                        <p class="cuento9_title"><span>Título:</span> Calle 34</p>
+
+                        <p>La madre espera a su hijo de la guerra; ficticio como el Dios en el que se apoya cada mañana. En una banquita para ella sola, ya reservada diariamente, en la calle 34</p>
+
+                        <p><strong>Ana María Toro Pérez, </strong>16 años, Medellín. </p>
+                        
+                        <hr class="line-separator line-orange" />
+                    </div>
+                </div>
+                
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Categoría infantil</h2>
+                    <h1 class="chapter-title cafe">Cuentos ganadores</h1>
+                    <div class="content-text">
+                        
+                        <p class="cuento9_number">N.° 5723</p>
+                        <p class="cuento9_title"><span>Título:</span> Amor muy animal</p>
+
+                        <p>En la bella zona de San Sebastián de Palmitas, cierto día un gato negro se enamoró perdidamente de una yegua rosada. Cada vez que la veía le declaraba su amor. Ella le decía que la naturaleza no permitía este vínculo amoroso por diferencia de especies, el gato continuó triste. Cierta vez caminando por un tejado se encontró una hada madrina a quien pidió le concediera el deseo de ser un caballo plateado; lo que se hizo realidad. El hada dijo: « ¡Qué tan raro! esta mañana una yegua rosada me pidió que la convirtiera en una gata blanca...».</p>
+
+                        <p><strong>Leidy Xiomara Arias Uribe, </strong>17 años, Itagüí. </p>
+
+                        <p class="cuento9_number">N.° 9789</p>
+                        <p class="cuento9_title"><span>Título:</span> Inicio y desenlace: la visita del conde Fane a Medellín</p>
+
+                        <p>Un niño, de cabello rubio como el oro, ojos azules como el mar y piel blanca como la nieve tocó a mi puerta. Le pregunté su nombre y dijo que era el conde Fane de Inglaterra y que había elegido al azar mi casa porque quería que alguien le mostrara la hermosa ciudad de Medellín. Le dije que me llamaba Ana y lo llevé a conocer el metro, el Palacio de la Cultura, la plaza Botero; también fuimos en cable al parque Arví. Nos divertimos mucho porque algunas veces en Medellín, como en los cuentos, no hay nudo.</p>
+
+                        <p><strong>Ana María Ospina Giraldo, </strong>12 años, Medellín. </p>
+                        
+                        <p class="cuento9_number">N.° 6127</p>
+                        <p class="cuento9_title"><span>Título:</span> Ovnis florecidos</p>
+
+                        <p>En pleno desfile de silleteros tembló la tierra. Toda la ciudad se estremeció. De repente, el edificio Coltejer se convirtió en una nave espacial. ¡No lo podíamos creer! Mientras los extraterrestres llevaban a los silleteros de Santa Elena a la que ahora era una nave, todos corríamos asustados, desde aquel día no sabemos nada de ellos, pero cada tanto aparecen en la luna unas formas muy curiosas parecidas a las silletas y los científicos han observado un sembrado de flores en el lado más oscuro de esta.</p>
+
+                        <p><strong>Alejandro González Monsalve, </strong>10 años, Medellín.</p>
+                        
+                        <hr class="line-separator line-orange" />
+                    </div>
+                </div>
+                
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Cuentos finalistas</h2>
+                    <div class="content-text">
+                        
+                        <p class="cuento9_number">N.° 30</p>
+                        <p class="cuento9_title"><span>Título:</span>Fin</p>
+                        <p>Tus ojos se abren e inclinas tu cabeza hacia atrás. Miras directo al cielo y la luz te invade; atraviesa tus ojos y recorre todo tu cuerpo. El sol te acaricia como nadie jamás lo ha hecho. Al final te pierdes en el cielo azul, que ya no es azul, es púrpura. Él corre hacia ti, no puedes verlo, pero lo sientes. Cierras tus ojos por un instante y sientes cómo sus sentimientos caen sobre tus labios. Sabes que está sobre ti, pero ya es tarde. El cielo se tiñe de rojo y finalmente pierde saturación hasta sumirse en sombras.</p>
+                        <p><strong>José Ángel Pérez Grisales,</strong> 20 años, Medellín.</p>
+
+                        <p class="cuento9_number">N.° 38</p>
+                        <p class="cuento9_title"><span>Título:</span>Helena y las cometas</p>
+                        <p>— ¡HELENA, NO MÁS CUERDA A LA COMETA! —gritaba su padre mientras, esquivando niños, trataba de llegar corriendo hasta ella para evitar que dejara escapar otra cometa.</p>
+                        <p>Al llegar, vio que era demasiado tarde; Helena miraba al cielo mientras su juguete intentaba llegar a las nubes.</p>
+                        <p>—No te voy a hacer otra, ya van tres esta semana y tienes que aprender a cuidarlas.</p>
+                        <p>Mirando a su padre, sin perder de vista la larga cola de la cometa, Helena se encogió de hombros y pensó: «Cuando sea grande miraré a Medellín desde las nubes, así como lo hacen las cometas».</p>
+                        <p><strong>José Luis González Parias,</strong> 36 años, Envigado</p>
+
+                        <p class="cuento9_number">N.° 53</p>
+                        <p class="cuento9_title"><span>Título:</span>Fantasmas</p>
+                        <p>Miré el cielo toda la noche. Sin parpadear. Esperaba ver una estrella fugaz para pedirle mi deseo. Como a las 3:45 vi una. Pequeña. Al otro día un noticiero dijo que no era una estrella fugaz, sino un asteroide. No sé cuál es la diferencia entre estrella fugaz y asteroide ¿No son las estrellas fugaces unos asteroides y los asteroides unas estrellas fugaces? En la madrugada entro de nuevo a la casa. En la sala sigue ella sollozando, apretando esa fotografía donde estamos los dos trepando el Nutibara. Sudorosos, sonrientes.</p>
+                        <p>—¡Mírame! —le grito—. Es inútil. No sabe que sigo aquí.</p>
+                        <p><strong>Antonio Úsuga Monsalve,</strong> 37 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 57</p>
+                        <p class="cuento9_title"><span>Título:</span> 24 de octubre de 1999</p>
+                        <p>A las 3:00 a. m. nos despertó el sonido de un golpe seco contra la ventana de nuestro cuarto. De inmediato, Julián y yo salimos al jardín a explorar. Aunque no había rastros de huellas en el pasto, estuvimos de acuerdo: el vecino había lanzado un balón justo al centro del vidrio. Esa tarde le habíamos ganado en el partido de fútbol y, bien malcriado que era, seguramente la rabia no lo había dejado dormir.</p>
+                        <p>—Ustedes sí son estúpidos —nos dijo Magdalena, cuando salió en pijama—. ¿No ven que estalló una bomba al frente de la oficina del papá?</p>
+                        <p><strong>Verónica Toro Restrepo,</strong> 28 años, Sabaneta</p>
+
+                        <p class="cuento9_number">N.° 111</p>
+                        <p class="cuento9_title"><span>Título:</span>El pájaro</p>
+                        <p>Toqué el timbre y me bajé en Palacé. Caminé hasta el parque San Antonio recuperando cada paso de ese día. Y ahí estaban los dos pájaros; las esculturas de Botero. Una de ellas, de la cual no tengo memoria, impecable, apenas bañada delicadamente por el sol. Y la otra, idéntica a la primera, hecha añicos, como si se tratara de una pieza de arte contemporáneo homenajeando a los perdidos en una batalla perdida. Me asomé a la placa conmemorativa: Junio 10/1995. 22 muertos dejó la explosión... «Por fin te encontré», dije, mirando mi nombre escrito entre las víctimas del atentado.</p>
+                        <p><strong>Antonio Úsuga Monsalve,</strong> 37 años, Medellín</p>
+                        <p></p>
+
+                        <p class="cuento9_number">N.° 155</p>
+                        <p class="cuento9_title"><span>Título:</span>Amarillo fugaz</p>
+                        <p>—¿De qué color es Medellín? —preguntó Valeria mientras observaba a través de una ventana del primer vagón.</p>
+                        <p>—Amari… —Antes de terminar la respuesta, Manuel se dio cuenta de que el árbol que había visto fugazmente se quitaba su última prenda y se quedaba con los huesos marrones, en una hermosa desnudez.</p>
+                        <p>—Gris —contestó agobiado ante la revelación—. Por la segunda ley de Newton ahora la ciudad es gris.</p>
+                        <p>Después de una semana de ese sol que pinta lunares, las nubes se oscurecían y la gente en el vagón preparaba sus paraguas.</p>
+                        <p><strong>Mateo Ruiz Galvis,</strong> 19 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 169</p>
+                        <p class="cuento9_title"><span>Título:</span>Sísifo en las calles</p>
+                        <p>Levantó el brazo derecho como si fuera un gesto solemne. Subió los tres escalones y, mientras repasaba las palabras clave de su discurso, se aclaró la voz con una tos voluntaria. Evitando mirar las caras del público comenzó su retahíla. Por un momento sus ojos se aguaron y su voz se quebró: era necesario si quería convencerlos. Terminó y esperó alguna respuesta de ellos, que permanecieron callados en su desalmado quietismo. Bajó los tres escalones de la puerta de atrás y repitió el gesto solemne, como si estuviera pagando alguna eterna maldición de un antiquísimo dios pagano.</p>
+                        <p><strong>Antonio José Gómez Gutiérrez,</strong> 24 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 295</p>
+                        <p class="cuento9_title"><span>Título:</span>Azar</p>
+                        <p>Despertó esa mañana. Se dio una ducha, se acicaló, salió, pasó por su café preferido: El Paisa. Pidió el de siempre y nunca más volvió a dormir.</p>
+                        <p><strong>Katerine Taborda Montoya, </strong>24 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 298</p>
+                        <p class="cuento9_title"><span>Título:</span>Problemas laborales</p>
+                        <p>Era amable y locuaz. Las meseras, los músicos y el barman del Málaga lo conocían. Siempre iba solo, siempre tomaba aguardiente al menudeo en la barra. Esa noche habló con rencor de su jefe.</p>
+                        <p>—¡Es un cuervo disfrazado de paloma! ¡Todos piensan que es bueno, pero es mentiroso, injusto, cruel! —dijo.</p>
+                        <p>Nunca lo habían visto tan borracho, por eso le pidieron que no condujera en tal estado. Aceptó a regañadientes. Salió trastabillando a la calle y, de repente, surgieron de su espalda unas enormes alas blancas. Se elevó con dificultad y, torpemente, como un insecto recién fumigado, voló al sur.</p>
+                        <p><strong>Yesid Alexis Espinosa Zapata,</strong> 39 años, Medellín</p>
+
+                        <p class="cuento9_title">N.° 512</p>
+                        <p class="cuento9_number"><span>Título:</span>Liberación</p>
+                        <p>—¡Si pudiera! —dijo A.</p>
+                        <p>—¿Y por qué no? —contestó B.</p>
+                        <p>A guardó silencio, mientras tanto C escuchó atento lo que A dijo y luego lo realizó. Así fue como el país logró quedar libre después del certero disparo que impactó la sien del corrupto gobernante.</p>
+                        <p><strong>Gabriel Jaime Castaño Uribe,</strong> 36 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 537</p>
+                        <p class="cuento9_title"><span>Título:</span>Positivo</p>
+                        <p>—No te puedo seguir viendo, —le dijo él ese día en la estación de gasolina—. Donde mi esposa se dé cuenta y se lleve a la niña… Te juro que soy capaz de matarme.</p>
+                        <p>Ella dijo que lo entendía, mientras arrugaba los resultados de la prueba de embarazo que había guardado en el bolso.</p>
+                        <p><strong>Juan Fernando Jaramillo Montoya,</strong> 24 años, Envigado</p>
+
+                        <p class="cuento9_number">N.° 6467</p>
+                        <p class="cuento9_title"><span>Título:</span>Inocencia</p>
+                        <p>Profesora, mañana no vengo a la escuela porque llega la cigüeña a mi casa. Las conozco desde el nacimiento de mis ocho hermanitos. Cuando viene, vuela hasta la casita donde vivimos, arriba en las montañas de Medellín. Mamá la espera en la cama y nosotros nos quedamos calladitos hasta que aterriza en el techo. La cigüeña toca la puerta, papá abre y con un palo le da en la cabeza. La cocinamos en una olla. Luego esperamos que papá embarace de nuevo a mamá para comernos otra.</p>
+                        <p><strong>Álvaro de Jesús Tangarife Ortiz,</strong> 53 años Medellín</p>
+
+                        <p class="cuento9_number">N.° 2617</p>
+                        <p class="cuento9_title"><span>Título:</span>Hombre raro</p>
+                        <p>Hombre raro. A veces se viste de negro con una capa roja y parece un vampiro, pero otras veces se viste con una camiseta colorida y los pantalones aún más coloridos. Compra comida de perro y ni siquiera tiene uno. Cuando hay sol, sus ojos son verdes, y cuando está oscuro el cielo, azules. No habla ni sonríe. No sé si es positivo o negativo, serio o charro; siempre oculta sus sentimientos. ¿Quién lo entiende?</p>
+                        <p><strong>Sofía Yepes Vélez, 9 años,</strong> Medellín</p>
+
+                        <p class="cuento9_number">N.° 846</p>
+                        <p class="cuento9_title"><span>Título:</span>Canto a la inocencia</p>
+                        <p>«Orión bajó del cielo y llenó la 13 de estrellas. ¡Llovieron y llovieron estrellas! Caía la gente al verlas tan bellas. ¡Toda Colombia supo de ellas!», cantaba mi abuelita y mi mamá se ponía a llorar. En San Javier, todo el que la escuchaba se ponía a llorar. Yo no entendía por qué, siendo una canción tan linda. ¡Peor habría sido que Orión, en vez de estrellas, nos hubiera llenado de balas!</p>
+                        <p><strong>Sara María Rodríguez Pino,</strong> 23 años, Envigado</p>
+
+                        <p class="cuento9_number">N.° 1127</p>
+                        <p class="cuento9_title"><span>Título:</span>Buscando las estrellas</p>
+                        <p>Érase una vez, en un pueblo muy lejano, treinta y cinco estrellas que vivían en discordia con otras noventa y dos. Eran famosas por su esplendor, pero se aborrecían entre sí ya que unas decían brillar más que otras. Cuando el rey del pueblo se enteró de su conducta, se enfureció y decidió enviarles una constelación para efectuar su castigo: ser apagadas para siempre. Una de esas estrellas era mi papá; yo creo que era de las más brillantes. Mi mamá siempre dice que él luchó fuertemente para proteger a las estrellas, pero que de todas formas lo apagaron.</p>
+                        <p><strong>Luisa Fernanda Lopera Sosa,</strong> 27 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 1174</p>
+                        <p class="cuento9_title"><span>Título:</span>Irrealidad</p>
+                        <p>María Antonieta y yo siempre jugamos juntas, vivimos en el mismo barrio, estuvo conmigo hasta la universidad. Nunca se la presenté a mis padres, quizá no tuve oportunidad. Me parecía más grande, hablaba raro y eso me causaba gracia. Amaba subirse al metro y pasear por la ciudad. Un día me invitó a una iglesia, me pareció raro, pero la acompañé. Al llegar a la puerta señaló un osario y me dijo: «Mira hacia allí». En la tercera columna del lado derecho pude leer: María Antonieta Paz 1927-1956. Ese fue el último día que la vi.</p>
+                        <p><strong>Érika Viviana Molina Gallego,</strong> 26 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 1427</p>
+                        <p class="cuento9_title"><span>Título:</span>El Mago</p>
+                        <p>A sus ocho años, encontró en la magia la distracción y el consuelo necesarios. Creía que un día los poderes obrarían y entonces, su padre, aparecería por fin. Pasaba noches completas practicando trucos, cerrando los ojos con la ilusión intacta. Más tarde, entendió que la muerte era definitiva y abandonó su pueblo natal. Llegó a Medellín, donde en vez de «brujo» lo llamaban «mago» y abrió su propio teatro.</p>
+                        <p>—Mago, ¿es verdad que usted puede hacer que mi papa aparezca? —le preguntó un niño al finalizar una función.</p>
+                        <p>El mago, con tristeza conocida, supo que el truco anhelado fallaba de nuevo.</p>
+                        <p><strong>Juliana Londoño Villegas,</strong> 28 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 1946</p>
+                        <p class="cuento9_title"><span>Título:</span>Quiromancia</p>
+                        <p>Con sus ojos esmeraldas y su vestir gitano, ella se robó toda la atención al subir al tren en la estación Aguacatala; se sentó a mi lado, cruzamos la mirada y sin mediar palabra tomó mi mano y empezó a «leerla». Yo la miraba intrigado sin decir nada. El tren volvió a detenerse, sus ojos se volvieron hacia los míos con una expresión de asombro que no pude descifrar; trató de decir algo, pero el sonido del cierre de puertas se lo impidió y de la misma manera como había llegado, abandonó el tren.</p>
+                        <p><strong>Alexánder Mesa Pareja,</strong> 42 años, Envigado</p>
+
+                        <p class="cuento9_number">N.° 1987</p>
+                        <p class="cuento9_title"><span>Título:</span>Clásico</p>
+                        <p>—¡Que me importa muy poco quien ganó, que se odien o estén de pelea! ¡Aquí a todos les toca limpiar!</p>
+                        <p>Los dos chicos se miraron con furia y luego a su interlocutor.</p>
+                        <p>—¡A ver, usted, a barrer! —le dijo al chico de camiseta blanca y rayas verdes— ¡Y usted, a lavar! —le dijo al chico de camiseta roja y azul— ¡Y espero que cuando vuelva todo esté reluciente y no tengamos otro problema!</p>
+                        <p>Volvió a las dos horas. Todo estaba limpio y en orden. Los dos chicos ya sin camiseta tomaban juntos una cerveza.</p>
+                        <p><strong>Natalia Girón Quintero,</strong> 40 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 2003</p>
+                        <p class="cuento9_title"><span>Título:</span>Denuncia ambiental</p>
+                        <p>Íbamos caminando por la Oriental y un grupo de veinte bajó por ella y se la llevaron. Tan solo alcancé a escuchar su grito. Lo único que me queda es el zapato que se le cayó. Los secuestradores eran verdes y con picos, además de ruidosos.</p>
+                        <p>—¿Y qué están pidiendo? —me preguntó el oficial de policía.</p>
+                        <p>—Más árboles, esos loros quieren más árboles —respondí.</p>
+                        <p><strong>Jhon Eduardo Zapata Estrada,</strong> 23 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 2031</p>
+                        <p class="cuento9_title"><span>Título:</span> Cuando las casas se fueron del barrio</p>
+                        <p>Ellas se empezaron a ir una tras otra, así como se muere la gente de vieja, de un día para otro con ese último suspiro que siempre se teme después de cierta edad. Quedaron los laureles como evidencia del nombre del barrio y una que otra casona que se resiste, temerosa, intentando pasar desapercibida entre formidables torres. Ya las casas no me guiñan cuando paso, con sus puertas abiertas que invitan a entrometerse unos segundos en sus vidas; más bien me ignoran las torres arrogantes. Desde que las casas decidieron mudarse, yo perdí la noción del tiempo.</p>
+                        <p><strong>Paula Barrientos Gil,</strong> 29 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 2032</p>
+                        <p class="cuento9_title"><span>Título:</span>Reciclar sonrisas</p>
+                        <p>Don Germán viene sin falta dos veces por semana, estaciona su carro de madera en el barrio donde todos lo conocen y, paciente, trabaja hasta los días de lluvia. Él hace lo que nadie quiere hacer; él recicla lo que la gente decidió que no servía más, es responsable de separar lo bueno de lo viejo, lo importante de lo nostálgico. En este lado de la ciudad, donde es mejor cubrirse los ojos ante lo sucio o lo feo, don Germán sí saluda a los vecinos. Hoy encontró una nariz de payaso en la basura, se la puso y sonrió.</p>
+                        <p><strong>Paula Barrientos Gil,</strong> 29 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 2038</p>
+                        <p class="cuento9_title"><span>Título:</span>La última noche</p>
+                        <p>Conté varios pasos lentos, Junín camino de enigmas, travesía de pasajes, tiendas y muchedumbre. El jolgorio, la tradición mancillada; otros pasos más y el corazón agitado; me esperaba el parque Bolívar con sus tristes putas, sus cansadas travestis y millares de palomas. Las cuatro esquinas, como los cuatro puntos cardinales —Sofía, Clara, Bertha y Gonzalo— amigos de las noches desviadas, éramos el quinteto Esquizofrenia, y cantábamos bajo la tenue luz de luna por la calle del pecado. Bolívar, bruma de nostalgias, olvidos y desencuentros, una noche ya no éramos cinco, sino cuatro. «Por marica», fue lo último que escuché.</p>
+                        <p><strong>Fray Esteban Atehortúa,</strong> 24 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 2323</p>
+                        <p class="cuento9_title"><span>Título:</span>Matoneo</p>
+                        <p>«Gorda», le decían sus hermanas muertas de la risa en la casa en Villa Hermosa. «Gorda», los maestros en las aulas; en el patio, las colegialas perversas. «Gorda», intuía en las miradas de los santos en la Sagrada Eucaristía. «Gorda», por La Playa, contoneándose con modorra; en la tienda de ilusiones de don David y doña Flora. Y perdió la cabeza. Se marchó sin dejar razón. Jamás volvió por la casa, por la escuela, por la iglesia. Ahora le admiran sus voluminosas formas, la postura imponente; voluptuosa e indolente toda ella, en el parque de Berrío, trepada en su pedestal.</p>
+                        <p><strong>José Fernando Suárez Isaza,</strong> 54 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 2554</p>
+                        <p class="cuento9_title"><span>Título:</span>Machete sin filo</p>
+                        <p>Llegaron desplazados de Urabá; se instalaron en las laderas de Moravia. José miraba triste el hacinamiento de su familia y extrañaba la amplitud del campo, los tinticos que tomaba en el pueblo con sus amigos y el atardecer en el cafetal. Reemplazó las mulas por los buses y los caminos verdes por calles oscuras. Un día, su hijo, viendo el rostro sombrío de José, le preguntó:</p>
+                        <p>—Apá, su machete ya no tiene filo, ¿se lo hago amolar?</p>
+                        <p>—Yo pa qué machete afilao si ya no tengo finca.</p>
+                        <p><strong>Marcela Vélez Vélez,</strong> 53 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3046</p>
+                        <p class="cuento9_title"><span>Título:</span>En el bus</p>
+                        <p>Buenas noches, señores pasajeros. Disculpen que venga a incomodarlos, por favor. Este cuento que voy a relatar no es de la vida real, ni de un libro… ¡es arte! Un gallo que residía con su ama en un edificio, se enamoró de una hermosa gata blanca; al verla cantaba canciones del corazón, pero ella no correspondía. ¡Vaya tristeza del gallo! Él pensó que ella no lo escuchaba; entonces decidió cantar con toda la fuerza que le habitaba. Lo hizo tan fuerte, tan fuerte, que se rompieron los vidrios del edificio y se rompió también… una hermosa ga-ta blan-ca de por-ce-la-na.</p>
+                        <p><strong>Sara Henao Giraldo,</strong> 27 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3051</p>
+                        <p class="cuento9_title"><span>Título:</span>Amor de metro</p>
+                        <p>Ese martes, como otros tantos, Juan se levantó de su cama, se organizó y se despidió de sus gatos para ir a trabajar. En otra cama estaba ella, se sentía especial y se esforzó más de lo normal por verse hermosa, sabía que hoy podría ser el día. Ambos se buscaban sin saber si existían, tomaron el mismo tren hacia el sur, pero el destino distraído olvidó un pequeño detalle: ponerlos en el mismo vagón.</p>
+                        <p><strong>Daniela Higuita Pérez,</strong> 25 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3060</p>
+                        <p class="cuento9_title"><span>Título:</span>Arrepentimiento</p>
+                        <p>Si la muerte fuera como la pintan, la buscaría en mis montañas, pediría en una iglesia que se apiade de mi alma. Si fuera como otros esperan, traería el apocalipsis: nada más que fuego, agua, tal vez hielo. Si fuera misericordiosa, no dudaría en aparecer en tantos lechos donde la esperan. Si la muerte fuera como yo quisiera, me habría abrazado hace años cuando se lo pedí por vez primera. Pero la miserable prefiere ocultarse en los profundos rincones de las casas, camuflarse en el bullicio de la gente, aparecer en mi puerta y echarse a reír, antes que llevarme.</p>
+                        <p><strong>Ana María Restrepo Arteaga,</strong> 26 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3139</p>
+                        <p class="cuento9_title"><span>Título:</span>Superación personal</p>
+                        <p>Martín va en el metro mientras la multitud de la hora pico sigue llenando el coche. Frente a él aparece la misma chica de ayer. ¡Cómo olvidarla! Le gustó. Ella sigue leyendo concentrada el libro del día anterior y del que no aparta la mirada. Martín trata de ver el título, pero la delicada mano de largos dedos lo cubre. El anuncio de la última parada hace que la joven lo observe fugazmente, soñadora. El libro «se cae» de sus manos, Martín lo recoge y antes de devolvérselo mira indiscreto el Título: «Cómo encontrar el amor de tu vida».</p>
+                <p><strong>Álex Mauricio Correa López,</strong> 44 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3151</p>
+                        <p class="cuento9_title"><span>Título:</span>Perdido en el espacio</p>
+                        <p>Centro de mando, acabo de hacer un aterrizaje forzoso en la tierra, he llegado a una ciudad llamada Medellín; nunca había visto tal cantidad de montañas con tanta gente viviendo en ellas. Los lugareños me han tratado muy bien y me han dado comida y bebida. Unas personas me llevaron a un lugar que llaman «Barrio Triste» para ayudarme con un problema en la nave; es raro porque nadie se ve triste allí. Lo que no entiendo es por qué están desarmando el motor si solo necesitaba combustible.</p>
+                <p><strong>Laura Buriticá Mejía,</strong> 24 años, Caldas</p>
+
+                        <p class="cuento9_number">N.° 3208</p>
+                        <p class="cuento9_title"><span>Título:</span>Mi noche triste</p>
+                        <p>«Papá, papá, abra los ojitos», escuchaba entre sollozos a su hija Isabel. Pero él estaba lejos, en el viejo Guayaquil de su juventud. Llevaba el sombrero ladeado, como Carlitos. Parado en la puerta del bar Perro Negro, veía el desfile de personas que llegaban en escalera de todos los rincones de Antioquia. Tomó el aguardiente de la barra y lo bebió despacio, sintiendo el recorrido que el líquido hacía de su boca a sus entrañas. La decisión estaba tomada: a la muerte llegaría en el tranvía de sus 23 años con Mi noche triste, cantada por Gardel, como banda sonora.</p>
+                <p><strong>Héctor Oswaldo Gómez Pérez,</strong> 38 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3328</p>
+                        <p class="cuento9_title"><span>Título:</span>El delito, el pecado y la culpa</p>
+                        <p>Estaban el delito, el pecado y la culpa tomando trago en un viejo bar llamado El Diablo, en el centro de Medellín.</p>
+                        <p>—¿Y cómo van los negocios? —se preguntaron—. Pues no faltan la ley, el cura y la moral desestabilizando el mercado.</p>
+                        <p>Sorpresivamente les cayó la norma y todos los bebedores desaparecieron inmediatamente, por supuesto se fueron sin pagar la cuenta.</p>
+                        <p>—Llego y desaparecen —dijo la norma.</p>
+                        <p>Y entretanto el cantinero pensó: «No siempre estarás aquí, es como el orden, la limpieza y la belleza, no siempre permanecen».</p>
+                <p><strong>Juan Muñoz,</strong> 60 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3411</p>
+                        <p class="cuento9_title"><span>Título:</span>Metamorfosis del sueño</p>
+                        <p>Apreciado señor rentista, por favor aleje con su miserere de goteante vacunador, las ratas que devastan mi cabeza. Ya no puedo más. Si llegan a los ojos —se lo advierto—, no podré cuidar para su deseo mi sombra ansiosa, cada vez más agitada, a punto de abrazar, hasta la perdición, en las noches, los dorados bulevares del grito donde soy, sin pausa, embelesada en la niebla nueva de esta ciudad, una atractiva muñeca feliz que multiplica sueños hasta el amanecer. Sé que se desvela por verme desnuda. Mire que otros cobradores de deudas también quieren ganarle la partida.</p>
+                <p><strong>Édgar Albeiro Trejos Velásquez,</strong> 62 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3509</p>
+                        <p class="cuento9_title"><span>Título:</span>1987</p>
+                        <p>Al mirar al cielo no podía creerlo: incluso el atardecer se había aliado con la muerte para cubrir de sangre el centro de la ciudad.</p>
+                <p><strong>Valentina Arteaga Jiménez,</strong> 23 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3616</p>
+                        <p class="cuento9_number"><span>Título:</span>Desierto</p>
+                        <p>Diez, veinte, treinta muertos. Cien, doscientos, ¡miles! La guerra pasó por el barrio arrasando a todos los hombres. Las viudas y los huérfanos dedicaron sus horas a llorar: ceremoniosos recordaban, lágrima tras lágrima, a sus hermanos, padres e hijos. Eran rituales maratónicos de impotencia. Transcurrió el tiempo hasta que la rutina secó el llanto de todos en el pueblo. Manuelita Benavides, experta negociante, se percató del hecho: los ojos de los niños y las viudas estaban terrosos, áridos. Y pronto, cambió el letrero de su negocio, que prometía brebajes, por uno que le resultó más conveniente: «SE ENSEÑA A LLORAR».</p>
+                <p><strong>Mateo Valencia Atehortúa,</strong> 30 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3958</p>
+                        <p class="cuento9_title"><span>Título:</span>La boca</p>
+                        <p>Cuando el niño vio por primera vez la ciudad de aquel valle profundo —el bus bordeando las montañas en una madrugada oscura, las luces de las casas como millones de dientes luminosos—, se dijo: «Parece una boca». El día que le mataron a su hermano: «Muerde, como una bestia». Y varios años después, tras el encuentro con el primero de muchos amores verdaderos: «Pero es capaz del beso».</p>
+                <p><strong>José Andrés Ardila,</strong> 32 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 4155</p>
+                        <p class="cuento9_title"><span>Título:</span>El encuentro</p>
+                        <p>Acabas de atravesar el portón del Cementerio de San Pedro en Medellín. Sientes frío. Todavía hay personas que lloran a sus inconsolables muertos. Sigues caminando. Observas si alguno de los columbarios tiene una rosa similar a la tuya. Acabas de llegar. Te inclinas para sacudir el polvo que no dejar leer el epitafio. Pones la rosa y, antes de marcharte, miras la tumba, las dos fechas… y tu nombre.</p>
+                <p><strong>Andrés Duque Morales,</strong> 23 años, Bello</p>
+
+                        <p class="cuento9_number">N.° 5237</p>
+                        <p class="cuento9_title"><span>Título:</span>Jesús María Valle</p>
+                        <p>Cae la tarde. Después de los periodistas, de las declaraciones del gobernador, de las llamadas de los militares, de las amenazas, queda esta oficina llena de libros y procesos. Vivir, acaso, fue solo necesario para atestiguar que otros vivieron. La vida tiembla contra el cristal de la ventana. Siento un peso en el fondo del corazón. Es ternura y miedo. Los muertos tenían un rostro desconocido. Si me matan, les daré el mío. ¿Quién toca la puerta?</p>
+                <p><strong>Carlos Andrés Jaramillo Gómez,</strong> 32 años, Itagüí</p>
+
+                        <p class="cuento9_number">N.° 5493</p>
+                        <p class="cuento9_title"><span>Título:</span>Calibío</p>
+                        <p>El momento que más disfrutaba de esas mañanas era verle. No me importaba la multitud asfixiante que tenía que soportar; quería verle para sentirme completo. Su mirada me transmitía, casi telepáticamente, una belleza que todo ser debe sentir al menos una vez en la vida. ¡Ese vestido de cuadros requiere una vida para admirarle! Hoy, después de varios años, volví a verle. Ver su divinidad desde el vagón de siempre me llenó de coraje para gritarle el amor que había despertado en mí desde la primera vez. Pero, al parecer, a nadie le gustó oírme gritarle a un palacio.</p>
+                <p><strong>Marcos Felipe Medina Tabares</strong>, 18 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 5524</p>
+                        <p class="cuento9_title"><span>Título:</span>Tríptico del parque 2. «El duelo»</p>
+                        <p>No vi correr a nadie; tampoco sentí detonaciones o gritos; por eso me llamó la atención que mi almuerzo, en la banca, se viera afectado por una muchedumbre rodeando un cadáver. ¿Paso a seguir?... averiguar qué ocurrió. Alguien, morbosamente, me respondió:</p>
+                        <p>—Un hombre caminaba por el parque; detrás, el mimo imitaba sus movimientos mientras un público inadvertido reía. El sujeto disgustado giró y amenazó al mimo mientras este, mímicamente, lo imitaba. El hombre, sintiéndose burlado, le apuntó con el arma y el mimo lo imitó con los dedos… ahí cayó.</p>
+                        <p>—¿Mató al mimo? —pregunté.</p>
+                        <p>—No… el mimo disparó primero.</p>
+                <p><strong>Luis Eduardo Correa Correa,</strong> 44 años, Sabaneta</p>
+
+                        <p class="cuento9_number">N.° 5559</p>
+                        <p class="cuento9_title"><span>Título:</span>El último gol</p>
+                        <p>Era el partido más grande de la historia, sudábamos a más no poder, nos jugábamos el premio mayor: bolis con galletas. Piedras, nuestros arcos; tenis viejos, nuestros guayos; rayas con tiza, nuestra delineación; pico-monto, nuestro sistema de elección; sin camisa, nuestros uniformes; el árbitro, nuestras voces; el desnivel de la calle, nuestra desventaja; quebrar un vidrio, nuestra amenaza; perder, nuestra humillación; tres-tres, el marcador. «El que haga gol, gana», nuestro decreto. «¡Falta! ¡Penal!», gritamos; «¡se tiró!», nos refutaron; alegábamos cuando se escuchó: «¡Santiago!, te entrás ya mismo que tenés tarea». Santi era el único en el barrio con balón.</p>
+                <p><strong>Sebastián Velásquez Mazo,</strong> 28 años, La Estrella</p>
+
+                        <p class="cuento9_number">N.° 5545</p>
+                        <p class="cuento9_title"><span>Título:</span>Amor entre montañas</p>
+                        <p>Saber que llegó el fin de semana y podré ir a verte. Acortar esa distancia que hay en nuestras conversaciones telefónicas. Salir de casa, caminar, subirme al cable, disfrutar la hermosa vista nocturna de la ciudad. Hacer transbordo, subirme al metro en la estación San Javier, intercambiar palabras con la persona que se sienta a mi lado. Hacer el último transbordo en San Antonio, escuchar música y tratar de descifrar lo que piensan mis compañeros de viaje que al igual que yo tienen un lugar a donde ir. Y, sobre todo, pensar en lo perenne de mi felicidad.</p>
+                <p><strong>Yeni Catherine Ramírez Guisao,</strong> 29 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 5629</p>
+                        <p class="cuento9_title"><span>Título:</span>Aná</p>
+                        <p>Se llamaba Aná y la enterraron dos veces. La primera, ocurrió cuando los saqueadores de Robledo se asomaron al valle: apenas la vieron, la enterraron viva junto a su pueblo. La segunda, cuatrocientos años después, fue obra del progreso. Aná, diosa hecha carne y osamenta, hecha tierra fértil, hecha agua que da vida. ¿Qué pesa más sobre tu lecho? ¿El olvido o el pavimento? ¿A dónde fue a parar tu sangre? ¿Qué aguas corren ahora por tu cauce? Tu historia, Aná, no es más que una anécdota.</p>
+                <p><strong>Luis Gallego Yepes,</strong> 28 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 5908</p>
+                        <p class="cuento9_title"><span>Título:</span>Rosaura</p>
+                        <p>Rosaura se levanta tratando de no hacer ruido. El sueño se le escapó cuando supo de las andanzas de Robinson, su hijo. Atesora un surtido insoportable de noches de insomnio. Rezos interminables. Los ojos secos de tanto llorar. «Vaya día triste de cumpleaños», piensa. A través de la pequeña ventana contempla la ciudad. Desde Altavista hay una espectacular panorámica de Medellín. Único privilegio. El resto es pobreza, miedo, guerra sin tregua entre muchachos desesperanzados. Robinson es uno de ellos; el más temido, le han contado. Lo mira dormir. Lo bendice y lo encomienda. Rosaura sale para su trabajo con el corazón encogido.</p>
+                <p><strong>José David Liñán Murillo,</strong> 20 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 5913</p>
+                        <p class="cuento9_title"><span>Título:</span>Muñeca rota</p>
+                        <p>La bella Tatiana va a cumplir los quince años. Mientras se arregla, no puede evitar una terrible sensación de asco y desamparo. Qué distinto sería todo si su madre viviera. Es viernes en la noche y debe salir; emperifollada, disfrazada de mujer adulta, a buscarse la vida al parque Lleras. Será una mujer complaciente con los turistas que pagan por sus caricias de niña bonita. La única alegría se la da Kevin, su noviecito del barrio. Ella le dice que cuida a una señora en El Poblado. Odia pintarrajear su cara. Odia calzarse esos tacones. Odia sonreír sin tener ganas...</p>
+                <p><strong>José David Liñán Murillo,</strong> 20 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 5980</p>
+                        <p class="cuento9_title"><span>Título:</span>En Aures</p>
+                        <p>Raquel no fue a trabajar. No la llamaron. Después de despachar a sus hijos para el colegio, muy pensativa, salió a despejar su mente en un campo sin podar frente a su casa. Se sienta sobre un banco de madera y se queda observando un mango alto y robusto. La madre se queda en silencio durante un breve lapso, observando las ramas del verduzco gigante, donde en otros tiempos colgaron los cadáveres de jóvenes después de asesinarlos. Melancólica por la pérdida de su empleo, Raquel solo atina a decir: «Y pensar que lo sembró mi abuela para que diera sombra».</p>
+                <p><strong>Mauricio López Rueda,</strong> 41 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 6318</p>
+                        <p class="cuento9_title"><span>Título:</span>La última empanada</p>
+                        <p>Cierto largo día, los integrantes de un grupo de teatro ensayaron durante horas, sin descanso, algunos pasajes difíciles de una obra. A las once de la noche una vecina bonachona les llevó unas empanadas. Con recato, ellos las fueron tomando poco a poco, lentamente. Al final solo quedó una y ninguno se atrevía a cogerla. Pendientes del bocado paisa, nadie escuchaba al director. Al fin, uno de los actores apagó la luz y extendió su mano con rapidez para tomar la empanada, descubriendo sorprendido que varias manos habían aprovechado el apagón. Nunca se supo quién se comió esa bendita empanada.</p>
+                <p><strong>Luis Eduardo Yepes Correa,</strong> 63 años, La Estrella</p>
+
+                        <p class="cuento9_number">N° 296</p>
+                        <p class="cuento9_title"><span>Título:</span>Línea amarilla</p>
+                        <p>Se pone de pie al borde del precipicio, tocando peligrosamente con los pies la barrera que a veces separa la vida de la muerte, pero da un paso a la derecha porque “Dejar salir es ingresas mucho más fácil y rápido”.</p>
+                <p><strong>Laura Catalina Rojas Alzate,</strong> 26 años, Copacabana</p>
+
+                        <p class="cuento9_number">N.° 6266</p>
+                        <p class="cuento9_title"><span>Título:</span>Sarita</p>
+                        <p>Vivimos en Manrique San Pablo. Mamá es «escobita» de Empresas Varias y papá trabaja como ebanista en Belén San Bernardo. Yo estudio en la Institución Educativa Hernán Toro Agudelo. Después de clases subo hasta la UVA La Esperanza para hacer las tareas. Luego voy a almorzar donde mi tía Gladys y me quedo con ella hasta que regresan mis padres. Casi no los veo en semana, pero los sábados siempre visitamos la UVA, comemos helado y nos quedamos viendo esa Medellín que está allá abajo, cerca del río. Me gustan los sábados, son los mejores días de mi vida.</p>
+                <p><strong>Sandra Arbeláez Calle,</strong> 40 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 6561</p>
+                        <p class="cuento9_title"><span>Título:</span>A mi padre</p>
+                        <p>Cuando era niño, teníamos en casa una tienda. A ver, te explico, no había mucho dinero para un local, así que una ventana de la casa la rehicieron más grande para vender productos comestibles desde allí. La gente aprecia ese tipo de cosas. Entonces, yo iba a donde estaba mi padre sentado leyendo su Biblia y esperando clientes; yo le pedía una moneda y él me daba la primera que tuviera en su bolsillo; luego el niño que era yo se daba la vuelta del otro lado de la ventana y le compraba un dulce. No mucho tiempo después, quebró.</p>
+                <p><strong>Ana María Mendoza Pacheco,</strong> 23 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 6757</p>
+                        <p class="cuento9_title"><span>Título:</span>Trofeo</p>
+                        <p>Tras cientos de épicas batallas sobre el asfalto, observan, melancólicos, aquellos zapatos rotos que ahora cuelgan de un cable.</p>
+                <p><strong>Sandra García Vera,</strong> 38 años, Bello</p>
+
+                        <p class="cuento9_number">N.° 7094</p>
+                        <p class="cuento9_title"><span>Título:</span>El valle de los sacrificios</p>
+                        <p>Corría el año 4256. Los arqueólogos se reunieron alrededor de una gran mesa. Como un delicioso manjar, las piezas óseas desenterradas formaban un complejo mapa. Había fémures, quijadas, cráneos y trozos de costilla.</p>
+                        <p>—¿Qué tenemos acá? —dijo el eminente profesor.</p>
+                        <p>—Restos humanos de medellinenses —contestó un aprendiz.</p>
+                        <p>—En efecto —prosiguió el experto—. Y los estudios señalan que estamos ante un centro funerario de gran antigüedad llamado La Escombrera. Se trata de una necrópolis repleta de vestigios de una civilización extinta, cuya práctica ritual más notable era el sacrificio humano y el desmembramiento realizado como ofrenda a sus dioses.</p>
+                <p><strong>Carlos Augusto Puerta Henao,</strong> 39 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 7605</p>
+                        <p class="cuento9_title"><span>Título:</span>Ruta 301</p>
+                        <p>A las 12 m., con un calor espantoso, nos subimos al Circular Coonatra. Recorrimos la periferia de la ciudad, esa que forman las avenidas principales antes de que las calles se adentren en las comunas. Sonaba ese vallenato quemado de la costa, un sonsonete adormecedor, mientras todos guardábamos silencio como si fuéramos para misa. El amor se nos iba acumulando al final del viaje y nos bajamos del bus sin saber si continuaría.</p>
+                <p><strong>Laura Marcela Cañas Palacio,</strong> 26 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 7657</p>
+                        <p class="cuento9_title"><span>Título:</span>La calle de los desaparecidos</p>
+                        <p>Hay una calle cerca de la plazuela de San Ignacio llamada «La calle de los desaparecidos». Siento miedo de transitar por ella, no quiero desaparecer como tantos de mis conciudadanos. La otra tarde me enteré de que ese no es el motivo del nombre. Resulta que en esa callecita adoquinada y sinuosa no desaparecen a nadie. Los enamorados desaparecen voluntaria, urgente y gozosamente porque entran a un motel que hay en toda la curva, es decir, se les ve entrar por Ayacucho o por El Palo y no salen al otro lado, desaparecen.</p>
+                <p><strong>Ligia Luz Flórez Vélez,</strong> 57 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 7920</p>
+                        <p class="cuento9_title"><span>Título:</span>Destinos gemelos</p>
+                        <p>Nacieron el 5 de junio de 1985. Los registros de nacimiento descansan en notarías diferentes, pero ambos contienen idénticas las letras en esa tipografía de máquina de escribir que oficializa el ingreso a la vida de los impuestos: Juan Antonio Restrepo Vélez. Juan Antonio es ingeniero y Restrepo Vélez escasamente estudió. Juan Antonio tiene un hijo y Restrepo Vélez ninguno. Juan Antonio ha viajado a París y Restrepo Vélez conoce con ese nombre el barrio de esa ciudad en la que jugó pequeño. La casualidad los une de nuevo: el accidente de un avión. Si uno sobrevive, sobrevivirán los dos.</p>
+                <p><strong>Bernardo Galeano Bolívar,</strong> 33 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 7967</p>
+                        <p class="cuento9_title"><span>Título:</span>Memoria de tango</p>
+                        <p>Luces, trajes, Gardel y el festival del tango. Allí estaba yo con mi viejo, quien ya no podía aprender ni recordar nada nuevo, sin embargo, en el momento que inició la primera nota sus ojos brillaron, se puso atento, así se mantuvo durante toda la pieza, parecía que podía recordar algo.</p>
+                <p><strong>Emanuel Vasco Pérez,</strong> 24 años, Sabaneta</p>
+
+                        <p class="cuento9_number">N.° 8410</p>
+                        <p class="cuento9_title"><span>Título:</span>Una voz fantasma</p>
+                        <p>En los videos salían unos niños todos «ratonchos», como él nos decía para recordarnos lo pequeños que solíamos ser. En el cumpleaños de mi hermano todos entonábamos el Feliz cumpleaños.</p>
+                        <p>—Parecen cantando el happy birthday en un calabozo —decía mi papá a tan desafinado canto y todos estallaban en carcajadas.</p>
+                        <p>Eran pocos niños y los familiares eran los mismos y gritaban: «¡Que la muerda!». Juan, con desconfianza, se acercó a su torta y en menos de dos segundos unas manos estrellaron su cara contra el pastel dejándolo deforme. Mi papá, quien ya no podrá verlo, dejó como regalo su voz.</p>
+                <p><strong>Alejandra Valencia Mejía,</strong> 19 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 8835</p>
+                        <p class="cuento9_title"><span>Título:</span>Juego de asaltos</p>
+                        <p>La cruzada estaba lista, no había moros en la costa, en el sector no se veían ni guardas ni policías. «El More», como le decían en la banda, tenía un revolver de juguete y había asaltado sin piedad una sucursal Bancolombia del barrio La América, reciclando en su maleta millones de dólares, de salarios, ahorros y otras bolsas activas… Cuando el robo había sido perfecto, el ladrón a las dos cuadras fue asaltado. Dos fleteros que se movilizaban en una moto Calima le arrebataron la maleta y huyeron, no sin antes disparar en su frente un chorrito de agua fría.</p>
+                <p><strong>Ana María Araque Restrepo,</strong> 25 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 8851</p>
+                        <p class="cuento9_title"><span>Título:</span>Huérfana</p>
+                        <p>Y sin embargo, no estuvo sola: sus montañas la tenían abrazada.</p>
+                <p><strong>Agustín Vallejo Villegas,</strong> 18 años, Envigado</p>
+
+                        <p class="cuento9_number">N.° 8965</p>
+                        <p class="cuento9_title"><span>Título:</span>El lector</p>
+                        <p>Plantado hace meses en esa estación, relee la novela. Lo deleita perderse en las páginas, encontrar coincidencias, símiles que desconciertan. Cuando anuncian el próximo vagón, guarda el libro. En su vida no hay Juvenales, pero él bien podría ser Florentino a la espera de Fermina. Las historias de amor, hechas de esperas y soledad, al final comparten siempre su sencillez e irremediable desventura. Cuando el tren abre las puertas, aprieta el libro en el bolsillo, se lanza a repetir la historia: la busca en vano entre la multitud de rostros que huyen y se pierden en la ciudad.</p>
+                <p><strong>Francisco Felipe Pulgarín Hernández,</strong> 41 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 9006</p>
+                        <p class="cuento9_title"><span>Título:</span>Nostalgia</p>
+                        <p>Quedé de encontrarme con él a las tres de la tarde en los torniquetes de la estación Prado del metro. Me maquillé, me perfumé, me puse bonita y fui a su encuentro. No lo veía desde que yo tenía como siete años. Cuando por fin llegó lo recibí con un abrazo fuerte. Pasamos toda la tarde riéndonos, poniéndonos al tanto de más de veinte años de acontecimientos. Al caer la noche nos despedimos, nos agregamos a Whatsapp y prometimos seguirnos viendo. Camino a casa solté algunas lágrimas por lo viejo que ya está papá y lo poco que hemos compartido.</p>
+                <p><strong>Julio César Núñez Miranda,</strong> 28 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 953</p>
+                        <p class="cuento9_title"><span>Título:</span>Día sin metro</p>
+                        <p>La invasión zombi ha comenzado. Los sobrevivientes se abalanzan a cualquier bus que diga «centro» sin importar que en su interior no se pueda ni respirar. Por mi parte he conseguido un puesto en uno de los aclamados vehículos, soy afortunada. Las condiciones son adversas: no hay comida y ya es hora de cenar; hay cuerpos añejos, algunos casi en putrefacción, y pensar en ir al baño es solo una utopía. No sé cuánto nos quede. Muchos dicen que es el fin, yo confió en que solo es un nuevo comienzo.</p>
+                <p><strong>Yalila Pérez Montoya,</strong> 22 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 9094</p>
+                        <p class="cuento9_title"><span>Título:</span>El juramento</p>
+                        <p>—A dónde vas —le pregunté.</p>
+                        <p>—A buscar suerte –respondió–. Acá no hay nada… y ya estuvo bueno de buscar y buscar.</p>
+                        <p>Lo miré con tristeza.</p>
+                        <p>—Ve, pues… pero júrame que te cuidarás.</p>
+                        <p>—Te lo juro –dijo–, y miró para otro lado.</p>
+                        <p>—Júramelo mirándome a los ojos.</p>
+                        <p>Así lo hizo. Se fue a raspar a Briceño. Con la plata que mandó hicimos las fundaciones, la mampostería y la plancha de la casa. Hace un año no sabemos de él. Incumplió su juramento. ¿Qué carajos pasa en el mundo que para conseguir un techo hay que perder un hijo?</p>
+                <p><strong>Lina Marcela Echeverri Arenas,</strong> 37 años, Bello</p>
+
+                        <p class="cuento9_number">N.° 9191</p>
+                        <p class="cuento9_title"><span>Título:</span>La noche</p>
+                        <p>Desperté y froté mis ojos, creí que aún estaba soñando. Nunca antes había visto un cielo tan estrellado: cientos de miles de puntitos titilantes. «¿Se habrán acaso peleado las nubes y los vientos?», llegué a pensar. No, nada de eso. Me percaté al tiempo, aturdido por el aleteo, que en realidad estaba volando y era la Medellín nocturna lo que veía desde lo alto. Cada puntito era una casa o una calle, es decir, cada titileo era una historia.</p>
+                <p><strong>Juan Manuel Cano Londoño,</strong> 18 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 9671</p>
+                        <p class="cuento9_title"><span>Título:</span>Instrucciones para ser un fantasma</p>
+                        <p>Lo primero es comprar polvo para hacerte invisible. Al principio te lo aplicas a solas, no confías en sus propiedades. Lo incorporas poco a poco y un día estás listo para ser fantasma profesional. Fabricas una varita mágica con un bolígrafo, PVC y papel aluminio. Te aseguras de que tenga forma de pipa. Le echas el polvo, prendes, aspiras, sueltas el humo y dejas que las volutas te envuelvan. Ya eres invisible y puedes ir a jugar con otros fantasmas en lugares como la orilla del río o la avenida de Greiff. Allí compruebas que solo los fantasmas pueden verte.</p>
+                <p><strong>Sergio Andrés Zuluaga Cardona,</strong> 36 años. Medellín</p>
+
+                        <p class="cuento9_number">N.° 10471</p>
+                        <p class="cuento9_title"><span>Título:</span>Se busca</p>
+                        <p>Ayúdame a encontrar a Dante; perro de crespos negros con canas, porque está viejito. Diecisiete años. Tiene una cicatriz en la nariz, cola larga y está medio ciego. Un poco sordo también. Anda sin collar. He buscado por todas las calles. Mi tranquilidad depende de él. Vivo sola. Tengo 86 años. Se perdió ayer miércoles, 30 de mayo, a las seis de la tarde, en el barrio Castilla, por la cancha La Maracaná. Si lo ves por favor llamar al 300 741 74 70. Se ofrece recompensa (perdón por las faltas de ortografía). Beatriz.</p>
+                <p><strong>Leonardo Jesús Muñoz Urueta,</strong> 34 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 10625</p>
+                        <p class="cuento9_title"><span>Título:</span>Papelitos</p>
+                        <p>Recibe el paquete temprano. Sabe que antes de que la noche se trague el cielo debe repartirlos todos. Los baraja como si fueran billetes y los ofrece como tales. Se los entrega solo a las chicas, mas no se fija en sus bellezas, él sí que aprendió que la pobreza también se maquilla y se emperifolla. No le molesta el desprecio, entiende que la gente es feliz practicándolo. Camina entre calles y ve casi todo su trabajo desperdigado por el suelo. Ya es hora de descansar. Mañana es otro día de volantes.</p>
+                <p><strong>Katerine Pombo Jiménez,</strong> 31 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 10764</p>
+                        <p class="cuento9_title"><span>Título:</span>Repito, 11 a la derecha</p>
+                        <p>19 casas a la izquierda de la cancha y 131 debajo de la cruz del morro. Te pedí que cuando fueran las 8 prendieras y apagaras varias veces el bombillo del balcón para comprobar los cálculos, pero parece que todas las luces de la ciudad son intermitentes en la noche. Tal vez si enciendes una fogata en la terraza podría ubicar más fácil la casa, ya sabes que me obsesionan los detalles. Todas las mañanas te imagino mirando hacia acá mientras extiendes perfectamente la ropa. Recuerda que si cuentas de izquierda a derecha, mi celda es la número 11.</p>
+                <p><strong>David Esteban Quiroz Gómez,</strong> 31 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 10772</p>
+                        <p class="cuento9_title"><span>Título:</span>Risa mueca</p>
+                        <p>Mi abuelo regresó del centro sin sus dientes. No tenía idea de dónde los había dejado. Mi padre se enojó porque estaban nuevos.</p>
+                        <p>—¡Costaron un ojo de la cara! —dijo—. ¿Seguro que los llevabas puestos?</p>
+                        <p>El abuelo levantó los hombros. Mi madre pensó que tal vez los había olvidado en la casa y los buscó debajo de las camas y adentro de sus zapatos; hasta en la jaula de los canarios que una vez le dio por liberar. Nada.</p>
+                        <p>—¡No le compraré otros! —anunció mi padre.</p>
+                        <p>Mi abuelo se carcajeó. Solía perder los dientes, pero jamás su risa.</p>
+                <p><strong>José Alejandro Castaño Hoyos,</strong> 46 años, Envigado</p>
+
+                        <p class="cuento9_number">N.° 7958</p>
+                        <p class="cuento9_title"><span>Título:</span>Deseo entre cadenas</p>
+                        <p>Mientras caminaba por la hermosa selva, dejándome llevar por sus sonidos y aromas, deleitándome con su inmensa diversidad, vi a lo lejos un hombre, lo observé escondida entre la espesura de los árboles, su piel blanca como la arena, sus ojos azules y su extraña apariencia estremecían mi piel negra deseando su cercanía. De repente un movimiento brusco hizo que todo se diluyera ante mi vista. Cuando desperté, me levanté por los gritos violentos del mismo hombre; entonces, deshidratada y encadenada, empecé a caminar tras la fila de negros hacia la Villa de Nuestra Señora de la Candelaria de Medellín.</p>
+                <p><strong>Sarah Zapata,</strong> 16 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 878</p>
+                        <p class="cuento9_title"><span>Título:</span>Un Gato cualquiera.</p>
+                        <p>Pancracio era un gato gris; vivía con su dueño, don Jorge, un viejo alto, con barba y elegantón. Vivían solos en una de esas casonas viejas de Prado Centro, se apreciaban y acompañaban. El gato contaba 10 años largos y don Jorge repuntaba los 70. Una tarde sonaban los tangos de Gardel en el radiecito mientras don Jorge en la sala tomaba su café; se levantó de su poltrona, abrió la puerta que da a la calle, miró a Pancracio fijamente y salió. El gato dejó sus siete vidas por seguir a don Jorge, su amigo.</p>
+                <p><strong>José Fernando Morales Gil,</strong> 17 años, Itagüí</p>
+
+                        <p class="cuento9_number">N.° 1379</p>
+                        <p class="cuento9_title"><span>Título:</span>De tizas y campanas</p>
+                        <p>—¿Hace cuánto pinta? — pregunto a José por un ladito mirándole las manos resecas por trabajar con tiza, ladrillo y carbón.</p>
+                        <p>—Hace poquitos meses.</p>
+                        <p>Lo miro descifrándole cada arruga de la frente, de línea tan pura como la suya. Lo invito a mi monólogo en una esquinita del parque. En primera fila, le brillan los ojos, se sentó como un niño de esos que se chocan con su propia sombra.</p>
+                        <p>—Sabía que usted era artista —me dice cuando acabo—. Casi nadie aprecia esto por efímero.</p>
+                        <p>Al terminar la frase, caen unas gotas de lluvia que borran su pintura.</p>
+                        <p>—Sino vea.</p>
+                <p><strong>Isabel Murillo Lopera,</strong> 17 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 6348</p>
+                        <p class="cuento9_title"><span>Título:</span>La belleza está en el interior</p>
+                        <p>Cerca del colegio La Aldea, en el barrio El Compromiso, estaba Alejandro esperando a que Káterin saliera de estudiar. Ella lo había rechazado varias veces con la excusa de que «no era bello ni por dentro». Colerizado, Alejandro quería demostrarle lo contrario, él sabía que sí lo era y sería Káterin quien se diera cuenta con sus propios ojos. Cuando esta salió, inmediatamente Alejandro se lanzó sobre ella y, sin pensarlo dos veces, succionó y tragó furiosamente sus ojos. Ahora ella estaba dentro de él y vería que la belleza sí está en el interior.</p>
+                <p><strong>Sergio Andrés Pérez Loaiza,</strong> 17 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 2056</p>
+                        <p class="cuento9_title"><span>Título:</span>Las estrellas</p>
+                        <p>El profesor de Ciencias Naturales nos pidió investigar sobre la forma en la que mueren las estrellas. Cuando llegué a casa, encontré a mi padre poniendo a todo volumen las canciones de Amy Winehouse. Me regañó porque encendí el televisor sin antes haberme puesto a hacer las tareas. Saqué de mi bolso un cuaderno y le pregunté si sabía cómo morían las estrellas. Me contestó que las estrellas morían de intoxicación aguda por consumo de alcohol.</p>
+                <p><strong>Manuela Hernández Arboleda,</strong> 11 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 1168</p>
+                        <p class="cuento9_title"><span>Título:</span>La primera noche</p>
+                        <p>Los gritos y el fuerte olor a humo despertaron al cacique, que con rapidez se levantó a tomar sus armas. Al no encontrar su pechera dorada, recordó la mirada fija que posó sobre ella uno de los hombres que llegaron la noche anterior muriendo de hambre y a quienes él mismo decidió acoger en su aldea pues su piel era blanca como la luna. Salió del tambo y al ver solo sangre y fuego en su valle, se quitó la vida. Nunca más el Valle de Aburrá sería el mismo.</p>
+                <p><strong>Tomás Correa Restrepo,</strong> 37 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 2523</p>
+                        <p class="cuento9_title"><span>Título:</span>¿Dónde están las estrellas?</p>
+                        <p>Mía amaba mirar las estrellas. Una noche se acercó a su telescopio y no vio ninguna. Subió hasta el mirador de Las Palmas para tratar de estar más cerca de ellas y aun así no pudo verlas. Mía, decide construir un cohete para ir a buscarlas. Al llegar al espacio encuentra un astronauta que las tenía acumuladas, porque soñaba con construir un castillo para él. Ella se le acerca y le dice:</p>
+                        <p>—¿Qué tal si construimos el castillo en la tierra para todos?</p>
+                        <p>Y así, juntos, deciden devolver todas las estrellas a su lugar y construir el planetario de Medellín.</p>
+                <p><strong>Mariana Sánchez Mejía,</strong> 10 años, Envigado</p>
+
+                        <p class="cuento9_number">N.° 2021</p>
+                        <p class="cuento9_title"><span>Título:</span>No era imaginario</p>
+                        <p>Una mañana, un niño salió a jugar, pero no tenía con quien hacerlo. Así que se creó un amigo imaginario con el que pasó años y años de amistad. Un día se pelearon y el niño empujó a su amigo desde el balcón y en ese momento descubrió que no era imaginario y era de verdad. Después de eso el niño volvió a estar solo.</p>
+                <p><strong>Camila Sánchez Galvez,</strong> 10 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 2729</p>
+                        <p class="cuento9_title"><span>Título:</span>Juanito, la tortuga y el bosque</p>
+                        <p>Un niño, llamado Juan, se fue al bosque; y como había tantos árboles, tenía miedo. Una tortuga le habló y le dijo que no temiera, que los arboles no hacen nada. A continuación le pregunto:</p>
+                        <p>—¿Estás perdido? ¿Cómo te llamas?</p>
+                        <p>—Me llamo Juan y quiero volver a mi casa. Si me ayudas, te llevo conmigo, te doy todas las hojas que quieras.</p>
+                        <p>Entonces la tortuga le mostró el camino, pero como era lenta, el niño la cargo. Se hicieron muy amigos y la tortuga se quedó con él, como su mascota, comiendo hojas.</p>
+                <p><strong>Miguel Francisco Bonilla Bustamante,</strong> 7 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 3344</p>
+                        <p class="cuento9_title"><span>Título:</span>Por un autogol</p>
+                        <p>Cristian era un niño bueno, pero distraído. En un partido decisivo para su colegio marcó un autogol. Unos compañeros le reclamaron, fuerte. No sintió miedo sino tristeza, y rabia. Corrió tan rápido que tropezó y golpeó su cabeza contra una superficie. Una puerta se abrió. Quedó en mitad de una cancha luminosa. Allí estaba un jugador de su equipo favorito que había muerto hacía tiempo.</p>
+                        <p>—Te comprendo —dijo el jugador—. A mí también me pasó.</p>
+                        <p>Cuando volvió en sí, Cristian experimentaba una sensación totalmente nueva. «¡Qué cosas!», pensó. Y regresó a la cancha.</p>
+                <p><strong>Salomón Giraldo Arango,</strong> 12 años, Copacabana</p>
+
+                        <p class="cuento9_number">N.° 3475</p>
+                        <p class="cuento9_title"><span>Título:</span>Trazos</p>
+                        <p>Una niña caminaba hacia su escuela, donde por desgracia no tenía amigos. Ella veía cómo todos se divertían y reían mientras que ella se quedaba sola; aunque lo intentara, no era capaz de socializar. Escribía cosas en su cuaderno, para ella tenían mucho sentido mientras que para los otros no eran más que tonterías. Un día, mientras tenía la mirada fija en su cuaderno, se le acercó alguien, una de sus compañeras de curso. Se sentó a su lado y observó el cuaderno.</p>
+                        <p>—Para mí no son tonterías —dijo mostrándole un cuaderno con trazos.</p>
+                        <p>Fue su primera amiga.</p>
+                <p><strong>María Fernanda Zabala Posada,</strong> 13 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 4698</p>
+                        <p class="cuento9_title"><span>Título:</span>Loma hermosa</p>
+                        <p>Llegué con mi mamá, mi papá y mi hermana a la loma. Dejé todos mis juguetes y a mis abuelos allá lejos en una tierra idéntica a esta. Nos fuimos sin saber qué pasaría, pues a mí me dijeron: «¡Hey, chama! Vamos a empezar desde cero». Y no sé qué es eso, solo sé que continuamos viviendo igual que allá, pero aquí; con la tristeza de que no están ni mis abuelos, ni mis juguetes. ¡Cómo los extraño! Sigo en esta loma de Medellín, no donde más tengo recuerdos, pero si era desde cero, voy como en el cuarto.</p>
+                            <p><strong>Waleska Peña Tapias,</strong> 9 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 7765</p>
+                        <p class="cuento9_title"><span>Título:</span>Mi amigo el libro</p>
+                        <p>Tengo un amigo que me acompaña y me dice todo lo que sabe. Dice que puede hacer volar la imaginación. Le conté a mis amigos, pero no me creyeron. Mi amigo dice que puede hacer sonreír a todas las personas, incluso a las más solas y tristes. Le conté a mis profesores, pero no me creyeron. Mi amigo dice que puede hablar hasta con el mismo viento. Le conté a mis padres, pero no me creyeron. Sin embargo, yo sí creo en mi amigo el libro, porque él y yo tenemos alas y volamos con imaginación por encima de Villatina.</p>
+                            <p><strong>Alexánder Metaute Hernández,</strong> 13 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 8496</p>
+                        <p class="cuento9_title"><span>Título:</span> Bardo</p>
+                        <p>No había llovido tanto ese año en Medellín como aquella noche. La autopista era un espejo negro. Detuve mi moto afuera de una gasolinera abandonada donde había muchas tractomulas estacionadas. Solo había una luz tenue y un hombre al que me dirigí para hallar consuelo. Lo saludé y su mirada, aún más fría, se clavó sobre mí como la de un felino dispuesto a atacar. Al observarlo vi que tenía enfundado un machete. Se me heló la sangre. Fingí bostezar y me di media vuelta para volver a la tormenta. Muchas luces falsas halla la polilla en la ciudad.</p>
+                <p><strong>Johan Esteban Acosta Gil,</strong> 27 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 10252</p>
+                        <p class="cuento9_title"><span>Título:</span>Menos de cinco</p>
+                        <p>Sebastián, un niño del barrio Pedregal, con corazón en mano fue al parque con esperanza de encontrar a su alma gemela. Encontró una doncella sentada sola al lado de unas palomas muy bellas. Él, con el impulso de un relámpago, fue y le dijo:</p>
+                        <p>—¿Cómo te llamas?</p>
+                        <p>No respondió. Él, muy enfadado, se fue. Ella, al ver que se marchaba, lo siguió y le dio una nota que decía: «Lo siento, soy sorda y muda». Él entendió se fue y pensó que el amor no tiene cinco sentidos, sino menos.</p>
+                <p><strong>Juan José Arroyave Quintero,</strong> 11 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 1477</p>
+                        <p class="cuento9_title"><span>Título:</span>De malos y de malas</p>
+                        <p>Jamás habíamos ganado un partido. Contra ninguna cuadra habíamos podido anotar más de dos goles. Recuerdo que la gente del barrio nos decía que no le ganábamos ni a un equipo de sonido. ¡Pero aquella tarde estuvimos tan cerca! Cuatro a cuatro, íbamos. «El que haga el gol, gana», acordamos. Y yo estaba solo con el arco y con el balón, pues «Rayo», el arquero, estaba batido. Cuando ya iba a rematar, no sé de dónde salió Terri, la pitbull negra «comebalones», y en sus fauces se llevó nuestra gloria. Perdimos por w y nadie nos pagó el balón.</p>
+                <p><strong>Yeison Medina Medina,</strong> 30 años, Itagüí</p>
+
+                        <p class="cuento9_number">N.° 1592</p>
+                        <p class="cuento9_title"><span>Título:</span>Tarea: resumen oral</p>
+                        <p>—Profe, no soy capaz, de verdad... —se queja el niño, mientras mira su lápiz.</p>
+                        <p>—¿Cómo no? ¡Fácil! Solo son 100 palabras.</p>
+                        <p>—Pero no es así de fácil, profe. ¡Es Medellín! ¿Cómo escribo yo, dígame, una eterna primavera? ¿Se pone en mayúsculas la risa de los paisas? ¿La belleza es en cursiva, profe? Yo pongo, por ejemplo, «mamá», pero con eso usted no sabe que ella es una santa, que ella me cuenta historias impresionantes, que ella se mata trabajando para pagarme este lápiz.</p>
+                        <p>La profesora toma la hoja en blanco, le pone una calificación perfecta y le aplaude.</p>
+                <p><strong>Samuel Restrepo Agudelo,</strong> 17 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 1657</p>
+                        <p class="cuento9_title"><span>Título:</span>Renacer</p>
+                        <p>Después de recordar, llorar, orar y pedir perdón, salí del cementerio. Con el aroma de las flores impregnado en mi cuerpo llegué al parque San Antonio. Entre la muchedumbre camino hacia las voluptuosas esculturas. Abro la bolsa y suelto puñados de granos al aire. Un desconocido que me observa, intrigado con lo que hago, me dice:</p>
+                        <p>—A esta hora ningún ave comerá ese alimento.</p>
+                        <p>No respondo a su comentario. Sorpresivamente aterriza una paloma, toma granos con su pico y vuela hacia su nido dentro de una escultura devastada donde nacieron sus polluelos.</p>
+                <p><strong>Luis Alfonso Coronado Arango,</strong> 45 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 10775</p>
+                        <p class="cuento9_title"><span>Título:</span>Contienda sexagenaria</p>
+                        <p>Como pasaba regularmente hacía décadas, en una plaza de Medellín se encontraban dos bandos. Tez clara frente a tez oscura, rivales eternos que se enfrentaban. En cada lado un líder, acompañado por su consorte y rodeado de figuras de alto rango. Los demás adelante, librando el combate más directo. Tras numerosas bajas, el líder del primer grupo es arrinconado irremediablemente. Suenan las campanas de la iglesia, mientras en el rostro de una de las dos mentes maestras se dibuja una sonrisa, tan blanca como su cabello. «Jaque mate», resuena en el parque, mientras recogen las piezas del tablero a cuadros.</p>
+                <p><strong>Juan Esteban Pabón Rúa,</strong> 26 años, Medellín</p>
+
+                        <p class="cuento9_number">N.° 4165</p>
+                        <p class="cuento9_title"><span>Título:</span>El viacrucis de Cristóbal</p>
+                        <p>Soñé que lo crucificaban. Se lo conté, pero lo olvidó. La semana siguiente, lo mordió un bulldog. Un mes después, se partió la tibia y el peroné en su moto al evitar atropellar a un zorro. Pasaron cinco años, sufrió dos ataques al corazón y un accidente cerebrovascular. Cristóbal tiene treintaitrés, la edad en que murió Cristo. Ama, bebe, fuma, provee para tres hijos, vive con diez gatos y pasea ochenta perros. Tiene un restaurante vegano en el centro de Medellín y un pie en el infierno, aunque el discute que son los dos. «Soy todo o nada», me reclama.</p>
+                <p><strong>Leandro Alberto Vásquez Sánchez,</strong> 33 años, Bello</p>
+
+                        <p class="cuento9_number">N.° 731</p>
+                        <p class="cuento9_title"><span>Título:</span>Lo que pasó</p>
+                        <p>Desde que pasó lo que pasó, vivir en mi ciudad se ha vuelto un lío: después de un martes, por ejemplo, ya no sigue un miércoles; puede llegar el sábado o repetirse el lunes. Todo depende de unas complejas variables internacionales que determinan lo más conveniente. Así —después de que pasó lo que pasó—, nos tenemos que levantar a preguntar qué día es: lo escucho por radio o lo consulto en Internet; a veces solo llamo al portero del edificio, siempre en piyama y sin bañarme, qué tal que sea domingo y no haya que ir a trabajar.</p>
+                <p><strong>José Duque Mejía,</strong> 52 años, Envigado</p>
+
+                        <p class="cuento9_number">N° 10265</p>
+                        <p class="cuento9_title"><span>Título:</span>Peter y el río Medellín</p>
+                        <p>El tío de píe grande llamado Peter medía 10 metros, era un gran monstruo blanco que vivía en Medellín y le gustaba comer personas. Un día tenía mucha hambre y empezó a asustar a los habitantes, nadie lo podía parar. Peter iba a comerse a un hombre, pero él le dio una bandeja Paisa y como tenía hambre, se la comió, le dio indigestión y se fue al baño, pero no cupo, así que miró a lo lejos y vio un río, se dirigió hacia el, e hizo sus necesidades… el río quedo como lo vemos hoy.</p>
+                <p><strong>Cristian Monsalve Fernández,</strong> 10 años, Bello</p>
+
+                        
+                        <hr class="line-separator line-orange" />
+                    
+            </div>
+        </div>
+           </div>
+        </div>
+    </div>
+<footer>
+   <div class="main-container main-container-flex main-container-home">
+     <p class="brand-palabras">Palabras rodantes</p>
+     <h1 class="brand footer-brand">Comfama</h1>    
+   </div>
+   <div class="copyright"><p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p></div>
+</footer>
+    
+    <script>
+window.createMenu('9');    
+</script>
+</body>
+</html>

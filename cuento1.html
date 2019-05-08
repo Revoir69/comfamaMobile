@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palabras rodantes</title>
+    
+<!-- estilos -->    
+<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+    
+<!-- acciones -->
+<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+<script src="js/jq-sticky-anything.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/base.js" type="text/javascript"></script>     
+<script type="text/javascript" src="js/queryloader2.min.js"></script>
+<script type="text/javascript">
+window.addEventListener("DOMContentLoaded", function() {
+    new QueryLoader2(document.querySelector("html"), {
+        barColor: "#fff",
+        backgroundColor: "#000",
+        percentage: true,
+        barHeight: 0,
+        minimumTime: 1000,
+        maxTime: 50000,
+        fadeOutTime: 1000
+    });
+});
+    
+
+</script>
+</head>
+<body class="bg-book1">
+<header>
+    <a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+    <h1 class="brand">Comfama</h1>
+    
+    <img class="botonA" src="img/buttonA.png" alt="boton cambio">
+    
+    
+    <div class="slideHeader">
+         
+        <img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+        <img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+        <img class="resetFont" src="img/reset.png" alt="resetear">
+        <br>
+        <img class="blanco" src="img/blanco.png" alt="btn blanco">
+        <img class="morado" src="img/morado.png" alt="btn morado">
+        <img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+        
+    </div>
+    
+</header>
+     
+    
+    
+    <div class="presentation">
+        
+        <div class="main-container presentation-container">
+            <button id="presentation-close">Cerrar</button>
+            <div class="presentation-scroll">
+                
+                <h1 class="presentation-title">Presentación</h1>
+                <h2 class="main-presentation-title">Queridas familias:</h2>
+
+                <p class="first-paragraph">Algunas historias, canciones y juegos tienen la fortuna de viajar de generación en generación, por ríos, mares, lagos, montañas, campos, veredas, palacios, ciudades, calles y trochas.</p>
+
+                <p>Poco a poco, y de voz en voz, la música de las palabras va llenando nuestros bolsillos, y nos pone a la mano siempre una historia por cantar y una canción para contar.</p>
+
+                <p>En este libro quiero dejarles mis historias favoritas de infancia, las que aún me acompañan de día y de noche, eso sí, cantadas y contadas al mejor estilo de María del Sol y CantaClaro, con un toque de pimienta por aquí y por allá, para que disfruten en familia.</p>
+
+                <p>Y ustedes, ¿saben cuáles son sus cuentos, juegos, adivinanzas, poesías, trabalenguas y rondas favoritas de infancia? Acá les dejo algunas pistas. Los invitamos a escribirnos, contarnos y cantarnos sobre sus más lindas memorias al correo: cantaclaro@mariadelsolperalta.com.</p>
+
+                <p>¡Ánimo y esperamos que su voz se sume a nuestros recuerdos!</p>
+                
+                <p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía<br><br>Ilustración carátula:<br>• Daniel Gómez</p>
+                
+                <p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+                <p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+            
+            </div>
+            
+        </div>
+    </div>    
+    <div class="global-container">
+        
+        
+        
+        
+        
+        <hr class="line-separator line-title" />
+        <h1 class="main-title">Así me lo contaron<br/> <span class="naranja oswald-light">a mí y así te lo canto a ti</span></h1>
+        <hr class="line-separator line-title" />
+        <div class="main-credits"><p>Textos: María del Sol Peralta</p><p>Ilustraciones: Helena Melo Tovar</p></div>
+        
+        <img class="img-fluid" src="img/imagenlibro0.png" alt="imagenLibro">
+        
+        
+        
+        
+        <div class="main-container-flex" id="container-controls">
+
+            <div class="mobile-menu"></div>
+
+            <div class="invisibleMenu">
+                
+            <div class="menu"></div>
+            
+            </div>
+            <div class="content-container">
+                
+                
+                
+                
+                <!--Prologo -->
+                <div class="slides">
+                    <h2 class="section-title">Prólogo</h2>
+                    <h1 class="chapter-title">El eterno <span class="oswald-light">retorno</span></h1>
+                    <div class="content-text">
+                        <p class="first-paragraph">Dice María del Sol en su libro Así me lo contaron a mí y así te lo canto a ti, que así se lo contaron. Dedica su obra a su abuela Sylvia y a sus padres, Leopoldo e Irene. Pues Irene soy yo y puedo afirmar que así no se lo conté. Traté de contarlo como Sylvia, la abuela de María del Sol, mi mamá, me lo contaba a mí. Sylvia, con seguridad, diría que ella no me lo contó así.</p>
+                        <p >¡Qué rompecabezas de nombres y de cuentos! ¿Quién es quién? ¿Por qué nadie cuenta como debe ser? Nada más fácil: porque así es la tradición oral, la transmisión de generación en generación de las palabras, la cultura, las canciones y las narraciones. Un poco de aquí, otro poco de allá, con voces que se mezclan, incluyendo la de los padres, como la de Leopoldo, dejando huellas y transformándose en nuevas huellas, a veces contadas, a veces cantadas para Emiliano y Antonio, y para todos los niños. Es el turno de ellos de recibir el legado de cuentos del pasado y del presente para que, llegado el momento, ellos los transmitan a las generaciones que les siguen.</p>
+
+                        <p>Sin este legado de palabras, algunas más poéticas que otras, unas dramáticas, otras cargadas de miedos y espantos, muchas bromistas, la humanidad quedaría huérfana.</p>
+
+                        <p >En Así me lo contaron a mí y así te lo canto a ti, María del Sol no sólo recoge las palabras ancestrales. También introduce su lectura del mundo actual, su interpretación contemporánea y hace una nueva combinación, a su manera. A través de canciones como Al pasar la barca, declara que la libertad viene primero, que las decisiones personales juegan un papel en la vida de las protagonistas.</p>
+
+
+                        <img class="img-fluid" src="img/gato.png" alt="gato">
+
+
+                        <p>Así mismo, su versión de La princesa y la arveja, con un final nada ortodoxo, muy alejado del que su abuela Sylvia y yo le contamos, rompe con los anticuados moldes de patrimonio y matrimonio, aireando el panorama de una joven pareja de enamorados y poniendo alas a su futuro.</p>
+
+                        <p>¿Qué versiones prevalecerán? ¿Qué transformaciones sufrirán las historias y las canciones con los cambios sociales y los niños que hoy crecen en ambientes familiares muy distintos a los de antaño?</p>
+
+                        <p>Nadie lo sabe. Cada abuelo, madre, padrino, tía, hará su propia mezcla de narraciones, de tradicionales, que, en un eterno retorno, resonarán en los oídos de los que vienen. Ellos a su vez, pasarán las palabras familiares con sus propias voces. Así es el mundo, así es la vida. Así me lo contaron, así se lo conté a María del Sol.</p>
+
+                        <p >Ahora, queridos lectores, ¿por qué no nos cuentan ustedes las historias de sus casas, de sus familias? Entre todos, podremos reunirnos a narrar, cantar, escucharnos, dialogar, reír, compartir, tal y como ha sucedido desde el principio de la humanidad. Sus palabras nos alegrarán, alegrarán a otros, ustedes mismos se alegrarán.</p>
+
+                        <p>Felices cuentos, felices canciones para todos.
+                        Gracias, María del Sol, por reunir nuestras voces en tu maravilloso libro. </p>
+
+                        <p class="text-align-right">Irene Vasco <br/>2018</p>
+
+                        <div class="leerMas">¡Comienza tu lectura!</div>
+
+
+                        <hr class="line-separator line-orange" />
+
+                    </div>
+                </div>
+                 <!--Cuento 1 -->
+                <div class="slides slide">
+                    <h2 class="section-title">Acto I</h2>
+                    <h1 class="chapter-title">De curiosidades <br/><span class="oswald-light">y otras sonrisas</span></h1>
+                    <h3 class="story-title">Lo imposible te dará risa y la risa te susurrará
+                        chistes, chanzas e imposibles, y alegrías del más allá.
+                        </h3>
+                    <div class="content-text">
+                        <p class="first-paragraph">De flores, pepitas y a rayas… Una camisa estampada por aquí y un pantalón bombacho por allá… Piyama de seda y pantuflas de algodón… ¡Ah, esto sí que es vida!, decía el elegantísimo emperador mientras repasaba su colección de atuendos de los grandes diseñadores de Berlín, Nueva York, Brasil, Londres, Francia y Tokio. Era la obsesión del emperador vestirse a la moda, ser el más elegante y estilizado de la comarca. </p>
+            
+                        <p>—Qué lindo soy y qué bien me visto. No hay nadie como yo… —se repetía a sí mismo mientras lucía sus inigualables trajes.</p>
+
+                        <p>Su sed por lucir hermoso era insaciable y pasaba horas frente al espejo. Era algo extraño, pero su majestad se fascinaba al combinar la ropa interior con los manteles bordados del almuerzo, sus pañuelos con las cortinas y los estampados de sus medias con los jardines de su palacio. Tenía combinaciones para cada hora del día y una paleta de colores especial para cada ocasión, y así vestía todo a su alrededor.</p>
+
+                        <p>¡Belleza, belleza, belleza para mí y para el mundo!, era el lema de su reinado. </p>
+
+                        <p>Pero pobrecillos sus criados, mayordomos, escuderos, siervos, cortesanos y lacayos que debían ir a su ritmo para que el reino estuviera combinado a la perfección.Hasta que un buen día, mientras desayunaba entre sus largas galas doradas, su majestad recibió una carta desde una desconocida tierra lejana: </p>
+                        
+                        <p class="italic-text">Honorable  Emperador:<br/>Solo por usted viajaremos desde el otro lado del mundo cargados con las telas más refinadas y hermosas. Además, llevamos un paño único y extraordinario: se hace invisible ante cualquier persona tonta o que no sea cualificada para cumplir con honores su oficio y profesión. Imaginará lo útil que esto puede resultarle a un poderoso emperador como Su Majestad.</p>
+                        
+                         <p class="italic-text">Si acepta nuestra visita, en tres días estaremos a primera hora de la mañana a sus pies para tomar medidas y poder confeccionarle de inmediato el traje más bello y lleno de bondades que usted haya visto jamás. Solo deberá firmar un sencillo acuerdo por setecientas monedas de oro, tres percherones blancos y un baúl lleno de las más hermosas joyas de la corona.</p>
+            
+                         <p class="italic-text">Si así lo precisa, tenemos cartas del reino de los cielos, de las estrellas y de los tormentosos mares, que dan fe de nuestro talento y honor.
+                         </p>
+
+                         <p class="italic-text">
+                             Cordial saludo,<br /> 
+                             Hermanos Agujeta e Hilón
+                         </p>
+
+                        <img class="img-fluid-80" src="img/emperador.png" alt="emperador">
+
+
+                        <p>—¿Cómo pude haber sobrevivido a mi reinado sin este traje? ¿Cuántos bribones me habrán engañado ya? Pero de ahora en adelante no habrá tonto o ladronzuelo en mi reino. ¡Lo sabré todo con tan solo una mirada al usar mi nuevo traje!</p>
+            
+                        <p>Qué alisten mi trono de inmediato! ¡Hombres de gran talento y gusto vendrán a visitarme y debo estar a la altura! Y que reúnan mis tesoros más preciados de inmediato… ¡Poor favoooor!</p>
+            
+                        <p >Así, mientras el emperador dormía plácido en su cama real, con su mejor mascarilla de aguacate en la cara para verse fresco y renovado ante sus invitados, todos trabajaban a su alrededor sin parar. Qué gran algarabía y confusión se armó. Unos corrían por aquí y otros corrían para allá para recibir a tan distinguidos expertos de la moda universal.</p> 
+                        
+                        <img class="img-fluid-80" src="img/conde1.png" alt="conde">
+
+                        <p>—Tiempo límite de entrega: tres semanas, tres horas, tres minutos y treinta segundos. ¡Ni un segundo más, ni un segundo menos! Y que empiece la cuenta regresiva de una vez, ¡por favor!</p>
+                        
+                        <p>Era obvio, tres era el número elegido por el emperador al ser una armoniosa combinación de la buena suerte. Para dar cumplimiento y puntualidad a la labor encomendada, nombró a su mejor ministro como supervisor real. </p> 
+                        
+                        <p>Justo a los tres días, muy puntuales llegaron los invitados que fueron atendidos tal como se había planeado con tanto cuidado. Eran obvias sus habilidades manuales, y las recomendaciones de otros reinados fueron avalados con la dignidad y decoro del caso. El emperador aceptó entonces tan tentador trato con una única condición: </p>
+                        
+                        <p>Cada mañana el secretario iba a inspeccionar las labores de los confeccionistas. Sin embargo percibía algo extraño en cada visita. El ministro insistía en su idea de no poder ver nada así se frotara los ojos una y otra vez.  Y esto sí que le causaba preocupación y angustia al pobre. Incluso, en el afán de no ser capaz de cumplir con tan importante misión y ser tachado de “tonto”, con zumo de limón se hizo un profunda limpieza de ojos. Pero ante la insistencia de parte de los hermanos Agujeta e Hilón, al hablar de su buena mano y la perfección de su diseño, el ministro empezó a dudar de sí mismo: </p> 
+                        
+                        <p>—¿Cómo? ¡Si yo no veo nada! ¡Esto es terrible! ¿Seré tonto o acaso no valgo para este oficio? Qué frustrado me siento… </p>
+                        
+                        <p>Era una situación compleja e inusual. A quién debía hacerle caso el ministro, ¿a su instinto, a los afamados diseñadores o a su majestad? Pero el miedo a perder su investidura hizo que este de repente se decidiera, suspiró profundamente y con ímpetu afirmó:</p>
+                        
+                        <p>—¡Oh, sí!, qué hermoso traje. Es sorprendente, inigualable y único. ¡QUEDA APROBADO! </p>
+                        
+                        <p>Entre tanto, cada día dormir le era más difícil al emperador y sus ojeras no parecían combinar con nada. Sus gritos y mala cara eran notorios y nadie sabía qué hacer.  Ya casi se cumplía el tiempo de entrega y a pesar de las buenas noticias del ministro, había algo en el ambiente que lo mantenía intranquilo.  </p>
+                        
+                        <p>Y fe fue lo que decidieron tener y la noche anterior, entre tés y aguas de manzanilla y valeriana, el emperador contó no solo ovejas, sino cada hora, segundo y milisegundo para la entrega de su preciado vestido… </p>
+                        
+                        <p>¡Hasta que por fin llegó el esperado momento!</p>
+                        
+                        <p>Con una bata de seda recién traída de la India, el emperador hizo seguir a los modistas mientras él los esperaba con ansiedad en su elegante guardarropa. Por unos instantes el reino entero guardó silencio mientras el emperador se vestía frente a su espejo real.</p>
+                        
+                        <p>—¡Que se preparen todos, que llegó la hora de revelar tanta belleza entre los habitantes de mi reino!</p>
+                        
+                        <p>Diciendo estas palabras, las trompetas del reino retumbaron y los aplausos y gritos efusivos del pueblo invadieron cada rincón de la comarca. —¡Que viva, que baile, que el emperador está a la moda! ¡Que salga ya, que muestre su caminar, que por las calles marche ya! —se oía a la gente cantar eufórica.</p>
+                        
+                        <p>Cuando estuvo todo listo, con un último suspiro por fin salió su majestad a desfilar por la calle mayor. ¡Qué guapo, seguro y poderoso se sentía! </p>
+                        
+                        <p>Pero de pronto todos a su alrededor callaron y el alboroto se convirtió en murmullos y miradas de reojo. Nadie era capaz de fijar sus ojos en el gran señor. Aunque el emperador sintió aquel extraño silencio sobre su piel, dejó a un lado el temor al saber el poder que le otorgaba su invencible traje. </p>
+                        
+                        <p>Sin embargo miró fijamente a cada uno de los presentes sin poder distinguir quién era pícaro o tontarrón. Eso sí que le resultó extraño e incómodo. </p>
+                        
+                        <p>Hasta que un pícaro jovenzuelo, que de inmediato comprendió lo que sucedía, sin más empezó con un imprudente cántico:</p>
+                        
+                        <p>—¡Lero, lero, candelero, el emperador está desnudo, todos callan, se hacen los mudos.</p>
+                        
+                        <p>Lero, lero, que fue engañado y los bribones con las manos llenas se han escapado!
+                        </p>
+                        
+                        <p>Ya nadie más pudo contener la risa. El emperador se miró de arriba abajo, de abajo arriba, tan rojo como una manzana al ver que su traje… ¿su traje? ¡SU TRAJE! ¡SU TRAJE NO ERA INVENCIBLE! ¡ERA INVISIBLE, TRANSPARENTE, NO EXISTÍA! Y al darse cuenta de que estaba desnudo, disparado salió corriendo hasta su habitación, tan avergonzado que no quiso salir de su cama ni de su piyama de pepas rosadas por tres años, tres meses, tres horas, tres minutos y tres segundos… </p>
+                        
+                        <p>Y así me lo contaron a mí y entre chistes y chanzas, hoy te lo cuento yo a ti.</p>
+                        
+                        <hr class="line-separator line-orange" />
+                        
+                        <h3 class="story-title">Romance del señor Don Gato </h3>
+                        
+                        
+                        <div class="text-center">
+                            <p>Estaba el señor Don Gato<br/> en silla de oro sentado,<br/>  usando medias de seda<br/>,  marramamama miau<br/> y zapatillas doradas.   </p>
+
+                            <p>Estando el señor Don Gato<br/> en silla de oro sentado,<br/>   ha recibido una carta<br/> marramamama miau,<br/> que si quiere ser casado.</p>
+
+                            <p>Con una gatita hermosa,<br/> sobrina de un gato pardo,<br/> con un vestido planchado,<br/> marramamama miau,<br/> que vivía al otro lado.
+                            </p>
+
+                            <p>El gato de la alegría<br/> fue a danzar a su tejado,<br/> tipiti, tupiti, tap, tap,<br/> ¡y rodando vino abajo!  
+                            </p>
+
+                            <p>Gato, gato, ga, miau, gato…</p>
+
+                            <p>Y se ha roto siete costillas<br/>  y la puntita del rabo,<br/> marramamama miau,<br/> miau    el gato ya se ha quejado.
+                            </p>
+
+                            <p>El doctor lo ha examinado,<br/> y le ofreció buenos caldos,<br/> pero al cielo fue volando<br/>  marramamama miau,<br/> ¡ay, pobre señor Don Gato!</p>
+
+                            <p>Gato, gato, gato…</p>
+
+                            <p>Ya lo llevan a enterrar<br/>  por la calle del mercado,<br/>  y al olor de las sardinas…<br/> marramama miau,<br/> ¡el gato ha resucitado!</p>
+
+                            <p>Con razón dice la gente<br/>  siete vidas tiene un gato,<br/>  marramama miau,<br/> y cuentos que van echando.</p>
+
+                            <p>Y aquí se acaba esta historia,<br/> de Don Gato el aporriado,<br/> tipiti, tupiti, tap, tap,<br/> un glotón enamorado.<p/> 
+
+                            <p>Gato, gato, gato…</p>
+
+                            <p>¡El glotón enamorado! </p>
+                        
+                        </div>
+                        <img class="img-fluid-80" src="img/gato-1.png" alt="gato-1">
+                        <hr class="line-separator line-orange" />
+                        <h3 class="story-title">Entreactos </h3>
+                        <div class="text-center">
+                            <p>Antonino fue por vino,<br/>
+                            quebró el vaso en el camino,<br/>
+                            ¡Pobre vaso!<br/>
+                            ¡Pobre vino!<br/>
+                            ¡Pobre chiflis de Antonino!</p>
+                        </div>
+                        <hr class="line-separator line-orange" />
+                        
+                        <div class="text-center">
+                            <p>Simón Bolívar nació en Caracas,<br/>
+                            en un potrero lleno de vacas,<br/>
+                            unas gordas y otras flacas,<br/>
+                            deliciosa comida de garrapatas.</p>
+                        </div>
+                        <hr class="line-separator line-orange" />
+                        
+                        <div class="text-center">
+                            <p>Debajo de una fuente,<br/>
+                            hay una serpiente.<br/>
+                            ¿Verdad que toca bien?<br/>
+                            Tilín, tilín, tilín.<br/>
+                            ¿Verdad que toca mal?,<br/>
+                            tolón, tolón, tolón.</p>
+
+                            <p>Si te ríes o te mueves,<br/>
+                            te daré un pellizcón,<br/>
+                            y la punta del zapato,<br/>
+                            bailará al mismo son.</p>
+                        </div>
+                        <hr class="line-separator line-orange" />
+                        
+                        <div class="text-center">
+                            <p>Debajo de una fuente,<br/>
+                            hay una serpiente.<br/>
+                            ¿Verdad que toca bien?<br/>
+                            Tilín, tilín, tilín.<br/>
+                            ¿Verdad que toca mal?,<br/>
+                            tolón, tolón, tolón.</p>
+
+                            <p>Si te ríes o te mueves,<br/>
+                            te daré un pellizcón,<br/>
+                            y la punta del zapato,<br/>
+                            bailará al mismo son.</p>
+                        </div>
+                        <hr class="line-separator line-orange" />
+                        
+                        <div class="text-center">
+                            <p>Al pasar la barca,<br/>
+                            me dijo el barquero,<br/>
+                            las niñas bonitas,<br/>
+                            no pagan dinero.</p>
+
+                            <p>Yo no soy bonita,<br/>
+                            ni lo quiero ser,<br/>
+                            yo pago dinero,<br/>
+                            como otra mujer.</p>
+                        </div>
+                        <img class="img-fluid-80" src="img/barca.png" alt="barca">
+                        <div class="text-center">
+                            <p>Capitán del bote<br/>
+                            me mandó un papel,<br/>
+                            que si yo quería,<br/>
+                            casarme con él.</p>
+
+                            <p>Yo le mandé otro,<br/>
+                            donde respondí,<br/>
+                            que sí me casaba,<br/>
+                            pero no con él.</p>
+
+                            <p>Y al pasar la barca,<br/>
+                            me volvió a decir,<br/>
+                            las niñas bonitas,<br/>
+                            no pagan aquí.</p>
+
+                            <p>Yo no soy bonita,<br/>
+                            le volví a decir,<br/>
+                            quiérome casar<br/>
+                            y bailar así.</p>                    
+                        </div>
+                        <hr class="line-separator line-orange" />
+                        <div class="text-center">
+                            <p>Farolera tropezó<br/>
+                            y en la calle se cayó<br/>
+                            y al pasar por un cuartel,<br/>
+                            se enamoró de un coronel.</p>        
+                        </div>
+                        <hr class="line-separator line-orange" />
+                        <div class="text-center">
+                            <p>¡Ay!, cae, cae,<br/>
+                            ¡ay!, cae, cae,<br/>
+                            ¡ay!, cae, cae, cae, cae, cae.</p>
+
+                            <p>Dicen que los monos<br/>
+                            toman chocolate,<br/>
+                            porque los monos chicos<br/>
+                            lo baten y lo baten.</p>
+
+                            <p>Dicen que los monos<br/>
+                            toman hierbabuena,<br/>
+                            cuando al mono más viejo<br/>
+                            le duele la melena.</p>
+
+                            <p>¡Ay!, cae, cae,<br/>
+                            ¡ay!, cae, cae,<br/>
+                            ¡ay!, cae, cae, cae, cae, cae.</p>
+
+                            <p>Dicen que los monos<br/>
+                            comen las cerezas,<br/>
+                            porque los más chiquitos<br/>
+                            se paran de cabeza.</p>
+
+                            <p>Dicen que a los monos<br/>
+                            les gusta el ají,<br/>
+                            se pican y se pican<br/>
+                            y se hacen pipí.</p>
+
+                            <p>¡Ay!, cae, cae,<br/>
+                            ¡ay!, cae, cae,<br/>
+                            ¡ay!, cae, cae, cae, cae, cae.</p>
+
+                            <p>Dicen que los monos<br/>
+                            miran al revés,<br/>
+                            porque entre muchas muecas<br/>
+                            se parecen a usted.</p>
+
+                            <p>Dicen que los monos<br/>
+                            no saben cantar,<br/>
+                            y la mona más bella<br/>
+                            les viene a enseñar.</p>
+
+                            <p>¡Ay!, cae, cae,<br/>
+                            ¡ay!, cae, cae,<br/>
+                            ¡ay!, cae, cae, cae, cae, cae.</p>       
+   
+                        </div>
+                        
+                        <img class="img-fluid-80" src="img/monos.png" alt="monos">
+                        
+                        <hr class="line-separator line-orange" />
+                    </div>
+                </div>
+                 <!-- /Cuento 1 -->
+                
+                <!--Cuento 2 -->
+                
+                <div class="slides slide">
+                    <h2 class="section-title">Acto II</h2>
+                    <h1 class="chapter-title">De las torres <br/><span class="oswald-light">y del palacio</span></h1>
+                    <h3 class="story-title">De las torres del palacio un suspiro me llegó,
+                        y entre príncipes y doncellas una historia de amor floreció.
+                    </h3>
+                    <div class="content-text">
+                        
+                        <p class="first-paragraph">Érase una vez un príncipe tan romántico como uno jamás hubiera imaginado. Soñaba con una princesa dulce, agraciada, sencilla y sonriente con quien pudiera viajar y disfrutar de largos paseos y deliciosas viandas, entre aventuras y ocurrencias.</p>
+                        
+                        
+                        <p>Para cumplir sus sueños, tres veces por semana el príncipe, acompañado de su legión más airosa y galante, se iba cabalgando a los reinos lejanos en busca de una joven que cumpliera con sus exigencias. Peticiones que, a ojos de otros y en especial a los de su paciente madre, más bien eran caprichos de juventud. </p>
+                        
+                        
+                        <p>En el reino en el que tocara a la puerta, el príncipe y su tropa eran atendidos con donaire y elegancia. Con lupa y buen ojo el joven se sentaba durante horas a ver desfilar jovencitas de por aquí y de por allá. Su rutina era habitual, de su bolsillo sacaba una larga pluma y en una pequeña libreta anotaba con detalle todo lo que veía:</p>
+                        
+                        
+                        <p>◊	Robusta, flaca, bien puesta, desgarbada…<br>
+                            ◊	Seria, elocuente, silenciosa, imprudente…<br>
+                            ◊	Elegante, casual, desfachatada…<br> 
+                            ◊	Letrada en inglés, mandarín, esperanto… <br>
+                            ◊	Conocimientos en ciencias, repostería, equitación… 
+                        </p>
+                        
+                        <img class="img-fluid-80" src="img/principe.png" alt="principe">
+                        
+                        <p>Pero, nada, nada, nada parecía convencerlo. Ninguna princesa, por bella y culta que fuera, satisfacía sus sagaces requerimientos. Así, una y otra vez, al atardecer, triste, confuso y penoso el joven volvía a su morada. </p>
+                        
+                        <p>Hasta que un día, decidido, hizo una última declaración: </p>
+                        
+                        <p>—¡La búsqueda ha llegado a su fin! Si el destino me ha hecho una mala jugada, no ha querido que encuentre a mi princesa soñada, no me interpondré más y dejaré que el futuro siga su curso.</p>
+                        
+                        <p>>No hubo palabras de madre, asistentes, consejeros, familiares o amigos que hicieran echar para atrás tan tajante decisión y día tras día, el aburrimiento y la tristeza fueron tomándose el reino. Todo se volvió gris y opaco. Se adormecieron los sueños por cumplir y la esperanza en el reino se fue desvaneciendo en el lento transcurrir del tiempo y su andar. Empezó entonces una larga temporada de lluvias, truenos y relámpagos. Rezos, cantos y plegarias se hacían para apaciguar a los copiosos mares, los caudalosos ríos y para salvar las cosechas devastadas:</p>
+                        
+                        <p class="italic-text">San Isidro labrador, quita el agua y pon el sol.</p>
+                        
+                        <p>Hasta que un buen día, la neblina y el granizo dejaron a todos en el reino encerrados sin poder salir. </p>
+                        
+                        <p>Pero de pronto, algo inesperado sucedió:</p>
+                        
+                        <p>—Toc, toc, toc —se oyó en la puerta del palacio en medio de tanta tensión.</p>
+                        <p>—Pero ¿quién podrá ser en medio de este inclemente aguacero?, dijeron el príncipe y la reina. </p>
+                        
+                        <p>Ante la sorpresa, los dos fueron corriendo a abrir. Poco se veía entre tanta niebla, solo se oyó una dulce voz temblorosa del frío:</p>
+                        
+                        <p>—Soy la princesa Miranda y su piedad vengo a buscar. Mi criada y yo nos hemos alejado de nuestro castillo, hemos perdido el camino y buscamos posada hasta que salga el sol.</p>
+                        
+                        <p>Con bondad, el príncipe y su madre a la doncella y a su sirvienta dejaron pasar. Sin embargo ¿cómo saber que era una princesa de verdad entre tantos harapos y poca elegancia? </p>
+                        
+                        <p>Pero la reina, como buena e instintiva madre, supo entonces cómo resolver el misterio.</p>
+                        
+                        <p>—¡Que acomoden todos los colchones más finos, abullonados y suaves del castillo, unos encima de los otros, para tan distinguida princesa! —mandó la reina a sus sirvientes.  </p>
+                        
+                        <p>Lo que nadie esperaba era el plan de la reina madre. Una vez el dormitorio estuvo listo y sin sirvientes a la vista, en secreto ella entró y se dijo a sí misma:</p>
+                        
+                        <p>—Esta pequeñita arveja acomodaré justo en medio de los colchones y así, si fuese una princesa de verdad, de esta manera no podría acomodarse ni conciliar el sueño jamás. Solo el amanecer nos dará la respuesta acertada o… ¿esperada?</p>
+                        
+                        <p>Una vez acomodada la princesa, la sirvienta la cubrió con calentitas mantas y suaves arrullos. Pocos segundos pasaron antes de que la joven entrara en un profundo sueño gracias a su cansancio.</p>
+                        
+                        <p>Pero ¡suissas!, a los pocos segundos también comenzó a revolotear la joven entre los esponjosos colchones. Chis, chas, se volteaba para el otro lado. Plifplaf, ponía la cabeza en los pies. Cataplumcataplam se caía del lecho tratando de acomodarse.</p>
+                        
+                        <p>Una larga y ajetreada noche pasaron todos, cada uno en su habitación esperando el amanecer. La reina buscaba encontrar la respuesta a su inquietud, el príncipe no parecía alarmarse inquietarse ni con el vuelo de una mosca, mientras la princesa, ojerosa y cansada, anhelaba que dejara de llover para no volver a pasar otra noche en aquel reino. </p>
+                        
+                        <p>—¿Cómo has dormido esta noche estimada doncella? —fue lo primero que la reina preguntó al ver a la princesa a la mañana siguiente.</p>
+                        
+                        <p>—Disculpen ustedes mi mala educación —dijo la doncella—, pero no he podido pegar el ojo en tan magnífico lecho. No los culpo, debió ser el frío que me invadió los huesos y la piel.</p>
+                        
+                        <p>Qué alivio y alegría sintió la reina al escuchar a la princesa. Cada queja suya era como música para sus oídos pues detrás de aquella desastrosa joven se escondía una princesa de verdad. La madre entonces gritó emocionada:</p>
+                        
+                        <p>—Un aplauso a la doncella que ha demostrado ser una princesa de verdad. ¡Una pequeña arveja en su colchón no pudo soportar y mi hijo por fin se ha de casar! </p>
+                        
+                        <p>Por un momento príncipe y princesa quedaron mudos ante la sorpresa de la reina madre. Hasta que… </p>
+                        
+                        <p>—¡Silencio en la corte! —gritaron los dos jóvenes al mismo tiempo.</p>
+                        
+                        <p>Sorprendidos por su respuesta tan sincronizada, príncipe y princesa se miraron boquiabiertos. Sus miradas sin palabras lo dijeron todo… ¡Era una señal inconfundible! ¡La vida los unía justo a la hora y en el momento indicado! </p>
+                        
+                        <p>En ese instante los dos agraciados volvieron a mirarse tímidamente y de nuevo, al unísono, entre sonrisitas dijeron:</p>
+                        
+                        <p>—¿Quieres irte a viajar conmigo?</p>
+                        
+                        <p>—¿Pero qué están pensando? —dijo ofuscada la reina— ¿Quién ha dicho que así termina esta historia? ¡Aquel que haya oído historias de príncipes y princesas sabe cuál es la pregunta correcta: ¿Quieres casarte conmigo?</p>
+                        
+                        <p>Pero los dos jovencitos dijeron que no con su cabeza y la reina sin palabras quedó. A decir verdad, ninguno de los dos estaba preparado para tal compromiso. Primero debían viajar por el mundo y descubrir si era amor o no lo que aquella repentina señal les había dejado ver. </p>
+                        
+                        <p>Y así, sin pensarlo, ensillaron sus corceles y por el mundo al galope sus sueños fueron a conquistar. Si algún día se casaron o no, eso es un enigma que jamás se ha podido comprobar… </p>
+                        
+                        <p>Por eso este cuento sin fin, entre caprichos de jovencitos y una reina resignada, llegó hasta aquí.</p>
+                        
+                        <img class="img-fluid-80" src="img/corcel.png" alt="corcel">
+                        
+                        
+                        <hr class="line-separator line-orange" />
+                        <h3 class="story-title">Romance del conde Olinos</h3>
+                        
+                        <div class="text-center">
+                            <p>Madrugaba el conde Olinos, mañanitas de San Juan,<br><span class="semibold-text">pa’ dar agua a su caballo a las orillas del mar.</span></p>
+                            
+                            <p>Mientras el caballo bebe él canta un dulce cantar,<br>
+                                <span class="semibold-text">las aves que iban volando se paraban a escuchar.</span></p>
+                            
+                            <p>Bebe, mi caballo, bebe,<br>
+                                Dios te me libre del mal, <span class="semibold-text">de los vientos, de la tierra y de las furias del mar.</span></p>
+                            
+                            <p>De la torre del palacio, la reina lo oyó cantar: <span class="semibold-text">mira hija cómo canta la sirena de la mar.</span></p>
+                            
+                            <p>No es la sirenita, madre, la de tan bello cantar,<br>
+                                <span class="semibold-text">es la voz del conde Olinos que por mis amores va.</span></p>
+                            
+                            <p>Si por tus amores viene, <br>
+                                ¡no lo dejaré pasar!, <span class="semibold-text">que para casar contigo le falta sangre real.</span></p>
+                            
+                            <p>Si lo manda matar, madre, juntos nos verá volar,<br> 
+                                <span class="semibold-text">que si mata al Conde Olinos a mí gran pena me da.</span></p>
+                            
+                            <p>La princesa con tristeza, no cesaba de llorar,<br>
+                                <span class="semibold-text">el murió a la medianoche y ella a los gallos cantar.</span></p>
+                            
+                            <p>A ella como hija de reyes <br>
+                                la entierran en el altar, <br>
+                                <span class="semibold-text">a él como hijo de conde unos pasos más atrás.</span></p>
+                            
+                            <p>la entierran en el altar, <br> 
+                                <span class="semibold-text">a él como hijo de conde unos pasos más atrás.</span></p>
+                            
+                             <p>Ella se volvió paloma, él un fuerte gavilán, <br> 
+                                 <span class="semibold-text">juntos vuelan por el cielo, juntos se van a gozar.</span></p>
+                            
+                            <p>Caminante que caminas, deja tu sueño al andar, <br>
+                                <span class="semibold-text">navegante que navegas echa tu cuento a la mar…</span></p>
+            
+                        </div>
+                        <img class="img-fluid-80" src="img/conde2.png" alt="conde2">
+                        <hr class="line-separator line-orange" />
+                        
+                        <h3 class="story-title">Entreactos </h3>
+                        <div class="text-center"><p>
+                            Dime la letra, dime el color:<br/>
+                            ‘a’ de azulejo,<br/>
+                            ‘m’ de morado,<br/>
+                            ‘o’ de oro, ‘r’ de rosado.<br/>
+                            </p>
+                            
+                            <p>‘A’ de amorcito robado, y eso lo dijo, ¡un príncipe enamorado!</p>
+                        </div>
+                      
+                        <hr class="line-separator line-orange" />
+                        
+                        <div class="text-center">
+                            <p>Arroz con leche, me quiero casar,<br/>
+                                con una señorita de la capital.</p>
+                            <p>¿Que sepa coser, que sepa bordar, que sepa abrir la puerta para ir a jugar.</p>
+                            <p>Con esta sí, con esta no, ¡con esta señorita, me caso yo!</p>
+                            <p>Yo soy la viudita, la hija del rey, me quiero casar y no sé con quién.</p>
+                            <p>Y siendo tan bella, no encuentras con quién,<br>
+                            escoge a tu gusto que aquí tienes cien.</p>
+                            <p>Con esta sí, con esta no,<br>
+                            ¡con esta señorita, me caso yo!</p>
+                        </div>
+                        <hr class="line-separator line-orange" />
+                          <div class="text-center">
+                            <p>Hipiti hop, hipiti hop,<br/>
+                                hipiti, hipiti, hipiti hop.</p>
+                            <p>Un caballito galopa que opa, un caballito andando va.</p>
+                            <p>Un caballito camina empinado, un caballito danzando va.</p>
+                            <p>Hipiti hop, hipiti hop, hipiti, hipiti, hipiti hop.</p>
+                            <p>Un caballito se ve muy cansado, un caballito al llano se va.</p>
+                            <p>Un caballito que cierra los ojos, un caballito se va a descansar.</p>
+                        </div>
+                        
+                        <hr class="line-separator line-orange" />
+                          <div class="text-center">
+                            <p>Rosita era linda, linda, linda, Rosita era linda, linda.</p>
+                            <p>Vivía alegre en su hogar, en su hogar, en su hogar, <br>
+                              vivía alegre en su hogar, en su hogar.</p>
+                            <p>Mas una bruja mala, mala, mala, mas una bruja, mala, mala.</p>
+                            <p>Adormeció a Rosita así, bien así, bien así, adormeció a Rosita así, bien así.</p>
+                            <p>Un espino creció alrededor, alrededor, alrededor,<br> un espino creció alrededor, alrededor.</p>
+                            <p>Un día vino un lindo rey, lindo rey, lindo rey, un día vino un lindo rey, lindo rey.</p>
+                             <p>Y despertó a Rosita así (muac), bien así <br>
+                              (muac), bien así (muac),<br>y despertó a Rosita así (muac), bien así (muac).</p>
+                              <p>Celebraron la boda, boda, boda, Celebraron la boda, boda.</p>
+                        </div>
+                        
+                         <hr class="line-separator line-orange" />
+                          <div class="text-center">
+                            <p>Amo a to, matarile, rile, ro.</p>
+                            <p>—¿Qué quiere usted?, matarile, rile, ro.</p>
+                            <p>M—Quiero a una reina hermosa, matarile, rile, ro.</p>
+                            <p>—Escoja usted, <br>
+                              matarile, rile, ro. </p>
+                            <p>—Yo escojo a la más querida. matarile, rile, ro. </p>
+                            <p>¿Y qué oficio le pondría? matarile, rile, ro. </p>
+                             <p>—La pondremos a correr, matarile, rile, ro.</p>
+                              <p>Ese oficio no le gusta, matarile, rile, ro. </p>
+                               <p>—Le pondremos a saltar, matarile, rile, ro. </p>
+                               <p>—Ese oficio no le gusta, matarile, rile, ro.  </p>
+                               <p>—La pondremos a dormir, matarile, rile, ro. </p>
+                               <p>Ese oficio no le gusta, matarile, rile, ro. </p>
+                               <p>—La pondremos a girar, matarile, rile, ro. </p>
+                               <p>Ese oficio no le gusta, matarile, rile, ro. </p>
+                               <p>—La pondremos como estatua, matarile, rile, ro. </p>
+                                <p>Ese oficio no le gusta, matarile, rile, ro. </p>
+                               <p>—La pondremos a cantar, matarile, rile, ro. </p>
+                               <p>Ese oficio sí le gusta, matarile, rile, ro.  </p>
+                               <p>—Le pondremos a bailar, matarile, rile, ro. </p>
+                               <p>Ese oficio sí le gusta, matarile, rile, ro. </p>
+                               <p>—La pondremos a volar, matarile, rile, ro. </p>
+                               <p>Ese oficio más le gusta, matarile, rile, ro. </p>
+                               <p>Amo a to, matarile, rile, ro.</p>
+                              <img class="img-fluid-80" src="img/materile.png" alt="materile">
+                        </div>
+                        <hr class="line-separator line-orange" />
+                    </div>
+                </div>
+                
+                
+                <!-- /Cuento 2 -->
+                
+                 <!--Cuento 3 -->
+                <div class="slides slide">
+                    <h2 class="section-title">Acto III</h2>
+                    <h1 class="chapter-title">A vuelo<br/><span class="oswald-light">de pajaro</span></h1>
+                    <h3 class="story-title">Dejan plumas al volar y su canto al soñar.<br>
+                        Trinan aventuras y romances que se esparcen por la mar.
+                    </h3>
+                    
+                    <h3 class="story-title-acto3">Ola, ola, ola de la mar, cántame y cuéntame a mí,<br>
+                       dime lo que sueña el pájaro antes de ir a dormir.
+                    </h3>
+                    <div class="content-text">
+                        
+                        <p class="first-paragraph">Pues sí señor, dícese que se dice que una mañana soleada la señorina Picorina picoteaba unos granos de maíz, cuando, de repente, un algo muy, pero muy pesado, cayó en su cola con tanta fuerza que lo único que se le ocurrió fue que el cielo se desmoronaba a sus pies. </p>
+                        
+                        
+                        <p>Entonces se dijo a sí misma, ¡no hay tiempo que perder, de inmediato el gran rey lo ha de saber!  </p>
+                        
+                        
+                        <p>Saltito a saltito, Picorina emprendió el camino a ver a su majestad, pero justo en la mitad del camino, se encontró con el Gallo Cantaclaro.</p>
+                        
+                        
+                        <p>—¿A dónde va, señorina Picorina? 
+                        </p>
+                        
+                        <p>—¡Ay, gallito mío! —contestó la Picorina.<br>
+                        ¿No ha visto usted que el cielo se va a caer? A mis pies cayó un algo tan duro, que sentí pánico y mucho apuro. <br>
+                        Al rey le voy a contar, para que a todos pueda salvar.</p>
+                        
+                        <p>—Entonces, con usted debo ir, de principio hasta el fin —cacareó el gallo Cantaclaro.  </p>
+                        
+                        <p>Saltito a saltito, picoteo a picoteo, Picorina y Cantaclaro emprendieron camino, hasta que encontraron al pato Clorofilo. </p>
+                        
+                        <p>—¿A dónde van, queridos amigos? </p>
+                        
+                        <p>—¡Ay, Clorofilo mío! —contestó la Picorina. <br>
+                        ¿No ha visto usted que el cielo se va a caer? A mis pies cayó un algo tan duro, que sentí pánico y mucho apuro. <br>
+                        Al rey le voy a contar, para que a todos pueda salvar.</p>
+                        
+                        <p>—No se diga más, ¡con ustedes he de caminar! —dijo el pato Clorofilo. </p>
+                        
+                        <p>Saltito a saltito, picoteo a picoteo, graznido a graznido, Picorina, Cantaclaro y Clorofilo emprendieron camino hasta que encontraron a la lora Chirimoya. </p>
+                        
+                        <p>—¿Qué los trae por aquí, queridos amigos? ¿Y a dónde van con tanto afán? </p>
+                        <p>—¡Ay, Chirimoya mía!, dijo la Picorina.<br>
+                        ¿No ha visto usted que el cielo se va a caer?</p>
+                        
+                        <p>A mis pies cayó un algo tan duro, que sentí pánico y mucho apuro. Al rey le voy a contar, para que a todos pueda salvar.</p>
+                        
+                        <p>—Pues mi equipaje alistaré y con ustedes el viaje emprenderé —dijo la lora. </p>
+                        
+                        <p>Saltito a saltito, picoteo a picoteo, graznido a graznido, voltereta a voltereta, Picorina, Cantaclaro, Clorofilo y Chirimoya emprendieron camino, hasta que encontraron al tucán Magistral.  </p>
+                        
+                        <p>—¿A dónde van con tan pronto andar? </p>
+                        
+                        <p>—¡Ay, Magistral mío! —contestó la Picorina. <br>
+                        ¿No ha visto usted que el cielo se va a caer? A mis pies cayó un algo tan duro, que sentí pánico y mucho apuro. <br>
+                        Al rey le voy a contar, para que a todos pueda salvar.</p>
+                        
+                        <p>—Pero ¿cómo? ¡Me hubieran avisado antes! Todos juntos de inmediato hemos de marchar para el mundo así salvar <br>
+                        —dijo el tucán. </p>
+                        
+                        <p>Saltito a saltito, picoteo a picoteo, graznido a graznido, voltereta a voltereta, trote a trote, Picorina, Cantaclaro, Clorofilo, Chirimoya y Magistral, de nuevo emprendieron camino hasta que encontraron al compadre Zorro. </p>
+                        
+                        <p>—¿Qué les trae a todos por aquí? ¡Ay, pero que preciosos se ven agrupados así!</p>
+                        
+                        <img class="img-fluid-80" src="img/todos.png" alt="todos">
+                        
+                        <p>—¡Ay, compadre Zorro! —contestó la Picorina. <br>
+                        ¿No ha visto usted que el cielo se va a caer? A mis pies cayó un algo tan duro, que sentí pánico y mucho apuro.<br>
+                        Al rey le voy a contar, para que a todos pueda salvar.</p>
+                        
+                        <p>—¡No se diga más, que un fortachón los ha de salvar y a ustedes hasta el fin he de acompañar! </p>
+                        
+                        <p>Pero esta vez la señorina Picorina supo que su respuesta debía ser diferente y sin pensarlo dos veces dijo:</p>
+                        
+                        <p>—No, compadre Zorro, lo mejor es que usted se quedé acá —y antes de que el compadre Zorro mostrará sus afilados dientes y los atrapara con sus garras, los cinco amigos se miraron y al tiempo levantaron el vuelo.</p>
+                        
+                        <p>Y volando, volando, volando en el palacio pronto aterrizaron los cinco buenos amigos aclamando al rey:</p>
+                        
+                        <p>—¡Sal, sal, sal, nuestra majestad amada, que el cielo se ha rajado!<br>
+                        Hazlo componer de una buena vez que pareciera se va a caer y… ¡a todos nos ha de romper! </p>
+                        
+                        <p>Con elegancia el rey les dio las gracias, les regaló una moneda de oro a cada uno y les organizó una gran fiesta de celebración.  </p>
+                        
+                        <p>Y entre cantos y cuentos esta historia de buenos amigos llegó a su fin, mientras a los atrevidos zorros ya mandamos a dormir.</p>
+                        
+                        <h3 class="story-title">Canta un gallo</h3>
+                        
+                        <p>Cantaba un gallo,   muy alto, muy claro,<br>
+                        y quiso que ustedes cantaran también.</p>
+                        
+                        <p>A que no adivinan quién era ese gallo: era CantaClaro, el gallo feliz.</p>
+                        
+                        <p>Viajó desde lejos hasta este lugar, cargado de versos para compartir.<br>
+                        Nadie lo ha visto, nadie lo conoce, solo sus huellas dejó por aquí.</p>
+                        
+                        <p>Todos buscamos y no lo atrapamos, por eso hoy cantamos la historia sin fin...</p>
+                        
+                        <p class="italic-text">(Y ahora, cántala con nosotros...)</p>
+                        
+                         <img class="img-fluid-80" src="img/gallo.png" alt="gallocanto">
+                        
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                        
+                        <h3 class="story-title">Entreactos </h3>
+                        <div class="text-center"><p>
+                            La gallina Josefina, puso un huevo en la cocina.
+                            </p>
+                            
+                            <p>‘Puso uno, puso dos, a ti no te regaló.</p>
+                            
+                            <p>Puso tres, puso cuatro, parecía un garabato.</p>
+                            
+                            <p>Puso cinco, puso seis, del tamaño de una nuez.</p>
+                            
+                            <p>Puso siete, puso ocho, preparó un gran sancocho.</p>
+                            
+                            <p>Puso nueve, puso diez,<br>
+                            en el reino del revés.</p>
+                            <p>Y este cuento es de mentiras, una y dos y dos, ¡no es! </p>
+                        </div>
+                      
+                        <hr class="line-separator line-orange" />
+                        
+                        <div class="text-center">
+                            <p>Estaba la pájara pinta, sentadita en su verde limón.<br/>
+                                Con el pico recoge la rama, con la rama recoge la flor.</p>
+                            <p>¡Ay, ay, ay! <br>¿Cuándo vendrá mi amor?</p>
+                            <p>¡Ay, ay, ay! <br> ¿Cuándo vendrá mi amor?</p>
+                            <p>Me arrodillo a los pies de mi amante y le juro ser fiel y constante.</p>
+                            <p>Dame una mano, dame la otra,<br>
+                           dame un besito<br>
+                                que sea de tu boca.</p>
+                            <p>Daré la media vuelta, daré la vuelta entera, con un pasito atrás,<br>
+                            haciendo la reverencia.</p>
+                            
+                            <p>Pero no, pero no, pero no, porque me da vergüenza.<br>
+                            Pero sí, pero sí, pero sí, porque te quiero a ti.</p>
+                        </div>
+                        <hr class="line-separator line-orange" />
+                          <div class="text-center">
+                            <p>Los pollos de mi cazuela no son para yo comer,<br/>
+                                sino para las viuditas que lo saben componer.</p>
+                            <p>Se les echa ají y cebolla, hojitas de laurel,<br>
+                              se sacan de la cazuela cuando se van a comer.</p>
+                            <p>Componte, niña componte.<br>
+                              que ahí viene tu marinero, con ese bonito traje que parece un carnicero.</p>
+                           <img class="img-fluid-80" src="img/negrita.png" alt="negrita">
+                              <p>Yo soy la que parte el pan, yo soy la que sirve el vino,<br>
+                              yo soy la que se menea con ese cuerpo tan divino.</p>
+                              <p>Anoche yo te vi, bailando el chiquichá,<br>
+                              con las manos en la cintura para salir a bailar.</p>
+                            
+                              <p>Anoche yo te vi, en el parque Tulipán,<br>
+                                  con las manos en las cintura param pan pin pon pin pom pan… ¡Tararán!</p>
+                        </div>
+                        
+                        <hr class="line-separator line-orange" />
+                          <div class="text-center">
+                              <h3 class="story-title">Tras la bruma </h3>
+                            <p>Tras la bruma sale la luna y a dormirse, tres, dos y una…</p>
+                            <p>El día va cayendo, la luna apareciendo, <br>
+                              los niños y las niñas cansados ya están.</p>
+                            <p>Se cierran las cortinas,<br>
+                              se ponen las pijamas, se abren las cobijas,<br>
+                              se alistan buenos cuentos.</p>
+                            <p>Y con un besito,<br>
+                              ¡a dormir se dijo!</p>
+                            <img class="img-fluid-80" src="img/buho.png" alt="buho">
+                        </div>
+                        <hr class="line-separator line-orange" />
+                    </div>
+                </div>
+                
+                <!--Biografías -->
+                
+                
+                <div class="slides slide">
+                
+                <h2 class="section-title">Biografías</h2>
+                    <h1 class="chapter-title">Maria del Sol Peralta<br/></h1>
+                   
+                 <div class="content-text">
+                        
+                         <img class="img-fluid-50" src="img/maria.png" alt="Maria del sol">
+                     
+                        <p class="first-paragraph">Es pedagoga preescolar con especialidad en temas relacionados con la música y la literatura para niños. Cada vez que inventa un proyecto, hace un taller, dirige un montaje, hace un libro o graba un disco, piensa, piensa y piensa, en cómo hará para que los niños, junto a los adultos, disfruten de sus trabajos en familia. </p>
+                     
+                        <p>Creció en medio de artistas, escritores y músicos dedicados a pensar exclusivamente en los más pequeños. Empezó actuando en los programas de televisión al lado de su abuela, para luego adentrarse en el mundo del canto, el baile, la música y la literatura. Así, ha hecho parte del equipo de trabajo de instituciones educativas y culturales dedicadas al fomento de la lectura y a la expresión artística.</p>
+                     
+                        <p>Incursionó en la música para niños como guionista y narradora del grupo de música infantil<span class="italic-text"> Todos Podemos Cantar y Contar,</span> dirigido por Hitayosara Ojeda y Rafael Peralta. Por su propuesta creativa en el año 2000, la agrupación fue ganadora de la beca de creación Umbral, otorgada por el Instituto Distrital de Cultura y Turismo (Bogotá – Colombia).</p>
+                        
+                        <p>Desde entonces dirige la agrupación <span class="italic-text">CantaClaro,</span> que con su primer trabajo discográfico y editorial llamado <span class="italic-text">Sana que Sana,</span> en el año 2002 fue premiado por la X Tribuna Musical de América Latina y el Caribe (TRIMALCA - UNESCO), como obra seleccionada dentro de la categoría de Música para niños, por su aporte a la educación. Hoy en día, <span class="italic-text">Sana que Sana</span> se encuentra en manos de más de 100.000 familias distintas.</p>
+                     
+                        <p>El grupo ha viajado por todo el país, además de haber realizado recitales en el exterior: Uruguay, Buenos Aires, Ecuador, España, México y Estados Unidos, haciendo conciertos y talleres de sensibilización.</p>
+                     
+                        <p>En el 2008 se lanza la colección <span class="italic-text">María del Sol, música y libros para la familia,</span> en coedición con la editorial Alfaguara, siendo la directora, escritora y editora. Esta serie incluye los títulos: </p>
+                     
+                        <p>*	<span class="italic-text">Con…¡cierto animal!,</span>  obra con la que se ha presentado en los principales teatros del país, además de haber hecho tres exitosas temporadas en el Teatro Nacional (Castellana y Fanny Mikey).</p>
+                     
+                         <p>*	Desde el 2013, <span class="italic-text">Tomatina Curatodo cura nada sin amor </span>  hace parte de la colección, además de tener un nuevo espectáculo. Por la nueva obra, el grupo fue ganador de la Beca para Conciertos Didácticos para niños otorgado por el Ministerio de Cultura. </p>
+                     
+                        <p>*	<span class="italic-text">¡Arre, borriquita!,</span> lanzado en el año 2014, con numerosas presentationes ya realizadas.</p>
+                     
+                        <p>*	<span class="italic-text">Así me lo contaron a mí y así te lo canto a ti, </span> como último lanzamiento de la colección.</p>
+                     
+                        <p>Es miembro activo de la Academia Real de los Premios Grammy Latinos.</p>
+                        
+                        <p>Trabajó en la editorial Random House Mondadori (Colombia) dirigiendo el Plan Lector, además de haber sido la editora infantil y juvenil. </p>
+                     
+                        <p>Ha hecho parte de proyectos de educación a través de las diferentes expresiones artísticas, la música y la literatura infantil como <span class="italic-text">CUIDARTE</span> (Ministerio de Educación),<span class="italic-text"> LA AUDIOTECA y CUENTOS DRAMATIZADOS</span> (Ministerio de Cultura), y <span class="italic-text">LA FIESTA DE LA LECTURA</span> (ICBF).</p>
+                     
+                        <p class="semibold-text">Otras publicaciones:</p>
+                     
+                        <p>*	Artículo <span class="italic-text">La Música de las Palabras, </span> para la revista virtual Cuatrogatos.</p>
+                     
+                        <p>*	<span class="italic-text">Recetas de Benjamín Buengusto, </span> de Ediciones B. </p>
+                     
+                        <p>*	<span class="italic-text">Cantando en Navidad</span> (CD).</p>
+                     
+                        <p>*	Artículo El libro con disco: <span class="italic-text">Una mirada histórica desde el desarrollo editorial,</span> para Cuadernos de literatura infantil colombiana (volumen 2: Música y literatura infantil colombiana), serie publicada por la Biblioteca Nacional de Colombia. </p>
+                     
+                        <p>*	Artículo <span class="italic-text">La palabra, el refugio de todos,</span> para el minisite del programa Cultura en los albergues: mi tiempo es tu tiempo (Ministerio de cultura 2012).</p>
+                     
+                        <p>*	Cartilla  <span class="italic-text">En clave de son, músicas para jugar</span> (audioteca) para el Ministerio de cultura 2012.</p>
+                     
+                        <p>*	<span class="italic-text">¿Baila usted?, </span> disco para el programa de primera infancia de Coldeportes: Mandalavida, espacios lúdicos (2014).</p>
+                    </div>
+                    
+                    <h1 class="chapter-title">Helena Melo Tovar<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/helena.png" alt="Helena Melo">
+                        <p class="first-paragraph">Nació en Bogotá, Colombia, es ilustradora y diseñadora gráfica. Pinta todos los días desde hace muchos años. A veces enseña, cuenta, canta y viaja con sus lápices y libreta siempre en el bolsillo. De tanto dibujar suele perderse algunos amaneceres y atardeceres, pero intenta compensarlo con largos paseos en bicicleta y silenciosas horas en el campo, la montaña o frente al mar.</p>
+                    
+                    </div>
+                </div>
+                <div class="slides slide"></div>
+                <!-- /Cuento 3 --> 
+
+            </div>
+        </div>
+    </div>
+<script>
+window.createMenu('1');    
+</script>
+
+<footer>
+   <div class="main-container main-container-flex main-container-home">
+     <p class="brand-palabras">Palabras rodantes</p>
+     <h1 class="brand footer-brand">Comfama</h1>    
+   </div>
+   <div class="copyright"><p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p></div>
+</footer>
+</body>
+</html>

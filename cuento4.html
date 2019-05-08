@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palabras rodantes</title>
+    
+<!-- estilos -->    
+<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+    
+<!-- acciones -->
+<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+<script src="js/jq-sticky-anything.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/base.js" type="text/javascript"></script>     
+<script type="text/javascript" src="js/queryloader2.min.js"></script>
+<script type="text/javascript">
+window.addEventListener("DOMContentLoaded", function() {
+    new QueryLoader2(document.querySelector("html"), {
+        barColor: "#fff",
+        backgroundColor: "#000",
+        percentage: true,
+        barHeight: 0,
+        minimumTime: 1000,
+        maxTime: 50000,
+        fadeOutTime: 1000
+    });
+});
+    
+
+</script>
+</head>
+    
+<style>
+.menu li:hover{
+    background-color: #DE143A;
+    color: #000;
+    
+    }
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 23px;
+    color: #DE143A;
+    margin-left: 85%;
+    padding-top: 8%;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+.first-paragraph::first-letter{
+    font-size: 5em;
+    line-height: 0;
+    font-family: 'oswaldmedium';
+    color: #009F79;
+    
+}
+    
+.menu-selected{
+    color: #fff;
+    background-color: #DE143A;
+}
+   
+.line-orange{
+    border: 1px solid #000;
+    margin-top: 6%;
+    margin-bottom: 30px;
+}    
+    
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 30px;
+    text-align: center;
+    color: #DE143A;
+    margin-left: 24%;
+    padding-top: 5%;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url(img/btnLect.png);
+    background-repeat: no-repeat;
+    width: 305px;
+    height: 100px;
+}
+
+
+    
+.resaltado{
+   color: #DE143A;
+    font-size: 38px;
+    background-image: url(img/comillas.png);
+    text-align: center;
+    background-repeat: no-repeat;
+    width: 80%;
+    margin-left: 50px;
+    margin-top: 30px;
+    padding-right: 5px;
+    font-family: 'oswaldregular';
+    
+}
+    </style>
+
+<body class="bg-book4">
+<header>
+    <a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+    <h1 class="brand">Comfama</h1>
+    
+    <img class="botonA" src="img/buttonA.png" alt="boton cambio">
+    
+    <div class="slideHeader">
+         
+        <img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+        <img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+        <img class="resetFont" src="img/reset.png" alt="resetear">
+        <br>
+        <img class="blanco" src="img/blanco.png" alt="btn blanco">
+        <img class="morado" src="img/morado.png" alt="btn morado">
+        <img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+        
+    </div>
+    
+</header>
+     
+    <div class="presentation">
+        
+        <div class="main-container presentation-container">
+            <button id="presentation-close">Cerrar</button>
+            <div class="presentation-scroll">
+                
+                <h1 class="presentation-title">Créditos</h1>
+                
+
+               <p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía</p>
+                
+                <p>Ilustración carátula:<br>• Daniel Gómez</p>
+                
+                <p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+                <p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+
+                
+            </div>
+            
+        </div>
+    </div> 
+    
+     
+    <div class="global-container">
+        
+        
+        
+        
+        
+        <hr class="line-separator line-title" />
+        <h1 class="verdeP main-title">El espíritu universal<br><span class="verdeP oswald-light">Ensayos selectos</span></h1>
+        <hr class="line-separator line-title" />
+        <div class="main-credits"><p>Autor: Alfonso Reyes</p></div>
+        
+        <img class="img-fluid" src="img/imagenlibro3.png" alt="imagenLibro">
+        
+        
+        
+        
+        <div class="main-container-flex" id="container-controls">
+
+            <div class="mobile-menu"></div>
+
+            <div class="invisibleMenu">
+                
+            <div class="menu "></div>
+            
+            </div>
+            <div class="content-container">
+                
+                
+         <div class="slides">
+                    <h2 class="section-title verde">Prólogo</h2>
+                
+                    <div class="content-text">
+                        <p class="first-paragraph">Alfonso Reyes (1889-1959) no fue solo un individuo. Pareciera, más bien, una comunidad secreta de infatigables lectores y hacedores del Tlön borgiano, escondidos tras su único nombre. En sus setenta años de vida acumuló un conocimiento oceánico de erudiciones diversas: literatura, historia, mitología, filología, filosofía, crítica literaria. Con su imaginación penetró en las dimensiones arquetípicas de la Grecia clásica y luego las reflejó en las tierras mexicanas y de América Latina, como si fuera un demiurgo ancestral.  Trasvasó al español los contenidos y símbolos de las palabras jónicas y dóricas que descubrieron, en Occidente, la dignidad humana, la tragedia de la desmesura, la crueldad de los dioses y el accidentado camino hacia la serenidad a través de la ética profunda. </p>
+
+                        
+                        <p>Su escritura de extensión colosal, veintiséis tomos de las Obras Completas y los recientes siete volúmenes de sus Diarios, lo convirtieron en el gran polígrafo del continente. Enciclopedista moderno, pedagogo de vocación, éste “Erasmo mexicano” como lo denominó el ensayista Adolfo Castañón, también fue un excelso estilista del lenguaje y la calidad de su prosa quedó consagrada por el comentario que de él hizo el propio Jorge Luis Borges: “Si tuviera que decir quién ha manejado mejor la prosa española, sin excluir a los clásicos, yo diría inmediatamente: Alfonso Reyes”. </p>
+                        
+                        <p>Sus mejores libros de prosa poética y de ficción los publicó en la juventud: La visión de Anáhuac (1917) y el drama Ifigenia cruel (1924). Las obras más logradas de su “obsesión Helénica” fueron La crítica en la edad ateniense (1941) y La antigua retórica (1942). La cúspide de su bagaje de crítico literario está representada en La experiencia literaria (1942) y en El deslinde. Prolegómenos a la teoría literaria (1944). Pero, en mi concepto, el libro que refleja mejor la madurez intelectual y la sabiduría vital de Reyes es La filosofía Helenística, la última obra publicada en su existencia, el 10 de agosto de 1959, cuatro meses y pico antes de su muerte. Allí, en un prólogo que tiene el tono y la hondura de un legado confesional (había sobrevivido a cinco infartos cardiacos) dijo:</p>
+                        
+                        <p>“El especialista podrá considerarnos acaso con alguna conmiseración, como nosotros a él, por nuestra parte. Pero andamos por la tierra algunos “especialistas en universales”. No nos resignamos a estudiar los objetos de la cultura como objetos aislados. Necesitamos sumergirlos en los conjuntos históricos y filosóficos de cada época. De aquí nuestras aparentes “audacias”. Lo son solamente por venir de un estudiante que ha pasado ya los sesenta años, y todavía reclama el derecho juvenil a seguir leyendo, tomando notas y organizando sus lecturas”.</p>
+                        
+                    
+                        
+                        <p>En este fragmento están las claves de lo que significó Reyes para la cultura hispanoamericana: la universalidad de sus horizontes intelectuales y la humildad interior de un estudiante perpetuo que amaba el conocimiento. Este espíritu lúdico que escoltó sus búsquedas literarias lo captó muy bien George Steiner cuando dijo que don Alfonso era “en un sentido maravilloso, un amateur si recordamos lo que la palabra significa: amatore, un amante”. Un amante de los libros y de las palabras, libre de las amarguras de los catedráticos obligados y de la pomposidad vacua de los eruditos que usan el intelecto para huir de la realidad. Al contrario, la mayor enseñanza de Reyes a los lectores contemporáneos no se encuentra tanto en sus conocimientos, sino en la profunda coherencia que tuvo entre su vida y su obra. </p>
+                        
+                        <p>Hijo de un prestigioso militar de la República que acompañó a Porfirio Díaz en la turbulenta época de la revolución mexicana, sufrió el dolor del asesinato de su padre, abaleado en el Zócalo de la ciudad de México el 9 de febrero de 1913. </p>
+                        
+                        <p> Un año después huyó a París, luego a Madrid, Río de Janeiro, Buenos Aires, y solo volvió a su patria veinticinco años después, en 1939, con cincuenta años de edad, una obra reconocida a cuestas, y el corazón liberado de resentimientos y de anhelos de venganza. En un poema que escribió en 1932, pero que se publicó de manera póstuma, y cuyo título era la misma fecha aciaga refiere conmovido: “Febrero de Caín y de metralla:/ humean los cadáveres en pila./ Los estribos y riendas olvidabas/ y, Cristo militar, te nos morías…/ Desde entonces mi noche tiene voces,/ huésped mi soledad, gusto mi llanto./ Y si seguí viviendo desde entonces/ es porque en mí te llevo, en mí te salvo,/ y me hago adelantar como a empellones,/ en el afán de poseerte tanto”. </p>
+                        
+                        <p>Se nos revela acá la decisión crucial del hombre joven: se exilió para no untar sus manos de sangre y emponzoñar con odio su ser y descubrió en los libros y la cultura la cura para su tragedia. Reyes regresó a México para entregar sabiduría y cortesía, amor por su patria, enseñar tolerancia a la juventud y su afán de educar para el “bien y la verdad” quedó plasmado en la Cartilla Moral (1944) que se reproduce en esta antología. No en vano recuerda la regla de oro que Confucio expresó en sus Analectas: “No hagas a los demás lo que no quieras que te hagan”. El ansia de don Alfonso para irradiar su honda cultura en tantos libros que publicó tenía una motivación moral: la barbarie y la violencia se aminoran con la voluntad del saber humanístico, por eso la estética y la ética son una mezcla indisoluble y el escritor auténtico sabe que “el respeto a la verdad es, al mismo tiempo, la más alta cualidad moral y la más alta cualidad intelectual”. Ahora bien, curarse de “resentimientos” no significa superar la melancolía. De allí que uno de sus discípulos más aventajados, el escritor Carlos Fuentes dijera de él: “No fue feliz. Fue escritor y debo añadir que fue un hombre risueño, sensual a la vez que cauto y amable”.</p>
+                        
+                        <p>Los aportes de Alfonso Reyes a la cultura latinoamericana son variados y han perdurado. Supo unir el conocimiento universal con los saberes regionales sin caer en lo folklórico mal entendido, ni en un universalismo impostado. Aunque su poesía y la cuentística (que se muestran también en esta selección) son de calidad, su mayor contribución a la literatura se encuentra en el género del ensayo al cual definió como “un centauro”.  Su obra ensayística es digna heredera de la tradición de Montaigne: construida con una prosa amena y digresiva, con el tono de la conversación entre amigos, en medio de unos vinos y las risas que surgen de la confraternidad humana. Su presencia entre nosotros sigue vigente. Lo imagino todavía en su casa-biblioteca de la colonia Condesa de la ciudad de México, conocida hoy como la “capilla Alfonsina”, leyendo y escribiendo de los héroes homéricos, que en realidad son los hombres y mujeres de América que él intentó seducir con la inteligencia del erudito, la gracia del poeta y la sabiduría del humanista. </p>
+                        
+                        
+                        <p>Además, nos dejó un profundo regalo interior: Todos somos viajeros existenciales y cada vez que salimos de la casa iniciamos un viaje arquetípico, como Ulises, que nos puede traer de regreso o no. Leer a la manera de Alfonso Reyes es una invitación a enriquecer la vida de cada uno con la tradición cultural de la humanidad. Esta antología se puede convertir, estimado lector, en una de esas personas que se conocen por casualidad y luego se transforman, por azar o destino, en una de nuestras entrañables amistades. </p>
+                        
+                        <p class="text-align-right">Orlando Mejía Rivera.<br>Mayo de 2018.</p>
+
+                        <div class="leerMas">¡Comienza la lectura!</div>
+
+
+                        <hr class="line-separator line-orange" />
+
+                    </div>
+                </div>
+                
+                
+                <div class="slides slide">
+                    <h2 class="section-title verde">Cartilla moral</h2>
+                    <h1 class="verdeP chapter-title">Prefacio</h1>
+                        
+                    <div class="content-text">
+                        
+                        <p class="first-paragraph">Estas lecciones fueron preparadas al iniciarse la «campaña alfabética» y no pudieron aprovecharse entonces. Están destinadas al educando adulto, pero también son accesibles al niño. En uno y otro caso suponen la colaboración del preceptor, sobre todo por la multiplicación de ejemplos que las hubieran alargado inútilmente. Dentro del cuadro de la moral, abarcan nociones de sociología, antropología, política o educación cívica, higiene y urbanidad.</p>
+                        
+                        <p>Se ha insistido en lo explicativo, dejando de lado el enojoso tono exhortatorio, que hace tan aburridas las lecturas morales. No tenía objeto dictar los preceptos como en el catecismo, pues son conocidos de todos. Se procura un poco de amenidad, pero con medida para no desvirtuar el carácter de estas páginas.</p>
+                        
+                        <p>Se deslizan de paso algunas citas y alusiones que vayan despertando el gusto por la cultura y ayuden a perder el miedo a los temas clásicos, base indispensable de nuestra educación y en los que hoy importa insistir cada vez más.</p>
+                        
+                        <p>Se ha establecido un armazón o sistema que dé coherencia al conjunto; pero se ha disimulado esta trabazón para no torturar con esfuerzos excesivos la mente de los lectores.</p>
+                        
+                        <p>Bajo la expresión más simple que fue dable encontrar, se han tocado, sin embargo, los problemas de mayor tradición en la filosofía ética, dando siempre por supuesto que nos dirigimos a hombres normales y no a deficientes. El constante error del intermediario consiste en suponer al consumidor más candoroso de lo que es.</p>
+                        
+                        <p>Se ha usado el criterio más liberal, que a la vez es laico y respetuoso para las creencias.</p>
+                        
+                        <p>La brevedad de cada lección responde a las indicaciones que se nos dieron. Dentro de esta brevedad se procuró, para el encanto visual y formal —parte de la educación—, cierta simetría de proporciones.</p>
+                        
+                        <p>Las frases son sencillas; pero se procura que se relacionen ya unas con otras, para ir avezando al lector en el verdadero discurso y en el tejido de los conceptos. Pues a estos ejercicios llega el analfabeto cuando ya ha dejado de serlo. La poesía que se cita al final de la Primera Parte es útil en este sentido (amén de su valor moral y poético), por estar fraseada en trozos paralelos, cuya consecuencia solo se desata en los dos versos últimos. Es un buen ejercicio de suspensión del argumento, sin ser por eso nada difícil. Conviene que el preceptor la lea en voz alta antes de darla a leer al discípulo.</p>
+                        
+                        <p>México, 1944</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección I</h1>
+                        
+                        <p>El hombre debe educarse para el bien. Esta educación, y las doctrinas en que ella se inspira constituyen la moral o ética. (La palabra «moral» procede del latín; la palabra «ética» procede del griego.) Todas las religiones contienen también un cuerpo de preceptos morales, que coinciden en lo esencial. La moral de los pueblos civilizados está toda contenida en el Cristianismo. El creyente hereda, pues, con su religión, una moral ya hecha. Pero el bien no solo es obligatorio para el creyente, sino para todos los hombres en general. El bien no solo se funda en una recompensa que el religioso espera recibir en el cielo. Se funda también en razones que pertenecen a este mundo. Por eso la moral debe estudiarse y aprenderse como una disciplina aparte.</p>
+                        
+                        <p>Podemos figurarnos la moral como una Constitución no escrita, cuyos preceptos son de validez universal para todos los pueblos y para todos los hombres. Tales preceptos tienen por objeto asegurar el cumplimiento del bien, encaminando a este fin nuestra conducta.</p>
+                        
+                        <p>El bien no debe confundirse con nuestro interés particular en este o en el otro momento de nuestra vida. No debe confundírselo con nuestro provecho, nuestro gusto o nuestro deseo. El bien es un ideal de justicia y de virtud que puede imponernos el sacrificio de nuestros anhelos, y aun de nuestra felicidad o de nuestra vida. Pues es algo como una felicidad más amplia y que abarcase a toda la especie humana, ante la cual valen menos las felicidades personales de cada uno de nosotros.</p>
+                        
+                        <p>Algunos han pensado que el bien se conoce sólo a través de la razón, y que, en consecuencia, no se puede ser bueno si, al mismo tiempo, no se es sabio. Según ellos, el malo lo es por ignorancia. Necesita educación.</p>
+                        
+                        <p>Otros consideran que el bien se conoce por el camino del sentimiento y, como la caridad, es un impulso del buen corazón, compatible aun con la ignorancia. Según ellos, el malo lo es por mala inclinación. Necesita redención.</p>
+                        
+                        <p>La verdad es que ambos puntos de vista son verdaderos en parte, y uno a otro se completan. Todo depende del acto bueno de que se trate. Para dar de beber al sediento basta tener buen corazón, ¡y agua! Para ser un buen ciudadano o para sacar adelante una familia hay que tener, además, algunos conocimientos.</p>
+                        
+                        <p>Aquí, como en todo, la naturaleza y la educación se completan.</p>
+                        
+                        <p>Donde falta la materia prima, no puede hacerse la obra. Pero tampoco puede hacerse donde hay materia y falta el arte. Los antiguos solían decir: «Lo que natura no da, Salamanca no lo presta». Se referían a la Universidad de Salamanca, famosa en la España de los siglos XVI y XVII, y querían decir que, si se es estúpido, poco se aprende con el estudio. Casi lo mismo hay que decir con respecto al bien. Pero, por fortuna, el malo por naturaleza es educable en muchos casos y, por decirlo así, aprende a ser bueno. Por eso el filósofo griego Aristóteles aconsejaba la «ejercitación en la virtud para hacer virtuosos» (ethismos).</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección II</h1>
+                        
+                        <p>El hombre tiene algo de común con los animales y algo de exclusivamente humano. Estamos acostumbrados a designar lo uno y lo otro, de cierta manera fácil, con los nombres de cuerpo y alma, respectivamente. Al cuerpo pertenece cuanto en el hombre es naturaleza; y al alma, cuanto en el hombre es espíritu.</p>
+                        
+                        <p>Esto nos aparece a todos como evidente, aun cuando se reconozca que hay dificultad en establecer las fronteras entre los dos campos.Algunos dicen que todo es materia; otros, que todo es espíritu.</p>
+                        
+                        <p>Algunos insisten en que cuerpo y alma son dos manifestaciones de alguna cosa única y anterior. Aquí nos basta reconocer que ambas manifestaciones son diferentes.</p>
+                        
+                        <p>Luego se ve que la obra de la moral consiste en llevarnos desde lo animal hasta lo puramente humano. Pero hay que entenderlo bien. No se trata de negar lo que hay de material y de natural en nosotros, para sacrificarlo de modo completo en aras de lo que tenemos de espíritu y de inteligencia. Esto sería una horrible mutilación que aniquilaría a la especie humana. Si todos ayunáramos hasta la tortura, como los ascetas y los faquires, acabaríamos por suicidarnos.</p>
+                        
+                        <p>Lo que debe procurarse es una prudente armonía entre cuerpo y alma. La tarea de la moral consiste en dar a la naturaleza lo suyo sin exceso, y sin perder de vista los ideales dictados por la conciencia. Si el hombre no cumple debidamente sus necesidades materiales se encuentra en estado de ineptitud para las tareas del espíritu y para realizar los mandamientos del bien.</p>
+                        
+                        <p>Advertimos, pues, que hay siempre algo de tacto, de buen sentido en el manejo de nuestra conducta; algo de equilibrio y de proporción. Ni hay que dejar que nos domine la parte animal en nosotros, ni tampoco debemos destrozar esta base material del ser humano, porque todo el edificio se vendría abajo.</p>
+                        
+                        <p>Hay momentos en que necesitamos echar mano de nuestras fuerzas corporales, aun para los actos más espirituales o más orientados por el ideal. Así en ciertos instantes de bravura, arrojo y heroicidad.</p>
+                        
+                        <p>Hay otros momentos en que necesitamos de toda nuestra inteligencia para poder atender a las necesidades materiales. Así cuando, por ejemplo, nos encontráramos sin recursos, en medio de una población extranjera que no entendiese nuestro lenguaje, y a la que no supiésemos qué servicio ofrecer a cambio del alimento que pedimos.</p>
+                        
+                        <p>De modo que estos dos gemelos que llevamos con nosotros, cuerpo y alma, deben aprender a entenderse bien. Y mejor que mejor si se realiza el adagio clásico: «Alma sana en cuerpo sano».</p>
+                        
+                        <p>Añádase que todo acto de nuestra conducta se nos presenta como «disyuntiva», es decir: hacer esto o hacer lo otro. Y ahora entenderemos lo que quiso decir Platón, el filósofo griego, cuando comparaba al hombre con un cochero obligado a poner de acuerdo el trote de dos caballos.</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección III</h1>
+                        
+                        <p>La voluntad moral trabaja por humanizar más y más al hombre, levantándolo sobre la bestia, como un escultor que, tallando el bloque de piedra, va poco a poco sacando de él una estatua.</p>
+                        
+                        <p>No todos tenemos fuerzas para corregirnos a nosotros mismos y procurar mejorarnos incesantemente a lo largo de nuestra existencia; pero esto sería lo deseable. Si ello fuera siempre posible, el progreso humano no sufriría esos estancamientos y retrocesos que hallamos en la historia, esos olvidos o destrozos de las conquistas ya obtenidas.</p>
+                        
+                        <p>En la realidad, el progreso humano no siempre se logra, o solo se consigue de modo aproximado. Pero ese progreso humano es el ideal a que todos debemos aspirar, como individuos y como pueblos. Las palabras «civilización» y «cultura» se usan de muchos modos.</p>
+                        
+                        <p>Algunos entienden por «civilización» el conjunto de conquistas materiales, descubrimientos prácticos y adelantos técnicos de la humanidad. Y entienden por «cultura» las conquistas semejantes de carácter teórico o en el puro campo del saber y del conocimiento.</p>
+                        
+                        <p>Otros lo entienden al revés. La verdad es que ambas cosas van siempre mezcladas. No hubiera sido posible, por ejemplo, descubrir las útiles aplicaciones de la electricidad o la radiodifusión sin un caudal de conocimientos previos; y, a su vez, esas aplicaciones han permitido adquirir otras nociones teóricas.</p>
+                        
+                        <p>En todo caso, civilización y cultura, conocimientos teóricos y aplicaciones prácticas nacen del desarrollo de la ciencia; pero las inspira la voluntad moral o de perfeccionamiento humano.</p>
+                        
+                        <p>Cuando pierden de vista la moral, civilización y cultura degeneran y se destruyen a sí mismas. Las muchas maravillas mecánicas y químicas que aplica la guerra, por ejemplo, en vez de mejorar la especie, la destruyen. Nobel, sabio sueco inventor de la dinamita, hubiera deseado que esta solo se usara para la ingeniería y las industrias productivas, en vez de usarse para matar hombres. Por eso, como en prenda de sus intenciones, instituyó un importante premio anual que se adjudica al gobernante o estadista que haya hecho más por la paz del mundo.</p>
+                        
+                        <p>Se puede haber adelantado en muchas cosas y, sin embargo, no haber alcanzado la verdadera cultura. Así sucede siempre que se olvida la moral. En los individuos y en los pueblos, el no perder de vista la moral significa dar a todas las cosas su verdadero valor, dentro del conjunto de los fines humanos. Y el fin de los fines es el bien, el blanco definitivo a que todas nuestras acciones apuntan.</p>
+                        
+                        <p>De este modo se explica la observación hecha por un filósofo que viajaba por China a fines del siglo XIX. «El chino —decía— es más atrasado que el europeo; pero es más culto, dentro del nivel y el cuadro de su vida.» La educación moral, base de la cultura, consiste en saber dar sitio a todas las nociones: en saber qué es lo principal, en lo que se debe exigir el extremo rigor; qué es lo secundario, en lo que se puede ser tolerante; y qué es lo inútil, en lo que se puede ser indiferente. Poseer este saber es haber adquirido el sentimiento de las categorías.</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección IV</h1>
+                        
+                        <p>La apreciación del bien, objeto de la moral, supone el acatamiento de una serie de respetos, que vamos a estudiar en las siguientes lecciones. Estos respetos equivalen a los «mandamientos» de la religión. Son inapelables; no se los puede desoír sin que nos lo reproche la voz de la conciencia, instinto moral que llevamos en nuestro ser mismo. Tampoco se los cumple para obtener esta o la otra ventaja práctica, o para ganar este o el otro premio. Su cumplimiento trae consigo una satisfacción moral, que es la verdadera compensación en el caso.</p>
+                        
+                        <p>Ahora bien, la humanidad no podría subsistir sin obediencia a los respetos morales. En la inmensa mayoría de los casos, el solo hecho de obrar bien nos permite ser más felices dentro de la sociedad en que vivimos. Esto bien puede considerarse como una ventaja práctica, comparable a esos premios que las asociaciones benéficas o los periódicos conceden a quienes han hecho algún acto eminente de virtud: el que devuelve la cartera perdida, llena de billetes de banco; el que salva a un náufrago, etcétera.</p>
+                        
+                        <p>Sin embargo, la moral está muy por encima de estas satisfacciones exteriores. A veces, su acción va directamente en contra de nuestra conveniencia. Si un conductor de auto atropella a un peatón en un camino desierto, y lo deja privado de conocimiento, lo más conveniente y ventajoso para él, desde un punto de vista inmediato, es escapar cuanto antes y no contar a nadie lo sucedido. </p>
+                        
+                        <p>Pero el instinto moral o la educación moral le ordenan asistir a su víctima, dar cuenta a la policía y someterse a las sanciones de la ley, aunque esto sea para él lo menos cómodo. Esta vigilancia interior de la conciencia aun nos obliga, estando a solas y sin testigos, a someternos a esa Constitución no escrita y de valor universal que llamamos la moral.</p>
+                        
+                        <p>Reconocemos así un bien superior a nuestro bien particular e inmediato. En este reconocimiento se fundan la subsistencia de la especie, la perduración de la sociedad, la existencia de los pueblos y de los hombres. Sin este sentimiento de nuestros deberes, nos destruiríamos unos a otros, o solo viviríamos como los animales gregarios. Estos, aunque sin conciencia humana, se ven protegidos en su asociación por ciertos impulsos naturales de simpatía, por lo que se llama «conciencia de la especie». Pero siempre siguen siendo animales, porque, a diferencia del hombre, carecen de la voluntad moral de superación.</p>
+
+                        <h1 class="verdeP chapter-title">Lección V</h1>
+                        
+                        <p>Los respetos que hemos considerado como mandamientos de la moral pueden enumerarse de muchos modos. Los agruparemos de la manera que nos parece más adecuada para recordarlos de memoria, desde el más individual hasta el más general, desde el más personal hasta el más impersonal. Podemos imaginarlos como una serie de círculos concéntricos. Comenzamos por el interior y cada vez vamos tocando otro círculo más amplio.</p>
+                        
+                        <p>Lo primero es el respeto que cada ser humano se debe a sí mismo, en cuanto es cuerpo y en cuanto es alma. A esto se refiere el sentimiento de la dignidad de la persona. Todos los hombres son igualmente dignos, en cuanto a su condición de hombres, así como todos deben ser iguales ante la ley. El hombre debe sentirse depositario de un tesoro, en naturaleza y en espíritu, que tiene el deber de conservar y aumentar en lo posible. Cada uno de nosotros, aunque sea a solas y sin testigos, debe sentirse vigilado por el respeto moral y debe sentir vergüenza de violar este respeto.</p>
+                        
+                        <p>El uso que hagamos de nuestro cuerpo y de nuestra alma debe corresponder a tales sentimientos.</p>
+                        
+                        <p>Esto no significa que nos avergoncemos de las necesidades corporales impuestas por la naturaleza, sino que las cumplamos con decoro, aseo y prudencia. Esto no significa que nos consideremos a nosotros mismos con demasiada solemnidad, porque ello esteriliza el espíritu, comienza por hacernos vanidosos y acaba por volvernos locos. También es muy peligroso el entregarse a miedos inútiles, error más frecuente de lo que parece y signo de fatiga nerviosa. Una de sus formas más dañinas es el miedo a la libertad y a las hermosas responsabilidades que ella acarrea. El descanso, el esparcimiento y el juego, el buen humor, el sentimiento de lo cómico y aun la ironía, que nos enseña a burlarnos un poco de nosotros mismos, son recursos que aseguran la buena economía del alma, el buen funcionamiento de nuestro espíritu. La capacidad de alegría es una fuente del bien moral. Lo único que debemos vedarnos es el desperdicio, la bajeza y la suciedad.</p>
+                        
+                        <p>De este respeto a nosotros mismos brotan todos los preceptos sobre la limpieza de nuestro cuerpo, así como todos los preceptos sobre la limpieza de nuestras intenciones y el culto a la verdad. La manifestación de la verdad aparece siempre como una declaración ante el prójimo, pero es un acto de lealtad para con nosotros mismos.</p>
+                        
+                        <p>Se ha dicho que la buena presencia es ya de por sí la mejor recomendación. Lo mismo puede decirse de la buena fe. Pero la limpieza de cuerpo y alma de que ahora tratamos no ha de procurarse por cálculo y para quedar bien con los demás; sino desinteresadamente, y para nuestra solitaria satisfacción moral.</p>
+                        
+                        <p>Los antiguos griegos, creadores del mundo cultural y moral en que todavía vivimos, llamaban aidós a este sentimiento de la propia dignidad; y le llamaban némesis al sentimiento de justa indignación ante las indignidades ajenas (y no a la «venganza», como suele decirse). Estos dos principios del aidós y la némesis son el fundamento exterior de las sociedades. Si esto conduce a la necesidad de la ley y sus sanciones, aquello conduce al sentimiento de la vergüenza. Si la ley tiene un valor general, la vergüenza opera como una energía individual. Pero todavía la vergüenza parece sernos impuesta desde afuera. El Cristianismo insistió en añadir a ese sentimiento de la vergüenza, característico del mundo pagano, el sentimiento mucho más íntimo de la culpa, el coraje de reconocer y rectificar los propios errores morales, aun cuando no tengan testigos.</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección VI</h1>
+                        
+                        <p>Después del respeto a la propia persona, corresponde examinar el respeto a la familia: mundo humano que nos rodea de modo inmediato.La familia es un hecho natural y puede decirse que, como grupo perdurable, es característico de la especie humana. Los animales, entregados a sí mismos y no obligados por la domesticidad, crean familias transitorias y solo se juntan durante el celo o la cría de la prole. Por excepción, se habla de cierta extraña superioridad de los coyotes, que tienden a juntarse por parejas para toda la vida.</p>
+                        
+                        <p>La familia estable humana rebasa los límites mínimos del apetito amoroso y la cría de los hijos. Ello tiene consecuencias morales en el carácter del hombre, y reconoce una razón natural: entre todas las criaturas vivas comparables al hombre, llamadas animales superiores, el hombre es el que tarda más en desarrollarse y en valerse solo, para disponer de sus manos, andar, comer, hablar, etcétera. Por eso necesita más tiempo el auxilio de sus progenitores.</p>
+                        
+                        <p>Y estos acaban por acostumbrarse a esta existencia en común que se llama hogar.</p>
+                        
+                        <p>La mayor tardanza en el desarrollo del niño comparado con el animal no es una inferioridad humana. Es la garantía de una maduración más profunda y delicada, de una «evolución» más completa. Sin ella, el organismo humano no alcanzaría ese extraordinario afinamiento nervioso que lo pone por encima de todos los animales. La naturaleza, como un artista, necesita más tiempo para producir un artículo más acabado.</p>
+                        
+                        <p>El hombre, al nacer, es ya parte de una familia. Las familias se agruparon en tribus. Estas, en naciones más o menos organizadas, y tal es el origen de los pueblos actuales. De modo que la sociedad o compañía de los semejantes tiene para el hombre el mismo carácter necesario que su existencia personal. No hay persona sin sociedad. </p>
+                        
+                        <p>No hay sociedad sin personas. Esta compañía entre los seres de la especie es para el hombre un hecho natural o espontáneo. Pero ya la forma en que el grupo se organiza, lo que se llama el Estado, es una invención del hombre. Por eso cambia y se transforma a lo largo de la historia: autocracia, aristocracia, democracia; monarquía absoluta, monarquía constitucional, república, unión soviética, etcétera.</p>
+                        
+                        <p>Con la vida en común de la familia comienzan a aparecer las obligaciones recíprocas entre las personas, las relaciones sociales; los derechos por un lado y, por el otro, los deberes correspondientes.Pues, en la vida civilizada, por cada derecho o cosa que podemos exigir existe un deber o cosa que debemos dar. Y este cambio o transacción es lo que hace posible la asociación de los hombres.</p>
+                        
+                        <p>Sobre el amor que une a los miembros de la familia no vale la pena extenderse, porque es sentimiento espontáneo, solo perturbado por caso excepcional. En cuanto al respeto, aunque es de especie diferente, lo mismo debe haberlo de los hijos para con los padres y de los padres para con los hijos, así como entre los hermanos.</p>
+                        
+                        <p>El hogar es la primera escuela. Si los padres, que son nuestros primeros y nuestros constantes maestros, se portan indignamente a nuestros ojos, faltan a su deber; pues nos dan malos ejemplos, lejos de educarnos como les corresponde. De modo que el respeto del hijo al padre no cumple su fin educador cuando no se completa con el respeto del padre al hijo. Lo mismo pasa entre hermanos mayores y menores. La familia es una escuela de mutuo perfeccionamiento. Y el acatamiento que el menor debe al mayor, y sobre todo el que el hijo debe a sus padres, no es mero asunto sentimental o místico; sino una necesidad natural de apoyarse en quien nos ayuda, y una necesidad racional de inspirarse en quien ya nos lleva la delantera. </p>
+                        
+                        <h1 class="verdeP chapter-title">Lección VII</h1>
+                        
+                        <p>Nuestra existencia no solo se desenvuelve dentro del hogar.</p>
+                        
+                        <p>Pronto empezamos a tratar con amigos de la casa, vecinos, maestros, compañeros de escuela. Y cuando pasamos de niños a hombres, con jefes, compañeros de trabajo, subordinados, etcétera.</p>
+                        
+                        <p>De modo que nuestra existencia transcurre en compañía de un grupo de hombres, entre la gente. Esta gente puede estar repartida en muchos lugares, y hasta puede ser que unos grupos no conozcan a los otros. Pero todos ellos se juntan en nuestra persona, por el hecho de que nosotros tratamos con unos y otros. Así, las personas con quienes trabajo durante la semana no conocen a las personas que encuentro en una pensión campestre donde paso los domingos. Pero unos y otros son mi compañía humana. Hay también personas a quienes solo encuentro de paso, en la calle, una vez en la vida. También les debo el respeto social.</p>
+                        
+                        <p>Esta compañía humana es mi sociedad. Mi sociedad no es más que una parte de la sociedad humana total. Esta sociedad total es el conjunto de todos los hombres. Y aunque todos los hombres nunca se juntan en un sitio, todos se parecen lo bastante para que pueda hablarse de ellos como de un conjunto de miembros semejantes entre sí y diferentes de los demás grupos de seres vivos que habitan la tierra.</p>
+                        
+                        <p>Pues bien: en torno al círculo del respeto familiar se extiende el círculo del respeto a mi sociedad. Y lo que se dice de mi sociedad puede decirse del círculo más vasto de la sociedad humana en general. Mi respeto a la sociedad, y el de cada uno de sus miembros para los demás, es lo que hace posible la convivencia de los seres humanos.</p>
+                        
+                        <p>El problema de la política es lograr que esta convivencia sea lo más justa y feliz, tanto dentro de cada nación como entre unas y otras naciones. Las naciones, en su conducta de unas para con las otras, pueden imaginarse como unas personas más amplias que las humanas, pero que debieran gobernarse conforme a iguales principios de bien y de justicia.</p>
+                        
+                        <p>La subsistencia de la sociedad es indispensable a la subsistencia de cada ser humano y de la especie humana en general. Los respetos sociales son de varias categorías, según sean más o menos indispensables a la subsistencia de la sociedad. Se procura, pues, impedir las violaciones contra esos respetos; y si las violaciones ya han acontecido se las castiga para que no se repitan. Esto establece, frente al sistema de respetos, un sistema de sanciones para en caso de violación. Y solo así se logra la confianza en los respetos, sin la cual la sociedad sería imposible.</p>
+                        
+                        <p>El primer grado o categoría del respeto social nos obliga a la urbanidad y a la cortesía. Nos aconseja el buen trato, las maneras agradables; el sujetar dentro de nosotros los impulsos hacia la grosería; el no usar del tono violento y amenazador sino en último extremo; el recordar que hay igual o mayor bravura en dominarse a sí mismo que en asustar o agraviar al prójimo; el desconfiar siempre de nuestros movimientos de cólera, dando tiempo a que se remansen las aguas.</p>
+                        
+                        <p>La sanción contra la violación de este respeto se entrega a la opinión pública. Se manifiesta en la desestimación que rodea a la gente grosera. Pero el cortés y urbano recibe una compensación inmediata y de carácter doble; dentro de sí mismo, cumple la voluntad moral de superación, encaminándose de la bestia al hombre; fuera de sí mismo, acaba por hacerse abrir todas las puertas. La buena disposición para con el prójimo es un sentimiento relacionado con los anteriores. Un mexicano —educado en las buenas tradiciones de nuestra cortesía— solía decir siempre:</p>
+                        
+                        <p>—Cuando una mano se alarga para pedirme algo, pienso que esa mano puede ser, mañana, la que me ofrezca un vaso de agua en mitad del desierto.</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección VIII</h1>
+                        
+                        <p>El primer grado del respeto social se refería a la sociedad en general, a la convivencia de ser dueño de sí mismo y, en lo posible, agradable y solícito al prójimo. El segundo grado del respeto social se refiere ya a la sociedad organizada en Estado, en gobierno con sus leyes propias.</p>
+                        
+                        <p>Este grado es el respeto a la ley. Asume, a su vez, varias categorías.</p>
+                        
+                        <p>Las sanciones contra las violaciones respectivas ya no se dejan a la mera opinión pública. Son verdaderos castigos: indemnización, multa, destitución, destierro, prisión, trabajos forzados, pena de muerte, etcétera, según las leyes de cada país y la gravedad del acto violatorio. Y es que, en este grado, las contravenciones o violaciones del respeto son más peligrosas para la sociedad.</p>
+                        
+                        <p>Este es el campo del Derecho, o de la vida jurídica. El Derecho procura establecer la justicia en todos los tratos y compromisos entre los hombres.</p>
+                        
+                        <p>La igualdad ante el Derecho es una de las más nobles conquistas del hombre. El que comete una falta o un delito debe sufrir igual pena, sea débil o poderoso, pobre o rico. Pero, a mayor altura de la persona, toca mayor responsabilidad, por concepto de agravante.</p>
+                        
+                        <p>Por ejemplo, la traición de un soldado y la de un general sufren igual pena. Pero, ante nuestro juicio moral, la del general es todavía peor que la del soldado.</p>
+                        
+                        <p>El campo de la ley puede imaginarse como un grado más solemne del campo de la conducta. Un descuido en las buenas formas nada más causa disgusto. La falta de amor y respeto entre los miembros de una familia es, para estos, una desgracia, y para los extraños, un motivo de repugnancia; nada más. Pero una agresión física, un robo, un asesinato, son ya objeto de castigos y penas. En este sentido, toda violación de la ley es también de la moral; pero hay violaciones morales que no llegan a ser violaciones jurídicas.</p>
+                        
+                        <p>Claro es que hay también algunas prescripciones jurídicas, de carácter más bien administrativo, que son moralmente indiferentes.</p>
+                        
+                        <p>No registrar un invento es un descuido, pero no una inmoralidad.</p>
+                        
+                        <p>Así, se establecen los distintos niveles del Derecho, o sea los distintos caracteres de los respetos que la ley asegura mediante sanciones. Depositar en el buzón una carta sin franqueo causa una multa mínima, que bien puede negarse a pagar el interesado, aunque renunciando a su carta. Violar un contrato ya supone indemnizaciones.</p>
+                        
+                        <p>Disponer de la propiedad ajena, agredir o matar al prójimo, penas mayores, que van de la multa a la prisión perpetua o a la muerte.</p>
+                        
+                        <p>La forma misma del Estado, la Constitución, que es la ley de todas las demás leyes, se considera como emanación de la voluntad del pueblo en la doctrina democrática. Está previsto en este código fundamental el medio para modificarlo de acuerdo con el deseo del pueblo, expresado a través de sus representantes.</p>
+                        
+                        <p>Cuando el gobierno (que no es lo mismo que la ley) comienza a contravenir las leyes, o a desoír los anhelos de reforma que el pueblo expresa, sobrevienen las revoluciones. Estos hechos históricos no son delitos en sí mismos, aun cuando en la práctica se los trate como tales cuando las revoluciones son vencidas. Lo que pasa es que puede haber revoluciones justas e injustas. Y también es evidente que los actos de violencia con que se hacen las guerras civiles son, en sí mismos, indeseables en estricta moral, francamente censurables en unos casos y netamente delictuosos en otros, ora provengan de la revolución o del gobierno. </p>
+                        
+                        <h1 class="verdeP chapter-title">Lección IX</h1>
+                        
+                        <p>La nación, la patria, no se confunde del todo con el estado. El estado mexicano, desde la independencia, ha cambiado varias veces de forma o de Constitución. Y siempre ha sido la misma patria. El respeto a la patria va acompañado de ese sentimiento que todos llevamos en nuestros corazones y se llama patriotismo: amor a nuestro país, deseo de mejorarlo, confianza en sus futuros destinos.</p>
+                        
+                        <p>Este sentimiento debe impulsarnos a hacer por nuestra nación todo lo que podamos, aun en casos en que no nos lo exijan las leyes.</p>
+                        
+                        <p>Al procurar nuestras legítimas ventajas personales no hemos de perder de vista lo que debemos al país, ni a la sociedad humana en conjunto. Y en caso de conflicto, el bien más amplio debe triunfar sobre el bien más particular y limitado.</p>
+                        
+                        <p>En esta división del trabajo que es toda la existencia humana, nuestro primer paso, y a veces el único que podemos dar, en bien de la humanidad en general, es servir a la patria. De modo que este deber no se opone a la solidaridad humana, antes la hace posible y la refuerza.</p>
+                        
+                        <p>Cuando hay lucha entre las naciones, lo que no pasa de ser una desgracia causada por las imperfecciones humanas, nuestro deber está al lado de la propia patria, por la que tendremos que luchar y aun morir. Cuando hay armonía y entendimiento debemos sentirnos, en todos los demás países, como unos embajadores no oficiales del nuestro. Debemos conducirnos teniendo en cuenta que los extranjeros juzgarán de todo nuestro pueblo según como a nosotros nos vean portarnos.</p>
+                        
+                        <p>El progreso moral de la humanidad será mayor cuanto mayor sea la armonía entre todos los pueblos. La paz es el sumo ideal moral. Pero la paz, como la democracia, solo puede dar todos sus frutos donde todos la respetan y aman.</p>
+                        
+                        <p>Mientras haya un solo país que tenga ambiciones sobre los demás y se arme con miras a la conquista, el verdadero pacifismo consiste en crear alianzas y armarse para evitar semejantes delitos internacionales.</p>
+                        
+                        <p>De modo parecido, cuando, en el seno de un país libre, los enemigos de la libertad atacan esta libertad valiéndose de las mismas leyes que les permiten expresar sus ideas aviesas, el espíritu de la libertad exige que se les castigue.</p>
+                        
+                        <p>El bien moral y todas las conquistas humanas serían efímeras si la maldad tuviera el derecho de oponerse a ellos y de predicar contra ellos todos los días.</p>
+                        
+                        <p>La patria es el campo natural donde ejercitamos todos nuestros actos morales en bien de la sociedad y de la especie. Se ha dicho que quien ignora la historia patria es extranjero en su tierra. Puede añadirse que quien ignora el deber patrio es extranjero en la humanidad.</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección X</h1>
+                        
+                        <p>Todos los respetos de que hemos hablado, mandamientos de la moral, significan un vaivén de influencias que se resume en aquel eterno principio: «No hagas a los demás lo que no quieras que te hagan».</p>
+                        
+                        <p>Así, el respeto de la propia persona obliga al respeto para el prójimo. El respeto a la propia familia obliga al respeto de los lazos familiares entre los demás. El respeto al propio país lleva al respeto para los demás países. Y todo ello se suma en el respeto general de la sociedad humana.</p>
+                        
+                        <p>Estos respetos conducen de la mano a lo que podemos llamar el respeto a la especie humana: amor a sus adelantos ya conquistados, amor a sus tradiciones y esperanzas de mejoramiento.</p>
+                        
+                        <p>Las tradiciones no deben confundirse con las meras cosas ya sucedidas, pues también suceden cosas malas. La moral enseña a distinguir las buenas: solo estas constituyen tradición respetable.</p>
+                        
+                        <p>Las esperanzas de mejora humana no deben confundirse con las quimeras. Y aquí no es el criterio moral sino la inteligencia y la cultura las que nos ayudan a distinguir. Esperar que al hombre le nazcan alas es absurdo. Pero ayudar al descubrimiento de la aviación o tener confianza en la ciencia que lo procuraba fue perfectamente legítimo.</p>
+                        
+                        <p>Ahora bien: si consideramos a la especie humana en conjunto, vemos que ella se caracteriza por el trabajo encaminado hacia la superación. El animal solo trabaja para conservarse. El hombre, para conservarse y superarse. Nunca se conforma el hombre con lo que ya encuentra. Siempre añade algo, fruto de su esfuerzo.</p>
+                        
+                        <p>Pues bien: el respeto a nuestra especie se confunde casi con el respeto al trabajo humano. Las buenas obras del hombre deben ser objeto de respeto para todos los hombres. Romper un vidrio por el gusto de hacerlo, destrozar un jardín, pintarrajear las paredes, quitarle un tornillo a una máquina, todos estos son actos verdaderamente inmorales. Descubren, en quien los hace, un fondo de animalidad, de inconsciencia que lo hace retrogradar hasta el mono. Descubren en él una falta de imaginación que le impide recordar todo el esfuerzo acumulado detrás de cada obra humana.</p>
+                        
+                        <p>Hay ciudades en que la autoridad se preocupa de recoger todos esos desperdicios de la vida doméstica que confundimos con la basura: cajas, frascos, tapones, tuercas, recortes de papel, etcétera.</p>
+                        
+                        <p>Esto debiera hacerse siempre y en todas partes. No solo como medida de ahorro en tiempo de guerra, sino por deber moral, por respeto al trabajo humano que representa cada uno de esos modestos artículos. De paso, ganaría con ello la economía. Pues no hay idea de todo lo que desperdiciamos y dejamos abandonado a lo largo de veinticuatro horas, y que puede servir otra vez aunque sea como materia prima. Y el desperdicio es también una inmoralidad.</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección XI</h1>
+                        
+                        <p>El más impersonal de los respetos morales, el círculo más exterior de los círculos concéntricos que acabamos de recorrer es el respeto a la naturaleza. No se trata ya de la naturaleza humana, de nuestro cuerpo, etcétera; sino de la naturaleza exterior al hombre.</p>
+                        
+                        <p>A algunos hasta parecerá extraño que se haga entrar en la moral el respeto a los reinos mineral, vegetal y animal. Pero debe recordarse que estos reinos constituyen la morada humana, el escenario de nuestra vida.</p>
+                        
+                        <p>El gran poeta mexicano Enrique González Martínez dice:</p>
+                        
+                         <p class="italic-text">… Y quitarás, piadoso, tu sandalia,<br>para no herir las piedras del camino. </p>
+                        
+                        <p>No hay que tomarlo, naturalmente, al pie de la letra. Solo ha querido decir que procuremos pensar en serio y con intención amorosa, animados siempre del deseo de no hacer daño, en cuantas cosas nos rodean y acompañan en la existencia, así sean tan humildes como las piedras.</p>
+                        
+                        <p>Dante, uno de los mayores poetas de la humanidad, supone que, al romper la rama de un árbol, el tronco le reclama y le grita: «¿Por qué me rompes?». Este símbolo nos ayuda a entender cómo el hombre de conciencia moral plenamente cultivada siente horror por las mutilaciones y los destrozos.</p>
+                        
+                        <p>En verdad, el espíritu de maldad asoma ya cuando, por gusto, enturbiamos un depósito de agua clara que hay en el campo; o cuando arrancamos ramas de los árboles por solo ejercitar las fuerzas; o cuando matamos animales sin necesidad y fuera de los casos en que nos sirven de alimento; o cuando torturamos por crueldad a los animales domésticos, o bien nos negamos a adoptar prácticas que los alivien un poco en su trabajo.</p>
+                        
+                        <p>Este respeto al mundo natural que habitamos, a las cosas de la tierra, va creando en nuestro espíritu un hábito de contemplación amorosa que contribuye mucho a nuestra felicidad y que, de paso, desarrolla nuestro espíritu de observación y nuestra inteligencia.</p>
+                        
+                        <p>Pero no debemos quedarnos con los ojos fijos en la tierra.</p>
+                        
+                        <p>También debemos levantarlos a los espacios celestes. Debemos interesarnos por el cielo que nos cubre, su régimen de nubes, lluvias y vientos, sus estrellas nocturnas.</p>
+                        
+                        <p>Cuando un hombre que vive en un jardín ignora los nombres de sus plantas y sus árboles, sentimos que hay en él algo de salvaje; que no se ha preocupado de labrar la estatua moral que tiene el deber de sacar de sí mismo. Igual diremos del que ignora las estrellas de su cielo y los nombres de sus constelaciones.</p>
+                        
+                        <p>El amor a la morada humana es una garantía moral, es una prenda de que la persona ha alcanzado un apreciable nivel del bien: aquel en que se confunden el bien y la belleza, la obediencia al mandamiento moral y el deleite en la contemplación estética.</p>
+                        
+                        <p>Este punto es el más alto que puede alcanzar, en el mundo, el ser humano. </p>
+                        
+                        <h1 class="verdeP chapter-title">Lección XII</h1>
+                        
+                        <p>Hay un sentimiento que acompaña la existencia humana y del cual ningún espíritu claro puede desprenderse. Hay cosas que dependen de nosotros y hay cosas que no dependen de nosotros. No se trata ya de los actos propios y ajenos, de lo que yo puedo hacer y de lo que tú puedes hacer. Se trata de lo que escapa al poder de los hombres todos, de cualquier hombre. Ello puede ser de orden material, como un rayo o un terremoto; o de orden sentimental, como la amargura o el sufrimiento inevitables en toda existencia humana, por mucho que acumulemos elementos de felicidad; o de orden intelectual, como la verdad, que no es posible deshacer con mentiras, y que a veces hasta puede contrariar nuestros intereses o nuestros deseos. El respeto a la verdad es, al mismo tiempo, la más alta cualidad moral y la más alta cualidad intelectual.</p>
+                        
+                        <p>En esta dependencia de algo ajeno y superior a nosotros, el creyente funda su religión; el filósofo, según la doctrina que profese, ve la mano del destino o la ley del universo; solo el escéptico ve en ello la obra del azar. En la conversación diaria, solemos llamar a esto, simplemente, el arrastre de las circunstancias.</p>
+                        
+                        <p>Sin una dosis de respeto para lo que escapa a la voluntad humana, nuestra vida sería imposible. Nos destruiríamos en rebeldías estériles, en cóleras sin objeto.</p>
+                        
+                        <p>Tal resignación es una parte de la virtud. El compenetrarse de tal respeto es conquistar el valor moral y la serenidad entre las desgracias y los contratiempos. Los antiguos elogiaban al «varón fuerte», capaz —como decía el poeta Horacio— de pisar impávido sobre las ruinas del mundo. El poeta mexicano Amado Nervo, resumiendo en una línea la filosofía de los estoicos, ha escrito: Mi voluntad es una con la divina ley.</p>
+                        
+                        <p class="italic-text">Si…<br>Si no pierdes la calma cuando ya en derredor<br>La están perdiendo todos y contigo se escudan;<br>Si tienes fe en ti mismo cuando los otros dudan,<br>Sin negarles derecho a seguir en su error;<br>Si no te harta la espera y sabes esperar;<br>Si, calumniado, nunca incurres en mentira;<br>Si aguantas que te odien sin cegarte la ira<br>Ni darlas de muy sabio o de muy singular;<br>Si sueñas, mas tus sueños no te ofuscan del todo;<br>Si tu razón no duerme ni en razonar se agota;<br>Si sabes afrontar el triunfo y la derrota,<br>Y a entrambos impostores tratarlos de igual modo;<br>Si arrostras que adulteren tu credo los malvados<br>Para mal de la gente necia y desprevenida;<br>O, arruinada la obra a que diste la vida,<br>Constante la levantas con útiles mellados;<br>Si no te atemoriza, cuando es menester,<br>A cara o cruz jugarte y perder tus riquezas,<br>Y con resignación segunda vez empiezas<br>A rehacerlas todas sin hablar del ayer;<br>Si dominas tu ánimo, tu temple y corazón<br>Para que aún te sirvan en plena adversidad,<br>Y sigues adelante, porque tu voluntad<br>Grita: «¡Adelante!» en medio de tu desolación;<br>Si no logra embriagarte la turba tornadiza,<br>Y aunque trates con príncipes, guardas tu sencillez;<br>Si amigos ni enemigos nublan tu lucidez;<br>Si, aunque a todos ayudes, ninguno te esclaviza;<br>Si en el fugaz minuto no dejas un vacío<br>Y marcas los sesenta segundos con tu huella,<br>La tierra es toda tuya y cuanto hay en ella,<br>Y serás —más que eso— todo un hombre, hijo mío!</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección XIII</h1>
+                        
+                        <p>Resumen: primera parte.</p>
+                        
+                        <p>El hombre es superior al animal porque tiene conciencia del bien. El bien no debe confundirse con nuestro gusto o nuestro provecho. Al bien debemos sacrificarlo todo.</p>
+                        
+                        <p>Si los hombres no fuéramos capaces del bien no habría persona humana, ni familia, ni patria, ni sociedad.</p>
+                        
+                        <p>El bien es el conjunto de nuestros deberes morales. Estos deberes obligan a todos los hombres de todos los pueblos. La desobediencia a estos deberes es el mal.</p>
+                        
+                        <p>El mal lleva su castigo en la propia vergüenza y en la desestimación de nuestros semejantes. Cuando el mal es grave, además, lo castigan las leyes con penas que van desde la indemnización hasta la muerte, pasando por multa y cárcel.</p>
+                        
+                        <p>La satisfacción de obrar bien es la felicidad más firme y verdadera. Por eso se habla del «sueño del justo». El que tiene la conciencia tranquila duerme bien. Además, vive contento de sí mismo y pide poco de los demás.</p>
+                        
+                        <p>La sociedad se funda en el bien. Es más fácil vivir de acuerdo con sus leyes que fuera de sus leyes. Es mejor negocio ser bueno que ser malo.</p>
+                        
+                        <p>Pero cuando obrar bien nos cuesta un sacrificio, tampoco debemos retroceder. Pues la felicidad personal vale ante esa felicidad común de la especie humana que es el bien. </p>
+                        
+                        <p>El bien nos obliga a obrar con rectitud, a decir la verdad, a conducirnos con buena intención. Pero también nos obliga a ser aseados y decorosos, corteses y benévolos, laboriosos y cumplidos en el trabajo, respetuosos con el prójimo, solícitos en la ayuda que podemos dar. El bien nos obliga asimismo a ser discretos, cultos y educados en lo posible.</p>
+                        
+                        <p>La mejor guía para el bien es la bondad natural. Todos tenemos el instinto de la bondad. Pero este instinto debe completarse con la educación moral y con la cultura y adquisición de conocimientos. Pues no en todo basta la buena intención.</p>
+                        
+                        <h1 class="verdeP chapter-title">Lección XIV</h1>
+                        
+                        <p>Resumen: segunda parte.</p>
+                        
+                        <p>La moral humana es el código del bien. La moral nos obliga a una serie de respetos. Estos respetos están unos contenidos dentro de otros. Van desde el más próximo hasta el más lejano.</p>
+                        
+                        <p>Primero, el respeto a nuestra persona, en cuerpo y alma. El respeto a nuestro cuerpo nos enseña a ser limpios y moderados en los apetitos naturales. El respeto a nuestra alma resume todas las virtudes de orden espiritual.</p>
+                        
+                        <p>Segundo, el respeto a la familia. Este respeto va del hijo al padre y del menor al mayor. El hijo y el menor necesitan ayuda y consejo del padre y del mayor. Pero también el padre debe respetar al hijo, dándole solo ejemplos dignos. Y lo mismo ha de hacer el mayor con el menor.</p>
+                        
+                        <p>Tercero, el respeto a la sociedad humana en general, y a la sociedad particular en que nos toca vivir. Esto supone desde luego la obediencia a las costumbres consideradas como más necesarias.</p>
+                        
+                        <p>No hay que ser extravagante. No hay que hacer todo al revés de los demás solo por el afán de molestarlos.</p>
+                        
+                        <p>Cuarto, el respeto a la patria. Este punto no necesita explicaciones. El amor patrio no es contrario al sentimiento solidario entre todos los pueblos. Es el campo de acción en que obra nuestro amor a toda la humanidad. El ideal es llegar a la paz y armonía entre todos los pueblos. Para esto, hay que luchar contra los pueblos imperialistas y conquistadores hasta vencerlos para siempre.</p>
+                        
+                        <p>Quinto, el respeto a la especie humana. Cada persona es como nosotros. No hagamos a los demás lo que no queremos que nos hagan. La más alta manifestación del hombre es su trabajo. Debemos respetar los productos del trabajo. Romper vidrios, ensuciar paredes, destrozar jardines, tirar a la basura cosas todavía aprovechables son actos de salvajismo o de maldad. Estos actos también indican estupidez y falta de imaginación. Cada objeto producido por el hombre supone una serie de esfuerzos respetables.</p>
+                        
+                        <p>Sexto, el respeto a la naturaleza que nos rodea. Las cosas inanimadas, las plantas y los animales merecen nuestra atención inteligente. La tierra y cuanto hay en ella forman la casa del hombre. El cielo, sus nubes y sus estrellas forman nuestro techo. Debemos observar todas estas cosas. Debemos procurar entenderlas, y estudiar para ese fin. Debemos cuidar las cosas, las plantas, los animales domésticos. Todo ello es el patrimonio natural de la especie humana. Aprendiendo a amarlo y a estudiarlo, vamos aprendiendo de paso a ser más felices y más sabios.</p>
+
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    
+                </div>
+            </div>
+                
+                
+                
+                
+                
+                
+                
+               <div class="slides slide">
+                    <h2 class="section-title verde">Visión de Anáhuac</h2>
+                   <h1 class="verdeP chapter-title">[1519]<br>I</h1>
+                        <h3 class="story-title">Viajero: has llegado a la región más transparente del aire.</h3>
+                    <div class="content-text">
+                        
+                        <p class="first-paragraph">EN LA era de los descubrimientos, aparecen libros llenos de noticias extraordinarias y amenas narraciones geográficas. La historia, obligada a descubrir nuevos mundos, se desborda del cauce clásico, y entonces el hecho político cede el puesto a los discursos etnográficos y a la pintura de civilizaciones. Los historiadores del siglo XVI fijan el carácter de las tierras recién halladas, tal como éste aparecía a los ojos de Europa: acentuado por la sorpresa, exagerado a veces. El diligente Giovanni Battista Ramusio publica su peregrina recopilación Delle navigationi et viaggi en Venecia y el año de 1550. Consta la obra de tres volúmenes in-folio, que luego fueron reimpresos aisladamente, y está ilustrada con profusión y encanto. De su utilidad no puede dudarse: los cronistas de Indias del seiscientos (Solís al menos) leyeron todavía alguna carta de Cortés en las traducciones italianas que ella contiene.</p>
+                        
+                        <p>En sus estampas, finas y candorosas, según la elegancia del tiempo, se aprecia la progresiva conquista de los litorales; barcos diminutos se deslizan por una raya que cruza el mar; en pleno océano, se retuerce, como cuerno de cazador, un monstruo marino, y en el ángulo irradia picos una fabulosa estrella náutica. Desde el seno de la nube esquemática, sopla un Eolo mofletudo, indicando el rumbo de los vientos —constante cuidado de los hijos de Ulises—. Vense pasos de la vida africana, bajo la tradicional palmera y junto al cono pajizo de la choza, siempre humeante; hombres y fieras de otros climas, minuciosos panoramas, plantas exóticas y soñadas islas. Y en las costas de la Nueva Francia, grupos de naturales entregados a los usos de la caza y la pesquería, al baile o a la edificación de ciudades. Una imaginación como la de Stevenson, capaz de soñar La isla del tesoro ante una cartografía infantil, hubiera tramado, sobre las estampas del Ramusio, mil y un regocijos para nuestros días nublados.</p>
+                        
+                        <p>Finalmente, las estampas describen la vegetación de Anáhuac. Deténganse aquí nuestros ojos: he aquí un nuevo arte de naturaleza.</p>
+                        
+                        <p>La mazorca de Ceres y el plátano paradisíaco, las pulpas frutales llenas de una miel desconocida; pero, sobre todo, las plantas típicas: la biznaga mexicana —imagen del tímido puercoespín—, el maguey (del cual se nos dice que sorbe sus jugos a la roca), el maguey que se abre a flor de tierra, lanzando a los aires su plumero; los «órganos» paralelos, unidos como las cañas de la flauta y útiles para señalar la linde; los discos del nopal —semejanza del candelabro—, conjugados en una superposición necesaria, grata a los ojos: todo ello nos aparece como una flora emblemática, y todo como concebido para blasonar un escudo. En los agudos contornos de la estampa, fruto y hoja, tallo y raíz, son caras abstractas, sin color que turbe su nitidez.</p>
+                        
+                        <p>Esas plantas protegidas de púas nos anuncian que aquella naturaleza no es, como la del sur o las costas, abundante en jugos y vahos nutritivos. La tierra de Anáhuac apenas reviste feracidad a la vecindad de los lagos. Pero, a través de los siglos, el hombre conseguirá desecar sus aguas, trabajando como castor; y los colonos devastarán los bosques que rodean la morada humana, devolviendo al valle su carácter propio y terrible: —En la tierra salitrosa y hostil, destacadas profundamente, erizan sus garfios las garras vegetales, defendiéndose de la seca.</p>
+                        
+                        <p>Abarca la desecación del valle desde el año de 1449 hasta el año de 1900. Tres razas han trabajado en ella, y casi tres civilizaciones —que poco hay de común entre el organismo virreinal y la prodigiosa ficción política que nos dio treinta años de paz augusta—. Tres regímenes monárquicos, divididos por paréntesis de anarquía, son aquí ejemplo de cómo crece y se corrige la obra del Estado, ante las mismas amenazas de la naturaleza y la misma tierra que cavar. De Netzahualcóyotl al segundo Luis de Velasco, y de este a Porfirio Díaz, parece correr la consigna de secar la tierra. Nuestro siglo nos encontró todavía echando la última palada y abriendo la última zanja.</p>
+                        
+                        <p>Es la desecación de los lagos como un pequeño drama con sus héroes y su fondo escénico. Ruiz de Alarcón lo había presentido vagamente en su comedia de El semejante a sí mismo. A la vista de numeroso cortejo, presidido por Virrey y Arzobispo, se abren las esclusas: las inmensas aguas entran cabalgando por los tajos. Ese, el escenario. Y el enredo, las intrigas de Alonso Arias y los dictámenes adversos de Adrián Boot, el holandés suficiente; hasta que las rejas de la prisión se cierran tras Enrico Martín, que alza su nivel con mano segura. </p>
+                        
+                        <p>Semejante al espíritu de sus desastres, el agua vengativa espiaba de cerca a la ciudad; turbaba los sueños de aquel pueblo gracioso y cruel, barriendo sus piedras florecidas; acechaba, con ojo azul, sus torres valientes.</p>
+                        
+                         <p class="resaltado">Cuando los creadores del desierto acaban su obra, irrumpe el espanto social.</p>
+                        
+                        <p>Cuando los creadores del desierto acaban su obra, irrumpe el espanto social. </p>
+                        
+                        
+                        <p>El viajero americano está condenado a que los europeos le pregunten si hay en América muchos árboles. Les sorprenderíamos hablándoles de una Castilla americana más alta que la de ellos, más armoniosa, menos agria seguramente (por mucho que en vez de colinas la quiebren enormes montañas), donde el aire brilla como espejo y se goza de un otoño perenne. La llanura castellana sugiere pensamientos ascéticos: el valle de México, más bien pensamientos fáciles y sobrios. Lo que una gana en lo trágico, la otra en plástica rotundidad.</p>
+                        
+                        <p>Nuestra naturaleza tiene dos aspectos opuestos. Uno, la cantada selva virgen de América, apenas merece describirse. Tema obligado de admiración en el Viejo Mundo, ella inspira los entusiasmos verbales de Chateaubriand. Horno genitor donde las energías parecen gastarse con abandonada generosidad, donde nuestro ánimo naufraga en emanaciones embriagadoras, es exaltación de la vida a la vez que imagen de la anarquía vital: los chorros de verdura por las rampas de la montaña; los nudos ciegos de las lianas; toldos de platanares; sombra engañadora de árboles que adormecen y roban las fuerzas de pensar; bochornosa vegetación; largo y voluptuoso torpor, al zumbido de los insectos. ¡Los gritos de los papagayos, el trueno de las cascadas, los ojos de las fieras, le dard empoisonné du sauvage! En estos derroches de fuegos y sueño —poesía de hamaca y de abanico— nos superan seguramente otras regiones meridionales.</p>
+                        
+                        <p>Lo nuestro, lo de Anáhuac, es cosa mejor y más tónica. Al menos, para los que gusten de tener a toda hora alerta la voluntad y el pensamiento claro. La visión más propia de nuestra naturaleza está en las regiones de la mesa central: allí la vegetación arisca y heráldica, el paisaje organizado, la atmósfera de extremada nitidez, en que los colores mismos se ahogan —compensándolo la armonía general del dibujo; el éter luminoso en que se adelantan las cosas con un resalte individual; y, en fin, para de una vez decirlo en las palabras del modesto y sensible fray Manuel de Navarrete: </p>
+                        
+                        <p class="italic-text">una luz resplandeciente<br>que hace brillar la cara de los cielos.</p>
+                        
+                        <p>Ya lo observaba un grande viajero, que ha sancionado con su nombre el orgullo de la Nueva España; un hombre clásico y universal como los que criaba el Renacimiento, y que resucitó en su siglo la antigua manera de adquirir la sabiduría viajando, y el hábito de escribir únicamente sobre recuerdos y meditaciones de la propia vida: en su Ensayo político, el barón de Humboldt notaba la extraña reverberación de los rayos solares en la masa montañosa de la altiplanicie central, donde el aire se purifica.</p>
+                        
+                        <p>En aquel paisaje, no desprovisto de cierta aristocrática esterilidad, por donde los ojos yerran con discernimiento, la mente descifra cada línea y acaricia cada ondulación; bajo aquel fulgurar del aire y en su general frescura y placidez, pasearon aquellos hombres ignotos la amplia y meditabunda mirada espiritual. Extáticos ante el nopal del águila y de la serpiente —compendio feliz de nuestro campo— oyeron la voz del ave agorera que les prometía seguro asilo sobre aquellos lagos hospitalarios. Más tarde, de aquel palafito había brotado una ciudad, repoblada con las incursiones de los mitológicos caballeros que llegaban de las Siete Cuevas —cuna de las siete familias derramadas por nuestro suelo. Más tarde, la ciudad se había dilatado en imperio, y el ruido de una civilización ciclópea, como la de Babilonia y Egipto, se prolongaba, fatigado, hasta los infaustos días de Moctezuma el doliente. Y fue entonces cuando, en envidiable hora de asombro, traspuestos los volcanes nevados, los hombres de Cortés («polvo, sudor y hierro») se asomaron sobre aquel orbe de sonoridad y fulgores —espacioso circo de montañas—.</p>
+                        
+                        <p>A sus pies, en un espejismo de cristales, se extendía la pintoresca ciudad, emanada toda ella del templo, por manera que sus calles radiantes prolongaban las aristas de la pirámide. Hasta ellos, en algún oscuro rito sangriento, llegaba —ululando— la queja de la chirimía y, multiplicado en el eco, el latido del salvaje tambor. Los que hoy importa insistir cada vez más. Se ha establecido un armazón o sistema que dé coherencia al conjunto; pero se ha disimulado.</p>
+                        
+                        
+                        
+                        <h1 class="verdeP chapter-title">II</h1>
+                        
+                        <p class="italic-text">Parecía a las casas de encantamiento que cuentan en el libro de Amadís… No sé cómo lo cuente.<br>BERNAL DÍAZ DEL CASTILLO</p>
+                        
+                        <p>DOS LAGUNAS ocupan casi todo el valle: la una salada, la otra dulce. Sus aguas se mezclan con ritmos de marea, en el estrecho formado por las sierras circundantes y un espinazo de montañas que parte del centro. En mitad de la laguna salada se asienta la metrópoli, como una inmensa flor de piedra, comunicada a tierra firme por cuatro puertas y tres calzadas, anchas de dos lanzas jinetas. En cada una de las cuatro puertas, un ministro grava las mercancías. Agrúpanse los edificios en masas cúbicas; la piedra está llena de labores, de grecas. Las casas de los señores tienen vergeles en los pisos altos y bajos, y un terrado por donde pudieran correr cañas hasta treinta hombres a caballo. Las calles resultan cortadas, a trechos, por canales. Sobre los canales saltan unos puentes, unas vigas de madera labrada capaces de diez caballeros. Bajo los puentes se deslizan las piraguas llenas de fruta. El pueblo va y viene por la orilla de los canales, comprando el agua dulce que ha de beber: pasan de unos brazos a otros las rojas vasijas. Vagan por los lugares públicos personas trabajadoras y maestros de oficio, esperando quien los alquile por sus jornales. Las conversaciones se animan sin gritería: finos oídos tiene la raza, y, a veces, se habla en secreto. Óyense unos dulces chasquidos; fluyen las vocales, y las consonantes tienden a licuarse. La charla es una canturía gustosa. Esas xés, esas tlés, esas chés que tanto nos alarman escritas, escurren de los labios del indio con una suavidad de aguamiel.</p>
+                        
+                        <p>El pueblo se atavía con brillo, porque está a la vista de un grande emperador. Van y vienen las túnicas de algodón rojas, doradas, recamadas, negras y blancas, con ruedas de plumas superpuestas o figuras pintadas. Las caras morenas tienen una impavidez sonriente, todas en el gesto de agradar. Tiemblan en la oreja o la nariz las arracadas pesadas, y en las gargantas los collaretes de ocho hilos, piedras de colores, cascabeles y pinjantes de oro. Sobre los cabellos, negros y lacios, se mecen las plumas al andar. Las piernas musculosas lucen aros metálicos, llevan antiparas de hoja de plata con guarniciones de cuero —cuero de venado amarillo y blanco—. Suenan las flexibles sandalias. Algunos calzan zapatones de un cuero como de marta y suela blanca cosida con hilo dorado. En las manos aletea el abigarrado moscador, o se retuerce el bastón en forma de culebra con dientes y ojos de nácar, puño de piel labrada y pomas de pluma. Las pieles, las piedras y metales, la pluma y el algodón confunden sus tintes en un incesante tornasol y —comunicándoles su calidad y finura— hacen de los hombres unos delicados juguetes.</p>
+                        
+                        <p>Tres sitios concentran la vida de la ciudad: en toda ciudad normal otro tanto sucede. Uno es la casa de los dioses, otro el mercado, y el tercero el palacio del emperador. Por todas las colaciones y barrios aparecen templos, mercados y palacios menores. La triple unidad municipal se multiplica, bautizando con un mismo sello toda la metrópoli. El templo mayor es un alarde de piedra. Desde las montañas de basalto y de pórfido que cercan el valle, se han hecho rodar moles gigantescas. Pocos pueblos —escribe Humboldt— habrán removido mayores masas. Hay un tiro de ballesta de esquina a esquina del cuadrado, base de la pirámide. De la altura, puede contemplarse todo el panorama chinesco. Alza el templo cuarenta torres, bordadas por fuera, y cargadas en lo interior de imaginería, zaquizamíes y maderamiento picado de figuras y monstruos. Los gigantes ídolos —afirma Cortés— están hechos con una mezcla de todas las semillas y legumbres que son alimento del azteca. A su lado, el tambor de piel de serpiente que deja oír a dos leguas su fúnebre retumbo; a su lado, bocinas, trompetas y navajones. Dentro del templo pudiera caber una villa de quinientos vecinos. En el muro que lo circunda, se ven unas moles en figura de culebras asidas, que serán más tarde pedestales para las columnas de la catedral. Los sacerdotes viven en la muralla o cerca del templo; visten hábitos negros, usan los cabellos largos y despeinados, evitan ciertos manjares, practican todos los ayunos. Junto al templo están recluidas las hijas de algunos señores, que hacen vida de monjas y gastan los días tejiendo en pluma.</p>
+                        
+                        <p>Pero las calaveras expuestas, y los testimonios ominosos del sacrificio, pronto alejan al soldado cristiano, que, en cambio, se explaya con deleite en la descripción de la feria.</p>
+                        
+                        <p>Se hallan en el mercado —dice— «todas cuantas cosas se hallan en toda la tierra». Y después explica que algunas más, en punto a mantenimientos, vituallas, platería. Esta plaza principal está rodeada de portales, y es igual a dos de Salamanca. Discurren por ella diariamente —quiere hacernos creer— sesenta mil hombres cuando menos. Cada especie o mercaduría tiene su calle, sin que se consienta confusión. Todo se vende por cuenta y medida, pero no por peso. Y tampoco se tolera el fraude: por entre aquel torbellino, andan siempre disimulados unos celosos agentes, a quienes se ha visto romper las medidas falsas. Diez o doce jueces, bajo su solio, deciden los pleitos del mercado, sin ulterior trámite de alzada, en equidad y a vista del pueblo. A aquella gran plaza traían a tratar los esclavos, atados en unas varas largas y sujetos por el collar.</p>
+                        
+                        <p>Allí venden —dice Cortés— joyas de oro y plata, de plomo, de latón, de cobre, de estaño; huesos, caracoles y plumas; tal piedra labrada y por labrar; adobes, ladrillos, madera labrada y por labrar. Venden también oro en grano y en polvo, guardado en cañutos de pluma que, con las semillas más generales, sirven de moneda. Hay calles para la caza, donde se encuentran todas las aves que congrega la variedad de los climas mexicanos, tales como perdices y codornices, gallinas, lavancos, dorales, zarcetas, tórtolas, palomas y pajaritos en cañuela; buharros y papagayos, halcones, águilas, cernícalos, gavilanes. De las aves de rapiña se venden también los plumones con cabeza, uñas y pico. Hay conejos, liebres, venados, gamos, tuzas, topos, lirones y perros pequeños que crían para comer castrados. Hay calle de herbolarios, donde se venden raíces y yerbas de salud, en cuyo conocimiento empírico se fundaba la medicina: más de mil doscientas hicieron conocer los indios al doctor Francisco Hernández, médico de cámara de Felipe II y Plinio de la Nueva España. Al lado, los boticarios ofrecen ungüentos, emplastos y jarabes medicinales. Hay casas de barbería, donde lavan y rapan las cabezas. Hay casas donde se come y bebe por precio. Mucha leña, astilla de ocote, carbón y braserillos de barro. Esteras para la cama, y otras, más finas, para el asiento o para esterar salas y cámaras. Verduras en cantidad, y sobre todo, cebolla, puerro, ajo, borraja, mastuerzo, berro, acedera, cardos y tagarninas. Los capulines y las ciruelas son las frutas que más se venden. Miel de abejas y cera de panal; miel de caña de maíz, tan untuosa y dulce como la de azúcar; miel de maguey, de que hacen también azúcares y vinos. Cortés, describiendo estas mieles al emperador Carlos V, le dice con encantadora sencillez: «¡mejores que el arrope!». Los hilados de algodón para colgaduras, tocas, manteles y pañizuelos le recuerdan la alcaicería de Granada. Asimismo hay mantas, abarcas, sogas, raíces dulces y reposterías, que sacan del henequén. Hay hojas vegetales de que hacen su papel. Hay cañutos de olores con liquidámbar, llenos de tabaco. Colores de todos los tintes y matices. Aceites de chía que unos comparan a mostaza y otros a zaragatona, con que hacen la pintura inatacable por el agua: aún conserva el indio el secreto de esos brillos de esmalte, lujo de sus jícaras y vasos de palo. Hay cueros de venado con pelo y sin él, grises y blancos, artificiosamente pintados; cueros de nutrias, tejones y gatos monteses, de ellos adobados y de ellos sin adobar. Vasijas, cántaros y jarros de toda forma y fábrica, pintados, vidriados y de singular barro y calidad. Maíz en grano y en pan, superior al de las islas conocidas y Tierra Firme. Pescado fresco y salado, crudo y guisado. Huevos de gallinas y ánsares, tortillas de huevos de las otras aves.</p>
+                        
+                        <p>El zumbar y ruido de la plaza —dice Bernal Díaz— asombra a los mismos que han estado en Constantinopla y en Roma. Es como un mareo de los sentidos, como un sueño de Breughel, donde las alegorías de la materia cobran un calor espiritual. En pintoresco atolondramiento, el conquistador va y viene por las calles de la feria, y conserva de sus recuerdos la emoción de un raro y palpitante caos: las formas se funden entre sí; estallan en cohete los colores; el apetito despierta al olor picante de las yerbas y las especias. Rueda, se desborda del azafate todo el paraíso de la fruta: globos de color, ampollas transparentes, racimos de lanzas, piñas escamosas y cogollos de hojas. En las bateas redondas de sardinas, giran los reflejos de plata y de azafrán, las orlas de aletas y colas en pincel; de una cuba sale la bestial cabeza del pescado, bigotudo y atónito. En las calles de la cetrería, los picos sedientos; las alas azules y guindas, abiertas como un laxo abanico; las patas crispadas que ofrecen una consistencia terrosa de raíces; el ojo, duro y redondo, del pájaro muerto. Más allá, las pilas de granos vegetales, negros, rojos, amarillos y blancos, todos relucientes y oleaginosos. Después, la venatería confusa, donde sobresalen, por entre colinas de lomos y flores de manos callosas, un cuerno, un hocico, una lengua colgante: fluye por el suelo un hilo rojo que se acercan a lamer los perros. A otro término, el jardín artificial de tapices y de tejidos; los juguetes de metal y de piedra, raros y monstruosos, solo comprensibles —siempre— para el pueblo que los fabrica y juega con ellos; los mercaderes rifadores, los joyeros, los pellejeros, los alfareros, agrupados rigurosamente por gremios, como en las procesiones de Alsloot. Entre las vasijas morenas se pierden los senos de la vendedora. Sus brazos corren por entre el barro como en su elemento nativo: forman asas a los jarrones y culebrean por los cuellos rojizos. Hay, en la cintura de las tinajas, unos vivos de negro y oro que recuerdan el collar ceñido a su garganta. Las anchas ollas parecen haberse sentado, como la india, con las rodillas pegadas y los pies paralelos. El agua, rezumando, gorgoritea en los búcaros olorosos.</p>
+                        
+                        <p>Lo más lindo de la plaza —declara Gomara— está en las obras de oro y pluma, de que contrahacen cualquier cosa y color. Y son los indios tan oficiales de esto, que hacen de pluma una mariposa, un animal, un árbol, una rosa, las flores, las yerbas y peñas, tan al propio que parece lo mismo que o está vivo o natural. Y acontéceles no comer en todo un día, poniendo, quitando y asentando la pluma, y mirando a una parte y otra, al sol, a la sombra, a la vislumbre, por ver si dice mejor a pelo o contrapelo, o al través, de la haz o del envés; y, en fin, no la dejan de las manos hasta ponerla en toda perfección. Tanto sufrimiento pocas naciones le tienen, mayormente donde hay cólera como en la nuestra.</p>
+                        
+                        <p>El oficio más primo y artificioso es platero; y así, sacan al mercado cosas bien labradas con piedra y hundidas con fuego: un plato ochavado, el un cuarto de oro y el otro de plata, no soldado, sino fundido y en la fundición pegado; una calderica que sacan con su asa, como acá una campana, pero suelta; un pesce con una escama de plata y otra de oro, aunque tengan muchas. Vacían un papagayo, que se le ande la lengua, que se le meneen la cabeza y las alas. Funden una mona, que juegue pies y cabeza y tenga en las manos un huso que parezca que hila, o una manzana que parezca que come. Y lo tuvieron a mucho nuestros españoles, y los plateros de acá no alcanzan el primor. Esmaltan asimismo, engastan y labran esmeraldas, turquesas y otras piedras, y agujeran perlas…</p>
+                        
+                        <p class="resaltado">Tres indios hay en la ciudad de México —escribe—</p>
+                        
+                        <p>Los juicios de Bernal Díaz no hacen ley en materia de arte, pero bien revelan el entusiasmo con que los conquistadores consideraron al artífice indio: «Tres indios hay en la ciudad de México —escribe— tan primos en su oficio de entalladores y pintores, que se dicen Marcos de Aquino y Juan de la Cruz y el Crespillo, que si fueran en tiempo de aquel antiguo y afamado Apeles y de Miguel Ángel o Berruguete, que son de nuestros tiempos, les pusieran en el número dellos».</p>
+                        
+                                                
+                        <p>—Pero ¿quién no es su vasallo?<br>Los señores de todas esas tierras lejanas residen mucha parte del año en la misma corte, y envían sus primogénitos al servicio de Moctezuma. Día por día acuden al palacio hasta seiscientos caballeros, cuyos servidores y cortejo llenan dos o tres dilatados patios y todavía hormiguean por la calle, en los aledaños de los sitios reales. Todo el día pulula en torno al rey el séquito abundante, pero sin tener acceso a su persona. A todos se sirve de comer a un tiempo, y la botillería y despensa quedan abiertas para el que tuviere hambre y sed.</p>
+                        
+                        <p>Venían trescientos o cuatrocientos mancebos con el manjar, que era sin cuento, porque todas las veces que comía y cenaba [el emperador] le traían todas las maneras de manjares, así de carnes como de pescados y frutas y yerbas que en toda la tierra se podían haber. Y porque la tierra es fría, traían debajo de cada plato y escudilla de manjar un braserico con brasa, por que no se enfriase.</p>
+                        
+                        <p>Sentábase el rey en una almohadilla de cuero, en medio de un salón que se iba poblando con sus servidores; y mientras comía, daba de comer a cinco o seis señores ancianos que se mantenían desviados de él. Al principio y fin de las comidas, unas servidoras le daban aguamanos, y ni la toalla, platos, escudillas ni braserillos que una vez sirvieron volvían a servir. Parece que mientras cenaba se divertía con los chistes de sus juglares y jorobados, o se hacía tocar música de zampoñas, flautas, caracoles, huesos y atabales, y otros instrumentos así. Junto a él ardían unas ascuas olorosas, y le protegía de las miradas un biombo de madera. Daba a los truhanes los relieves de su festín, y les convidaba con jarros de chocolate. «De vez en cuando —recuerda Bernal Díaz— traían unas como copas de oro fino, con cierta bebida hecha del mismo cacao, que decían era para tener acceso con mujeres».</p>
+                        
+                        <p>Quitada la mesa, ida la gente, comparecían algunos señores, y después los truhanes y jugadores de pies. Unas veces el emperador fumaba y reposaba, y otras veces tendían una estera en el patio, y comenzaban los bailes al compás de los leños huecos. A un fuerte silbido rompen a sonar los tambores, y los danzantes van apareciendo con ricos mantos, abanicos, ramilletes de rosas, papahígos de pluma que fingen cabezas de águilas, tigres y caimanes. La danza alterna con el canto; todos se toman de la mano y empiezan por movimientos suaves y voces bajas. Poco a poco van animándose; y, para que el gusto no decaiga, circulan por entre las filas de danzantes los escanciadores, colando licores en los jarros.</p>
+                        
+                        <p>Moctezuma «vestíase todos los días cuatro maneras de vestiduras, todas nuevas, y nunca más se las vestía otra vez. Todos los señores que entraban en su casa, no entraban calzados», y cuando comparecían ante él, se mantenían humillados, la cabeza baja y sin mirarle a la cara. «Ciertos señores —añade Cortés— reprendían a los españoles, diciendo que cuando hablaban conmigo estaban exentos, mirándome a la cara, que parecía desacatamiento y poca vergüenza.» Descalzábanse, pues, los señores, cambiaban los ricos mantos por otros más humildes, y se adelantaban con tres reverencias: «Señor —mi señor— gran señor». «Cuando salía fuera el dicho Moctezuma, que era pocas veces, todos los que iban por él y los que topaban por las calles le volvían el rostro, y todos los demás se postraban hasta que él pasaba» —nota Cortés. Precedíale uno como lictor con tres varas delgadas, una de las cuales empuñaba él cuando descendía de las andas. Hemos de imaginarlo cuando se adelanta a recibir a Cortés, apoyado en brazos de dos señores, a pie y por mitad de una ancha calle. Su cortejo, en larga procesión, camina tras él formando dos hileras, arrimado a los muros. Precédenle sus servidores, que extienden tapices a su paso.</p>
+                        
+                        <p>El emperador es aficionado a la caza; sus cetreros pueden tomar cualquier ave a ojeo, según es fama; en tumulto, sus monteros acosan a las fieras vivas. Mas su pasatiempo favorito es la caza de altanería; de garzas, milanos, cuervos y picazas. Mientras unos andan a volatería con alzo y señuelo, Moctezuma tira con el arco y la cerbatana. Sus cerbatanas tienen los broqueles y puntería tan largos como un jeme, y de oro; están adornadas con formas de flores y animales.</p>
+                        
+                        <p>Dentro y fuera de la ciudad tiene sus palacios y casas de placer, y en cada una su manera de pasatiempo. Ábranse las puertas a calles y plazas, dejando ver patios con fuentes, losados como los tableros de ajedrez; paredes de mármol y jaspe, pórfido, piedra negra; muros veteados de rojo, muros traslucientes; techos de cedro, pino, palma, ciprés, ricamente entallados todos. Las cámaras están pintadas y esteradas; tapizadas otras con telas de algodón, con pelo de conejo y con pluma. En el oratorio hay chapas de oro y plata con incrustaciones de pedrería. Por los babilónicos jardines —donde no se consentía hortaliza ni fruto alguno de provecho— hay miradores y corredores en que Moctezuma y sus mujeres salen a recrearse; bosques de gran circuito con artificios de hojas y flores, conejeras, vivares, riscos y peñoles, por donde vagan ciervos y corzos; diez estanques de agua dulce o salada, para todo linaje de aves palustres y marinas, alimentadas con el alimento que les es natural: unas con pescados, otras con gusanos y moscas, otras con maíz, y algunas con semillas más finas. Cuidan de ellas trescientos hombres, y otros cuidan de las aves enfermas. Unos limpian los estanques, otros pescan, otros les dan a las aves de comer; unos son para espulgarlas, otros para guardar los huevos, otros para echarlas cuando encloquecen, otros las pelan para aprovechar la pluma. A otra parte se hallan las aves de rapiña, desde los cernícalos y alcotanes hasta el águila real, guarecidas bajo toldos y provistas de sus alcándaras. También hay leones enjaulados, tigres, lobos, adives, zorras, culebras, gatos, que forman un infierno de ruidos, y a cuyo cuidado se consagran otros trescientos hombres. Y para que nada falte en este museo de historia natural, hay aposentos donde viven familias de albinos, de monstruos, de enanos, corcovados y demás contrahechos. </p>
+                        
+                        <p>Había casas para granero y almacenes, sobre cuyas puertas se veían escudos que figuraban conejos, y donde se aposentaban los tesoreros, contadores y receptores; casas de armas cuyo escudo era un arco con dos aljabas, donde había dardos, hondas, lanzas y porras, broqueles y rodelas, cascos, grebas y brazaletes, bastos con navajas de pedernal, varas de uno y dos gajos, piedras rollizas hechas a mano, y unos como paveses que, al desenrollarse, cubrían todo el cuerpo del guerrero.</p>
+                        
+                        <p>Cuatro veces el Conquistador Anónimo intentó recorrer los palacios de Moctezuma: cuatro veces renunció, fatigado.</p>
+                        
+                        <h1 class="verdeP chapter-title">III</h1>
+                        
+                        <p>SI EN todas las manifestaciones de la vida indígena la naturaleza desempeñó función tan importante como la que revelan los relatos del conquistador; si las flores de los jardines eran el adorno de los dioses y de los hombres, al par que motivo sutilizado de las artes plásticas y jeroglíficas, tampoco podían faltar en la poesía.</p>
+                        
+                        <p>La era histórica en que llegan los conquistadores a México procedía precisamente de la lluvia de flores que cayó sobre las cabezas de los hombres al finalizar el cuarto sol cosmogónico. La tierra se vengaba de sus escaseces anteriores, y los hombres agitaban las banderas de júbilo. En los dibujos del Códice Vaticano, se la representa por una figura triangular adornada con torzales de plantas; la diosa de los amores lícitos, colgada de un festón vegetal, baja hacia la tierra, mientras las semillas revientan en lo alto, dejando caer hojas y flores.</p>
+                        
+                        <p>La materia principal para estudiar la representación artística de la planta en América se encuentra en los monumentos de la cultura que floreció por el valle de México inmediatamente antes de la conquista. La escritura jeroglífica ofrece el material más variado y más abundante: flor era uno de los veinte signos de los días; la flor es también signo de lo noble y lo precioso; y, asimismo, representa los perfumes y las bebidas. También surge de la sangre del sacrificio, y corona el signo jeroglífico de la oratoria. Las guirnaldas, el árbol, el maguey y el maíz alternan en los jeroglíficos de lugares. La flor se pinta de un modo esquemático, reducida a estricta simetría, ya vista por el perfil o ya por la boca de la corola. Igualmente, para la representación del árbol se usa de un esquema definido: ya es un tronco que se abre en tres ramas iguales rematando en haces de hojas, o ya son dos troncos divergentes que se ramifican de un modo simétrico. </p>
+                        
+                        <p>En las esculturas de piedra y barro hay flores aisladas —sin hojas— y árboles frutales radiantes, unas veces como atributos de la divinidad, otras como adornos de la persona o decoración exterior del utensilio.</p>
+                        
+                        <p>En la cerámica de Cholula, el fondo de las ollas ostenta una estrella floral, y por las paredes internas y externas del vaso corren cálices entrelazados. Las tazas de las hilanderas tienen flores negras sobre fondo amarillo, y, en ocasiones, la flor aparece meramente evocada por unas fugitivas líneas.</p>
+
+
+                        <p>Busquemos también en la poesía indígena la flor, la naturaleza y el paisaje del valle.</p>
+                        
+                        <p>Hay que lamentar como irremediable la pérdida de la poesía indígena mexicana. Podrá la erudición descubrir aislados ejemplares de ella o probar la relativa fidelidad con que algunos otros fueron romanceados por los misioneros españoles; pero nada de eso, por muy importante que sea, compensará nunca la pérdida de la poesía indígena como fenómeno general y social. Lo que de ella sabemos se reduce a angostas conjeturas, y a tal o cual ingenuo relato conservado por religiosos que acaso no entendieron siempre los ritos poéticos que describían; así como se reduce lo que de ella imaginamos a la fabulosa juventud de Netzahualcóyotl, el príncipe desposeído que vivió algún tiempo bajo los árboles, nutriéndose con sus frutos y componiendo canciones para solazar su destierro.</p>
+                        
+                        <p>De lo que pudo haber sido el reflejo de la naturaleza en aquella poesía quedan, sin embargo, algunos curiosos testimonios; los cuales, a despecho de probables adulteraciones, parecen basarse sobre elementos primitivos legítimos e inconfundibles. </p>
+                        
+                        <p>Trátase de viejos poemas escritos en lengua náhoa, de los que cantaban los indios en sus festividades, y a los que se refiere Cabrera y Quintero en su Escudo de armas de México (1746). </p>
+                        
+                          <p class="resaltado">Ya nos tiene muy sobre aviso aquella colección de Aztecas en que Pesado parafrasea poemas indígenas,</p>
+                        
+                        <p>Aprendidos de memoria, ellos transmitían de generación en generación las más minuciosas leyendas epónimas, y también las reglas de la costumbre. Quien los tuvo a la mano, los pasó en silencio, tomándolos por composiciones hechas para honrar a los demonios. El texto actual de los únicos que poseemos no podría ser una traslación exacta del primitivo, puesto que la Iglesia hubo de castigarlos, aunque toleró, por inevitable, la costumbre gentil de recitarlos en banquetes y bailes. En 1555, el Concilio Provincial ordenaba someterlos a la revisión del ministro evangélico, y tres años después se renovaba a los indios la prohibición de cantarlos sin permiso de sus párrocos y vicarios. De los únicos hasta hoy conocidos —pues de los que fray Bernardino de Sahagún parece haber publicado sólo la mención se conserva— no se sabe el autor ni la procedencia, ni el tiempo en que fueron escritos; aunque se presume que se trata de genuinas obras mexicanas, y no, como alguien creyó, de mera falsificación de los padres catequistas. Convienen los arqueólogos en que fueron recopilados por un fraile para ofrecerlos a su superior; y, compuestos antes de la conquista, se les redactó por escrito poco después que la vieja lengua fue reducida al alfabeto español. Tan alterados e indirectos como nos llegan, ofrecen estos cantares un matiz de sensibilidad lujuriosa que no es, en verdad, propio de los misioneros españoles —gente apostólica y sencilla, de más piedad que imaginación—. En terreno tan incierto, debemos, sin embargo, prevenirnos contra las sorpresas del tiempo. Ojalá en la inefable semejanza de estos cantares con algún pasaje de Salomón no haya más que una coincidencia. Ya nos tiene muy sobre aviso aquella colección de Aztecas en que Pesado parafrasea poemas indígenas, y donde la crítica ha podido descubrir ¡la influencia de Horacio en Netzahualcóyotl!</p>
+                        
+                        <p>En los viejos cantares náhoas, las metáforas conservan cierta audacia, cierta aparente incongruencia; acusan una ideación no europea. Brinton —que los tradujo al inglés y publicó en Filadelfia, 1887— cree descubrir cierto sentido alegórico en uno de ellos: el poeta se pregunta dónde hay que buscar la inspiración, y se responde, como Wordsworth, que en el grande escenario de la naturaleza. El mundo mismo le aparece como un sensitivo jardín. Llámase el cantar Ninoyolnonotza: meditación concentrada, melancólica delectación, fantaseo largo y voluptuoso, donde los sabores del sentido se van trasmutando en aspiración ideal:</p>
+                        
+                        <p>NINOYOLNONOTZA<br>1. Me reconcentro a meditar profundamente dónde poder recoger algunas bellas y fragantes flores. ¿A quién preguntar? Imaginaos que interrogo al brillante pájaro zumbador, trémula esmeralda; imaginaos que interrogo a la amarilla mariposa: ellos me dirán que saben dónde se producen las bellas y fragantes flores, si quiero recogerlas aquí en los bosques de laurel, donde habita el Tzinitzcán, o si quiero tomarlas en la verde selva donde mora el Tlauquechol. Allí se las puede cortar brillantes de rocío; allí llegan a su desarrollo perfecto. Tal vez podré verlas, si es que han aparecido ya; ponerlas en mis haldas, y saludar con ellas a los niños y alegrar a los nobles.</p>
+                        
+                        
+                        <p>2. Al pasear, oigo como si verdaderamente las rocas respondieran a los dulces cantos de las flores; responden las aguas lucientes y murmuradoras; la fuente azulada canta, se estrella, y vuelve a cantar; el Cenzontle contesta; el Coyoltótotl suele acompañarle, y muchos pájaros canoros esparcen en derredor sus gorjeos como una música. Ellos bendicen a la tierra, haciendo escuchar sus dulces voces.</p>
+                        
+                        <p>3. Dije, exclamé: ojalá no os cause pena a vosotros, amados míos que os habéis parado a escuchar; ojalá que los brillantes pájaros zumbadores acudan pronto. —¿A quién buscaremos, noble poeta?— pregunto y digo: ¿en dónde están las bellas y fragantes flores con las cuales pueda alegraros, mis nobles compañeros? Pronto me dirán ellas cantando: —Aquí, oh, cantor, te haremos ver aquello con que verdaderamente alegrarás a los nobles, tus compañeros.</p>
+                        
+                        <p>4. Condujéronme entonces al fértil sitio de un valle, sitio floreciente donde el rocío se difunde con brillante esplendor, donde vi dulces y perfumadas flores cubiertas de rocío, esparcidas en derredor a manera de arcoíris. Y me dijeron: —Arranca las flores que desees, oh cantor —ojalá te alegres—, y dalas a tus amigos, que puedan regocijarse en la tierra. </p>
+                        
+                        <p>5. Y luego recogí en mis haldas delicadas y deliciosas flores, y dije: —¡Si algunos de nuestro pueblo entrasen aquí! ¡Si muchos de los nuestros estuviesen aquí! Y creí que podía salir a anunciar a nuestros amigos que todos nosotros nos regocijaríamos con las variadas y olorosas flores, y escogeríamos los diversos y suaves cantos con los cuales alegraríamos a nuestros amigos, aquí en la tierra, y a los nobles en su grandeza y dignidad.</p>
+                        
+                        <p>6. Luego yo, el cantor, recogí todas las flores para ponerlas sobre los nobles, para con ellas cubrirlos y colocarlas en sus manos; y me apresuré a levantar mi voz en un canto digno, que glorificase a los nobles ante la faz de Tloque-in-Nahuaque, en donde no hay servidumbre.</p>
+                        
+                        <p>… El dolor llena mi alma al recordar en dónde yo, el cantor, vi el sitio florido…</p>
+                        
+                        <p>De manera que el poeta, en pos del secreto natural, llega hasta el lecho mismo del valle. Estoy en un lecho de rosas, parece decirnos, y envuelvo mi alma en el arcoiris de las flores. Ellas cantan en torno suyo, y, verdaderamente, las rocas responden a los cantos de las corolas. Quisiera ahogarse de placer, pero no hay placer no compartido, y así, sale por el campo llamando a los de su pueblo, a sus nobles y a todos los niños que pasan. Al hacerlo, llora de alegría. (La antigua raza era lacrimosa y solemne.) De manera que la flor es causa de lágrimas y de regocijos.</p>
+                        
+                        <p>La parte final decae sensiblemente, y es quizás aquella en que el misionero español puso más la mano.</p>
+                        
+                        <p>Podemos imaginar que, en una rudimental acción dramática, el cantor distribuía flores entre los comensales, a medida que la letra lo iba dictando. Sería una pequeña escenificación simbólica como esas de que aún dan ejemplo las celebraciones de la Iglesia. Anúncianlas ya los ritos dionisíacos, los ritos de la naturaleza y del vegetal, y perduran todavía en el sacrificio de la misa. </p>
+                        <p>La peregrinación del poeta en busca de flores, y aquel interrogar al pájaro y a la mariposa, evocan en el lector la figura de Sulamita en pos del amado. La imagen de las flores es frecuente como una obsesión. Hay otro cantor que nos dice: «Tomamos, desenredamos las joyas. Las flores azules son tejidas sobre las amarillas, que podemos darlas a los niños. —Que mi alma se envuelva en varias flores, que se embriague con ellas, porque pronto debo ausentarme». La flor aparece al poeta como representación de los bienes terrestres. Pero todos ellos nada valen ante las glorias de la divinidad: «Aun cuando sean joyas y preciosos ungüentos de discursos, ninguno puede hablar aquí dignamente del dispensador de la vida». —En otro poema relativo al ciclo de Quetzalcóatl (el ciclo más importante de aquella confusa mitología, símbolo de civilizador y profeta, a la vez que mito solar más o menos vagamente explícito), en toques descriptivos de admirable concentración surge a nuestros ojos «la casa de los rayos de luz, la casa de culebras emplumadas, la casa de turquesas». De aquella casa, que en las palabras del poeta brilla como un abigarrado mosaico, han salido los nobles, quienes «se fueron llorando por el agua» —frase en que palpita la evocación de la ciudad de los lagos. El poema es como una elegía a la desaparición del héroe. Se trata de un rito lacrimoso, como el de Perséfone, Adonis, Tamuz o alguno otro popularizado en Europa. Solo que, a diferencia de lo que sucede en las costas del Mediterráneo, aquí el héroe tarda en resucitar, tal vez nunca resucitará. De otro modo, hubiera triunfado sobre el dios sanguinario y zurdo de los sacrificios humanos, e impidiendo la dominación del bárbaro azteca, habría transformado la historia mexicana. El quetzal, el pájaro iris que anuncia el retorno de este nuevo Arturo, ha emigrado, ahora, hacia las regiones ístmicas del continente, intimando acaso nuevos destinos. «Lloré con la humillación de las montañas; me entristecí con la exaltación de las arenas, que mi señor se había ido». El héroe se muestra como un guerrero: «En nuestras batallas, estaba mi señor adornado con plumas». Y, a pocas líneas, estas palabras de desconcertante «sintetismo»: «Después que se hubo embriagado, el caudillo lloró; nosotros nos glorificamos de estar en su habitación». («Metióme el rey en su cámara: gozarnos hemos y alegrarnos hemos en ti.» Cant. de Cant.) El poeta tiene muy airosas sugestiones: «Yo vengo de Nonohualco —dice— como si trajera pájaros al lugar de los nobles». Y también lo acosa la obsesión de la flor: «Yo soy miserable, miserable como la última flor».</p>
+                        
+                        <h1 class="verdeP chapter-title">IV</h1>
+                        
+                        <p>CUALQUIERA QUE sea la doctrina histórica que se profese (y no soy de los que sueñan en perpetuaciones absurdas de la tradición indígena, y ni siquiera fío demasiado en perpetuaciones de la española), nos une con la raza de ayer, sin hablar de sangres, la comunidad del esfuerzo por domeñar nuestra naturaleza brava y fragosa; esfuerzo que es la base bruta de la historia. Nos une también la comunidad, mucho más profunda, de la emoción cotidiana ante el mismo objeto natural. El choque de la sensibilidad con el mismo mundo labra, engendra un alma común. Pero cuando no se aceptara lo uno ni lo otro —ni la obra de la acción común, ni la obra de la contemplación común—, convéngase en que la emoción histórica es parte de la vida actual, y, sin su fulgor, nuestros valles y nuestras montañas serían como un teatro sin luz. El poeta ve, al reverberar de la luna en la nieve de los volcanes, recortarse sobre el cielo el espectro de Doña Mariana, acosada por la sombra del Flechador de Estrellas; o sueña con el hacha de cobre en cuyo filo descansa el cielo; o piensa que escucha, en el descampado, el llanto funesto de los mellizos que la diosa vestida de blanco lleva a las espaldas: no le neguemos la evocación, no desperdiciemos la leyenda. Si esa tradición nos fuere ajena, está como quiera en nuestras manos, y sólo nosotros disponemos de ella. No renunciaremos —oh Keats— a ningún objeto de belleza, engendrador de eternos goces.</p>
+                        
+                        
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    
+                </div>
+            </div>  
+                
+                
+                
+                
+                
+                <div class="slides slide">
+                    <h2 class="section-title verde">La experiencia literaria</h2>
+                   <h1 class="verdeP chapter-title">Las categorias de la lectura</h1>
+                        
+                        <div class="content-text">
+                        <p class="first-paragraph">El goce de la lectura se define, como todos, por el recuerdo. Hay, entre aficionados y profesionales, diversas categorías de lectores. Para el profesional, la lectura puede llegar a ser un enojoso deber, como el teatro para el inspector de espectáculos o como para la cortesana las caricias. Erudito hay que ya se dispensa de leer y se recorre todo un libro buscando solo las mayúsculas y, dentro de estas, la letra A: es que se trata de «despojar» las citas sobre Ausonio. ¡Habladle a él de la amenidad de la lectura! Aquí, como en todo, el pleno goce se queda para el aficionado —este «nuevo rico» del espíritu—, para el amateur, que en portugués se llama, con una palabra fragante, el «amador». Verdad paradójica pero cierta: el goce de leer disminuye, a veces, a medida que se asciende en categoría de cultura. Veamos:</p>
+                        
+                        <p>1. Abajo está el sencillo pueblo. En horas robadas, el hombre humilde lee con fruición, y se queda con la sustancia, con el asunto, nada más. Puesto a la prueba del recuerdo, solo ha conservado lo mejor. Él no sabe el nombre del libro ni el nombre del autor. «¿Has leído —dice el hombre humilde— la historia de un caballero a quien se le moría el caballo todos los martes?». Y de propósito pongo el ejemplo de un caballero, para evocar así la época en que la gente era de veras aficionada a leer. O a que le leyeran —lo cual tiene todavía más sabor— porque no conocía las letras. Entonces el libro entraba en la vida. Cuando el señor vuelve a casa, encuentra gimiendo a su mujer y a su servidumbre, junto al libro abierto. ¿Qué acontece? Nada: «Hase muerto Amadís». Hoy por hoy, el mejor templo de lectura está en esos talleres, esas fábricas de tabaco donde un hombre lee para cuarenta mientras los cuarenta trabajan.</p>
+                        
+                        <p>2. Aquí aparece el lector de medio pelo, creación de la enseñanza primaria obligatoria. Ese ya recuerda los títulos de los libros, y aquí comienza a enturbiarse el gusto. A esta clase pertenecen los que andan por los museos viendo, no los cuadros, sino los letreros de los cuadros. A este lector se le han olvidado las peripecias, conserva solo el título. Sustituye la posesión por el símbolo. Ha leído algo que se llama Las dos ciudades, y junto al título, ha marcado una crucecita así en la memoria: X, para saber que le gustó, o una ruedecita así: O, para saber que no le gustó.</p>
+                        
+                        <p>3. Ahora, el semiculto, el pedante con lecturas, el anfibio, el del complejo de inferioridad, el más atroz enemigo del prójimo, el que «pudo ser y no llegó a ser». Ese se acuerda de autores, no de libros. Él ha leído «un Ferrero» muy interesante, y «un Croce» que no lo era tanto. Y que no le hablen a él de Valéry donde está Henri Béraud, de Juan Ramón donde está Villaespesa. A veces, el cronista profesional de libros se recluta entre esta clase, mediante un leve proceso de especialización. Veinte repúblicas hermanas descargan todos los días sobre la playa del cuitado sus mareas de tinta fresca. Las torres de libros por reseñar llegan ya hasta el techo. De repente, entra el «amador», radiantes los ojos, con un librito que lo ha deleitado y que, en su candor, se empeña en prestar a su amigo el cronista para que este también pase un buen rato. Y el cronista lo mira con un rabioso disimulo de eunuco, condenado a vivir entre hembras que no disfruta.</p>
+                        
+                        <p>4. Y al último viene el bibliófilo, flor de las culturas. El que solo busca ya en los libros el nombre de editor, la fecha de la impresión, la justificación, el colofón, los datos de la tirada, el formato, la clase del papel, los puntizones y corondeles, los puntos, los cíceros y los cuadratines. O acaso, acaso sabe el muy pícaro que la edición fue detenida a los tantos ejemplares para corregir una errata de bulto; y entonces hay que desvivirse por encontrar un ejemplar con la errata, que vale muchísimo más. Y, por cierto, anda por ahí una célebre Biblia que luce, en una mayúscula opulenta, la imagen de una Leda palpitando entre las alas del cisne. Como esta Biblia fue quemada en su casi totalidad, hay que dar con un fugitivo que se haya salvado de la quema. ¿Qué decía la Biblia en aquel pasaje? Eso nunca lo hemos sabido: lo que nos importa es la mayúscula. Al menos, esta última clase se salva por su cariño para la materia del libro: sin el amor de los objetos, se cae prontamente en la barbarie.</p>
+                         <hr class="line-separator line-orange" />
+                    
+                    
+                </div>
+            </div>  
+            
+            
+            
+            <div class="slides slide">
+                    <h2 class="section-title verde">Nuestra lengua</h2>
+                   <h1 class="verdeP chapter-title">1. Generalidades</h1>
+                        
+                        <div class="content-text">
+                        <p class="first-paragraph">1. EL HABLA es el don de hablar, característica del hombre, que los animales sólo manifiestan en rudimentos, aunque a ellos les bastan para entenderse entre sí.</p>
+                        
+                        <p>2. Por una parte, el hombre ha hecho el habla; por otra, el habla ha hecho al hombre: dos agentes que se modelan el uno al otro. El que deseaba labrar una estatua hizo un cincel: el cincel lo hizo poco a poco escultor.</p>
+                        
+                        <p>3. El habla es una especialización oral de las señales que hace nuestro cuerpo para expresar lo que desea. Aunque esta especialización oral venció, por cómoda y económica, a las otras señales, estas quedan aún junto al habla, sea que la refuercen o simplemente la acompañen, en los ademanes y en los gestos.</p>
+                        
+                        <p>4. La escritura vino muchos siglos después para enviar a distancia, con la mayor exactitud posible, las señales del habla —concepto de fijación en el espacio—, y también para guardar las expresiones y el contenido del habla de modo que «no se lo lleve el viento» o no se olvide —concepto de fijación en el tiempo—. A la escritura propiamente tal precedieron varios sistemas aproximados, como esos signos que aún se usan en las carreteras, etc. Y para los mensajes a distancia, se usaron y aún se usan varios recursos auxiliares: los tambores y leños huecos o las fogatas del primitivo, las marcas del cuchillo en los árabes, los «telégrafos» de banderines y luces en los barcos, el verdadero telégrafo eléctrico, el teléfono, la radioemisión, etcétera.</p>
+                        
+                        <p>5. El lenguaje es el cuerpo de expresiones orales en que se manifiesta el don del habla. Merced a la facultad del habla, el hombre posee un lenguaje. La lengua —o también el idioma— es el lenguaje que habla determinada comunidad: español, inglés, francés, nahua. Se dice «el lenguaje», en general; se dice «los idiomas», «las lenguas», conjunto de particularidades; o, concretamente, «esta lengua», «aquel idioma».</p>
+                
+                        <p>6. Habla, lenguaje, lengua, idioma son términos que se usan con cierta indiferencia unos por otros. La frontera no está trazada. El objeto de haberlos distinguido aquí ha sido tan sólo el explicar algunas nociones principales, de la más abstracta a la más concreta. Por habla suele entenderse también la selección personal que cada uno hace habitualmente dentro de su lenguaje: «En el habla de Fulano no está el llamar ebrio al borracho».</p>
+                
+                        <p>7. El habla, y por consecuencia el lenguaje, los idiomas o lenguas, no se han ajustado absoluta y totalmente a un sistema mental inflexible. Aunque la inteligencia y la razón los han tutoreado en mucha parte, también en mucha parte han crecido espontáneamente como los árboles.</p>
+                
+                        <p>8. La gramática da las reglas de los usos que se consideran preferibles, pero ni puede abolir los demás usos, ni es siempre indispensable que lo haga (fuera del trato de buena educación o las funciones de la cultura), ni ella misma logra defenderse del empleo inveterado de forma ajenas a toda lógica. Por ejemplo: saltar la comba —que aquí decimos «la cuerda»— «a pie juntillas», frase que se considera correcta, aunque lógicamente debiera ser: «a pies juntillos».</p>
+                
+                        <p>9. En nuestro lenguaje se descubren fácilmente residuos del pensar primitivo, que no corresponden al estado actual del conocimiento o la ciencia, y bien mirado hasta pueden ser antropomorfismos risibles, como el atribuir sexo a los objetos mediante los llamados «géneros», declarándolos convencionalmente masculinos o femeninos: El banco; la silla, el sol, la luna. Para estas últimas palabras la convención es inversa en alemán, donde Sonne es femenino, y Mond masculino. Por aquí se ve lo arbitrario y casual de estas atribuciones.</p>
+                
+                        <p>10. El lenguaje, y por consecuencia los idiomas o lenguas, no ofrecen formas fijas y nacidas de una vez para siempre en el estado que nos es habitual, en el que usamos. Se han modificado con el tiempo y se modifican en el espacio. El español que hoy hablamos no es igual al español del Poema de Mío Cid (siglo XII). Y, dentro de una sola época, la nuestra, el lenguaje del norte de Francia difiere un poco del lenguaje del mediodía. No se habla español exactamente lo mismo en las Provincias Vascongadas que en Aragón o en Andalucía. Hay diferencias entre el lenguaje del norte de México (digamos, Monterrey) y el del sur (digamos, Mérida); entre el del este (digamos, Veracruz); y el del oeste (digamos, Guadalajara). En general, no se habla el español lo mismo en España que en Hispanoamérica o en Salónica.</p>
+                
+                        <p>11. Esta variabilidad del lenguaje no es consecuencia única de la variabilidad del tiempo y del espacio; sino que el lenguaje, corriendo como un río por distintos cauces (distintos ambientes naturales, comarcas donde quedan residuos de distintas lenguas anteriores, o que sufrieron distintas invasiones de otros pueblos de diverso idioma, o simplemente contactos y vecindades con distintos grupos extranjeros), acarrea al paso variados sabores y matices; ya en la construcción de frases, ya en la forma de las palabras, ya en las pronunciaciones, acentos, «tonadas» y maneras de hablar.</p>
+                
+                        <p>12. Un idioma varía con el tiempo, con el espacio, con las circunstancias de su desarrollo. Nunca está completo en parte alguna. Nunca acabado de hacer en ningún momento. Por eso resulta una falsedad ese criterio que atribuye al idioma una entidad final y absoluta. Por ejemplo, se dice y repite: «En aquella época la lengua no estaba aún madura». ¿Madura con respecto a qué modelo ideal? La lengua de cada época está prácticamente madura para tal época. Si resucitara un hombre de la Edad Media, nuestra lengua no le parecería cosa madura, sino una incómoda corrupción. </p>
+                
+                        <h1 class="verdeP chapter-title">2. Latín y romances</h1>
+                
+                        <p>1. Así pues, la vida de las lenguas se reduce a la evolución o cambio en el espacio y en el tiempo. Y esto aconteció con la antigua lengua latina, una de las más importantes del importantísimo grupo o conjunto de lenguas emparentadas llamado indoeuropeo. Los cambios se fueron acentuando, y al fin sucedió como si el latín anterior hubiera tenido un puñado de hijas: nuevos estados, nuevas apariencias de la madre. Ayer se consideró que estas transformaciones eran decadencias. Un secreto instinto policiaco de perseguir y delatar culpas presidía a estos juicios. Hoy se entiende y admite que las transformaciones son legítimas, por responder a las nuevas condiciones y necesidades de distintos lugares y tiempos.</p>
+                
+                        <p>2. La lengua latina, conforme se deshacía la unidad del antiguo Imperio Romano, fue dando origen, por toda la antigua Romania o sea en los distintos territorios de su dominio, a las llamadas lenguas románicas o romances: el italiano, el francés, el provenzal, el catalán, el español, el portugués, el indeciso reto-romano (valles alpinos al nordeste de Italia y al sudeste de Suiza), y finalmente el rumano, en la antigua Dacia romana, hoy muy mezclado de vocabulario eslávico y otros elementos.</p>
+                
+                        <p>3. Había en la Antigüedad dos latines. Uno es el latín literario en que escribieron Horacio y Cicerón; suerte de lengua artificial e instrumento de la cultura. Otro era el latín de la conversación y el uso diario, el latín vulgar, que se siguió hablando en los lugares conquistados por Roma aun después del año 476, caída del Imperio Romano. Aunque en estos lugares había funcionarios y oficiales que escribían la lengua literaria y hablaban el latín vulgar de la gente educada, los dominaba numéricamente la inmensa población de soldados, colonos y campesinos que hablaban todavía más a lo plebeyo el latín vulgar, y que además se dejaban influir por los contactos con los pueblos nativos, de hablas diferentes. Y todos estos factores, obrando de consuno, fueron dando origen a las mescolanzas de que han nacido los romances. Singularmente cuando las invasiones bárbaras dejaron a cada antigua colonia entregada a sus propias fuerzas. </p>
+                
+                
+                        <p>Así acontece por toda la antigua Romania. En la alta Edad Media, hasta hubo Padres de la Iglesia que recomendaban a los predicadores usar en sus homilías y sermones ese latín ya adulterado y plebeyo, para que mejor los entendiera la gente humilde, las ovejas predilectas del cristianismo.</p>
+                
+                
+                        <p>4. Van configurándose los romances, que todavía se deshacen por las orillas, y dan, como brotes, unas seudolenguas ya de tercera instancia o dialectos. Dejaremos a los pobres dialectos, aunque sean también brotes legítimos, en su mala opinión y su fama equívoca (¡otra vez el prejuicio policiaco que tanto ha enturbiado los estudios lingüísticos!), para solo hablar ya del español, nuestra lengua.</p>
+                
+                
+                         <h1 class="verdeP chapter-title">3. El español</h1>
+                
+                        <p>1. Nuestra lengua, el castellano que se llamará español, cuando domine prácticamente al país, entra desde el norte de España como una cuña o cuchilla, y luego se expande hacia los litorales que, en sus peculiaridades propias, ofrecen ciertas semejanzas. El castellano nunca pudo nivelar esas disidencias. Entre el castellano y las zonas que no llegó a invadir del todo hay, naturalmente, zonas intermedias. Y hoy casi podemos decir que el español defiende su dominios actuales con un sonido gutural y tajante, que le es bien característico: reina plenamente el español, hoy por hoy, dondequiera que se escucha la j, dondequiera que se esgrime al hablar el machete de la j.</p>
+                        
+                        <p>2. Al correr del tiempo y según las vicisitudes históricas, la lengua española ha recibido, sobre la masa original del latín vulgar vuelto romance, ciertos elementos de otras lenguas peninsulares prerrománicas: elementos ligures, turdetanos, vascos, fenicios, cartagineses, griegos; y luego, aportaciones de lenguas no peninsulares, como los términos guerreros y otros tomados a las hablas germánicas, las palabras árabes —más bien para la administración y la cultura—, etcétera.</p>
+                
+                        <p>3. Entre todas estas lenguas peninsulares ajenas al romance, el caso más singular es el caso del vasco, vascuence o vascongado, «sagrado chorro de piedras» que decía un poeta. Esta extraña lengua quedó enquistada en la península como una supervivencia de remotas edades. Ha dado lugar a muy detenidas investigaciones y también a las fantasías más desorbitadas. Tiempo hubo en que se la declaró la lengua del Paraíso. La ciencia ofrece hoy, sobre su origen, tres hipótesis principales: a) que es lengua camitica, africana, afín del bereber, el copto, el cusita y el sudanés; b) que es lengua fundamentalmente caucásica; c) que es una mezcla de ambas corrientes.</p>
+                
+                        <p>4. Los varios romances, hijos del latín, palpitan ya a principios del siglo VIII. Cuando los árabes invadieron a España, ésta conservaba la unidad lingüística, el latín de su tiempo, abuelo del castellano.</p>
+                        <p>Los hispanorromanos que se refugiaron en el norte fueron ensanchando su dominio a partir del siglo XI. A esto se llama la «Reconquista». Para esos días, en España hay ya un mosaico de lenguas: además del castellano, hay el catalán, el gallego-portugués, el leonés y el mozárabe llamado a desaparecer.</p>
+                
+                        <p>5. La lengua castellana o romance vulgar comienza a configurarse de modo titubeante desde el siglo IX hasta el siglo X. Los diplomas y documentos notariales de la época, que pretenden redactarse en latín, se van dejando penetrar cada vez más por el nuevo modo de hablar como por una humedad del subsuelo. En las Glosas emilianenses y en las Glosas silenses (monasterios de San Millán y de Silos), ambas del siglo X, estas nuevas formas se usan ya de modo consciente. </p>
+                
+                        <p>6. Entre tanto, por influencia de los inmigrantes «francos», aparecen los primeros galicismos, cuya introducción no ha de cesar ya a lo largo de la Edad Media. Naturalmente, esos galicismos han dejado de serlo, han sido ya absorbidos por el castellano y pertenecen a su auténtico patrimonio: homenaje, mensaje, palafrén, deleite, vergel, manjares, viandas, etc. Así ha sucedido ya en nuestros días con los anglicismos «mitin», «líder», «club». Estas absorciones de vocablos extranjeros forman parte del desarrollo normal de los idiomas. Hoy estamos plenamente seguros de que estamos hablando español cuando usamos palabras de diverso origen, como «arroyo» (voz de sustrato prerromano), «pájaro» (derivada del latín), o «alcázar» (procedente del árabe) (ver I, 12 y IV, 5).</p>
+                
+                        <p>7. La épica naciente canta ya a los Condes de Castilla, llora a los Infantes de Lara y a Sancho II, caído en el sitio de Zamora. Pronto ocurre en toda la Romania algo como un desperezo que hoy llamaríamos «nacionalista», manifiesto anhelo de poner en valor, y en la lengua que de veras se habla, las realidades actuales y circundantes. Ello determina el triunfo del romance. El latín queda relegado a la función de lengua auxiliar. Las hijas se emanciparon de la madre, y la confinaron en los menesteres humildes propios de la vejez. Antes de mediar el siglo XII, con el cantar de Mío Cid, la lengua entra ya por el camino real de la literatura. En el siglo XIII, la adopción del romance es definitiva.</p>
+                
+                        <p>8. Pero no nacen a un tiempo todos los géneros. Don Alfonso X el Sabio, gran organizador de la prosa histórica y didáctica, se pasa de buena gana al gallego-portugués cuando quiere ejercitarse en la poesía lírica y cantar a la Virgen María, como si todavía la adusta lengua castellana no se acostumbrara a estos primores y encantos métricos. </p>
+                
+                        <p>Sin embargo, de tiempo atrás las intenciones líricas del castellano venían ensayando salidas aventureras. Había canciones en árabe o en hebreo (las muwachahas) que admitían, hacia el final, y a modo de lujo, palabras y aun frases enteras en romance (las jarchas). Se asegura que esta singularidad comenzó a principios del siglo X, pero la mayoría de estas canciones data de los siglos XI y XII, hay unas tres en el siglo XIII, es decir, en tiempos de Alfonso El Sabio, y aún aparece alguna en pleno siglo XIV, sin duda manifestación artificial de arcaísmo.</p>
+                
+                        <p>9. Echa a andar la lengua española. A la etapa arcaica sucede la prosa de Alfonso El Sabio. El español medieval se acerca al humanismo (siglo XV), y aparece el español llamado por los filólogos «preclásico». De 1525 en adelante, entramos en el Siglo de Oro, y la gran expansión imperial de España se refleja en la nueva musculatura de la lengua. El español ha llegado a ser lengua universal, y se permite las audacias barrocas (gongorismo, conceptismo). Y nos asomamos a América.</p>
+                
+                        <p>10. Como resultado de emigraciones y conquistas, la lengua española —además de hablarse en la península— se habla hoy en nuestras Américas continentales e insulares, en las Filipinas y en las Canarias, en regiones de África, Turquía y Grecia, y en el sudoeste de los Estados Unidos, que antes fue región hispanomexicana.</p>
+                
+                        <h1 class="verdeP chapter-title">4. América y México</h1>
+                
+                        <p>1. Acercándonos a lo nuestro, y acéptese o no la hipótesis del «andalucismo americano», conviene recordar estos hechos: 1) la proporción de andaluces, extremeños y murcianos que pasaron a la conquista de América parece haber sido de un 50 por ciento; 2) Sevilla y Cádiz monopolizaron durante los dos primeros siglos el trato y comercio con América o, como se decía entonces, con las Indias; 3) en el siglo XVI acontece una intensa transformación fonética en la lengua peninsular. El español que se hablaba entonces es más o menos el que llevaron a Oriente los sefarditas expulsados de España. Pero esta lengua se estancó entre los judeo-españoles, y allá conserva hasta nuestros días abundantes formas anticuadas. En América, al contrario, la transformación se acentuó de la manera que todos conocemos.</p>
+                
+                        <p>2. En el grupo hispanoamericano, se dibujan con mayor o menor aproximación cinco zonas lingüísticas: 1) una zona de Estados Unidos, la meseta mexicana y parte de Centroamérica; 2) costa mexicana del Golfo, parte de Centroamérica, Las Antillas, Venezuela y una faja del litoral colombiano; 3) el resto de Colombia, Ecuador, Perú y Bolivia; 4) la zona rioplatense, con el Paraguay por centro, y 5) Argentina y Chile. Téngase en cuenta que este trazo es todavía muy indeciso. El verdadero mapa lingüístico de nuestras Américas está todavía por hacer.</p>
+                
+                        <p>3. El principio de economía de Fermat es tan válido en física como en fisiología y en psicología. Desde luego, este principio tampoco puede ser ajeno a las evoluciones lingüísticas. Tal principio permite asegurar desde ahora que el español del futuro evolucionará hacia el ahorro de esfuerzo. Acaso acabe por imponerse el modo de hablar hispanoamericano. Este modo de hablar se considera sumariamente como el «andalucismo de América». Pero procede más bien de los vulgarismos y plebeyismos comunes a la soldadesca peninsular reclutada para la conquista. Desde luego, hay vastas regiones de España que confunden, como América, la z o la c suave con la s, y donde espontáneamente se pronuncia la y en vez de la ll castiza, la cual se aprende artificialmente a pronunciar en las escuelas. Si en efecto la evolución se encaminase por la línea de la economía o como didad, el término extremo pudiera llegar a ser el «antillano», que, por huir los tropiezos de las consonantes, se deshace a veces en un verdadero flujo de vocales. (Recuérdese el juego verbal llamado precisamente «fuga de consonantes».) Si así fuere, acontecería algo semejante a lo que aconteció cuando aparecieron las lenguas romances, que poco a poco tomaron el sitio de la lengua madre latina. Las hijas americanas estarían entonces llamadas a recoger la deslumbrante y honrosa herencia peninsular, pues hay un paralelismo entre la latinización de España y la hispanización de América. En estos casos, no es indiferente en manera alguna la situación que ocupan los pueblos en el mundo. La decadencia o el florecimiento políticos determinan decadencias o florecimientos lingüísticos. No sabemos lo que el porvenir nos depara.</p>
+                        <p>Por supuesto, esta evolución, si llega a acontecer, todavía requerirá algunos siglos, y más de los que requirió la transformación del latín en romance, pues los elementos de comunicación son hoy mil veces más activos y eficaces que entonces, así como los recursos de fijación por medio de la cultura lingüística. Además España e Hispanoamérica hablan por suerte la misma lengua, y la evolución posible abarcaría a ambas, no habrá una verdadera separación como entre el latín y los romances.</p>
+                
+                        <p>4. En México hay cuatro zonas lingüísticas que se distinguen fácilmente: 1) el norte de la República, no tan uniforme como parece; 2) la altiplanicie central, dominada por la ciudad de México que le imprime su carácter, como Castilla lo imprime a España; 3) las «tierras calientes» de la costa oriental, sobre todo Veracruz y Tabasco; 4) la península de Yucatán, cuyas características comienzan en el estado de Chiapas y se alargan hacia Centroamérica.</p>
+                
+                        <p>5. Sin pretender en modo alguno agotar el tema, que requiere estudios especiales, sean a título de ejemplo unas cuantas peculiaridades mexicanas. De una manera general, se advierten en nuestra pronunciación las tendencias a suavizar la j, haciéndola más delantera o acercándola un poco a la h inglesa; a prolongar un poco la s, no encorvando la lengua hacia arriba como en España, sino manteniéndola plana, al modo de la s francesa; singularidad de la ciudad de México sobre todo, que ha hecho decir a un dominicano: «Esto es un mar de eses, del cual emerge uno que otro sonido»; lo que recuerda un poco la pronunciación guipuzcoana, donde al «cocido» le llaman «loss cossidoss», plural que aumenta la extrañeza. También se advierte la inclinación a convertir la ll y la y en g sonora francesa, por las regiones de Puebla y Orizaba y quizá otras, como se hace en la Argentina, apretando las consonantes, al revés de lo que pasa en Veracruz o en las Antillas, de modo que aquí se da una «fuga de vocales». Nuestro gran poeta Luis G. Urbina solía saludar a sus amigos con esta frase: «¿Cóm t’ va viejcit?». También se tiende a articular con exceso las pronunciaciones difíciles: exactitud en lugar de esatitú que generalmente se permite el pueblo español. A veces este escrúpulo llega a excesos que hacen sonreír un poco a los españoles ante los turistas de nuestro país. (Esta exageración del cultismo puede relacionarse con cierto alambicamiento en las expresiones: «No pude localizar a Fulano»: en vez de encontrarlo o dar con él.) En cuanto al vocabulario, naturalmente influyen los estratos de las distintas lenguas indígenas. Y quedan, en el habla culta, formas anticuadas como «fierro» por «hierro», sin contar las que se conservan en el campo y entre la gente humilde, como «truje» por «traje», «priesa» por «prisa» o «mesmo» por «mismo»: todo ello, supervivencias del siglo XVI en que por primera vez nos visitó la lengua española. La influencia predominante de la cultura francesa en cierta época trae una contribución de galicismos, no sólo a México, sino a toda Hispanoamérica («capitoso», por «embriagador» en ciertos poetas del Modernismo): y hoy se deslizan numerosos anglicismos en México por la vecindad con los Estados Unidos y las mutuas relaciones cada día más estrechas de la economía, la industria, los deportes. Nótese que la misma Intervención Francesa dejó residuos entre nosotros («mariachi» —música para la boda o mariage— y, hasta hace varios lustros, «el versa», como se llamaba en los restaurantes capitalinos de lujo al que servía el café). Y adviértase que aun las cartas o minutas de los restaurantes contribuyen a la introducción de extranjerismos. En cuanto a las construcciones, la variedad es mucha, pero, en suma, el mexicano no tiene que vencer demasiadas resistencias para conformarse con el ideal general de la lengua. No tenemos voseo, sino que somos región de tuteo. Y ya en Chiapas, por ejemplo, se encuentran algunas formas verbales típicas de la América del Sur, como «sentate», por «siéntate», etcétera. Algunos verbos transitivos y algunos neutros se usan impropiamente con el pronombre se (ya haciéndolos dativos éticos, o ya reflexivos, como les llama la gramática): «se raptó a una mujer», «el ganado se abreva», en vez de «raptó» y «abreva», sin el se.</p>
+                        <p>Los falsos cultismos, los alambicamientos de expresión y los barbarismos se perciben ahora más que antes entre la gente muy diversa y de muy distintas clases y niveles que recluta la radio.Hay ciertas tendencias estilísticas propias, como en todas partes, y una muy peculiar es el empleo cariñoso de los apodos que designan defectos o mutilaciones de la persona: «¿Qué me cuentas, cojito?» «¿Qué pasa, tuertito?» El uso y abuso del diminutivo es característico: un «ratito», un «ratitito», «tantito», «merito», «lejitos».Se abusa mucho de qué en las preguntas «¿Qué mañana estarás en tu casa?» en vez de: «¿Estarás mañana en tu casa?». Se usa con frecuencia el hasta al revés: «Estaré en casa hasta las once», cuando se ha querido decir: «No estaré en casa hasta las once, pues antes andaré en negocios por la calle». Hay torpeza en algunos empleos del en: «Te veré en la tarde». En vez de «por la tarde», o «a la tarde», etcétera.</p>
+                
+                        <p>Así como en España, algunos tienen el abominable vicio de salpicar las frases con vaciedades como «¿me entiende Ud.?», «¿verdad?» y otras al mismo tenor («Anoche ¿verdad?, estaba yo cenando, ¿me entiende Ud.?, cuando se oyó un tiro»), así en México padecemos el abominable vicio de meter por dondequiera en las frases el estribillo «este», sin duda para cubrir momentáneos oscurecimientos mentales. El resultado es una suerte de insoportable tartamudeo psicológico: «Anoche, este, a la hora de cenar, este, se me ocurrió, este, que hoy podríamos tratar nuestro asunto».</p>
+                
+                        <p>Y una condición ya más social que lingüística está en el deseo predominante de hablar en medio tono y sin levantar mucho la voz. El español peninsular habla generalmente en voz más alta y, comparada con la nuestra, algo imperiosa en apariencia, lo que desconcierta un poco a los mexicanos cuando van por primera vez a España.</p>
+                
+                        <p>Ya se ve que la observación anterior no es una censura, pero aun las censuras que arriba quedan mencionadas no significan que todo sea error en la manera de hablar de los mexicanos, la cual, por lo contrario, ofrece manifiestos encantos y atractivos como lo reconocen propios y extraños: así la conservación de ciertos términos castizos y legítimos que en España van cayendo en desuso («angosto» por «estrecho», como allá dicen casi siempre); la conservación de ciertos sentidos propios que en España se han pervertido (allá dicen «hábil» para decir «bribón»); la tendencia natural a la rotundidad de las frases y su construcción coherente, en vez de las frases que empiezan por dondequiera y acaban de cualquier modo, vicios que en otras partes se advierten con alguna frecuencia; la manifiesta pulcritud de algunos usos en labios plebeyos (aquí nadie dice «me se olvidó»); y un no sé qué de la antigua cortesía nacional que ha logrado salvarse a despecho de las violentas transformaciones, etc. A esto pudiéramos fácilmente añadir otras condiciones recomendables en la lengua de los mexicanos, pero ello nos llevaría muy lejos.</p>
+                
+                        <p>Dejamos fuera de este rápido análisis muchísimas otras peculiaridades secundarias o regionales que han sido objeto de abundantes monografías. Se ha dicho que la conquista lingüística de México no ha terminado aún.</p>
+                
+                        <p>6. Por toda España y desde el Bravo hasta Patagonia —las zonas por excelencia de la lengua española— se da naturalmente, como sucede en otras lenguas, el duelo entre el «academismo» por una parte, o tendencia a seleccionar, sobre la masa común de la lengua, lo que parece más recomendable y propio de la gente educada, y por otra parte, el «popularismo» o deseo de aceptar cuanto se dice, sin calificarlo ni someterlo a censura. Este duelo se da en mayor o menor grado y aparece cruzado de ciertas corrientes transversales. Así, se creería al pronto que en España predomina el academismo en la lengua común, cuando lo cierto es que, en algunas clases sociales de Hispanoamérica, muchos modos peninsulares parecen plebeyos, y que estas clases hispanoamericanas exageran su esfuerzo por hablar con decencia hasta el alambicamiento (ya lo observamos antes de paso), así como también se resisten más al neologismo que el público y el lector españoles. ¿Acaso, como se ha afirmado, se siente América menos dueña de la lengua que España? Esta afirmación es algo ligera y apresurada, algo sumaria aunque seductora a primera vista.</p>
+                
+                        <p>La Academia Española, a través de su órgano que es el Diccionario, procede con justa cautela ante neologismos, regionalismos y americanismos, y en cambio, como el Diccionario es obra acumulada de varias generaciones, en él se conservan inconscientemente términos ya incomprensibles o muy anticuados. Ante esta actitud, se alza la de muchas autoridades que ya no soportan un Diccionario antológico, sino que desean un Diccionario con las puertas abiertas de par en par a cuanto se dice y se habla. Y lo que se aplica al léxico en los diccionarios, puede aplicarse a las morfologías, la pronunciación, la sintaxis.</p>
+                
+                        <p>Entre uno y otro extremo hay que buscar un cuerdo equilibrio, con miras siempre a respetar la unidad, la base idiomática de la lengua. Así lo reconoce la Academia Española, que ya en su Diccionario Manual da un paso prudente hacia la transacción. La nueva edición de su Diccionario oficial muestra en tal sentido un notable progreso, y útilmente ha emprendido trabajos lexicográficos de suma importancia que poco a poco han de publicarse.</p>
+                
+                        <p>Este género de problemas que el físico llama «problemas del equilibrio dinámico o equilibrio en movimiento», más que asunto de teoría y doctrina son asunto de instinto, sentido práctico, tacto y buen gusto.</p>
+                
+                        <p>Aquí sucede lo que con las Constituciones democráticas: que el pueblo soberano siempre tiene derecho a modificarlas o a cambiarlas por otras, pero si lo hace todos los días nunca vivirá conforme a una política civilizada. </p>
+                
+                
+                
+                         <hr class="line-separator line-orange" />
+                    
+                    
+                </div>
+            </div> 
+                
+            
+             <div class="slides slide">
+                 <h2 class="section-title verde">El deslinde<br><span class="verdeP oswald-light">(I. Vocabulario y programa)</span></h2>
+                   <h1 class="verdeP chapter-title">Literatura en pureza y literatura ancilar</h1>
+                        
+                        <div class="content-text">
+                        <p class="first-paragraph">Todos admiten que la literatura es un ejercicio mental que se reduce a: a) una manera de expresar b) asuntos de cierta índole. Sin cierta expresión no hay literatura, sino materiales para la literatura. Sin cierta índole de asuntos no hay literatura en pureza, sino literatura aplicada a asuntos ajenos, literatura como servicio o ancilar. En el primer caso —drama, novela o poema— la expresión agota en sí misma su objeto. En el segundo —historia con aderezo retórico, ciencia en forma amena, filosofía en bombonera, sermón u homilía religiosa— la expresión literaria sirve de vehículo a un contenido y a un fin no literarios. </p>
+                        
+                        <p>La manera de expresión aparece determinada por la intención y por el asunto de la obra. La intención es una postura, o mejor un rumbo psicológico. El asunto, para la literatura propiamente tal, se refiere a la experiencia pura, a la general experiencia humana; y para la no-literatura, según el caso, a conocimientos especiales (más o menos: tópica común, o tópica específica en Aristóteles). La literatura expresa al hombre en cuanto es humano.</p>
+                        
+                        <p>La no-literatura, en cuanto es teólogo, filósofo, dentista, historiador, estadista, político, técnico, etcétera.</p>
+                        
+                        <p>Se han deslizado aquí dos conceptos que requieren cierta aclaración: el concepto de lo humano y el de lo puro en la literatura.</p>
+                        
+                        <h1 class="verdeP chapter-title">Aclaración sobre lo humano</h1>
+                
+                        <p>El filósofo ha puesto en circulación la metáfora: “deshumanización del arte”, para describir de un rasgo magistral ciertos caracteres de la estética contemporánea. El recuerdo de esta brillante fórmula no debe preocuparnos ni confundimos. Hemos dicho que, a diferencia de la no-literatura, la literatura recoge la experiencia pura de lo humano. No hay contradicción con lo “deshumano” de que habla Ortega y Gasset. En el sentido que él da a la palabra, la literatura puede aparecer deshumanizada; no por eso pierde la calidad de puramente humana que, en otro sentido, le asignamos. Todo está en el valor convencional que se atribuye a las denominaciones. Para nosotros, lo humano puro se reduce a la experiencia común a todos los hombres, por oposición a la experiencia limitada de ciertos conocimientos específicos: los términos se oponen como el agua que se bebe al agua que se analiza químicamente. Cuando se dice: “deshumanización del arte”, lo deshumano se opone más bien a lo sentimental inmediato o mediocre. El arte llamado deshumano más bien busca la emoción de la inteligencia y de la sensibilidad afinada, y a esto se llamó deshumanización a falta de un equivalente mejor de “desentimentación”. Y hasta pudiera añadirse que tal arte deshumanizado, quintaesenciado en suma, por lo mismo que apela más directamente a la inteligencia o a la sensibilidad excelsa, y procura huir del bajo “chantaje” o fraude sentimental fundado en estímulos biológicos, es más característicamente humano. Y si no se le llamó “inhumano”, es porque este término envuelve precisamente connotaciones sentimentales, en tanto que “deshumano” evoca una idea ajena al plano sentimental. Véase cómo todo depende del valor relativo que se asigne a las denominaciones: en cierto sentido, el hombre no puede hacer nada deshumano ni inhumano, pero sí lo puede, y a veces es lo único que puede, en otro sentido. El crimen es inhumano, pero es también humano. Es inhumano el juez que sentencia equivocadamente, pero también errar es de humanos. Es deshumano considerar, con De Quincey, el asesinato como una de las bellas artes, pero es un tipo de humorismo humano. Para Bergson, lo cómico se define por una suspensión voluntaria de la simpatía, y esta nota cómica cubre — de modo más o menos visible— buena parte de la estética deshumanizada. El resto lo cubre la nota intelectual, que lleva también un sabor de crueldad oculta. Es deshumano que el poeta se entregue a jugar con las palabras, prescindiendo de la naturaleza sentimental de los hechos que mienta; pero, al mismo tiempo, es humano. La especialización exacerbada en el puro placer verbal —extremo agudo del deleite técnico— no por ser extrema es menos humana. Y en cuanto significa ya la expresión de una experiencia específica, es la orilla por donde la función literaria se desvirtúa en función de mera ingeniosidad lingüística.</p>
+                
+                        <p>Desde luego, las especies que maneja la no-literatura, así sean las matemáticas, son tan humanas como las que la literatura maneja; pero, además son especiales. No brotan del hombre desnudo, o en su esencial naturaleza de hombre, sino del hombre revestido de conocimientos determinados, aunque estos no lleguen al “saber crítico”. La intención de la obra, en uno y en otro caso, es diferente.</p>
+                
+                        <p>Todo esto se reduce a decir: 1º Que lo humano es una noción antropológica de que el hombre, por definición, no puede escapar; y lo “deshumano” es una denominación convencional para cierta modalidad de lo humano. 2º Que lo humano abarca tanto la experiencia pura como la específica, pero en la primera radica la literatura y en la segunda la no-literatura. </p>
+                 
+                        <h1 class="verdeP chapter-title">Aclaración sobre lo puro</h1>
+                
+                
+                        <p>Hemos hablado de literatura en pureza y de literatura ancilar. La literatura en pureza no debe confundirse con la tan traída y llevada noción de “poesía pura”. Ante todo, porque la poesía solo es una parte de la literatura; en seguida, porque la poesía pura solo es una parte de la poesía: una cumbre si se quiere, pero no toda la montaña. Ápice heroico de la lírica, la poesía pura ni siquiera pudo ser definida con precisión, lo cual en nada merma la autenticidad del fenómeno. Sus teóricos casi acaban por decirnos que es como una forma neumática, como un choque eléctrico tan intenso como vacío. Tales descripciones recuerdan singularmente aquel callejón sin salida de los tratadistas de otro siglo: el hermoso “no sé qué” de Feijoo.</p>
+                
+                
+                        <p>Subrepticiamente, los teóricos de la poesía pura parecen suavemente empujados hacia un propósito preceptivo. Quien los lea de prisa, se figurará que intentan imponer una norma sobre lo que debe ser la poesía, puesto que dibujan la forma poética que consideran como la más excelsa. También cuando Ortega y Gasset dio testimonio de cierta evolución del arte, algunos se figuraron indebidamente que preconizaba el arte deshumano. La sola cautela ante cualquiera invasión preceptiva bastaría para precavernos aquí contra un concepto de la pureza que no acepta la literatura tal como es sino como algunos suponen que debiera ser. Pues aquí no hacemos preceptiva, sino teoría.</p>
+                 
+                        <p>Por otra parte, si nuestro análisis se limitara a la poesía pura, nos quedaría en la probeta una sola gotita de agua, diáfana y radiosa, pero insuficiente para las abundantes manipulaciones a que hemos de entregarnos. Tenemos, pues, que explicar nuestra noción, nada comprometedora, de la literatura en pureza. Esto nos conduce a una visión de lo literario más extensa todavía que la misma literatura. </p>
+                
+                
+                         <h1 class="verdeP chapter-title">Lo literario y la literatura</h1>
+                
+                        <p>Lo literario es un ejercicio de la mente anterior, en principio, a la literatura. Puede o no cristalizar en literatura. El mismo viento puede hinchar varias velas: ya empuja la barca de la verdadera obra literaria, ya la de otras barcas, o bien se mantiene en un estado atmosférico y abstracto. No solo los literatos, no solo los creadores no literarios: toda mente humana opera literariamente sin saberlo. Todos disfrutan de esta atmósfera. Cuando ella precipita en literatura, tenemos la literatura en pureza, cualesquiera sean los acarreos extraños que esta precipitación recoja a su paso. Cuando el viento empuja otras barcas, cuando lo literario se vierte sobre otras corrientes del espíritu, tenemos la literatura ancilar. Este proceso ancilar de la literatura queda sumergido a su vez en un proceso más amplio: la función ancilar, la cual puede ser literaria o no literaria. Tal es la sencilla imagen de la literatura en pureza.</p>
+                        
+                        <p>Para apreciarla, y antes de confrontar la literatura con la no-literatura, tenemos que emprender una decantación previa que separe el líquido del depósito. Nuestro objeto será reconocer el líquido como tal líquido y el depósito como tal depósito, pero en manera alguna negar el derecho, y menos la existencia, de las distintas mezclas.</p>
+                
+
+                         <hr class="line-separator line-orange" />
+                    
+                    
+                </div>
+            </div> 
+            
+               <div class="slides slide">
+                 <h2 class="section-title verde">Anacorajes</h2>
+                   <h1 class="verdeP chapter-title">Palinodia de polvo</h1>
+                        
+                        <div class="content-text">
+                        <p class="first-paragraph"> ¿ ES ESTA la región más transparente del aire? ¿Qué habéis hecho, entonces, de mi alto valle metafísico? ¿Por qué se empaña, por qué se amarillece? Corren sobre él como fuegos fatuos los remolinillos de tierra. Caen sobre él los mantos de sepia, que roban profundidad al paisaje y precipitan en un solo plano espectral lejanías y cercanías, dando a sus rasgos y colores la irrealidad de una calcomanía grotesca, de una estampa vieja artificial, de una hoja prematuramente marchita.</p>
+                        
+                        <p>Mordemos con asco las arenillas. Y el polvo se agarra en la garganta, nos tapa la respiración con las manos. Quiere asfixiarnos y quiere estrangularnos. Subterráneos alaridos llegan solapados en la polvareda, que debajo de su manta al rey mata. Llegan descargas invisibles, ataque artero y sin defensa; lenta dinamita microbiana; átomos en sublevación y en despecho contra toda forma organizada; la energía supernumeraria de la creación resentida de saberse inútil; venganza y venganza del polvo, lo más viejo del mundo. Último estado de la materia, que nació entre la bendición de las aguas y —a través de la viscosidad de la vida— se reduce primero a la estaturaria mineral, para estallar finalmente en esta disgregación diminuta de todo lo que existe. Microscopía de las cosas, camino de la nada; aniquilamiento sin gloria; desmoronamiento de inercias, «entropía»; venganza y venganza del polvo, los más bajos del mundo.</p>
+                        
+                        <p>¡Oh desecadores de lagos, taladores de bosques! ¡Cercenadores de pulmones, rompedores de espejos mágicos! Y cuando las montañas de andesita se vengan abajo, en el derrumbe paulatino del circo que nos guarece y ampara, veréis cómo, sorbido en el negro embudo giratorio, tromba de basura, nuestro valle mismo desaparece. Cansado el desierto de la injuria de las ciudades; cansado de la planta humana, que urbaniza por donde pasa, apretado el polvo contra el suelo; cansado de esperar por siglos de siglos, he aquí: arroja contra las graciosas flores de piedra, contra las moradas y las calles, contra los jardines y las torres, las nefastas caballerías de Atila, la ligera tropa salvaje de grises y amarillas pezuñas. Venganza y venganza del polvo. Planeta condenado al desierto, la onda musulmana de la tolvanera se apercibe a barrer tus rastros.</p>
+                        
+                        <p>Y cuando ya seamos hormigas —el estado perfecto— discurriremos por las avenidas de conos hechos de briznas y de tamo, orgullosos de acumular los tristes residuos y pelusas; incapaces de la unidad, sumandos huérfanos de la suma; incapaces del individuo, incapaces de arte y de espíritu —que solo se dieron entre las repúblicas más insolentes, cuya voz ya apenas se escucha, que la gloria es una fatiga tejida de polvo y de sol. ¡Porvenir menguado! ¡Polvo y sopor! No te engañes, gente que funda en subsuelo blando, donde las casas se hunden, se cuartean los muros y se descascan las fachadas. Ríndense uno a uno tus monumentos. Tu vate, hecho polvo, no podrá sonar su clarín. Tus iglesias, barcos en resaca, la plomada perdida, enseñan ladeadas las cruces. ¡Oh valle, eres mar de parsimonioso vaivén! La medida de tu onda escapa a las generaciones. ¡Oh figura de los castigos bíblicos, te hundes y le barres! «Cien pueblos apedrearon este valle», dice tu poeta.</p>
+                            
+                        <p>Pasen y compren: todo está cuidadosamente envuelto en polvo. La catástrofe geológica se espera jugando: origen del arte, que es un hacer burlas con la muerte. Nápoles y México suciedad y canción, decía Caruso. Tierras de disgregación volcánica, hijas del fuego, madres de la ceniza. La pipa de lava es el compendio. Un Odiseo terreno, surcado de cicatrices, fuma en ella su filosofía disolvente. Stevenson se confiesa un día, horrorizado, que toda materia produce contaminación pulverulenta, que todo se liga por suciedad. ¿Cuál sería, oh Ruskin, la verdadera «ética del polvo»? En el polvo se nace, en él se muere. El polvo es el alfa y el omega. ¿Y si fuera el verdadero dios? Acaso el polvo sea el tiempo mismo, sustentáculo de la conciencia. Acaso el corpúsculo material se confunda con el instante. De aquí las aporías de Zenón, que acaba negando el movimiento, engaño del móvil montado en una trayectoria, Aquiles de alígeras plantas que jadea en pos de la tortuga. De aquí la exasperación de Fausto, entre cuyos dedos se escurre el latido de felicidad: «Detente. ¡Eras tan bello!». Polvo de instantáneas que la mente teje en una ilusión de continuidad, como la que urde el cinematógrafo. Por la ley del menor esfuerzo —el ahorro de energía, de Fermat— el ser percibe por unidades, creándose para sí aquella «aritmética biológica» de que habla Charles Henry, aquella noción de los números cardinales en que reposa la misma teología de santo Tomás. El borrón de puntos estáticos sucesivos deposita, en los posos del alma, la ilusión del fluir bergsoniano. Las mónadas irreducibles de Leibniz se traban como átomos ganchudos. La filosofía natural se debate en el conflicto de lo continuo y lo discontinuo, de la física ondulatoria, enamorada de su éter-caballo, y la física corpuscular o radiante, sólo atenta al átomo-jinete. El polvo ¿cabalga en la onda o es la onda? El cálculo infinitesimal mide el chorro del tiempo, el cálculo de los cuantos clava sus tachuelas inmóviles. ¿La síntesis? La continuidad, dice Einstein, es una estructura del espacio, es un «campo» a lo Faraday. La unidad es foco energético, fenómeno, átomo, grano tal vez de polvo. Heráclito, maestro del flujo, se deja medir a palmos por Demócrito, el captador de arenas. El río, diría Góngora, se resuelve en un rosario de cuentas.</p>
+
+                        <p>¿Por qué no imaginar a Demócrito, en aquella hora de la mañana, cuando hablan las Musas según pretendían los poetas, reclinado sobre sus estudios, la frente en la mano, pasajeramente absorto, en uno de aquellos bostezos de la atención que el estro aprovecha para alancear la conciencia con partículas de la realidad circundante, metralla del polvo del mundo, herida cósmica que acaso alimenta las ideas? Un rayo de sol, tibio todavía de amanecer, cruza la estancia como una bandera de luz, como una vela fantasmal de navío. Red vibratoria que capta, en su curso, la vida invisible del espacio, deja ver, a los ojos del filósofo atónito, todo ese enjambre de polvillo que llena el aire. Una zarabanda de puntos luminosos va y viene, como cardumen azorado que en vano pretende escapar a la redada de luz. El filósofo hunde la mano en el sol, la agita levemente y organiza torbellinos de polvo. La intuición estalla: nace en su mente la figura del átomo material, que no existiría sin el polvo. El átomo es el último término de la divisibilidad en la materia. En la intención al menos, porque cada vez admite divisores más íntimos. Sin el átomo, la materia sería destrozable y no divisible. Todo conjunto es una suma, un acuerdo de unidades. Por donde unidad y átomo y polvo vuelven a ser la misma cosa.</p>
+                
+                        <p>En sus cuadros provisionales, la ciencia no ha concedido aún la dignidad que le corresponde al estado pulverulento, junto al gaseoso, al líquido y al sólido. Tiene, sin duda, propiedades características, como su aptitud para los sistemas dispersos o coloidales —donde acaso nace la vida—, y como también —tal vez por despliegue de superficie— su disposición para la catálisis, esta misteriosa influencia de la materia que tanto se parece ya a la guardia vigilante de un espíritu ordenador. ¿Será que el polvo pretende, además, ser espíritu? ¿Y si fuera el verdadero dios?</p>
+                
+                        
+
+                         <hr class="line-separator line-orange" />
+                    
+                    
+                </div>
+            </div> 
+                
+                
+                <div class="slides slide">
+                 <h2 class="section-title verde">Notas</h2>
+                   <h1 class="verdeP chapter-title">Los verdes</h1>
+                        
+                        <div class="content-text">
+                        <p class="first-paragraph">No soy yo el único que colecciona sus mitos. Eran una vez dos mujeres geniales: una tenía la cabeza poética, otra tenía la cabeza científica. Aquella era grande y vasta como diosa antigua. Esta, pequeñita y justa como la humanidad de mañana. Aquella avanzaba como un río; esta, sacudía como un toque eléctrico.</p>
+                        
+                        <p>Hispanoamericanas medio desterradas en Francia, anidaban en Fontainebleau, en un hotelito frío con vistas al verde mojado y al gris de lluvia. Dios llovía y ellas estaban solas. De su matrimonio espiritual nació una cría de fantasmas. Como eran mujeres, fueron madres. Pronto se acompañaron, por compensación subconsciente, de unos niños extraños: eran dos hombrecitos y dos mujercitas.Estos niños se llamaron los Verdes, porque ellas los imaginaban siempre vestidos de verde. Los varones eran Pepito y Enriquito. Las niñas, Trinita y Suzana. Tenían un ayo y preceptor, lo bastante candoroso, honesto y hasta inteligente para poder educarlos, instruirlos y divertirlos. Ya se entiende, pues, que el ayo era un norteamericano de raza alemana. Se llamaba míster Hartmann.</p>
+                        
+                        <p>Los Verdes van y vienen en el reino de la fantasía, en el claustro místico de sus madres, y se han hecho allí palacios invisibles. Se quedan en Fontainebleau una temporada, y luego viajan por toda Europa. Sus madres hablan entre sí de las travesuras de los Verdes, se cuentan sus dichos y hechos con una perfecta seriedad. Se sonrojan si se las sorprende en este devaneo delicado.</p>
+                        
+                        <p>Como los Verdes no saben escribir, pintan cartas. Así, cuando andan en la Côte d’Azur, pintan un sol y unos barcos elementales, y esto quiere decir buen tiempo y paseos de playa. Aún no se ha podido descifrar una carta de Enriquito que parece representar unas tenacillas de azúcar y una mano abierta con una M en las palmas.</p>
+                            
+                        <p>Lo más curioso es que estos niños no crecen nunca. No tienen edad: son. Ellos representan los ojos. Ellas: Trinita, la boca; Suzana, la frente. Esto da lugar a toda una psicología en desarrollo. El ojo izquierdo no ve las cosas como el derecho, pero se completan los dos. Entre la frente y la boca hay siempre como un mal entendido. El constante esfuerzo para enseñar a la boca a escoger entre lo que ven los ojos, el candor de la frente, la acometividad de la boca. Y por aquí todo un sistema: una creación entera, una malla que las madres bordan y tejen en su olvido de Fontainebleau, graves Penélopes sin Odiseo que les siembre el hijo corporal.</p>
+
+                       
+
+                         <hr class="line-separator line-orange" />
+                    
+                    
+                </div>
+            </div> 
+                
+                
+                
+                <div class="slides slide">
+                 <h2 class="section-title verde">Calendario</h2>
+                   <h1 class="verdeP chapter-title">Del hilo, al ovillo</h1>
+                        
+                        <div class="content-text">
+                        <p class="first-paragraph">Tenía razones para dudar. Volvió a casa inesperadamente. La casa estaba desierta. En el vestíbulo, una madeja de lana, abandonada, yacía en el suelo; era la lana con que su mujer estaba tejiendo no sé qué, por matar el tiempo… o por tener pretexto de andar siempre con los ojos bajos. Bien lo comprendía él.</p>
+                        
+                        <p>—Todo está muy claro —se dijo—. En la lucha, o lo que sea, la labor ha caído al suelo.<br>Pero la madeja se desenrollaba hacia el pasillo en un infinito hilo de lana azul.</p>
+                        
+                        <p>—Sigamos el hilo —pensó—. Por el hilo se saca el ovillo. </p>
+                        
+                        <p>Y, saltándole el corazón, empuñó el revólver. </p>
+                            
+                        <p>El hilo azul corría por el pasillo, entraba en el comedor, salía después por la otra puerta… </p>
+                            
+                        <p>Y él lo seguía de puntillas, anhelante, guiado en aquel laberinto de dudas y pasiones por el hilo azul. En su conciencia había una sombra impenetrable, cortada por un hilo azul infinito. </p>
+                            
+                        <p>El hilo seguía su camino misterioso. En el otro extremo del hilo —pensaba él— está la ignominia. ¿Tal vez el crimen? Y tenía miedo de sí mismo. </p>
+                            
+                        <p>El hilo atravesaba un salón y, ya agitado por evidentes palpitaciones, se escurría por debajo de la puerta del fondo. </p>
+                            
+                        <p>Y vaciló ante aquella puerta: ¿sería mejor desandar el camino y llevarse a la calle, como robado y a hurto, el secreto de su felicidad? ¿Sería mejor ignorarlo todo? </p>
+                            
+                        <p>El hilo, fiel, le ofrecía el camino de la fuga.<br>Al fin, haciendo un esfuerzo de serenidad, seguro de que el revólver no se dispararía solo en su mano crispada, abrió la puerta… </p>
+                            
+                        <p>Hecho una bailarina rusa, en un verdadero océano de lana azul, sobre el tapiz de la alcoba, luchando con manos y patas, el gato —un precioso gato blanco, verdadera nube de candor— se revolcaba, gozoso. </p>
+                            
+                        <p>Junto al gato, en el sillón habitual, sin una sonrisa, inmóvil, ella —siempre enigmática— lo contemplaba sin verlo. </p>
+
+                       <h1 class="verdeP chapter-title">La melancolía del viajero</h1>
+                            
+                        <p>A veces, los que vuelven de un largo viaje conservan para toda la vida una melancolía secreta, como de querer juntar en un solo sitio los encantos de todas las tierras recorridas.</p>
+                            
+                        <p>La Odisea no nos hace asistir a los últimos días de Ulises. Cuando Ulises hubo recobrado sus playas y arrojado de su palacio a los pretendientes, dando así término a la gran empresa de su vida, ¿quién duda que se abrió a sus ojos una melancólica perspectiva de ocios y recuerdos, en las noches inacabables de Ítaca, junto a la afanosa rueca de Penélope? Se puede huir a la seducción de las sirenas, amarrándose bárbaramente al mástil. Pero ¿cómo olvidar después las canciones de las sirenas? Apenas ha reposado Ulises, y ya anuncia a su fiel Penélope que nuevos trabajos le reclaman: “Los dioses —le dice— me mandan recorrer todavía muchas ciudades, hasta que no encuentre la tierra de los hombres que ignoran el mar y que cocinan sin sal sus alimentos”. La larga ausencia y los trabajos habían quebrantado seguramente la gallardía de Ulises. Penélope tampoco era ya la que él había dejado, porque, con ser plaza inexpugnable, no había podido resistir al asalto de los años, comprobando la sentencia de Calderón: </p>
+                            
+                        <p class="italic-text">que a lo fácil del tiempo<br>no hay conquista difícil. </p>
+                            
+                        <p>Había cenizas en las inextintas ascuas del hogar. Ya no sabía Ulises qué desear más —como todo el que ha recorrido mucho mundo—: si el reposo o las aventuras. Hombre que ha perdido su centro, casi nunca vuelve a recobrarlo. ¡Ay! Los que viajan por mar y tierra han de tener un corazón hecho a todos los embates de la alegría y el duelo, y un ánimo de renunciamiento casi de santos. Temen regresar a sus playas, y las desean. No encuentran a la vuelta lo que habían dejado a la partida. Ya no saben dónde ha quedado la tierra y la casa que soñaban. En vano los consuela el poeta: </p>
+                            
+                        <p class="italic-text">Heureux qui, comme Ulysse, a fait un beau voyage,<br>ou comme celui-là qui conquit la Toison,<br>et puis est retourné, plein d’usage et raison,<br>vivre entre ses parents le reste de son âge. </p>
+                            
+                        <p>Ulises tiene que seguir viajando, como piedra condenada a rodar. Él cuenta que los dioses lo mandan… Algunos hemos creído siempre que ya, Ulises, lo único que quiere es volver a la pecadora Isla de las Canciones. </p>
+
+                         <hr class="line-separator line-orange" />
+                    
+                    
+                </div>
+            </div> 
+                
+                
+                <div class="slides slide">
+                 <h2 class="section-title verde">Árbol de pólvora</h2>
+                   <h1 class="verdeP chapter-title">Campeona</h1>
+                        
+                        <div class="content-text">
+                        <p class="first-paragraph">Cuando el Presidente del Club de Natación y los Síndicos de París —chisteras, abultados abdómenes, bandas tricolores sobre el pecho— vieron acercarse a la triunfadora, prorrumpieron en aplausos y entusiastas exclamaciones: </p>
+                        
+                        <p>—¡Si parece un delfín!<br>—Querrá usted decir una sirena.<br>—No, una náyade.<br>—¡Una oceánida, una “oceánida ojiverde”, como dijo el poeta!</p>
+                        
+                        <p>La triunfadora, francesita comestible que hablaba con dejo italiano para más silbar las sibilantes y mejor suspenderse en un pie sobre las dobles consonantes, comenzó a coquetear:  </p>
+                        
+                        <p>—Non, mais vous m’accablez! Mon Dieu, que je suis confuse! Et une naïade, encore! C’est pas de ma faute, vous savez? Si j’avais sû…! </p>
+                            
+                        <p>Y todo aquello de:<br>—Toque usted; sí, señor. No hay nada postizo. Eso también me lo dio mi madre con lo demás que traje al mundo, etcétera. </p>
+                            
+                        <p>Decline usted sus generales.<br>—¿Aquí, en público?<br>Risas. El Presidente, protector:<br>—Su nombre, su edad… ¿En qué trabaja usted, cuál es su oficio?<br>—Mi oficio es muy modesto, señores. Porque, sin agraviar a nadie, yo, como decimos los del pueblo, soy puta.<br>Pánico. Silencio seguido de rumores.<br>—¿Ha dicho usted…?<br>—Puta.<br>¡…! </p>
+                            
+                        <p>Dominando la estupefacción general, Monsieur Machin, siempre analítico, interroga:<br>—Pero, entonces, delfín o sirena, náyade, oceánida o demonio… sin faldas, ¿quiere usted decirnos cómo, cuándo, dónde adquirió usted esa agilidad y esa gracia en el nadar, esa perfección deportiva, ese dominio extraordinario del… de la… de los… de las…  </p>
+                            
+                        <p>Y la oceánida, cándidamente, le ataja:<br>—C’est que… vous savez? Avant de venir ici je faisais le trottoir à Venise. </p>
+                            
+                            <h1 class="verdeP chapter-title">Venganza literaria</h1>
+                            
+                        <p>Los primeros objetos que descubrieron mis ojos —lámpara ingrata de las dos y media de la mañana, insomnio que sigue a la pesadilla, ganas de aullar, ganas de huir— fueron, olvidados sobre el sillonzote de la chimenea, el gorro de dormir y las antiparras del Maestro.  </p>
+                            
+                        <p>El Maestro se había pasado la noche diluyendo un granito de anís folklórico en cien calderos de agua tibia. El piso estaba encharcado de octosílabos. “Habrá que llamar al encerador”, reflexioné. Y me levanté de un salto, me vestí en un santiamén, y cátame en un dos por tres llamando a la puerta de la Academia: “¿Aquí limpian, fijan y dan esplendor?” </p>
+                            
+                        <p>Tanto ejercicio de frases hechas me dejó como despernancado. El espíritu de asociación verbal me rechinaba en el cuerpo. Los cotarelos me hervían casi en la garganta. Y cruzó dentro de mí —¡qué bien lo recuerdo!— una de esas ideas sin pasaporte que de repente se nos cuelan por la conciencia: la convicción firme, la profética visión de que nunca se acabaría en México el Palacio Legislativo comenzado por el arquitecto Boiry, y que un día, entre silbidos de marina catástrofe, se hundiría en olas de cemento el Palacio de Bellas Artes. Ideas a deshora, pájaros que cruzan de ventana a ventana, sobre la espantada familia congregada en el comedor. </p>
+                            
+                        <p>El instante era propicio. Se abrieron las ponderosas puertas. A los tres años, ya están nuestros muertos en su punto. Podemos pacer tranquilamente en los cementerios. La Academia estaba poblada de poetas cilindristas o cilindreros —reacción contra el cubo— y Modigliani y Picasso, colgados del techo, se balanceaban majestuosamente, como aquel caimán del patio de los Canónigos, Catedral de Sevilla. </p>
+                            
+                        <p>Así, así me las pagarán todos esos del Ángelus, esos del Toque de Queda, esos de las muchachas de la retreta, esos de las virtudes aldeanas, esos del incienso de la parroquia, esos de las tardes de la granja, las veladas de la quinta y hasta Don Catrín El Calavera: poetas pepitos, poetas rotos para decirlo a la mexicana. Traen raídos los traseros del alma y lo andan tapando como pueden, y dicen que es por meditabundos y por pasear manos a la espalda. </p>
+                            
+                        <p>Y los dejé convertidos en papel de moscas, olor de sín-sín, aguaflorida barata, mucílago y panal de América en dulzor de pegajosas pepitorias. ¡Fuchi! </p>
+                            
+                        <h1 class="verdeP chapter-title">La técnica y la imitación<span  class="verdeP oswald-light">(Análisis de un sentimiento confuso)</span></h1>
+                            
+                        <p>Un día, en las Mantequerías Leonesas, admiré la sabiduría de un hombre. Yo, que no sé comprar nada, procuro aprender de los que saben. Mi hombre se acercó a pedir un cuarto de kilo de jamón.</p>
+                            
+                        <p> Por aquí comienza mi asombro: no tengo la menor idea de los pesos ni las dimensiones, de lo que puede ser un metro ni un cuarto de kilo de nada, de nada. A veces quiero pasar por conocedor: se me antoja cualquier golosina por la calle. Entro en la tienda, vacilo. Cuando el vendedor, con su firmeza habitual y su aire terrible, me pregunta de qué clase la quiero, y si ha de ser tanto o tanto más, soy tan miserable como el estudiante sometido a un interrogatorio de exámenes. Ignoro las marcas, las clases, las categorías comerciales de las cosas. Y en cuanto a las proporciones numéricas, mi temperamento es completamente algebraico: intuyo la filosofía de las dimensiones, pero nunca acierto con las cantidades aritméticas: nunca sé decir lo que mide una pared o el número de habitantes de una ciudad. En cambio, pocas veces yerro al apreciar la mayoría o minoría relativa de las cosas, la tendencia a crecer o disminuir, el progreso o la decadencia.</p>
+                            
+                        <p>¿Cuánto, cuánto podrá ser un cuarto de kilo de jamón, y para cuántos puede bastar? Y estudio atentamente la conducta de mi héroe. </p>
+                            
+                        <p>¿Cuánto, cuánto podrá ser un cuarto de kilo de jamón, y para cuántos puede bastar? Y estudio atentamente la conducta de mi héroe.</p>
+                        <p>Pero mi héroe advierte que apenas han comenzado a cortar la pieza y exclama:</p>
+                            
+                        <p>—No lo quiero. Apenas va por la punta. Tiene todavía más grasa que carne. No hay magro. No lo quiero, no. ¿A qué hora irá por la mitad?</p>
+                        <p>—A media tarde más o menos —dice el vendedor sin inmutarse, y como habituado a que le hagan observaciones semejantes.<br>—Pues volveré —dice mi héroe. Y yo creo que, en efecto, volvió a media tarde, y encontró el jamón tal como le convenía, y lo compró y se lo llevó a su casa, y se lo comió.</p>
+                            
+                        <p>Y medito, con verdadero asombro, en esta serie de actos tan sencillos. Y me siento incapaz de haber hecho otro tanto.</p>
+                            
+                        <p>Nótese, en efecto, la cantidad de nociones estáticas y dinámicas que implica la conducta de este comprador maravilloso, espejo de compradores de jamón.</p>
+                            
+                        <p>1. El jamón consta de dos partes (véase la rectificación más adelante): la carne y la grasa.<br>2. La carne es preferible a la grasa.<br>3. Dada la forma geométrica del jamón, y la distribución de sus capas, la grasa es más abundante que la carne hacia la punta, y la carne va siendo más abundante que la grasa a medida que la pieza se va cortando hacia la base.<br>Esta proporción es de una necesidad geométrica seductora, dado el ensanche cónico del jamón. Mucho se podría decir de la elocuencia de este fenómeno.<br>4. En consecuencia de lo anterior, cuando apenas se ha comenzado a cortar (a vender) un jamón, no hay que comprar.</p>
+                            
+                        <p>Hay una relación de tiempo entre el buen estado del jamón y la rapidez de la venta. Esta relación es conocida, empíricamente, por el práctico que corta el jamón. (Y aquí, en mi conciencia, veo girar, engarzados en un mecanismo de relojería, unos relucientes discos de acero, y veo caer en una bandeja de cartón encerado unas rebanadas finísimas como hojas de papel, y apetitosas como hostias evanescentes).</p>
+                            
+                        <p>Me aprendí la lección, y otro día quise yo aplicarla.<br>—¿Cómo?—exclamé con aplomo—. ¿A un conocedor como yo le ofrece usted ese jamón? No lo quiero. Apenas va por la punta. ¿A qué hora irá por la mitad?</p>
+                            
+                        <p>El vendedor aceptó mi reprensión, como si fuera la cosa más justa y merecida del mundo.<br>—Vuelva usted a primera hora de la tarde —me dijo simplemente.</p>
+                            
+                        <p>Cuando volví, ya se había acabado el jamón.<br>Pero si mi fracaso actual fue espantoso, todavía mi fracaso potencial, mi fracaso posible, era más desconcertante y más capaz de aniquilar la moral de un comprador tímido.</p>
+                            
+                        <p>En efecto: por casualidad averigüé más tarde que el jamón no consta de dos partes, sino de tres, y que bien pude haber llegado en el preciso momento en que el corte transversal del jamón revelaba, en vez de dos, tres capas geológicas, y que ante un tercer elemento cuyo valor técnico y palatal yo desconocía por completo, mi espanto no hubiera tenido límite.</p>
+                            
+                        <p>En efecto, averigüé que el jamón, además de grasa y carne, esconde —¡oh traición!— su parte de hueso. Y desde entonces siento, atravesado en la garganta, el hueso posible del jamón. </p>
+
+                         <hr class="line-separator line-orange" />
+                    
+                    
+                </div>
+            </div> 
+            <div class="slides slide"></div>    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+           
+                
+                </div>
+        </div>
+    
+    </div>
+
+<footer>
+   <div class="main-container main-container-flex main-container-home">
+     <p class="brand-palabras">Palabras rodantes</p>
+     <h1 class="brand footer-brand">Comfama</h1>    
+   </div>
+   <div class="copyright"><p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p></div>
+</footer>
+    <script>
+window.createMenu('4');    
+</script>
+</body>
+</html>

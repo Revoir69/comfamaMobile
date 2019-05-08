@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Palabras rodantes</title>
+
+		<!-- estilos -->    
+		<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+		<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+		<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+
+		<!-- acciones -->
+		<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+		<script src="js/jq-sticky-anything.min.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/base.js" type="text/javascript"></script>     
+		<script type="text/javascript" src="js/queryloader2.min.js"></script>
+		<script type="text/javascript">
+			window.addEventListener("DOMContentLoaded", function() {
+				new QueryLoader2(document.querySelector("html"), {
+					barColor: "#fff",
+					backgroundColor: "#000",
+					percentage: true,
+					barHeight: 0,
+					minimumTime: 1000,
+					maxTime: 50000,
+					fadeOutTime: 1000
+				});
+			});
+		</script>
+		
+	</head>
+
+	<style>
+		.menu li:hover{
+			background-color: #91caa7;
+			color: #FFF;
+		}
+
+		.first-paragraph::first-letter{
+			font-size: 5em;
+			line-height: 0;
+			font-family: 'oswaldmedium';
+			color: #006e47;
+		}
+
+		.menu-selected{
+			color: #fff;
+			background-color: #006E48;
+		}
+
+		.line{
+			border: 1px solid #7ba27c;
+			margin-top: 6%;
+			margin-bottom: 30px;
+		}    
+
+		.leerMas {
+			font-family: 'oswaldmedium';
+			font-size: 30px;
+			text-align: center;
+			color: #FFF;
+			margin-left: 24%;
+			padding-top: 3%;
+			text-decoration: none;
+			cursor: pointer;
+			background-image: url(img/btnLect.png);
+			background-repeat: no-repeat;
+			width: 305px;
+			height: 80px;
+			background-image: none;
+		}
+		
+		.leerMas1{
+			background: #006e47;
+		}
+		
+		.resaltado{
+		   color: #006E48;
+			font-size: 38px;
+			background-image: url(img/comillas.png);
+			text-align: center;
+			background-repeat: no-repeat;
+			width: 80%;
+			margin-left: 50px;
+			margin-top: 30px;
+			padding-right: 5px;
+			font-family: 'oswaldregular';
+		}
+		
+		.section-title{
+			font-size: 2em;
+		}
+		
+		.img-fluid{
+			margin: 5% auto;
+            display: block;
+			width: 60%;
+		}
+		.bg_themes1{
+			background-color: #91caa7;
+			background-image: url(img/motivo_3.png);
+		}
+		.chapter-title{
+			font-size: 2em;
+		}
+	</style>
+
+	<body class="bg_themes1">
+		<header>
+			<a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+			<h1 class="brand">Comfama</h1>
+			<img class="botonA" src="img/buttonA.png" alt="boton cambio">
+
+			<div class="slideHeader">
+				<img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+				<img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+				<img class="resetFont" src="img/reset.png" alt="resetear">
+				<br>
+				<img class="blanco" src="img/blanco.png" alt="btn blanco">
+				<img class="morado" src="img/morado.png" alt="btn morado">
+				<img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+			</div>
+		</header>
+		
+		<div class="presentation">
+			<div class="main-container presentation-container">
+				<button id="presentation-close">Cerrar</button>
+				
+				<div class="presentation-scroll">
+					<h1 class="presentation-title">Créditos</h1>
+				   	<p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía</p>
+					<p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+					<p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="global-container">
+			
+			<hr class="line-separator line-title"/>
+			<h1 class="verde main-title">Primero está<br> <span class="verde oswald-light">la soledad</span> </h1>
+			<hr class="line-separator line-title"/>
+			<div class="main-credits">
+				<p>Robert Louis Stevenson</p>
+			</div>
+
+			<img class="img-fluid" src="img/imagenlibro12.png" alt="imagenlibro12">
+				
+			<div class="main-container-flex" id="container-controls">
+			
+				<div class="mobile-menu"></div>
+				
+				<div class="invisibleMenu">
+					<div class="menu"></div>
+				</div>
+				
+				
+				<!--Prólogo-->
+				<div class="content-container">
+					<div class="slides">
+						<h2 class="section-title verde">Prólogo</h2>
+						
+						<div class="content-text">
+						
+							<p class="verdeP chapter-title1">Del amor, el desamor y los amores imposibles en la obra de Darío Jaramillo Agudelo</p>
+
+							<p class="first-paragraph">En la noche del miércoles 24 de mayo de 1989 sucedió una inolvidable velada poética para Medellín y para Colombia. En medio del terror que imponían las bombas del narcoterrorismo y a pesar de que en el estadio Atanasio Girardot el Atlético Nacional disputaba un partido por la Copa Libertadores de América, en el Palacio de Exposiciones se aglomeraban más de diez mil personas para conocer los resultados del concurso convocado por la Casa de Poesía Silva para escoger el mejor verso de amor de la literatura colombiana. Luego del escrutinio de los más de veinte mil votos llegados de todos los rincones del país, el verso ganador, contra todo pronóstico, resultó ser el <em>Poema de amor</em> 1, del poeta antioqueño Darío Jaramillo Agudelo. Ante la euforia del público, y con la aclaración previa de que quien había ganado el concurso era “el otro”, el poeta leyó en voz alta el poema de amor: 
+							</p>
+
+							<p><em>“Ese otro que también me habita,<br>acaso propietario, invasor quizás o exiliado en este cuerpo ajeno<br>o de ambos,<br>ese otro a quien temo e ignoro, felino o ángel,<br>ese otro que está solo siempre que estoy solo, ave o demonio,<br>esa sombra de piedra que ha crecido en mi adentro<br>y en mi<br>afuera,<br>eco o palabra, esa voz que responde cuando me preguntan algo,<br>el dueño de mi embrollo, el pesimista y el melancólico<br>y el<br>inmotivadamente alegre,<br>ese otro,<br>también te ama”. </em> <sup id="ref1">1</sup> </p>
+
+							<p>Darío Jaramillo Agudelo nació en 1947 en Santa Rosa de Osos, tierra de poetas como Porfirio Barba Jacob, Rogelio Echavarría. Estudió con los padres jesuitas en Medellín y luego se graduó de abogado y economista en la Universidad Javeriana de Bogotá. En su vida profesional ha ejercido importantes cargos en la administración pública, pero su reconocimiento deriva de su oficio de escritor.
+							</p>
+
+							<p>En la literatura se pasea con solvencia en prácticamente todos los géneros: poesía, novela, ensayo, libros para niños, antologías y compilaciones. Sin embargo y como escribió en el ensayo <em>Historia de una pasión: “Hubo un día en que supe: era la poesía lo que más me importaba, lo que más importaría en mi vida. La poesía en un sentido más amplio y desaforado, la ebriedad sin tiempo de una boca amada, el aroma de un eucaliptus, el laberinto interno de un reloj de cuarzo, de tu procesador de datos, un atardecer, un gol, un sorbete de curuba, una voz familiar, Mozart, entender una cosa nueva, una crema de ostras, el galope de un caballo, en fin, tantas cosas que son la poesía en su más amplio sentido”.</em> <sup id="ref2">2</sup>
+							</p>
+
+							<p>Luego de regresar de una beca en la Universidad de Iowa, donde fue becario del <em>International Writing Program</em>, Jaramillo Agudelo obtiene, en 1977, el reconocimiento como poeta al ganar el III Concurso de Poesía Eduardo Cote Lamus con el libro <em>Tratado de retórica</em>. En este libro temprano, en el que se detecta ya un profundo sentido poético, se puede palpar una influencia de la poesía norteamericana de la época y un dejo entre irónico y surrealista emparentado con la poesía que escribían sus contemporáneos, generación denominada posteriormente por la crítica, y de manera imprecisa, como la generación sin nombre o generación del desencanto.</p>
+
+							<p>Es en la década de los ochenta del pasado siglo cuando Jaramillo Agudelo encuentra una voz propia, singular y de un profundo contenido poético. Sobre todo, cuando se atreve a reapropiarse de dos temas que parecían proscritos ya de la poesía: el amor y la nostalgia. En efecto, nadando a contracorriente de los ismos de moda como la poesía social, la poesía concreta, el compromiso social y etcétera, etcétera, Darío escribe sobre el más universal, el más cantado y el más difuso de los sentimientos: el amor. De manera simple, sin artilugios, sin rebuscadas metáforas, traduce en palabras el eufórico, el enigmático, el exacto momento del amor.</p>
+
+							<p>En el poema cabe también el correlato, el envés del sentimiento, cual es el desamor. Las dos caras de la moneda: el frenesí y la ausencia. Las palabras se vuelven entonces conjuro: <em>“Te expulso de mí, te exorcizo, te llamo a cada segundo para que salgas de mi alma, para que tu fantasma no me anule. Ah, nuestros momentos de dicha quedan demasiado lejos y ya no me justifican los insomnios de este olvido minucioso”. </em> <sup id="ref3">3</sup> </p>
+
+							<p>El poeta busca tal vez la única salida posible ante la ecuación amor/desamor: la de los amores imposibles. Aquellos que se llevan en silencio, con <em>“el miedo de que noten los otros que por ti me muero”</em>.<sup id="ref4">4</sup> Tal vez son ellos los únicos eternos, los que nunca se expresaron, los que se llevan en sigilo, en la más profunda intimidad: <em>“Amores imposibles que son la soledad acompañada”</em>. <sup id="ref5">5</sup>
+							</p>
+
+							<p>Decíamos también que Darío Jaramillo se atrevió a nombrar la nostalgia, ese sentimiento que parecía erradicado del lenguaje de la modernidad por retrógrado e inútil. Pero recuperar aquello que se evaporó en el tiempo, volver a aquellos días de la infancia, tal vez la única edad donde la felicidad fue posible, revivir con palabras <em>“la intacta materia de otros días”</em> <sup id="ref6">6</sup> como diría Álvaro Mutis, sigue siendo materia poética universal, difícil de administrar, eso sí, por quien no domina con destreza y rigor la palabra poética. <em>“Recuerdo solamente que he olvidado el acento de las más amadas voces/ y que perdí para siempre el olor de las frutas de la infancia/ el sabor exacto del durazno/el aleteo del aire frío entre los pinos, / el entusiasmo de descubrir una nuez que ha caído del nogal”</em>. <sup id="ref7">7</sup> </p>
+
+							<p>Esta breve antología es un abrebocas para conocer a profundidad la vasta, rica y sorprendente obra literaria de Darío Jaramillo Agudelo. A la fecha ha publicado más de doce libros de poesía, nueve novelas, tres libros para niños y ocho trabajos como antólogo y compilador. En el año 2017 recibió el Premio Nacional de Poesía, otorgado por el Ministerio de Cultura de Colombia, y en el 2018 fue galardonado con el prestigioso Premio Internacional de Poesía Federico García Lorca, que entrega la ciudad de Granada, España. </p>
+
+							<p>Si algún joven sentado en el vagón del metro lee alguno de los poemas de esta antología y se estremece; si una joven que espera en la estación halla en alguno de estos versos las esquivas palabras que no encuentra en lo profundo de su alma enamorada, entonces comprendemos que la poesía tiene sentido, que el poeta ha cumplido su misión y que las <em>Palabras Rodantes</em> que publicaron estos poemas se han justificado.</p>
+
+							<p class="text-align-right">Juan Luis Mejía Arango<br>Febrero de 2019</p>
+							
+							
+							<hr class="line-separator line" />
+							<div class="final-notes">
+								<h1>Notas</h1>
+								
+								<p><span class="footnote" id="refe1">1.</span> Los otros poemas finalistas fueron:<em> Ritornelo</em> de León de Greiff, <em>Nocturno III</em> de José Asunción Silva y el soneto <em>Amor</em> de Carlos Castro Saavedra.</p>
+								
+								<p><span class="footnote" id="refe2">2.</span><em>Historia de una pasión.</em> Bogotá, Sota de Bastos, 1997.</p>
+								
+								<p><span class="footnote" id="refe3">3.</span><em>Una noche.</em> Poema incluido en la novela <em>Cartas cruzadas</em>.</p>
+								
+								<p><span class="footnote" id="refe4">4.</span><em>Amores imposibles IV.</em> Tomado del libro <em>Cantar por cantar</em>.</p>
+								
+								<p><span class="footnote" id="refe5">5.</span><em>Amores imposibles</em>, 13. Tomado del libro <em>Cantar por cantar</em>.</p>
+								
+								<p><span class="footnote" id="refe6">6.</span><em>Nocturno</em> de Álvaro Mutis.</p>
+								
+								<p><span class="footnote" id="refe7">7.</span><em>De la nostalgia,1</em>: Tomado del libro <em>Poemas de amor</em>.</p>
+							</div>
+							
+							
+							<img class="img-fluid" src="img/Libro12_Dar%C3%ADoJaramilloAgudelo.png"/>
+							<p class="text-align-center">Darío Jaramillo Agudelo.<br>Fotografía de Nicolás Ordóñez.</p>
+
+							
+							<div class="leerMas leerMas1">¡Comienza tu lectura!</div>
+							
+							<hr class="line-separator line">
+						</div>
+					</div>
+					
+					
+					<!--Cuento-->
+					<div class="slides slide">
+					
+						<!--PARTE I-->
+						<h2 class="section-title verde">Divino amor, amor profano</h2>
+						<h1 class="verde chapter-title title1">Otra arte poética una:<br>El tiempo</h1>
+						<div class="content-text">
+							<p>
+								Sobre la geometría del tiempo este poema que <br>recorre la fría piel de los minutos que ni<br>esperan ni acosan,<br>sobre la línea de los días sembrados en la metálica<br>luz de los muertos, florecidos a punta de tanta<br>vida que recorre sus venas de clepsidra.
+							</p>
+							<p>
+								Sobre el tiempo este poema asomado de reojo a<br>la muerte,<br>sobre el tiempo hermano de la nada,<br>
+								sobre el tiempo ingrávido gravitando sobre mi cabeza y sobre la<br>cabeza de mi hermano,<br>sobre el tiempo este poema,<br>sobre el tiempo que camina por encima de las<br>aguas y pasa a través de los blancos jardines <br>de yeso de las regiones del norte,<br>sobre el tiempo olvidado de los juegos de la tortuga<br>y Aquiles,<br>sobre el tiempo despiadado el asombro impotente<br>del poema,<br>sobre el silencio que es la música del tiempo<br>terminado y constante y exacto,<br>teorema de las flores que nacen medidas por el<br>día,<br>teorema del deseo y la culpa capturados en el<br>largo insomnio de la noche puntual,<br>de la agorera, lenta noche,<br>sobre el tiempo inmensurable, midiendo el cambio<br>de piel de las serpientes,<br>sangrando sobre la sombra del olvido,<br>sobre el tiempo este monótono poema,<br>sobre el tiempo que continúa más allá de la vana<br>palabra del poema.
+							</p>
+						</div>
+							
+							
+						<h1 class="verde chapter-title title1">El oficio</h1>
+						<div class="content-text">
+							<p>
+								La poesía, esa batalla de palabras cansadas;<br>nombres de cosas que el ruido escamotea;<br>llegan los fieles a reconocer el signo, heráldica<br>donde cada rito tiene su lugar:<br>allá la cornucopia, el ara, el gerifalte, aquí muy<br>cerca una noche y una estrella:<br>amplia red de sonidos que ocultan este corazón<br>aterido y amargo,<br>un gajo de uvas verdes, el silencio irrepetible de<br>una calle de mi infancia.
+							</p>
+							<p>
+								La poesía: este consuelo de bobos sin amor ni<br>esperanza,<br>borrachos por el ruido del verbo, aturdidos por<br>cosas que significan otras cosas,<br>sonidos de sonidos.
+							</p>
+							<p>
+								Prefiero mirar tus cartas que leerlas; de súbito<br>dibujas un beso;<br>la poesía: esta langosta, esta alharaca, esta otra<br>cosa que no es ella,<br>la risa de Alejandra, el esplendor de tantos sueños<br>silenciosos,<br>una forma callada.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">De la nostalgia, 6</h1>
+						<div class="content-text">
+							<p>
+								Es distinto este decir que aquel hechizo,<br>me repito enredado en la guerra de encontrar las<br>palabras.
+							</p>
+							<p>
+								Ayer iluminación, hoy trampa, evasivo poema,<br>rescoldo apenas del vuelo del amor o el asombro,<br>huella penosa de las noches felices,<br>juego el poema de la luna conmigo, en la noche<br>de ahora.
+							</p>
+							<p>
+								Está además el vano consuelo de mi desmemoria:<br>que conozco la dicha.
+							</p>
+							<p>
+								Y está también la certeza más sabia y más inútil:<br>que hay alguien dentro de mí perdido,<br>que envejezco.
+							</p>
+						</div>
+						
+						
+						<h1 class="verde chapter-title title1">De la nostalgia, 3</h1>
+						<div class="content-text">
+							<p>
+								Diluir la memoria en una especie de estupor<br>anhelante,<br>picaflor sin urgencias que enumera los lugares<br>más tibios,<br>alelada memoria,<br>el muy frío espejo del calor de otro entonces,<br>memoria que pregunta cuánta materia de mi<br>cuerpo queda<br>de aquellos cuerpos míos que vivieron cada<br>alucinación y cada asombro,<br>cada cosa que hoy es nada,<br>y aún menos que nada<br>si es palabra.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1 ">Gatos</h1>
+						<div class="content-text">
+							<p>
+								Aletargados en perpetua siesta<br>después de inconfesables andanzas nocturnas,<br>desentendidos o alertas,<br>los gatos están en la casa para ser consentidos,<br>para dejarse amar indiferentes.
+							</p>
+							<p>
+								Dios hizo los gatos para que hombres y mujeres<br>aprendan a estar solos.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1 ">Gatos</h1>
+						<div class="content-text">
+							<p>
+								Estados de la materia.
+							</p>
+							<p>
+								Los estados de la materia son cuatro:<br>líquido, sólido, gaseoso y gato.
+							</p>
+							<p>
+								El gato es un estado especial de la materia,<br>si bien caben las dudas:<br>¿es materia esta voluptuosa contorsión?<br>¿no viene del cielo esta manera de dormir?
+							</p>
+							<p>
+								Y este silencio, ¿acaso no procede de un lugar sin<br>tiempo?
+							</p>
+							<p>
+								Cuando el espíritu juega a ser materia <br>entonces se convierte en gato.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1 ">Gatos</h1>
+						<div class="content-text">
+							<p>
+								¿Cómo lograr que la quieta palabra escrita<br>posea la quietud del gato que duerme,<br>cómo hacer que la torpe palabra<br>nombre la oscuridad con mirada de gato,<br>su fijeza,<br>de qué manera conseguir palabras<br>con la tersura de la piel del gato,<br>a veces, pocas, palabras uña de gato,<br>y otras, muchas más, con el movimiento del gato,<br>su sigilo,<br>su distancia,<br>cómo decir palabras que posean<br>el silencio del gato,<br>cómo hacer que la palabra me contenga<br>y yo desaparezca,<br>hecho silencio,<br>como se desvanece entre la noche<br>un gato?
+							</p>
+						</div>
+
+						<h1 class="verde chapter-title title1">Gatos</h1>
+						<div class="content-text">
+							<p>
+								Palabras para hablar de los gatos:<br>no hay palabras para hablar de los gatos.
+							</p>
+							<p>
+								Las palabras no abarcan a los gatos.
+							</p>
+							<p>
+								Los gatos son indiferentes<br>con los seres que hablan.
+							</p>
+							<p>
+								Un ladrido puede molestarlos<br>y un estruendo asusta a los gatos.
+							</p>
+							<p>
+								Pero los gatos no oyen las palabras,<br>no les interesa nada que pueda decirse con palabras.
+							</p>
+							<p>
+								¿Para qué las palabras si hay olfato,<br>para qué las palabras<br>si es posible el silencio?
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Soy vegetal</h1>
+						<div class="content-text">
+							<p>
+								Soy vegetal.
+							</p>
+							<p>
+								Broté de una semilla,<br>voy echando raíces<br>y el amor me hizo florecer por una vez.
+							</p>
+							<p>
+								Sé cantar cuando pasan los vientos<br>y quisiera abrazar el nido de algún pájaro.
+							</p>
+							<p>
+								También sé defenderme en la sequía.
+							</p>
+							<p>
+								Soy árbol por dentro.
+							</p>
+							<p>
+								Soy vegetal,<br>mi especie tiene nombre taxonómico,<br>está catalogada con una cifra y una clave,<br>es parte de un herbario.
+							</p>
+							<p>
+								Soy vegetal.
+							</p>
+							<p>
+								Mi más profunda vocación<br>es la quietud.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Caucho</h1>
+						<div class="content-text">
+							<p>
+								El árbol de caucho es líquido,<br>sus hojas son agua, agua verde que respira,<br>surtidor detenido.
+							</p>
+							<p>
+								A su sombra, la tierra nunca está seca<br>y su tronco es humedad hecha madera.
+							</p>
+							<p>
+								Porción de selva en mi jardín,<br>árbol esponja, árbol laguna,<br>pulsación de los ríos subterráneos,<br>el verde caucho<br>viene de las profundidades del mar,<br>en el caucho no se separaron las aguas de la tierra<br>desde el primer día de la creación.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Sabor</h1>
+						<div class="content-text">
+							<p>
+								Fibras enredadas entre la dentadura,<br>dulzor definitivo,<br>azúcar que es agua, agua que es azúcar,<br>jugo entre hilos,<br>pequeño planeta entre rojo y amarillo,<br>fruta que se desprende segregando una goma,<br>fruta amarilla que se sonroja<br>disculpándose de su propia perfección.
+							</p>
+							<p>
+								El mango es una prueba<br>de la existencia de Dios.
+							</p>
+						</div>
+						
+						<hr class="line-separator line">
+					</div>
+					
+					<div class="slides slide">
+						<!--PARTE II-->
+						<h2 class="section-title verde">Parte II</h2>
+						
+						<h1 class="verde chapter-title title1">Cuando decimos piedra no decimos nada, 10</h1>
+						<div class="content-text">
+							<p>
+								Virtudes de la piedra.
+							</p>
+							<p>
+								Paciente, la piedra deja que la penetre el musgo<br>y se deleita sintiendo cómo el sol quema el<br>musgo y la calienta.
+							</p>
+							<p>
+								Tímida, el contacto con el agua le cambia el color.
+							</p>
+							<p>
+								Religiosa, la inmovilidad es evidencia de que la<br>piedra es budista.
+							</p>
+							<p>
+								Justa, cumple con celo la ley de gravitación<br>universal.
+							</p>
+							<p>
+								Eterna, la piedra es anterior a las pirámides, que<br>son de piedra.
+							</p>
+							<p>
+								Profundas, el piso del océano es de piedra.
+							</p>
+							<p>
+								Bella, la piedra es bella como la piedra.
+							</p>
+							<p>
+								Discreta, la piedra nunca contará nada.
+							</p>
+							<p>
+								Díscola, lanzada por David, siempre buscará la<br>cabeza de Goliath.
+							</p>
+							<p>
+								Original, ninguna piedra se parece a otra piedra.
+							</p>
+							<p>
+								Santas, en el infierno no hay piedras. Por eso<br>el infierno está empredrado de buenas<br>intenciones.
+							</p>
+							<p>
+								Condenada, la piedra que peque se ata a un<br>hombre escandaloso y se arroja al fondo del<br>mar.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Canto a mi cama</h1>
+						<div class="content-text">
+							<p>
+								Mi cama es la cama de todos los días.
+							</p>
+							<p>
+								Aprendí hace mucho las sombras que se ven desde<br>mi cama,<br>a tientas llego fácil en mi cama al volumen de la<br>música,<br>al suiche de la lámpara, a mis gafas,<br>mi cama me acoge cada noche, se abre en la forma<br>de cada  músculo mío,<br>mi cama tiene la prueba de que no existo sino en<br>sueños<br>y mi peso que se tiende en ella como si flotara<br>respira para que bailen los dioses de la noche,<br>fantasmas varios y alucinaciones de la insomne<br>duermevela,<br>cada noche jardín distinto o variado infierno,<br>estremecimientos que ni yo conozco y que mi<br>cama conoce,<br>desgarraduras y éxtasis que mi cama sabe.
+							</p>
+							<p>
+								Cama que me conoces solitario, quieto, difunto<br>casi,<br>cuánto te agradezco que me entrenes<br>para que la muerte así me llegue,<br>sobre ti,<br>y te queden mis sueños,<br>mi única sustancia.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">La visita de Margarita Cueto a Medellin en 1968</h1>
+						<div class="content-text">
+							<p>
+								A fines del año pasado llegó Margarita Cueto a<br>Medellín.
+							</p>
+							<p>
+								Venía en un gran tanque de formol, y semejaba<br>una de esas imágenes de cera que parecen<br>bañadas en esperma;<br>desde días antes se sentía un insoportable olor<br>a crisantemo y las polillas habían invadido el<br>aeropuerto.
+							</p>
+							<p>
+								(Antes de que Thomas Alba Edison inventara<br>el fonógrafo, doña Margarita repartía sus<br>días entre ensayar Taboga con Juan Arvizu y<br>espantar los diminutos gusanos de la muerte).
+							</p>
+							<p>
+								Fue aquel un espectáculo digno de verse: un<br>oxidado cañón encontrado en Chorros Blancos<br>saludó el aterrizaje del avión,<br>y en ese preciso instante resucitaron siete viejos<br>amantes del bambuco;<br>acto seguido una banda de invisibles instrumentistas,<br>después de los himnos de Colombia y México,<br>interpretó “Corazones sin rumbo” con fantasmal<br>vehemencia y todos pudimos llorar a nuestras<br>anchas:
+							</p>
+							<p>
+								La música se oía del otro lado de la muerte: era<br>el momento de las grandes libaciones de<br>incienso, se podía hacer una profesión de la<br>queja o fabricarse un cuchillo para matar tanto<br>olvido.
+							</p>
+							<p>
+								Pero esto no fue todo: en la casa de una de mis<br>tías, la vitrola descompuesta desde hacía 27<br>años comenzó a funcionar sin que nadie la<br>tocara, y en la familia se dijo que todo había<br>sido un milagro.
+							</p>
+							<p>
+								Ya por la noche, en el homenaje de rendida<br>admiración, después de las palabras del<br>señor alcalde, se anunció una canción de doña<br>Margarita;
+							</p>
+							<p>
+								Pero en lugar de las estrofas del bambuco,<br>comenzaron a salir de su boca pequeñas<br>telarañas que le dieron al recinto el aspecto de<br>un desván.
+							</p>
+							<p>
+								Y la señora comenzó a derretirse hasta volverse<br>miel de abejas que una nube de moscas devoró<br>con odio generoso;<br>fue entonces cuando las magnolias enviadas por<br>el Señor Obispo se tornaron en un polvillo<br>ceniciento que los predicadores de Año 
+							</p>
+							<p>
+								Nuevo explotaron sin misericordia cuando hablaron de<br>la muerte.
+							</p>
+							<p>
+								Pero ya todos éramos estatuas de sal.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Hola soledad</h1>
+						<div class="content-text">
+							<p>
+								Bienvenida, vieja amiga, te creí ausente y aquí<br>estabas escondida, confundida conmigo;<br>bienvenida, ahora que te veo, bienvenida a tu más<br>propia casa, el latido de mi sangre,<br>a ti te acojo en el tiempo largo del poema, en el<br>suave sueño, en el hormigueo de mi mano<br>izquierda,<br>báñate conmigo, una ducha caliente que golpee la<br>espalda,<br>-ah, desnudos sí que tú y yo somos uno solo-,<br>préstame una de tus camisas blancas de algodón,<br>ven, tomemos café, sin azúcar: así lo bebo<br>solamente contigo,<br>amiga, ladilla, sombra,<br>y fumemos viendo el cambio de color de la<br>montaña, fúndete conmigo para que pueda<br>mirar cómo amanece,<br>ven cántame una canción, aguántame la risa de<br>gozarte hasta el  tuétano, generosa mía,<br>llévame así, apacible, a este o aquel libro, deja que<br>te lea  en voz alta y dime si te aburres,<br>vuélvete música, almohada; convierte, maga,<br>tu sustancia en humo, en el umbral de las<br>visiones,<br>liba conmigo la euforia santa del silencio,<br>alucina, muchacha de mi vida, y cuenta tu cuento<br>mientras yo,  torpe, tomo tu dictado:<br>tacha siempre toda espera o esperanza,<br>que no se sienta el tiempo,<br>y baila conmigo la danza de la sonrisa en el ojo de<br>la mente<br>hasta caer, inseparablemente juntos, fulminados.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Desollamientos</h1>
+						<div class="content-text">
+							<p class="text-align-right">
+								“...the seafaring man with one leg...”<br>(R.L. Stevenson).
+							</p>
+							<p>
+								Sin pie mi cuerpo sigue amando lo mismo<br>y mi alma se sale al lugar que ya no ocupo,<br>fuera de mí:<br>no, no hay aquí símbolos,<br>el cuerpo se acomoda a la pasión<br>y la pasión al cuerpo que pierde sus fragmentos<br>y continúa íntegro, sin misterios incólume.
+							</p>
+							<p>
+								Contra la muerte tengo la mirada y la risa,<br>soy dueño del abrazo de mi amigo<br>y del latido sordo de un corazón ansioso.
+							</p>
+							<p>
+								Contra la muerte tengo el dolor en el pie que no<br>tengo,<br>un dolor tan real como la muerte misma<br>y unas ganas enormes de caricias, de besos,<br>de saber el nombre propio de un árbol que me<br>obsede,<br>de aspirar un perdido perfume que persigo,<br>de oír ciertas canciones que recuerdo a fragmentos,<br>de acariciar mi perro,<br>de que timbre el teléfono a las seis de la mañana,<br>de seguir este juego.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Mozart en la autopista</h1>
+						<div class="content-text">
+							<p>
+								Cierro la ventana,<br>alejo los zumbidos de otros autos<br>y voy en mi cápsula a ochenta kilómetros por hora,<br>entre Mozart,<br>donde tiempo y espacio, horas y kilómetros no<br>cuentan<br>y un clarinete puede ser la causa primera,<br>la explicación de todo,<br>la punta del ovillo.
+							</p>
+							<p>
+								Mozart en la autopista.
+							</p>
+							<p>
+								El mundo es claro y feliz.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Poemas de amor, 1</h1>
+						<div class="content-text">
+							<p>
+								Ese otro que también me habita,<br>acaso propietario, invasor quizás o exiliado en este<br>cuerpo ajeno o de ambos,<br>ese otro a quien temo e ignoro, felino o ángel,<br>ese otro que está solo siempre que estoy solo, ave<br>o demonio<br>esa sombra de piedra que ha crecido en mi adentro<br>y en mi afuera,<br>eco o palabra, esa voz que responde cuando me<br>preguntan algo,<br>el dueño de mi embrollo, el pesimista y el<br>melancólico y el inmotivadamente alegre,<br>ese otro,<br>también te ama.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Poemas de amor, 4</h1>
+						<div class="content-text">
+							<p>
+								Algún día te escribiré un poema que no mencione<br>el aire ni la noche;<br>un poema que omita los nombres de las flores,<br>que no tenga jazmines o magnolias.
+							</p>
+							<p>
+								Algún día te escribiré un poema sin pájaros ni<br>fuentes, un poema que eluda el mar<br>y que no mire a las estrellas.
+							</p>
+							<p>
+								Algún día te escribiré un poema que se limite a<br>pasar los dedos por tu piel<br>y que convierta en palabras tu mirada.
+							</p>
+							<p>
+								Sin comparaciones, sin metáforas, algún día<br>escribiré un poema que huela a ti,<br>un poema con el ritmo de tus pulsaciones, con la<br>intensidad estrujada de tu abrazo.
+							</p>
+							<p>
+								Algún día te escribiré un poema, el canto de mi<br>dicha.
+							</p>
+							
+												
+						<h1 class="verde chapter-title title1">Poemas de amor, 6</h1>
+						<div class="content-text">
+							<p>
+								Tu voz por el teléfono tan cerca y nosotros tan<br>distantes,<br>tu voz, amor, al otro lado de la línea y yo aquí solo,<br>sin ti, al otro lado de la luna,<br>tu voz por el teléfono tan cerca, apaciguándome, y<br>tan lejos tú de mí, tan lejos,<br>tu voz que repasa las tareas conjuntas,<br>o que menciona un número mágico,<br>que por encima de la alharaca del mundo me habla<br>para decir en lenguaje cifrado que me amas.
+							</p>
+							<p>
+								Tu voz aquí, a lo lejos, que le da sentido a todo,<br>tu voz que es la música de mi alma,<br>tu voz, sonido del agua, conjuro, encantamiento.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Poemas de amor, 8</h1>
+						<div class="content-text">
+							<p>
+								Tu lengua, tu sabia lengua que inventa mi piel,<br>tu lengua de fuego que me incendia,<br>tu lengua que crea el instante de demencia,<br>el delirio del cuerpo enamorado,<br>tu lengua, látigo sagrado, brasa dulce,<br>invocación de los incendios que me saca de mí,<br>que me transforma,<br>tu lengua de carne sin pudores,<br>tu lengua de entrega que me demanda todo, tu<br>muy mía lengua,<br>tu bella lengua que electriza mis labios, que vuelve<br>tuyo mi cuerpo por ti purificado,<br>tu lengua que me explora y me descubre,<br>tu hermosa lengua que también sabe decir que me<br>ama.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Poemas de amor, 13</h1>
+						<div class="content-text">
+							<p>
+								Primero está la soledad.
+							</p>
+							<p>
+								En las entrañas y en el centro del alma:<br>esta es la esencia, el dato básico, la única certeza;<br>que solamente tu respiración te acompaña,<br>que siempre bailarás con tu sombra,<br>que esa tiniebla eres tú.
+							</p>
+							<p>
+								Tu corazón, ese fruto perplejo, no tiene que<br>agriarse con tu sino solitario;<br>déjalo esperar sin esperanza<br>que el amor es un regalo que algún día llega por<br>sí solo.
+							</p>
+							<p>
+								Pero primero está la soledad,<br>y tú estás solo,<br>tú estás solo con tu pecado original —contigo<br>mismo—.
+							</p>
+							<p>
+								Acaso una noche, a las nueve,<br>aparece el amor y todo estalla y algo se ilumina<br>dentro ti,<br>y te vuelves otro, menos amargo, más dichoso;<br>pero no olvides, especialmente entonces,<br>cuando llegue el amor y te calcine,<br>que primero y siempre está tu soledad<br>y luego nada<br>y después, si ha de llegar, está el amor.
+							</p>
+						</div>
+						
+						<hr class="line-separator line">
+					</div>
+					
+					<!--PARTE III-->
+					<div class="slides slide">
+						<h2 class="section-title verde">Parte III</h2>
+						
+						
+						<h1 class="verde chapter-title title1">Conjuro</h1>
+						<div class="content-text">
+							<p>
+								Que el azar me lleve hasta tu orilla,<br>ola o viento, que tome tu rumbo,<br>que hasta ti llegue y te venza mi ternura.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Amores imposibles, 11</h1>
+						<div class="content-text">
+							<p>
+								Altar donde te invoco,<br>ara de ofrendas ante la mención de lo sagrado:<br>una pregunta, una mirada,<br>el vello suave de tu brazo izquierdo,<br>el miedo de que noten los otros que por ti me<br>muero,<br>tu risa entre un silencio que sólo quiere oír tu risa,<br>un viaje, una postal, este poema,<br>mi remoto amor imposible,<br>ahora te invoco,<br>ahora te invoco y vuelvo a embriagarme de un<br>instante de cielo,<br>de mi más lejano amor imposible.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Amores imposibles, 13</h1>
+						<div class="content-text">
+							<p>
+								Amores imposibles<br>ineficaces como la compasión,<br>como la compasión necesarios.
+							</p>
+							<p>
+								Amores imposibles que te acompañan con más<br>intensidad<br>que los amores posibles.
+							</p>
+							<p>
+								Amores imposibles que te dan la dimensión de tu<br>soledad,<br>que llenaron de presencias tu soledad,<br>que le dieron sentido a tu soledad.
+							</p>
+							<p>
+								Amores imposibles que hicieron imposible<br>la sola soledad.
+							</p>
+							<p>
+								Amores imposibles que son la soledad acompañada.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Amores imposibles, 14</h1>
+						<div class="content-text">
+							<p>
+								Algo por ahí quiere ser luz,<br>una palabra viene con vocación de destello,<br>una palabra que llega hecha cenizas.
+							</p>
+							<p>
+								Un abrazo viene con calor de entraña<br>y antes de llegar se desvanece en aire:<br>nunca lo escucharás,<br>nunca sentirás la piel de tu amor imposible,<br>nunca sabrás a qué huele.
+							</p>
+							<p>
+								Pero su compañía acortará las esperas,<br>irás solo y abrazado a tu dichosa nada,<br>acorazado contra el tedio,<br>de algún modo sereno.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Some present moments<br>of the future</h1>
+						<div class="content-text">
+							<p>
+								1<br>Ángel instantáneo,<br>delirio,<br>pompa de tiniebla absoluta,<br>descomedido reventar de la memoria,<br>jabón del tiempo.
+							</p>
+							<p>
+								2<br>Teas que arden juntas, ondulantes.<br>Sola llama que dos llamas funde, confundidas:<br>ninguna llama es ella misma ni la otra,<br>sola nueva llama nuestros cuerpos.
+							</p>
+							<p>
+								3<br>El deseo dibuja su sombra:<br>otra sangre que transcurre cerca,<br>palpitación y palpitación en la tiniebla.<br>Basta cerrar los ojos para que lluevan estrellas,<br>basta tu mano aquí,<br>bastan tus labios.
+							</p>
+							<p>
+								4<br>Mi mano acariciando tu nalga,<br>mis dedos se mueven suaves sobre tu suavidad.<br>El vacío durante un instante<br>y luego la otra orilla que rozo dejándote la marca<br>de mi huella.<br>Tú sobre mí,<br>desmayados los dos,<br>sólo mi mano moviéndose.
+							</p>
+							<p>
+								5<br>Mi único pie se estruja entre tus pies que lo aprisionan<br>tiernos.<br>Luego acaricias el muñón y siento la caricia más<br>abajo.<br>Estoy amputado y me acaricias entero,<br>resucitas mi pie en clave de dicha,<br>de danza,<br>ese pie que siempre es dolor fantasma<br>es ahora el fantasma del gozo,<br>su eterna eternidad.
+							</p>
+							<p>
+								6<br>Luz de nosotros,<br>ámbar o lila, del color de esta tarde<br>todos los relojes destilando dicha:<br>duremos este tú y yo,<br>beso, saliva y piel,<br>duremos.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Una noche</h1>
+						<div class="content-text">
+							<p>
+								El día no es la luz,<br>es tiniebla trasparente que se viste de negro con<br>las horas,<br>para que las voces del insomnio<br>traspasen el silencio de la noche<br>y el quiste del desamor se convierta en un llanto<br>de palabras quebradas, en un clamor del aire.
+							</p>
+							<p>
+								El olvido es amor que se convierte en nada<br>interminable de obsesiones,<br>en lento deshacerse;<br>al final del amor está el olvido y el olvido demora<br>madurándose<br>y las voces que a veces se escuchan a la<br>madrugada, antes de la primera luz,<br>son eco del silencio angustiado de los seres que<br>olvidan, de los seres que amaron y llevan<br>semanas y meses olvidando.
+							</p>
+							<p>
+								El olvido no es que algo se borre en la memoria,<br>el olvido te ocupa todo el tiempo, a la hora del<br>trabajo o del aseo, cuando comes o rezas no te<br>olvidas de olvidar.
+							</p>
+							<p>
+								Entretanto en la noche, cuando el silencio es la<br>materia más consistente de lo oscuro,<br>se cuelan voces sin dueño, las voces silenciosas de aquellos que agonizan olvidando:
+							</p>
+							<p>
+								—Voy birlando tus apariciones, eludo los instantes<br>en que sólo a ti te deseo,<br>eres la mía nunca más,<br>nadie repite, no hay regresos, lo sabemos, pero no<br>descanso de olvidarte,<br>me gasto cada noche entera contigo, olvidándote.<br>Tú bien lejos y yo aquí contigo<br>olvidándote,<br>olvidándote.
+							</p>
+							<p>
+								—La palabra mata<br>y yo te voy desollando con cada sílaba.
+							</p>
+							<p>
+								Dardo mi verbo, arma mortal.
+							</p>
+							<p>
+								Lunas en agonía hacen explosión en esta memoria<br>de guerra.
+							</p>
+							<p>
+								Cuando el amor acaba todo recuerdo tortura,<br>olvidando se convierten en espinas las dichas<br>del pasado:<br>saber que me amaste es aprender que tu amor<br>envenena;<br>para degradarme hoy, te amé entonces.
+							</p>
+							<p>
+								Estoy en guerra con lo que tengo de ti, un fantasma<br>que se apodera de mis noches,<br>la rabia saber que no es el tuyo, cuando otro<br>cuerpo.
+							</p>
+							<p>
+								Tengo que purificarme de ti, suicidarme de ti,<br>mudar la piel que tú acariciaste.
+							</p>
+							<p>
+								Tengo que matarte en mí para no ser sólo un<br>pedazo de pasado.
+							</p>
+							<p>
+								—Cómo te voy desamando, qué largo y monótono<br>ejercicio ya no amarte y pensar en ti todo el<br>tiempo,<br>qué tortura sutil sentir que mi lujuria está en<br>abrazar un cuerpo que ya no abrazaré,<br>¿cuándo un tiempo sin ti y conmigo, vuelto a mí,<br>recuperado de la droga de tu aliento?
+							</p>
+							<p>
+								Te expulso de mí, te exorcizo, te llamo a cada<br>segundo para que salgas de mi alma, para que<br>tu fantasma no me anule.
+							</p>
+							<p>
+								Ah, nuestros momentos de dicha quedan demasiado<br>lejos y ya no me justifican los insomnios de este<br>olvido minucioso.
+							</p>
+							<p>
+								Se me va un día entero olvidando cada minuto de<br>nosotros.
+							</p>
+							<p>
+								Se me va toda la rabia cuando me doy cuenta,<br>lacerado, de que ni siquiera pude herirte.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Una elegía</h1>
+						<div class="content-text">
+							<p>
+								Todavía perduran esas tardes de sol: nada qué<br>esperar del mañana,<br>todo nos lo daba el día que vivíamos,<br>un pan desordenado del que confía en todo, sueño<br>profundo, sueño quieto,<br>la mínima certeza de la carne con algo de ternura<br>contra la mala sangre,<br>una displicente seguridad de que perduraríamos<br>jóvenes, incólumes, sin mancha ninguna en las<br>entrañas.
+							</p>
+							<p>
+								Todavía existen esas tardes sin desprecio y sin<br>afecto por nada que no fuera nuestro goce: <br>el mundo entero cabía en  el lecho donde nos<br>amamos.
+							</p>
+							<p>
+								Vislumbro un jardín entre brumas: sentíamos el<br>olor de los jazmines difuminados,<br>aquella niebla tenía los aromas leves de nuestros<br>cuerpos,<br>ese perfume que llegó a ser otro perfume,<br>el olor inextinguible:<br>todavía cada bocanada de aire me mantiene vivo<br>solamente por la esperanza de aspirar ese<br>olor.
+							</p>
+							<p>
+								Corazón depredador, cloaca, ruina de un cielo que<br>fue todo lo que yo haya sido:<br>ahora mi palabra sucia ronda aquellas ruinas de<br>mí mismo:<br>te amé y eso basta,<br>abrazado a ti fui feliz,<br>ahora lo sé,<br>ahora cuando le perteneces a la muerte.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Los amigos muertos</h1>
+						<div class="content-text">
+							<p>
+								Si ahora regresaran llegarían con su edad intacta,<br>más allá de la muerte, inmortales<br>con aire de ignorar lo nuevo que hay en el mundo,<br>sin interés en nada distinto de indagar lo que<br>ahora soy.
+							</p>
+							<p>
+								¿Por qué las canas y la panza?<br>¿Por qué mi trajinado traje mortal que cruje tanto<br>y mi cojera?<br>¿Por qué mi apatía con el mundo, mi apatía<br>conmigo,<br>mi desgano?<br>¿Por qué mi fastidio con el ruido y sus ruindades?<br>¿Por qué mi amor al silencio, mi mutismo?
+							</p>
+							<p>
+								También preguntarían perversos por qué conmigo<br>la muerte es indolente.
+							</p>
+							<p>
+								Si ahora regresaran, llegarían dándome un abrazo<br>que todavía extraño.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">De la nostalgia, 1</h1>
+						<div class="content-text">
+							<p>
+								Recuerdo solamente que he olvidado el acento de<br>las más amadas voces,<br>y que perdí para siempre el olor de las frutas de<br>la infancia,<br>el sabor exacto del durazno,<br>el aleteo del aire frío entre los pinos,<br>el entusiasmo al descubrir una nuez que ha caído<br>del nogal.
+							</p>
+							<p>
+								Sortilegios de otro día, que ahora son apenas<br>letanía incolora,<br>vana convocatoria que no me trae el asombro de<br>ver un colibrí entre mi cuarto,<br>como muchas madrugadas de mi infancia.
+							</p>
+							<p>
+								¿Cómo recuperar ciertas caricias y los más<br>esenciales abrazos?
+							</p>
+							<p>
+								¿Cómo revivir la más cierta penumbra, iluminada<br>apenas con la luz de los Beatles,<br>y cómo hacer que llueva la misma lluvia que veía<br>caer a los trece años?</p>
+							<p>
+								¿Cómo tornar al éxtasis de sol, a la luz ebria de mis siete años,<br>al sabor maduro de la mora,<br>a todo aquel territorio desconocido por la muerte,<br>a esa palpitante luz de la pureza,<br>a todo esto que soy yo y que ya no es mío?
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Piezas para piano i</h1>
+						<div class="content-text">
+							<p>
+								1<br>La quietud absoluta elimina el tiempo en esta<br>música.<br>Oigo el piano sin que los minutos pasen.<br>Música sin tiempo.<br>Me dice que hay un nudo por romper,<br>que estoy en las vísperas de una revelación.
+							</p>
+							<p>
+								2<br>Entre nota y nota se oye nítido un sereno silencio,<br>un silencio con piel.<br>Podría detenerme en esos silencios,<br>pero hasta la eternidad es breve<br>entre este piano sin ansias.<br>Flotan las notas como los músculos de un guante,<br>se desgonzan, gatean,<br>gatean con la gracia con que los gatos gatean.
+							</p>
+							<p>
+								3<br>¿Cómo corresponder a la cortesía del agua, al aire gentil?<br>¿Cuál es el sonido de estas rosas en botón,<br>de la luz dorada del amanecer?<br>¿Está la respuesta en el piano?<br>¿Hay aquí un conjuro que me llega al oído?<br>Doy las gracias por este sacramento.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">Piezas para piano iv</h1>
+						<div class="content-text">
+							<p>
+								1<br>Las aves duermen mientras vuelan.<br>Para volar es necesario un abandono<br>sólo posible en el sueño.<br>Notas que no pertenecen a la vigilia,<br>que vienen del mundo de los que duermen,<br>notas soñadas por un colibrí cuando vuela.
+							</p>
+							<p>
+								2<br>Aleteo para permanecer en el mismo punto,<br>quieto entre el aire quieto,<br>inmune a la gravedad,<br>colibrí casi flor, bálsamo al ojo.
+							</p>
+							<p>
+								3<br>Huellas<br>como la huella que el ala de un pájaro deja en el aire.<br>Susurro que apenas se ve como el gesto mudo de una boca.<br>Visiones que son revelación de la tiniebla pura.<br>Nada tangible en este paisaje,<br>tacto que tantea y no toca.
+							</p>
+						</div>
+						
+						<h1 class="verde chapter-title title1">piezas para piano vii</h1>
+						<div class="content-text">
+							<p>
+								1<br>Si la lluvia cantara<br>sonaría como este piano lento<br>que da vueltas en torno a un solo motivo.<br>Pero la lluvia no canta.<br>La lluvia es silencio desde el piso doce.<br>Y sólo percute contra el vidrio cuando el viento la empuja<br>y ella suena susurrante o brusca.<br>Casi siempre la lluvia pasa en silencio frente a mi ventana<br>y yo intuyo que lleva ganas de cantar un canto triste,<br>un canto de piano sin palabras posibles.
+							</p>
+							<p>
+								2<br>Yo no soy.<br>Soy las cosas que pasan,<br>la lluvia bendita.<br>Si algo soy, soy alguien que ve llover,<br>que oye llover,<br>soy un oído entre la música del viento,<br>una piel entre el frío del viento,<br>alguien que yace<br>mientras afuera hay una ciudad que no conozco,<br>que apenas olfateo.<br>Soy ese perfume que desconocía.
+							</p>
+							<p>
+								3<br>Apunto palabras que acomodo entre dos notas.<br>Son un bálsamo.<br>Palabras como alondra o jacaranda<br>que vuelan o florecen entre mi libreta.<br>Las letras de mi jacaranda son negras,<br>pero la palabra tiene el color de la jacaranda florecida.<br>Las letras de mi alondra están quietas,<br>pero la palabra alondra vibra<br>como el cuerpo vivo de la alondra,<br>como su canto vibra.
+							</p>	
+						</div>
+							
+						<hr class="line-separator line">
+						
+					</div>
+                    
+					
+					<!--PARTE IV-->
+					<div class="slides slide">
+						<h2 class="section-title verde">Parte IV</h2>
+						
+						<div class="content-text">				
+							<h1 class="verde chapter-title title1">Parque Bolívar</h1>
+							<p>
+								Las once de la noche del domingo en el parque.
+							</p>
+							<p>
+								Es agosto y un viento frío mece los árboles:<br>ya es la hora del silencio en la fuente<br>y unos pocos transeúntes caminan rumbo a casa con el cine en sus pupilas.
+							</p>
+							<p>
+								Por mi ventana, mezclado entre la brisa, entra el canto armonioso de una trompeta:<br>un hombre sentado en la escalera del atrio a las once de la noche del domingo<br>improvisa unos sonidos<br>y después la brisa me trae viejas canciones conocidas que vienen del pasado;<br>torna a Sorrento, Frenesí, una samba brasileña cuyo nombre he perdido entre las cosas obvias,<br>soñar y nada más...
+							</p>
+							<p>
+								El sonido me obliga con su conjuro a mirar por la ventana,<br>veo la lluvia caer sobre la música<br>y las notas parecen pececitos de colores<br>y el agua brilla bajo la luz de los neones del parque,<br>bailando al son de la trompeta.
+							</p>
+							<p>
+								Luego vendrá el silencio<br>y los pasos de un hombre desconocido<br>alejándose<br>con una trompeta bajo el brazo.
+							</p>
+
+							<h1 class="verde chapter-title title1">Sólo el azar</h1>
+							<p>
+								6<br>Por instantes<br>la constelación está completa,<br>intermitente y completa:<br>bajo destellos cazan<br>la acción y el verbo.
+							</p>
+							<p>
+								Revelaciones que no sirven para nada,<br>allá están el resplandor, la tiniebla<br>y la inútil certeza:<br>que moriré<br>y que soy inmortal como esta flor.
+							</p>
+
+							
+							<h1 class="verde chapter-title title1">Sólo el azar</h1>
+							<p>
+								14<br>Sólo el azar me dio la piel que amé<br>y sólo el azar —o el cansancio— <br>extinguió el fuego.
+							</p>
+							<p>
+								Lo que siguió no fue el azar,<br>es lo que sigue siempre,<br>la lenta pesadilla del olvido<br>y luego cierto desprecio<br>por ese que fui yo y que amaba<br>y también por el que soy ahora,<br>el mismo que no sabe por qué amó.
+							</p>
+							<p>
+								Sólo la carne se equivoca.
+							</p>
+
+							
+							<h1 class="verde chapter-title title1">Sólo el azar</h1>
+							<p>
+								15<br>Como un cable diseñado para menos voltaje<br>acaso mi cuerpo no resiste la claridad.
+							</p>
+							<p>
+								Mientras la materia sea mi sustancia<br>las tinieblas serán la vocación de la carne,<br>ese pedazo de noche que le cabe a cada cuerpo.
+							</p>
+
+							
+							<h1 class="verde chapter-title title1">Sólo el azar</h1>
+							<p>
+								17<br>¿Son éstos los engaños del cuerpo,<br>sintaxis de las vísceras,<br>torceduras de la luna en las entrañas?
+							</p>
+							<p>
+								¿Son revelaciones,<br>instantes en la trastienda del paraíso,<br>destellos de otro asunto diferente,<br>jugo de la raíz —acaso—,<br>acaso nada, la mejor nada,<br>un sereno vacío?
+							</p>
+
+							<h1 class="verde chapter-title title1">Sólo el azar</h1>
+							<p>
+								24<br>Sólo el azar nos dará luz,<br>sólo el azar o algún designio que ignoro.
+							</p>
+							<p>
+								Me pregunto si es la luz lo que busco <br>o busco lo más oscuro de lo oscuro.
+							</p>
+							<p>
+								¿Acaso las tinieblas serán semilla<br>de visiones más altas,<br>de nunca merecidos apacibles silencios?
+							</p>
+
+							<h1 class="verde chapter-title title1">Sólo el azar</h1>
+							<p>
+								25<br>Hay algo que no puede ser dicho;<br>si lo sabemos, no está en palabras.
+							</p>
+							<p>
+								Puede estar al lado del sueño<br>o en tus propias narices<br>dejándose olfatear inescrutable.
+							</p>
+							<p>
+								Algo tan evidente como dos más dos,<br>tan sabio y tan sensato<br>como el invento de la rueda.
+							</p>
+							<p>
+								Hay algo entre ceguera y humo,<br>algo negro entre reverberaciones de luz,<br>algo que nos va a completar.
+							</p>
+							
+                            <h1 class="verde chapter-title">Conversaciones con Dios, 14</h1>
+                            
+                            <p>Venía yo en un avión desde el sur.<br/>
+                            De la pampa a los Andes a la selva a mi meseta.<br/>
+                            No miraba por la ventana: oía música, dormía y oía música dormido.<br/>
+                            No pensaba en nada. Es la mejor manera de ir en un avión.<br/>
+
+                            <p>No pensaba en nada. Es la mejor manera de ir.<br/>
+                            No miraba por la ventana: temo a la selva. Temo a<br/> ese verde monótono y oscuro, un solo tono de<br/> un solo verde que interrumpen pantanos o que<br/> los ríos cortan.</p>
+                            <p>No pensaba ni miraba y de súbito Él me habló y me<br/> impulsó a mirar la espesa y repelente selva.</p>
+                            <p>Me dijo:<br/>
+                            —Cuando soy agua, soy el río Amazonas.</p>
+                            <p>Sólo eso me dijo y lo entendí contemplando<br/> el Amazonas a treinta mil pies de altura a<br/> velocidad de crucero. Lo entendí: para que<br/> exista este río tiene Dios que convertirse en agua.</p>
+                            
+                            <hr class="line-separator line">
+							
+                        </div>
+                    </div>
+                    
+                    
+					<!--PARTE V-->
+					<div class="slides slide">
+						<h2 class="section-title verde">Parte V</h2>
+						
+						<div class="content-text">
+                            <h1 class="verde chapter-title">Chavela Vargas, miércoles 31 de marzo de 2004</h1>
+                            
+                            <p>Sobre su pecho un óvalo de plata<br/>   
+                            que arroja destellos en el punto donde yo levito.</p> 
+
+                            <p>La chamana nota que estoy encandilado<br/>   
+                            pero en ese instante no lo creo:<br/>    
+                            imposible que la gran bruja se fije en mi quietud <br/>  
+                            entre tanta gente que vino para oír su canto.<br/>    
+                            Somos varios miles los devotos.</p>
+
+                            <p>Solamente lo sé al final, cuando todos la<br/> ovacionamos:     
+                            en el mismo instante en que yo le mando un beso <br/>     
+                            un nuevo destello de plata rebota en mis ojos fijos<br/> en ella.</p>
+
+                            <p>Ella lo ve —o siente mi beso—,<br/>    
+                            me acaricia con la mirada <br/>   
+                            y me devuelve mi beso.</p>
+
+                            <p>Enseguida la imito en ese gesto suyo de abrazar<br/> abrazándose <br/>  
+                            y la vieja reina de la luz de lo oscuro<br/>
+                            me retorna desde lejos el abrazo con un calor de<br/> cuerpo que contagia mi cuerpo.</p>
+
+                            <p>Me quedo lelo,<br/>    
+                            el tiempo detenido en el plenilunio de unos<br/> abismos que otros vivieron por mí,<br/>   
+                            ángeles extraños,<br/>   
+                            ángeles buenos que conocen el infierno como la<br/> casa del hermano,       
+                            ángeles buenos que vienen a salvarme con su<br/> canto.</p>
+                            
+                            
+                            <h1 class="verde chapter-title">Citas de las crónicas</h1>
+                            
+                            <p>Hombres con los pies al revés, de suerte que si persigues sus huellas te estarás alejando de ellos.</p>
+                            <p>Hombres con pies de avestruz.</p>
+                            <p>La naturaleza puede hacer cosas grandes:<br/> peces que cantan con armonía,<br/> 
+                                invasiones de gigantes; Magallanes capturó uno<br/> que medía trece pies y que tuvo miedo cuando<br/> se miró al espejo.</p>
+                            <p>Trescientas leguas, más de sesenta pueblos<br/> habitados por mujeres solamente,<br/> 
+                            esmeraldas del tamaño de la palma de la mano,<br/> 
+                                árboles con gajos de incienso. </p>
+                            <p>Jardín de flores curiosas: lo mejor contra el fuego<br/> es un vestido de salamandras<br/>
+                            como lo acostumbró su majestad el emperador de<br/> la China en las batallas:<br/>
+                                mil pieles entretejidas inmunes a las llamas.</p>
+                            <p>Se sabe que el primer caballo salió de una ráfaga<br/> de viento condensada por Alá<br/> 
+                            y San Isidoro de Sevilla cuenta de hombres sin<br/> cabeza que  tienen los ojos en los hombros.<br/>
+                            Entonces,<br/> 
+                                ¿por qué no creerte?</p>
+                            
+                            
+                            
+                            <h1 class="verde chapter-title">Monólogo de alguien sin voz</h1>
+                            <p>Mi tierra ya no es mi tierra.</p>
+                            <p>Fui  expulsado de ella, salí a medianoche sin rumbo,<br/>
+                            salvando la vida como si mi vida valiera<br/> alguna cosa.</p>
+                            <p>El resto lo perdí, la casa, los muebles,<br/>     
+                            las fotos y las cartas que me conectaban con los<br/> muertos de mi sangre.
+                            Todo quedó abandonado,<br/>  
+                             de alguna manera muerto,<br/>    
+                            muerto como yo que comencé a morir entonces.<br/>
+                            Salí con las manos vacías, sin tiempo para llorar,<br/>    
+                            también sin pasado salí de esa tierra que ya no es<br/> mía.</p>
+                            
+                            <p>El espejo de esta casa se niega a reflejarme,<br/>      
+                            nadie me reconoce.<br/>
+                            Sin lugar y sin pasado,  <br/>  
+                            esta tierra no me reconoce.<br/>
+                            Ya no hay casa.<br/>
+                            En el lugar habitan gentes que llegaron de ninguna<br/> parte.</p>
+
+                            <p>Ahora soy un nómada, una planta sin raíces,<br/>     
+                            un hombre sin nombre y sin memoria.</p>
+                            
+                            
+                            <h1 class="verde chapter-title">El cuerpo y otra cosa</h1>
+                            <p>11<br>El cuerpo está hecho de tiempo, tiempo inexorable,<br/> absurdamente simple, tiempo que no entiendo,<br/> tiempo curvo, tiempo hueco, ahora mismo<br/> hueco.</p> 
+                            <p>Tiempo con pasado y con mañana y con un hueco, tiempo con nada, tiempo sin hoy, en mis narices el hueco del presente capaz de no existir y de ser mi única existencia.</p>
+                            <p>Eso es el cuerpo, el cuerpo hecho de tiempo.
+                            El cuerpo y esa otra cosa y esa otra.<br/>
+                            El cuerpo y el alma y esa otra.<br/>
+                            El cuerpo y el alma y la muerte.<br/>
+                            La muerte que es cuando el tiempo ha dejado de pasarnos.<br/>
+                            El tiempo, que es el cuerpo.</p>
+                            
+                            
+                            <h1 class="verde chapter-title">El cuerpo y otra cosa</h1>
+                            <p>26<br>El presente inasible, el presente que fluye, que ya<br/> pasó, que nunca es, el presente que no existe,<br/>        
+                            el mismo presente en el que existo, el tiempo en<br/> que soy, el tiempo en que soy lo que acabo de<br/> ser hace sólo un instante, el mismo pero otro,<br/>     
+                            el presente, mi nada.</p> 
+                            
+                            <p>En el presente el ruido, el letargo, a veces el dolor<br/> en el presente, a veces el orgasmo que es<br/> el presente absoluto.</p>
+
+                            <p>El presente nunca está en el sueño, en el sueño<br/> que consiste en borrar el presente, el  presente<br/> vive en esta vigilia, en este insomnio.</p>
+                            
+                            
+                            <h1 class="verde chapter-title">El cuerpo y otra cosa</h1>
+                            <p>27<br>Me veo fuera de mí, mirándome,<br/>
+                            mirándome como si fuera otro,<br/> 
+                            mirándome hacer el amor, desfallecido, agonizando,<br/>
+                            me veo desaparecer pegado a ti, sin conciencia de mí,<br/>
+                            desde afuera mirándome desnudo, parte de ti,<br/>
+                            y afuera mi mirada, yo más allá, aniquilado y feliz.</p>
+                            
+                            
+                            
+                            <h1 class="verde chapter-title">El cuerpo y otra cosa</h1>
+                            <p>28<br>Aquí tu piel,<br/>
+                            su tacto en mi memoria nublándome la vista,<br/>
+                            tu piel, cortina que me separa del mundo,<br/>
+                            que me distrae de todo lo que me distrae,<br/>
+                            tu piel que es humo,<br/>
+                            irrealidad donde habito.</p>
+                            
+                            
+                            <h1 class="verde chapter-title">El cuerpo y otra cosa</h1>
+                            <p>29<br>Esto es el amor: apariciones,<br/> 
+                            destellos de otro tiempo, visos del origen.<br/>
+                            Aquí debo escribir la palabra plenilunio,<br/> 
+                            invocar la luz de plata de mejores noches<br/>
+                            sin poder repetir su jadeo<br/>
+                            ni repetir la risa que era la música entonces.<br/>
+                            Esto es el amor,<br/>
+                            esto fue, diré más bien,<br/>
+                            esto fue el amor:<br/>
+                            una constelación distinta<br/>
+                            donde queda lo mejor de mí.</p>
+                            
+                            <h1 class="verde chapter-title">El viejo uso de disfrazarse de gato </h1>
+                            
+                            <p>¿Te has preguntado por qué ciertos gatos nos<br/> miran con ojos anticipatorios y parece que<br/> ya es mañana mientras nos miran, como si<br/> supieran qué te va pasar?</p>
+
+                            <p>¿Te has preguntado por qué estás solo en la<br/> habitación o en la banca del parque y, como una<br/> aparición, en menos de un instante, sin que te<br/> des cuenta, un gato silencioso está enfrente y<br/> te observa?</p>
+
+                            <p>¿Y has visto en los techos gatos que no se sabe<br/> de dónde vienen, ni cómo llegaron hasta allí y<br/> que es imposible saber hacia dónde se dirigen<br/> impávidos, tan seguros de lo que hacen?</p>
+
+                            <p>Pues todos esos son gatos habitados por fantasmas.</p>
+                            
+                            
+                            
+							<h1 class="verde chapter-title">Razones del ausente</h1>
+                            <p>Si alguien les pregunta por él,<br/>
+                            díganle que quizá no vuelva nunca o que si regresa<br/>
+                            acaso ya nadie reconozca su rostro;<br/> 
+                            díganle también que no dejó razones para nadie, <br/>
+                            que tenía un mensaje secreto, algo importante qué<br/> decirles<br/>
+                            pero que lo ha olvidado.<br/>
+                            Díganle que ahora está cayendo, de otro modo y en<br/> otra parte del mundo,<br/> 
+                            díganle que todavía no es feliz,<br/>
+                            si esto hace feliz a alguno de ellos; díganle también<br/> que se fue con el corazón vacío y seco<br/>
+                            y díganle que eso no importa ni siquiera para la<br/> lástima o el perdón<br/>
+                            y que ni él mismo sufre por eso,<br/>
+                            que ya no cree en nada ni en nadie y mucho menos<br/> en él mismo,<br/> 
+                            que tantas cosas<br/> que vio apagaron su mirada y<br/> ahora, ciego, necesita del tacto,<br/> 
+                            díganle que alguna vez tuvo un leve rescoldo de fe<br/> en Dios, en un día de sol,<br/> 
+                            díganle que hubo palabras que le hicieron creer<br/> en el amor<br/> 
+                            y luego supo que el amor dura<br/>
+                            lo que dura una palabra.</p>
+                        
+                            <p>Díganle que como un globo de aire perforado a<br/> tiros,<br/>
+                            su alma fue cayendo hasta el infierno que lo vive<br/> y que ni siquiera está desesperado<br/> 
+                            y díganle que a veces piensa que esa calma<br/> inexorable es su castigo;<br/> 
+                            díganle que ignora cuál es su pecado <br/>
+                            y que la culpa que lo arrastra por el mundo la<br/> considera apenas otro dato del problema <br/>
+                            y díganle que en ciertas noches de insomnio<br/> y aun en otras en que cree haberlo soñado,<br/>
+                            teme que acaso la culpa sea la única parte de sí<br/> mismo que le queda <br/>
+                            y díganle que en ciertas mañanas llenas de luz<br/>
+                            y en medio de tardes de piadosa lujuria y también<br/> borracho de vino en noches de lluvia<br/>
+                            siente cierta alegría pueril por su inocencia<br/> 
+                            y díganle que en esas ocasiones dichosas habla a<br/> solas.
+                            Díganle que si alguna vez regresa, volverá con dos<br/> cerezas en sus ojos <br/>
+                            y una planta de moras sembrada en su estómago y<br/> una serpiente enroscada en su cuello.<br/>
+                            y tampoco esperará nada de nadie y se ganará la<br/> vida honradamente,<br/>
+                            de adivino, leyendo las cartas y celebrando extrañas<br/> ceremonias en las que no creerá<br/> 
+                            y díganle que se llevó consigo algunas<br/> supersticiones, tres fetiches,<br/>
+                            ciertas complicidades mal entendidas<br/> 
+                            y el recuerdo de dos o tres rostros que siempre<br/> vuelven a él en la oscuridad<br/>
+                            y nada.</p>
+                            
+                            <hr class="line-separator line">
+						</div>					
+					</div>
+						
+					<div class="slides slide"></div>
+									
+					
+				</div>
+				<!--necesarios-->
+			</div>
+			
+		</div>
+        </div>
+		
+		<footer>
+   			<div class="main-container main-container-flex main-container-home">
+				<p class="brand-palabras">Palabras rodantes</p>
+				<h1 class="brand footer-brand">Comfama</h1>    
+   			</div>
+   			<div class="copyright">
+				<p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p>
+			</div>
+		</footer>
+    
+    	<script>
+			window.createMenu('12');    
+		</script>
+		
+	</body>
+</html>

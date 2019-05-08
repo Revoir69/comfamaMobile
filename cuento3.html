@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palabras rodantes</title>
+    
+<!-- estilos -->    
+<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+    
+<!-- acciones -->
+<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+<script src="js/jq-sticky-anything.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/base.js" type="text/javascript"></script>     
+<script type="text/javascript" src="js/queryloader2.min.js"></script>
+<script type="text/javascript">
+window.addEventListener("DOMContentLoaded", function() {
+    new QueryLoader2(document.querySelector("html"), {
+        barColor: "#fff",
+        backgroundColor: "#000",
+        percentage: true,
+        barHeight: 0,
+        minimumTime: 1000,
+        maxTime: 50000,
+        fadeOutTime: 1000
+    });
+});
+    
+
+</script>
+</head>
+    
+<style>
+.menu li:hover{
+    background-color: #006E48;
+    color: #000;
+    
+    }
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 23px;
+    color: #006E48;
+    margin-left: 85%;
+    padding-top: 8%;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+.first-paragraph::first-letter{
+    font-size: 5em;
+    line-height: 0;
+    font-family: 'oswaldmedium';
+    color: #006E48;
+    
+}
+    
+.menu-selected{
+    color: #fff;
+    background-color: #006E48;
+}
+   
+.line-orange{
+    border: 1px solid #000;
+    margin-top: 6%;
+    margin-bottom: 30px;
+}    
+    
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 30px;
+    text-align: center;
+    color: #006E48;
+    margin-left: 24%;
+    padding-top: 5%;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url(img/btnLect.png);
+    background-repeat: no-repeat;
+    width: 305px;
+    height: 100px;
+}
+
+
+    
+.resaltado{
+   color: #006E48;
+    font-size: 38px;
+    background-image: url(img/comillas.png);
+    text-align: center;
+    background-repeat: no-repeat;
+    width: 80%;
+    margin-left: 50px;
+    margin-top: 30px;
+    padding-right: 5px;
+    font-family: 'oswaldregular';
+    
+}
+    </style>
+
+<body class="bg-book3">
+<header>
+    <a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+    <h1 class="brand">Comfama</h1>
+    
+    <img class="botonA" src="img/buttonA.png" alt="boton cambio">
+    
+    <div class="slideHeader">
+         
+        <img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+        <img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+        <img class="resetFont" src="img/reset.png" alt="resetear">
+        <br>
+        <img class="blanco" src="img/blanco.png" alt="btn blanco">
+        <img class="morado" src="img/morado.png" alt="btn morado">
+        <img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+        
+    </div>
+    
+</header>
+     
+    <div class="presentation">
+        
+        <div class="main-container presentation-container">
+            <button id="presentation-close">Cerrar</button>
+            <div class="presentation-scroll">
+                
+                <h1 class="presentation-title">Créditos</h1>
+                
+
+               <p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía</p>
+                
+                <p>Ilustración carátula:<br>• Diego Arboleda</p>
+                
+                <p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+                <p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+
+                
+            </div>
+            
+        </div>
+    </div> 
+    
+     
+    <div class="global-container">
+        
+        
+        
+        
+        
+        <hr class="line-separator line-title" />
+        <h1 class="verde main-title">El camino <span class="verde oswald-light">de la patria</span></h1>
+        <hr class="line-separator line-title" />
+        <div class="main-credits"><p>Autor: Carlos Castro Saavedra</p></div>
+        
+        <img class="img-fluid" src="img/imagenlibro2.png" alt="imagenLibro">
+        
+        
+        
+        
+        <div class="main-container-flex" id="container-controls">
+
+            <div class="mobile-menu"></div>
+
+            <div class="invisibleMenu">
+                
+            <div class="menu "></div>
+            
+            </div>
+            <div class="content-container">
+                
+                
+                
+                
+                <!--Prologo -->
+                <div class="slides">
+                    <h2 class="section-title verde">Prólogo</h2>
+                
+                    <div class="content-text">
+                        <p class="first-paragraph">Es oportuna esta canción</p>
+
+                        <p class="italic-text">“Los grandes poetas no tienen biografía.<br>Sólo tienen destino.<br>Y el destino no se narra…<br>Se canta…<br>Escuchad.”</p>
+
+                        <p class="text-align-right">¿Es inoportuna esta canción?<br>León Felipe</p>
+                        
+                        <p>Carlos Castro Saavedra era bajito, acuerpado, de tez morena, fumaba con el cigarrillo puesto en la comisura de los labios. En su juventud usaba sombrero. Era tímido, las palabras le salían a cuentagotas, pero eran precisas y contundentes. A veces se ensimismaba y parecía que soportaba sobre sus hombros el dolor de la humanidad entera. Al final de sus días encontró refugio en una casa con corredores y chambranas a la que llamó “La voz del viento”.</p>
+                        
+                        <p>Publicó su primer libro Fusiles y luceros en la Imprenta Municipal de Medellín en 1946. Para entonces tenía 22 años y ya era reconocido por sus poemas publicados en distintos periódicos desde 1939. Pertenecía a una generación de intelectuales marcados por la agitación social que vivía Colombia desde la década de los treinta. En compañía de Manuel Mejía Vallejo, Fernando González, Pedro Nel Gómez, Alberto Aguirre y otros artistas fundó una institución llamada La Casa de la Cultura que pretendía crear bibliotecas populares  y, por tanto, llevar la lectura a los barrios populares de la ciudad. </p>
+                        
+                        <p>Su primera poesía es marcadamente social y nacionalista. De ella se desprende el claro tono nerudiano del Canto General. Sirvan de ejemplo estos versos dedicados al caudillo liberal Jorge Eliécer Gaitán:</p>
+                        
+                        <p class="italic-text">“Yo lo vi al lado de los hombres,<br>codo a codo, al pie del pueblo.<br>En los motines, en las fábricas,<br>En los ferrocarriles, en las huelgas.<br>Su verbo de alas duras<br>Se batía en el cielo con las piedras…”<br></p>
+                        
+                        <p>Esa poesía social y su activismo cultural despertaron las malquerencias de los sectores más reaccionarios de la sociedad y, como ocurrió con tantos intelectuales de la época, debió partir al exilio. Y se fue a Chile en busca de Pablo Neruda, quien lo acogió con afecto. El poeta chileno organizaba veladas para recoger algún dinero que le permitiera a Castro Saavedra y a su esposa Inés pasar dignamente los días amargos del exilio. La amistad de Neruda quedó plasmada también con las palabras con las que prologó una de las reediciones de Fusiles y luceros: “Pienso que la poesía colombiana despierta de un letargo adorable pero mortal. Este despertar es como un escalofrío y se llama Carlos Castro Saavedra”.</p>
+                        
+                        <p>En su momento fue reconocido como uno de los más importantes poetas colombianos. En 1949, cuando aparece su libro 33 poemas, un joven periodista llamado  Gabriel García Márquez escribe en su columna La jirafa, del diario El Heraldo de Barranquilla: “El de Castro Saavedra… es uno de los buenos libros de poesía que han aparecido en Colombia desde el instante en que se inició nuestra historia literaria… Su fuerza, su vitalidad, no está simplemente en las palabras, sino en la destreza con que ajusta esas mismas palabras a su punto de vista humano, a su rebelde posición de hombre golpeado por las corrientes naturales. En ese clima, su poesía es ya un seguro diapasón que puede pasar por la angustia de la rebeldía a la angustia de la ternura, y pasar sin romperse, en un perfecto equilibrio de ejecución”. <br>La poesía de Castro Saavedra marcó la vida intelectual de la generación siguiente, la cual recitaba entusiasmada sus poemas sociales. En una de las campañas presidenciales recientes, se recuerda al candidato Carlos Gaviria Díaz declamando en las plazas públicas El camino de la patria:</p>
+                        
+                        <p class="italic-text"> “Cuando se pueda andar por las aldeas y los pueblos sin ángel de la guarda. Cuando sean más claros los caminos y brillen más las vidas que las armas…”</p>
+                        
+                        <p>Pasados los años la obra de Castro Saavedra se atempera y adquiere un tono más íntimo, más personal. De la grandilocuencia social pasa al susurro del amor y a nombrar lo sencillo, lo elemental de la vida. El Elogio de los oficios es un buen ejemplo de cómo la palabra poética dignifica las manifestaciones más humildes de la existencia humana.</p>
+                        
+                        <p>La poesía adquiere también un dejo de ternura que se expresa en la poesía dirigida a los niños. Son memorables algunas de sus nanas:</p>
+                        
+                        <p class="italic-text">“Duérmete mi vida,<br>duérmete clavel,<br>tallito de leche,<br>ramito de miel”.</p>
+                        
+                        <p>En buena hora la colección Palabras Rodantes reedita y trae de nuevo la poesía de Carlos Castro Saavedra para que sus versos nos acompañen al expresar la inconformidad ante la injusticia, para decir las dulces palabras del amor o para arrullar los primeros sueños de los niños colombianos. Hoy, más que nunca, es oportuna esta canción.</p>
+                        
+                        <p class="text-align-right">Juan Luis Mejía Arango<br>Abril de 2018</p>
+
+                        <div class="leerMas">¡Comienza la lectura!</div>
+
+
+                        <hr class="line-separator line-orange" />
+
+                    </div>
+                </div>
+                 <!--Cuento 1 -->
+                <div class="slides slide">
+                    <h2 class="section-title verde">Parte I</h2>
+                   
+                     <h1 class="verde chapter-title title1">Camino de la patria</h1>   
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Cuando se pueda andar por las aldeas<br>y los pueblos sin ángel de la guarda.</p>
+            
+                        <p>Cuando sean más claros los caminos<br>y brillen más las vidas que las armas.</p>
+                        
+
+                        <p>Cuando los tejedores de sudarios<br>oigan llorar a Dios entre sus almas.</p>
+
+                        <p>Cuando en el trigo nazcan amapolas<br>y nadie diga que la tierra sangra. </p>
+
+                        <p>Cuando la sombra que hacen las banderas<br>sea una sombra honesta y no una charca. </p>
+                        
+                        <p>Cuando la libertad entre a las casas<br>con el pan diario, con hermosa carta.</p>
+  
+                        <p>Cuando la espada que usa la justicia<br>aunque desnuda se conserve casta.</p>
+
+                        <p>Cuando reyes y ciervos junto al fuego,<br>fuego sean de amor y de esperanza.</p>
+
+                        <p>Cuando el vino excesivo se derrame<br>y entre las copas viudas se reparta.</p>
+                        
+                         <p class="resaltado"><br>Cuando el vino excesivo se derrame<br>y entre las copas viudas se reparta.<br><br> </p>
+            
+                        <p>Cuando el pueblo se encuentre y con sus /manos<br>teja él mismo sus sueños y su manta.</p>
+            
+                        <p>Cuando de noche grupo de fusiles<br>no despierten al hijo con su habla. </p>
+
+                        <p>Cuando al mirar la madre no se sienta<br>dolor en la mirada  y en el alma.</p>
+                        
+                        <p>Cuando en lugar de sangre en el campo<br>corran caballos, flores sobre el agua. </p> 
+                        
+                        <p>Cuando la paz recobre su paloma<br>y acudan los vecinos a mirarla.</p>
+                        
+                        <p>Cuando el amor sacuda las cadenas<br>y le nazcan dos alas en la espalda.</p> 
+                        
+                        <p>Solo en aquella hora podrá<br>el hombre decir que tiene patria.</p>
+ 
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                 <!-- /Cuento 1 -->
+                
+                <!--Cuento 2 -->
+                
+                
+                    <h1 class="verde chapter-title">Dios</h1> 
+                    
+                        
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>En el pan está Dios, en la colmena.<br>En el tallo, en la flor, en el aroma.<br> En el aire, en la luz, en la paloma.<br> En la sal, en la voz, en la azucena.</p>
+            
+                        <p>Está en el fruto que de miel se llena.<br>En el agua amorosa que se toma.<br>En la estrella que tiembla cuando asoma.<br>En la flauta que llora cuando suena.</p>
+                        
+                        <p class="resaltado">Está en el nido oculto, está en la rama.<br>En la chispa, en la brasa, entre la llama </p>
+
+                        <p>Está en el nido oculto, está en la rama.<br>En la chispa, en la brasa, entre la llama<br>que alimenta la lámpara del día.</p>
+
+                        <p>Y sobre todo está en el corazón<br>que en el molino azul de la canción<br>muele su grano de melancolía.</p>
+ 
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                
+                
+                <!-- /Cuento 2 -->
+                
+                 <!--Cuento 3 -->
+               
+                    <h1 class="verde chapter-title">Primera elegía</h1> 
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Ver que se apaga el padre,<br>ver que se va apagando,<br>y no poder alimentar con leños <br>su pecho de suspiros y letargos, <br>para que vuelva a ser sobre la vida<br>un incendio muy alto<br>y un resplandor de llamas<br>encima de la tierra palpitando.</p>
+            
+                        <p>Es terrible mirar que se va el padre,<br>que se va por los días, caminando, <br>solo, mientras se queda su mirada <br>enredada en los hijos y en los árboles. <br>A veces en las vueltas del camino, <br>junto a las piedras anchas de la orilla, <br>el padre se detiene <br>para escuchar el viento del pasado <br>que saltando los montes, los roquedos, <br>hasta su pecho llega gimiendo y sollozando. <br>Pero la muerte llama desde lejos, <br>llama y vuelve a llamar desesperada, <br>y su grito lo escuchan los mancebos <br>que atan gavillas dulces en el campo.</p>
+                        
+                        
+                        <p class="resaltado">El padre se va hundiendo <br>con su esperanza, con nuestra esperanza.</p>                        
+
+
+                        <p>El padre se va hundiendo <br>con su esperanza, con nuestra esperanza. <br>Se va con sus dos brazos <br>en donde tantas veces, niños todavía, <br>florecimos llorando. <br>Se va con su voz dura, <br>con su voz de varón dulcemente arrecida, <br>en donde cosechamos las primeras palabras <br>y los primeros nombres,<br>para llamar la vida. <br>Se va con su hermosura, <br>con su pecho de monte y su frente nevada, <br>su frente pensativa, <br>donde nacimos antes de nacer en las sábanas.<br>Se va el padre con todo, con la miel de sus /huesos <br>y con el fuego dulce y hondo de su mirada. <br>¡Si el padre regresara! <br>¡Si las manos del hijo fueran como una aldea<br>para que en ellas se quedara! <br>Pero la muerte llama desde lejos, <br>llama y vuelve a llamar desesperada, <br>y su grito lo escuchan los mancebos <br>que atan gavillas dulces en el campo.</p>
+ 
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                
+            
+                    <h1 class="verde chapter-title">Historia de quijotes</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Todos éramos soñadores. <br>Todos amábamos la poesía <br>y los amores imposibles. <br>Por la noche andábamos sin rumbo, <br>hechizados por los astros, <br>y regresábamos al hogar <br>como de un sueño hermoso y largo.</p>
+            
+                        <p>Todos teníamos un reino <br>cerca del cielo azul y blanco. <br>Todos queríamos llegar primero <br>y tendíamos la mirada <br>como un ala sobre el espacio.<br>Cruzábamos claros países <br>y fecundábamos la tierra <br>por donde íbamos pasando.</p>
+                        
+                        <p class="resaltado">Todos decíamos canciones<br>y llorábamos de entusiasmo.<br><br> </p>
+
+                        <p>Todos decíamos canciones<br>y llorábamos de entusiasmo. <br>Todos teníamos el alma <br>a flor de labios y de párpado. <br>Veíamos caer la tarde <br>y prometíamos no frustrarnos.</p>
+                        
+                        <p>Con el fuego de las estrellas <br>santificábamos el pacto. </p>
+                        
+                        <p>Pero han corrido algunos años<br>y ya empezamos a ser tristes <br>y a renunciar calladamente <br>a nuestro reino imaginario. <br>A veces alguien se retrasa, <br>a veces se oye que alguien llora <br>en la llanura solitaria. <br>Esta tierra es estéril <br>—dicen los hombres de labranza— <br>Y más estéril que esta tierra <br>es nuestro afán de desgarrarla. </p>
+                        
+                        <p> El tiempo vuela y somos pocos <br>los que seguimos ensoñando. <br>¿Hasta dónde, hasta cuándo? <br>Todos los otros han caído <br>y de sus sueños solo queda <br>viento y ceniza sobre el mundo, <br>ceniza y viento sobre el campo.</p>
+ 
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                
+             
+                    <h1 class="verde chapter-title">Soy un hombre sonoro</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Sueno con el viento que pasa,<br>con la hoja que cae,<br>con la gotera de humo<br>que cae sobre el cielo.</p>
+            
+                        <p>Todo en mí repercute:<br>mi sediento cordaje<br>reproduce el sonido<br>de los volcanes y las mariposas. </p>
+                        
+
+                        <p>Soy un hombre sonoro<br>por dentro, hasta los huesos:<br>me traspasan banderas de rumor,<br>rumorosos desfiles. </p>
+                        
+                        <p>Oigo entre mis heridas<br>tumultos y campanas,<br>ruiseñores que anidan<br>entre mis rojas venas. </p>
+                        
+                        <p>En mis brazos acústicos<br>desembocan los pueblos<br>con su lloroso río<br>de párpados y lágrimas.</p>
+                        
+                        <p>El mar con sus rebaños<br>de agua espumosa y blanca<br>entona en mis apriscos<br>su balido oceánico.</p>
+                        
+                        <p class="resaltado"><br>La tempestad me pulsa<br>con sus dedos eléctricos<br><br> </p>
+
+                        
+                         <p>La tempestad me pulsa<br>con sus dedos eléctricos <br>y me arranca del pecho <br>las lluvias y los truenos.</p>
+                        
+                        <p>Estoy lleno de mundo,<br>de mundiales clamores, <br>de bulliciosas guerras, <br>de abejas, de tambores.</p>
+                        
+                        <p>Tengo piel de guitarra,<br>de océano, de anhelo: <br>yo no escribo ni canto, <br>yo simplemente sueno.</p>
+                        
+                        <p>Sueno con el viento que pasa,<br>con la hoja que cae,<br>con la gotera de humo <br>que cae sobre el cielo.</p>
+ 
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                
+                
+                
+                    <h1 class="verde chapter-title">Segunda elegía</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Yo vi partir el padre de un amigo<br>hacia la tierra, hacia el olvido,<br>con toda su fuerza de hombre<br>convertida en ceniza<br>sobre sus brazos y su pecho.</p>
+                        
+                        <p class="resaltado"><br>Recuerdo el ataúd<br>y los hijos que lo llevaban<br>sobre los hombros, sobre el corazón. </p>
+
+                        
+                        <p>Recuerdo el ataúd<br>y los hijos que lo llevaban<br>sobre los hombros, sobre el corazón.<br>Los hijos en torno de la caja, de los despojos,<br>eran como las puntas de una estrella<br>apagada en el centro,<br>en el comienzo de la luz.</p>
+                        
+
+                        <p>Recuerdo las coronas empapadas<br>y la arcilla tragándose unas manos de hombre <br>que sabían tumbar un toro sobre el campo<br>o una mujer sobre un campo de flores.</p>
+                        
+                        <p>Yo vi cuando la tumba<br>se cerró tras el golpe de los enterradores. <br>Aún me duele el aire, los rezos, el silencio, <br>y la voz del amigo, <br>que sobre la ceniza de su padre <br>se agitaba lo mismo <br>que la última llama <br>de un incendio muy grande. <br>Aún me duele la soledad <br>que dejó el padre muerto, <br>porque es la misma soledad <br>que comienza a dejar mi padre vivo.</p>
+ 
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                
+                
+                    <h1 class="verde chapter-title">Breve visión de la lluvia</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Llueve sobre el campo verde.<br>Por entre música de agua <br>la mirada se me pierde.</p>
+
+                        
+                        <p>Hay una brisa suspensa.<br>Bailan goteras desnudas <br>sobre una esmeralda inmensa.</p>
+                        
+
+                        <p>El cristal de la llovizna <br>en el tronco de los árboles <br>carbonizados se tizna. </p>
+                        
+                        <p>Frescas monedas del cielo<br>se meten por las ranuras<br>de la alcancía del suelo.</p>
+                        
+                        <p>En la hierba humedecida<br>los grillos rayan un vidrio<br>de lluvia desvanecida.</p>
+                        
+                        <p>Lluvia que bajas corriendo<br>a refrescar la mejilla<br>de la flor que está muriendo.</p>
+                        
+                         <p class="resaltado">Lluvia que corres, bajando,<br>para humedecer a tiempo<br>la voz que se está quemando.</p>
+                        
+                        <p>Lluvia que corres, bajando,<br>para humedecer a tiempo<br>la voz que se está quemando.</p>
+                        
+                        <p>Lluvia que caes en la tierra<br>y que luego te levantas<br>en la miel que el fruto encierra.</p>
+                        
+                        <p>Lluvia que caes en el alma<br>y llenas el corazón<br>de diamantes y de calma.</p>
+                        
+                        <p>Cuando te veo descender,<br>pienso que mi alma y el campo<br>por ti van a florecer.</p>
+ 
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                
+                
+                    <h1 class="verde chapter-title">Merecemos el día</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Merecemos el pan, amada mía.<br>Merecemos el día. </p>
+
+                        
+                        <p>Empieza a anochecer pero tu frente<br>es un sol permanente. </p>
+                        
+
+                        <p>Empieza a anochecer pero mis manos<br>son dos tercos veranos. </p>
+                        
+                        <p class="resaltado">Claros de trabajar hemos llegado<br>al crepúsculo honrado.</p>
+                        
+                        <p>Claros de trabajar hemos llegado<br>al crepúsculo honrado. </p>
+                        
+                        <p>Una dulce fatiga nos murmura<br>que merecemos su dulzura, </p>
+                        
+                        <p>y la noche nos paga la faena<br>con la moneda de la luna llena.</p>
+
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                
+                
+                
+                    <h1 class="verde chapter-title">Esposa patria</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>No me canso de andar por tus collados,<br>de recorrer tu cuerpo y tus colinas,<br>de sembrar en tu tierra desgarrada<br>por mi pecho de espadas y de espinas. </p>
+
+                        
+                        <p>Centímetro a centímetro te busco,<br>atravieso tus valles y terrenos,<br>y no me pueden contener tus manos<br>ni me sirven tus puertas ni tus frenos. </p>
+                        
+
+                        <p>Penetro a golpes en tus precipicios,<br>a golpes rompo dulces armamentos,<br>y caigo en tus abismos desarmados<br>con mis labios furiosos y mis ojos violentos.</p>
+                                                
+                        <p>Con mi espumoso amor, con mi oleaje,<br>gasto tu resistencia y tus orillas,<br>y llego hasta la tierra de tus huesos<br>coronado de incendios y semillas.</p>
+                        
+                        <p>Soy labriego de todas tus parcelas,<br>capitán de tus muslos, minero de tus minas,<br>leñador de tus árboles ocultos,<br>verdugo de tu pelo y tus encinas.</p>
+                        
+                        <p>Sacudo tus raíces coloradas,<br>ataco tus rodillas, tus diamantes,<br>y muerdo la manzana de tu cara<br>con mis dientes hambrientos y mis labios /amantes.</p>
+                        
+                        <p>Me saben a Colombia los mordiscos,<br>a patria los abrazos y los besos,<br>y me saben las sábanas a tierra,<br>y a tierra las cobijas y los huesos.</p>
+                        
+                        <p class="resaltado">Mujer de barro triste y colombiano,<br>de orquídeas aplastadas en mi lecho,<br>de rojos cafetales desgranados<br>por mis cóleras dulces y mi pecho.</p>
+
+                        
+                        <p>Mujer de barro triste y colombiano,<br>de orquídeas aplastadas en mi lecho,<br>de rojos cafetales desgranados<br>por mis cóleras dulces y mi pecho.</p>
+                        
+                        <p>Esposa del maíz y de los tiples,<br>de los bambucos y los yacimientos,<br>esposa mía, esposa de mi espuma<br>y de mis Tequendamas insurrectos.</p>
+                        
+                        <p>Esmeralda morena, tierra viva,<br>chapolera, paloma de ojos bellos,<br>campesina vestida de amapolas,<br>de espigas populares y destellos.</p>
+                        
+                        <p>Busco en tu frente pueblos y caminos,<br>galopo en tu cintura de caballos,<br>y te sacude el trueno de mis besos<br>y te ilumina el fuego de mis rayos.</p>
+                        
+                        <p>Eres el río grande, el Magdalena,<br>yo soy el boga sobre la corriente:<br>me arrastran tus cabellos navegables<br>y veo pasar los peces por tu frente.</p>
+                        
+                        <p>En tu bosque más hondo y más secreto<br>se abre la flor granate de mis hijos,<br>se multiplican mis revoluciones,<br>mis hojas grandes y mis ojos fijos.</p>
+                        
+                        <p>Oigo en la vuelta de tu piel disparos<br>y me encuentro con muertos colombianos,<br>pero no me devuelvo, esposa mía,<br>y sepulto los muertos en tus manos.</p>
+                        
+                        <p>He de llegar al fondo de tu vida,<br>al fondo de mi patria y de tus venas,<br>esposa patria, patria de mis besos,<br>capital de mis cantos y mis penas.</p>
+
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+           </div>
+                
+           <div class="slides slide">
+                    <h2 class="section-title verde">Parte II</h2>
+                    
+                    <h1 class="verde chapter-title">Elegía</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Amor, amor, con llanto te lo digo: <br>Se fue mi padre. Anda por el cielo.<br>Se quedaron los niños sin abuelo<br>y los viejos, amada, sin amigo. </p>
+
+                        
+                        <p>Un domingo con lluvia fue testigo:<br>Viajando por el barro, por el suelo, <br>llegó mi padre, con su blanco pelo, <br>al país de las rosas y del trigo. </p>
+                        
+                        <p class="resaltado">No volverá su voz a los cuarteles,<br>ni su dulce mirada a los manteles,<br>los panes rojos y las copas llenas.</p>
+                        
+                        <p>No volverá su voz a los cuarteles,<br>ni su dulce mirada a los manteles,<br>los panes rojos y las copas llenas.</p>
+
+                        <p>De mi padre no queda casi nada:<br>Sólo dolor, la sombra de su espada<br>y la sangre que corre por mis venas.</p>
+               
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                    </div>
+            
+                
+                <!--segunda pagina -->
+                
+                
+                  
+                    <h1 class="verde chapter-title">Epitafio</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Esta casa está sola. Aquí no vive nadie. <br>Pero hace apenas unos meses <br>era un hogar con una madre <br>que atizaba el fuego <br>y tendía los lechos blancos.  </p>
+                        
+                        <p class="resaltado">Murió la madre, murió el padre <br>y los hijos se fueron a morir a otra parte.<br>Esta casa está sola. Aquí no vive nadie. </p>
+                        
+                        <p>Era un hogar, y los hijos varones<br>hablaban de mujeres y de viajes<br>en torno del silencio de su padre.<br>Por la noche, muy cerca de una lámpara,<br>se agrupaba el amor de la familia:<br>alguien se levantaba <br>para ir a buscar un libro de poemas<br>pero dejaba en medio de los suyos el alma.<br>Adentro de esta casa, en sus alcobas, <br>que aún huelen a sábanas, a limpieza y a /madre,<br>se vivió, se soñó,<br>y hubo sitios humildes y cotidianos<br>donde se echaba el perro a mirar a sus amos.<br>Mas un día llegó la muerte y ordenó el desahucio porque nadie, en la casa había pagado su tributo a la tierra.<br>Murió la madre, murió el padre <br>y los hijos se fueron a morir a otra parte.<br>Esta casa está sola. Aquí no vive nadie.  </p>
+
+               
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                
+                       
+                    <h1 class="verde chapter-title">Los caballos por dentro</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Levanto con mis dedos la piel de los caballos,<br>la sombra que los cubre, <br>y veo la materia de que están construidos, <br>la noche roja, el vino <br>que los habita y los levanta.</p>
+                        
+                        <p class="resaltado">Escalo coyunturas<br>que se me abren de pronto como flores de<br>/nieve,<br>pero tibias y duras.</p>
+                        
+                        <p>¡Qué abismos enlazados por el hilo<br>de la respiración y de la sangre!<br>Desciendo largamente por las venas,<br>comulgo con burbujas escarlatas<br>y me dejo invadir por las escamas<br>que los caballos sueñan a la orilla del agua.<br>Escalo coyunturas<br>que se me abren de pronto como flores de<br>/nieve,<br>pero tibias y duras.<br>Selvas de semen cruzo,<br>tejidos viscerales, filamentos, membranas elásticas y claras.<br>El galope por dentro es una ola<br>del color de la noche.<br>¡Oh la profundidad de los caballos,<br>sus resinas fogosas, sus maderas<br>inundadas y tercas!<br>o he visto sus países interiores:<br>todos verdes, iguales a las hojas,<br>y al fuego que les nace los días de verano<br>en la raíz del ojo,<br>cuando miran el sol y las frutas maduras,<br>Yo he vivido, creedme, entre la sal de los /caballos<br>y he contemplado el  hierro y el acero<br>de sus tendones y sus esqueletos.<br>Nacen las crines lentamente, como seda /mojada,<br>y les crecen los cascos como piedras<br>llenas de música y de clavos.<br>Crucé por sus gargantas<br>con el agua y la miel de los establos.<br>Sus gargantas son largas<br>y oscuras como túneles<br>por donde el mar se mete con su espuma<br>y su alfalfa sonora.<br>Días enteros, meses,<br>he recorrido el hondo país de los caballos<br>y he dormido sobre las flores<br>que los caballos hacen con saliva<br>y zumo de sus glándulas.<br>ero todo no es vida navegable,<br>blanda materia orgánica.<br>Allí también hay cielo y hay ternura,<br>espacios blancos, lunas<br>que no pueden medirse ni cantarse.<br>Los caballos, amigos,<br>de repente se llenan de memoria y de tiempo<br>y por sus patios más profundos<br>pasan fantasmas generales<br>que un día galoparon sobre grandes batallas.</p>
+
+               
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            
+                
+                
+                
+                 
+                    <h1 class="verde chapter-title">Plegaria desde América</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Me llamo Carlos, soy nuevo, soy de América,<br>vivo en el sur de América con  un hijo reciente,<br>mis pies son claros y anchos como la /madrugada,<br>mi rostro es matinal, todo mi cuerpo es verde,<br>sobre mi pecho pastan búfalos y caballos<br>y el sol abre amapolas con su mano caliente.</p>
+                        
+                        
+                        <p>Creo en el pescador, en sus pescados y en sus /redes,<br>me gusta ver un pueblo estrenando palomas,<br>siempre espero una carta con noticias del /mundo,<br>espero el pan, la paz, el amor, los manteles,<br>espero con mi hijo junto a las estaciones<br>y pienso que el futuro va a llegar en los trenes.<br>Defiendo mi esperanza, amo mi juventud,<br>pongo un beso en la puerta de mi casa,<br>lo pongo con amor de centinela;<br>después me voy, me voy de bala en bala,<br>de granada en granada deshojando la guerra.</p>
+                        
+                        <p>¿Quién que tenga mi edad no me acompaña,<br>quién con mis dulces años no me sigue,<br>quién que vea brotar espigas de su pecho<br>no se pone del lado de su espigada juventud?</p> 
+
+                        <p>¿Quién en Colombia, en mi país dorado,<br>quién en cualquier país agricultor,<br>quién en toda la América, en sus mares,<br>quién en toda la tierra, en la espaciosa tierra<br>no defiende las vidas que recién amanecen<br>y le arranca las muertes a la guerra?</p>
+                        
+                        <p>Yo sé que somos muchos, que somos casi /todos:<br>somos millones de hombres y de pájaros,<br>millones de mujeres y de auroras,<br>somos una familia mundial de resplandores<br>y no hay un solo hermano que quiera ser /soldado<br>ni hay un solo soldado que quiera disparar /sobre las flores.<br>Nadie quiere trincheras, todos queremos /surcos,<br>queremos tallos dulces en lugar de fusiles,<br>y en vez de municiones queremos dulces /granos<br>y graneros repletos de marzos y de abriles.</p>
+                        
+                        <p>El carpintero de veinte años<br>se niega a fabricar culatas y armamentos,<br>y su hermano que vende manzanas en la calle<br>prefiere hablar de frutas que conversar de /muertos.</p>
+                        
+                        <p>El joven del taller y el muchacho del trigo<br>se niegan a marchar con un tambor de fuego,<br>y el uno se defiende con chispas de su fragua<br>y el otro con espigas y explosiones del suelo.<br>Jóvenes labradores y jóvenes canteros<br>construyen una casa de bueyes y de piedras<br>y se niegan a abrirla cuando pasa la guerra<br>y llama a las ventanas y las puertas.</p>
+                        
+                        <p>¡Oh juventud, aroma de altos cedros,<br>Perfume de entusiastas geologías vivas,<br>espeso movimiento de toros y de árboles,<br>furioso amor, preñez de cordilleras!<br>¡Oh juventud, océano de soles, mar de cantos,<br>rumorosa y profunda madera de guitarras,<br>piel numerosa y fértil contra las bayonetas,<br>piel fértil que floreces en donde te desgarras!</p>
+                        
+                        <p>Allí donde la carne se abrió, donde la carne<br>recibió los mordiscos de la pólvora,<br>ha brotado una flor dura y cicatrizada<br>y aquellos que volvieron, los muchachos<br>que volvieron ayer de las trincheras,<br>se tocan esa flor y se prometen<br>golpear con ella el odio y los cuarteles,<br>golpear la casa de los generales,<br>hasta que se desplomen las espadas<br>entre un clamor de orquídeas y metales.</p>
+                        
+                        <p class="resaltado">Todos están de pie, todos estamos<br>de pie junto a los años fornidos que tenemos<br>y como leñadores trabajamos<br>y con una corteza de amor nos defendemos.</p>
+
+                        
+                        <p>Todos están de pie, todos estamos<br>de pie junto a los años fornidos que tenemos<br>y como leñadores trabajamos<br>y con una corteza de amor nos defendemos.</p>
+                        
+                        <p>En la China el muchacho que cultiva arrozales<br>y esparce por el campo su cara de semilla,<br>devuelve los cañones a medida que avanza<br>envuelto en el relámpago de su carne /amarilla.</p>
+                        
+                        <p>El joven de Alemania reconstruye sus cúpulas,<br>azota sobre el Rhin su camisa de sangre,<br>y siente que en sus manos retoña la blancura<br>como si la camisa se volviera más grande.</p>
+                        
+                        <p>El negro de Abisinia, el nocturno mancebo<br>que rompe la envoltura de la noche africana,<br>ignora que en sus dedos va a florecer el /mundo<br>y que en sus dientes lleva sonriendo la /mañana.</p>
+                        
+                        <p>Muchachos argentinos se dan cita en la /pampa,<br>jóvenes bolivianos se juntan en las minas<br>y levantan la frente del pasto y el estaño<br>y la llenan de noble sudor de golondrinas.</p>
+                        
+                        <p>En bandadas los hijos menores de las patrias,<br>vuelan de patria en patria y apagan la candela<br>que el pastor descuidado deja entre sus /rebaños<br>y que la oveja negra propaga por la tierra.</p>
+                        
+                        <p>Hasta el viejo que tiene una muleta joven<br>defiende el porvenir, guarda el campo /sembrado,<br>y les dice a sus nietos que su barba madura<br>es mucho más hermosa que un cerezo /incendiado.</p>
+                        
+                        <p>Ninguno se abandone ni se quede<br>abandonado en medio de su frente.<br>Acudan todos a escoltar la vida<br>y a quitarle las armas a la muerte.<br>Acudan de la India, de sus ríos sagrados,<br>acudan de los ríos musicales de Italia,<br>a inundar los caminos que Dios puso en la /tierra,<br>con el pie florecido en la joven sandalia.<br>Acudan a mi casa de América, a mi casa,<br>a decir con mi lengua mundial esta plegaria:</p>
+                        
+                        <p>Señor, queremos paz sobre los montes<br>y paz sobre los ríos y los mares, Señor.</p>
+                        
+                        <p>Pacíficas estrellas en el cielo<br>y en los ojos del buey lunas pacíficas.</p>
+                        
+                        <p>Mansedumbre en el pecho de los hombres<br>y en el de las mujeres mansedumbre.</p>
+                        
+                        <p>Silencio para el sueño de los muertos<br>y para el de los vivos más silencio.</p>
+                        
+                        <p>Amor bajo la piel de las naciones<br>y encima de la piel cicatrices de amor.</p>
+                        
+                        <p>Congregantes campanas de los pueblos<br>y en las aldeas domingos congregantes. </p>
+                        
+                        <p>Una paloma al pie de Norteamérica<br>y en los hombros de Rusia otra paloma.</p>
+                        
+                        <p>Una sola bandera en los armarios<br>y en los días festivos una sola.</p>
+                        
+                        <p>Pan en la mesa de los panaderos<br>y en la mesa de todos vino y pan.</p>
+                        
+                        <p>Libertad, para amar, para creer,<br>y para hacer la vida libertad.</p>
+                        
+                        <p>Pinturas en los muros, en las piedras,<br>y en los libros poemas y pinturas. </p>
+                        
+                        <p>Alegría muscular en los estadios<br>y en las camisas verdes alegría. </p>
+                        
+                        <p>Esperanza sin sombra por la noche<br>y por el día andamios y esperanza.</p>
+                        
+                        <p>Misericordia para los vencidos<br>y para el vencedor misericordia.</p>
+                        
+                        <p>Piedad, justicia y besos para todos<br>y para todos madre y más piedad.</p>
+                        
+                        <p>Por un rifle un millón de tulipanes<br>y por cada soldado otro millón.</p>
+                        
+                        <p>Sinfonías a cambio de batallas<br>y a cambio de explosiones sinfonías.</p>
+                        
+                        <p>Coraje entre las manos juveniles<br>y entre los corazones más coraje.</p>
+                        
+                        <p>Fuerza para creer en el futuro<br>y para perdurar mucho más fuerza.</p>
+                        
+                        <p>Paz hasta que se arruguen los cuchillos<br>y hasta que caiga el odio paz y paz.</p>
+                        
+                        <p>Paz en el alma, paz en la mirada,<br>y paz mil veces y mil veces paz.</p>
+
+               
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Y no hay blancura en tu vestido blanco</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Te has vuelto triste y fea, patria bella.<br>Patria de miel, te has vuelto de limones.<br>Dulce patria, caballos de amargura<br>pastan en tus colinas y balcones.</p>
+                        
+                        <p>Te volvieron oscura, patria diurna.<br>Patria joven y diurna, te volvieron anciana:<br>cogieron y arrugaron tu pellejo de orquídeas<br>y apagaron a golpes tu color de manzana.</p>
+                        
+                        <p class="resaltado">Amaneciste gris un mañana,<br>patria de lomas verdes y pájaros verdes.<br>Amaneciste, patria de bambucos,<br>con una carabina entre los dientes.</p>
+                        
+                        <p>Amaneciste gris un mañana,<br>patria de lomas verdes y pájaros verdes.<br>Amaneciste, patria de bambucos,<br>con una carabina entre los dientes.</p> 
+
+                        <p>Patria amorosa, el odio te persigue,<br>te persiguen las armas, patria inerme,<br>y entre tu propio pecho, patria viva,<br>se escuchan los disparos de la muerte. </p>
+                        
+                        <p>Patria de pan, tus montes tienen hambre,<br>tienen sed tus labriegos, patria de manantiales,<br>y no hay blancura en tu vestido blanco,<br>patria de espumas, ovejas y arrozales.</p>
+                        
+                        <p>Si pudiera decirte, patria mía,<br>lo que sufro por todo lo que tienes,<br>por todo lo que tienes y te falta,<br>me moriría tranquilo en tus rodillas,<br>como se muere un hombre que conversa /palomas<br>y le queda un hermoso dolor en la garganta.</p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Coplas del amor y de la muerte</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Una mañana, amor mío,<br>o una noche encendida,<br>cesará tu resplandor<br>y se apagará la vida.</p>
+                        
+                        <p>El amor es una guerra<br>feliz pero desdichada,<br>porque se traga la tierra<br>al amante y a la amada.</p>
+                        
+                        <p>Si te pudiera besar<br>eternamente los ojos,<br>pero está esperando el mar<br>tu ceniza y mis despojos.</p> 
+
+                        <p>Presurosamente arde<br>la llama de los amores.<br>De la mañana a la tarde<br>pierden su aroma las flores.</p>
+                        
+                        <p>Cuando de luto es tu traje<br>y el mío es triste y sencillo,<br>pienso en un viaje, en un viaje<br>por el filo de un cuchillo.</p>
+                        
+                        <p class="resaltado">Si no hubiera sepultura<br>el amor sería amor,<br>y no sería tan dura<br>mi faena y tu labor.</p>
+                        
+                        <p>Si no hubiera sepultura<br>el amor sería amor,<br>y no sería tan dura<br>mi faena y tu labor.</p>
+                        
+                        <p>Las aves van a sus nidos,<br>los buques van a sus puertos,<br>y van los besos heridos<br>en las bocas de los muertos.</p>
+                        
+                        <p>Cuando te pongo la mano<br>sobre el hombro, compañera,<br>pienso que soy el verano<br>destiñendo una bandera.</p>
+                        
+                        <p>Crece el mar en las orillas,<br>los árboles en el cielo,<br>y se ponen amarillas<br>las hojas sobre tu pelo.</p>
+                        
+                        <p>Le duele al río la barca,<br>al camino la pisada,<br>y al amante que se embarca<br>el recuerdo de su amada. </p>
+                        
+                        <p>Unidos por los abrazos<br>y empujados por los besos,<br>vamos perdiendo los pasos<br>en los caminos espesos.</p>
+                        
+                        <p>Sombra del amor florido<br>y del amor desatento,<br>es el luto en el vestido<br>y la ceniza en el viento.</p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Melancolía de las banderas</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>A mí no me den banderas,<br>sino aire, aire y aire.<br>Me sobran todas las telas<br>y me falta todo el aire.</p>
+                        
+                        <p class="resaltado">Las banderas me sepultan<br>y el aire me desentierra.</p>
+                        
+                        <p>Las banderas me sepultan<br>y el aire me desentierra.<br>Polvo de los cementerios<br>es el que vuela en el aire.<br>Las banderas son sudarios<br>y es un ala todo el aire.<br>Las plumas caen, las banderas,<br>pero se sostiene el aire.<br>Sedas he visto partir<br>y morir un trapo grande:</p>
+                        
+                        <p>en el aire quedan huecos,<br>pero son huecos de aire.<br>Plazas he visto y banderas<br>que oscurecen a la tarde,<br>mas nunca he visto mis manos<br>enlutadas por el aire.<br>A las banderas se va<br>como a un herido en el aire,<br>que no le duele la herida<br>porque se la sopla el aire,<br>pero que muere a torrentes<br>y brota pliegues de sangre,<br>cuando el viento se retrasa<br>o se desanima el aire.</p> 
+
+                        <p>Yo no quiero, pues, banderas,<br>sino aire, aire y aire,<br>para curarme la vida<br>de tanta vida sin aire.</p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                   <h1 class="verde chapter-title">Plegaria</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Pido al que hace los árboles, a Dios,<br>que cubra con su cielo, con su manto,<br>la casa donde vivo, donde canto<br>y la mujer que canta con mi voz.</p>
+                        
+                        
+                        <p>Pido que el pan no falte, que el arroz,<br>con sus pequeñas lágrimas de santo,<br>ilumine mi mesa y que su llanto<br>no solamente alcance para dos. </p>
+                        
+                        <p class="resaltado">Pido que ella me ame y yo la quiera<br>hasta que en una caja de madera<br>ambos viajemos. Pido, finalmente, </p>
+
+                        
+                        <p>Pido que ella me ame y yo la quiera<br>hasta que en una caja de madera<br>ambos viajemos. Pido, finalmente,</p> 
+
+                        <p>que el Señor se defienda con sus alas,<br>de los truenos, los rayos y las balas<br>que a toda hora cruzan por mi frente.</p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Te quiero por sencilla</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        <p>Te quiero por sencilla, por semejante al heno<br>que cultivan las manos de un campesino /bueno.</p>
+                        
+                        
+                        <p>Te amo por laboriosa, por el rumor de abeja<br>que tienen tus arrugas sobre la ropa vieja.</p>
+                        
+                        <p class="resaltado">Simplemente recoges en tu falda los días,<br>como hojas amarillas, como mis agonías.</p>
+
+                        
+                        <p>Simplemente recoges en tu falda los días,<br>como hojas amarillas, como mis agonías. </p> 
+
+                        <p>Haces el pan, el beso, los hijos el camino,<br>los domingos de lana, los manteles de lino,</p>
+                        
+                        <p>y yo te amo, mujer, te amo y te siento<br>más cerca de mi pecho que de tu pensamiento.</p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Hermoso Whitman</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Yo te recuerdo siempre<br>desnudo y poderoso, pastor de grandes ríos,<br>hortelano de estrellas, cultivador de bosques,<br>trashumante labriego, madrugada<br>reveladora de los horizontes.<br>Te recuerdo entre pardos animales,<br>entre todos los hombres, entre el agua,<br>repartiendo tu fuerza milagrosa,<br>distribuyendo arados, alientos, pulsaciones,<br>y cantando, cantando hermoso Whitman,<br>tus hermosas canciones.</p>
+                        
+                        
+                        <p>Yo te recuerdo siempre<br>con tu rostro de claro leñador,<br>de evangelista de cereales.<br>Te recuerdo en las fraguas, en los campos,<br>en las fiestas doradas que hacen los /labradores,<br>predicando tu amor y caminando<br>por entre las espigas y las flores.<br>Tu garganta caliente y pajarina,<br>tu lengua de amapolas,<br>tus dos labios carnosos y olorosos a monte,<br>y tu voz, hermoso Whitman,<br>resplandeciendo encima de tu nombre.</p>
+                        
+                        <p class="resaltado">Yo te recuerdo siempre<br>con tu alegría primaveral y bulliciosa,<br>con tu vitalidad de siempreviva,</p>
+
+                        <p>Yo te recuerdo siempre<br>con tu alegría primaveral y bulliciosa,<br>con tu vitalidad de siempreviva,<br>con tu heroísmo sano y contagioso,<br>con tu fe de ermitaño, de atleta, de camino<br>que va a dar a un pueblo o a un pozo.<br>Te recuerdo y te oigo correr eternamente </p> 
+
+                        <p>por las arterias de los hombres,<br>por las raíces duras de las bestias,<br>por los desiertos y por las praderas,<br>porque no has muerto, hermoso Whitman,<br>y mis brazos te esperan.</p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            </div>
+                
+                <div class="slides slide">
+                    <h2 class="section-title verde">Parte III</h2>
+                    
+                    <h1 class="verde chapter-title">Soneto del amor elemental</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Mi amor era sencillo como el vino.<br>Como la barba blanca de un abuelo.<br>Como una golondrina contra el cielo.<br>Como el habla de un hombre campesino.</p>
+                        
+                        
+                        <p>Era como el saludo del vecino.<br>Como un llanto de niño en un pañuelo.<br>Como frutas regadas en el suelo.<br>Como la albura de un mantel de lino.</p>
+                        
+                        <p class="resaltado">En esta simple rama del amor<br>mi corazón —constancia de una flor—<br>todas las madrugadas florecía.</p>
+
+                        <p>En esta simple rama del amor<br>mi corazón —constancia de una flor—<br>todas las madrugadas florecía.</p> 
+
+                        <p>Y ella que siempre lo cuidaba tanto,<br>una mañana le negó su llanto<br>a pesar de saber que se moría.</p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+               
+                    <h1 class="verde chapter-title">Callemonos un rato</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Hemos hablado mucho, compatriotas,<br>¿por qué no nos callamos<br>para que las palabras se maduren<br>en medio del silencio<br>y se vuelvan arroz,<br>cajas de pino, escobas,<br>duraznos y manteles?<br>Hacemos mucho ruido<br>y repetimos la palabra muerte<br>hasta que la matamos.<br>Decimos mucho corazón<br>y gastamos el fruto más hermoso del pecho.<br>Lo que importa es el río,<br>no su nombre.<br>Lo que interesa es pan<br>y no discursos<br>sobre las propiedades de la harina.<br>El mar es bello porque es mar<br>y no porque lo cantan los poetas,<br>y existirían piñas<br>aunque no se llamaran como llaman.<br>Bajo la tierra crece la semilla<br>porque el surco no habla<br>ni le pone adjetivos a la espiga.<br>Un hombre que se calla largamente<br>se convierte en camino,<br>y si guarda silencio su mujer<br>puede volverse viaje.<br>Callémonos un rato,<br>al menos para ver qué le sucede<br>a la palabra uva.<br>Es posible que crezca y se derrame<br>hasta llenar el mundo de dulzura<br>y cascadas de vino.</p>
+
+                        
+                        <p class="resaltado">Hacemos mucho ruido<br>y repetimos la palabra muerte<br>hasta que la matamos.</p>
+
+                        
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Los ataúdes enamorados</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Nuestras tumbas, mujer, se darán besos,<br>nuestros cajones besos y mordiscos,<br>y no serán sudarios los nuestros sino sábanas<br>para engendrar trigales<br>y construir el pecho de los cedros.</p>
+                        
+                        
+                        <p>Nos volverán a ver sobre la tierra,<br>a ti llena de polen y de pétalos,<br>cubierta de azaleas y azahares,<br>y a mí con un pedazo de primavera roja<br>entre la boca de madera.</p>
+                        
+                        <p class="resaltado">Sobre la tierra, amada, sobre el campo,<br>tú con trenzas de musgo,<br>con un manto de plumas y de orquídeas,</p>
+
+                        <p>Sobre la tierra, amada, sobre el campo,<br>tú con trenzas de musgo,<br>con un manto de plumas y de orquídeas,<br>y yo con un relámpago extendido en mis ramas<br>como una fruta elástica y madura.</p> 
+
+                        <p>La muerte será apenas un fecundo reposo,<br>un sueño recorrido por gusanos labriegos,<br>otra luna de miel entre raíces,<br>otro rodar los dos dulces y mudos,<br>por un salón de terciopelo verde.</p>
+                        
+                        <p>Que no pongan el nombre tuyo sobre la /bóveda,<br>ni el mío sobre el hueco que se trague mis /tigres,<br>sino que nos abonen y nos rieguen,<br>pues esto es suficiente, compañera,<br>para tu corazón y mi semilla.</p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+            
+                    <h1 class="verde chapter-title">El mundo por dentro</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Siento correr los ríos por mis venas<br>y crecer las estrellas en mi frente.<br>Siento que soy el mundo y que la gente<br>habita mis pulmones y colmenas.</p>
+                        
+                        
+                        <p>De flores tengo las entrañas llenas<br>y de peces la sangre, la corriente<br>que caudalosa y permanentemente<br>inunda mis canciones y mis penas.</p>
+                        
+                        <p class="resaltado">Llevo por dentro el fuego que por fuera<br>dora los panes, seca la madera<br>y produce el incendio del verano.</p>
+
+                        <p>Llevo por dentro el fuego que por fuera<br>dora los panes, seca la madera<br>y produce el incendio del verano.</p> 
+
+                        <p>Las aves hacen nidos en mi pelo,<br>crece hierba en mi piel, como en el suelo,<br>y galopan caballos en mi mano.</p>
+
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                 
+                    <h1 class="verde chapter-title">En ti beso la patria</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>En ti beso la patria, beso el río<br>que la desencadena, que la canta,<br>y la flor que del suelo se levanta<br>y la viste abejas y rocío.</p>
+                        
+                        
+                        <p>Tierra eres, relente de plantío,<br>sombra de monte, vegetal garganta,<br>y tanta patria dulce, tanta, tanta,<br>cabe toda en tu beso y en el mío.</p>
+                        
+                        <p class="resaltado">Cuando se juntan nuestras bocas, cuando<br>el hijo a tu cintura va llegando<br>en forma de semilla y de gemido,</p>
+
+                        <p>Cuando se juntan nuestras bocas, cuando<br>el hijo a tu cintura va llegando<br>en forma de semilla y de gemido,</p> 
+
+                        <p>no te llamo mujer, profunda esposa,<br>sino Colombia, patria generosa<br>cuna del trueno y pedestal del nido.</p>
+
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Amistad</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Amistad es lo mismo que una mano<br>que en otra mano apoya su fatiga<br>y siente que el cansancio se mitiga<br>y el camino se vuelve más humano.</p>
+                        
+                        
+                        <p>El amigo sincero es el hermano<br>claro y elemental como la espiga,<br>como el pan, como el sol, como la hormiga<br>que confunde la miel con el verano.</p>
+                        
+                        <p class="resaltado">Grande riqueza, dulce compañía<br>es la del ser que llega con el día<br>y aclara nuestras noches interiores.</p>
+
+                        <p>Grande riqueza, dulce compañía<br>es la del ser que llega con el día<br>y aclara nuestras noches interiores.</p> 
+
+                        <p>Fuente de convivencia, de ternura,<br>es la amistad que crece y se madura<br>en medio de alegrías y dolores.</p>
+
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Amor</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Un deseo constante de alegría;<br>una urgencia perenne de lamento<br>y el corazón, campana sobre el viento<br>estrenando badajos de elegía.</p>
+                        
+                        
+                        <p>Morir mil veces en un solo día<br>y otras tantas quemar el pensamiento<br>en la resurrección, que es el tormento<br>de pensar en la próxima agonía.</p>
+                        
+                        <p class="resaltado">Ver en pupilas de mujer un llanto<br>y sorprenderlo convertido en canto<br>al soñar en un niño que lo vierte.</p>
+
+                        <p>Ver en pupilas de mujer un llanto<br>y sorprenderlo convertido en canto<br>al soñar en un niño que lo vierte.</p> 
+
+                        <p>Esto es amor, candela estremecida<br>empujando la noche de la vida<br>hacia la madrugada de la muerte.</p>
+
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                </div>
+                
+                
+                <div class="slides slide">
+                    <h2 class="section-title verde">Parte IV</h2>
+                    
+                    <h1 class="verde chapter-title">Canción del amor herido</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Tengo las manos muy tristes<br>y no sé qué hacer con ellas,<br>porque anoche me corté<br>los dedos en las estrellas.</p>
+                        
+                        
+                        <p>Estaba pensando en ti,<br>en tus ojos estrellados,<br>y me pasé por la frente<br>los dedos enamorados.</p>
+                        
+                        <p class="resaltado">Fue allí donde me corté,<br>en mi frente, con tus ojos,<br>y se me pusieron grandes<br>los pensamientos y rojos.</p>
+
+                        <p>Fue allí donde me corté,<br>en mi frente, con tus ojos,<br>y se me pusieron grandes<br>los pensamientos y rojos.</p> 
+
+                        <p>Hoy no he podido sembrar<br>mi tierra, mi agricultura,<br>y la comida me sabe<br>a tierra de sepultura.</p>
+                        
+                        <p>Tengo las manos deshechas<br>por tus pupilas, mi amor,<br>por pensar en tus pupilas<br>y tocar su resplandor. </p>
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+               
+                    <h1 class="verde chapter-title">Fecunda compañera</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>En el espejo de tu cuerpo, esposa,<br>recogiste mi rostro, tan fielmente,<br>que la línea más honda de mi frente<br>quedó presa en tu sangre temblorosa.</p>
+                        
+                        
+                        <p>Me copiaste, mujer, mujer hermosa,<br>en tu río de amor, en tu corriente,<br>y devolviste generosamente<br>mi cara de montaña silenciosa.</p>
+                        
+                        <p class="resaltado">Grande riqueza, dulce compañía<br>es la del ser que llega con el día<br>y aclara nuestras noches interiores.</p>
+
+                        <p>El hijo es tierra de mi propia tierra,<br>resplandor de mis ojos y mi guerra,<br>poderosa presencia de mí mismo.</p> 
+
+                        <p>Gracias a ti, fecunda compañera,<br>fui como una semilla en tu pradera<br>y retorné más joven de tu abismo. </p>
+
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Hembra de tierra y tierra</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>No te digo paloma, ni princesa, ni reina,<br>sino mujer de tierra, hembra de tierra y tierra,<br>compañera de besos, compañera<br>de mi revolución y de mi guerra.</p>
+                        
+                        
+                        <p>Te llamo barro de mi alfarería,<br>surco de mis labranzas coloradas,<br>pradera en que galopan mis caballos<br>con las crines heridas y quemadas.</p>
+                        
+                        <p class="resaltado">Grande riqueza, dulce compañía<br>es la del ser que llega con el día<br>y aclara nuestras noches interiores.</p>
+
+                        <p>Mujer tendida en medio de la tierra<br>te llamo y te rodeo con mis brazos,<br>como si fueras trigo de mis eras<br>y raíz de mis besos y mis pasos.</p> 
+
+                        <p>No doy contigo pensativamente<br>sino luchando con tu cabellera,<br>y golpeando mi vida leñadora<br>contra tu corazón y tu madera. </p>
+
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                    <h1 class="verde chapter-title">Inés</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Inés digo y mi boca se convierte en azúcar<br>de manzana partida por la luz del verano.<br>Decir esta palabra es como adivinar<br>que está cantando un pájaro en un árbol /lejano.</p>
+                        
+                        
+                        <p>Inés digo y mi labio se convierte en abierta<br>flor de pétalos dulces contra la madrugada.<br>Decir esta palabra es soñar que está muerta<br>la tarde en el abismo de la noche estrellada.</p>
+                        
+                        <p class="resaltado">Grande riqueza, dulce compañía<br>es la del ser que llega con el día<br>y aclara nuestras noches interiores.</p>
+
+                        <p>Inés digo y parece que mi voz se quedara<br>temblando entre las redes impalpables de un /beso.</p> 
+
+                        <p>Decir esta palabra es como si lograra<br>detener en el aire la música de un rezo. </p>
+                        
+                        <p>Cuando yo digo Inés olvido los agravios<br>y de claros panales y canciones me acuerdo.<br>Decir esta palabra es apretar los labios<br>para intentar el acto de besar un recuerdo.</p>
+                        
+                        <p>Alzar las manos puras para decir Inés<br>es caer en la sombra de un árbol florecido.<br>Decir Inés, siquiera por una sola vez,<br>es sentir en la rama del corazón un nido.</p>
+
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                    <h1 class="verde chapter-title">Las trenzas lejanas</h1>
+                    <div class="content-text">
+                    <div class="text-center">
+                        
+                        <p>Yo amé desde un principio tu sencillez de dalia,<br>tu pudor de semilla que se viste hasta el fondo,<br>y el amor con que hacías tus trenzas bajo el /cielo<br>y escuchabas mis versos como un ave en el /hombro.</p>
+                        
+                        
+                        <p>Tu andar de sementera, de parcela espigada,<br>tu lengua constelada de honorables silencios,<br>y tus manos en guerra, sobre tu falda verde,<br>con las ganaderías que apacientan los vientos.</p>
+                        
+                        <p class="resaltado">Grande riqueza, dulce compañía<br>es la del ser que llega con el día<br>y aclara nuestras noches interiores.</p>
+
+                        <p>Inés digo y parece que mi voz se quedara<br>temblando entre las redes impalpables de un /beso.</p> 
+
+                        <p>Decir esta palabra es como si lograra<br>detener en el aire la música de un rezo. </p>
+                        
+                        <p>Cuando yo digo Inés olvido los agravios<br>y de claros panales y canciones me acuerdo.<br>Decir esta palabra es apretar los labios<br>para intentar el acto de besar un recuerdo.</p>
+                        
+                        <p>Alzar las manos puras para decir Inés<br>es caer en la sombra de un árbol florecido.<br>Decir Inés, siquiera por una sola vez,<br>es sentir en la rama del corazón un nido.</p>
+
+
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="slides slide"></div>    
+                
+                
+                
+               
+                
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+   <div class="main-container main-container-flex main-container-home">
+     <p class="brand-palabras">Palabras rodantes</p>
+     <h1 class="brand footer-brand">Comfama</h1>    
+   </div>
+   <div class="copyright"><p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p></div>
+</footer>
+    <script>
+window.createMenu('3');    
+</script>
+</body>
+</html>

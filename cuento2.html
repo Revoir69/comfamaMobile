@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palabras rodantes</title>
+    
+<!-- estilos -->    
+<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+    
+<!-- acciones -->
+<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+<script src="js/jq-sticky-anything.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/base.js" type="text/javascript"></script>     
+<script type="text/javascript" src="js/queryloader2.min.js"></script>
+<script type="text/javascript">
+window.addEventListener("DOMContentLoaded", function() {
+    new QueryLoader2(document.querySelector("html"), {
+        barColor: "#fff",
+        backgroundColor: "#000",
+        percentage: true,
+        barHeight: 0,
+        minimumTime: 1000,
+        maxTime: 50000,
+        fadeOutTime: 1000
+    });
+});
+
+</script>
+</head>
+    
+<style>
+.menu li:hover{
+    background-color: #B36D31;
+    color: #000;
+    
+    }
+    
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 24%;
+    padding-top: 4%;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url(img/btnLect.png);
+    background-repeat: no-repeat;
+    width: 305px;
+    height: 100px;
+}
+    
+.first-paragraph::first-letter{
+    font-size: 5em;
+    line-height: 0;
+    font-family: 'oswaldmedium';
+    color: #EA6020;
+    
+}
+    
+.menu-selected{
+    color: #fff;
+    background-color: #B36D31;
+}
+   
+.line-orange{
+    border: 1px solid #ff8e1e;
+    margin-top: 6%;
+    margin-bottom: 30px;
+}    
+    </style>
+    
+<body class="bg-book2">
+<header>
+    <a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+    <h1 class="brand">Comfama</h1>
+    
+    <img class="botonA" src="img/buttonA.png" alt="boton cambio">
+    
+    <div class="slideHeader">
+         
+        <img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+        <img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+        <img class="resetFont" src="img/reset.png" alt="resetear">
+        <br>
+        <img class="blanco" src="img/blanco.png" alt="btn blanco">
+        <img class="morado" src="img/morado.png" alt="btn morado">
+        <img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+        
+    </div>
+    
+</header>
+     
+    <div class="presentation">
+        
+        <div class="main-container presentation-container">
+            <button id="presentation-close">Cerrar</button>
+            <div class="presentation-scroll">
+                
+                <h1 class="presentation-title">Créditos</h1>
+                
+
+               <p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía</p>
+                
+                <p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+                <p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+
+                
+            </div>
+            
+        </div>
+    </div>   
+    
+     
+    <div class="global-container">
+        
+        
+        
+        
+        
+        <hr class="line-separator line-title" />
+        <h1 class="cafe main-title">Cuentos de<br/> <span class="cafe oswald-light">mujeres estadounidenses</span></h1>
+        <hr class="line-separator line-title" />
+        <div class="main-credits"><p>Pearl S. Buck, Rolaine Hochstein, Carlson McCullers, Flannery O’Connor,</p><p>Katherine Anne Porter, Patricia Highsmith, Patricia Highsmith</p></div>
+        
+        <img class="img-fluid" src="img/imagenlibro1.png" alt="imagenLibro">
+        
+        
+        
+        
+        <div class="main-container-flex" id="container-controls">
+
+            <div class="mobile-menu"></div>
+
+            <div class="invisibleMenu">
+                
+            <div class="menu "></div>
+            
+            </div>
+            <div class="content-container">
+                
+                
+                
+                
+                <!--Prologo -->
+                <div class="slides">
+                    <h2 class="section-title naranjaOs">Prólogo</h2>
+                
+                    <div class="content-text">
+                        <p class="first-paragraph">El gran maestro universal del cuento durante los dos últimos siglos ha sido el cuento estadounidense. Uno de sus escritores, Edgar Allan Pöe (1809-1849), definió y confirmó muchas de las características del cuento moderno, y llegó a convertirse en el creador de subgéneros como el cuento de terror, el cuento de suspenso o el cuento policiaco; otro de ellos, Hemingway (1899-1961), Premio Nobel de Literatura en 1954, con su teoría del iceberg, elevó el cuento a la categoría de obra de arte minimalista y ejerció una influencia que todavía hoy nos sirve de alimento; otro, Truman Capote (1924-1984), reunió en un solo libro la novela, la crónica periodística y el horror de la condición humana. A sus nombres se suman los de Faulkner (1847-1962), premio Nobel en 1949, cuya influencia en la literatura latinoamericana del siglo XX consiguió la transformación cultural de todo un continente; Melville (1819-1891); Steinbeck (1902-1968), premio Nobel en 1962; Twain (1835-1910); Fitzgerald (1896-1940); Salinger (1919-2010); Carver (1938-1988) y muchos otros.</p>
+
+                        <p>Así como ellos, las escritoras de los Estados Unidos constituyen una legión por su calidad y por el poder de su capacidad creativa. Son pioneras, audaces, sinceras, revolucionarias, agudas, crueles…, reúnen las características que hacen de yin, lo femenino, la inteligencia y la sensibilidad que garantizan el cuidado de la especie humana. Pearl S. Buck (1892-1973), Premio Nobel de Literatura en 1938, por medio de un recaudador de impuestos en una región anónima de China, nos confirma que el hombre es el mismo en cualquier lugar y en cualquier época; Rolaine Hochstein, la única narradora todavía viva de las que incluimos en esta selección, con especial sutileza alude al refinamiento estético que se produce en el desarrollo de las cualidades femeninas en un hombre; Carson McCullers (1917-1967), la gran narradora del sur de los Estados Unidos, ese otro universo particular común a Faulkner, es dueña de un poder de creación de personajes dolorosamente únicos; Flannery O’Connor (1925-1964), en muchas ocasiones ha sido considerada la mejor cuentista entre las mujeres de su país, título que no le cabe a una sola persona, pero que solo se le otorga a quienes han logrado la gran maestría en el oficio narrativo, lo suyo es la mezcla de la imaginación y una dulce capacidad para comprender el alma humana; Katherine Anne Porter (1890-1980), también candidata al Premio Nobel, sabia, amorosa y delicada, nos muestra en este cuento, Calabazas para la abuelita Weatherall, el punto de vista de alguien que lentamente va entrando en la muerte y, por un instante, nos permite vivir ese acontecimiento en carne propia; Patricia Highsmith (1921-1995), otra de las reinas del suspenso y de la novela policiaca, advirtió desde muy temprano la rebelión feminista y la expresó con especial humor en sus cuentos; y Dorothy Parker (1893-1967), como la mayoría de las grandes narradoras estadounidenses, porta un agudo látigo para reírse de la estupidez, especialmente la de los hombres bajo el dominio de la inteligencia femenina. </p>
+
+                        <p >Aunque faltarían aquí muchos más nombres de los que hemos incluido, el presente volumen constituye una hermosa muestra de la narrativa estadounidense escrita por mujeres. Ante ellas nos cabe inclinar la cabeza en reverencia respetuosa y disfrutar de su magisterio. </p>
+
+                        <p class="text-align-right">Luis Fernando Macías <br/>Marzo de 2018</p>
+
+                        <div class="leerMas">¡Comienza tu lectura!</div>
+
+
+                        <hr class="line-separator line-orange" />
+
+                    </div>
+                </div>
+                 <!--Cuento 1 -->
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Pearl S. Buck</h2>
+                    <h1 class="chapter-title cafe">El recaudador <br/><span class="oswald-light cafe">de impuestos</span></h1>
+                    
+                    <div class="content-text">
+                        <p class="first-paragraph">El autobús entre el Pueblo de Wang y el Pueblo de la Familia Li va siempre repleto de pasajeros a pesar del hecho de que la carretera que recorre está entre montañas señoreadas por bandidos. Esto se debe a que en el Pueblo de Wang se puede tomar otro autobús que conduce a la estación de ferrocarril más cercana. El Pueblo de Wang es una villa plebeya, y sería hoy el pueblo que fue hace siglos, y que todavía merece ser, si no fuera por la falsa vida que ha adquirido como parada de autobuses para la línea férrea de Lung Tan. Como en todas las ciudades advenedizas, muchos de sus habitantes son bribones en una forma u otra. Sabiamente emplazadas, hay tiendas al lado de prostíbulos, y viceversa, y cuando una mujerzuela exige un regalo antes de conceder sus favores, al minuto puede ser adquirido y entregado, y los asuntos continúan sin dilación.</p>
+            
+                        <p>Entre los ciudadanos del Pueblo de Wang no había otro tan ardientemente odiado y temido como Yang Diente Largo, el recaudador de impuestos. En cualquier región el recaudador de impuestos es, naturalmente, el peor de los hombres. Pero Diente Largo no habría sido hermoso aunque no hubiese sido recaudador de impuestos. Los dioses, sin duda para divertirse, le habían otorgado el don de un diente delantero que sobrepasaba a los otros en longitud, y como era poseedor de una boca tan ancha como una ventana, con este diente daba un susto al mismo miedo. Asombró a sus padres cuando era niño y horrorizó a su esposa cuando se lo vio en la noche de bodas. Todavía le horrorizaba y, por eso, se había impuesto el deber de no mirar nunca a su marido. Como, por otra parte, las reglas de la buena educación de la mujer recomiendan no mirar a un hombre, nadie se había dado cuenta de su pánico.</p>
+                        
+
+                        <p>Por el contrario, permitió que su largo diente le diera un aspecto fiero, cruel, rudo. Siendo niño empujaba a los otros muchachos para hacerlos caer en el polvo del camino, y les enseñaba el diente al hacerlo. Ya hombre, mostraba el diente a los que quería subyugar. Fue natural, por tanto, que solicitase el cargo de recaudador de impuestos en el Pueblo de Wang, e inevitable que se lo adjudicaran a él.</p>
+
+                        <p>No se debe creer que los habitantes del Pueblo de Wang fueran tan serviles, sin embargo, como para sufrirle sin rebelión. Los chinos que habían crecido al mismo tiempo que Yang Diente Largo nunca olvidaron que les había dado patadas y empujado cuando eran pequeños, y cuando se hizo recaudador de impuestos todos sus malos recuerdos revivieron contra él. </p>
+
+                        <p>Mas ¿quién puede luchar contra un recaudador de impuestos? Tenía los recursos de la región entera en su mano. Bastaba que un hombre redondeara un buen negocio vendiendo un cerdo, cuando ya tenía a Diente Largo a la puerta de su casa. </p>
+                        
+                        <p>—Vengo a cobrar el impuesto sobre el provecho que has realizado, en bien de la nación —decía siempre con campanuda voz.</p>
+  
+                        <p> —¿Qué tiene que ver la nación con mi cerdo? —exclamaba el hombre—. El cerdo era mío, nacido de una marrana mía y cebado con las sobras de mis propias cosechas.</p>
+
+                        <p>—El Gobierno ha mandado que se le entregue un tercio de todos los negocios que se hagan —declaraba Diente Largo—.Estoy autorizado a emplear la fuerza si es necesario.</p>
+
+                        <p>La fuerza significaba que el jefe de policía del Pueblo de Wang y sus seis agentes auxiliares podían entrar en la casa y quedarse allí para ser mantenidos y alojados, y dormir en las camas y sentarse en las sillas que en ella hubiere. Esto era terrible, y si había mujeres en la casa, vergonzoso. Gruñendo y maldiciendo a los antepasados de Diente Largo, el hombre arrojaba en la palma de la gruesa mano del recaudador el dinero del impuesto.</p>
+            
+                        <p>Dudamos que los ciudadanos del Pueblo de Wang hubieran hecho acopio de las fuerzas necesarias para librarse del castigo de Diente Largo a no ser por algunos acontecimientos que tuvieron lugar en los días siguientes, poco después de haberse terminado la recogida de la cosecha del arroz. Toda la región campesina se encontraba en el paroxismo del furor porque Diente Largo había visitado casa por casa para reclamar el tercio de la cosecha en bien de la nación. En aquellos días las gentes odiaban con toda su alma a la nación, porque para ellas solo significaba Diente Largo.</p>
+            
+                        <p>—¿Qué nación es esa de la que siempre se está hablando? —se quejaban a gritos unos a otros—Esa nación no hace nada por nosotros. No alimenta a nuestros hijos ni cuida de nuestros ancianos. No ara nuestros campos ni corta nuestras gavillas. </p>
+
+                        <p>No nos construye buenos caminos ni nos protege contra los bandidos de las montañas.Esto de los bandidos era otro motivo de enojo, ya que cuando Diente Largo se había llevado la parte de la nación, bajaban los bandidos a reclamar la suya.</p>
+                        
+                        <p>—Sería difícil distinguir quiénes son los peores bandidos, si Diente Largo y su nación, o aquel perro amarillo y los perrillos que viven en las montañas —declaraba Li el Viejo, en el Pueblo de la Familia Li.</p> 
+                        
+                        <p>Los ciudadanos eran tan pacíficos que ni siquiera esto les hubiera movido a obrar. Cuando se marchaba Diente Largo se sentaban a gemir un rato, pero pronto se secaban los rostros con sus cíngulos de algodón azul, miraban a sus mujeres y a sus hijos y, a pesar de ellos mismos, empezaban a sonreír. La vida era buena todavía. </p>
+                        
+                        <p>—¿Debemos consentir que unos bribones nos suman en la miseria? —se preguntaban. Y consolándose, añadían—: Pero únicamente hay un solo Diente Largo, y este no puede estar en todas partes a la vez, ni vivir eternamente. Los bandidos, por el contrario, habitan en sus montañas; mas, cuando se han llevado lo suyo, tardan en volver.</p> 
+                        
+                        <p>En el Pueblo de Wang y en el Pueblo de la Familia Li la vida seguía igual y las gentes que moraban allí imitaban el ejemplo de la esposa de Diente Largo y volvían la cara al recaudador.</p>
+                        
+                        <p>Así hubieran podido seguir las cosas durante el resto de la vida de Diente Largo si a este no se le hubiera ocurrido un día tomar una concubina. La única pena de su vida era no tener un hijo. Se hacía más rico cada día, había añadido patios a su casa, y había instalado viveros y un jardín. Comía los manjares que más le gustaban en cada comida, hasta el extremo de que un festín ya no era para él un motivo de placer. Tenía criados e incluso automóvil. Era una máquina vieja, es verdad, pero todavía conservaba sus cuatro ruedas y el motor. Todos podían ver el motor porque no tenía tapa que lo cubriera. Cuando Diente Largo adquirió el coche, había preguntado por la tapa al vendedor, que le contestó:</p>
+                        
+                        <p>—Había que estar continuamente abriendo y cerrando la tapa para alimentar el motor y echarle agua, así es que decidí, por conveniencia, quitársela.Esto era razonable y, por ello, Diente Largo compró el vehículo. El coche extendía su radio de acción, porque ahora podía salir al campo y cobrar el impuesto a unos ciento cincuenta kilómetros de distancia alrededor de él. Ya no tenía que limitarse al autobús entre el Pueblo de Wang y el Pueblo de la Familia Li.</p>
+                        
+                        <p>Pero ninguna de estas cosas podía ocupar el lugar de un hijo. Su esposa, aunque continuaba siendo bonita y gentil, también seguía siendo estéril, y ninguna regañina marital alteraba la placidez de su carácter. Hasta que un día, con la paciencia habitual, le dijo:</p>
+                        
+                        <p>—Esposo mío, ¿por qué no tomas una concubina? Con tu posición y tus riquezas, puedes adquirir a cualquier mujer joven de la ciudad, y tal vez ella pueda darte lo que no puedo darte yo.</p>
+                        
+                        <p>—Dos mujeres bajo el mismo techo siempre traen trastornos.</p>
+                        
+                        <p>—No en tu hogar —contestó ella dulcemente—. Te prometo recibirla y tratarla como a una hermana.</p>
+                        
+                        <p>Diente Largo enseguida hizo suya esta idea, especialmente porque ya estaba furioso y harto de que hasta las mismas chicas de los burdeles le aborrecieran porque insistía en cobrarles como impuesto el tercio de lo que ganaban. Al recordar a todas las muchachas jóvenes que había visto últimamente, se dio cuenta de que ya llevaba en el pensamiento cierto hermoso rostro juvenil, y que esta cara pertenecía a la hija única de Li el Viejo, un granjero que vivía en las afueras del Pueblo de la Familia Li. Los dos, el padre y la hija, vivían en una casita medio en ruinas que se elevaba en una parcela de terreno situada en la parte sur del pueblo. Como no había hijos varones en la casa, la joven ayudaba a su padre en las labores del campo, y, por esto, Diente Largo había podido verla. No se había fijado en ella hasta entonces, cuyos cabellos castaños estaban quemados por el sol, hasta convertirse en la mujercita que había contemplado no hacía mucho, mientras estaba trillando el grano al lado de la caja de la trilladora. Ocurrió el día en que había ido a cobrar el impuesto.</p>
+                        
+                        <p>Sentado en su jardín pensaba en el aspecto tan sano que tenía y lo coloradas que estaban sus mejillas. Era una muchacha alta, pero él también era alto y estaba cansado de mujeres bajitas y enfermizas como su esposa.</p>
+                        
+                        <p>«Será difícil de gobernar, pero esto no representa nada para mí —pensó vanidosamente—, porque yo gobierno a todo el mundo».</p>
+                        
+                          <p class="resaltado">«Será difícil de gobernar, pero esto no representa nada para mí —pensó vanidosamente—, porque yo gobierno a todo el mundo». </p>
+                        <hr class="line-separator line-orange" />
+                        
+                        <p>Tales pensamientos le animaron a salir de la ciudad pocos días después, y a dirigirse a la pequeña granja de Li el Viejo. La joven estaba sentada en un banco, a la puerta, comiendo sandía. Se llevaba una tajada de este fruto a la boca, y Diente Largo pudo observar que pertenecía a la variedad de las que tienen las pepitas de oro, más dulce que cualquier otra. Por encima de la tajada le miraba con sus grandes y vivos ojos negros. Cuando lo vio se levantó prestamente y, con la fruta entre los dientes, entró en la casa. Al instante salió Li el Viejo, abrochándose su desteñida chaqueta azul.</p>
+                        
+                        <p>—Tendrá que excusarme de que no estuviera en la puerta —dijo a Diente Largo—; en este momento acababa de volver del campo y me estaba lavando.</p>
+                        
+                        <p>Diente Largo se sentó en el banco, que aún conservaba el calor del cuerpo de la joven.</p>
+                        
+                        <p>—Es una sandía finísima y hace mucho tiempo que no pruebo esta fruta. Córtame una tajada —ordenó.</p>
+                        
+                        <p>Li llamó a su hija enseguida.</p>
+                        
+                        <p>—Trae sandía a nuestro visitante.</p>
+                        
+                        <p>La voz de la joven respondió alto y claro:<br>—No puedo porque me he comido la última tajada que quedaba —y, mientras ellos escuchaban esta contestación, añadió con imprudencia—: Es la única cosa sobre la que no puede percibir impuesto, porque está dentro de mí —dijo riendo ruidosamente.</p>
+                        
+                        <p>Li el Viejo se sintió sobrecogido de terror, pero Diente Largo acompañó con su risa a la joven.</p>
+                        
+                        <p>—Puedo cobrar el impuesto de la misma manera —observó—. Puedo exigir a la chica.</p>
+                        
+                        <p>Li probó a reírse también, y luego añadió, para cambiar el tema de conversación:<br>—Ha hecho un buen día hoy, ni demasiado calor ni demasiado frío.</p>
+                        
+                        <p>—No me hables del tiempo. Piensa en lo que acabo de decir. Quiero a la muchacha —dijo Diente Largo. El miedo se pintó en la cara de Li, que esbozó una mueca.</p>
+                        
+                        <p>—Está usted bromeando. Está prometida.</p>
+                        
+                        <p>Era una mentira, porque su hija, que se llamaba Liehsa, había tomado la firme resolución de no casarse hasta encontrar un hombre joven que cambiara su apellido por el de ella, para que su padre tuviera un hijo. ¿Pero quién sería el hombre joven que querría ser hijo de un viudo pobre que solo poseía un campo de pocas hectáreas? Encontrar otro más pobre que ellos, que fuera también fuerte y hermoso, inteligente y bueno, parecía una ímproba tarea.</p>
+                        
+                        <p>—Está haciendo el servicio militar —mintió Li, hablando de un joven que no existía—, pero volverá de un momento a otro, y me mataría, y su familia me dejaría sin enterrar, si viese que no había cumplido la palabra empeñada.</p>
+                        
+                        <p>—Yo arreglaré eso —dijo Diente Largo—. Tendrá miedo de mí.</p>
+                        
+                        <p>—Oh, no; no teme a nadie —dijo Li con convicción—. Olvida que ha estado luchando contra los demonios japoneses, que ha visto a los pelirrojos americanos, y no ha tenido miedo de ninguno de ellos.</p>
+                        
+                        <p>Diente Largo notó al instante que unos celos rabiosos le empezaban a quemar la sangre.</p>
+                        
+                        <p>—Di a tu hija que salga —ordenó.<br>Li el Viejo la llamó con tono desfallecido.<br>—Liehsa, sal a ver a nuestro huésped.</p>
+                        
+                        <p>Liehsa contestó graciosamente con la misma clara voz:<br>—Estoy ocupada. No puedo salir.</p>
+                        
+                        <p>—¿Sabe quién soy yo? —preguntó Diente Largo en voz alta.</p>
+                        
+                        <p>—¿Sabes quién es? —repitió Li.</p>
+                        
+                        <p>—El recaudador de impuestos —respondió riendo Liehsa—; pero sobre mi persona no puede cobrar impuesto —añadió.</p>
+                        
+                        <p>—Ya puede observar usted lo malcriada que está —dijo Li con viveza—. Es todo lo que tengo en el mundo; es perezosa, desobediente, sucia. Se pasa el tiempo comiendo y no hace nada. Reñiría con su honorable dama y convertiría su casa en un infierno.</p>
+                        
+                        
+                        <p>—Lo que necesita es una buena paliza —declaró Diente Largo—, y yo me divertiré mucho dándosela.</p>
+                        
+                        <p>El largo diente brillaba en su boca, y Li se estremeció.</p>
+                        
+                        <p>—Concédame unos pocos días para acostumbrarla a la idea —rogó.<br>Diente Largo se puso en pie.</p>
+                        
+                        <p>—La esperaré siete días a contar desde hoy —anunció, rompiendo a caminar. Al llegar al borde de la era se detuvo—. Te concederé exención de impuestos por todo el tiempo que vivas —dijo riendo burlonamente por debajo de su largo diente—. Y si existen impuestos en el otro mundo, como seguramente los habrá, hablaré en favor de ti al mismísimo rey de los demonios en el infierno.</p>
+                        
+                        <p>Li trató de reír otra vez, pero no salió sonido alguno de su seca garganta; así es que tan solo saludó. Cuando hubo perdido de vista el pesado cuerpo de Diente Largo, se dejó caer en el banco y comenzó a lamentarse de su desgracia. Liehsa salió corriendo y reprendió a su padre con ardor.</p>
+                        
+                        <p>—He oído todo lo que ha dicho ese maldito bicho y lo que usted le ha contestado, padre. No sé qué piensa usted hacer, pero lo que haré yo sí que lo sé. No iré a su casa.</p>
+                        
+                        <p>—Espera... —dijo el viejo Li.<br>—Esperaré siempre, pero no iré —sentenció ella.<br>—No debes olvidar que estamos indefensos —empezó a decir el anciano.<br>—No iré —repitió Liehsa.<br>—Que es el recaudador de impuestos, hombre poderoso...</p>
+                        
+                        <p>—No iré —dijo de nuevo la hija.<br>—Que nos liberará de pagar impuestos —dijo Li suplicante.</p>
+                        
+                        <p>—No iré.<br>Li empezó a enfadarse un poco por su propia actitud.</p>
+                        
+                        <p>—Deja ya de repetir que no irás y dime cómo puedo impedirlo —expuso el padre con aspereza.<br>Liehsa le miró abriendo desmesuradamente los ojos.</p>
+                        
+                        <p>—A usted no le importa eso. Yo no iré —dijo ella.</p>
+                        
+                        <p>—Dijo que necesitabas una paliza y es verdad —declaró el padre.</p>
+                        
+                        <p>—Nadie me puede pegar, y, menos que nadie, él —respondió la muchacha.</p>
+                        
+                        <p>Después de esto, el día terminó tristemente y se fueron a sus respectivos cuartos. El pobre viejo dio cien vueltas en la cama y Liehsa estuvo largo tiempo sentada en su lecho meditando.</p>
+                        
+                        <p>Por la mañana ninguno de los dos había llegado a una conclusión, excepto que debían ir a visitar a toda la gente que conocían en el Pueblo de Wang para pedir ayuda. Decidieron dirigirse allí porque a Liehsa le daba vergüenza que cualquiera de sus parientes residentes en el Pueblo de la Familia Li se enterasen, siquiera, de que Diente Largo la quería por concubina. Convinieron en tomar el autobús tan pronto terminaran de almorzar, aunque no tenían apetito.</p>
+                        
+                        <p>En el umbral de la puerta tuvieron una discusión. Liehsa se había puesto su mejor chaqueta azul, calcetines blancos de algodón y zapatos de paño nuevos. Además lucía sus pendientes de plata, que solo llevaba el día de Año Nuevo.</p>
+                        
+                        <p>—¿Has pensado bien en eso de vestirte con tus mejores galas? —le preguntó Li el Viejo, mirándola—. ¿No hubiera sido mejor mostrarse fea para que vean lo pobre que eres?</p>
+                        
+                        <p>—Pensé en ello, pero se me ocurrió que los hombres sentirán más lástima de mí si me ven bonita.<br>—Es verdad, es verdad —dijo el padre cuando se pusieron en camino.</p>
+                        
+                        <p>¡Sí, Li el Viejo era viudo y Liehsa huérfana de madre! Si hubiera vivido la buena esposa y madre les hubiese dicho que no eran los hombres los que resuelven los asuntos, ni siquiera en el Pueblo de Wang, sino las mujeres. Cuando la pareja llegó a la puerta de las casas de las familias que conocían y fue invitada a entrar, los hombres, al ver la cara fresca y lozana de Liehsa, sintieron una ráfaga de ira renovada contra Diente Largo.</p>
+                        
+                        <p>—Ya es demasiado —declaró cada uno a su modo—. Hemos sufrido bastante a causa de sus latrocinios sobre lo que nos pertenece, pero si va a empezar a tomar concubinas de entre nuestras mujeres mejor parecidas, es hora de que se le dé muerte.</p>
+                        
+                        <p>Esto era muy reconfortante para Li el Viejo y para Liehsa, pero, desgraciadamente, las mujeres hablaban después, y lo que cada una de ellas decía, sonaba poco más o menos así:</p>
+                        
+                        <p>—No veo que sea una desgracia para Liehsa ser la concubina de Diente Largo. Es rico y posee la casa más grande de la ciudad; todo el mundo sabe que su esposa tiene buen carácter. Después de todo, ¿qué es Liehsa? Nada más que una muchacha del Pueblo de la Familia Li. Le podrían pasar cosas peores que ser concubina de un hombre en el Pueblo de Wang.</p>
+                        
+                        <p>Los maridos oían a sus mujeres expresarse así; las de mala índole lo decían enseguida, y las que tenían un corazón bondadoso hablaban con voces lastimeras a Liehsa y a Li, y esperaban a que estos se fuesen para acabar diciendo casi lo mismo. Los hombres eran pru-dentes, y además de correr el riesgo de tener que luchar contra Diente Largo, tenían el grave inconveniente de discutir con sus mujeres y sostener que Liehsa no les importaba nada, que ni siquiera habían reparado en que era bonita.</p>
+                        
+                        <p>Al anochecer, en la mitad de las casas del Pueblo de Wang se vivía en un estado de irritación, porque el marido y la mujer estaban incomodados el uno con el otro, y había un intercambio de palabras malsonantes. Por ejemplo, la señora Ying, de la calle de Los Tres Fantasmas, decía al señor Ying, tumbados cada uno en el borde opuesto de su gran tálamo matrimonial:</p>
+                    
+                        <p>—No entiendo por qué una persona del Pueblo de Wang debe arreglar los asuntos de alguien llamado Li, que no vive aquí y pertenece al Pueblo de la Familia Li. ¿Por qué no se dirigen a su propio pueblo en lugar de venir a nuestra ciudad?</p>
+                        
+                        <p>—Supongo que porque creerían que podemos tener más influencia sobre nuestro conciudadano el recaudador de impuestos —respondió el señor Ying—. De todos modos, ya te he dicho que no tengo nada que ver con ese asunto, y desearía que me dejaras dormir.</p>
+                        
+                        
+                        <p>—Pero miraste a la chica de una manera... —le imprecó la señora Ying, rompiendo a llorar. El señor Ying saltó de la cama.</p>
+                        
+                        <p>—Ya estoy harto de oírte decir eso —gritó—. No la miré. Me figuro que, como es china, tendrá los ojos y los cabellos negros. Fuera de eso no sé nada. Me voy a dormir en el fecho que hay en el cuarto principal, que es más duro que una piedra.</p>
+                        
+                        
+                        <p>Escenas como la descrita hubieran podido presenciarse en muchos domicilios aquella noche. En cuanto a Liehsa y a Li, habían regresado en autobús y estaban sentados tristemente en su pobre hogar. La hija hablaba de marcharse de allí.</p>
+                        
+                        <p>—¿Y adónde iríamos? —preguntó el padre. </p>
+                        
+                        <p>—Yo podría incorporarme al ejército femenino<br> —contestó Liehsa.</p>
+                        
+                        <p>—Y yo tendría que tragarme un veneno —declaró Li.<br>Continuaron discutiendo de lo mismo hasta que, rendidos los dos, se fueron a acostar.</p>
+                        
+                        <p>—Por lo menos, esperemos hasta que acabe la feria de mañana —dijo Li al separarse</p>
+                        
+                        <p>El día siguiente se celebraba la feria en el Pueblo de la Familia Li. Tenía lugar una vez al año y el pueblo entero se preparaba para ella con varios días de anticipación. Los granjeros, desde muchos kilómetros a la redonda, traían sus productos, sus cerdos, sus pollos, sus sandías más grandes, rábanos, los nabos más largos, las coles más verdes. Por lo general, los ciudadanos del Pueblo de Wang no acostumbraban acudir a aquel rústico encuentro; pero muchos maridos se habían sentido tan tristes la noche anterior que, por la mañana, el autobús que iba al Pueblo de la Familia Li estaba casi repleto de hombres que habían dicho a sus esposas: «Esta noche trabajaré hasta muy tarde». Deseaban pasar un día lejos de sus mujeres y divertirse. Toda clase de juglares y danzarines acudían a la feria. Dos o tres hombres del Pueblo de Wang querían honradamente ayudar a Liehsa y a Li el Viejo, e iban decididos a ver si los moradores del Pueblo de la Familia Li podían encargarse de su defensa. Había también dos o tres que lo que realmente querían era volver a ver a Liehsa.</p>
+                        
+                        <p>Poco después de amanecer, apenas puesto en marcha el autobús, el fuerte sonido de un cuerno que los ocupantes del vehículo reconocieron en el acto ser el de Diente Largo, les mandó detenerse. Miraron por la parte trasera del coche, que no tenía puerta, y allí estaba el recaudador, que había sido conducido a lo largo del áspero camino a hombros de un pariente pobre.</p>
+                        
+                        <p>Ya detenido el autobús, Diente Largo subió a él hecho una furia.</p>
+                        
+                        <p>—Envié recado de que quería ir esta mañana al Pueblo de la Familia Li en el autobús —rugió al conductor—. Ando escaso de gasolina.</p>
+                        
+                        <p>—Yo no recibí ningún recado —replicó el chófer.</p>
+                        
+                        <p>Tenía miedo de Diente Largo, pero no de mentir. Era verdad que uno de los parientes desvalidos del recaudador había dado el encargo a un aguador, que se descargó de su misión en un recogedor de boñigas que se dirigía por la carretera a la parada del autobús, y que el boñiguero lo había transmitido al chofer, si bien este último fingió momentánea sordera.</p>
+                        
+                        <p>—Cállate y pon el motor en marcha —gritó Diente Largo con voz de trueno.</p>
+                        
+                        <p>Todo el mundo se había levantado ante su presencia; el recaudador escogió el asiento más de su agrado en la parte trasera del vehículo, y sin decir palabra a nadie, se sentó en un sitio desde donde podía respirar el aire fresco.</p>
+                        
+                        <p>Los pasajeros se sentaron nuevamente; cada hombre en particular sentía renovado su odio a Diente Largo no solo por los impuestos que les había cobrado en el pasado, sino porque se atrevía a poner los ojos en una muchacha hermosa para tomarla como concubina y, sobre todo, porque era el causante de los disgustos de sus esposas y de una noche sin pegar el ojo.</p>
+                        
+                        <p>Cuando los corazones están llenos de una rabia que no puede manifestarse, lo más prudente es optar por el silencio. Todos callaban y miraban a través de las ventanillas, cuyos cristales hacía tiempo habían desaparecido. Era una ventaja porque, de haber cristales, estos estarían tan sucios que sería imposible contemplar los campos recién segados y las manadas de blancos gansos y de patos picoteando los granos caídos.</p>
+                        
+                        <p>Podéis dar como seguro que Diente Largo observó cada pato y cada ganso y que contó los montones de grano. Iba a la feria para supervisar el negocio que allí se haría y llevarse su parte. Había planeado también visitar a Li el Viejo antes de acabar el día, y estaba decidido a no admitir una contestación negativa. Dentro de siete días Liehsa viviría en su casa como concubina. Ya se lo había dicho a su mujer. Ella recibió la noticia en silencio y sin sorpresa, incluso como si no le importara, y esto enfureció a su marido.</p>
+                        
+                        
+                        <p>—¿No te da vergüenza que tenga que traer otra mujer a casa? —dijo rezongando, sentado a la mesa y dando rápida cuenta del suculento almuerzo que ella le servía.</p>
+                        
+                        <p>—Soy como los dioses me han hecho —suspiró ella.</p>
+                        
+                        <p class="resaltado"><br>—Soy como los dioses me han hecho —suspiró ella.<br></p>
+                        <hr class="line-separator line-orange" />
+                        
+                        
+                        
+                        <p>Lo que él no podía imaginarse era que, cuando se marchó, su esposa se sentó, en lo que parecía la más completa ociosidad, dirigiendo su pensamiento a la joven Liehsa, a la que no había visto en su vida. Ya sin conocerla la amaba y le estaba agradecida; al mismo tiempo sentía pena por ella. Era algo terrible estar casada con Diente Largo. No existían compensaciones, a menos de tener un hijo, pero ¿y si el hijo se parecía al padre? Con la turbación de tan encontradas ideas se sentía enferma y pensaba que su deber la obligaba a tomar una determinación. Pero ¿qué puede hacer una mujer? «Sólo rezar», pensó.</p>
+                        
+                        <p>Se lavó, se cepilló el cabello, se puso una chaqueta limpia y, andando por calles laterales de la ciudad, acompañada de su criada, se dirigió a un templo de las afueras. Allí ascendió lentamente los trescientos escalones de piedra que conducían al templo, pagó al sacerdote que le dio la bienvenida y se fue al altar de la diosa, que podía verse sentada en una pequeña cripta abierta en la sólida roca de la montaña. Le gustaba esta diosa pequeñita porque, en la semioscuridad, parecía acogedora y reservada, como si conociera los corazones callados y tristes de las mujeres.</p>
+                        
+                        <p>Allí, a solas con la diosa, encendió dos candelas y le contó su situación con palabras entrecortadas por suspiros; la diosa bajó hacia ella los ojos para mirarla entre las luces parpadeantes, pareciendo prestarle atención.</p>
+                        
+                        <p>Tú sabes, Señora, que me gustaría tener a la joven en casa —dijo la esposa de Diente Largo con afán—. Será muy agradable tener a alguien a mi lado a todas horas; podríamos comentar las cosas juntas. ¡Qué maravilla si tuviera un hijo! Seríamos madres las dos. Y si el niño saliera a Diente Largo...<br> ¿No podrías evitar tú eso?</p>
+                        
+                        <p>Continuó con esta conversación durante más de una hora, hasta que se sintió consolada, y entonces regresó a casa, prometiendo a la diosa, antes de salir del templo:</p>
+                        
+                        <p>—Te dejaré todo cuanto poseo.</p>
+                        
+                        <p>Si la diosa la oyó o no, nunca se sabrá. Si lo hizo, no se puede decir que descendiera del lugar fijo que tenía en la cripta. Los dioses y las diosas no se comunican con los simples mortales por tales medios. Lo hacen con pensamientos voladores, alas en el aire, de espíritu a espíritu. Probablemente la brillantez de alguno de esos relámpagos iluminó al ser del gran dios de cara gris que guardaba la puerta del templo, ese dios que protege a los buenos y castiga a los malos. Esas cosas no se pueden saber sino cuando oran los buenos, de cuyas plegarias pueden salir beneficios extraños. Aunque no se pueda estar seguro de que lo que sucedió y se narra en esta verídica historia fuera debido a la intervención de la diosa, sí se puede afirmar que la esposa de Yang Diente Largo era una mujer excelente, tanto si su visita a la diosa de la cripta resultó útil como si no.</p>
+                        
+                        <p>Era un día glorioso, y todos los que tenían algo que hacer en la feria del Pueblo de la Familia Li se sentían contentos. Lucía el buen tiempo; arriba, en las montañas, el viento soplaba con fuerza y los bandidos no podían estarse quietos. Jugaban en el vallecito que les servía de guarida, pinchándose los unos a los otros simulando que libraban batallas.</p>
+                        
+                        <p>—¿Por qué no bajamos a la feria del Pueblo de la Familia Li? —propuso el joven que capitaneaba la partida.</p>
+                        
+                        <p>—Dejad al pueblo en paz —contestó el jefe de más edad.</p>
+                        
+                        <p>Los bandidos tenían siempre dos jefes: uno, joven, para planear e impulsar las nuevas aventuras peligrosas; otro, viejo, para frenarlos con la prudencia de sus consejos.</p>
+                        
+                        <p>—A la feria solo concurren honrados granjeros y gente por el estilo —dijo el viejo bandido—. Constituye una vergüenza para unos bandidos decentes robar a los buenos más de lo que se les puede tomar con todo derecho después de la cosecha.</p>
+                        
+                        <p>—Entonces asaltemos a los viajeros del autobús —expuso el joven con ardor—. Probablemente los viajeros serán especuladores, ladrones y rateros, que siempre viajan con lujo.</p>
+                        
+                        <p>El anciano no tenía ya razones que oponer, pero rogó que no le hicieran ir a él, porque estaba muy cansado y prefería conservar sus fuerzas para empresas más importantes que la de asaltar un autobús. Los otros bandidos de edad eligieron quedarse con él, y por eso, solo hombres jóvenes descendieron el sendero de piedra de la montaña, dando gritos y cantando mientras bajaban. Disponían de un par de gemelos de campaña que requisaron a un alemán rico al que robaron una vez y, a través de ellos, contemplaron el autobús, que estaba abajo, al pie de las colinas. Los veintitantos jóvenes del grupo se pasaron los prismáticos de mano en mano y vieron el vehículo que se movía con lentitud por la carretera, a algunos kilómetros de distancia.</p>
+                        
+                        
+                        <p>—Parece una cucaracha.</p>
+                        
+                        
+                        <p>—Circula despacio porque va muy lleno y muy cargado. Entre charlas y bromas atravesaron los campos, marchando al mismo ritmo con sus fuertes y bronceadas piernas. La gente se escondía al verles pasar; era como si anduviesen por una tierra deshabitada; esto también avivaba su excelente humor.</p>
+                        
+                        <p>Todo fue sencillo como un juego. Esperaron hasta que el autobús llegó a una colina que había sido cortada en dos para que pasara la carretera y entonces rodearon el vehículo dando aullidos y agitando en el aire sus viejas escopetas. El autobús no podía hacer otra cosa que detenerse. Nadie pensaba resistir. Los bandidos eran soportados como rayos caídos del cielo y cada hombre se resignaba a lo que parecía un destino inevitable. Los bandidos entraron en el vehículo por las ventanillas laterales. Registraron todos los bolsillos, palparon todas las mangas y pantalones, excepto los de las mujeres, a las que solo despojaron de los anillos.<br>Detrás de todos los que estaban en pie seguía sentado Diente Largo. Los bandidos no pudieron verle, porque los otros, sin querer, le tapaban, hasta que llegaron a su sitio, al final del mejor asiento.</p>
+                        
+                        <p>—Aquí hay un gordinflón —rugió un bandido—. ¡Levántate, hermano mayor!<br>Diente Largo no se levantó. Les enseñó su monstruoso diente.</p>
+                        
+                        <p>—No pongáis las manos en mi persona —dijo con imponente majestad—. Soy el recaudador de impuestos y represento a la nación.</p>
+                        
+                        <p>Mientras pronunciaba estas palabras se llevó la mano al pecho y sacó una hoja de papel doblada que desplegó delante de ellos. En ella se veía un signo, algunos nombres y un gran sello.</p>
+                        
+                        <p>—Aquí están mis poderes —dijo—. Mi persona es sagrada.</p>
+                        
+                        <p>Si hubieran estado allí sus jefes de más edad, los jóvenes bandidos no habrían tenido miedo de Diente Largo. Pero los jóvenes bandidos sabían que la «nación» significaba «Gobierno», y «Gobierno» significaba soldados y quizá la destrucción de su hospitalario cubil. Sus mayores les estaban advirtiendo continuamente que no se buscaran complicaciones con las jerarquías gubernamentales.</p>
+                        
+                        <p>—Nunca se gana nada con excitar a los agentes del Gobierno —predicaban los viejos—. Sed atentos con ellos, no les robéis jamás; pagadles el dinero de buen grado para poder vivir tranquilos. Siempre nos queda el recurso de recuperarlo.</p>
+                        
+                        <p>Siguiendo tan buen consejo, se inclinaron, reverentes, ante Diente Largo.</p>
+                        
+                        <p>—Perdonadnos, señor. ¡Somos tan ignorantes! —dijo el joven jefe, y ordenó en voz alta a sus hombres que salieran del autobús.</p>
+                        
+                        <p>Diente Largo se sintió más audaz que nunca con ese triunfo. Se irguió tan alto como era y contempló los asustados ojos de la despojada e indefensa gente del autobús. Se encaró con el joven bandido, rugiendo:</p>
+                        
+                        <p>—¿Os creéis que podéis burlar la ley tan fácilmente? Te he dicho que soy el recaudador de impuestos.<br>Su voz superaba a la de los jóvenes que estaban en la carretera.</p>
+                        
+                        <p>—¿Qué quiere usted de nosotros? —preguntó el jefe de los bandidos, temblando.</p>
+                        
+                        <p>—Acabáis de hacer un negocio —dijo Diente Largo con acritud—. Es vuestro comercio y habéis obtenido un beneficio. Sobre este lucro reclamo el impuesto justo.</p>
+                        
+                        <p>—¿Un impuesto? —balbuceó el joven bandolero.</p>
+                        
+                        <p>—Un tercio de la ganancia —anunció Diente Largo tendiendo la mano.</p>
+                        
+                        <p>Los que presenciaban la escena no podían creer lo que veían. Sin embargo, lo que veían era bien claro. Los jóvenes bandidos sacaron precipitadamente todo el dinero que habían robado, lo dividieron en tres pilas que colocaron sobre la solitaria carretera, y una de ellas la pusieron en las manos abiertas de Diente Largo.</p>
+                        
+                        <p>El recaudador de impuestos se guardó el dinero en su inmenso bolsillo interior que colgaba como un delantal encima de su vientre.</p>
+                        
+                        <p>—Informaré a la nación de que sois bandidos honrados que pagáis los impuestos.</p>
+                        
+                        <p>—Gracias, hermano mayor —dijeron en voz baja los bandidos.</p>
+                        
+                        <p>Diente Largo, al volver a su asiento, empujó a todos los que encontró a su paso. Detrás de él, el joven bandido miró a sus compañeros.</p>
+                        
+                        <p>—¿Hemos sido nosotros los que le hemos robado a esa gente o ha sido ese individuo del diente largo el que nos ha robado a nosotros? —preguntó intrigado.</p>
+                        
+                        <p>Ninguno de los otros bandidos supo qué contestar. Deslumbrados los ojos, movían de un lado a otro sus cabezas; al volver a la montaña, resolvieron no contar el incidente a sus mayores, a los que solo darían cuenta del dinero del botín.</p>
+                        
+                        <p>En el autobús, no obstante, los ciudadanos del Pueblo de Wang sabían perfectamente lo que había pasado. Les habían robado y una tercera parte de sus pérdidas se encontraba en el gran bolsillo de Diente Largo. Sentados, mientras el autobús proseguía su difícil camino, pensaban que a todo lo que les había hecho antes se sumaba ahora ese ultraje final. Se volvieron a mirar a Diente Largo que les devolvió la mirada impúdicamente, sin decir palabra. Bajo su sucio traje de seda gris estaba el dinero de ellos; él se lo había apropiado, y la ley, como él hubiera dicho, estaba de su parte.</p>
+                        
+                        <p>Cada hombre, en su interior, le daba vueltas a la cabeza, soñando con tomar una determinación. Delante de ellos, y nadie lo ignoraba, se abría la Garganta del Gran Dragón, donde el precipicio descendía hasta trescientos metros, terminando en un profundo pantano. El chofer conducía el autobús sin volver la cabeza y las mujeres miraban al otro lado. Entre ellas y la parte trasera del vehículo, donde Diente Largo se había sentado para no sufrir el calor, había una barrera de hombres. ¿Quién podía adivinar lo que iban a hacer? Una docena de cíngulos fueron desceñidos de las cinturas de sus propietarios. Varias manos taparon la boca a Diente Largo y cerraron las ventanillas de su nariz, obligándole a bajar la cabeza. Diente Largo se sintió atado en menos que canta un gallo, con las rodillas en la barba, las muñecas debajo de las rodillas y colocado cabeza abajo con un grueso cíngulo de paño entre los dientes. Unas manos diestras vaciaron su hondo bolsillo. Al instante siguiente rodaba por la ladera de la montaña, rebotando de roca en roca como una pelota. El pantano del Gran Dragón estaba abajo, un pantano sin fondo, dentro del cual ningún hombre se atrevía a nadar o a pescar ni siquiera en los días calurosos. Su cuerpo hendió las aguas y penetró en el abismo.</p>
+                        
+                        <p>En el autobús los hombres recontaron su dinero. Cada uno de ellos tomó un tercio de lo que llevaba consigo y lo volvió a guardar en su bolsillo; el otro tercio se lo entregaron al chofer. El conductor no volvió la cabeza, porque el coche iba con retraso y era para él cuestión de amor propio llegar al Pueblo de la Familia Li antes del mediodía. Además, era joven y tenía siempre buen apetito.</p>
+                        
+                        <p>La feria constituyó un éxito y casi todos disfrutaron de su estancia allí. Li el Viejo erraba tristemente por las calles, pero ninguno de los ciudadanos del Pueblo de Wang le dijo nada, excepto el señor Ying, que era más afable que el resto y quizás un poco más valiente.</p>
+                        
+                        <p>—No vuelva a pensar más en el asunto del que hablamos ayer —dijo a Li—. Los dioses arreglan estas cosas.</p>
+                        
+                        <p>Li le dio las gracias sin convicción, puesto que los dioses le habían fallado demasiadas veces para que pudiera tener alguna confianza en su buen sentido o en su bondad.</p>
+                        
+                        <p>A medida que pasaba el tiempo tuvo que reconocer que por esta vez se había equivocado. Nadie volvió a ver ni a hablar de Diente Largo en lo sucesivo. Después circularon rumores de que los bandidos lo habían arrojado al precipicio; pero ¿quién osaba descender a la morada de los dragones para comprobarlo?</p>
+                        
+                        <p>Su esposa le esperó fielmente un mes entero; luego vendió la casa y se hizo sacerdotisa de la pequeña diosa de la cripta, a la que conservaba brillante y pulida como si cada día fuese festivo. Liehsa se casó un año después. Lo hizo con el conductor del autobús, que le confesó la verdad de lo ocurrido a Yang Diente Largo en ocasión de estar admirando al primer hijo de su matrimonio. Se habían conocido de un modo harto casual. Cierto día el autobús sufrió una panne y la casa más próxima era la de Li el Viejo. Fue una pura casualidad porque el autobús siempre hacía dos o tres parones en cada viaje. Liehsa preparó el té para los pasajeros mientras el chófer arreglaba el motor; ella y el conductor se enamoraron desde el primer instante. La diosa pudo no tener nada que ver con estos amores, a no ser que oyese las plegarias de la viuda de Yang Diente Largo convertida ahora en una sacerdotisa llamada Pureza de Nieve, que rezaba frecuentemente por que la joven encontrase un excelente esposo y tuviese un hijo.</p>
+                        
+                        <p>El hijo llegó a los diez meses de matrimonio; mientras admiraba sus gracias una cálida tarde de verano en que Liehsa lo bañaba arrojando chorros de agua fría sobre su gordito cuerpecillo desnudo, el joven esposo sintió la necesidad de confesar a su mujer lo que había sucedido.</p>
+                        
+                        <p>Liehsa suspendió el delicioso rito que estaba practicando.</p>
+                        
+                        <p>—¿Y qué fue del viejo demonio? —preguntó ella.</p>
+                        <p>—No pude detener el autobús —dijo él.</p>
+                        <p>—Me lo figuro —asintió ella.</p>
+                        
+                        <p>Callaron para reflexionar en el final que tienen los hombres malos. Liehsa volvió a su trabajo y los dos contemplaron el resbalar del agua clara por el bello cuerpecito moreno que habían concebido.</p>
+                        
+                        <p>El chiquillo, sintiendo que le caía el agua cuerpo abajo, reía, y ellos reían con él.</p>
+                        
+                        <p>—Todo ha sucedido por la voluntad del cielo —dijo Liehsa cariñosamente.</p>
+                        
+                        <p>—Todo —repitió el joven conductor, mirando a su hijo.</p>
+
+                        
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                 <!-- /Cuento 1 -->
+                
+                <!--Cuento 2 -->
+                
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Rolaine Hochstein</h2>
+                    <h1 class="chapter-title cafe">No se lo rebeles <br/><span class="oswald-light cafe">a los primos</span></h1>
+                    <h3 class="story-title">Traducción: Juan Fernando Merino</h3>
+                    <div class="content-text">
+                        
+                        <p class="first-paragraph">Siendo casi las doce en punto del mediodía me adentro velozmente en el interior de la gigantesca puerta giratoria por donde transitan pacientes con caminadores y otros conectados a aparatos intravenosos. David me está esperando, arrellanado en medio de una hilera de sillas como si estuviera aguardando para un casting. Doy gracias a Dios por no haber llegado tarde y por haberme acordado de usar los pendientes enormes escogidos por él. David, con las piernas desplegadas, apoyado en su bastón, me examina de arriba abajo y me parece que paso el examen, pero a duras penas. Consulta su reloj de oro antes de ponerse de pie.</p>
+                        
+                        
+                        <p>David sigue estando gordo, por más que ha perdido la mitad de los kilos que pesaba. Las ropas flotan sobre su cuerpo mientras avanza hacia mí, mirando con enojo hacia las altas paredes de la sala de espera para pacientes ambulatorios. Me doy cuenta de que ha estado peleando con la gente de arriba —los analfabetas, como les dice— los fisioterapeutas que siguen intentando que se retire el tapón quirúrgico del cuello y haga un esfuerzo por hablar. Desde que fue dado de alta ha venido librando esta batalla todas las mañanas de los martes y jueves, los días en que lo trae al hospital una asistente de salud a domicilio que luego parece desvanecerse. </p>
+                        
+                        
+                        <p>—¿Y qué, cómo estás? —le digo, rozando su mejilla con un beso veloz. David me toma del brazo con su mano libre y me conduce hasta la puerta que dice NO ES UNA SALIDA. La abre y me empuja para que salga. </p>
+                        
+                        
+                        <p>Es un día tibio y soleado y la ciudad entera está en la calle, los abrigos ondeando al viento y las bocas soltando palabras en una docena de coloridos idiomas. David, quien dista mucho de ser un fanático de las masas, se abre paso como un trasatlántico. Me entrega una hoja de su papelería blanca membreteada con nuestro cronograma escrito a lápiz. Como de costumbre, lo ha anticipado todo. Como de costumbre su ortografía es atroz. Primero vamos a parar en DAERY QUEEN a recoger una MILKSHAK de VANILLA, que será su almuerzo líquido. Luego iremos a la vuelta de la esquina hasta el RESTURÁN CHINO, donde debo permanecer en silencio mientras él se encarga de entenderse con el personal.</p>
+                        
+                    
+                        
+                        <p>En una segunda hoja, un papel rayado color amarillo arrancado de una libreta, hay un mensaje para quien resulte ser nuestro mesero. En ella se explica por qué David ha traído una malteada de otro sitio y enfatiza que se le entregue la cuenta a él. Una vez que nos hemos sentado en una discreta mesa rodeada por bambús y grandes helechos, David saca su libreta amarilla. Garabatea sobre ella y la desliza hacia donde estoy. Leo: SI ORDENAS PLATOS BARATOS ME VAS A INZULTAR. </p>
+                        
+                        <p>Destapo mi pluma y comienzo a redactar una respuesta veloz e ingeniosa. “Listo. Voy a pedir lo más…” comienzo a escribir pero David me arrebata el papel de la mano.</p>
+                        
+                        <p>NO ESTOY SORDO, vocifera valiéndose de letras de tres centímetros de altura y varios signos de exclamación. </p>
+                        
+                        <p>—Lo siento —digo con la mayor insolencia posible—. Se me olvidó.</p>
+                        
+                        <p>David me fustiga con su mirada. YÉVATE EL CUADRO DE LA CHEZ, escribe. Quiere que me lleve todas sus obras de arte: los Lachaise, los Rouault, los dibujos de Picasso, los dibujos a pluma de Whistler, todos los bellos desnudos masculinos y los retratos de él y de sus amigos gay.</p>
+                        
+                        <p>No quiero nada. Sólo quiero que David se recupere y permanezca vivo. Pase lo que pase.</p>
+                        
+                        <p>David era primo de mi marido, no mío. Nos habíamos visto una sola vez, hacía mucho tiempo, durante la celebración de una boda y luego desapareció de la escena familiar. Era uno de los integrantes de la familia de mi esposo, una familia excesivamente retocada, como si así pudiesen suavizar las aristas más ásperas de su origen inmigrante. Los primos tenían tanta prisa en su carrera desenfrenada hacia la respetabilidad como sus antepasados por huir de Europa y escapar del Zar y también, claro está, de los antisemitas cotidianos. Mis padres habían llegado después que los de mi marido así que yo había tenido que poner gran empeño para ser aceptada. Mi marido siempre estaba diciendo lo mucho que su familia me quería pero aún estaba en período de prueba, según me parecía, cuando un buen día, después de una larga ausencia, reapareció el primo David.</p>
+                        
+                        <p>Su entrada en escena tuvo lugar durante el funeral de su padre, tío de mi esposo, el tío Morris, el carnicero, quien falleció repentina pero no inesperadamente. David apareció enfundado en un sobrio traje, comportándose como si hubiera estado siempre con nosotros. Había subido mucho de peso en los quince años transcurridos desde la última vez que lo había visto, pero aún conservaba esa apariencia oscura y disoluta, un hombre todavía muy apuesto, a mi juicio. Los primos lo saludaron con frialdad e intentaron mantener una desaprobadora distancia mientras concentraban sus atenciones en la desconsolada tía Bea, quien estaba protegida por el brazo de David y se apoyaba en su hombro. </p>
+                        
+                        <p>Después del funeral, David se acercó a mi marido, quien era el más asequible de sus parientes, y mi marido le dio un abrazo, antes de empezar a intercambiar recuerdos de su infancia compartida. Hablaron largo rato. —Tendré que mudarme con la vieja —dijo David—. No se encuentra tan saludable como parece. Habrá que prestarle mucha atención. —Al final dijo que esperaba que siguiéramos en contacto.</p>
+                        
+                        <p>David zapatea debajo de la mesa hasta que cedo y ordeno el excesivamente costoso Especial del Chef: Vieiras Salteadas sobre Resplandecientes Pimientos con Cáscaras de Naranja Ácida Glaseadas. Para empezar no quiero que nadie, y esto me incluye a mí misma, llegue a pensar que mi apego a David está contaminado por maquinaciones acerca de sus pertenencias o por algún toque de codicia.</p>
+                        
+                        <p>YÉVATE LAS OBRAS DE ARTE escribe con furia. TRAE UN CAMIÓN. YÉVATE LAS TABAQUERAS DE PLATA. LOS AMERILLUSES. ME DARÍA PLASER. A LA MIERDA CON TU ORGULLO. YÉVATE ALGO MÍO.  </p>
+                        
+                        <p>Pasó un buen tiempo antes de que yo pudiese encontrarlo en la ciudad,  la primera vez para almorzar en el Museo de Arte Moderno. Allí me aguardaba, armado de su reloj de oro, un anillo con un enorme rubí y una tarjeta de membresía del museo con la que podía hacerme entrar gratis. —Realmente deberías asesorarte de una vendedora en Saks o en Bergdorf —me dijo en cuanto dejó de quejarse porque yo había llegado tarde, un consejo curioso viniendo de él con esas piernas del tamaño de dos tanques de petróleo enfundadas en ese pantalón—. Si no tienes gusto, como parece ser el caso, deja que otra persona te elija la ropa.</p>
+                        
+                        <p>¿Por qué, si me detestaba, insistía tanto en que nos encontráramos? Yo estaba metida hasta el cuello en lavar y planchar ropa, llevar y recoger niños en la escuela, no me quedaba tiempo ni para peinarme, mucho menos me iba a quedar para vestirme con estilo. No tenía la menor idea de lo que hacía David todos los días. Siempre que me convencía de encontrarlo, él emprendía un largo y desangelado viaje en Subway desde un sector de apartamentos baratos de Brooklyn para venir a Manhattan e irritarme. En cuanto a mí, tenía que venirme volando a través del túnel, pagar una fortuna por parquear y estar de vuelta a las 3 de la tarde para recoger a mis hijas de la escuela —un esfuerzo que sólo mereció un encogimiento de hombros de parte de David cuando se lo conté—.</p>
+                        
+                        <p>No era menos despectivo en relación con mis gustos artísticos. En el gran vestíbulo blanco del museo había un enorme cuadro de aspecto primitivo repleto de figuras y garabatos que a mí me hacían pensar en señales de tráfico. —Llamar esta obra semafórica es propio de una persona dilatoria —dijo David, tratando de ponerme en mi sitio. </p>
+                        
+                        <p>Tenía la sartén por el mango, Míster Lapsus en persona. —¿No querrás decir una persona diletante, David? —le pregunté.</p>
+                        
+                        <p>David me ojeó con dureza. —Tiene que estar uno dormido para no darse cuenta de todo el erotismo que contiene esta obra —afirmó. A continuación señaló unas formas que de inmediato cobraban la forma que él decía que tenían—. ¿Cómo es posible que no las veas? —insistió—. A menos, claro, que no quieras verlas.</p>
+                        
+                        <p>Durante el almuerzo, desparramado sobre los bordes de su silla, y comiendo de forma lánguida su sándwich de ensalada de pollo, David se aseguró de que no se me escaparan algunos aspectos de su vida. —La única forma de experimentar a Rilke es que lo lea en voz alta un alemán hermoso al tiempo que te acaricia. —Su alemán, me reveló alzando la voz, era un bailarín que había conocido cuando trabajaba en una producción de Regina de Bernstein, en la cual le asignaron un misterioso cargo.</p>
+                        
+                        <p>—Es de Blitzstein —le dije. Estábamos sentados junto a la pared de cristal que daba al jardín de esculturas.  </p>
+                        
+                        <p>David se echó hacia atrás; su barriga se elevó como una burbuja que se infla. Dirigió una mirada intensa a la escultura más cercana a donde estábamos.<br> —¿Te gusta ese Lachaise?<br>Bajo el frío sol de marzo, el bronce moldeado brillaba tanto como una foca tendida al sol. Pero era en realidad una mujer de pie, desnuda, monumental, de pechos y vientre desafiantemente prominentes, las manos acomodadas en sus amplias y estridentes caderas. “Formidable”, creo que dije.</p>
+                        
+                        <p>—Tengo un bosquejo original de esta obra —me dijo. No le creí—. Tienes que conocer un día de estos mi colección de arte. —Asentí, llevándole la corriente. Se me ocurrió que era una de esas personas con pretensiones artísticas que se sienten con la libertad para agregarle dramatismo a sus propias vidas e inventar historias. Y nada de lo que pasó aquel día alteró mi opinión.</p>
+                        
+                        <p>Aunque sabía de sobra que yo tenía que volver pronto a casa, se excusó mientras tomábamos el café y me dejó allí sentada. Fui a buscarlo. En los días fríos y soleados el museo brillaba como un estanque congelado. Las superficies eran limpias y parejas: sin nichos ni grietas. Lo encontré apoyado en una pared cerca de las escaleras mecánicas. En aquellos días David se veía obeso, vestido de forma recargada, con un cabello negro brillante que ondulaba sobre su cara bronceada de cutis terso. Su cabeza estaba inclinada en un ángulo exagerado que liberaba la mandíbula de su capa de grasa.</p>
+                        
+                        <p>Le dije: —Estás de conquista mientras a mí se me hace tarde. </p>
+                        
+                        <p>David me miró imperturbable. Lo miré directo al rostro y descubrí por qué su cabello, a pesar de que pasaba de los cuarenta años, no exhibía ni un mechón gris. Tenía el cabello teñido. Sus ojos estaban delineados con un fino lápiz oscuro. El maquillaje era el responsable de aquel cutis perfecto. Sus ojos de pirata brillaron. </p>
+                        
+                        <p>—El mundo —me informó— está lleno de cazadores de gorditos.</p>
+                        
+                        <p>En el restaurante chino ha llegado mi pedido y David acerca su recipiente de leche malteada e introduce un pitillo a través del orificio en la tapa. Coloca una servilleta debajo del cuello de tortuga que oculta sus vendas. Me concentro en manejar los palillos chinos, fingiendo que no me doy cuenta de su lucha por sorber la malteada y luego tragarla. </p>
+                        
+                        <p>EL JENIO AQUÉL EN EL HOSPITAL MOUNT SINAI QUIERE CONSTRUIRME ALGO CON UNA MEMBRANA Y RESORTES QUE FUNCIONE COMO UNA EXTENCIÓN DE MI LENGUA.</p>
+                        
+                        <p>—¿Y después de eso vas a poder comer?</p>
+                        
+                        <p>VOY A PODER HABLAR. COMER NO. ME ADBIRTIO QUE EL ERA UN MÉDICO NO UN MAGO.</p>
+                        
+                        <p>—Sólo a ti se te ocurre —comenté— enfermarse de cáncer cuando todo el mundo contrae el SIDA. </p>
+                        
+                         <p class="resaltado">—Sólo a ti se te ocurre —comenté— enfermarse de cáncer cuando todo el mundo contrae el SIDA.</p>
+                        <hr class="line-separator line-orange" />
+                        
+                        <p>El comentario logra sacarle una sonrisa pero no puede terminar la malteada. Pone a un lado el recipiente, sin rencor. Yo cumplo con mi parte, como con entusiasmo, entre suspiros y murmullos de gusto y comentarios eufóricos sobre el especial del Chef. También estoy preparada para hablar locuazmente pero David me corta con un golpe de su libreta. Quiere hablar, por así decirlo. Quiere denigrar de todo mundo, de sus médicos (LA GESTAPO) y de su auxiliar a domicilio (LA PRINCESA DE ABIZINIA), de un reciente ganador del premio Pulitzer por una composición musical (UNA VERDADERA MIERDA) y del nuevo novio de mi hija, un estudiante extranjero de intercambio (UN FRANCÉS POSTISO. UNA CLASE EN LA SORVONA Y TODOS SE CREEN FILOSOFOS EN UN CAFÉ DE SARTRE). </p>
+                        
+                        <p>Por último quiere que lo ponga al día con los eventos en el pueblo de las afueras que habitamos, los progresos sociales y educativos tanto de mis hijas como de mi esposo, así como los denodados esfuerzos de mi esposo, su primo, para acelerar ese progreso así tenga que partirse el lomo sin descanso.</p>
+                        
+                        <p>DEBERÍAS AGRADESERLE EN VES DE CRITICARLO, me regañó David.</p>
+                        
+                        <p>No mucho después de aquel primer encuentro en el museo, me llegó en el correo una postal muy interesante. Era de David, en papel pergamino, impresa en Florencia, Italia, con un dibujo a pluma de un centauro con una protuberante erección haciéndole ojitos a un joven Apolo. David nos invitaba a mí y a mi esposo a una cena el viernes en la noche en casa de su madre. “Vengan por favor”, escribió en la postdata. “Tener contenta a Bea exije más enerjía que cuando interpreté a Ariel con alas de gasa en La Tempestad”.</p>
+                        
+                        <p>Mi esposo movió la cabeza en señal de desaprobación. Estaba sorprendido de que el servicio de correos hubiese aceptado esa postal. No aprobaba el estilo de vida de David, pero la familia es la familia y él se acordaba del chiquillo con boca muy fina, cuyo padre siempre traía un paquete de costillas de res cuando venía de visita. No cabía duda de que mi esposo también se alegraba de la presencia en mi vida de otro hombre, uno al que no considerara un rival, un hombre presumiblemente inofensivo, que a veces pasaba tiempo conmigo, liberándolo a él para pasar más tiempo en el gimnasio o en frente de la pantalla de televisión.</p>
+                        
+                        <p>Fue así como conducimos hasta Brooklyn al final de un largo viernes de primavera, luchando contra el tráfico hasta que encontramos la callecita correcta y luego el chalet correcto en medio de todos los chalets vecinos de idéntica apariencia y luego el diminuto parqueadero. David abrió la puerta de forma ampulosa. Llevaba puesto un blazer ligeramente manchado en el que sobresalía un pañuelo inmaculadamente esponjado, al igual que lo estaba su brillante cabello. Nos hizo pasar y de inmediato se desvaneció cualquier parecido con las casas vecinas. Se notaba su mano en la decoración de la casa de tía Bea. Una lámpara aquí, un taburete allá. Un toque de un entendido que transformaba la casa, por lo menos a mis ojos, de un lugar con buen gusto en uno espléndido. Una acuarela pequeña, firmada por Picasso, colgaba sobre el viejo sofá de la sala.</p>
+                        
+                        <p>Nos sentamos a cenar en una mesa ovalada cubierta con porcelana, platería y cristal bajo la iluminación de un candelabro palaciego. Al otro lado de la división del cuarto se encontraba la cocina de Bea: diminuta, beligerantemente limpia, donde aún flotaban los olores intensos de lo que se había cocinado. Bea, majestuosa en un delantal de flores impresas, utilizaba una cuchara de plata aflautada para servir la sopa de pollo con fideos al huevo en cuencos de porcelana traslúcida. Su cocina era baja en sal, pero su conversación en la mesa era picante, con críticas a todos sus parientes, quienes ahora que ya no estaba Morris ni se molestaban en levantar el teléfono y averiguar cómo estaba la tía Bea.</p>
+                        
+                        <p>David estaba sentado en frente de Bea, con la cabeza inclinada y la melancolía propia de un Hamlet. Él tenía sus propias objeciones acerca de los primos. —¿Quién quiere saber de ellos? ¿Quién los necesita? —enunció meticulosamente—. ¿Acaso hay un ápice de encanto y humor entre todos ellos?<br>Después del pesado postre preparado por Bea, finalmente David nos condujo escaleras abajo a conocer la cúpula del placer que era como llamaba a su guarida. Me había estado diciendo la verdad. </p>
+                        
+                        <p>Tenía una colección de arte. Cuadros colgados en profusión desde el techo hasta el suelo. Apilados en el suelo, recostados contra las paredes y sobre los muebles. Estrellas del arte. Nombres de museo. Allí estaba el dibujo de Lachaise de la magistral mujer, serena en medio de todo. David le estaba explicando a mi esposo en el tono de voz de completa naturalidad que usaba para las confidencias entre primos: —Reviso todo lo que hay en las trastiendas de los comerciantes de arte. Siempre he tenido buen ojo para las gangas—. A mí, con su tono de voz a lo Oscar Wilde, me describió una forma diferente de adquisición.  —A menudo recurrían a mí —dijo— para que me sentara al lado de un maricón importante del mundo del arte y lo mantuviera distraído de la mala comida y la mediocre compañía.</p>
+                        
+                        
+                        <p>Descolgó una preciosa acuarela de un famoso pintor: —Este me lo dieron a cambio de un pellizco en las nalgas—. A su lado en la pared había un dibujo a pluma de un hombre joven fornido, desnudo, la barriga flácida, el rostro hermoso.  —Yo, cuando era un joven salvaje y apuesto. Si estuviera firmado valdría una fortuna. </p>
+                        
+                        <p>Había esculturas, las pequeñas sobre mesas, las más grandes de pie sobre el suelo, muchos desnudos masculinos, algunos en posturas bastante indecorosas. En este recinto, sobre un sofá convertible tapizado con una brillante tela a cuadros con una etiqueta de Scotchgard, David llevaba a cabo sus relaciones, incluyendo la actual —me reveló con gran satisfacción— con un bombero que vivía calle arriba. Era difícil imaginar los deleites dionisiacos que allí tenían lugar mientras la tía estaba sentada en la cocina puliendo los objetos de plata.</p>
+                        
+                        <p>Repitió su oferta de darme el Lachaise e interpretó de forma completamente errónea mi vacilación. —El precio de este dibujo —trinó— me permitiría tener un asiento en la sinagoga durante 10 años de festividades religiosas o, mejor aún, una suscripción a la Ópera Metropolitana. </p>
+                        
+                        <p>Era un cuadro hermoso, y yo apreciaba su valor. De allí que me fuera difícil aceptarlo. Aparte de eso, ¿dónde lo colgaría, un dibujo tan grande, algo tan desfachatado, tan avasallador, tan frontalmente desnudo? David puso los ojos en blanco. Elevó sus manos al cielo como lamentando ser testigo de tamaña estupidez pequeñoburguesa.</p>
+                        
+                        <p>YÉVATE EL LACHEZ.</p>
+                        
+                        <p>—¿Y dónde lo cuelgo?</p>
+                        
+                        <p>CUÉLGALO EN EL BAÑO. CUÉLGALO SOBRE EL LESHO MATRIMONIAL. POR UNA VEZ EN LA VIDA TEN UNA ORJÍA. DALE ESE GUSTO A MI PRIMO</p>
+                        
+                        <p>Mis hijas adoraban a su primo David, quien escuchaba con interés lo que tenían que decir, las trataba con deferencia y se ponía de su lado en contra mía en cualquier conflicto que surgiera en su presencia. Su presencia no era algo raro. Naturalmente la tía Bea era incluida en todas las reuniones familiares: bodas, bautizos, bar mitzvahs, etcétera. David, al ser su acompañante, también tenía que ser invitado. Obeso, con sus prendas llamativas, con el cabello resplandeciente, llegaba con su madre del brazo, su devoto sirviente, al tiempo que ella asumía su papel de miembro de la realeza, en una versión del Lago de los Cisnes, con su amplio escote y las alhajas brillantes. David asumía un comportamiento amable y discreto: nada de ostentación, nada de llamar la atención, un regalo pequeño pero elegante, saludando de manera cortés pero distante a los anfitriones y al resto de familiares. En tales festividades David pasaba la mayor parte del tiempo con mi esposo y conmigo, con nuestras hijas, y al cabo de los años, también con sus novios o sus parejas de turno. Cuando no estaba con ninguno de nosotros, lo encontraba, aparentemente cómodo en un rincón amplio pero discreto, mirando con orgullo a su madre, quien era agasajada por el resto de la familia.</p>
+                        
+                        <p>NO SE LO REBELES A LOS PRIMOS CUANDO ESTIRE LA PATA, garabateó David, sentados en aquella mesa aislada del restaurante. SI ME INSULTARON CUANDO ESTABA VIVO NO QUIERO QUE VENGAN A RECOCIGARSE EN MI FUNERAL.</p>
+                        
+                        <p class="resaltado">SI ME INSULTARON CUANDO ESTABA VIVO NO QUIERO QUE VENGAN A RECOCIGARSE EN MI FUNERAL.</p>
+                        <hr class="line-separator line-orange" />
+                        
+                        <p>Me enteré de que estaba enfermo la tarde anterior a la primera noche de la Pascua Judía, la primera que conmemorábamos después de la muerte de su madre. Yo estaba cocinando la tradicional cena, sin apartarme un ápice de lo estipulado en esos casos, tal y como era la costumbre, sólo que en esta ocasión no había que recoger a Tía Bea en su puerta, por lo que David debió buscar la forma de llegar a nuestra casa por su cuenta. Llegó exhausto después de una corta caminata desde la parada del bus. Pensé que estaba intentando hacerme sentir culpable por no recogerlo en la parada del bus, pero me equivocaba. Había estado en la consulta del médico. —Es una sensación extraña —dijo— cuando uno se entera que no solamente ya no es decorativo sino que ha dejado de funcionar; como si ya estuviera de más en este mundo.</p>
+                        
+                        <p>La carne de pecho estaba en el horno. Yo estaba haciendo bolas del pan sin levadura y me detuve a limpiarme las manos. Miré severamente a David. —No te enfermes —le advertí—. Por favor no me hagas esto.</p>
+                        
+                        <p>La siguiente vez que lo vi estaba en el hospital, haciéndose las pruebas, enterándose del croquis de su futuro. Seguí a mi esposo hasta la azotea, con los cristales nublados y un olor al vinilo amarillo que cubría los muebles. Un televisor gigante inclinado pendía sobre nuestras cabezas y nunca se callaba. </p>
+                        
+                        <p>David se veía extrañamente ordinario con una barba de un día y ojos serios de color gris de humo y le concedió a mi esposo toda su atención. Hablando en voz baja y aplomada le dio las gracias por los dos cinturones nuevos que le había traído, uno negro, otro marrón, ambos mucho más delgados que los que tenía antes. Le explicó cómo desenterrar las vides de tomate de su patio trasero en Brooklyn y cómo plantarlas con mucho cuidado en el nuestro.</p>
+                        
+                        <p>Transcurrió lo que para mí fue una eternidad hasta que finalmente se dirigió a mí y fue como si yo acabara de entrar a la habitación. —Por favor disculpa el pijama arrugado —dijo frunciendo el rostro—. La arpía etíope debe estar de juerga celebrando su emancipación.</p>
+                        
+                        <p>De hecho, la denostada asistente de salud a domicilio —una joven jamaiquina llamada Corlie— de manera inexplicable había renunciado a un empleo remunerado con el propósito de esperar a David. Lo visitaba en el hospital. Y estaba en la casa cuando él regresó, mudo después de la cirugía, a la antigua habitación de Bea, ahora repleta de aparatos médicos, videos de ópera y las escandalosas plantas amarilis de David —traídas adentro y colocadas en pequeñas macetas, alineadas sobre la mesa para el café, hilera por hilera, selváticas, chillonas, con sus indecentes tonalidades de rojo y naranja, expandiendo desmesuradamente sus protuberantes bulbos. </p>
+                        
+                        <p>Era Corlie quien se mantenía en contacto con nosotros y nos telefoneaba para decirnos cuándo lo traería a Manhattan para el tratamiento ambulatorio. Era Corlie quien lo estaría aguardando cuando él y yo termináramos nuestra cena en el restaurante chino.</p>
+                        
+                        <p>En el restaurante David se las arregla para atraer la atención del mesero, pedir la cuenta y también, contra mi voluntad, hacer que empaquen en una bolsa para llevar a casa el especial del Chef que no pude terminar.</p>
+                        
+                        <p>—Tengo una cita en el norte de Manhattan —le grito—. ¿Qué voy a hacer con una bolsa de sobras? TÍRALO A LA BASURA. DÁSELO A UN PORDIOCERO EN UNA ESQUINA. </p>
+                        
+                        <p>Como de costumbre cedo, me rindo. Le digo que mi esposo y yo vamos a ir a Brooklyn el próximo fin de semana. Le pregunto qué quiere que le llevemos.</p>
+                        
+                        <p>UN ITALIANILLO HERMOSO QUE ME CUIDE. NO COMO LA NEGRAMENTA QUE ME HA TOCADO.</p>
+                        
+                        <p>Respiro profundamente y concentro mi atención, evitando mirarlo, en un dibujo de montañas chinas que se encuentra a sus espaldas. Recojo las hojas de su libreta amarilla para llevármelas a casa y quemarlas. —Eres insoportable —le digo con total sinceridad.</p>
+                        
+                        <p>David aplaude regocijado.</p>                        
+                        <p>Mi esposo cumplirá su promesa. Él y yo, acompañados por nuestras hijas, seremos los únicos parientes en el funeral. Conformaremos el grupo heterosexual en el servicio fúnebre en el cementerio junto a Corlie, el dentista de David y, presumiblemente, el rabino, separados por una breve distancia del grupo de los gay, sólo un poco más numeroso, y que incluirá al bombero y a John, el amigo de David y albacea de su patrimonio. Ellos nos mirarán con curiosidad mientras ambos grupos expresamos nuestra común aflicción. Todos podremos estar seguros de que David habría disfrutado del espectáculo de sus amigos y sus familiares reunidos, de pie bajo los paraguas, con los zapatos metidos en el barro, mientras el sol del verano se esconde y la lluvia cae con fuerza. Corlie llevará un broche de jade, un regalo de David. —Él era como un padre para mí —me dirá, llorando con tanta fuerza como la lluvia.</p>
+                        
+                        <p>La primera vez que vi a David fue en la boda de la prima Shirley. El servicio de comida no había escatimado nada. Las mesas redondas estaban llenas de platos colmados y copas burbujeantes. Las flores en el centro estaban colocadas sobre bases elevadas de tal forma que los comensales pudieran verse a través de la mesa. Carteras para salir de noche y anillos de diamantes brillaban en la periferia. En una plataforma bajo un dosel estaban el novio y la novia sentados en tronos gemelos frente a una mesa repleta de comida y flores. Tan pronto como el pan fue bendecido la banda empezó a tocar.</p>
+                        
+                        <p>David se levantó de su lugar en la mesa de los solteros y se acercó a donde yo estaba, sentada por primera vez entre los primos casados. Se veía tremendamente apuesto en un esmoquin ajustado, una chaqueta vinotinto, con una pechera blanca con pliegues en la muñeca. Además sus modales eran finos. Le dedicó una reverencia fraternal a mi marido y luego me invitó a bailar. Mi marido, quien no era precisamente un bailarín, dijo: —Adelante. Que se diviertan.</p>
+                        
+                        <p>¡Y cómo bailamos! Un torbellino. Mis faldas volaban. La banda aceleró el ritmo. Otros bailarines se detuvieron para vernos bailar. Bailamos al ritmo del lindy hop. Bailamos el vals. Los ojos de David brillaban. Estaba seguro de su habilidad para llevar el paso y de la ligereza de sus pies y cada que ensayaba algo nuevo yo me las arreglaba para seguirle el paso. La banda siguió tocando para nosotros dos y hubo aplausos al final de la tanda.</p>
+                        
+                        <p>La prima Harriet me dirigió una mirada desaprobatoria en el momento en que David me trajo de regreso a mi puesto. —Tu entrada se enfría —me dijo, a pesar de que mi esposo, muy consideradamente había tapado mi plato.</p>
+                        
+                        <p>Un día, en un futuro lejano, la Prima Harriet visitará la tumba de su tía y se dará cuenta de que David está enterrado junto a ella. Se pondrá furiosa con mi marido por no haber contactado a la familia y vendrá directamente a decírselo. La lujuriosa mujer desnuda estará colgada en la sala de casa encima del sofá donde mi esposo, pidiendo disculpas, explicará el deseo de David de contar con total privacidad. En la misma pared estará colgado el torso de David, el cual Harriet ignorará pero que en general recibirá la admiración y los comentarios de los visitantes. —Ése es mi primo —dirá mi esposo, con tono solemne—. Pero era con mi esposa —añadirá invariablemente— con quien tenía una gran cercanía.</p>
+                        
+                        
+                        <hr class="line-separator line-orange" />
+                    </div>
+                </div>
+                
+                
+                <!-- /Cuento 2 -->
+                
+                 <!--Cuento 3 -->
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Carson McCullers</h2>
+                    <h1 class="chapter-title cafe">Un árbol,<br/><span class="oswald-light cafe">una roca, una nube</span></h1>
+                  
+                    <div class="content-text">
+                        
+                        <p class="first-paragraph">Llovía aquella mañana y todavía estaba muy oscuro. El chico de los periódicos había terminado casi su recorrido cuando llegó al cafetín y entró a tomarse una taza de café. Era un sitio que estaba abierto toda la noche y pertenecía a un hombre amargado y mezquino llamado Leo. Después de la calle desolada y vacía, tenía un aire simpático y alegre; junto a la barra había un par de soldados, tres tejedores de la fábrica y, en la punta, un hombre encorvado, con la nariz y media cara dentro de un jarro de cerveza. El chico llevaba un casco como el de los aviadores. Cuando entró en el café se lo desató y levantó la orejera derecha sobre su orejita colorada. Casi siempre, mientras bebía el café, alguien le decía algo cariñoso. Pero esa vez Leo no le miró y ninguno de los hombres le habló. Pagó, y ya se iba, cuando una voz llamó: </p>
+                        
+                        
+                        <p>—Hijo. Eh, hijo. </p>
+                        
+                        
+                        <p>Se volvió y el hombre de la esquina le hacía señas con el dedo llamándole. Había levantado la cara del jarro de cerveza y parecía de repente muy feliz. El hombre era largo y pálido, con una gran nariz y el pelo anaranjado marchito.</p>
+                        
+                        
+                        <p>—Eh, hijo.</p>
+                        
+                        <p>El chico de los periódicos fue hacia él. Era flaco y tenía unos doce años y un hombro más alto que otro por el peso del saco de periódicos. Tenía la cara chupada y pecosa y sus ojos eran unos ojos redondos de niño.</p>
+                        
+                        <p>—¿Qué, señor?</p>
+                        
+                        <p>El hombre puso una mano sobre los hombros del chico de los periódicos, luego le cogió la barbilla y le movió despacio la cara de un lado para otro. El chico retrocedió incómodo.</p>
+                        
+                        <p>—Diga, ¿qué quiere?</p>
+                        
+                        <p>La voz del chico era chillona. El café de pronto se quedó muy silencioso. El hombre dijo despacio: </p>
+                        
+                        <p>—Te quiero.</p>
+                        
+                        <p>En la barra los hombres se rieron; el chico ya se había echado para atrás, y quería irse, no sabía qué hacer. Miró por encima del mostrador a Leo y Leo le miraba con una mueca aburrida de burla. El chico intentó reírse también, pero el hombre estaba serio y triste.</p>
+                        
+                        <p>—No he querido tomarte el pelo, hijo. Siéntate y toma una cerveza conmigo. Tengo que explicarte una cosa —dijo.</p>
+                        
+                        <p>Cautamente, con el rabillo del ojo, el chico de los periódicos consultó con los hombres de la barra, preguntándoles qué hacer. Pero ellos habían vuelto a sus cervezas y a sus desayunos y no le hicieron caso. Leo puso en el mostrador una taza de café y una jarrita de nata.</p>
+                        
+                        <p>—Es menor de edad —dijo. </p>
+                        
+                        <p>El chico de los periódicos trepó hacia el taburete. Su oreja, debajo de la orejera levantada, era muy pequeña y muy colorada. El hombre asentía con la cabeza seriamente.</p>
+                        
+                        <p>Es importante —dijo. Y buscó en el bolsillo de atrás y sacó algo que enseñó en la palma de la mano para que lo viera el chico. </p>
+                        
+                        <p>—Míralo atentamente— dijo.</p>
+                        
+                        <p>El chico miró, pero no había nada que mirar con atención. El hombre tenía una fotografía en la palma de la mano grande y mugrienta. Era un rostro de mujer. Tan borroso que solamente se veían con claridad el traje y el sombrero que llevaba.</p>
+                        
+                        <p>—¿Ves? —dijo el hombre.</p>
+                        
+                        <p>El chico asintió y el hombre le enseñó otra fotografía. La mujer estaba de pie en una playa, en traje de baño. El traje de baño le hacía un estómago muy grande, eso era lo primero que se notaba.</p>
+                  
+                        
+                        <p>—¿Has mirado bien?</p>
+                        
+                        <p>Se inclinó más todavía acercándose y, finalmente, preguntó:  </p>
+                        
+                        <p>—¿La habías visto antes?</p>
+                        
+                        <p>El chico estaba sentado sin moverse, mirando de soslayo al hombre.</p>
+                        
+                        <p>—No, que yo sepa.</p>
+                        
+                        <p>—Muy bien —el hombre se volvió a meter las fotografías en el bolsillo—. Era mi mujer.</p>
+                        
+                        <p>—¿Murió? —preguntó el chico. </p>
+                        
+                        <p>Despacio, el hombre negó con la cabeza. Frunció los labios como si fuera a silbar y contestó de manera indecisa: </p>
+                        
+                       
+                        
+                        <p>—Eh…—dijo—. Te explicaré.</p>
+                        
+                        <p>La cerveza, en el mostrador, delante del hombre, estaba en su gran jarro oscuro. No la cogió para beber; en vez de eso, se inclinó y, poniéndole la cara sobre el borde, estuvo así un momento. Luego, con ambas manos, agarró el jarro y sorbió.</p>
+                        
+                        <p>—Cualquier noche te vas a dormir con tu narizota dentro del jarro y te ahogarás —dijo Leo—. “Eminente forastero ahogado en cerveza”. Sería una muerte muy graciosa.</p>
+                        
+                        <p>El chico de los periódicos trató de hacer una seña a Leo. Cuando el hombre no miraba volvió la cabeza e hizo un gesto con la boca como si preguntara sin hablar: </p>
+                        
+                        <p>—¿Está borracho?</p>
+                        
+                        
+                        <p>Pero Leo levantó las cejas y se volvió para poner dos trozos de tocino en la parrilla. El hombre apartó de él el jarro, se irguió y juntó sus manos sueltas y huesudas sobre el mostrador. Tenía la cara triste, mirando al chico. No pestañeaba; solo, de vez en cuando, bajaba los ojos de color verde pálido. Estaba casi amaneciendo y el chico se cambió de hombro el peso del saco de periódicos.</p>
+                        
+                        <p>—Estoy hablando de amor —dijo el hombre—. Para mí es una ciencia.</p>
+                        
+                        <p>El chico se empezó a escurrir del taburete. Pero el hombre levantó el índice y hubo algo que retuvo al chico, que no le dejó moverse.</p>
+                        
+                        <p>—Hace doce años me casé con la mujer de la fotografía. Fue mi mujer durante un año, nueve meses, tres días y dos noches. La quería. Sí… —aclaró su voz ronca y dijo de nuevo—. La quería y pensaba que ella también me quería a mí. Yo era maquinista de ferrocarriles. Ella tenía todas las comodidades y lujos en casa. Nunca se me pasó por la cabeza que no estuviera satisfecha. Pero, ¿sabes lo que pasó?</p>
+                        
+                        <p>—¡Hummm…! —dijo Leo. </p>
+                        
+                        
+                        <p>El hombre no quitaba los ojos de la cara del chico: —Me dejó. Una noche, cuando volví, la casa estaba vacía y ella se había ido. Me dejó.</p>
+                        
+                        <p>—¿Con un fulano? —preguntó el chico.</p>
+                        
+                        <p>Suavemente, el hombre puso la palma de la mano sobre el mostrador.</p>
+                        
+                        <p>—Claro, naturalmente, hijo. Una mujer no se escapa de esa manera, sola.</p>
+                        
+                        <p>El café estaba tranquilo; la lluvia, negra e interminable, en la calle. Leo aplastó el tocino que se estaba friendo en las púas de su gran tenedor.</p>
+                        
+                        <p>—Así que llevas doce años persiguiendo a esa… ¡Asqueroso viejo verde!</p>
+                        
+                        <p>El hombre miró a Leo por primera vez:</p>
+                        
+                        <p>—Por favor, no seas grosero. Además, no te estoy hablando a ti —se volvió hacia el chico y le dijo en tono de confianza y secreto: —No vamos a hacerle ningún caso, ¿eh?</p>
+                        
+                        <p>El chico de los periódicos asintió, no muy convencido.</p>
+                        
+                        <p>—Fue así —continuó el hombre—. Soy una persona que se impresiona mucho con las cosas. Durante toda mi vida, una cosa tras otra me han impresionado: la luz de la luna, las piernas de una chica bonita… Una cosa tras otra. Pero la cuestión es que, cuando había disfrutado de algo tenía una sensación extraña, como si estuviera dentro de mí, andando suelta. Nada parecía llegar a terminarse ni a encajar con las otras cosas. ¿Mujeres? Ya tuve mi ración de ellas. Es lo mismo. Después, quedaban vagando sueltas en mí. Yo era un hombre que no había amado nunca.</p>
+                        
+                        <p>Cerró los párpados muy despacio y el gesto fue como la caída del telón cuando termina un acto en el teatro. Cuando habló de nuevo tenía la voz excitada y las palabras venían de prisa; los lóbulos de sus orejas grandes y sueltas parecían temblar.</p>
+                        
+                        <p>—Luego encontré a esta mujer. Yo tenía cincuenta y un años; ella siempre decía que tenía treinta. La encontré en una estación de servicio y nos casamos a los tres días. ¿Y sabes cómo nos fue? No puedo ni decírtelo. Todo lo que siempre había sentido estaba reunido alrededor de esta mujer. Ya no había más cosas sueltas dentro de mí, todo estaba concluido en ella.</p>
+                    
+                        <p>El hombre se calló de repente y se dio golpes en la nariz larga. Su voz se sumergió en un tono bajo, firme, de reproche.</p>
+                        
+                        <p>—No lo estoy explicando bien. Lo que pasó fue esto. Ahí estaban esos sentimientos hermosos y esos pequeños placeres sueltos, dentro de mí. Y esta mujer era para mi alma algo así como una cinta que los ataba. Hacía pasar por ella esos poquitos de mí mismo y salía completo. ¿Me sigues ahora?</p>
+                        
+                        <p>—¿Cómo se llamaba? —preguntó el chico. </p>
+                        
+                        <p>—Oh —dijo él—. Yo la llamaba Dodo. Pero eso no tiene importancia.</p>
+                        
+                        <p>—¿Y trató usted de hacerla volver?</p>
+                        
+                        <p>El hombre no pareció oír.</p>
+                        
+                        <p>—En esas circunstancias, ya te puedes imaginar cómo me quedé cuando me dejó.</p>
+                        
+                        <p>Leo cogió el tocino de la parrilla, y dobló dos tajadas dentro de un panecillo. Tenía una cara gris, con ojos hundidos, una nariz respingada y salpicada de suaves sombras azules. Uno de los obreros textiles pidió más café y Leo se lo sirvió. Leo no dejaba que repitieran gratis. El obrero desayunaba allí todas las mañanas, pero cuanto más conocía Leo a sus clientes, más tacaño era con ellos. Se puso a roer su bocadillo como si se lo escatimara a sí mismo.</p>
+                        
+                        <p>—¿Y no la encontró usted nunca?</p>
+                        
+                        <p>El chico no sabía qué pensar del hombre, y su cara parecía incierta, con una mezcla de curiosidad y duda. Era nuevo en el recorrido de los periódicos; todavía le parecía raro estar fuera por la ciudad en la madrugada negra y extraña.</p>
+                        
+                        <p>—Sí —dijo el hombre, tomé algunas medidas para hacerla volver—. Estuve por ahí tratando de localizarla. Fui a Tulsa, donde ella tenía parientes. Fui a Mobile. Fui a todas las ciudades que había mencionado alguna vez, buscando a todos los hombres que habían tenido alguna relación con ella. Tulsa, Atlanta, Chicago, Cheehaw, Memphis… Durante casi dos años corrí por todo el país tratando de encontrarla.</p>
+                        
+                        <p>—Pero la pareja había desaparecido de la faz de la tierra —dijo Leo.</p>
+                        
+                        <p>—No le escuches —dijo el hombre confidencialmente—. Y además olvida esos dos años. No son importantes. Lo que importa es que por el tercer año me empezó a pasar una cosa muy curiosa.</p>
+                        
+                        <p>—¿Qué? —preguntó el chico.</p>
+                        
+                        <p>El hombre se dobló e inclinó el jarro para beber un sorbo de cerveza. Pero mientras se agachaba sobre el jarro las aletas de la nariz le temblaron ligeramente; olfateó el olor rancio de la cerveza y no bebió.</p>
+                        
+                        <p>—La verdad es que el amor es una cosa extraña. Al principio no pensaba más que en que volviera. Era una especie de manía. Luego, según pasaba el tiempo, trataba de recordarla, pero, ¿sabes qué ocurría?</p>
+                        
+                        <p>—No —dijo el chico.</p>
+                        
+                        <p>—Cuando me tumbaba en la cama y trataba de pensar en ella, mi cabeza se quedaba en blanco. No podía verla. Y entonces sacaba sus fotografías y las miraba. Nada, no había nada que hacer. Era como si no la viera. ¿Puedes imaginarlo?</p>
+                        
+                        <p>—¡Eh, tío! —gritó Leo a través del mostrador—. ¿Puedes imaginarte la cabeza de este borracho en blanco?</p>
+                        
+                        <p>Despacio, como si espantara moscas, el hombre movió la mano. Tenía sus ojos verdes fijos y concentrados en la carita chupada del chico de los periódicos.</p>
+                        
+                        
+                         <p class="resaltado">Despacio, como si espantara moscas, el hombre movió la mano. Tenía sus ojos verdes fijos y concentrados en la carita chupada del chico de los periódicos.</p>
+                        <hr class="line-separator line-orange" />
+                        
+                        
+                        <p>—Pero un pedazo de cristal inesperado en la acera o una canción de cinco centavos en un gramófono automático, una sombra en una pared por la noche, y recordaba. A veces me ocurría por la calle y yo me echaba a llorar y me golpeaba la cabeza contra un farol. ¿Me comprendes?</p>
+                        
+                        <p>—Un trozo de cristal… —dijo el chico.</p>
+                        
+                        <p>—Cualquier cosa. Daba vueltas por ahí y no tenía poder sobre cómo y cuándo recordarla. Uno cree que se puede poner encima una especie de blindaje. Pero el recuerdo no viene al hombre así, de frente, viene por las esquinas, dando rodeos. Estaba a merced de todo lo que oía o veía. De repente, en vez de ser yo el que atravesaba el país para encontrarla, empezó ella a perseguirme en mi propia alma. Ella, persiguiéndome a mí, ¡fíjate! Y en mi alma.</p>
+                        
+                        <p>El chico preguntó finalmente: </p>
+                        
+                        <p>—¿Por qué parte del país estaba usted entonces?</p>
+                        
+                        <p>—Huy —gruñó el hombre—. Era un pobre mortal enfermo. Era como la viruela. Te confieso, hijo, que me emborraché, forniqué, cometí cualquier pecado que de pronto me apeteciera. Me avergüenza confesártelo, pero así es. Cuando recuerdo esa temporada, está todo confuso en mi mente; fue terrible.</p>
+                        
+                        <p>El hombre inclinó la cabeza y pegó la frente al mostrador. Durante unos segundos estuvo así, doblado, con la nuca nervuda cubierta de una pelambrera anaranjada y las manos, con sus largos dedos retorcidos, palma contra palma, en actitud de rezar. Luego el hombre se irguió; sonreía y de pronto su rostro fue un rostro radiante, trémulo y viejo.</p>
+                        
+                        <p>—Pasó en el quinto año —dijo—. Y con él empezó mi ciencia.</p>
+                        
+                        <p>La boca de Leo se movió con una mueca pálida y rápida:</p>
+                        
+                        <p>—¡Vaya! Ninguno de nosotros se va haciendo más joven —dijo. Luego, con furia repentina, hizo una pelota con el paño de secar que tenía en la mano y lo tiró con fuerza al suelo—: ¡Vaya Romeo viejo con el rabo a rastras!</p>
+                        
+                        <p>—¿Qué pasó? —preguntó el chico.</p>
+                        <p>La voz del viejo era alta y clara:</p>
+                        <p>—Paz —contestó.</p>
+                        <p>—¿Eh?</p>
+                        
+                        <p>—Es difícil explicarlo científicamente, hijo. Me figuro que la explicación lógica es que ella y yo nos habíamos perseguido tanto tiempo que al fin nos hicimos un lío, nos echamos atrás y lo dejamos. Paz. Un vacío extraño y hermoso. Era primavera en Portland y llovía todas las tardes. Yo me quedaba allí, en mi cama, echado en la oscuridad. Y así me vino la sabiduría.</p>
+                        
+                        <p>a luz del nuevo día teñía de azul pálido las ventanas del cafetín. Los dos soldados pagaron sus cervezas y abrieron la puerta; uno de ellos se peinó y sacudió sus polainas fangosas antes de salir. Los tres obreros se encorvaron en silencio sobre sus desayunos. El reloj de Leo sonó en la pared.</p>
+                        
+                        <p>—Es esto. Escucha atentamente. Medité sobre el amor y saqué la conclusión. Me di cuenta de qué es lo que nos pasa. Los hombres se enamoran por primera vez. Y, ¿de qué se enamoran? La tierna boca del niño estaba medio abierta y no contestó.</p>
+                        
+                        <p>—De una mujer —dijo el viejo—. Sin sabiduría, sin nada para poder ir por ahí, emprenden la experiencia más sagrada y peligrosa de este mundo. Se enamoran de una mujer. ¿Es esto, no, hijo?</p>
+                        
+                        <p>—Sí —dijo el chico desmayadamente.</p>
+                        
+                        <p>—Empiezan por el revés del amor. Empiezan por el punto crítico. ¿Te das cuenta de por qué es algo tan desgraciado? ¿Sabes cómo deberían querer los hombres?</p>
+                        
+                        <p>El viejo alargó la mano y agarró al chico por el cuello de la chaqueta de cuero. Le sacudió suavemente y sus ojos verdes miraron hacia abajo sin pestañear, graves.</p>
+                        
+                        <p>—Hijo, ¿sabes cómo debería empezarse el amor? El chico seguía sentado, pequeño, callado, tranquilo. Poco a poco movió la cabeza. El viejo se acercó más y murmuró:</p>
+                        
+                        <p>—Un árbol. Una roca. Una nube.</p>
+                        
+                         <p class="resaltado">—Un árbol. Una roca. Una nube.</p>
+                        <hr class="line-separator line-orange" />
+                        
+                        <p>Todavía llovía fuera en la calle: una lluvia sin fin, suave y gris. La sirena de la fábrica sonó para el turno de las seis, y los tres obreros pagaron y se fueron. En el café no quedaban más que Leo, el viejo y el chico de los periódicos.</p>
+                        
+                        <p>—El tiempo estaba así en Portland —dijo— en la época en que empezó mi sabiduría. Medité y empecé con precaución. Cogía cualquier cosa de la calle y me la llevaba a casa. Compré un pececillo dorado y me concentré en él y lo amé. Pasaba gradualmente de una cosa a la otra. Día a día iba adquiriendo esa técnica. En el camino de Portland a San Diego…</p>
+                        
+                        <p>—¡Oh, cierra el pico! —aulló Leo de repente—. ¡Calla, calla!</p>
+                        
+                        <p>El viejo seguía agarrando la chaqueta del chico; temblaba y su rostro estaba muy serio, iluminado, salvaje.</p>
+                        
+                        <p>—Ya hace seis años que voy por ahí solo haciéndome mi saber. Y ahora soy un maestro, hijo. Puedo amarlo todo. No tengo ya ni que pensar en ello. Veo una calle llena de gente y una luz hermosa dentro de mí. Miro a un pájaro en el cielo o me encuentro con un viajero en el camino. Cualquier cosa, hijo, o cualquier persona. ¡Todos desconocidos y todos amados! ¿Te das cuenta de lo que puede significar una ciencia como la mía?</p>
+                        
+                        <p>El chico se sostenía, tieso con las manos curvadas agarrando fuertemente el borde del mostrador. Al fin, preguntó:</p>
+                        
+                        <p>—¿Y encontró a aquella señora?</p>
+                        
+                        <p>—¿Qué? ¿Qué dices, hijo?</p>
+                        
+                        <p>—Digo —preguntó tímidamente el chico—, ¿se ha vuelto a enamorar de alguna mujer?</p>
+                        
+                        <p>El hombre aflojó las manos del cuello del chico. Se volvió y por primera vez asomó a sus ojos verdes una mirada vaga y dispersa. Levantó el jarro del mostrador y bebió la cerveza dorada. Movía la cabeza despacio, de un lado a otro. Por fin, contestó:</p>
+                        
+                        <p>—No hijo. Fíjate, ese es el último paso en mi ciencia. Voy con cuidado. Todavía no estoy preparado del todo.</p>
+                        
+                        <p>—Bueno —dijo Leo—. Bueno, bueno.</p>
+                        
+                        <p>El viejo estaba de pie en el vano de la puerta abierta.</p>
+                        
+                        <p>—Acuérdate —dijo. Allí, en medio de la húmeda luz gris de la madrugada parecía encogido, andrajoso y frágil, pero su sonrisa era luminosa. </p>
+                        
+                        <p>—Acuérdate de que te quiero —dijo, sacudiendo la cabeza por última vez. Y la puerta se cerró sin ruido detrás de él.</p>
+                        
+                        <p>El chico no habló durante un buen rato. Se alisó el pelo sobre la frente, y pasó su dedito mugriento por el borde de la taza vacía. Después, sin mirar a Leo, preguntó:</p>
+                        
+                        <p>—¿Estaba borracho?</p>
+                        <p>—No —dijo Leo.</p>
+                        
+                        <p>El chico levantó aún más su voz clara:</p>
+                        
+                        <p>—Entonces, ¿es un drogadicto?</p>
+                        
+                        <p>—No.</p>
+                        
+                        <p>El chico miró a Leo, con una carita fea y desesperada y su voz chillona y urgente:</p>
+                        
+                        <p>—¿Está loco, pues? ¿Crees que está chiflado? —la voz del chico de los periódicos bajó de pronto con una duda—: ¿Eh, Leo? ¿O no?</p>
+                        
+                        <p>Pero Leo no le contestó. Hacía catorce años que tenía su café nocturno y se consideraba experto en locuras. Estaban los tipos de la ciudad y también los forasteros que llegaban como si vinieran del fondo de la noche. Conocía las manías de todos. Pero no quiso satisfacer la curiosidad del niño. Contrajo su cara pálida y siguió callado.</p>
+                        
+                        <p>Así, el chico se bajó la orejera derecha del casco y, volviéndose para marcharse, hizo el único comentario que le parecía seguro, la única observación que no podía ser ridiculizada ni despreciada:</p>
+                        
+                        <p>—Se nota que viajó mucho.</p>
+                        
+                        <hr class="line-separator line-orange" />
+                  
+                    </div>
+                </div>
+                
+                <!--Biografías -->
+                
+                
+                <div class="slides slide">
+                
+                <h2 class="section-title">Flannery O’Connor</h2>
+                     <h1 class="chapter-title cafe">La cosecha</h1>
+                   
+                 <div class="content-text">
+
+                     
+                        <p class="first-paragraph">La señorita Willerton siempre quitaba las migas de la mesa. Era su hazaña doméstica especial y lo hacía con gran esmero. Lucía y Bertha fregaban los platos y Garner se iba a la sala a hacer el crucigrama del Morning Press. Así dejaban sola en el comedor a la señorita Willerton y a ella ya le iba bien. ¡Uf! En aquella casa el desayuno era siempre un suplicio. Lucía insistía en seguir siempre el mismo horario en el desayuno y las demás comidas. Lucía decía que desayunar a la misma hora contribuía a adquirir otras prácticas regulares, y, con lo propenso que era Garner a sufrir molestias, era fundamental que estableciesen algún método en las comidas. De esa manera, también se aseguraba de que él le pusiera agar-agar a las gachas de harina de trigo. «Como si después de llevar cincuenta años haciéndolo —pensó la señorita Willerton—, fuese capaz de hacer otra cosa». La polémica del desayuno empezaba siempre con las gachas de harina de trigo de Garner y terminaba con las tres cucharadas de piña triturada de la señorita Willerton. «Ya sabes lo de tu acidez, Willie —le decía siempre la señorita Lucía—, ya sabes lo de tu acidez», y entonces Garner ponía los ojos en blanco y soltaba algún comentario desagradable, y Bertha pegaba un salto y Lucía se mostraba afligida y la señorita Willerton saboreaba la piña triturada que acababa de tragarse.</p>
+                     
+                        <p>Era un alivio quitar las migas de la mesa. Quitar las migas de la mesa le daba tiempo para pensar, y, si la señorita Willerton debía escribir un relato, antes tenía que pensarlo. Casi siempre pensaba mejor sentada delante de la máquina de escribir, pero por el momento tendría que conformarse con lo que había. En primer lugar, debía pensar un tema para el relato que iba a escribir. Eran tantos los temas sobre los que se podía escribir un cuento que a la señorita Willerton nunca se le ocurría ninguno. Era siempre la parte más difícil de escribir un cuento, ella siempre lo decía. Dedicaba más tiempo a pensar en algo sobre lo que escribir que a la escritura en sí. A veces descartaba un tema tras otro y, a menudo, tardaba una o dos semanas en decidirse por alguno. La señorita Willerton sacó el recogedor y la escobilla de plata y se puso a limpiar la mesa. «¿Y un panadero —se preguntó—, será un buen tema?». «Los panaderos extranjeros eran muy pintorescos», pensó. La tía Myrtile Filmer había dejado sus cuatricromías de panaderos franceses estampadas en sombreros con forma de hongo. Eran hombres magníficos, altos… rubios y…<br>—¡Willie! —gritó la señorita Lucía, entrando en el comedor con los saleros—. Por el amor de Dios, pon el recogedor debajo de la escobilla o echarás todas las migas sobre la alfombra. En lo que va de la semana le he pasado la aspiradora cuatro veces y no pienso volver a pasarla.</p>
+                     
+                        <p>—Si le has pasado la aspiradora no sería por las migas que se me caen a mí —le contestó la señorita Willerton, lacónica—. Siempre recojo las migas que se me caen. —Y aclaró—: Y a mí se me caen bien pocas.</p>
+                        
+                        <p>—A ver si esta vez lavas el recogedor antes de guardarlo —le soltó la señorita Lucía.</p>
+                     
+                        <p>La señorita Willerton se echó las migas en la mano y las arrojó por la ventana. Llevó el recogedor y la escobilla a la cocina y los metió debajo de un chorro de agua fría. Los secó y los volvió a guardar en el cajón. Misión cumplida. Ahora podía ponerse delante de la máquina de escribir. Y estarse allí hasta la hora del almuerzo.</p>
+                     
+                        <p>La señorita Willerton se sentó delante de la máquina de escribir y lanzó un suspiro. ¡A ver! ¿En qué había estado pensando? Ah, sí. En los panaderos. Ummm. Los panaderos. No, los panaderos, mejor no. Tenían poco de originales. Los panaderos no producían tensión social. La señorita Willerton clavó la vista en la máquina de escribir. A S D F G… sus ojos recorrieron las teclas. Ummm. «¿Y los maestros?», se preguntó la señorita Willerton. No. Por Dios, no. Los maestros siempre hacían que la señorita Willerton se sintiera rara. Sus maestras del Seminario Femenino Willowpool estaban bien, pero eran todas mujeres. El Seminario Femenino de Willowpool, recordó la señorita Willerton. La frase no le gustaba nada: Seminario Femenino de Willowpool… sonaba a biología. Ella se limitaba a decir que se había graduado de Willowpool. Los maestros hacían que la señorita Willerton se sintiera como si estuviera a punto de pronunciar algo mal. Además, los maestros no eran oportunos. Ni siquiera representaban un problema social.</p>
+                     
+                        <p>Problema social. Problema social. Ummm. ¡Los aparceros!</p>
+                     
+                         <p>La señorita Willerton nunca había intimado con ningún aparcero pero, reflexionó, como tema tendría tanto arte como cualquier otro, ¡y le permitirían conseguir ese aire de trascendencia social que tan útil resultaba en los círculos que esperaba conocer en sus viajes! «Siempre puedo sacarle partido —refunfuñó—, al tema de la lombriz intestinal». ¡Ya le iba saliendo! ¡Sin duda! Movió los dedos con nerviosismo sobre las teclas sin tocarlas. Después, de repente, empezó a escribir a gran velocidad. </p>
+                     
+                        <p>«Lot Motun —registró la máquina— llamó a su perro». Una pausa abrupta siguió a la palabra «perro». La señorita Willerton siempre se esmeraba en la primera oración. «La primera oración —decía siempre—, le venía como… ¡como un chispazo! ¡Tal cual! — decía, y chasqueaba los dedos—, ¡como un chispazo!» Y sobre la primera oración construía su relato. «Lot Motun llamó a su perro», le había salido automáticamente a la señorita Willerton, y al releer la frase, decidió no solo que «Lot Motun» era un nombre adecuado para un aparcero, sino que hacer que llamara a su perro era lo mejor que se podía esperar de un aparcero. «El perro levantó las orejas y, con el rabo entre las patas, se acercó a Lot». La señorita Willerton había escrito la frase antes de que le diera tiempo a advertir su error: dos «Lot» en un mismo párrafo. Resultaba desagradable al oído. La máquina de escribir retrocedió chirriando y la señorita Willerton escribió tres X sobre «Lot». Entre líneas anotó a lápiz: «Su amo». Ahora ya estaba lista para continuar. «Lot Motun llamó a su perro. El perro levantó las orejas y, con el rabo entre las patas, se acercó a su amo». «Y también tengo dos perros —pensó la señorita Willerton—. Ummm». Pero decidió que eso no molestaría tanto al oído como los dos «Lot».</p>
+                     
+                        <p>La señorita Willerton era muy partidaria de lo que denominaba «arte fonético». Según ella, el oído era tan lector como el ojo. Le gustaba expresarlo de ese modo. «El ojo forma un cuadro —le había dicho a un grupo en las Hijas Unidas de las Colonias— que puede pintarse en abstracto, y el éxito de la empresa literaria —a la señorita Willerton le gustaba la expresión empresa literaria— depende de esos elementos abstractos creados en la mente y de la naturaleza tonal —a la señorita Willerton también le gustaba eso de naturaleza tonal—, que registra el oído». La oración «Lot Motun llamó a su perro» tenía un toque cáustico y seco que, seguido de «el perro levantó las orejas y, con el rabo entre las patas, se acercó a su amo», le daba al párrafo la salida que precisaba.</p>
+                     
+                        <p>«Lot tiró de las orejas cortas y raquíticas del animal y se revolcó con él en el barro». A lo mejor, reflexionó la señorita Willerton, eso era un poco exagerado. Pero, según le constaba, el que un aparcero se revolcara en el barro entraba dentro de lo razonablemente posible. En cierta ocasión había leído una novela que trataba de ese tipo de personas, en la que se había hecho algo tan feo como aquello y, a lo largo de tres cuartas partes de la narración, cosas mucho peores. Lucía la encontró mientras limpiaba uno de los cajones del escritorio de la señorita Willerton, y, después de hojear unas cuantas páginas al azar, sujetó el libro entre el pulgar y el índice, lo llevó hasta el horno y lo echó al fuego.</p>
+                        
+                        <p>—Willie, esta mañana cuando limpiaba tu escritorio, me encontré un libro que Garner debió de dejar allí para hacerte una broma —le dijo la señorita Lucía más tarde—. Fue horrible, pero ya sabes cómo las gasta Garner. Lo he quemado. —Y luego, con una risita ahogada, añadió—: Estaba segura de que no podía ser tuyo.</p>
+                     
+                        <p>ser de nadie más que de ella, pero no se atrevió a aclararlo. Lo había encargado directamente a la editorial porque no quería pedirlo en la biblioteca. Le había costado tres dólares con setenta y cinco centavos, envío postal incluido, y no había terminado los últimos cuatro capítulos. Eso sí, había leído lo suficiente para poder afirmar que era razonablemente posible que Lot Motun se revolcara en el barro con su perro. Al hacerle hacer tal cosa, lo de las lombrices intestinales tendría más sentido, decidió. «Lot Motun llamó a su perro. El perro levantó las orejas y, con el rabo entre las patas, se acercó a su amo. Lot tiró de las orejas cortas y raquíticas del animal y se revolcó con él en el barro».</p>
+                     
+                        <p> La señorita Willerton se apoyó en el respaldo. Era un buen comienzo. Ahora planificaría la acción. Había que incluir una mujer, claro. A lo mejor Lot podía matarla. Ese tipo de mujeres siempre sembraba cizaña. Incluso podía provocarlo para que acabara matándola por libertina y, después, quizá a él lo perseguiría la mala conciencia.</p>
+                     
+                        <p>Si debía tomar ese rumbo, sería necesario dotarlo de principios, aunque no sería demasiado difícil dárselos. Se preguntó de qué manera introduciría ese aspecto, en vista de toda la atención que en el relato debía dedicarle al amor. Tendría que poner algunas escenas bastante violentas y naturalistas; el tipo de detalles sádicos que una leía en relación con esa clase de gente. Era un problema. Sin embargo, la señorita Willerton disfrutaba con esos problemas. Lo que más le gustaba era planificar las escenas pasionales, pero, cuando llegaba el momento de escribirlas, siempre empezaba a sentirse rara y a preguntarse qué diría su familia cuando las leyeran. Garner chasquearía los dedos y le haría un guiño a la menor oportunidad; Bertha la consideraría una persona horrible; y Lucía diría con esa vocecita tonta que la caracterizaba: «¿Qué nos has estado ocultando, Willie? ¿Qué nos has estado ocultando?», y lanzaría su risita ahogada, como hacía siempre. Pero la señorita Willerton no podía pensar en eso ahora; debía darles forma a sus personajes.</p>
+                     
+                        <p>Lot sería alto, encorvado y desaliñado, pero sus ojos serían tristes y lo harían parecerse a un caballero pese a tener el cuello enrojecido y las manos enormes y torpes. Tendría los dientes rectos y, para indicar que era dueño de cierto espíritu, sería pelirrojo. Las prendas le colgarían sin gracia, pero las luciría con desenfado, como si fuesen una segunda piel; tal vez, reflexionó la señorita Willerton, sería mejor, después de todo, que no se revolcara con el perro. La mujer sería más o menos guapa, con el pelo rubio, los tobillos gruesos, los ojos turbios.</p>
+                     
+                        <p>La mujer le serviría la cena en la cabaña y él comería la sémola llena de grumos a la que ella ni siquiera se habría molestado en ponerle sal y, allí sentado, pensaría en cosas grandiosas, lejos, muy lejos… en otra vaca, una casa pintada, un pozo limpio, incluso una granja propia. La mujer empezaría a dar alaridos porque él no había cortado suficiente leña para la cocina y se quejaría del dolor de espalda. Ella se sentaría a verlo comer la sémola rancia y le diría que no tenía suficientes agallas para robar comida</p>
+                     
+                        <p>—¡Eres un asqueroso pordiosero! —le diría con sorna. Y él la mandaría callar.</p>
+                     
+                        <p>—¡Cierra la boca!—gritaría.</p>
+                     
+                        <p>—Me tienes harta, más que harta. —Pondría los ojos en blanco y, burlándose y riéndose de él, le diría—: Los desgraciados como tú no me dan miedo.</p>
+                     
+                     
+                        <p class="resaltado">—Me tienes harta, más que harta. —Pondría los ojos en blanco y, burlándose y riéndose de él, le diría—: Los desgraciados como tú no me dan miedo.</p>
+                        <hr class="line-separator line-orange" />
+                     
+                        <p>Entonces él echaría la silla hacia atrás e iría hacia ella. Ella agarraría un cuchillo de la mesa —la señorita Willerton se preguntó cómo era posible que aquella mujer fuera tan corta—, y retrocedería manteniendo el cuchillo en alto. Él daría un salto hacia delante y ella se apartaría veloz, como un caballo salvaje. Luego volverían a estar cara a cara, los ojos rebosantes de odio, y avanzarían y retrocederían. La señorita Willerton alcanzó a oír cómo los segundos iban golpeando contra el tejado de lata. Él se abalanzaría otra vez sobre la mujer y ella, con el cuchillo dispuesto, se lo hincaría de un momento a otro… La señorita Willerton no pudo aguantar más. Golpeó a la mujer con fuerza en la cabeza, por detrás. La mujer soltó el cuchillo y una niebla la envolvió y se la llevó del cuarto. La señorita Willerton se volvió hacia Lot.</p>
+                     
+                        <p>—Deja que te sirva un poco de sémola caliente —le dijo.</p>
+                     
+                        <p>Se acercó a la cocina, en un plato limpio sirvió una ración de sémola blanca y tersa y un trozo de mantequilla.</p>
+                     
+                        <p>—Caray, gracias —dijo Lot, y le sonrió con esos bonitos dientes—. Tú sí sabes cómo prepararla. Verás —le dijo—, estuve pensando… Podríamos marcharnos de esta granja arrendada y tener un lugar decente. Si este año conseguimos ganar algo, podríamos comprarnos una vaca y empezar a construirnos una casita. Imagínatelo, Willie, imagínate lo que sería.</p>
+                     
+                        <p>Ella se sentó a su lado y le puso la mano en el hombro.</p>
+                     
+                        <p>—Lo conseguiremos —aseguró—. Nos irá mejor que ningún otro año y en primavera tendremos esa vaca.</p>
+                     
+                        <p>—Tú siempre sabes cómo me siento, Willie. Tú siempre lo has sabido.</p>
+                     
+                     
+                        <p>Se quedaron sentados largo rato, pensando en lo bien que se entendían.</p>
+                     
+                        <p>—Termina de comer —dijo ella al fin.</p>
+                     
+                        <p>Cuando él hubo cenado, la ayudó a quitar la ceniza de la cocina y después, en el caluroso atardecer de julio, dieron un paseo por el prado, en dirección al arroyo, y hablaron de la casita de la que algún día serían dueños.</p>
+                     
+                        <p>A finales de marzo, cuando la época de lluvias estaba cerca, habían conseguido más de lo esperado. A lo largo del mes anterior, Lot se había levantado a las cinco de la mañana, y Willie, una hora antes, para tratar de adelantar todo el trabajo posible aprovechando el buen tiempo. A la semana siguiente, comentó Lot, empezaría a llover y, si antes no levantaban la cosecha, la perderían… y con ella, cuanto habían ganado en los últimos meses. Sabían lo que aquello supondría, otro año de ir tirando sin mucho más de lo que habían tenido el anterior. Además, al año siguiente, en lugar de la vaca, llegaría un crío. Lot se había empeñado en comprar la vaca pese a todo.</p>
+                     
+                        <p>—Alimentar a un crío tampoco cuesta tanto —había razonado—, y la vaca nos ayudaría a darle de comer…</p>
+                     
+                     
+                        <p>Pero Willie se había mostrado firme, comprarían la vaca más adelante, el crío debía empezar con buen pie.</p>
+                     
+                        <p>—A lo mejor —había concluido Lot—, vamos a tener suficiente para las dos cosas. —Y se había marchado a ver el campo recién arado como si pudiera calcular la cosecha por los surcos.</p>
+                     
+                        <p>Pese a las estrecheces, había sido un buen año. Willie había limpiado la casucha y Lot había arreglado la chimenea. En la puerta había profusión de petunias, y en la ventana, una colonia de dragoncillos. Había sido un año pacífico. Pero ahora comenzaban a inquietarse por la cosecha. Debían recogerla antes de que llegaran las lluvias.</p>
+                     
+                        <p>—Nos falta una semana más —rezongó Lot al regresar esa noche—. Una semana más y lo vamos a conseguir. ¿Tienes ganas de cosechar? No está bien que debas salir —suspiró—, pero no podemos pagar a nadie para que nos ayude.</p>
+                     
+                        <p>—Me encuentro bien —dijo ella, y ocultó las manos temblorosas a su espalda—. Cosecharé.</p>
+                     
+                        <p>—Esta noche está nublado —dijo Lot, sombrío.</p>
+                     
+                        <p>Al día siguiente trabajaron hasta el anochecer, trabajaron hasta reventar, y después regresaron a trompicones a la cabaña y cayeron en la cama.</p>
+                     
+                        <p>Willie se despertó por la noche, notando un dolor. Era un dolor suave y verde, recorrido de luces moradas. Se preguntó si estaría despierta. Movió la cabeza de lado a lado y dentro de ella notó unas siluetas que zumbaban y picaban piedras.</p>
+                     
+                        <p>Lot se incorporó.</p>
+                     
+                        <p>—¿Te sientes mal? —le preguntó temblando.<br>Ella se apoyó sobre el codo y luego se dejó caer otra vez.</p>
+                     
+                        <p>Ve al arroyo y trae a Anna —jadeó. El zumbido se hizo más intenso y las siluetas más grises. Al principio, el dolor se entremezcló con aquellas siluetas durante unos segundos; luego, de forma ininterrumpida. Llegaba a ella una y otra vez. El zumbido se hizo más nítido y, a eso del alba, se dio cuenta de que estaba lloviendo. Más tarde preguntó con voz ronca:</p>
+                     
+                        <p>—¿Cuánto hace que llueve?</p>
+                     
+                        <p>—Dos días enteros —contestó Lot.</p>
+                     
+                        <p>—Entonces hemos perdido. —Willie miró con desgana los árboles empapados—. Se acabó.</p>
+                     
+                        <p>—No, no se acabó —dijo él en voz baja—. Tenemos una niña.</p>
+                     
+                        <p>—Tú querías un niño.</p>
+                     
+                        <p>—No. Tengo lo que quería, dos Willies en lugar de una, y eso es mucho mejor que una vaca —sonrió—. ¿Qué puedo hacer para merecerme todo lo que tengo, Willie? —Se inclinó y la besó en la frente.</p>
+                     
+                        <p>—¿Qué puedo hacer yo? —preguntó ella en voz baja—. ¿Qué puedo hacer para ayudarte más?</p>
+                     
+                        <p>—¿Qué tal si vas al mercado, Willie?</p>
+                     
+                        <p>La señorita Willerton apartó de sí a Lot de un empujón.</p> 
+                     
+                        <p>—¿Qué… qué me decías, Lucía? —tartamudeó.</p>
+                     
+                        <p>—Te decía que qué tal si esta vez vas tú al mercado. Esta semana me ha tocado ir a mí todas las mañanas y ahora estoy ocupada.</p>
+                     
+                        <p>La señorita Willerton dejó la máquina de escribir y dijo con brusquedad:</p>
+                     
+                        <p>—Muy bien. ¿Qué quieres que te traiga?</p>
+                     
+                        <p>—Una docena de huevos y dos libras de tomates, que sean maduros, y más te vale que empieces a curarte ese resfriado ahora mismo. Te lloran los ojos y tienes la voz ronca. En el cuarto de baño hay Empirin. Pide que anoten lo que gastes en nuestra cuenta. Y ponte el abrigo. Hace frío.</p>
+                     
+                        <p>La señorita Willerton elevó la vista al cielo.</p>
+                     
+                        <p>—Tengo cuarenta y cuatro años —anunció—, sé muy bien cómo cuidarme.</p>
+                     
+                        <p>—Y que los tomates sean maduros —le contestó la señorita Lucía.</p>
+                     
+                     
+                        <p>Con el abrigo mal abrochado, la señorita Willerton avanzó pesadamente por la calle principal y entró en el supermercado.</p>
+                     
+                        <p>—¿Qué venía yo a comprar? —refunfuñó—. Ah, sí, dos docenas de huevos y una libra de tomates.</p>
+                     
+                        <p>Pasó delante de las estanterías de vegetales enlatados y de las galletas y fue a la caja donde tenían los huevos. Pero no había huevos.</p>
+                     
+                        <p>—¿Dónde están los huevos? —le preguntó a un chico que pesaba frijoles.</p>
+                     
+                        <p>—Solamente nos quedan huevos de pularda —dijo mientras cogía otro puñado de frijoles.</p>
+                     
+                        <p>—Bien, ¿dónde están y qué diferencia hay? —exigió saber la señorita Willerton.</p>
+                     
+                        <p>El chico echó los frijoles sobrantes al cubo, se agachó sobre la caja de los huevos y le entregó un paquete.</p>
+                     
+                        <p>—Ninguna diferencia, la verdad —dijo al tiempo que mascaba el chicle con los dientes incisivos—. Son de gallinas adolescentes o algo así, no lo sé bien. ¿Se los pongo?</p>
+                     
+                        <p>—Sí, y dos libras de tomates. Que estén maduros —precisó la señorita Willerton.</p>
+                     
+                        <p>No le gustaba hacer la compra. No había motivo alguno para que los dependientes fuesen tan altaneros. Ese muchacho no se habría entretenido tanto con Lucía. Pagó los huevos y los tomates y salió apresuradamente. En cierta manera, aquel lugar la deprimía.</p>
+                     
+                        <p>Vaya tontería que un supermercado pudiese deprimir… si allí dentro solo tenían lugar actividades domésticas sin importancia… mujeres que compraban frijoles… que llevaban a los niños en esos cochecitos… que regateaban por un octavo de libra de más o de menos de calabaza… «¿Qué ganaban con eso? —se preguntó la señorita Willerton—. ¿Dónde había allí ocasión para expresarse, para crear, para el arte?». A su alrededor todo era lo mismo: aceras llenas de gente que se afanaba de un lado a otro, con las manos cargadas de paquetitos y las mentes llenas de paquetitos, aquella mujer de allí que llevaba al niño de la cadena y tiraba de él, lo sacudía y lo arrastraba para alejarlo de un escaparate donde se exhibía una lámpara hecha con una calabaza ahuecada. Probablemente se pasaría el resto de la vida tirando de él y sacudiéndolo. Y allí iba otra, a la que se le caía la bolsa de la compra en plena calzada, y otra más, que le sonaba la nariz a un niño, y por la acera se acercaban una anciana con sus tres nietos saltándole alrededor, seguidos de un hombre y una mujer que caminaban demasiado juntos para ser refinados.</p>
+                     
+                        <p>La señorita Willerton observó a la pareja con atención cuando se acercaron más y la adelantaron. La mujer era regordeta, de tobillos gruesos y ojos turbios. Llevaba unos zapatos de tacón, unas ajorcas azules, un vestido de algodón demasiado corto y una chaqueta de cuadros escoceses. Tenía la piel manchada y el cuello estirado hacia delante, como si quisiera oler una cosa que le alejaran continuamente de la nariz. En la cara lucía una mueca estúpida. Él era un hombre larguirucho, consumido y desaliñado. Iba encorvado, y el pelo rubio y enredado le caía hacia un lado del cuello largo y enrojecido. Sus manos jugueteaban tontamente con las de la muchacha mientras avanzaban desmañados, y en una o dos ocasiones le lanzó una sonrisa empalagosa, que permitió a la señorita Willerton comprobar que tenía los dientes rectos, los ojos tristes y una erupción en la frente.</p>
+                     
+                        <p>—¡Aaah! —se estremeció.</p>
+                     
+                        <p>La señorita Willerton dejó la compra encima de la mesa de la cocina y regresó junto a la máquina de escribir. Miró el papel que había en ella. «Lot Motun llamó a su perro —decía—. El perro levantó las orejas y, con el rabo entre las patas, se acercó a su amo. Lot tiró de las orejas cortas y raquíticas del animal y se revolcó con él en el barro».</p>
+                     
+                        <p>—¡Suena fatal! —masculló la señorita Willerton—. De todos modos, el tema no es nada del otro mundo —decidió.</p>
+                     
+                        <p>Necesitaba algo más pintoresco… con más arte. La señorita Willerton se quedó largo rato mirando la máquina de escribir. Después, de repente, con el puño asestó varios golpecitos extasiados sobre el escritorio.</p>
+                     
+                        <p>—¡Los irlandeses!—chilló—. ¡Los irlandeses!</p>
+                     
+                        <p>La señorita Willerton siempre había admirado a los irlandeses. «Su acento —pensó—, era muy musical, y su historia… ¡espléndida!» «¡Y las gentes —caviló—, las gentes de Irlanda! Llenas de temple… pelirrojas, de anchos hombros y enormes bigotes caídos». </p>
+                    <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+ 
+                <!-- /Cuento 3 --> 
+
+                   <div class="slides slide">
+                <h2 class="section-title naranjaOs">Katherine Anne Porter </h2>
+                    <h1 class="chapter-title cafe">Calabazas para<br/><span class="oswald-light cafe">la abuelita Weatherall</span></h1>
+                    <h3 class="story-title">(“The Jilting of Granny Weatherall”, 1930)</h3>
+                 <div class="content-text">
+
+                     
+                        <p class="first-paragraph">Zafó su muñeca de entre los dedos regordetes y cuidadosos del doctor Harry y subió la sábana hasta su barbilla. ¡El mocoso debería andar con pantalones cortos, en vez de pasar por doctor en toda la región usando anteojos sobre la nariz!</p>
+                     
+                        <p>—Váyase ahora, tome sus libros escolares y váyase. No tengo nada.</p>
+                     
+                        <p>El doctor Harry puso una mano cálida, similar a un almohadón, sobre su frente, donde una vena verde se bifurcaba danzante crispándole los párpados.</p>
+                        
+                        <p>—Bueno, bueno, sea obediente y podremos levantarla dentro de poco.</p>
+                     
+                        <p>—Esa no es forma de hablarle a una mujer de casi ochenta años solo porque está enferma. ¡Prefiero que respete a sus mayores, jovencito!</p>
+                     
+                        <p>—Está bien, señora, discúlpeme —el doctor Harry le palmeó la mejilla—. Tengo que prevenirla ¿o no? Usted es maravillosa pero necesita cuidarse o no andará bien y lo lamentará.</p>
+                     
+                        <p>—No me diga lo que me pasará. Ya estoy en pie, moralmente hablando. Cornelia tiene la culpa. Tuve que acostarme para librarme de ella.</p>
+                     
+                         <p>Sentía los huesos sueltos, flotar dentro de su cuerpo, y veía al doctor Harry como un globo flotante al pie de la cama. Flotaba y se bajaba el chaleco y los lentes le columpiaban de un cordel. </p>
+                     
+                        <p>—Bueno, quédese donde está, de cualquier manera no le hará daño.</p>
+                     
+                        <p>—Váyase de una vez a curar a sus enfermos —dijo la abuelita Wheatherall—. Deje en paz a una mujer sana. Lo llamaré cuando lo necesite… ¿Dónde estaba usted hace cuarenta años cuando aguanté una flebitis y una neumonía doble? Ni siquiera había nacido. ¡No deje que Cornelia lo domine! —gritó porque el doctor Harry parecía flotar hasta el cielo y salir volando—. ¡Pago mis propios gastos y no desperdicio dinero en tonterías!</p>
+                     
+                        <p>Quiso hacerle un gesto de adiós, pero le costaba demasiado trabajo.</p>
+                        
+                        <p>Los ojos se le cerraban solos, era como si una cortina oscura cayera alrededor de la cama. La almohada levitó, flotante sobre su cabeza. Escuchó el susurro de las hojas fuera de la ventana. No, no, alguien estaba hojeando periódicos… No, Cornelia y el doctor Harry murmuraban. Se despertó sobresaltada, pensando que conversaban en su oreja.</p>
+                     
+                        <p>—¡Nunca estuvo así, así nunca!</p>
+                     
+                        <p>—Bueno, ¿qué esperamos?</p>
+                     
+                        <p>—Sí, ochenta años de edad…</p>
+                     
+                        <p>Bien, ¿y qué si así era? Todavía tenía oídos. Cornelia acostumbraba cuchichear tras las puertas. Siempre contaba secretos a voces, tratando eternamente de actuar con tacto y gentileza. Cornelia tenía sentido del deber. Ese era su problema. Responsabilidad y bondad.</p>
+                     
+                        <p>—Es tan buena y responsable —dijo la abuelita—, que quisiera pegarle.</p>
+                     
+                        <p>Se vio a sí misma golpeando bien fuerte a Cornelia.<br>—¿Qué dices, mamá?</p>
+                     
+                        <p>La abuelita sintió como si el rostro se le endureciera:<br>—Me gustaría saber… ¿es que uno no puede pensar?</p>
+                     
+                        <p>—Creí que deseabas algo.</p>
+                     
+                        <p>—Sí. Quiero un montón de cosas. Antes que nada que se vayan y dejen de murmurar.</p>
+                     
+                        <p>Se recostó y adormeció esperando que durante su sueño los muchachos permanecieran fuera y la dejaran tranquila un minuto. Había sido un largo día. No es que se sintiera cansada. Era que siempre resultaba agradable aprovechar un momento para sí misma. Había siempre tanto que hacer: mañana.</p>
+                     
+                        <p>Mañana quedaba muy lejos y no existía ningún problema pendiente. Las cosas terminarían de alguna manera cuando llegara su tiempo; gracias a Dios siempre había un pequeño margen de paz: entonces una persona podía trazar su plan de vida y desarrollarlo ordenadamente. Era bueno tener todo limpio y guardado, con los cepillos de pelo y las botellas de tónico colocadas derechitas sobre la carpeta de lino bordada. El día comenzaba sin problemas y los estantes de la despensa estaban repletos de pomos con mermelada, y tarros cafés y blanca porcelana china con arabescos azules y dibujos; café, té, azúcar, jengibre, canela, todas las especies; y el reloj de bronce coronado por un león bien sacudido. ¡El polvo que podía caerle a ese león en veinticuatro horas! El desván guardaba una caja con todos esos paquetes de cartas; mañana se ocuparía de ellas. Todas esas cartas… las de George, las de John y las que ella les había enviado a los dos, andaban por allí desparramadas y los niños podían encontrarlas y eso la incomodaba. Sí, esa sería su tarea de mañana. No había razón para que nadie se enterara de lo tonta que a veces había sido.</p>
+                     
+                        <p>Mientras rumiaba, encontró a la muerte en su pensamiento y le pareció turbia y estrambótica. Se había preparado durante tanto tiempo para afrontarla que no necesitaba comenzar por el principio. Dejaría tranquilo el asunto. Cuando cumplió sesenta años se creyó muy vieja y acabada y estuvo viajando para ver a sus hijos y a sus nietos llevando un secreto en su pensamiento: ¡Este es el fin de su madre, niños! Hizo su testamento y cayó en cama con una larga fiebre. No resultó sino una idea, como cualquier otra, afortunada porque le quitó la sensación de la muerte durante mucho tiempo. Ahora no se preocupaba. Esta vez tenía más sentido común. Su padre vivió hasta los ciento dos años y en su último cumpleaños bebió un vaso de fuerte ponche caliente. A los reporteros que fueron a entrevistarlo les dijo que era su hábito cotidiano. Logró escandalizarlos y se sintió muy satisfecho. La abuelita quiso atormentar un poco a Cornelia:</p>
+                     
+                        <p>—¡Cornelia, Cornelia! —no escuchó pasos pero una mano suave se posó sobre su mejilla—. Bendita seas ¿dónde estabas?</p>
+                     
+                        <p>—Aquí, mamá.</p>
+                     
+                        <p>—Bien, Cornelia, dame un vaso de ponche caliente.</p>
+                     
+                     
+                        <p>—¿Tienes frío, querida?</p>
+                     
+                        <p>—Un poco, Cornelia. Permanecer en cama perjudica la circulación. Te lo he explicado más de cien veces.Podía escuchar a Cornelia diciéndole al marido que su madre se portaba algo infantil y que le seguiría la corriente. Le asombraba mucho que Cornelia la creyera sorda, ciega y muda. Con miraditas rápidas y gestos tímidos la señalaba como diciendo: No la hagan enojar, síganle la corriente, tiene ochenta años, y ella estaba allí como sentada dentro de un capelo. Algunas veces la abuelita se proponía empacar todas sus cosas y mudarse a su casa, donde nadie le recordara a cada instante que estaba vieja. ¡Espera, espera, Cornelia, a que tus propios hijos se aconsejen a tus espaldas!</p>
+                     
+                        <p>En épocas mejores habían llevado una buena casa y trabajaba mucho. Entonces no era tan vieja puesto que Lidia atravesaba doscientos kilómetros solo para pedirle consejo porque uno de los chicos se había descarriado, y Jimmy venía aún y comentaba asuntos con ella:</p>
+                     
+                        <p>—Ahora, mami, tú que tienes tan buena cabeza para los negocios ¿qué piensas de esto?…</p>
+                     
+                        <p>¡Vieja! Cornelia no podía ni cambiar los muebles sin consultarla. ¡Minucias, minucias! Eran tan dulces los chicos. La abuelita deseaba que regresaran los viejos tiempos cuando los niños eran pequeños y todo estaba por empezar. Fue una lucha dura, y nunca se venció. Pensaba en toda la comida que cocinó, en toda la ropa que cortó y cosió, en todos los jardines que había cultivado… los muchachos servían de muestra. Ahí estaban, hechura suya, y no podían negarlo. Algunas veces deseaba ver a John nuevamente y señalárselos a todos con el dedo y decirle ¿no lo hice tan mal, verdad? Pero eso esperaría. Mañana. Acostumbraba pensar en John como en un hombre, pero ahora los muchachos eran mayores que su padre; y él sería un niño junto a ella si volvieran a estar juntos. Parecería una situación extraña y aberrante. John ni siquiera la reconocería. Ella había levantado una cerca alrededor de cuarenta hectáreas, cavando hoyos para los postes y afianzando los alambres con la única ayuda de un muchacho negro. Eso cambia a una mujer. Lo mismo que transitar caminos del campo, en invierno, cuando va a parir, velar noches enteras a caballos enfermos, negros enfermos, hijos enfermos y no perder casi ninguno; también eso transforma a una mujer. ¡John, no perdí a casi ninguno! Él entendería al instante, lo entendería, ¡no necesitaría explicaciones!</p>
+                     
+                     
+                        <p>Sintió ganas de subirse las mangas para poner otra vez todo en orden. No importaba que Cornelia determinara estar en todas partes, había gran cantidad de cosas inconclusas. Ella empezaría mañana y las terminaría. Hay que estar fuerte para aguantarlo todo, incluso cuando lo hecho se desvanezca, cambie o se resbale de las manos, tanto que al momento de terminarlo casi se olvide la razón por la cual trabajamos. Una neblina cubrió el valle, la vio avanzar a través del arroyo, devorando árboles, la vio levantarse hasta la colina como un ejército de duendes. Pronto llegaría al límite del huerto y, entonces, sería el momento de encender las lámparas. Vengan, niños, no deben permanecer a la intemperie de la noche.</p>
+                     
+                        <p>Era hermoso encender las lámparas. Los muchachos se amontonaban y respiraban como terneritos encerrados en el establo. Sus ojos seguían el cerillo y miraban la flama crecer y detenerse en una curva azul; luego se alejaban. La lámpara estaba encendida y ellos no tenían motivo para sentir miedo y colgarse a las enaguas de su madre. Nunca, nunca, nunca más. Dios, te agradezco mi vida entera. Sin ti, mi Dios, no lo hubiera logrado. Santa María, llena de gracia.</p>
+                     
+                        <p>Quiero que recojan toda la fruta este año y que no desperdicien nada. Alguien puede siempre aprovecharlo. No dejen podrir cosas buenas sin usarlas. Se desperdicia la vida cuando se tira la buena comida. Nunca permitan que las cosas se pierdan. Es amargo perderlas. Ahora, impídanme seguir pensando, estoy cansada tomando una siestecita antes de cenar…</p>
+                     
+                        <p>La almohada levitó contra sus hombros y presionó su cabeza y exprimió sus recuerdos. ¡Ay, quítenme esta almohada! Me asfixia. Resultaba tan fresca la brisa y tan verde la mañana sin presagios. Pero él no había llegado como siempre. ¿Qué hace una señorita cuando se ha puesto el velo blanco y preparado el pastel de bodas para un hombre que no llega? Intentó recordar. No, juré que no me lastimaría otra vez. Él nunca me hirió sino entonces… ¿qué había hecho? Era el día, el día, pero un remolino negro se levantó y lo cubrió, se deslizó hasta el campo brillante donde los árboles estaban plantados cuidadosamente en hileras ordenadas. Era el infierno, reconoció el infierno apenas lo vio. Durante sesenta años había rezado para no recordarlo y para que su alma no cayera en el pozo profundo del infierno y ahora las cosas se combinaban en una y las memorias de él se convertían en una nube de humo infernal que invade su mente cuando apenas procuraba librarse del doctor Harry para descansar un minuto. Es tu vanidad herida, Ellen, precisó una vocecita en la cima de su mente. No permitas que te domine el orgullo. A muchas muchachas les dan calabazas. ¿Te plantaron, verdad? Pues supéralo. Sus párpados se entreabrieron y se filtraron unos rayos de luz azulada similar a un papel de china sobre los ojos. Debería levantarse y bajar las cortinas o nunca podría dormir. Estaba encamada y no bajaron las cortinas. ¿Cómo sucedió? Mejor era voltearse, taparse la luz porque dormir con luz le daba pesadillas.</p>
+                     
+                        <p>—Madre ¿cómo te sientes? —y un picante sudor frío sobre la frente.</p>
+                     
+                        <p>¡Pero no me gusta que me laven la cara con agua fría!</p>
+                     
+                        <p>¿Hapsy? ¿George? ¿Lidia? ¿Jimmy? No, Cornelia y sus facciones que se dilataban y se cubrían de manchas.</p>
+                     
+                        <p>—Ya vienen, querida, pronto estarán todos aquí.</p>
+                     
+                        <p>Vete a lavar la cara, niña, pareces un payaso.</p>
+                     
+                        <p>En lugar de obedecer, Cornelia se arrodilló y puso su cabeza contra la almohada. Simulaba hablar pero no se oía ningún sonido.</p>
+                     
+                        <p class="resaltado">En lugar de obedecer, Cornelia se arrodilló y puso su cabeza contra la almohada. Simulaba hablar pero no se oía ningún sonido.</p>
+                        <hr class="line-separator line-orange" />
+                     
+                        <p>—Bueno, ¿te comieron la lengua? ¿De quién es el cumpleaños? ¿Darás una fiesta?</p>
+                     
+                        <p>La boca de Cornelia se movió aprisa con extraños gestos.</p>
+                     
+                        <p>—No hagas eso, me impacientas, hija..</p>
+                     
+                        <p>—No, mamá, no…</p>
+                     
+                        <p>Tonterías. Los niños son tercos. Le discuten a uno cada palabra.</p>
+                     
+                        <p>—¿No qué, Cornelia?</p>
+                     
+                        <p>—Aquí está el doctor Harry.</p>
+                     
+                        <p>—No quiero ver otra vez a ese joven. Se acaba de ir hace cinco minutos.</p>
+                     
+                        <p>—Eso fue esta mañana, madre. Ahora es de noche. También está aquí la enfermera.</p>
+                     
+                        <p>—Soy el doctor Harry, señora Weatherall. ¡Nunca la vi tan joven ni tan feliz!</p> 
+                     
+                        <p>—Ay, nunca más seré joven; sin embargo, me sentiré contenta si me dejan descansar.</p>
+                     
+                        <p>Pensó que hablaba fuerte pero nadie respondió. Sintió un peso cálido en su frente, una pulsera caliente en su muñeca y una brisa que continuaba susurrante, intentando decirle algo. Un murmullo de hojas en las manos eternas de Dios. Él las sopló y las hojas danzantes musitaron.</p>
+                     
+                        <p>—Madre, no te asustes, van a inyectarte.</p>
+                     
+                        <p>—Fíjate aquí, hija ¿por qué hay hormigas en mi cama? Ayer hallé hormigas en el azúcar. ¿Trajeron a Hapsy también?</p>
+                     
+                        <p>A Hapsy era a quien quería ver. Recorrió muchos cuartos hasta encontrarla parada con un bebé en los brazos. Le parecía que ella misma era Hapsy, y que el bebé acunado era Hapsy y él mismo y ella, todo a la vez, y no había sorpresa en el encuentro. Entonces la imagen de Hapsy se desvaneció y se puso transparente como una gasa gris y el bebé fue una sombra etérea… y Hapsy se acercó y dijo:</p>
+                     
+                        <p>—Pensé que nunca llegarías.</p>
+                     
+                        <p>Y al mirarla de cerca agregó:</p>
+                     
+                        <p>—¡No has cambiado ni un poquito!</p>
+                     
+                     
+                        <p>Se inclinaron para besarse cuando Cornelia empezó a murmurar desde lejos.</p>
+                     
+                        <p>—¿Quieres decirme algo? ¿Puedo hacer algo por ti? Sí, cambió de pensar después de sesenta años y le gustaría ver a George. Quiero que encuentres a George. Encuéntralo y dile que lo perdono, cuéntale que de todos modos tuve marido y mis hijos y mi casa como cualquier otra mujer. Una buena casa y un buen marido que amé, y lindos niños suyos. Mucho mejor de lo que imaginé. Dile que me fue devuelto todo lo que él me quitó y mucho más. Oh, no, no, Dios, había algo más aparte de la casa, el marido y los hijos. Seguramente eso no era todo. ¿Qué era? Una cosa intangible que no volvió… Su respiración se hizo dificultosa bajo sus costillas y se convirtió en un monstruo aterrador, con uñas filosas. Le taladraban el cerebro y la agonía se volvió atroz:</p>
+                     
+                        <p>—Sí, John, llama al doctor, no hablemos más, mi hora ha llegado.</p>
+                     
+                        <p>El nacimiento de este debió ser el último. El último. Debió haber sido el primero porque era el que de verdad ella quería. Todo vino a buen tiempo. Nada se olvidó ni estuvo relegado. Se portó fuerte, en tres días estaba tan bien como siempre. Mejor. Una mujer necesita tener leche para llenarse de salud.</p>
+                     
+                        <p>—Madre ¿me oyes?</p>
+                     
+                        <p>—Te he dicho…</p>
+                     
+                        <p>—Mamá, el padre Connolly está aquí.</p>
+                     
+                        <p>—Tomé la sagrada comunión la semana pasada. Dile que no soy tan pecadora.</p>
+                     
+                        <p>—El padre solo desea hablar contigo.</p>
+                     
+                        <p>Que hable tanto como guste. Acostumbra llegar preguntando por el alma de uno como si inquiriera por un bebé, y luego quedarse a tomar una taza de té, jugar cartas o chismosear. Siempre sacaba a relucir un cuento pícaro, generalmente sobre un irlandés que se equivocaba a menudo y lo confesaba, y lo chistoso era alguna tontería que soltaba en la confesión mostrando su duda entre una piedad innata y su pecado original. La abuelita no temía por su alma. ¿Cornelia, dónde quedaron tus modales? Ofrécele una silla al padre Connolly. Se entendía con unos cuantos santos favoritos que le abrirían el camino hasta Dios. Estaba firmado y sellado como los papeles relativos a las cuarenta hectáreas. Para siempre… heredados y trasladados de dominio para siempre. Desde aquel día en que no se cortó el pastel de bodas sino que se tiró y desperdició. La razón de su existencia había desaparecido y ella quedó allí ciega y sudorosa, sin nada bajo los pies y con las paredes cayéndosele encima. La mano de él la sostuvo por debajo del busto, o hubiera caído; allí estaba el piso recién encerado con el tapete verde encima, exactamente como antes. Él lanzó una maldición similar a la de un perico de marinero, y exclamó:</p>
+                     
+                        <p>—Lo mataré por ti…</p>
+                     
+                        <p>No lo toques, hazlo por mí. Déjale su castigo a Dios…</p>
+                     
+                        <p>—¡—No, Ellen, debes creer lo que te digo…</p>
+                     
+                        <p>Así que no hubo nada, nada por qué preocuparse, excepto ciertas veces en las noches cuando algún niño lloraba por una pesadilla y ambos se atropellaban bajando de la cama y temblaban buscando los fósforos mientras gritaban:</p>
+                     
+                        <p>—Espera un minuto, aquí estamos.</p>
+                     
+                        <p>—John, busca al doctor. Hapsy se muere.</p>
+                     
+                        <p>Pero allí estaba Hapsy parada junto a la cama con una gorra blanca.</p>
+                     
+                        <p>—Cornelia, dile a Hapsy que se quite esa gorra. No puedo verla bien.</p>
+                     
+                        <p>Abrió mucho los ojos y el cuarto le pareció igual a un cuadro que había visto en otra parte. Colores oscuros en las sombras que se levantaban como torres hasta el cielo haciendo largos ángulos. La alta cómoda negra relucía sin nada encima salvo una fotografía de John, ampliada de otra pequeña, con los ojos muy negros cuando debieron ser azules. Usted no lo conoció ¿entonces cómo sabía cómo eran? Sin embargo, el hombre insistía en lo perfecto de la copia, rica en detalles y bonita. Para ser una fotografía está bien, pero este no es mi esposo. La mesa junto a la cama tenía una carpeta de lino, un candelero y un crucifijo. La luz azulada venía de las pantallas de seda que puso Cornelia. ¡No era luz sino un perifollo! Se tiene que vivir cuarenta años con lámparas de petróleo para apreciar una buena luz eléctrica. Se sintió muy fuerte y vio al doctor Harry con un halo rosa.</p>
+                     
+                        <p>—Parece un santo, doctor Harry, juro que nunca estará usted tan cerca de la santidad.</p>
+                        <p>—Está diciendo algo.</p>
+                        <p>—Ya te oí, Cornelia. ¿Qué es toda esta revoltura?</p>
+                        <p>—El padre Connolly dice…</p>
+                        <p>La voz de Cornelia se entrecortaba y golpeaba como una carreta en un mal camino. Bamboleaba en las esquinas, regresaba y no llegaba a ningún lado. Vivaz, la abuelita se subió al carro y tomó las riendas, pero guiaba el carro un hombre sentado junto a ella y lo reconoció por las manos. No lo miró a la cara; lo supo sin verlo, en cambio miró hacia abajo del camino donde los árboles se inclinaban y saludaban entre sí y miles de pájaros cantaban una misa. Quiso cantar también, pero puso su mano en el escote de su vestido y sacó un rosario, y el padre Connolly rezaba en latín con voz solemne y le hacía cosquillas en los pies ¿Dios mío, quiere dejar esas tonterías? Soy una mujer casada. ¿Qué importa si él se fue y me dejó enfrentar sola al sacerdote? Encontré un mundo mejor. No cambiaría a mi marido por nadie, salvo por san Miguel, y pueden decirle eso de mi parte y darle las gracias en la barata.</p>
+                     
+                        <p>La luz destelló sobre sus párpados cerrados, y un bramido profundo la sacudió. ¿Es un relámpago, Cornelia? Oí un trueno. Habrá tormenta. Cierra todas las ventanas. Mete a los niños…</p>
+                     
+                        <p>—Mamá, aquí estamos todos…</p>
+                     
+                        <p>—¿Eres tú, Hapsy?</p>
+                     
+                        <p>—Oh, no, soy Lydia. Manejamos tan rápido como pudimos.</p>
+                     
+                        <p>Sus rostros se agacharon sobre ella. El rosario cayó de sus manos y Lydia se lo colocó otra vez. Jimmy intentó ayudar, las manos se encontraron a tientas, y la abuelita apretó los dedos alrededor del pulgar de Jimmy. No bastaban las cuentas del rosario, necesitaba algo vivo. Estaba tan asombrada que sus pensamientos corrían en torno. Entonces, mi amado Señor, esta es mi muerte y yo ni siquiera lo pensaba. Mis hijos vinieron para verme morir. Pero no puedo, no es la hora. Oh, siempre odié las sorpresas. Quise darle a Cornelia el juego de amatistas… Cornelia, tendrás el juego de amatistas, pero Hapsy lo usará cuando quiera, y, doctor Harry, cállese. Nadie lo llamó. Ay, mi amado Señor, espera un minuto. Necesito hacer algo con mis cuarenta hectáreas, Jimmy no las necesita y Lydia las necesitará con ese torpe marido que tiene. Debo terminar el mantel del altar y enviarle seis botellas de vino a la hermana Borgia para su digestión. Quiero mandarle seis botellas de vino a la hermana Borgia, padre Connolly, recuérdamelo…</p>
+                     
+                     
+                        <p>La voz de Cornelia se transformaba en sílabas y se quebraba.</p>
+                     
+                        <p>—Ay, mamá, ay, mamá, ay, mamá…</p>
+                        <p>—No me voy, Cornelia. Me tomaron por sorpresa. No puedo irme.</p>
+                     
+                     
+                        <p>—Verás a Hapsy nuevamente, ¿qué pasó con ella? —Pensé que no llegarías nunca.</p>
+                        <p>La abuelita hizo un largo viaje buscando a Hapsy. ¿Qué pasa si no la encuentro? ¿Qué hago? Su corazón se hundió más y más, no había fondo para la muerte, no podía llegar al final. La luz azul de la lámpara de Cornelia se volvió un punto diminuto en el centro de su cerebro, parpadeó y aleteó como un ojo y suavemente fue disminuyendo. La abuelita yacía como ovillo, asombrada y alerta con la mirada fija en el punto de luz que era ella misma; ahora su cuerpo era un hondo montón de sombras en la oscuridad eterna y esa oscuridad se trenzaría a la luz, tragándosela. ¡Dios, haz una señal!</p>
+                     
+                        <p>No hubo señal. Por segunda vez no vino el novio aunque el cura estaba en casa. Ella no lograba recordar ningún otro sufrimiento porque aquel dolor había barrido los demás. No, nada hay más cruel que esto. Nunca se lo perdonaré. Se distendió con un suspiro profundo y apagó la luz. </p>
+
+                     
+                    <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                <div class="slides slide">
+                <h2 class="section-title naranjaOs">Patricia Highsmith</h2>
+                    <h1 class="chapter-title cafe">El ama de casa<br/><span class="oswald-light cafe">de clase media</span></h1>
+                    <h3 class="story-title">(“The Middle-Class Housewife”)<br>Little Tales of Misoginy, 1975</h3>
+                 <div class="content-text">
+
+                     
+                        <p class="first-paragraph">Pamela Thorpe consideraba que Liberación Femenina era uno de esos estúpidos movimientos de protesta sobre los cuales les gusta escribir a los periodistas para llenar sus páginas. Las de Liberación Femenina afirmaban que «querían independencia» para las mujeres, mientras que Pamela pensaba que, de todas formas, las mujeres dominaban a los hombres. Por eso, ¿para qué armar tanto jaleo?</p>
+                     
+                        <p>El motivo por el que surgió esta cuestión fue porque su hija, Bárbara, volvió a casa en junio después de graduarse de la Universidad y le dijo a su madre que iba a haber una reunión de Liberación Femenina en su barrio. La había organizado Bárbara con su compañera Fran, a cuya familia conocía Pamela. Naturalmente, Pamela fue a la reunión, que se celebraba en la parroquia, sobre todo por divertirse y para oír lo que la generación joven tuviera que decir.</p>
+                     
+                        <p>Había globos de colores y cadenetas de papel colgando de las vigas y de los alféizares de las vidrieras. Pamela se quedó sorprendida al ver a Connie Haines joven y madre de dos niños pequeños, predicando como un converso.</p>
+                        
+                        <p>—¡Las mujeres trabajadoras necesitan guarderías estatales gratuitas! —gritó Connie, y sus últimas palabras quedaron casi ahogadas por los aplausos—. ¡Y la pensión alimentaria, esa explotación legalizada de los maridos divorciados, debe desaparecer!</p>
+                     
+                        <p>¡Vítores! Las mujeres se pusieron de pie, aplaudiendo y gritando.</p>
+                        
+                         <p class="resaltado">¡Vítores! Las mujeres se pusieron de pie, aplaudiendo y gritando.</p>
+                        <hr class="line-separator line-orange" />
+                     
+                        <p>¡Guarderías estatales! Pamela imaginaba ríos de mujeres trabajadoras (que únicamente se figuraban que querían trabajar) abandonando sus hogares a las ocho de la mañana, aparcando a sus críos en algún sitio y, al final de la semana, trayendo el cheque de la paga a una casa donde la próxima comida ni siquiera estaba en el fuego. Ahora muchas mujeres levantaban la mano pidiendo la palabra, así que Pamela levantó la suya también. Había muchas cosas que quería decir.</p>
+                     
+                        <p>—¡Los hombres no están en contra de nosotras! —gritaba una mujer desde uno de los bancos—. ¡Son las mujeres quienes nos retienen, mujeres egoístas y cobardes que creen que van a perder algo eligiendo a igual trabajo, igual salario!</p>
+                     
+                         <p>—Mi marido —empezó Connie, que de repente volvía a tener la palabra y hablaba todavía más alto que antes— está a punto de acabar la carrera de Medicina. Estamos preocupados porque apenas llegamos a fin de mes. ¡Contratar a una niñera se llevaría todo mi sueldo si yo cogiese un trabajo! ¡Por eso estoy a favor de las guarderías estatales gratuitas! ¡Yo no soy demasiado cómoda para tener un trabajo!</p>
+                     
+                        <p>Más aplausos y vivas.<br>Ahora Pamela se puso de pie.</p>
+                     
+                        <p>—¡Guarderías estatales! —dijo, y tuvieron que oírla porque su voz se alzaba por encima de todas las demás—. Ustedes, las jóvenes —yo tengo cuarenta y dos años—, no parecen comprender que el sitio de una mujer está en su casa, para crear un hogar; estarán creando una generación de delincuentes si los convierten en una generación de niños formados en guarderías estatales…</p>
+                     
+                        <p>Un griterío general acalló a Pamela por un momento.</p>
+                        
+                        <p>—¡Eso no está demostrado! —chilló una chica.</p>
+                     
+                        <p>—¡Y la supresión de la pensión alimentaria! A lo mejor también estás en contra de eso, ¿no? —preguntó otra. Era su hija Bárbara.</p>
+                     
+                        <p>Las caras se volvieron borrosas. Pamela reconoció a algunas de ellas, vecinas suyas desde hacía años, pero en cierto sentido no podía reconocerlas en su nuevo papel de enemigas, de atacantes.</p>
+                     
+                        <p>—Respecto a la pensión —resumió Pamela, aún de pie—, es tarea del marido mantener a la familia, ¿no?</p>
+                     
+                        <p>—¿Incluso cuando la esposa se ha largado? —preguntó alguien.</p>
+                     
+                        <p>—¡Cada caso de divorcio debería examinarse por separado! —gritó otra voz.</p>
+                     
+                        <p>—¿Sabes que algunas mujeres están cometiendo verdaderos abusos, y eso desprestigia a todas las mujeres?</p>
+                     
+                        <p>—¡Las mujeres serían las víctimas! —replicó Pamela—. Se ha llamado a la abolición de la pensión alimentaria autorización para Don Juanes, ¡y eso es lo que es! ¡Acabará con nuestros vales de comida!</p>
+                     
+                        <p>¡El caos! Ahora estaba la carne en el asador. Quizá la elección de la frase había sido desafortunada —«vales de comida»—, pero, en cualquier caso, toda la congregación, o más bien, la masa, estaba en pie.</p>
+                     
+                        <p>El nivel de adrenalina de Pamela ascendió para enfrentarse a la situación. Comprendió también que tenía que protegerse, porque el ambiente se había vuelto de pronto desagradable y hostil. Pero no estaba sola: por lo menos cuatro mujeres, todas ellas vecinas y más o menos de la edad de Pamela, estaban de su parte, y ella vio que los ejércitos estaban tomando posiciones en grupos, o nudos. Las voces se alzaban todavía más. Empezaron a volar los libros de himnos.</p>
+                     
+                        <p>¡Plaff!</p>
+                     
+                        <p>—¡Reaccionarias!</p>
+                     
+                        <p>—¡Destructoras de hogares!</p>
+                     
+                        <p>—¡Supongo que serás antiabortista, además!</p>
+                     
+                        <p>Un huevo le dio a Pamela entre los ojos. Se limpió la cara con un pañuelo de papel. ¿De dónde había salido el huevo? Pero, claro, muchas de las mujeres llevaban la bolsa de la compra.</p>
+                     
+                        <p>Los tomates describían un arco en el aire, como bombas rojas. También las manzanas. El estruendo recordaba al fuerte cacareo de las gallinas u otro tipo de ave, muy asustadas, confinadas en un espacio reducido. Los bandos no estaban alineados. Los grupos combatían entre sí a corta distancia.</p>
+                     
+                     
+                        <p>¡Whop! Eso había sido una lata de algo lanzada a la cabeza de una mujer, en represalia —así lo afirmó la atacada— por una ofensa peor. Los paraguas, al menos tres o cuatro, empezaron a desempeñar un papel en la batalla.</p>
+                     
+                        <p>—¡Escucha lo que te digo!</p>
+                     
+                        <p>—¡Hija de puta!</p>
+                     
+                        <p>—¡Basta de pelea!</p>
+                     
+                        <p>—¡A sentarse! ¿Dónde está la presidenta</p>
+                     
+                     
+                        <p>Pamela vio que algunas mujeres se estaban marchando, produciendo un atasco en la puerta principal. Entonces descubrió sorprendida que tenía un macizo reclinatorio entre las manos y que estaba a punto de lanzarlo. ¿Cuántos había arrojado ya? Dejó caer el reclinatorio (sobre sus propios pies) y se agachó justo a tiempo de esquivar un repollo.Pero lo que acabó con Pamela fue una lata de kilo de frijoles blancos que le acertó en la sien derecha. Murió en unos segundos, y su atacante nunca fue identificada.</p>
+                     
+                    <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                <div class="slides slide">
+                <h2 class="section-title naranjaOs">Dorothy Parker</h2>
+                    <h1 class="chapter-title cafe">Estuviste<br/><span class="oswald-light cafe">perfectamente bien</span></h1>
+                    <h3 class="story-title">(“You Were Perfectly Fine”)<br>The New Yorker, 23 febrero 1929</h3>
+                 <div class="content-text">
+
+                     
+                        <p class="first-paragraph">El joven pálido se acomodó cuidadosamente en la silla y movió la cabeza a un lado para que el tapiz fresco le aliviara la sien y la mejilla.</p>
+                     
+                        <p>—Ay, mi amor —dijo—. Ay, ay, ay, mi amor. Ay.</p>
+                     
+                        <p>La muchacha de ojos claros, sentada en el sofá, erguida y tranquila, le sonrió vivamente.</p>
+                        
+                        <p>—¿Ya no te sientes tan bien como ayer? —dijo ella.</p>
+                     
+                        <p>—Qué va, estoy muy bien —dijo él—. Estoy flotando. ¿Sabes a qué hora me levanté? A las cuatro de la tarde en punto. Traté de levantarme, pero cada vez que quitaba la cabeza de la almohada se me iba rodando abajo de la cama. La cabeza que traigo puesta no es la mía. Creo que esta era de Walt Whitman. Ay, mi amor. Ay, ay, mi amor.</p>
+                     
+                        <p>—¿Tú crees que con un trago te sentirías mejor? —dijo ella.</p>
+                     
+                        <p>—¿Un poco de lo que me noqueó anoche? —dijo él—. No, gracias. Por favor ya nunca vuelvas a mencionarme eso. Estoy muerto. Estoy muerto, completamente muerto. Mira mi mano: tan quieta como un colibrí. ¿Y me vi muy mal anoche?</p>
+                     
+                         <p>—Ay, no inventes —dijo ella—, todos estaban iguales. Estuviste muy bien.</p>
+                        
+                          <p class="resaltado">—Ay, no inventes —dijo ella—, todos estaban iguales. Estuviste muy bien.</p>
+                        <hr class="line-separator line-orange" />
+                     
+                     
+                        <p>—Claro —dijo él—. Estuve de maravillas. Todos deben estar enojados conmigo.</p>
+                     
+                        <p>—Por favor, claro que no —dijo ella—. Todos se divirtieron con lo que hacías. Claro que Jim Pierson se enojó un poco a la hora de la cena. Pero la gente lo regresó a su silla y lo calmaron. En las otras mesas ni se dieron cuenta. Nadie se dio cuenta.</p>
+                     
+                        <p>—¿Me iba a pegar? —dijo él—. Ay, Dios mío. ¿Qué hice?</p>
+                        
+                        <p>—Nada, no hiciste nada —dijo ella—. Estuviste perfectamente bien. Pero ya sabes cómo se pone Jim a veces, cuando se le ocurre que alguien se está metiendo con Elinor.</p>
+                     
+                        <p>—¿Coqueteé con Elinor? —dijo él—. ¿Eso hice?</p>
+                     
+                        <p>—Claro que no —dijo ella—. Solo estuviste haciéndole chistes, eso fue todo. Le pareciste simpatiquísimo. Ella estaba muy divertida. Solo una vez se desconcertó un poco: cuando le echaste por la espalda el caldo de almejas.</p>
+                     
+                        <p>—No, no me digas —dijo él—. Caldo de almejas por la espalda. Cada vértebra como concha. Ay, Dios mío. ¿Qué voy a hacer?</p>
+                     
+                        <p>—No te preocupes, ella no te va a decir nada —dijo ella—. Solo mándale unas flores, o algo así. Por eso no te preocupes. No es nada.</p>
+                     
+                        <p>—No, si no me preocupo —dijo él—, ni tengo nada de qué apurarme. Estoy muy bien. Ay, mi amor, ay. ¿Y qué otro numerito hice en la cena?</p>
+                     
+                        <p>—Ninguno. Estuviste muy bien —dijo ella—. No te pongas así por eso. Todo el mundo estaba fascinado contigo. El maître d’hôtel se apuró un poco porque no parabas de cantar, pero en realidad no le importó. Solo dijo que tenía miedo de que con tanto ruido le volvieran a cerrar el lugar. Pero ni a él le importó. Bueno, estuviste cantando como una hora. Pero después de todo, no fue tanto ruido.</p>
+                     
+                        <p>—Entonces me puse a cantar —dijo él—. Un éxito sin dudas. Me puse a cantar.</p>
+                     
+                        <p>—¿Ya no te acuerdas? —dijo ella—. Estuviste cantando una tras otra. Todo el mundo te estaba oyendo. Les encantó. Lo único fue que insistías en cantar una canción sobre no sé qué fusileros o qué cosa, y todo el mundo empezó a callarte, pero tú empezabas de nuevo. Estuviste maravilloso. Hubo un rato en que todos tratamos de que dejaras de cantar, y comieras algo, pero no querías saber nada de eso. En serio que estuviste divertido.</p>
+                     
+                        <p>—¿Qué, no probé la cena? —dijo él.</p>
+                     
+                        <p>—No, nada —dijo ella—. Cada vez que venía el mesero a ofrecerte algo se lo devolvías porque decías que él era tu hermano perdido, que una gitana lo había cambiado por otro en la cuna, y que todo lo tuyo era de él. El mesero estaba doblado de la  risa.</p>
+                     
+                        <p>—Seguro —dijo él—. Seguro que estuve cómico. Seguro que fui el Payasito de la Sociedad. ¿Y luego qué pasó, después de mi éxito arrollador con el mesero?</p>
+                     
+                        <p>—Pues nada, no mucho —dijo ella—. Te entró una especie de tirria contra un viejo canoso que estaba sentado al otro lado del salón, porque no te gustó su corbata de moño y querías decírselo. Pero te sacamos antes de que el otro se enojara.</p>
+                     
+                        <p>—Ah, conque salimos —dijo él—. ¿Pude caminar?</p>
+                     
+                        <p>—¡Caminar! Claro que caminaste —dijo ella—. Estabas absolutamente bien. Bueno, la acera tenía una capa de hielo y resbalaste. Caíste sentado con un fuerte golpe. Pero por favor, eso puede pasarle a cualquiera.</p>
+                     
+                        <p>—Sí, claro —dijo él—. A la señora Hoover o a cualquiera. Así que me caí en la acera. Por eso me duele el… Sí. Ya entendí. ¿Y luego qué? Digo, si te importa.</p>
+                     
+                     
+                        <p>—¡Vamos, Peter! —dijo ella—. No puedes quedarte sentado ahí y decir que no te acuerdas de lo que pasó después de eso. Creo que solo te viste un poco mal en la mesa; pero en todo lo demás estuviste perfectamente bien, yo sabía que te estabas sintiendo muy bien. Pero desde que te caíste te pusiste muy serio, yo no sabía que tú fueras así, ¿No te acuerdas de cuando me dijiste que yo nunca antes había visto tu verdadero yo? No puedo permitirte, no podría soportar que hayas olvidado ese hermoso paseo en taxi. De eso sí te acuerdas, ¿verdad? Por favor, me muero si no te acuerdas.</p>
+                     
+                        <p>—Ah, sí —dijo él—. El paseo en taxi. Ah, sí, de eso sí. Fue un paseo muy largo, ¿no?</p>
+                     
+                        <p>—Vueltas y vueltas y vueltas por el parque —dijo ella—. Los árboles se veían tan hermosos a la luz de la luna. Y dijiste que nunca antes te habías dado cuenta de que de veras tenías alma.</p>
+                     
+                        <p>—Sí —dijo él—. Yo dije eso. Yo fui.</p>
+                     
+                        <p>—Dijiste cosas tan pero tan bonitas —dijo ella—. Nunca me había dado cuenta de todo lo que sientes por mí y no me había atrevido a mostrarte lo que yo siento por ti. Pero lo de anoche, Peter; creo que la vuelta en taxi es lo más importante que nos ha pasado en nuestras vidas.</p>
+                     
+                        <p>—Sí —dijo él—. Creo que sí.</p>
+                        
+                        <p>—Y vamos a ser tan felices —dijo ella—. Quisiera contárselo a todo el mundo. Pero no sé. Creo que sería más dulce si lo guardamos como un secreto entre nosotros.</p>
+                        <p>—Yo creo que sí —dijo él.</p>
+                        <p>—¿No es muy hermoso? —dijo ella.</p>
+                        <p>—Sí —dijo él—. Fabuloso.</p>
+                        <p>—¡Encantador! —dijo ella.</p>
+                     
+                        <p>—Oye —dijo él—, ¿no te importaría que me tomara un trago? O sea, médicamente, ya sabes. Estoy muerto; ayúdame, por favor. Creo que me va a dar un colapso.</p>
+                     
+                        <p>—Sí, un trago te va a caer bien —dijo ella—. Pobrecito, qué pena que te sientas tan mal. Voy a prepararte un trago.</p>
+                     
+                        <p>—Yo, la verdad —dijo él—, todavía no me explico cómo me sigues dirigiendo la palabra después del ridículo que hice anoche. Yo creo que mi única salida es meterme a un monasterio en el Tíbet.</p>
+                     
+                        <p>—¡Estás loco! —dijo ella—. No te voy a dejar ir ahora. Ya deja de pensar en eso. Estuviste perfectamente bien.</p>
+                     
+                        <p>De un salto ella se paró del sofá, lo besó con rapidez en la frente y salió corriendo de la  habitación.</p>
+                     
+                        <p>El joven pálido la vio alejarse, movió la cabeza lentamente y luego la dejó caer sobre sus manos húmedas y temblorosas.</p>
+                        <p>—Ay, mi amor —dijo—. Ay, ay, ay, Dios mío.</p>
+                    <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="slides slide">
+                
+                <h2 class="section-title">Biografías</h2>
+                    <h1 class="chapter-title cafe">Pearl S. Buck</h1>
+                   
+                 <div class="content-text">
+                        
+                         <img class="img-fluid-50" src="img/pearl.png" alt="Pearl S. Buck">
+                     
+                        <p>(Hillsboro, Virginia Occidental, 26 de junio de 1892 - Danby, Vermont; 6 de marzo de 1973). Ganadora del Premio Nobel de Literatura en 1938. Pasó la mitad de su vida en China, donde la llevaron sus padres misioneros con tres meses de edad y donde vivió unos cuarenta años a lo largo de su vida.  </p>
+                     
+                        <p>Escribió más de ochenta y cinco libros. Su producción literaria abarca muchos géneros: relato, teatro, guion cinematográfico, poesía, literatura infantil, biografía y hasta un libro de cocina. </p>
+                     
+                        <p>Su estilo sencillo y directo, y su preocupación por los valores fundamentales de la vida humana tienen su origen en el estudio de la novela china. Algunas de sus publicaciones: Viento del Este, viento del Oeste (1929), El patriota (1939), La Gran Dama (1956) y El último gran amor (1972).</p>
+   
+                    </div>
+                    
+                    <h1 class="chapter-title cafe">Rolaine Hochstein<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/rolaine.png" alt="Rolaine">
+                        <p>Es una de las más destacadas cuentistas de la literatura norteamericana actual. </p>
+                        <p>Además de sus novelas Stepping Out y Table 47, sus relatos han sido incluidos en antologías y seleccionados para los premios de narrativa Pushcart Prize y en la recopilación anual Best American Short Stories. Ha publicado en revistas literarias como Antioch Review, Confrontation, Kansas Quarterly y Prairie. Su cuento “A Virtuous Woman” recibió el primer premio en el concurso anual convocado por Glimmer Train. </p>
+                        <p>Ha publicado numerosas crónicas de viaje, textos investigativos, humorísticos y perfiles de personajes famosos en revistas como Good Housekeeping, Cosmopolitan, Parents, Ms y Glamour.</p>
+                    
+                    </div>
+                    
+                    
+                      <h1 class="chapter-title cafe">Carson McCullers<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/carson.png" alt="Carson">
+                        <p>(Columbus, Georgia; 19 de febrero de 1917 - Nyack, Nueva York; 29 de septiembre de 1967). </p>
+                        <p>Está considerada, junto a William Faulkner, como una de las mejores representantes de la narrativa del Sur de Estados Unidos.  </p>
+                        <p>Entre sus obras, se destacan: El corazón es un cazador solitario (1940), Reflejos en un ojo dorado (1941), Frankie y la boda (1946), La balada del café triste (1943), The Square Root of Wonderful (1957), Iluminación y fulgor nocturno. Autobiografía inacabada (1999).</p>
+                    
+                    </div>
+                    
+                      <h1 class="chapter-title cafe">Flannery O’Connor<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/flannery.png" alt="Flannery">
+                        <p>(Savannah, Georgia, 25 de marzo de 1925 - 3 de agosto de 1964).  </p>
+                        <p>Su obra es considerada una de las más importantes de la literatura estadounidense del siglo XX. Escribió dos novelas: Sangre sabia (1952) y Los violentos lo arrebatan (1960), además de 31 relatos breves, recogidos en dos libros: Un hombre bueno no es fácil de encontrar (1955) y Todo lo que asciende tiene que converger (póstumo, 1965).  </p>
+                        <p>Sus ensayos y conferencias publicados son de gran profundidad y agudeza. También dejó gran número de entrevistas y comentarios reveladores.</p>
+                    
+                    </div>
+                    
+                     <h1 class="chapter-title cafe">Katherine Anne Porter<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/katherine.png" alt="Katherine">
+                        <p>(15 de mayo de 1890 - 18 de septiembre de 1980). Periodista, escritora de novelas y cuentos, ensayista y activista. Está considerada como la más importante escritora de Texas.  Sus obras pertenecen a la tradición literaria del sur estadounidense. </p>
+                        <p>Su novela del año 1962 La nave de los locos fue la novela más vendida en los Estados Unidos ese año, pero sus cuentos recibieron mayor aplauso de la crítica.</p>
+                        <p>Recibió el Premio Pulitzer y el National Book Award en 1966 por The Collected Stories.<br>Fue nominada tres veces para el Premio Nobel de Literatura.</p>
+                    
+                    </div>
+                    
+                    <h1 class="chapter-title cafe">Patricia Highsmith<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/patricia.png" alt="Patricia">
+                        <p>(Fort Worth, Texas, 19 de enero de 1921 - Locarno, Suiza, 4 de febrero de 1995). Novelista famosa por sus obras de suspense. Publicó su primer cuento a los 24 años en la revista Harper´s Bazaar.</p>
+                        <p>En 1950 publicó su primera novela, Extraños en un tren, por la que saltaría a la fama un año después con la adaptación al cine de Alfred Hitchcock. </p>
+                        <p>Durante su vida publicó una gran cantidad de novelas y libros de relatos, y obtuvo, entre otros, el Gran Premio de Literatura Policíaca por El talento de Mr. Ripley (1957), el Premio Silver Dagger (Daga de Plata) a la mejor novela extranjera por Las dos caras de enero (Asociación de Escritores del Crimen de Gran Bretaña, 1964) y la Orden de las Artes y las Letras (Ministerio de Cultura de Francia, 1990).</p>
+                    
+                    </div>
+                    
+                      <h1 class="chapter-title cafe">Dorothy Parker<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/dorothy.png" alt="Patricia">
+                        <p>(Long Branch, Nueva Jersey, 22 de agosto de 1893 - Nueva York, 7 de junio de 1967). </p>
+                        <p>Cuentista, dramaturga, crítica teatral, humorista, guionista y poeta. Muy conocida por su cáustico ingenio, su sarcasmo y su afilada pluma a la hora de captar el lado oscuro de la vida urbana en el siglo XX. </p>
+                        <p>Su relato más conocido apareció en Bookman Magazine bajo el título Big Blonde, (La gran rubia) y fue galardonado con el prestigioso Premio O. Henry como el cuento más sobresaliente de 1929. Este relato, entre otras obras maestras del género, sería seleccionado por Augusto Monterroso para su célebre Antología del cuento triste.<br>Su obra ha sido poco difundida en lengua castellana.</p>
+                    
+                    </div>
+
+                    
+                </div>
+                <div class="slides slide"></div>
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+   <div class="main-container main-container-flex main-container-home">
+     <p class="brand-palabras">Palabras rodantes</p>
+     <h1 class="brand footer-brand">Comfama</h1>    
+   </div>
+   <div class="copyright"><p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p></div>
+</footer>
+    
+    <script>
+window.createMenu('2');    
+</script>
+</body>
+</html>

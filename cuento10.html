@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palabras rodantes</title>
+    
+<!-- estilos -->    
+<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+    
+<!-- acciones -->
+<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+<script src="js/jq-sticky-anything.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/base.js" type="text/javascript"></script>     
+<script type="text/javascript" src="js/queryloader2.min.js"></script>
+<script type="text/javascript">
+window.addEventListener("DOMContentLoaded", function() {
+    new QueryLoader2(document.querySelector("html"), {
+        barColor: "#fff",
+        backgroundColor: "#000",
+        percentage: true,
+        barHeight: 0,
+        minimumTime: 1000,
+        maxTime: 50000,
+        fadeOutTime: 1000
+    });
+});
+
+</script>
+</head>
+    
+<style>
+.menu li:hover{
+    background-color: #DE143A;
+    color: #000;
+    
+    }
+    
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 24%;
+    padding-top: 4%;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url(img/btnLect.png);
+    background-repeat: no-repeat;
+    width: 305px;
+    height: 100px;
+}
+    
+.first-paragraph::first-letter{
+    font-size: 5em;
+    line-height: 0;
+    font-family: 'oswaldmedium';
+    color: #009F79;
+    
+}
+
+.section-title{
+   color: #006E48;
+    font-family: 'oswaldregular';
+    font-size: 3em;
+    text-align: right;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+    
+    
+.menu-selected{
+    color: #fff;
+    background-color: #DE143A;
+}
+    
+.chapter-title{
+        font-family: 'oswaldlight';
+        font-size: 2em;
+        text-align: center;
+        margin-top: 8%;
+    margin-bottom: 8%;
+}
+   
+.line-orange{
+    border: 1px solid #D3AC8E;
+    margin-top: 6%;
+    margin-bottom: 30px;
+} 
+
+.resaltado{
+   color: #DE143A;
+}
+
+</style>
+    
+<body class="bg-book4">
+<header>
+    <a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+    <h1 class="brand">Comfama</h1>
+    
+    <img class="botonA" src="img/buttonA.png" alt="boton cambio">
+    
+    <div class="slideHeader">
+         
+        <img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+        <img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+        <img class="resetFont" src="img/reset.png" alt="resetear">
+        <br>
+        <img class="blanco" src="img/blanco.png" alt="btn blanco">
+        <img class="morado" src="img/morado.png" alt="btn morado">
+        <img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+        
+    </div>
+    
+</header>
+     
+    <div class="presentation">
+        
+        <div class="main-container presentation-container">
+            <button id="presentation-close">Cerrar</button>
+            <div class="presentation-scroll">
+                
+                <h1 class="presentation-title">Créditos</h1>
+                
+
+               <p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía</p>
+				
+				<p>Ilustración carátula:<br><br> Daniel Gómez</p>
+                
+                <p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+                <p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+				
+
+                
+            </div>
+            
+        </div>
+    </div>   
+    
+     
+    <div class="global-container">
+        <hr class="line-separator line-title" />
+        <h1 class="verdeP main-title">La pensadora <br/> <span class="verdeP oswald-light">del aura</span></h1>
+        <hr class="line-separator line-title" />
+		<div class="main-credits"><p>Selección de ensayos, fragmentos y poemas</p><p>María Zambrano</p></div>
+        <img class="img-fluid" src="img/imagenlibro10.png" alt="imagenLibro">
+        
+        
+        
+        
+        <div class="main-container-flex" id="container-controls">
+
+            <div class="mobile-menu"></div>
+
+            <div class="invisibleMenu">
+                
+            <div class="menu "></div>
+            
+            </div>
+            <div class="content-container">
+                
+                
+                
+                
+            <!--Prologo -->
+            <div class="slides">
+                    <h2 class="section-title naranjaOs">Prólogo</h2>
+                
+                    <div class="content-text">
+                        
+
+					<p class="first-paragraph">Otras veces he leído así, como hoy a María Zambrano. Me ha sucedido con textos filosóficos que eran también poéticos, y al comentarlo tengo en cuenta la distinción que hace Zambrano entre la razón de la filosofía y la de la poesía. Así fue para mí con los neoplatónicos hace mucho tiempo, y con algunas páginas ambiguas de Derrida y de Levinas, y con ese breve y formidable compendio de toda metafísica y toda magia que es “El huevo y la gallina” de Clarice Lispector, por ejemplo. He dicho “me ha sucedido” y “así fue”, donde podría haber dicho “así hice”, al referirme a mi lectura. Pero el punto es, precisamente, que cuando leí esos textos yo no sentí que hiciera nada. Presentía que el texto se hacía en mí de cierta imprecisa, perdida manera. He leído a María Zambrano sin llevar a cabo ningún proceso: ni de apropiación, ni de interpretación, ni de examen. La he leído recibiéndola y con la impresión de que recibía algo que no era una información. La he leído como sufriendo un contagio y no adelantando un aprendizaje. No como un acto de comunicación, sino como una comunión, o un paso conducente hacia la comunión. </p>
+					<p>Sometida (pasiva y, más que pasiva, apasionada) al destino de no poder determinar qué hacen en mí, y sufriendo que afecten una parte de mí que no localizo —que no está propiamente presente, sino tal vez dormida, o de par en par despierta en otro ámbito—  he leído algunos de los textos de María Zambrano sin entenderlos y sin guardarlos en la memoria. Los he leído liberada de tener que recordar —y de poder recordar— y profundamente cautiva. Los he leído más o menos en el sentido en que podría decir que he asistido a un sueño: sabiéndolo real y sabiéndolo remoto y sabiéndolo mío, pero no controlado por mi mirada. </p>
+					<p>No podría resumir las páginas de Zambrano que más me han tocado, ni explicarte lo que dicen. Podría darte una y querer que la vivas y verte cuando la lees, y ver que no puedo siquiera sospechar cómo llega a ti para reanudar su secreto. </p>
+					<p>Está este pasaje, por ejemplo:</p>
+					<br>
+					<p class="italic-text">Y el centro último ha de ser inmóvil. Mas en el hombre, criatura tan subordinada, el centro ha de ser quieto, que no es lo mismo que inmóvil. Por el contrario, es la quietud la que permite que el centro se mueva a su modo, según su incalculable «naturaleza».</p>
+					<p class="italic-text">Ningún acto humano puede darse si no siguiendo una escala, ascensional sin duda, con la amenaza, rara vez evitada enteramente, de la caída. Y aunque esta escala se siga con una cierta continuidad, se dan en ella períodos decisivos, etapas, detenciones.</p>
+					<p class="italic-text">Y así el centro del ser humano actúa, durante la primera etapa de la escala ascendente de la persona, de un modo que responde al sentir originario y a la idea correspondiente de que sea el centro ante todo, inmóvil, dotado de poder de atracción, ordenador: foco de condensación invisible.</p>
+					<p class="italic-text">La etapa siguiente comienza en virtud de una cierta transformación que ha tenido que darse ya sintiendo la necesidad y la capacidad del centro de moverse, de transmigrar de un lugar a un punto nuevo. Es la etapa de la quietud; el centro no está inmóvil sino quieto.</p>
+					<p class="italic-text">Y lo que le rodea comienza a entrar en quietud. Se ha cumplido una transformación decisiva. Se inicia una «Vita nova». </p>
+					<br>
+					<p>De la manera como suelo comprender algo (que entra en mí para que yo luego pueda procesarlo y reproducirlo —empobrecido o enriquecido—, e incluso creerlo y enseñarlo), comprendo en este pasaje las viejas ideas del centro que atrae y del ascenso de la persona. Pero de otro modo recibo la distinción entre inmovilidad y quietud y la idea de la transmigración del centro, y de otro modo imagino el centro que no es inmóvil, sino quieto aquietador. Sé lo que me dice la autora. Puedo vivirlo. O, mejor, sé que lo he vivido. Pero no lo comprendo. Puedo repetirlo sin hacerlo mío, sin jamás apropiarlo. Para transmitirlo, tengo que usar las mismas palabras que ella usó, pues cada una de ellas es la clave —aunque yo no sepa usar la clave—, y puedo hablarte, como hago en este prólogo, de mi lectura, de mi aventura en el pasaje. No te explico el texto, pues, sino que te lo cuento (quizás esta literatura en la que se amistan la filosofía y la poesía sea especialmente narrativa), y entonces vuelvo a decir “incalculable naturaleza”, “en virtud”, “condensación invisible”. Y al citar sé que estoy diciendo (se está diciendo a través de mí) otra cosa que no se puede decir. Y citar se convierte aquí tal vez en imaginar.</p>
+					<p>La lectura de los textos de María Zambrano no ocurre como el trasvase de un contenido del autor al lector, sino como una concepción que no entraña la aceptación de la palabra que se muestra en el texto, sino de otra palabra de la que el texto te impregna. La palabra que viene a la lectora y al mundo en las palabras de Zambrano es la que Zambrano identifica como palabra sin lenguaje. No se contiene ni se asume. Es “la palabra que se dispone a nacer; la palabra concebida”, “secreto del amor divino-humano”, “que no puede convertirse en pasado y para la que no se cuenta con el futuro”, “palabra perdida” a la que aluden todas las palabras, que “se siente latiendo en el fondo de la respiración”, que se ve “como profetizada en algunas criaturas no humanas, en algunos animales que parecen llevar consigo una palabra que al morir están al borde de dar a entender”, “palabra, palabras no destinadas, como las palomas de después, al sacrificio de la comunicación, atravesando vacíos y dinteles, fronteras, palabras sin peso de comunicación alguna ni de notificación”, “enjambre de palabras que irían a reposarse juntas en la colmena del silencio, o en un nido solo, no lejos del silencio del hombre y a su alcance”.</p>
+					<p>Cuando leo algunos pasajes de María Zambrano nada se contiene ni se asume exactamente. Lo que pasa es que entra en el tiempo —se encarna— esa palabra que “no se presenta a sí misma porque, de hacerlo, acabaría con la relatividad del lenguaje y con su tiempo”; esa que “quizá sea la que llegue un día”; “la sola, desconocida y prodigiosa, milagrosamente identificada palabra, (que) alza en su ímpetu único todas las palabras juntas”. </p>
+					<br>
+					<br>
+
+
+                        <p class="text-align-right">Carolina Sanín</p>
+
+                        <div class="leerMas">¡Comienza tu lectura!</div>
+
+
+                        <hr class="line-separator line-orange" />
+
+                    </div>
+                </div>
+            <!--Cuento 1 -->
+               
+			<div class="slides slide">
+				<h2 class="section-title verde">Pensamiento y poesía <sup id="ref1">1</sup></h2>
+				<!--<h1 class="verdeP chapter-title">[1519]<br>I</h1>-->
+				<!--<h3 class="story-title">Viajero: has llegado a la región más transparente del aire.</h3>-->
+				<div class="content-text">
+
+						<p class="first-paragraph">A pesar de que en algunos mortales afortunados, poesía y pensamiento hayan podido darse al mismo tiempo y paralelamente, a pesar de que en otros más afortunados todavía, poesía y pensamiento hayan podido trabarse en una sola forma expresiva, la verdad es que pensamiento y poesía se enfrentan con toda gravedad a lo largo de nuestra cultura. Cada una de ellas quiere para sí eternamente el alma donde anida. Y su doble tirón puede ser la causa de algunas vocaciones malogradas y de mucha angustia sin término anegada en la esterilidad.</p>
+						<p>Pero hay otro motivo más decisivo de que no podamos abandonar el tema y es que hoy poesía y pensamiento se nos aparecen como dos formas insuficientes; y se nos antojan dos mitades del hombre: el filósofo y el poeta. No se encuentra el hombre entero en la filosofía; no se encuentra la totalidad de lo humano en la poesía. En la poesía encontramos directamente al hombre concreto, individual. En la filosofía al hombre en su historia universal, en su querer ser. La poesía es encuentro, don, hallazgo por gracia. La filosofía busca, requerimiento guiado por un método.</p>
+						<p>Es en Platón donde encontramos entablada la lucha con todo su vigor, entre las dos formas de la palabra, resuelta triunfalmente para el logos del pensamiento filosófico, decidiéndose lo que pudiéramos llamar “la condenación de la poesía”; inaugurándose en el mundo de occidente, la vida azarosa y como al margen de la ley, de la poesía, su caminar por estrechos senderos, su andar errabundo y a ratos extraviado, su locura creciente, su maldición. Desde que el pensamiento consumó su “toma de poder”, la poesía se quedó a vivir en los arrabales, arisca y desgarrada diciendo a voz en grito todas las verdades inconvenientes; terriblemente indiscreta y en rebeldía. Porque los filósofos no han gobernado aún ninguna república, la razón por ellos establecida ha ejercido un imperio decisivo en el conocimiento, y aquello que no era radicalmente racional, con curiosas alternativas, o ha sufrido su fascinación, o se ha alzado en rebeldía.</p>
+						<p>No tratamos de hacer aquí la historia de estas alternativas, aunque ya sería de gran necesidad, sobre todo estudiando sus íntimas conexiones con el resto de los fenómenos que imprimen carácter a una época. Antes de acometer tal empresa vale más esclarecer el fondo del dramático conflicto que motiva tales cambios; vale más atender a la lucha que existe entre filosofía y poesía y definir un poco los términos del conflicto en que un ser necesitado de ambas se debate. Vale, sí, la pena manifestar la razón de la doble necesidad irrenunciable de poesía y de pensamiento y el horizonte que se vislumbra como salida del conflicto. Horizonte que de no ser una alucinación nacida de una singular avidez, de un obstinado amor que sueña una reconciliación más allá de la disparidad actual, sería sencillamente la salida a un mundo nuevo de vida y conocimiento.</p>
+						<p>“En el principio era el verbo”, el logos, la palabra creadora y ordenadora, que pone en movimiento y legisla. Con estas palabras, la más pura razón cristiana viene a engarzarse con la razón filosófica griega. La venida a la tierra de una criatura que llevaba en su naturaleza una contradicción extrema, impensable, de ser a la vez divino y humano, no detuvo con su divino absurdo el camino del logos platónico-aristotélico, no rompió con la fuerza de la razón, con su primacía. A pesar de la “locura de la sabiduría” flagelante de San Pablo, la razón como ultima raíz del universo seguía en pie. Algo nuevo sin embargo había advenido: la razón, el logos era creador, frente al abismo de la nada; era la palabra de quien lo podía todo hablando. Y el logos quedaba situado más allá del hombre y más allá de la naturaleza, más allá del ser y de la nada. Era el principio más allá de todo lo principiado. </p>
+						<p>¿Qué raíz tienen en nosotros pensamiento y poesía? No queremos de momento definirlas, sino hallar la necesidad la extrema necesidad que vienen a colmar las dos formas de la palabra. ¿A qué amor menesteroso vienen a dar satisfacción? ¿Y cuál de las dos necesidades es la más profunda, la nacida en zonas más hondas de la vida humana?</p>
+						<p>¿Cuál la más imprescindible?</p>
+						<p>Si el pensamiento nació de la admiración solamente, según nos dicen textos venerables  no se explica con facilidad que fuera tan prontamente a plasmarse en forma de filosofía sistemática; ni tampoco haya sido una de sus mejores virtudes la de la abstracción, esa idealidad conseguida en la mirada, sí, más un género de mirada que ha dejado de ver las cosas. Porque la admiración que nos produce la generosa existencia de la vida en torno nuestro no permite tan rápido desprendimiento de las múltiples maravillas que la suscitan. Y al igual que la vida, esta admiración es infinita, insaciable y no quiere decretar su propia muerte.</p>
+						<p>Pero, encontramos en otro texto venerable —más venerable por su triple aureola de la filosofía, la poesía y… la “Revelación” otra raíz de donde nace la filosofía: se trata del pasaje del libro VII de La República, en que Platón presenta el “mito de la caverna”. La fuerza que origina la filosofía allí es la violencia. Y ahora ya, sí, admiración y violencia juntas como fuerzas contrarias que no se destruyen, nos explican ese primer momento filosófico en el que encontramos ya una dualidad y, tal vez, el conflicto originario de la filosofía: el ser primeramente pasmo extático ante las cosas y el violentarse en seguida para liberarse de ellas. Diríase que el pensamiento no toma la cosa que ante sí tiene más que como pretexto y que su primitivo pasmo se ve en seguida negado y quién sabe si traicionado, por esta prisa de lanzarse a otras regiones, que le hacen romper su naciente éxtasis. La filosofía es un éxtasis fracasado por un desgarramiento. ¿Qué fuerza es esa que la desgarra? ¿Por qué la violencia, la prisa, el ímpetu de desprendimiento?</p>
+						<p>Y así vemos ya más claramente la condición de la filosofía: admiración, sí, pasmo ante lo inmediato, para arrancarse violentamente de ello y lanzarse a otra cosa, a una cosa que hay que buscar y perseguir, que no se nos da, que no regala su presencia. Y aquí empieza ya el afanoso camino, el esfuerzo metódico por esta captura de algo que no tenemos, y necesitamos tener, con tanto rigor, que nos hace arrancarnos de aquello que tenemos ya sin haberlo perseguido. </p>
+						<p>Con esto solamente sin señalar por el momento cuál sea el origen y significación de la violencia, ya es suficiente para que ciertos seres de aquellos que quedaron prendidos en la admiración originaria, en el primitivo <em>zaumasein</em> no se resignen ante el nuevo giro, no acepten el camino de la violencia. Algunos de los que sintieron su vida suspendida, su vista enredada en la hoja o en el agua, no pudieron pasar al segundo momento en que la violencia interior hace cerrar los ojos buscando otra hoja y otra agua más verdaderas. No, no todos fueron por el camino de la verdad trabajosa y quedaron aferrados a lo presente e inmediato, a lo que regala su presencia y dona su figura, a lo que tiembla de tan cercano; ellos no sintieron violencia alguna o quizá no sintieron esa forma de violencia, no se lanzaron a buscar el trasunto ideal, ni se dispusieron a subir con esfuerzo el camino que lleva del simple encuentro con lo inmediato hasta aquello permanente, idéntico, Idea. Fieles a las cosas, fieles a su primitiva admiración extática, no se decidieron jamás a desgarrarla; no pudieron, porque la cosa misma se había fijado ya en ellos, estaba impresa en su interior. Lo que el filósofo perseguía lo tenía ya dentro de sí en cierto modo, el poeta; de cierto modo, sí, de qué diferente manera.</p>
+                    
+                        <p class="resaltado">Lo que el filósofo perseguía lo tenía ya dentro de sí en cierto modo, el poeta; de cierto modo, sí, de qué diferente manera.</p>
+                    
+						<p>¿Cuál era esta diferente manera de tener ya la cosa, que hacía justamente que no pudiera nacer la violencia filosófica?, ¿y que sí producía por el contrario, un género especial de desasosiego y una plenitud inquietante, casi aterradora? ¿Cuál era este poseer dulce e inquieto que calma y no basta? Sabemos que se llamó poesía y ¿quién sabe si algún otro nombre borrado? Y desde entonces el mundo se dividiera, surcado por dos caminos. El camino de la filosofía, en el que el filósofo impulsado por el violento amor a lo que buscaba abandonó la superficie del mundo, la generosa inmediatez de la vida, basando su ulterior posesión total, en una primera renuncia. El ascetismo había sido descubierto como instrumento de este género de saber ambicioso. La vida, las cosas, serían exprimidas de una manera implacable; casi cruel. El pasmo primero será convertido en persistente interrogación; la inquisición del intelecto ha comenzado su propio martirio y también el de la vida.</p>
+						<p>El otro camino es el del poeta. El poeta no renunciaba ni apenas buscaba, porque tenía. Tenía por lo pronto lo que ante sí, ante sus ojos, oídos y tacto, aparecía; tenía lo que miraba y escuchaba, lo que tocaba, pero también lo que aparecía en sus sueños, y sus propios fantasmas interiores mezclados en tal forma con los otros, con los que vagaban fuera, que juntos formaban un mundo abierto donde todo era posible. Los límites se alteraban de tal modo que acababa por no haberlos. Los límites de lo que descubre el filósofo, en cambio, se van precisando y distinguiendo de tal manera que se ha formado ya un mundo con su orden y perspectiva, donde ya existe el principio y lo “principiado”; la forma y lo que está bajo ella.</p>
+						<p>El camino de la filosofía es el más claro, el más seguro; la Filosofía ha vencido en el conocimiento pues que ha conquistado algo firme, algo tan verdadero, compacto e independiente que es absoluto, que en nada se apoya y todo viene a apoyarse en él. La aspereza del camino y la renuncia ascética ha sido largamente compensada. </p>
+						<p>En Platón el pensamiento, la violencia por la verdad, ha reñido tan tremenda batalla como la poesía; se siente su fragor en innumerables pasajes de sus diálogos, diálogos dramáticos donde luchan las ideas, y bajo ellas otras luchas aún mayores se adivinan. La mayor quizá es la de haberse decidido por la filosofía quien parecía haber nacido para la poesía. Y tan es así, que en cada diálogo pasa siquiera rozándola, comprobando su razón, su justicia, su fortaleza. Mas también es ostensible, que en los pasajes más decisivos, cuando parece agotado ya el camino de la dialéctica y como un más allá de las razones, irrumpe el mito poético. Así, en <em>La República</em>, en <em>El</em> <em>Banquete</em>, en el <em>Fedón</em>… de tal manera que al acabar la lectura de este último, el más sobrecogedor y dramático de todos, nos queda la duda acerca de la íntima verdad de Sócrates. Y la idea del maestro callejero, su vocación de pensador trotacalles, vacila. ¿Cuál era su íntimo saber, cuál la fuente de su sabiduría, cuál la fuerza que mantuvo tan bella y clara su vida? El que dice que “la filosofía es una preparación para la muerte”, abandona la filosofía al llegar a sus umbrales y pisándolos ya casi, hace poesía y burla. ¿Es que la verdad era otra? ¿Tocaba ya alguna verdad más allá de la filosofía, una verdad que solamente podía ser revelada por la belleza poética; una verdad que no puede ser demostrada, sino solo sugerida por ese más que expande el misterio de la belleza sobre las razones? ¿O es que las verdades últimas de la vida, las de la muerte y el amor, son aunque perseguidas halladas al fin, por donación, por hallazgo venturoso, por lo que después se llamara “gracia” y que ya en griego lleva su hermoso nombre,<em> jaries, carites</em>? </p>
+					
+						
+				
+						<p>En todo caso Sócrates con su misterioso “demonio” interior y su clara muerte, y Platón con su filosofía, parecen sugerir que un pensar puro, sin mezcla poética alguna, no había hecho sino empezar. Y lo que pudiera ser una “pura” filosofía no contaba aún con fuerzas suficientes para abordar los temas más decisivos, que a un hombre alerta de su tiempo se le presentaban.</p>
+						<p>La poesía perseguía, entre tanto, la multiplicidad desdeñada, la menospreciada heterogeneidad. El poeta enamorado de las cosas se apega a ellas, a cada una de ellas y las sigue a través del laberinto del tiempo, del cambio, sin poder renunciar a nada: ni a una criatura ni a un instante de esa criatura, ni a una partícula de la atmósfera que la envuelve, ni a un matiz de la sombra que arroja, ni del perfume que expande, ni del fantasma que ya en ausencia suscita. ¿Es que acaso al poeta no le importa la unidad? ¿Es que se queda apegado vagabundamente —inmoralmente— a la multiplicidad aparente, por desgana y pereza, por falta de ímpetu ascético para perseguir esa amada del filósofo: la unidad? </p>
+						<p>Con esto tocamos el punto más delicado quizá de todos: el que proviene de la consideración “unidad-heterogeneidad”. Hemos apuntado en las líneas que anteceden, las divergencias del camino al dirigirse el filósofo hacia el ser oculto tras las apariencias, y al quedarse el poeta sumido en estas apariencias. El ser había sido definido con unidad ante todo, por eso estaba oculto, y esa unidad era sin duda, el imán suscitador de la violencia filosófica. Las apariencias se destruyeron unas a otras, están en perpetua guerra, quien vive en ellas, perece. Es preciso “salvarse de las apariencias”, primero, y salvar después las apariencias mismas: resolverlas, volverlas coherentes con esa invisible unidad. Y quien ha alcanzado la unidad ha alcanzado también todas las cosas que son, pues en cuanto que son participan de ella o en cuanto que son, son unas. Quien tiene pues la unidad lo tiene todo. ¿Cómo no explicarse la urgencia del filósofo, la violencia terrible que le hace romper las cadenas que le amarran a la tierra y a sus compañeros; qué ruptura no estaría justificada por esta esperanza de poseerlo todo, todo? Si Platón nos resulta tan seductor en el “Mito de la Caverna” es, ni más ni menos, porque en él nos descubre la esperanza de la filosofía, la esperanza que es la justificación última, total. La esperanza de la filosofía, mostrándonos que la tiene, pues religión, poesía y hasta esa forma especial de la poesía que es la tragedia son formas de la esperanza, mientras la filosofía queda desesperanzada, desolada más bien. Y no han hecho, tal vez, otra cosa los más altos filósofos; al final de sus cadenas de razones hechas para romper las cadenas del mundo y de la naturaleza, hay algo que las rompe a ellas también y que se llama a veces vida teorética, a veces “amor del <em>intelectualis</em>”, a veces “autonomía de la persona humana”. </p>
+						<p>Hay que salvarse de las apariencias, dice el filósofo, por la unidad, mientras el poeta se queda adherido a ellas, a las seductoras apariencias. ¿Cómo puede, si es hombre, vivir tan disperso?</p>
+                    
+                        <p class="resaltado">Hay que salvarse de las apariencias, dice el filósofo, por la unidad, mientras el poeta se queda adherido a ellas, a las seductoras apariencias. ¿Cómo puede, si es hombre, vivir tan disperso?</p>
+                    
+						<p>Asombrado y disperso es el corazón del poeta —“mi corazón latía, atónito y disperso”<sup id="ref2">2</sup>—. No cabe duda de que este primer momento de asombro, se prolonga mucho en el poeta, pero no nos engañemos creyendo que es su estado permanente del que no puede salir. No, la poesía tiene también su vuelo; tiene también su unidad, su trasmundo.</p>
+						<p>De no tener vuelo el poeta, no habría poesía, no habría palabra. Toda palabra requiere un alejamiento de la realidad a la que se refiere; toda palabra es también, una liberación de quien la dice. Quien habla aunque sea de las apariencias, no es del todo esclavo; quien habla, aunque sea de la más abigarrada multiplicidad, ya ha alcanzado alguna suerte de unidad, pues que embebido en el puro pasmo, prendido a lo que cambia y fluye, no acertaría a decir nada, aunque este decir sea un cantar.</p>
+						<p>Y ya hemos mentado algo afín, muy afín de la poesía, pues que anduvieron mucho tiempo juntas, la música. Y en la música es donde más suavemente resplandece la unidad. Cada pieza de música es una unidad y sin embargo solo está compuesta de fugaces instantes. No ha necesitado el músico echar mano de un ser oculto e idéntico a sí mismo, para alcanzar la transparente e indestructible unidad de sus armonías. No es la misma sin duda, la unidad del ser a que aspira el filósofo a esta unidad asequible que alcanza la música. Por el pronto esta unidad de la música está ya ahí realizada, es una unidad de creación; con lo disperso y pasajero se ha construido algo uno, eterno. Así el poeta, en su poema crea una unidad con la palabra, esas palabras que tratan de apresar lo más tenue, lo más alado, lo más distinto de cada cosa, de cada instante. El poema es ya la unidad no oculta, sino presente; la unidad realizada, diríamos encarnada. El poeta no ejerció violencia alguna sobre las heterogéneas apariencias y sin violencia alguna también logró la unidad. Al igual que la multiplicidad primero, le fue donada, graciosamente, por obra de las <em>carites</em>. </p>
+						<p>Pero hay, por el pronto, una diferencia; así como el filósofo si alcanzara la unidad del ser, sería una unidad absoluta, sin mezcla de multiplicidad alguna, la unidad lograda del poeta en el poema es siempre incompleta; y el poeta lo sabe y ahí está su humildad: en conformarse con su frágil unidad lograda. De ahí ese temblor que queda tras de todo buen poema y esa perspectiva ilimitada, estela que deja toda poesía tras de sí y que nos lleva tras ella; ese espacio abierto que rodea a toda poesía. Pero aun esta unidad lograda aunque completa, parece siempre gratuita en oposición a la unidad filosófica tan ahincadamente perseguida.</p>
+						<p>El filósofo quiere lo uno, porque lo quiere todo, hemos dicho. Y el poeta no quiere propiamente todo, porque teme que en este todo no esté en efecto cada una de las cosas y sus matices; el poeta quiere una, cada una de las cosas sin restricción, sin abstracción ni renuncia alguna. Quiere un todo desde el cual se posea cada cosa, mas no entendiendo por cosa esa unidad hecha de sustracciones. La cosa del poeta no es jamás la cosa conceptual del pensamiento, sino la cosa complejísima y real, la cosa fantasmagórica y soñada, la inventada, la que hubo y la que no habrá jamás. Quiere la realidad, pero la realidad poética no es solo la que hay, la que es; sino la que no es; abarca el ser y el no ser en admirable justicia caritativa, pues todo, todo tiene derecho a ser hasta lo que no ha podido ser jamás. El poeta saca de la humillación del no ser a lo que en él gime, saca de la nada a la nada misma y le da nombre y rostro. El poeta no se afana para que de las cosas que hay, unas sean, y otras no lleguen a este privilegio, sino que trabaja para que todo lo que hay y lo que no hay, llegue a ser. El poeta no teme a la nada.</p>
+					
+						
+					
+						<p>Aparición, presencia que tiene su trasmundo en que apoyarse. La matemática sostiene al canto. ¿No tendrá la poesía también su trasmundo, su más allá en que apoyarse, su matemática? </p>
+						<p>Así es, sin duda: el poeta alcanza su unidad en el poema más pronto que el filósofo. La unidad de la poesía baja en seguida a encarnarse en el poema y por ello se consume aprisa. La comunicación entre el logos poético y la poesía concreta y viva es más rápida y más frecuente; el logos de la poesía es de un consumo inmediato, cotidiano; desciende a diario sobre la vida, tan a diario, que, a veces, se la confunde con ella. Es el logos que se presta a ser devorado, consumido; es el logos disperso de la misericordia que va a quien la necesita, a todos los que lo necesitan. Mientras que el de la filosofía es inmóvil, no desciende y solo es asequible a quien puede alcanzarlo por sus pasos. </p>
+						<p>“Todos los hombres tienen por naturaleza deseo de saber”, dice Aristóteles al comienzo de su Metafísica, justificando así de antemano este “saber que se busca”. Mas, pasando por alto que en efecto todos los hombres necesiten este saber, se presenta en seguida la pregunta en que pedimos cuenta a la filosofía. ¿Cómo si todos te necesitan, tan pocos son los que te alcanzan?</p>
+						<p>¿Es que alguna vez la Filosofía ha sido a todos, es que en algún tiempo el logos ha amparado la endeble vida de cada hombre? Si hemos de hacer caso de lo que dicen los propios filósofos, sin duda que no, mas es posible que más allá de ellos mismos, haya sido en alguna dimensión, en alguna manera. En alguna manera, en algo sin duda muy vivo y muy valioso que ahora cuando aparece destruido —con inconsciente despreocupación de algunos “filósofos” a quienes parece dejar indiferente el que la filosofía sirva ahora, cuando vemos su vacío en la vida del hombre, es cuando más nos damos cuenta. </p>
+						<p>Pero, con la poesía, en cambio, no cabe esta cuestión. La poesía humildemente no se planteó a sí misma, no se estableció a sí misma, no comenzó diciendo que todos los hombres naturalmente necesitan de ella. Y es una y es distinta para cada uno. Su unidad es tan elástica, tan coherente que puede plegarse, ensancharse y casi desaparecer; desciende hasta su carne y su sangre, hasta su sueño. </p>
+						<p>Por eso la unidad a que el poeta aspira está tan lejos de la unidad hacia la que se lanza el filósofo, El filósofo quiere lo uno, sin más, por encima de todo.</p>
+						<p>Y es porque el poeta no cree en la verdad, en esa verdad que presupone que hay cosas que son y cosas que no son y en la correspondencia verdad y engaño. Para el poeta no hay engaño, sino es el único de excluir por mentirosas ciertas palabras. De ahí que frente a un hombre de pensamiento el poeta produzca la impresión primera de ser un escéptico. Mas, no es así: ningún poeta puede ser escéptico, ama la verdad, mas no la verdad excluyente, no la verdad imperativa, electora, seleccionadora de aquello que va a erigirse en dueño de todo lo demás, de todo. ¿Y no se habrá querido para eso el todo: para poder ser poseído, abarcado, dominado? Algunos indicios hay de ello. </p>
+						<p>Sea o no así, el “todo” del poeta es bien diferente, pues no es el todo como horizonte, ni como principio, sino en todo caso un “todo” a posteriori que solo lo será cuando ya cada cosa haya llegado a su plenitud.</p>
+						<p>La divergencia entre los dos logos es suficiente como para caminar de espaldas largo trecho. La filosofía tenía la verdad, tenía la unidad. Y aun todavía la ética, porque la verdad filosófica era adquirida paso a paso esforzadamente, de tal manera que al arribar a ella se siente ser uno, uno mismo, quien la ha encontrado. ¡Soberbia de la filosofía! Y la unidad y la gracia que el poeta halla como fuente milagrosa en su camino, son regaladas, descubiertas de pronto y del todo, sin rutas preparatorias, sin pasos ni rodeos. El poeta no tiene método... ni ética.</p>
+						<p>Este es al parecer, el primer frente a frente del pensamiento y la poesía en su encuentro originario, cuando la Filosofía soberbia se libera de lo que fue su calidad matriz; cuando la Filosofía se resuelve a ser razón que capta el ser, ser que expresado en el logos nos muestra la verdad. La verdad… ¿cómo teniéndola no ha sido la filosofía el único camino del hombre desde la tierra, hasta ese alto cielo inmutable donde resplandecen las ideas? El camino sí se hizo, pero hay algo en el hombre que no es razón, ni ser, ni unidad, ni verdad —esa razón, ese ser, esa unidad, esa verdad—. Mas, no era fácil demostrarlo, ni se quiso, porque la poesía no nació en la polémica, y su generosa presencia jamás se afirmó polémicamente. No surgió frente a nada.</p>
+						<p>No es polémica, la poesía, pero puede desesperarse y confundirse bajo el imperio de la fría claridad del logos filosófico, y aun sentir tentaciones de cobijarse en su recinto. Recinto que nunca ha podido contenerla, ni definirla. Y al sentir el filósofo que se le escapaba, la confinó. Vagabunda, errante, la poesía pasó largos siglos. Y hoy mismo, apena y angustia el contemplar su limitada fecundidad, porque la poesía nació para ser la sal de la tierra y grandes regiones de la tierra no la reciben todavía. La verdad quieta, hermética, todavía no la recibe... “En el principio era el logos. Sí, pero… el logos se hizo carne y habitó entre nosotros, lleno de gracia y de verdad”.</p>
+
+
+
+
+					<hr class="line-separator line-orange" />
+					<div class="final-notes">
+						<h1>Notas</h1>
+						<p><span class="footnote" id="refe1">1.</span><strong> Zambrano, María.</strong><em> Filosofía y poesía.</em> México: Fondo de Cultura Económica, 2006. Pp. 13-25. </p>
+						<p><span class="footnote" id="refe2">2.</span><strong> Antonio Machado</strong> </p>
+					</div>
+
+					<hr class="line-separator line-orange" />
+
+
+			</div>
+			</div>	
+			<div class="slides slide">
+				<h2 class="section-title verde">La disputa entre la filosofía y la poesía sobre los dioses <sup id="ref3">3</sup></h2>
+				<!--<h1 class="verdeP chapter-title">[1519]<br>I</h1>-->
+				<!--<h3 class="story-title">Viajero: has llegado a la región más transparente del aire.</h3>-->
+				<div class="content-text">
+					<p class="first-paragraph">Los dioses, según Ortega decía, presentaban un vacío de ser que provocó la nostalgia de todo lo que en la idea de ser se iba a encontrar. Por su parte, la filosofía cuando nace prescinde, aunque no absolutamente, de ellos. En realidad, la filosofía no se presentará desprendida enteramente de los dioses. Hasta Aristóteles, ha contado con ellos de diversas maneras. Percibirlas y precisarlas es una tarea que se presenta cada día como más ineludible para esa historia de la esperanza humana que sería la historia verdadera del hombre. </p>
+					
+					<p>El origen de la filosofía se hunde en esa lucha que tiene lugar dentro todavía de lo sagrado y frente a ello. La filosofía nació, fue el producto de una actitud original, habida en una rara coyuntura entre el hombre y lo sagrado. La formación de los dioses, su revelación por la poesía, fue indispensable, porque fue ella, la poesía, quien primeramente se enfrentó con ese mundo oculto de lo sagrado. Y así, por una parte la insuficiencia de los dioses, resultado de la poética acción, dio lugar a la actitud filosófica. Mas, de otro lado, vemos que en la actitud que supone la actividad poética se encuentra ya el antecedente necesario de la actitud que dará origen a la filosofía. Como siempre que de una actividad humana nace otra distinta y aun contraria, no es solo de su limitación, de lo que no llegó a alcanzar, de donde nace, sino de lo que alcanzó también; de su aspecto negativo unido al positivo. </p>
+					
+					<p>Y así, la filosofía se inicia del modo más antipoético por una pregunta. La poesía lo hará siempre por una respuesta a una pregunta no formulada. El preguntarse es lo peculiar del hombre, el signo de que ha llegado a un momento en que va a separarse de lo que le rodea, algo así como la ruptura de un amor, como el nacimiento. </p>
+
+					<p>Toda pregunta indica la pérdida de una intimidad o el extinguirse de una adoración. En los dos procesos actúa como fondo último, determinante, el afán, la necesidad quizá de un alguien que quiere independizarse, vivir por su cuenta, liberarse de lo mismo que ha sido el lugar de su alma. Y aún más que la ruptura de un amor, es algo como el nacimiento; el proceso en que un ser que se ha nutrido y respirado dentro de otro, intrincado con él, se desprende en busca de su propio espacio vital. Así la pregunta filosófica que Tales formulara un día, significa el desprendimiento del alma humana, no ya de esos dioses creados por la poesía, sino de la instancia sagrada, del mundo oscuro de donde ellos mismos salieron. Pues a su vez las imágenes poéticas de los dioses eran una solución hallada a esa necesidad de desprendimiento, de salida a un espacio libre, a una relativa soledad. </p>
+
+					<p>Mas, al ser las imágenes de los dioses insuficientes para proporcionar la soledad que el hombre necesita para ser enteramente hombre, para vivir por su cuenta, la pregunta de Tales muestra una especie de retroceso, un regreso que surge en toda gran crisis histórica. Antes de lanzarse hacia adelante en el camino de la historia, el hombre comienza por retroceder un instante al punto de origen, de partida. En la filosofía tal cosa es enteramente visible; en todos los momentos en que la filosofía ha nacido o renacido, se ha verificado este retroceso a una situación más originaria que la habida en el momento histórico correspondiente, un retroceso, diríamos, a la ignorancia primera; a la oscuridad originaria. Y el verdadero proceso de la filosofía y su progreso —de haberlo— estriba en descender cada vez a capas más profundas de ignorancia, a adentrarse en el lugar de las tinieblas originarias del ser, de la realidad: comenzando por olvidar toda idea y toda imagen. </p>
+					<p>Y así, la pregunta inicial de la filosofía: “¿Qué son las cosas?”, suena todavía en nuestros oídos con ese aire de brusquedad y hasta de impaciencia, como si dijera: “basta de dioses y de historias, volvamos o empecemos a no saber”. Y al retroceder a la ignorancia se hundió en ella —el que se decidió a preguntar por las cosas— mucho más de lo que lo estuvieron los que configuraron los dioses. Y los que creían en ellos antes de que los hubiera, los que habían vivido apegados en adoración y temor a la realidad oscura y hermética de lo sagrado. Pues solamente una ignorancia más completa podía descubrir la soledad de la que nace la pregunta. </p>
+
+					<p>Soledad un tanto especial; pues más que haber soledad, hay soledades, distintas. La soledad en la que debió nacer la pregunta de la filosofía, parece ser la que adviene cuando se han perdido las imágenes y los fantasmas; cuando una imagen con quien se ha vivido en intimidad se desvanece. La soledad que aún no se sabe como soledad y que apenas se siente, porque corresponde a ese instante en que algo se acaba de ir y se está en frente de toda una realidad que se presenta aún más enigmática; en este caso, frente a la realidad, lo que más absorbe la mente humana: un problema. </p>
+                    
+                     <p class="resaltado">Soledad un tanto especial; pues más que haber soledad, hay soledades, distintas.</p>
+                    
+					<p>El alma se ha vaciado; ha perdido el contacto con sus imágenes familiares y queda como adormida bajo la actividad de la mente que encuentra por primera vez su presa, su alimento adecuado. Y aun antes de que ningún descubrimiento acerca de las cosas llegue, está la revelación de la misma pregunta, la embriaguez de este descubrimiento de preguntar y el juego de poder contestarse a sí mismo sin aguardar a que nadie traiga respuesta alguna. La inauguración del gran lujo de preguntarse sobre lo que hasta hace un momento era incuestionable por no aparente, por escondido bajo las imágenes, bajo las fábulas. </p>
+					<p>Y, así, esta ignorancia vino a resultar el lugar de una revelación: de la revelación de ser identificado enseguida con la cosa menos cosa entre todas; con lo que puede entrar en todo; el agua visible en forma de transparencia, lugar de germinación sin fin, que viene siempre de alguna parte, naciendo secretamente, que entregada a sí misma va hacia algún lugar, que parece continúa sin límites, sin cualidad. El aire podría competir con ella en esa su forma de presentar el ser y casi era indiferente e intercambiable como fondo último residente de todas las cosas. </p>
+
+					<p>Merced a las imágenes de los dioses, el hombre había quedado a salvo de la persecución nacida de este fondo sagrado en que la realidad se hace sentir. Y en esa calma, la soledad podía darse, la soledad en que se origina la pregunta. La pregunta que es el despertar del hombre. </p>
+
+					<p>Y mientras, la poesía seguirá prisionera de ese delirio de persecución del que nunca se liberará. La pregunta filosófica tiene mucho de persecución, un género nuevo de persecución, que la mente humana inicia después de haberse despegado un tanto del delirio persecutorio padecido por tan largo tiempo y a medias apaciguado bajo las imágenes de los dioses. </p>
+
+					<p>Y, así, quizá se insinúe el rencor permanente entre el que padece la actitud poética y el que asume la actitud filosófica: sentirse perseguido. Poeta será siempre aquel que no se pone a salvo de sufrir la inacabable persecución y es natural y hasta justo, de una cierta justicia, que mire con recelo no solo a quien parece haberse librado, sino que se lanza a perseguir de esa extraña manera que es inquirir las razones de las cosas. </p>
+					
+					
+					
+					<p>Por su parte, quien asume la actitud filosófica, asume también la responsabilidad de sus palabras, que serán por ello declaraciones cargadas de una nueva pretensión. Creo recordar que en una de sus lecciones Ortega y Gasset hacía recaer la diferencia entre el decir del poeta y el decir del filósofo en la falta de responsabilidad del primero. Bajo el logos de la poesía no encontramos la unidad —coherencia, continuidad— de alguien que no solo da razones, sino que ofrece también razones de sus razones, que tal es el filósofo, decía Ortega. Mas, el poeta ofrecerá en cambio de estas razones de sus razones su propio ser, soporte de lo que no permite ser dicho, de todo lo que se esconde en el silencio; la palabra de la poesía temblará siempre sobre el silencio y solo la órbita de un ritmo podrá sostenerla, porque es la música la que vence al silencio antes que el logos. Y la palabra más o menos desprendida del silencio estará contenida en una música.</p>
+
+					<p>El poeta, aceptará y aun pretenderá otro género de responsabilidad que la que se ofrece desde la conciencia y la claridad de las razones; esa responsabilidad sugerida más que en la palabra en el gesto de la mano que indica una dirección. Poesía y filosofía serán desde el principio dos especies de caminos que en privilegiados instantes se funden en uno solo. El camino abierto paso a paso mirando adelante hacia el horizonte que se va despejando, que absorberá el nombre de “método” y el camino que la paloma traza en el aire sin saberlo llevada solo por su único saber: el sentido de orientación. No deja huellas, mientras el camino llamado “método” será siempre una traza, una línea visible que exige ser recorrida, y que hace sentir una especie de mandato y entrará, sin duda alguna, como ingrediente en lo que siempre se ha entendido como “responsabilidad”; pues la forma más aguda y extrema de ser responsable es asumir el mando. </p>
+
+					<p>Bien pronto el filósofo en Grecia tomará para sí esta función del mando que en otras culturas estaba encomendada al profeta, al jefe religioso. Por un momento, pareció dudar esa señal del mando entre ir a posarse sobre la cabeza del poeta o sobre la del filósofo. La vacilación tenía que producirse, puesto que entre los dos se disputan en realidad el papel de hablar en nombre de la divinidad; señalar imperativamente un camino es función de quien lo hace como un Moisés en nombre de una orden a su vez recibida, de una obediencia.</p>
+					<p>Y lo que en Grecia se planteara parece ser la cuestión bien decisiva de si iba a mandar el poeta o el filósofo, puesto que no había en realidad sacerdote, profeta encargado de ello, a causa de la falta de un dios revelado. La contienda tenía que producirse en términos ya meramente humanos, contienda original que señala el origen del humanismo, de ese humanismo que ni aun bajo la cristiandad ha podido acallarse en ningún momento y que diríamos que actualmente vuelve a presentarse como en los días de Grecia en toda su gravedad. </p>
+
+					<p>Venció el filósofo a causa de su retroceso a la ignorancia. Pues el poeta hablaba en nombre de unos dioses que no le sostenían. Y solo el poeta trágico situándose —hasta donde es posible humanamente— en el lugar del Dios desconocido, podía sostener su pretensión frente al filósofo o podía inspirar al filósofo una cierta inquietud.</p>
+
+					<p>Lo que aparece en realidad en Grecia es la victoria de la filosofía sobre la poesía, en una curiosa manera. Pasado el primer momento en que la pregunta fue formulada por la filosofía tras de la vacilación entre dos respuestas igualmente inadecuadas y equivalentes (agua, aire), vino a fijar su mirada sobre una realidad, primaria, original; sagrada por oculta y ambigua, por apenas nombrable, el <em>ápeiron</em>, de donde todas las cosas vienen, según Anaximandro, fondo oscuro en donde la injusticia del ser, de ser algo, estará asentada. Descubrimiento verdadero de esta ignorancia de la actitud filosófica. Pero, preciso es ver que si tal ignorancia es hallazgo de la actitud filosófica es también aquello frente a lo cual el poeta tiembla, calla y habla. </p>
+
+					<p>Y así, la hazaña de la filosofía griega fue descubrir y presentar como suyo aquel abismo del ser situado más allá de todo ser sensible, que es la realidad más poética, la fuente de toda poesía. Diríamos que la victoria de la filosofía se logró por haber arrebatado a la poesía su secreto, su fuente. Por haberle dado nombre, por haber descendido hasta esa profundidad en que la conciencia originaria, el asombro aun mudo, se despierta rodeado de tinieblas.</p>
+					<p>Pues el <em>ápeiron</em> sería el nombre, no solo de la realidad que es pura palpitación, germinación inagotable, sino de la misma vida humana antes de que el hombre tome un proyecto de ser sobre sí, antes de que se decida a ser alguien o a hacer algo. Y aun el instante en que ambas realidades andan mezcladas e indiscernibles, la comunidad primaria que la conciencia destruirá para establecerla de otro modo. En el camino de buscar equilibrio en la injusticia de las cosas que son y, de la más grave aún, de que el hombre sea, a su vez. Y solo al final del largo camino, en la identidad de la inteligencia que conoce con lo conocido, la igualdad estará enteramente recuperada. La injusticia aniquilada, ya no en la oscuridad originaria, sino en la claridad final. </p>
+                    
+                    <p class="resaltado">La injusticia aniquilada, ya no en la oscuridad originaria, sino en la claridad final.</p>
+                    
+					<p>El poeta se había adelantado al conformar el fondo sagrado en las imágenes e historias de los dioses. Diríase que este servicio prestado por la poesía a la conciencia necesitada de saber a qué atenerse, lo pagó al ser vencida por la filosofía, por el descubrimiento del <em>ápeiron</em>: lo sagrado a revelar. La poesía se había apresurado a contar las historias de la metamorfosis de la libertad semidivina. Y por este encumbramiento —inevitable— dejó abandonado el oscuro fondo originario: lo sagrado verdadero.</p>
+
+					<p>Tres momentos parece haber en esta lucha entre filosofía y poesía en Grecia: primera victoria obtenida por la filosofía, especie de premio a su adentramiento en la ignorancia. En seguida vemos que la respuesta afortunada unida a la pregunta, a la actitud del preguntar, va a hacer que nazca la investigación propiamente filosófica; la pregunta ya tendrá donde morder. Y ello nos pone frente a una verdad que bien podría repetirse siempre: si la filosofía es la que pregunta, la filosofía es la que encuentra. Filosófico es el preguntar y poético el hallazgo. —¿Todo hallazgo, no será siempre poético? </p>
+
+					<p>Y así, en la primera etapa —presocrática— de la filosofía griega encontraremos ese momento feliz de las nupcias entre filosofía y poesía. La actitud filosófica proseguirá su inquisición, mas la presencia del oscuro fondo indiferenciado no permitirá un exceso de discernimiento y todo discernimiento será medido. La dialéctica se iniciará como lateralmente, sin intervenir en los “descubrimientos”. Y su nacimiento marcará el instante de la “pureza de la actitud filosófica, desprendida enteramente de la poesía”. </p>
+
+					<p>Parece posible señalar las etapas esenciales de la relación entre filosofía y poesía de esta manera:</p>
+					<ol class="general-list">
+						<li>l.   Pregunta filosófica en que se descubre la actitud netamente filosófica.</li>
+						<li>2. El descubrimiento filosófico de la realidad poética del <em>ápeiron</em>. </li>
+						<li>3. La unidad entre filosofía y poesía habida en Heráclito, Parménides, Empédocles. <li>
+						<li>4. La denuncia de la “mentira” de la poesía por Platón. </li>
+					</ol>
+					<p>Y como en medio de esta lucha y como su foco está la actitud frente a lo sagrado y la acción derivada de la actitud, es decir, la relación con los dioses y con lo divino, aparecen los dos momentos de máxima gravedad de la acusación contra Anaxágoras y la condena de Sócrates por impiedad. </p>
+
+					<p>Pues en realidad la polémica o diferencia habida entre filósofos y poetas se dibuja sobre el fondo de lo sagrado, de la relación con los dioses, de la piedad. Y es que la divergencia, el abismo que separa a las dos, resulta de la diferente acción que con lo sagrado realizan. En forma esquemática se puede decir que la poesía extrajo las formas de los dioses y sus historias sin hundirse previamente en ese fondo oscuro del <em>ápeiron</em>, más presente en la poesía trágica para lo cual el <em>ápeiron</em> resulta claramente insuficiente, pues que se trata del fondo, no sagrado sino divino, dejado intacto por los dioses, del Dios desconocido. La poesía lírica será el sentir, el sentir irreductible del tiempo y del amor que corre su suerte. Mientras la filosofía que descubre la realidad sagrada en el <em>ápeiron</em> no descansa hasta extraer de ella lo divino Unitario; la idea de Dios. </p>
+
+					<p>Le vino a faltar a la poesía en Grecia algo así como su suelo, el punto de partida inicial que fue tomado por la filosofía. La poesía se adelantó al conformar las imágenes de los dioses. La filosofía se encontró, pues, ante una situación que comportaba, por una parte, la transformación de lo sagrado en lo divino hecha presente en las imágenes de los dioses, y el fondo originario oculto sin nombre, por la otra. Y así se explica que, no más hubo tomado contacto con el fondo sagrado, la filosofía entrase en polémica, en disidencia con las imágenes de los dioses, y fuera perseguida en nombre de ellos. Se trataba simplemente de que los filósofos, desde que se dio a conocer con Parménides, mostraba la unidad del ser; el ser, un antecedente de lo que sería el resultado final de su acción y el logro último de su actividad: la idea de Dios. </p>
+					
+					
+					
+					<p>Pues el oscuro <em>ápeiron</em> bien pronto fue abandonado; era solamente el contacto inicial con la realidad originaria donde estaba contenido aquello que la pregunta filosófica buscaba: y el ser, más que el aspecto de realidad del ser, su contextura, la unidad. Pues de la realidad no pareció dudar nunca la mente griega; que no fue movida por la falta de realidad, sino por la ausencia de unidad. <sup id="ref4">4</sup> Y fue la unidad la perseguida por la mente. Toda la filosofía griega puede verse a la luz de esta ahincada prosecución en pensar la unidad, su verdadero problema. Y así, el <em>ápeiron</em> fue bien pronto sustituido como punto de partida de toda investigación por el uno de Parménides, la segunda revelación alcanzada por la filosofía, mas esta ya exclusivamente filosófica. Lo que sucede en Parménides parece el caso inverso de Anaximandro: la inspiración poética realiza un descubrimiento filosófico, mientras que en Anaximandro, la pregunta nacida de la actitud filosófica realiza un descubrimiento poético. </p>
+					<p>Y parece poética la actitud de Parménides a causa de la inspiración en que la unidad del ser es expresada. Se trata de la enunciación de algo en términos de revelación, y como tal “revelación” va a funcionar, pues que a ella se volverá siempre como a un punto de partida donde reside el problema del ser y el no ser en sí mismos y del ser y del no ser confrontados con las “apariencias”, de las que ha de dar razón. </p>
+
+					<p>Una vez descubierta la unidad —el ser-unidad— la polémica con los dioses de la poesía estaba planteada, aunque no se declarase. Solo se declaró desde el lado de la filosofía tras de la tragedia de la muerte de Sócrates. La creencia en los dioses no constituía un problema para el filósofo, y en la medida en que fuese cuestión, quedaba planteada de modo indirecto, lateralmente y al par radicalmente: pues los dioses quedaban fuera de la estructura del ser sin quedar por ello sumergidos en el no ser; quedan simplemente fuera de la cuestión; imágenes disminuidas en sombra que se desvanece. </p>
+
+					<p>La libertad hallada por la acción poética de configurar las imágenes divinas fue aprovechada por la filosofía para una acción específica acerca de lo divino, de signo contrario. Pues la acción entre todas de la filosofía fue la transformación de lo sagrado en lo divino, en la pura unidad de lo divino.</p>
+
+					<p>Y para realizar esta acción impremeditada de transformar lo sagrado en lo divino, el pensamiento filosófico tuvo que desatender a los dioses, imágenes. Partió del <em>ápeiron</em>, realidad sagrada, ambigua, oculta, donde todo germen está contenido, actuando, es decir, portadora de todos los signos de la realidad; materia en suma, donde la abstracción iría haciendo explícito su contenido. El ser uno de Parménides es ya la idea, la primera idea y, por eso, es natural que aparezca en la misma inspiración el descubrimiento de la “idea”, Es la identidad, la unidad de identidad descubrimiento que viene a situarse en el otro polo del <em>ápeiron</em>: Y así entre esos dos polos: el <em>ápeiron</em> —realidad ilimitada— y el ser uno, unidad de identidad, señalan los principios de la acción específica del pensamiento, de la transformación de lo sagrado en lo divino.</p>
+
+					<p>Y la “idea”, entre todas, portadora de la identidad será la idea de Dios. Divinidad que conservará la máxima realidad del <em>ápeiron</em>, el ser origen de todo. Mas sin ambigüedad alguna, idéntico a sí mismo, siendo al mismo tiempo el sostén último del ser de cada cosa y su garantía ontológica. Permaneciendo en sí mismo y en todo. Justicia última sobre la injusticia de que cada cosa llegue a ser.</p>
+
+					<p>Pues, mientras se ve el ser de cada cosa saliendo del fondo indeterminado originario, será forzosamente ambiguo, pues se aparece como sustracción al ser total, como arbitraria “edificación” que quedará denunciada desde su constitución misma. Y la ambigüedad de ese ser será injusticia. Esa “injusticia” que, en el mismo Anaximandro, denuncia ya la ley del ser. Desde la realidad del <em>ápeiron</em> la justicia era tan solo el retorno, la reabsorción de las cosas, de cada una, en esa unidad que no puede permitir porque no puede donar unidad</p>
+					<p>—Ser— a nada. Y el que sea así, muestra cuanto hay en esta realidad de sagrado, de irrevelada divinidad que al no poder dar el ser, no puede permitirlo.</p>
+					<p>Y era ésta la gran necesidad humana implicada en el problema del ser; vencer por la visión esa oscura resistencia de lo sagrado, desentrañar dentro de ella la pura esencia que siendo hace que cada cosa sea; descubrir al final al ser que hace ser. </p>
+
+					<p>
+					
+					<hr class="line-separator line-orange" />
+					<div class="final-notes">
+						<h1>Notas</h1>
+						<p><span class="footnote" id="refe3">3.</span><strong> Zambrano, María.</strong><em> El hombre y lo divino.</em> México. Breviarios del Fondo de Cultura Económica, 1955. Pp. 66-77. </p>
+						<p><span class="footnote" id="refe4">4.</span> Nuestra avidez parece ser, en cambio, de realidad. Por eso el descubrimiento del <em>ápeiron</em> nos fascina. </p>
+					</div>
+
+					<hr class="line-separator line-orange" />
+
+			</div>
+			</div>  
+                                
+			<div class="slides slide">
+				<h2 class="section-title verde">Palabras <sup id="ref5">5</sup></h2>
+				<h1 class="verdeP chapter-title">Antes de que se profiriesen las palabras</h1>
+				<div class="content-text">
+					<p class="first-paragraph">Antes de los tiempos conocidos, antes de que se alzaran las cordilleras de los tiempos históricos, hubo de extenderse un tiempo de plenitud que no daba lugar a la historia. Y si la vida no iba a dar a la historia, la palabra no iría tampoco a dar al lenguaje, a los ríos del lenguaje por fuerza ya diversos y aun divergentes. Antes de que el género humano comenzara su expansión sobre las tierras para luego ir en busca siempre de una tierra prometida, rememoración y reconstitución siempre precaria del lugar de plenitud perdido, las tierras buscadas, soñadas, reveladas como prometidas venían a ser engendradoras de historia, inicios de la cadena de una nueva historia. Antes. Antes, cuando las palabras no se proferían proyectadas desde la oquedad del que las lanza al espacio lleno o vacío de afuera; al exterior. Y así el que profería, el que ha seguido profiriendo sus palabras las hace, de una parte suyas, suyas y no de otros, suyas solamente, entendiendo o dando por entendido que quienes las reciben quedarán sometidos sin más. Ya que el exterior es el lugar de la gleba, de lo humano amorfo, materia dispuesta para ser conformada, configurada, y a la que se pide que siga así, gleba bajo la única voluntad de quien profiere las palabras materializadas también, ellas también materialización de un poder.</p>
+
+					<p>Antes de que tal uso de la palabra apareciera, de que ella misma, la palabra, fuese colonizada, habría solo palabras sin lenguaje propiamente. Al ser humano le ha sido permitido, fatalmente, colonizarse a sí mismo; su ser y su haber. Y de haber sido esto el verdadero argumento de su vivir sobre la tierra, la palabra no le habría sido dada, confiada.</p>
+
+					<p>El lenguaje no la necesita, como hoy bien se sabe de tantas maneras. Y así existirá la pluralidad de lenguajes dentro del mismo idioma, del lenguaje descendiente de la palabra primera con la que el hombre trataba en don de gracia y de verdad, la palabra verdadera sin opacidad y sin sombra, dada y recibida en el mismo instante, consumida sin desgaste; centella que se reencendía cada vez. Palabra, palabras no destinadas, como las palomas de después, al sacrificio de la comunicación, atravesando vacíos y dinteles, fronteras, palabras sin peso de comunicación alguna ni de notificación. Palabras de comunión. Circularían estas palabras sin encontrar obstáculo, como al descuido. Y como todo lo humano, aunque sea en la plenitud, ha de ser plural, no habría una sola palabra, habrían de ser varias, un enjambre de palabras que irían a reposarse juntas en la colmena del silencio, o en un nido solo, no lejos del silencio del hombre y a su alcance.</p>
+
+					<p>Y luego, ahora, estuvieron llegando y llegan todavía algunas de estas palabras del enjambre de la palabra inicial, nunca como eran, como son. Cada una, sin mengua de su ser, es también las demás, y ninguna es propiamente otra —no están separadas por la alteración—. Y cada una es todas, toda la palabra. Y no pueden declinarse. Y lo que es completamente cierto es que no podrían nunca descender hasta el caso ablativo, porque en la plenitud, ni tan siquiera en la de este nuestro tiempo, no existen las circunstancias. Se borran las circunstancias en la más leve pálida presencia de la plenitud.</p>
+
+					<p>Aparecen con frecuencia las palabras de verdad por transparencia, una sola quizá bajo todo un hablar; se dibujan a veces en los vacíos de un texto —de donde la ilusión del uso del punto suspensivo y del no menos erróneo subrayado—. Y en los venturosos pasajes de la poesía y del pensamiento, aparecen inconfundiblemente entre las del uso, siendo igualmente usuales. Mas ellas saltan diáfanamente, promesa de un orden sin sintaxis, de una unidad sin síntesis, aboliendo todo el relacionar, rompiendo la concatenación a veces.</p>
+					<p>Suspendidas, hacedoras de plenitud, aunque sea en un suspiro.</p>
+
+					<p>Mas se las conoce porque faltan sobre todo. Parece que vayan a brotar del pasmo del inocente, del asombro; del amor y de sus aledaños, formas de amor ellas mismas. Y es al amor al que siempre le faltan. Y por ello resaltan inconfundibles cuando en el amor se encuentra alguna; es única entonces, sola. Y por ello palabra de la soledad única del amor y de su gracia.</p>
+
+					<p>Si se las invoca llegan en enjambre, oscuras. Y vale más dejarlas partir antes de que penetren en la garganta, y alguna en el pecho. Vale más quedarse sin palabra, como al inocente también le sucede cuando le acusan.</p>
+
+					<p>Cuando de pensamiento se trata, ellas, las palabras hacedoras de orden y de verdad, pueden estar ahí, casi a la vista, como un rebaño o hato de mansas ovejas, dóciles, mudas.</p>
+
+					<p>Y hay que enmudecer entonces como ellas, respirando algo de su aliento, si lo han dejado al irse.</p>
+
+					<p>Y volver el pensamiento a aquellos lugares donde ellas, estas razones de verdad, entraron para quedarse en «orden y conexión» sin apenas decir palabra, borrando el usual decir, rescatando a la verdad de la muchedumbre de las razones.</p>
+
+					<h1 class="verdeP chapter-title">La palabra del bosque</h1>
+					<p>Del claro, o del recorrer la serie de claros que se van abriendo en ocasiones y cerrándose en otras, se traen algunas palabras furtivas e indelebles al par, inasibles, que pueden de momento reaparecer como un núcleo que pide desenvolverse, aunque sea levemente; completarse más bien, es lo que parecen pedir y a lo que llevan. Unas palabras, un aletear del sentido, un balbuceo también, o una palabra que queda suspendida como clave a descifrar; una sola que estaba allí guardada y que se ha dado al que llega distraído ella sola. Una palabra de verdad que por lo mismo no puede ser ni enteramente entendida ni olvidada. Una palabra para ser consumida sin que se desgaste. Y que si parte hacia arriba no se pierde de vista, y si huye hacia el confín del horizonte no se desvanece ni se anega. Y que si desciende hasta esconderse entre la tierra sigue allí latiendo, como semilla. Pues que fija, quieta, no se queda, que si así quedara se quedaría muda. No es palabra que se agite en lo que dice, dice con su aleteo y todo lo que tiene ala, alas, se va, aunque no para siempre, que puede volver de la misma manera o de otra, sin dejar de ser la misma. Lo que viene a suceder según el modo de la situación de quien recibe según su necesidad y su posibilidad de atenderla: si está en situación de poder solamente percibirla, o si en disposición de sostenerla, y si, más felizmente, tiene poder de aceptarla plenamente, y de dejarla así, dentro de sí, y que allí, a su modo, al de la palabra, se vaya haciendo indefinidamente, atravesando duraciones sin número, abrigada en el silencio, apagada. Y de ella sale, desde su silencioso palpitar, la música inesperada, por la cual la reconocemos; lamento a veces, llamada, la música inicial de lo indecible que no podrá nunca, aquí, ser dada en palabra.</p>
+
+					<p>Mas sí con ella, la música inicial que se desvanece cuando la palabra aparece o reaparece, y que queda en el aire, como su silencio, modelando su silencio, sosteniéndolo sobre un abismo.</p>
+
+					<h1 class="verdeP chapter-title">La palabra perdida</h1>
+					<p>No solo el lenguaje sino las palabras todas, por únicas que se nos aparezcan, por solas que vayan y por inesperada que sea su aparición, aluden a una palabra perdida, lo que se siente y se sabe de inmediato en angustia a veces, y en una especie de alborear que la anuncia palpitando por momentos. Y también se la siente latiendo en el fondo de la respiración misma, del corazón que la guarda, prenda de lo que la esperanza no acierta a imaginar. Y en la garganta misma, cerrando con su presencia el paso de la palabra que iba a salir. Esa puerta que el alba cierra cuando se abre. El amor que nunca llega, que desfallece al filo de la aurora, lo inasible que parte de los que van a morir o están muriendo ya, y que luchan —tormento de la agonía— por dejarla aquí y derramarla y no les es posible ya. La palabra que se va con la muerte violenta, y la que sentimos que la precede como guía, la guía de los que, al fin, pueden morir.</p>
+
+					<p>Perdida la palabra única, secreto del amor divino-humano. ¿Y no estará ella señalada por aquellas privilegiadas palabras apenas audibles como murmullo de paloma: Diréis que me he perdido, —Que, andando enamorada—, Me hice perdidiza y fui ganada?</p>
+
+					<h1 class="verdeP chapter-title">La palabra que se guarda</h1>
+					<p>La palabra que un ser humano guarda como de su misma sustancia, aunque la aprendiera o la formara él mismo un día. La que no se dice porque el decirla la desdeciría también al darla como nueva o al enunciarla, como si pudiera pasar; la palabra que no puede convertirse en pasado y para la que no se cuenta con el futuro, la que se ha unido con el ser. Y se presiente, y aun se la ve, como profetizada en algunas criaturas no humanas, en algunos animales que parecen llevar consigo una palabra que al morir están al borde de dar a entender. Y también en la quietud inigualada de las bestias que miran el sol como si fueran sus guardianes, imágenes que el arte ha perpetuado en la avenida del templo de Delos, por ejemplo.</p>
+
+					<p>Y en el firmamento, algunas constelaciones o luceros solo parecen guardar alguna palabra y custodiar por ella, con ella, la inmensidad inconcebible de los espacios interestelares, los vacíos y oquedades del universo, vigías del Verbo.</p>
+
+					<p>Mas en los seres humanos que guardan esa su palabra no se la ve, pasa inadvertida, como suele serlo también para ellos, al menos como palabra, pues que ha llegado a asistirles como una lámpara que por sí sola se enciende o que está siempre encendida sin combustión.</p>
+
+					<p>Quizá sea el secreto que esclarece ciertas humanas presencias mientras viven y que se desprende de algunas legendarias figuras (legendarias aunque pertenezcan al lecho de la historia) y que algunos, y algunos poetas, constructores de arte y de pensamiento, han dejado guardado también en su obra, que aparece así dotada de una inacabable y más clara vida que aquellas otras que no la contienen.</p>
+
+					<p>La palabra que permanece inviolada en el delirio, por arrollador que sea, de quien teniéndola entra a delirar sin fin. La palabra que no se petrifica en el espanto, y a partir de la cual el hablar se deshiela. Y que sigue orientando el ser del que ha entrado en la noche de su mente.</p>
+
+					<p>Suele ser esta palabra que no se pierde un nombre. Un nombre que pudo ser dicho un día, mas que al guardarse ya irrepetible ha ido recogiendo las notas del nombre único. O puede ser un sí o un no, dado y olvidado ya, mas que subsiste, guiando al ser que lo guarda aún sin saber; una palabra que a todo suceso transciende.</p>
+
+					<h1 class="verdeP chapter-title">Lo escrito</h1>
+					<p>«Lo escrito, escrito está.» Mas no todo ello indeleblemente. Se borran los escritos por sí mismos, o por obra de las circunstancias. El clima, la atmósfera misma, algún polvillo que cae del cielo borra lo escrito: títulos, inscripciones, sentencias caen.</p>
+					<p>Mientras dura un ciclo histórico hay palabras que permanecen en una determinada visibilidad y que corren de boca en boca; son los tópicos de esos siglos. Sus sentencias, por tanto, son condenatorias por lo general. Y hay también palabras escritas y que, como escritas, se repiten, apaciguadoras y sabias, que marcan el límite, un cerco vienen a formar todas ellas que muy pocas gentes trascienden. Pues que la inspiración que llega no se detiene, la inspiración que trasciende el cerco solo rara vez arrastra consigo, o tras de sí, a quienes ha visitado, dejándolos, eso sí, perplejos en los mejores casos, cabizbajos por lo común, y disponiéndose con ahínco a volver a ver todas las cosas tal como si la visita de la inspiración no hubiera llegado, empadronándose conscientemente como habitantes del cerco y hasta alzándose vigilantes, por si acaso.</p>
+
+					<p>Pues que los guardianes del cerco lo son de la continuidad —de la continuidad del cerco, se entiende bien— no saben dónde acudir, si es que se dan cuenta, o sienten, al menos, que la discontinuidad de la inspiración corresponde a la discontinuidad de la historia escrita, o que se da por tal, escrita ya para siempre bajo sentencia: «Lo escrito, escrito está», y no cabe ni hay para qué borrarlo, si no es con algún borrón más condenatorio todavía. ¿Será quizá la discontinuidad de la historia la que llame a la inspiración que infatigable se reitera, y no siempre sin sobresalto? Es lo escrito lo que hace la historia, según se nos dijo. Y así, por ejemplo, las piedras, aun en círculo, prodigiosamente erguidas y acordadas, no son historia. No hay historia sin palabra, sin palabra escrita, sin palabra entonada o cantada —¿cómo iba a decirse palabra alguna sin entonación o canto? Habrá entonces otra cosa que habríamos de conocer, o simplemente señalar, sin referencia alguna a la historia, para indicar así con ello nuestra ignorancia invencible, nuestra exclusión. Y la perplejidad en que nos sume cualquier vestigio de su existencia, y su simple existencia misma, que puede equivaler, en ocasiones, a su presencia.</p>
+
+					<p>¿Y aquella piedra tan igual a las otras, no podría ser ella, ser la que canta? Pues que en las piedras ha de estar el canto perdido. ¿Y no podrían ser aquellas, estas piedras, cada una o todas, algo así como letras? Fantasmas, seres en suma que permanecen quizá condenados, quizá solamente mudos en espera de que les llegue la hora de tomar figura y voz. Porque estas piedras no escritas al parecer, que nadie sabe, en definitiva, si lo están por el aire, por el alba, por las estrellas, están emparentadas con las palabras que en medio de la historia escrita aparecen y se borran, se van y vuelven por muy bien escritas que estén; las palabras sin condena de la revelación, a las que por el aliento del hombre despiertan con vida y sentido. Las palabras de verdad y en verdad no se quedan sin más, se encienden y se apagan, se hacen polvo y luego aparecen intactas: revelación, poesía, metafísica, o ellas simplemente, ellas. «Letras de luz, misterios encendidos», canta de las estrellas Francisco de Quevedo. «Letras de luz, misterios encendidos», profecías como todo lo revelado que se da o se dio a ver, por un instante no más haya sido.</p>
+
+					<h1 class="verdeP chapter-title">El anuncio</h1>
+					<p>Al modo de la semilla se esconde la palabra. Como una raíz cuando germina que, todo lo más, alza la tierra levemente, mas revelándola como corteza. La raíz escondida, y aun la semilla perdida, hacen sentir lo que las cubre como una corteza que ha de ser atravesada. Y hay así en estos campos una pulsación de vida, una onda que avisa y una cierta amenaza de que algo, o alguien, está al venir.</p>
+
+					<p>No podrá entender que algo así suceda con la palabra sino aquel que haya padecido en un modo indecible el haber sido dejado por ella, sin que sea necesario que una tal situación llegue a la total privación. Es la palabra interior, rara vez pronunciada, la que no nace con el destino de ser dicha y se queda así, lejos, remota, como si nunca fuese a volver.</p>
+
+					<p>Y aun como si no hubiese existido nunca y de ella se supiera solamente por ese vacío indefinible, por esa a modo de extensión que deja. Pues que es una suerte de extensión la que se revela. La extensión toda ella, ¿será el resultado de un abandono? Y luego se siente a la palabra perdida inmediata y escondida, raíz y germen, presencia oscura sin puerta para entrar en la consciencia. La aporía de la palabra, su imposibilidad de encontrar condiciones para su vida, lugar donde albergarse, tiempo, y ese fuego sutil y ese morir viviendo. Y en esta etapa es él, el sujeto paciente, el que se siente ser obstáculo, corteza, resistencia. Lugar cerrado a la palabra, inhábil para abrirse a ella, si no hundiéndose todavía más, ahondándose sin ensimismamiento. El ensimismado —ya Ortega lo mostró bien—tiene un lugar dentro de sí, intangible decimos, inviolable. Pues que si así no lo siente el tal sujeto que se ensimisma, será una simple y vulnerable defensa, una simple oposición equivalente a una máscara; con enmascararse le bastaría, pues, y aun con agazaparse.</p>
+
+					<p>Mas cuando el sujeto hundiéndose cada vez más en su paciente condición se sigue sintiendo y viendo como un lugar cerrado a la palabra, nada ya le asiste. Nada. Mas en la nada obtenida por un puro retirarse para que lo más preciado aparezca, surge, no notado el principio, un algo inseparable, más allá de toda figuración. Y ya esto solo, lo inesperable que se advierte con naturalidad, es el primer don del exilio. Aquello que llega como respuesta a una pregunta no formulada.</p>
+
+					<p>Prosigue lento e inexorable este germinar en el campo de la palabra, en el propiamente suyo, en aquel que se ve así tratado, sometido con riesgo de perder el aliento también, si se revelara. Cuando se trata del anuncio, una revelación sucede siempre así en quien la padece. Ni decir sí ni no le está permitido. Nada. Mas no la nada que entonces menos que nunca puede nadificar. Y el silencio a que vive sometido es como una vida más alta, y el desierto de la palabra un lleno más apretado a punto de abrirse aún más que de poblarse, de estallar por no poder contener ya la palabra que se dispone a nacer; la palabra concebida.</p>
+
+					<p>Que la palabra haya de ser concebida humanamente es lo único que da cuenta de que haya y aun exista, llegue a existir, la palabra. Valdría si no el lenguaje, el lenguaje que es danza que notifica y algo más en las abejas; valdría el canto opaco de la lechuza que avisa a la cierva y a la corza que el cazador va en su busca. Mas, esta notificación que salta la diferencia entre las especies animales, ¿qué nos dice ya acerca del lenguaje notificativo, indicativo, aviso de algo determinado sin más? ¿Y qué nos notifica la danza de las abejas destacadas del enjambre para buscar un lugar nuevo donde albergarlo? ¿Dicen algo, danza y canto, más allá de lo que notifican? ¿Anuncian ya la palabra?; y palabra propiamente es solo aquella que es concebida, albergada, la que inflige privación, la que puede irse y esconderse, la que no da nunca certeza de quedarse, la que va de vuelo.</p>
+
+					<p>Y vuelo hay también en la danza y en el canto. Y la privación del lenguaje, del solo lenguaje, es ya privación del vuelo, de ese algo que se escapa y que puede no volver, y que si vuelve es un anuncio. Un reiterado anuncio de que está al nacer la palabra concebida.</p>
+
+					<h1 class="verdeP chapter-title">El concierto</h1>
+					<p><em>Para el maestro Andrés Segovia</em></p>
+					<p>Se oía, ¿se hubiera oído la guitarra si su sonar no abriera desde el primer instante el modo justo de escuchar? Era su primera virtud indiscernible de momento. Los preocupados de pedagogías quizás hayan caído en la cuenta de que es la Música la que enseña sin palabras el justo modo de escuchar. Y de que cuando de palabra sola se trata, sucede así igualmente, que es la música, que puede ser un modo de silencio, la que sostiene la palabra en su medio y en su modo justo, ni más alta ni más baja —siempre preferible un poco baja—. Porque la música es, desde un principio, lo que se oye, lo que se ha de oír, y sin ella, la palabra sola, decae adensándose, camino de hacerse piedra, o asciende volatilizándose, defraudando. Gracias a la música la palabra no defrauda; privada de ella, aun siendo palabra de verdad, y más si lo es, se desdice. La música es prenda de la no traición, no existen en ella «las buenas intenciones», y un solo fallo en la voz que dice revela la falacia, o denuncia el incumplimiento de la verdad. La música cumple, se cumple, y escuchándola nos cumplimos. Aquel que la trae, ¿qué es, quién es? Un ser remoto, una pura actualidad del siempre. Y resulta impensable que alguna vez se vaya, que alguna vez no haya estado. Volverá. Volverá siempre el que hace la música de este instante. Volverá esa música que se aproxima más al origen, al principio, cuando revela al par el instante de ahora. Dura un instante toda ella. Dura un instante toda la música. Un instante de eternidad, como el morir, como el nacer, como el amar.</p>
+
+					<p>Mas por ser de guitarra la música; mas, ¿qué era en verdad ese latir solitario, esa onda del ser y de la vida? ¿No será, acaso, el instrumento musical sin más, entero y solo, único? Instrumento único de la música toda. Una sola nota podría bastarle. Inconfundible. Unía los contrarios, el ser y el no-ser del sentimiento mismo. Era lamento y no lo era. Celebración sin rastro de triunfo. ¿Une la música los contrarios, o está alentando antes de que los haya? ¿O es su cumplimiento una pura acción de devolvernos en ese su instante al origen del tiempo, ahora cuando él tanto camino ha hecho, ahora como entonces, después de tanto? Y así darnos la ley del recto sentir, librándonos de la nostalgia que los facilones del vivir creen que sea el don de la música, y sobre todo su voluptuosidad. Dolor puede haberlo, y más en la guitarra, que tal vez sea entre todos los instrumentos el elegido por el dolor. Mas el dolor no pide ser establecido, condensado; el dolor pide acabar dándose sin ser notado, tras de haber germinado germinante, como enjambre innumerable de hormigas.</p>
+
+					<p>El dolor que en la guitarra esquiva el sufrimiento bajo el Ángel que menudamente ajusta el sentimiento y lo orienta paso a paso hacia lo inacabable, arriba. Guarda la música el secreto de la justeza del sentir, las cifras del cálculo infinitesimal del padecer. Lo que alcanza, al menos entre los instrumentos occidentales, su máximo cumplimiento en la guitarra, tan entrañable, que suena desde adentro, en la gruta del corazón del mundo. Y por ello, los que resbalan por andar con prisas hacen de ella la plañidera, y la desgarrada aquellos que la aprovechan. Y ella les dice: «dejadme sola», sin que lo entiendan. Pues que es cosa también de que ella se haya dado sola a alguien que, sin prisa, vaya toda su vida, casi sin tocarla, rozándola apenas, desgranando su secreto según número, ese que se esconde más cuando más se revela. La noche del padecer entonces se aclara, el enjambre del sufrimiento se unifica. El sonido es uno solo. El Ángel ha arrancado las espinas y se da a sentir él borrándose.</p>
+
+					<h1 class="verdeP chapter-title">Solo la palabra</h1>
+					<p>Hay una palabra, una sola, de la que no se sabe de cierto si alguna vez ha traspasado la barrera que separa al silencio del sonido. Ya que por muy larga e inconteniblemente que se haya hablado, la barrera entre el silencio y el sonido no ha dejado nunca de existir, erizándose hasta llevar al que habla al borde del paroxismo. La incontinencia del habla ha de tener en ese infranqueable obstáculo su origen. Y el desbordamiento del hablar entonces toma carácter de fenómeno cósmico; catarata, erupción volcánica. Y la palabra que es en sí misma unidad, conjunción milagrosa de la «fysis», del sentido que abarca y reúne los sentidos, soplo vivificante, impalpable fuego y luz del entendimiento, cae arrastrada más infeliz que la piedra que acabará de rodar alguna vez al encontrar el mínimo albergue de su peso.</p>
+
+					<p>La palabra escondida, a solas celada en el silencio, puede surgir sosteniendo sin darlo a entender un largo discurso, un poema y aun un filosófico texto, anónimamente, orientando el sentido, transformando el encadenamiento lógico en cadencia; abriendo espacios de silencios incalmables, reveladores. Ya que lo que de revelador hay en un hablar proviene de esa palabra intacta que no se anuncia, ni se enuncia a sí misma, invisible al modo de cristal a fuerza de nitidez, de inexistencia. Engendradora de musicalidad y de abismos de silencio, la palabra que no es concepto porque es ella la que hace concebir, la fuente del concebir que está más allá propiamente de lo que se llama pensar. Pues que ella, esta palabra es pensamiento que se sostiene en sí mismo, reflejo al fin en lo simplemente humano de la lengua de fuego que abrió a aquellos sobre quienes se posó el sentido y conocimiento de las lenguas todas. No se da a ver. Abre los ojos del entendimiento para que vea o vislumbre algo. Y no se presenta a sí misma porque, de hacerlo, acabaría con la relatividad del lenguaje y con su tiempo. Y quizá sea ella la que llegue un día. Sin moverse, mueve; y sus aspectos son incalculables, daría de sí esta palabra impar para múltiples vidas; ilimitada y geómetra, trazadora de límites, de las necesarias separaciones entre los verbos y entre las diversas manifestaciones del tiempo; abre surcos en el tiempo paralelos o no. Y aún sostiene la divergencia entre ellos, pues que en la relatividad de la vida, la divergencia es garantía de unidad cuando está sostenida por la palabra depositaria del sentido uno, de lo único.</p>
+
+					<p>Y llega ella, la palabra sola, a imponer en ciertos casos, en ciertas fases del ser del hombre, la privación del lenguaje, dejándolo reducido a lo indispensable para que siga formando parte de la sociedad al individuo a quien esto ocurre. Y a veces, quizá cuando el sujeto en cuestión insiste en hablar como siempre o más, se queda sin palabra alguna, sumido en total silencio, sin que pueda hablar ni consigo mismo. Mas le puede dejar sin esa distinción entre uno mismo y los otros, depositado en una vida de comunicación silenciosa, liberado de la expresión y del notificar. Establece la presencia de la palabra sola, una especie de respiración interior, una respiración del ser, de este ser escondido en lo humano que necesita respirar a su modo, que no puede ser el modo de la vida sin más. Vida y ser han de respirar al menos en el reino humano, haciendo presentir que sea así en todos los reinos del ser y de la vida distinta o unidamente.</p>
+					<p>Inicialmente las dos respiraciones, la de la vida y la del ser, se dan por separado. La respiración de la vida está bajo la amenaza de un cesar que no se hace sentir sino en ciertos momentos por una causa inmediatamente fisiológica, y con tanta frecuencia por la falta de respiración del ser escondido en el hombre. Y entonces la atención se vuelca en quien la padece, hacia fuera, hacia lo que cree ser la única respiración que posee y le sostiene. Y la dificultad de respirar vitalmente se condensa y arriesga hacerse total bajo la atención que, lejos de desatar el nudo, lo estrecha. Y es raro que la falta de respiración del ser no recaiga sobre la respiración de la vida, como es raro o imposible que ninguna dolencia del ser deje de afectar a la vida. Lo inverso, en cambio, sigue otra ley.</p>
+
+					<p>Pues que el ser escondido al respirar puede sostener en alto la vida de aquel en quien se da, sin que ninguna intención preconcebida ni ningún estímulo de afuera se interponga. Al ser, para que sostenga y aun salve los vacíos, las duraciones innumerables, los obstáculos de todo orden, hay que dejarlo a él mismo. Pues que alberga la palabra sola como su más directa manifestación incalculable. Ya que el ser, y más todavía por estar escondido en lo humano, es por principio incalculable, inasible, rodeado de un vacío que solo desde él puede ser atravesado.</p>
+					<p>Y al fin en algunos seres humanos se cumple la unión de las dos respiraciones. Humanos, decimos, porque solo de ellos podemos percibirlo con certeza. La respiración del ser hacia adentro, si se la considera desde esa superficie que la vida inexorablemente ofrece. Ya que la vida es por principio superficial, y solo deja de serlo si a su respiro se une el aliento del ser que, escondido bajo ella, está depositado sobre las aguas primeras de la Vida, que nuestro vivir apenas roza. Pues que estamos depositados en la historia, atenazados por la necesidad y sobrecogidos por la muerte. Todo lo transciende la respiración del ser, y así su palabra, la sola, desconocida y prodigiosa, milagrosamente identificada palabra, alza en su ímpetu único todas las palabras juntas y las unifica destruyendo irremediablemente. Ya que en el ser humano lo que trasciende abate y anula; nadifica. Y esta acción se aparece también doblemente. La nadificación que procede del ser, prenda de la unión, y aquella otra amenaza suprema que procede no del cese de la respiración vital, sino del apagamiento de la respiración del ser que más escondido se encuentre con mayor ímpetu, respira, dando entonces su sola palabra. Solo su palabra antes de abrir el silencio que la trasciende.</p>
+				<hr class="line-separator line-orange" />
+					<div class="final-notes">
+						<h1>Notas</h1>
+						<p><span class="footnote" id="refe5">5.</span><strong> Zambrano, María.</strong><em> Claros del bosque.</em> Biblioteca de bolsillo. Barcelona: Seix Barral, 1986. Pp. 28-35. </p>
+						<p><span class="footnote" id="refe4">4.</span> Nuestra avidez parece ser, en cambio, de realidad. Por eso el descubrimiento del <em>ápeiron</em> nos fascina. </p>
+					</div>
+
+				<hr class="line-separator line-orange" />
+				</div>
+				
+			</div>
+				
+			<div class="slides slide">
+				<h2 class="section-title verde">Antes de la ocultación <sup id="ref6">6</sup></h2>
+				<div class="content-text">
+					<p class="first-paragraph">Comencé a cantar entre dientes por obedecer en la oscuridad absoluta que no había hasta entonces conocido, la vieja canción del agua todavía no nacida, confundida con el gemido de la que nace; el gemido de la madre que da a luz una y otra vez para acabar de nacer ella misma, entremezclado con el vagido de lo que nace, la vida parturiente. Me sentí acunada por este lloro que era también canto tan de lejos y en mí, porque nunca nada era mío del todo. ¿No tendría yo dueño tampoco?</p>
+
+					<p>La música no tiene dueño, pues los que van a ella no la poseen nunca. Han sido por ella primero poseídos, después iniciados. Yo no sabía que una persona pudiera ser así, al modo de la música, que posee porque penetra mientras se desprende de su fuente, también en una herida. Se abre la música solo en algunos lugares inesperadamente, cuando errante el alma sola, se siente desfallecer sin dueño. En esta soledad nadie aparece, nadie aparecía cuando me asenté en mi soledad última; el amado sin nombre siquiera. Alguien me había enamorado allá en la noche, en una noche sola, en una única noche hasta el alba. Nunca más apareció. Ya nadie más pudo encontrarme.  </p>
+
+					<p class="text-center">*** </p>
+
+					<h1 class="verdeP chapter-title">Claros del bosque <sup id="ref7">7</sup> </h1>
+					<p>No me respondes, hermana. He venido ahora a buscarte. Ahora, no tardarás ya mucho en salir de aquí. Porque aquí no puedes quedarte. Esto no es tu casa, es solo la tumba donde te han arropado viva. Y viva no puedes seguir aquí; vendrás ya libre, mírame, mírame, a esta vida en la que yo estoy. Y ahora sí, en una tierra nunca vista por nadie, fundaremos la ciudad de los hermanos, la ciudad nueva, donde no habrá ni hijos ni padres. Y los hermanos vendrán a reunirse con nosotros. Nos olvidaremos allí de esta tierra donde siempre hay alguien que manda desde antes, sin saber. Allí acabaremos de nacer, nos dejarán nacer del todo. Yo siempre supe de esa tierra. No la soñé, estuve en ella, moraba en ella contigo, cuando se creía ese que yo estaba pensando.</p>
+
+					<p>En ella no hay sacrificio, y el amor, hermano, no está cercado por la muerte.</p>
+
+					<p>Allí el amor no hay que hacerlo, porque se vive en él. No hay más que amor.</p>
+					<p>Nadie nace allí, es verdad, como aquí de este modo. Allí van los ya nacidos, los salvados del nacimiento y de la muerte. Y ni siquiera hay un Sol; la claridad es perenne. Y las plantas están despiertas, no en su sueño como están aquí; se siente lo que sienten. Y uno piensa, sin darse cuenta, sin ir de una cosa a otra, de un pensamiento a otro. Todo pasa dentro de un corazón sin tinieblas. Hay claridad porque ninguna luz deslumbra ni acuchilla, como aquí, como ahí fuera. </p>
+
+					<p class="text-center">***</p>
+
+					<h1 class="verdeP chapter-title">El templo y sus caminos <sup id="ref8">8</sup>  </h1>
+					<p>Unas tinieblas que prometen y a veces amenazan abrirse. Y es difícil creer que quien recorre tal camino no se vea acometido por el temor y un temblor casi paralizantes. Es la luz de un viaje más bien extrahumano, que el hombre emprendía asomándose al lado de allá, a ese lado al cual se supuso, cada vez con mayor ligereza, que solo se asoman los místicos. Es la luz que se vislumbra y la luz que acecha, la luz que hiere. La luz que acecha en la inmensidad de un horizonte donde perderse parece inevitable, y que hiere con un rayo que despierta más allá de lo sostenible, llamando a la completa vigilia, esa donde la mente se incendiaría toda. </p>
+
+					<p class="text-center">***</p>
+
+					<h1 class="verdeP chapter-title">Geografía de la aurora <sup id="ref9">9</sup>  </h1>
+					<p>Y las piedras preciosas, esas grutas de esmeraldas que nacen en sueños y al soñante acogen tan de verdad que este conserva en la vigilia las huellas del tacto, a veces hecho memoria tanto o más que un lugar simplemente natural; y el color que sin nombre sostiene la retina por años, por duraciones sin fin, ese color visto tan solo en sueños y ese felicísimo estar en la gruta, y aun el poder volver a ella encontrándola en tierras lejanas bañadas por otra luz. ¿Cómo suceden, cómo están ahí asequibles aunque no enteramente, y sin sombra alguna de terror, cosa tan extraña a toda gruta desconocida, por insignificante que sea? Este no tener, y no esperar, este estar sin esfuerzo alguno, esta patria perdida o esperada, donde se ha entrado sin saber cómo ni por qué, sin esperanza ni temor. Y ese vivir sin anhelar, ni apetecer, sin añorar sin soñar, duerme al fin en su gruta sin soñar señor alguno, que le haya herido y sin soñarse él a sí mismo, olvidado de toda herida. </p>
+					<p>El ciervo reposa sin herida, apoyada su cabeza sobre una piedra, flor azul. </p>
+
+					<p class="text-center">***</p>
+
+					<h1 class="verdeP chapter-title">La llama <sup id="ref10">10</sup> </h1>
+					<p>Asistida por mi alma antigua, por mi alma primera al fin recobrada, y por tanto tiempo perdida. Ella, la perdidiza, al fin volvió por mí. Y entonces comprendí que ella había sido la enamorada. Y yo había pasado por la vida tan solo de paso, lejana de mí misma. Y de ella venían las palabras sin dueño que todos bebían sin dejarme apenas nada a cambio. Yo era la voz de esa antigua alma. Y ella, a medida que consumaba su amor, allá, donde yo no podía verla; me iba iniciando a través del dolor del abandono. Por eso nadie podía amarme mientras yo iba sabiendo del amor. Y yo misma tampoco amaba. Solo una noche hasta el alba. Y allí quedé esperando. Me despertaba con la aurora, si es que había dormido. Y creía que ya había llegado, yo, ella, él... Salía el Sol y el día caía como una condena sobre mí. No, no todavía.</p>
+
+					<p class="text-center">***</p>
+
+					<h1 class="verdeP chapter-title">La mirada <sup id="ref11">11</sup>  </h1>
+					<p>Solo cuando la mirada se abre al par de lo visible se hace una aurora. Y se detiene entonces, aunque no perdure y solo sea fugitivamente, sin apenas duración, pues que crea así el instante. El instante que es al par indeleblemente uno y duradero. La unidad, pues, entre el instante fugitivo e inasible y lo que perdura. El instante que alcanza no ser fugitivo yéndose.</p>
+
+					<p>Inasible. El instante que ya no está bajo la amenaza de ser cosa ni concepto. Guardado, escondido en su oscuridad, en la oscuridad propia, puede llegar a ser concepción, el instante de concebir, no siempre inadvertido.</p>
+
+					<p>Y así, la mirada, recogida en su oscuridad paradójicamente, saltando sobre una aporía, se abre y abre a su vez, “a la imagen y semejanza”, una especie de, circulación. La mirada recorre, abre el círculo de la aurora que solo se dio en un punto, que se muestra como un foco, el hogar, sin duda, del horizonte. Lo que constituye su gloria inalterable.</p>
+
+					<p class="text-center">***</p>
+
+					<h1 class="verdeP chapter-title">La pensadora del aura <sup id="ref12">12</sup>  </h1>
+					<p>Nacer sin pasado, sin nada previo a que referirse, y poder entonces verlo todo, sentirlo, como deben sentir la aurora las hojas que reciben el rocío; abrir los ojos a la luz sonriendo; bendecir la mañana, el alma, la vida recibida, la vida ¡qué hermosura! No siendo nada o apenas nada por qué no sonreír al universo, al día que avanza, aceptar el tiempo como un regalo espléndido, un regalo de un Dios que nos sabe, que nuestro secreto, nuestra inanidad y no le importa, que no nos guarda rencor por no ser...</p>
+					<p>...Y como estoy libre de ese ser, que creía tener, viviré simplemente, soltaré esa imagen que tenía de mí misma, puesto que a nada corresponde y todas, cualquier obligación, de las que vienen de ser yo, o del querer serlo.</p>
+
+					<p class="text-center">***</p>
+
+					<h1 class="verdeP chapter-title">Lo celeste <sup id="ref13">13</sup>  </h1>
+					<p>“En par de los levantes de la Aurora”</p>
+					<p>Por amplias que sean sus alas, la luz auroral que sigue al alba es como un boquete, un lugar que tiende a absorber y ofrecer al par la inminencia de que algo inconcebible aparezca. ¿Un ser? Un animal quizás, un ser viviente, se dibuja casi, está al dibujarse. Un ser viviente de aliento y de pasión, un fuego oscuro por indiscernible que luego resulta ser simplemente blanco. Un blanco inextenso, un ser sin extensión. ¿Pensamiento? Mira tan solo. Es una mirada, ya que la mirada de todo aquello que se manifiesta visiblemente es lo único que no tiene extensión y, aún más, la borra.</p>
+
+					<p>Llega la mirada anulando la distancia, quien la recibe queda traspasado, raptado o fijado; fijado, si es la mirada de la luz. Y cuando la luz nos fija es que nos mira, y, al mirarnos, ¿se sabría decir lo que sucede? Y, por no saberlo decir, se borra: no crea memoria.</p>
+
+					<p>Y así, de esta mirada de la luz, nace, podría nacer, ha nacido una y otra vez un pensamiento sin memoria. Un pensamiento liberado del esfuerzo de la pasión de tener que engendrar memoria y, en su virtud, liberado también de toda representación y de todo representar.</p>
+
+				<hr class="line-separator line-orange" />
+					<div class="final-notes">
+						<h1>Notas</h1>
+						<p><span class="footnote" id="refe6">6.</span><strong> Zambrano, María.</strong><em> Diotima de Mantinea en Hacia un saber sobre el alma, </em> Madrid, Ed. Alianza, 1989, p. 196.</p>
+						
+						<p><span class="footnote" id="refe7">7.</span><strong> Zambrano, María.</strong><em> “Los hermanos” en La tumba de Antígona, </em> Madrid, Ed. Mondadori, 1989, Pp 79-80. </p>
+						
+						<p><span class="footnote" id="refe8">8.</span><strong> Zambrano, María.</strong><em>“La respuesta de la Filosofía”, en Los bienaventurados, </em> Madrid, Ed. Siruela, 1990, pp. 80-81.</p>
+						
+						<p><span class="footnote" id="refe9">9.</span><strong> Zambrano, María.</strong><em>“Geografía de la Aurora”, en De la Aurora, </em>Madrid, Ed. Turner, 1986, p.106. </p>
+						
+						<p><span class="footnote" id="refe10">10.</span><strong> Zambrano, María.</strong><em>Diotima de Mantinea”, en Hacia un saber sobre el alma,  </em>Madrid,  Ed. Alianza, 1989, p. 197.</p>
+						
+						<p><span class="footnote" id="refe11">11.</span><strong> Zambrano, María.</strong><em> “La mirada”, en De la Aurora. </em>Madrid, Ed. Turner, 1986 p. 35.</p>
+						
+						<p><span class="footnote" id="refe12">12.</span><strong> Zambrano, María.</strong><em>“Adsum”, En Delirio y Destino,  </em>Madrid, Ed. Mondadori, 1989, pp. 21-22. </p>
+						
+						<p><span class="footnote" id="refe13">13.</span><strong> Zambrano, María.</strong><em>“Lo celeste”, en De la Aurora,  </em>Madrid, Ed. Mondadori, 1989, p. 43.</p>
+					</div>
+
+				<hr class="line-separator line-orange" />	
+				</div>
+				
+			</div>
+                
+			<div class="slides slide">
+				<h2 class="section-title verde">El vacío y el centro <sup id="ref14">14</sup></h2>
+				<h1 class="verdeP chapter-title">La visión - La llama</h1>
+				<div class="content-text">
+					<p class="first-paragraph">Todo es revelación, todo lo sería de ser acogido en estado naciente. La visión que llega desde afuera rompiendo la oscuridad del sentido, la vista que se abre, y que solo se abre verdaderamente si bajo ella y con ella se abre al par la visión. Cuando el sentido único del ser se despierta en libertad, según su propia ley, sin la opresiva presencia de la intención, desinteresadamente, sin otra finalidad que la fidelidad a su propio ser, en la vida que se abre. Se enciende así, cuando en libertad la realidad visible se presenta en quien la mira, la visión como una llama. Una llama que funde el sentido hasta ese instante ciego con su correspondiente ver, y con la realidad misma que no le ofrece resistencia alguna. Pues que no llega como una extraña que hay que asimilar, ni como una esclava que hay que liberar, ni con imperio de poseer. Y no se aparece entonces como realidad ni como irrealidad. Simplemente se da el encenderse de la visión, la belleza. La llama que purifica al par la realidad corpórea y la visión corporal también, iluminando, vivificando, alzando sin ocupar por eso todo el horizonte disponible del que mira. La llama que es la belleza misma, pura por sí misma. La belleza que es vida y visión, la vida de la visión. Y, mientras, dura la llama, la visión de lo viviente, de lo que se enciende por sí mismo. Y luego, por sí mismo también, se apaga y se extingue, dejando en el aire y en la mente su geometría visible. Y cuando no es así, queda la huella del número acordado, y la ceniza que de algún modo el que así ha visto recoge y guarda. Y un vacío no disponible para otro género de visión y que reaparecerá, haciéndose ostensible, cuando ya se lo conoce, en toda aparición de belleza.</p>
+
+					<h1 class="verdeP chapter-title">El vacío y la belleza</h1>
+					<p>La belleza hace el vacío —lo crea—, tal como si esa faz que todo adquiere cuando está bañado por ella viniera desde una lejana nada y a ella hubiere de volver, dejando la ceniza de su rostro a la condición terrestre, a ese ser que de la belleza participa. Y que le pide siempre un cuerpo, su trasunto, del que por una especie de misericordia le deja a veces el rastro: polvo o ceniza. Y en vez de la nada, un vacío cualitativo, sellado y puro a la vez, sombra de la faz de la belleza cuando parte. Mas la belleza que crea ese su vacío, lo hace suyo luego, pues que le pertenece, es su aureola, su espacio sacro donde queda intangible.</p>
+					<p>Un espacio donde al ser terrestre no le es posible instalarse, mas que le invita a salir de sí, que mueve a salir de sí al ser escondido, alma acompañada de los sentidos; que arrastra consigo al existir corporal y lo envuelve; lo unifica. Y en el umbral mismo del vacío que crea la belleza, el ser terrestre, corporal y existente, se rinde; rinde su pretensión de ser por separado y aun la de ser él, él mismo; entrega sus sentidos que se hacen unos con el alma. Un suceso al que se le ha llamado contemplación y olvido de todo cuidado.</p>
+
+					<h1 class="verdeP chapter-title">El abismarse de la belleza</h1>
+					<p>Tiende la belleza a la esfericidad. La mirada que la recoge quiere abarcarla toda al mismo tiempo, porque es una, manifestación sensible de la unidad, supuesto de la inteligencia del que tan fácilmente al quedarse prendida de «esto» o de «aquello» y de su relación, sobre todo de su relación, se desprende. Ya que esto o aquello considerado desinteresadamente muestra su unidad, no suya tal vez. Días unidad al fin y al cabo.</p>
+					<p>Y la belleza en la que luego discierne la inteligencia, elementos y relaciones hasta con sus números, se ofrece al aparecer como unidad sensible. Y la mente de quien la contempla tiende a asimilarse a ella, y el corazón a bebérsela en un solo respiro, como su cáliz anhelado, su encanto.</p>
+
+					<p>Porque la belleza al par que manifiesta la unidad, la Unidad que no puede proceder más que del uno, se abre. No se presenta al modo del ser de Parménides, o de lo que se cree que es ese ser. Se abre como Una flor que deja ver su cáliz, su centro iluminado que luego resulta ser el centro que comunica con el abismo. El abismo que se abre en la flor, en esa sola flor que se alza en el prado, que se alza apenas abierta enteramente. Apenas, como distancia que invita a ser mirada, a asomarse a ese su cáliz violáceo, blanco a veces. Y quien se asoma al cáliz de esta flor una, la sola flor, arriesga ser raptado. Riesgo que se cumple en la Coré de los sacros misterios. La muchacha, la inocente que mira en el cáliz de la flor que se alza apenas, al par del abismo y que es su reclamo, su apertura. Y no sería necesario —diciéndolo con perdón del sacro mito eleusino— que apareciera el carro del dios de los ínferos. El solo abismo que en el centro de la belleza, unidad que procede del uno, se abre, bastaría para abismarse. Y así la esperanza dice: hasta que el abismo del uno se alce todo; hasta que Deméter Alma no vuelva a tener que ponerse de luto.</p>
+
+					<h1 class="verdeP chapter-title">El centro - La angustia</h1>
+					<p>Sobreviene la angustia cuando se pierde el centro. Ser y vida se separan. La vida es privada del ser y el ser, inmovilizado, yace sin vida y sin por ello ir a morir ni estar muriendo. Ya que para morir hay que estar vivo, y para el tránsito, viviente. («Que yo, Sancho, nací para vivir muriendo» es una confesión de un ser, sobre vivo, viviente.)</p>
+					<p>El ser sin referencia alguna a su centro yace, absoluto en cuanto apartado; separado, solitario. Sin nombre. Ignorante, inaccesible. Peor que un algo, despojo de un alguien. Se hunde sin por ello descender ni moverse ni sufrir alteración alguna, resiste a la disgregación amenazante. Es todo.</p>
+
+					<p>Y la vida se derrama del ser descentrado simplemente. No encuentra lugar que la albergue, entregada a su sola vitalidad. Angustia del joven, del adolescente y aún del niño que vaga y tiene tiempo, un tiempo inhabitable, inconsumible; situación derivada del no estar sometida a un ser y a su través, a un centro. Tiende a volver a su condición primaria, a la avidez colonizadora; se desparrama y aún se ahoga en sí misma, agua sin riberas, hasta que encuentra, si felizmente encuentra, la piedra.</p>
+
+					<p>Reaccionar en la angustia o ante ella —Kierkegaard alcanza en este punto autoridad de mártir y de maestro— es el infierno. La quietud bajo ella es indispensable. La quietud que no consiste en retirarse sino; en no salirse del simple sufrir que es padecer. En este padecer el ser se despierta, se va despertando necesitado de la vida y la llama. La llama si ha resistido a la tentación inerte de seguir la vida en su derramarse. Y cuando la vida torna a recogerse es el momento en que el alguien, el habitante del ser —si no es el ser mismo— establece distancia, una diferencia de nivel para no quedar sumergido por el empuje de la vida como antes lo estaba por la ausencia de ella. Y pasa así de estar sin lugar a ser su dueño mientras es simplemente alzado de un modo embriagante. Pasa de quedarse sin vida a quedarse solo con esa vida parcial que vuelve por docilidad de sierva.</p>
+
+					<p>Ya que la vida es como sierva dócil a la invocación y a la llamada de quien aparece como dueño. Necesita su dueño, ser de alguien para ser de algún modo y alcanzar de alguna manera la realidad que le falta.</p>
+
+					<p>Y la realidad surge, la del propio ser humano y la que él necesita haber ante sí, solo en esta conjunción del ser con la vida, en esta mezcla no estable, como se sabe. Y así antes de separarse en la situación terrestre —la que conocemos y sufrimos— ha de fijarse una extraña realidad, la del propio sujeto, la del ser que ha cobrado por la vida y merced a ella, la realidad propia. Y la vida, sierva fiel, podrá entonces retirarse habiendo cumplido su finalidad saciada al fin, sin avidez sobrante. Y lo hará dejando siempre algo de su esencia germinante, nada ideal ni que pueda por tanto ser captado; algo que puede solamente reconocerse en tanto que se siente, en esa especie, la más rara del sentir iluminante, del sentir que es directamente, inmediatamente conocimiento sin mediación alguna. El conocimiento puro, que nace en la intimidad del ser, y que lo abre y lo trasciende, “el diálogo silencioso del alma consigo misma”, que busca aún ser palabra, la palabra única, la palabra indecible; la palabra liberada del lenguaje.</p>
+
+					<h1 class="verdeP chapter-title">El centro y el punto privilegiado</h1>
+					<p>Se tiende a considerar el centro de sí mismo como situado dentro de la propia persona. Lo cual evita a esta considerar el movimiento íntimo. El movimiento más íntimo no puede ser otro que el del centro mismo. Y esto aun cuando se entienda el vivir como una exigencia de íntima transformación.</p>
+
+					<p>La virtud del centro es atraer, recoger en torno todo lo que anda disperso. Lo que va unido a que el centro sea siempre inmóvil.</p>
+
+					<p>Y el centro último ha de ser inmóvil. Mas en el hombre, criatura tan subordinada, el centro ha de ser quieto, que no es lo mismo que inmóvil. Por el contrario, es la quietud la que permite que el centro se mueva a su modo, según su incalculable «naturaleza».</p>
+
+					<p>Ningún acto humano puede darse si no siguiendo una escala, ascensional sin duda, con la amenaza, rara vez evitada enteramente, de la caída. Y aunque esta escala se siga con una cierta continuidad, se dan en ella períodos decisivos, etapas, detenciones.</p>
+
+					<p>Y así el centro del ser humano actúa durante la primera etapa de la escala ascendente de la persona, de un modo que responde al sentir originario y a la idea correspondiente de que sea el centro ante todo, inmóvil, dotado de poder de atracción, ordenador: foco de condensación invisible.</p>
+
+					<p>La etapa siguiente comienza en virtud de una cierta transformación que ha tenido que darse ya sintiendo la necesidad y la capacidad del centro de moverse, de transmigrar de un lugar a un punto nuevo. Es la etapa de la quietud; el centro no está inmóvil sino quieto.</p>
+
+					<p>Y lo que le rodea comienza a entrar en quietud. Se ha cumplido una transformación decisiva. Se inicia una «Vita nova». </p>
+				<hr class="line-separator line-orange" />
+					<div class="final-notes">
+						<h1>Notas</h1>
+						<p><span class="footnote" id="refe14">14.</span><strong> Zambrano, María.</strong><em> Claros del bosque.</em> Biblioteca de bolsillo. Barcelona: Seix Barral, 1986. Pp. 17-20.</p>
+						
+					</div>
+
+				<hr class="line-separator line-orange" />
+				</div>
+				
+			</div>
+			
+			<div class="slides slide">
+				<h2 class="section-title verde">Antología poética</h2>
+				<h1 class="verdeP chapter-title">La mirada</h1>
+				<div class="content-text">
+					<p>Solo cuando la mirada se abre al par<br/>
+					de lo visible se hace una aurora.<br/>
+					Y se detiene entonces,<br/>
+					aunque no perdure y solo sea fugitivamente,<br/>
+					sin apenas duración, pues que crea así el instante.<br/>
+					El instante que es al par indeleblemente<br/>
+					uno y duradero. La unidad, pues,<br/>
+					entre el instante fugitivo e inasible<br/>
+					y lo que perdura. El instante que alcanza<br/>
+					no ser fugitivo yéndose. Inasible.<br/>
+					El instante que ya no está bajo<br/>
+					la amenaza de ser cosa ni concepto.<br/>
+					Guardado, escondido en su oscuridad,<br/>
+					en la oscuridad propia, puede llegar<br/>
+					a ser concepción, el instante de concebir,<br/>
+					no siempre inadvertido.<br/>
+					Y así, la mirada, recogida<br/>
+					en su oscuridad paradójicamente,<br/>
+					saltando sobre una aporía,<br/>
+					se abre y abre a su vez,<br/>
+					“a la imagen y semejanza”,<br/>
+					una especie de, circulación. La mirada recorre,<br/>
+					abre el círculo de la aurora<br/>
+					que solo se dio en un punto,<br/>
+					que se muestra como un foco,<br/>
+					el hogar, sin duda, del horizonte.<br/>
+					Lo que constituye su gloria inalterable.<br/>
+					<p/>
+					<h1 class="verdeP chapter-title">Pensadora del aura</h1>
+					<p>Nacer sin pasado, sin nada previo<br/>
+					a qué referirse, y poder entonces verlo todo,<br/>
+					sentirlo, como deben sentir la aurora<br/>
+					las hojas que reciben el rocío;<br/>
+					abrir los ojos a la luz sonriendo;<br/>
+					bendecir la mañana, el alma,<br/>
+					la vida recibida, la vida ¡qué hermosura!<br/>
+					No siendo nada o apenas nada<br/>
+					por qué no sonreír al universo,<br/>
+					al día que avanza, aceptar el tiempo<br/>
+					como un regalo espléndido,<br/>
+					un regalo de un Dios que nos sabe,<br/>
+					que nuestro secreto, nuestra inanidad<br/>
+					y no le importa, que no nos guarda rencor <br/>
+					por no ser...<br/>
+					Y como estoy libre de ese ser,<br/>
+					que creía tener, viviré simplemente,<br/>
+					soltaré esa imagen que tenía de mí misma,<br/>
+					puesto que a nada corresponde y todas,<br/>
+					cualquier obligación,<br/>
+					de las que vienen de ser yo, o del querer serlo.<br/>
+					<p/>
+					<h1 class="verdeP chapter-title">El templo y sus caminos</h1>
+					<p>Unas tinieblas que prometen<br/>
+					y a veces amenazan abrirse.<br/>
+					Y es difícil creer que quien recorre<br/>
+					tal camino no se vea acometido<br/>
+					por el temporal<br/>
+					y un temblor casi paralizantes.<br/>
+					Es la luz de un viaje más bien extrahumano,<br/>
+					que el hombre emprendía<br/>
+					asomándose al lado de allá,<br/>
+					a ese lado al cual se supuso,<br/>
+					cada vez con mayor ligereza,<br/>
+					que solo se asoman los místicos.<br/>
+					Es la luz que se vislumbra<br/>
+					y la luz que acecha, la luz que hiere.<br/>
+					La luz que acecha en la inmensidad<br/>
+					de un horizonte donde perderse<br/>
+					parece inevitable, y que hiere con un rayo<br/>
+					que despierta más allá de lo sostenible,<br/>
+					llamando a la completa vigilia,<br/>
+					esa donde la mente se incendiaría toda.<br/>
+					<p/>
+					<h1 class="verdeP chapter-title">Antes de la ocultación</h1>
+					<p>Comencé a cantar entre dientes<br/>
+					por obedecer en la oscuridad absoluta<br/>
+					que no había hasta entonces conocido,<br/>
+					la vieja canción del agua todavía no nacida,<br/>
+					confundida con el gemido de la que nace;<br/>
+					el gemido de la madre que da a luz una<br/>
+					y otra vez para acabar de nacer ella misma,<br/>
+					entremezclado con el vagido de lo que nace,<br/>
+					la vida parturiente. Me sentí acunada por este lloro<br/>
+					que era también canto tan de lejos y en mí,<br/>
+					porque nunca nada era mío del todo.<br/>
+					¿No tendría yo dueño tampoco?<br/>
+					La música no tiene dueño,<br/>
+					pues los que van a ella no la poseen nunca.<br/>
+					Han sido por ella primero poseídos,<br/>
+					después iniciados. Yo no sabía<br/>
+					que una persona pudiera ser así,<br/>
+					al modo de la música, que posee porque penetra<br/>
+					mientras se desprende de su fuente,<br/>
+					también en una herida.<br/>
+					Se abre la música solo en algunos lugares<br/>
+					inesperadamente, cuando errante el alma sola,<br/>
+					se siente desfallecer sin dueño.<br/>
+					En esta soledad nadie aparece,<br/>
+					nadie aparecía cuando me asenté en mi soledad <br/>
+					última;<br/>
+					el amado sin nombre siquiera.<br/>
+					Alguien me había enamorado allá en la noche,<br/>
+					en una noche sola, en una única noche hasta el <br/>
+					alba.<br/>
+					Nunca más apareció. Ya nadie más pudo <br/>
+					encontrarme.<br/>
+					<p/>
+					<h1 class="verdeP chapter-title">De la aurora</h1>
+					<p>La noche, en una de sus formas de plenitud<br/>
+					es la noche del sentido, cuando el sentido<br/>
+					del que está al filo de la muerte,<br/>
+					o sobre la muerte como un mar único sostenido,<br/>
+					se produce, la salvadora noche del sentido<br/>
+					por desolada que sea. Porque entonces se siente,<br/>
+					aunque sea pálidamente, que la germinación<br/>
+					de lo que la ceguera y la mudez que la oscuridad<br/>
+					sin más traería, no es solamente anuncio<br/>
+					sino comienzo y razón al par.<br/>
+					<p/>
+					<h1 class="verdeP chapter-title">Por qué se escribe</h1>
+					<p>Escribir es defender la soledad en que se está;<br/>
+					es una acción que solo brota desde un aislamiento<br/>
+					 afectivo,<br/>
+					pero desde un aislamiento comunicable,<br/>
+					en que, precisamente, por la lejanía de toda cosa<br/>
+					concreta se hace posible un descubrimiento<br/>
+					de relaciones entre ellas. El escritor sale de su <br/>
+					soledad<br/>
+					a comunicar el secreto. Luego ya no es el secreto<br/>
+					mismo conocido por él lo que colma,<br/>
+					puesto que necesita comunicarle.<br/>
+					¿Será esta comunicación?<br/>
+					Si es ella, el acto de escribir es solo medio,<br/>
+					y lo escrito, el instrumento forjado.<br/>
+					Pero caracteriza el instrumento el que se forja<br/>
+					en vista de algo, y este algo es lo que<br/>
+					le presta su nobleza y esplendor.<br/>
+					<p/>
+					<h1 class="verdeP chapter-title">Hacia un saber sobre el alma</h1>
+					<p>Y así me he ido quedando a la orilla.<br/>
+					Abandonada de la palabra,<br/>
+					llorando interminablemente como si del mar<br/>
+					subiera el llanto, sin más signo<br/>
+					de vida que el latir del corazón y el palpitar<br/>
+					del tiempo en mis sienes,<br/>
+					en la indestructible noche de la vida.<br/>
+					Noche yo misma.<br/>
+					<p/>
+					<h1 class="verdeP chapter-title">Delirio del incrédulo</h1>
+					<p>Bajo la flor, la rama sobre la flor, la estrella<br/>
+					bajo la estrella, el viento. ¿Y más allá?<br/>
+					Más allá ¿no recuerdas?, solo la nada la nada,<br/>
+					óyelo bien, mi alma<br/>
+					duérmete, aduérmete en la nada<br/>
+					si pudiera, pero hundirme.<br/>
+					Ceniza de aquel fuego, o queda<br/>
+					de agua espesa y amarga<br/>
+					el llanto hecho sudor<br/>
+					la sangre que en su huida se lleva la palabra<br/>
+					y la carga vacía de un corazón sin marcha.<br/>
+					De verdad ¿es que no hay nada? Hay la nada<br/>
+					y que no lo recuerdes. Era tu gloria.<br/>
+					Más allá del recuerdo, en el olvido, escucha<br/>
+					en el soplo de tu aliento.<br/>
+					Mira en tu pupila misma dentro<br/>
+					en ese fuego que te abrasa, luz y agua.<br/>
+					Mas no puedo. Ojos y oídos son ventanas.<br/>
+					Perdido entre mí mismo no puedo buscar nada<br/>
+					no llego hasta la Nada.<br/>
+					<p/>
+
+
+				</div>
+			</div>
+				
+			<div class="slides slide">
+				<h2 class="section-title verde">La autora</h2>
+				<div class="content-text">
+					<img class="img-fluid-50" src="img/zambrano.png" />
+					<p>María Zambrano nació en Vélez-Málaga (España) el 22 de abril de 1904. Ensayista y filósofa española, discípula de J. Ortega y Gasset, Zubiri y Manuel García Morente. Fue una de las figuras capitales del pensamiento español del siglo XX. Su preocupación mística, la forma de abordar los conflictos éticos, y el estudio de la interrelación entre realidad y verdad, reclamaban la necesidad de un profundo diálogo entre el ser y su entorno. Para ella era preciso establecer tres modos de razonamiento: el cotidiano, el mediador y el poético. Desde este último se aproximó a lo sagrado, el lugar donde se encuentra la explicación de lo trascendente, la lógica del misterio.</p>
+					
+					<p class="text-center">***</p>
+					
+					<p>La razón poética de Zambrano es una razón que trata de penetrar en el alma para descubrir lo sagrado. En la última etapa de su actividad intelectual María Zambrano recibió el título de «Hija predilecta de Andalucía en 1985». En 1988 le es concedido el Premio Cervantes de literatura. <em>Horizontes del liberalismo, Hacia un saber sobre el alma, Los sueños y el tiempo, Claros del bosque, De la aurora, El reposo de la luz</em> y <em>Para una historia de la piedad</em> son algunas de las obras creadas por esta escritora. El 6 de febrero de 1991 falleció en Madrid y su tumba se encuentra en su pueblo natal.</p>
+				</div>
+			</div>
+           </div>
+        </div>
+    </div>
+<footer>
+   <div class="main-container main-container-flex main-container-home">
+     <p class="brand-palabras">Palabras rodantes</p>
+     <h1 class="brand footer-brand">Comfama</h1>    
+   </div>
+   <div class="copyright"><p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p></div>
+</footer>
+    
+    <script>
+window.createMenu('10');    
+</script>
+</body>
+</html>

@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palabras rodantes</title>
+    
+<!-- estilos -->    
+<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+    
+<!-- acciones -->
+<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+<script src="js/jq-sticky-anything.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/base.js" type="text/javascript"></script>     
+<script type="text/javascript" src="js/queryloader2.min.js"></script>
+<script type="text/javascript">
+window.addEventListener("DOMContentLoaded", function() {
+    new QueryLoader2(document.querySelector("html"), {
+        barColor: "#fff",
+        backgroundColor: "#000",
+        percentage: true,
+        barHeight: 0,
+        minimumTime: 1000,
+        maxTime: 50000,
+        fadeOutTime: 1000
+    });
+});
+
+</script>
+</head>
+    
+<style>
+.menu li:hover{
+    background-color: #B36D31;
+    color: #000;
+    
+    }
+    
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 24%;
+    padding-top: 4%;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url(img/btnLect.png);
+    background-repeat: no-repeat;
+    width: 305px;
+    height: 100px;
+}
+    
+.first-paragraph::first-letter{
+    font-size: 5em;
+    line-height: 0;
+    font-family: 'oswaldmedium';
+    color: #EA6020;
+    
+}
+    
+.menu-selected{
+    color: #fff;
+    background-color: #B36D31;
+}
+   
+.line-orange{
+    border: 1px solid #ff8e1e;
+    margin-top: 6%;
+    margin-bottom: 30px;
+}    
+    </style>
+    
+<body class="bg-book8">
+<header>
+    <a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+    <h1 class="brand">Comfama</h1>
+    
+    <img class="botonA" src="img/buttonA.png" alt="boton cambio">
+    
+    <div class="slideHeader">
+         
+        <img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+        <img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+        <img class="resetFont" src="img/reset.png" alt="resetear">
+        <br>
+        <img class="blanco" src="img/blanco.png" alt="btn blanco">
+        <img class="morado" src="img/morado.png" alt="btn morado">
+        <img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+        
+    </div>
+    
+</header>
+     
+    <div class="presentation">
+        
+        <div class="main-container presentation-container">
+            <button id="presentation-close">Cerrar</button>
+            <div class="presentation-scroll">
+                
+                <h1 class="presentation-title">Créditos</h1>
+                
+
+               <p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía</p>
+                
+                <p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+                <p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+
+                
+            </div>
+            
+        </div>
+    </div>   
+    
+     
+    <div class="global-container">
+        
+        
+        
+        
+        
+        <hr class="line-separator line-title" />
+        <h1 class="cafe main-title">Grandes clásicos<br/> <span class="cafe oswald-light">para niños y jovenes</span></h1>
+        <hr class="line-separator line-title" />
+        <div class="main-credits"><p>Roald Dahl, Rudyard Kipling, Aleksandr Pushkin</p><p>María gripe, Ray Bradbury, Selma Lagerlöf, Gianni Rodari</p></div>
+        
+        <img class="img-fluid" src="img/imagenlibro8.png" alt="imagenLibro">
+        
+        
+        
+        
+        <div class="main-container-flex" id="container-controls">
+
+            <div class="mobile-menu"></div>
+
+            <div class="invisibleMenu">
+                
+            <div class="menu "></div>
+            
+            </div>
+            <div class="content-container">
+                
+                
+                
+                
+                <!--Prologo -->
+                <div class="slides">
+                    <h2 class="section-title naranjaOs">Prólogo</h2>
+                
+                    <div class="content-text">
+                        <p class="first-paragraph">Hay libros imposibles de soltar: nos atrapan desde la primera línea y los leemos rápidamente, pero deseando al mismo tiempo que no se acaben nunca. Eso me sucedió con esta selección de cuentos que me hizo recordar las antiguas experiencias de lectura de la infancia, cuando el mundo era nuevo e inmenso, y cada libro era una puerta que se abría para invitarme a descubrir tierras lejanas.</p>
+
+                        <p>Aunque los escritores que se dan cita en estas páginas vienen de distintos lugares del planeta y nacieron en momentos diferentes, es justamente su maestría como narradores la que los hermana y la que ustedes disfrutarán desde el momento en que empiecen a leer El chico que hablaba con los animales de Roald Dahl. Este autor, considerado uno de los referentes de la literatura infantil contemporánea, es experto en atrapar a los lectores de cualquier edad con su humor cáustico y su talento para hacernos creer cualquier cosa, por extraordinaria que parezca… El cuento con el que se  abre este libro no es la excepción: ¡ya lo comprobarán ustedes mismos!</p>
+
+                        <p >En vez de detenerme en cada uno de los relatos que componen esta antología, (y correr el riesgo de dañarles el placer de descubrir paulatinamente sus peripecias y sus ritmos), quiero hablar de lo importantes que han sido sus autores en distintos momentos de mi biografía lectora. A Selma Lagerlöf y a Rudyard Kipling los conocí desde mi infancia: gracias a Lagerlöf, recorrí por primera vez los paisajes de Suecia a lomo de cisne y gracias a Kipling me asomé a la primera selva de mi vida y pude descifrar la lengua de los animales –cuando todos eran salvajes– sin moverme de la pequeña habitación en donde leía. Más adelante, cuando estudiaba literatura, descubrí el inconfundible acento de Alexandr Pushkin y su capacidad para mostrar cómo eran de distintos a nosotros, y tan parecidos a la vez, los personajes de su país, y fue en esos mismos tiempos cuando experimenté el horror de imaginar el mundo sin libros que creó Ray Bradbury y que recordé mientras leía el cuento suyo que aparece en esta selección, situado en Marte, (y hoy tan cercano).</p>
+                        
+                        <p>De María Gripe, de Gianni Rodari y del ya mencionado Roald Dahl puedo decir que, desafortunadamente, no los conocí de niña, sino bastantes años después, cuando comenzaba a soñar con ser escritora. Ellos tres, y algunos pocos más, me revelaron lo difícil y lo apasionante que podía resultar el desafío de escribir para los lectores más jóvenes y explorar las complejidades de la infancia, y hoy, al releer esta antología, entiendo por qué los considero mis maestros. O, para ser más exacta, nuestros maestros, pues sus historias nos han marcado a muchos autores y lectores, sin importar la edad, y nos siguen marcando cada vez que las leemos.</p>
+                        
+                        <p>A pesar de las diferencias que nos asombran y nos revelan costumbres, lugares y tiempos tan distintos, en este libro hay una lengua que todos entendemos y a todos nos conecta y un arte de narrar que hoy nos sigue cautivando.  Y yo creo que ahí reside el placer de la literatura: en esa voz particular que tiene cada autor para contar una historia, para explorar una época y una geografía, con sus arrecifes, sus mares y sus planetas, y para hacernos descifrar las huellas que han dejado las vidas de otros en nosotros. En este libro adorable, lleno de ingenio, de humor e inteligencia, no solo es posible escuchar las voces de autores diversos que conversan con nosotros, sino también participar en esa incesante conversación que mantienen entre líneas los autores y que va ensartando las historias y los tiempos en una red de significados compartidos.</p>
+
+                        <p class="text-align-right">Yolanda Reyes <br/>Septiembre de 2018</p>
+
+                        <div class="leerMas">¡Comienza tu lectura!</div>
+
+
+                        <hr class="line-separator line-orange" />
+
+                    </div>
+                </div>
+                 <!--Cuento 1 -->
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Roald Dahl</h2>
+                    <h1 class="chapter-title cafe">El chico que hablaba  <br/><span class="oswald-light cafe">con los animales</span></h1>
+                    
+                    <div class="content-text">
+                        <p class="first-paragraph">No hace mucho tiempo decidí pasar unas breves vacaciones en las Indias Occidentales. Los amigos me habían dicho que era un lugar maravilloso, que podría pasarme el día entero holgazaneando, tomando el sol en las playas de arenas plateadas y nadando en las aguas cálidas y verdes del mar.</p>
+            
+                        <p>Escogí Jamaica y volé directamente de Londres a Kingston. Tardé dos horas de coche en ir del aeropuerto de Kingston a mi hotel, situado en la costa norte. La isla estaba llena de montañas y estas aparecían totalmente cubiertas de selvas oscuras y espesas. El jamaicano corpulento que conducía el taxi me dijo que en aquellas selvas vivían comunidades enteras de gentes diabólicas que seguían practicando el vudú, la brujería y otros ritos mágicos.</p>
+                        
+
+                        <p>—No suba usted jamás a esas selvas de la montaña —me dijo, poniendo los ojos en blanco—. ¡Allí arriba suceden cosas que harían que el pelo se le volviese blanco en un minuto!</p>
+
+                        <p>—¿Qué clase de cosas? —pregunté.</p>
+
+                        <p>Es mejor que no me lo pregunte —explicó—.</p>
+                        
+                        <p>No es prudente hablar de ello siquiera.</p>
+  
+                        <p>Y no quiso decirme nada más del asunto.</p>
+
+                        <p>Mi hotel se alzaba al borde de una playa perlina y el paisaje era aún más bello de lo que me había imaginado. Pero en el instante en que crucé la gran puerta principal, empecé a sentirme inquieto. No había motivo alguno para ello. No vi nada extraño, pero la sensación era muy viva y no conseguí librarme de ella. Había algo sobrenatural y siniestro en el lugar. A pesar de la belleza y el lujo, un presagio de peligro flotaba en el aire como si fuera gas tóxico.  </p>
+
+                        <p>Y no tenía la seguridad de que se tratase solamente del hotel. Toda la isla, las montañas y las selvas, las rocas negras que jalonaban la costa y los árboles que parecían cascadas de flores escarlata, todas estas cosas y muchas otras hacían que me sintiese incómodo dentro de mi pellejo. Algo maligno se agazapaba debajo de la superficie de la isla. Lo presentía en mis huesos.</p>
+            
+                        <p>Mi habitación en el hotel tenía un pequeño balcón desde el cual podía bajar directamente a la playa. Crecían cocoteros por doquier y de vez en cuando un coco verde y enorme, del tamaño de un balón de fútbol, caía del cielo y producía un golpe sordo al chocar contra la arena. Se consideraba una estupidez tenderse debajo de un cocotero, ya que, si alguna de aquellas cosas te caía en la cabeza, podía destrozarte el cráneo.</p>
+            
+                        <p>La chica jamaicana que entró a arreglarme la habitación me dijo que un americano rico llamado Wasserman había encontrado la muerte precisamente de aquella manera hacía tan solo dos meses.</p>
+
+                        <p>—Lo dice en broma —le dije.</p>
+                        
+                        <p>—¡Nada de broma! —exclamó la chica—. ¡No, señor! ¡Lo vi con mis propios ojos! ¡Sí, señor!</p> 
+                        
+                        <p>—¿Y no se organizó un escándalo a causa de lo ocurrido? —pregunté.</p>
+                        
+                        <p>—Echaron tierra al asunto —contestó sombríamente—. La gente del hotel echó tierra y lo mismo hizo la gente de los periódicos, porque las cosas así son muy malas para el negocio turístico.</p> 
+                        
+                        <p>—¿Y dice usted que lo vio con sus propios ojos?</p>
+                        
+                        <p>—Sí, señor —dijo—. Míster Wasserman estaba debajo de aquel árbol que hay allí en la playa. Entonces sacó su cámara y enfocó el crepúsculo. Esa noche el crepúsculo era rojo y muy bonito. De pronto un coco verde y grande se desprende y aterriza en su calva. ¡Bum! Y ese —añadió con cierto entusiasmo— fue el último crepúsculo que míster Wasserman vio en su vida.</p>
+                        
+                        <p>—¿Quiere decir que murió en el acto?</p>
+                        
+                        <p>—No sé si murió en el acto —dijo—. Recuerdo que lo siguiente que ocurrió es que la cámara se le cayó de las manos y fue a parar a la arena. Luego los brazos cayeron sobre sus costados y se le quedaron colgando allí. Entonces empezó a tambalearse. Se tambaleó varias veces hacia atrás y hacia adelante, muy suavemente, y yo estaba de pie mirándole y yo me dije: el pobre hombre está mareado y puede que vaya a desmayarse de un momento a otro. Entonces muy, muy despacio, se inclinó hacia adelante y se desplomó.</p>
+                        
+                        <p>—¿Estaba muerto?</p>
+                        
+                        <p>—Más muerto que mi abuela —dijo la chica.</p>
+                        
+                        <p>—¡Cielo santo!</p>
+                        
+                        <p>—Así es —dijo—. Nunca hay que colocarse debajo de un cocotero cuando hay brisa.</p>
+                        
+                        <p>—Gracias —le dije—. No lo olvidaré.</p>
+                        
+                        <p>Al atardecer de mi segundo día en el hotel me encontraba sentado en mi pequeño balcón con un libro sobre el regazo y un vaso de ponche en la mano. No estaba leyendo el libro, sino que contemplaba un pequeño lagarto verde que acechaba a otro pequeño lagarto verde en el suelo del balcón, a unos dos metros de mí. El primer lagarto se acercaba al otro por detrás, avanzando con gran lentitud y cautela, y cuando llegó cerca de él sacó su larga lengua y tocó la cola del otro. Este dio un salto y se volvió, quedando los dos, cara a cara y sin moverse, pegados al suelo, agazapados, mirándose fijamente y muy tensos. De pronto iniciaron una extraña danza los dos. Saltaban al aire. Saltaban hacia atrás. Saltaban hacia adelante. Saltaban de lado. Daban vueltas el uno alrededor del otro, como dos boxeadores, sin dejar un solo momento de saltar, hacer cabriolas y danzar. El espectáculo resultaba muy raro y me dije que seguramente se trataba de algún ritual amoroso. Me quedé muy quieto, esperando ver lo que iba a pasar a continuación.</p>
+                        
+                        <p>Una redada de peces es algo que siempre me ha fascinado. Dejé el libro y me levanté.</p>
+                        
+                        <p>Más gente bajaba de la veranda del hotel y se dirigía presurosamente a reunirse con la multitud que se agolpaba al borde del agua. Los hombres llevaban esos horribles pantalones cortos que llamaban «bermudas» y que llegan hasta las rodillas y sus camisas resultaban biliosas de tanto rosa, naranja y otros colores discordantes como había en ellas. Las mujeres tenían mejor gusto y en su mayoría llevaban bonitos vestidos de algodón. Casi todo el mundo sostenía una copa en la mano.</p>
+                        
+                        <p>Recogí mi propia copa y bajé del balcón a la playa. Di un pequeño rodeo para evitar el cocotero debajo del cual se suponía que míster Wasserman había hallado la muerte y crucé la hermosa arena plateada para reunirme con la multitud.</p>
+                        
+                        <p>Pero no era una redada de peces lo que la gente estaba contemplando. Era una tortuga tumbada panza arriba sobre la arena. ¡Pero qué tortuga! Era gigantesca, un verdadero mamut. Nunca había creído posible que una tortuga pudiese ser tan enorme. ¿Cómo puedo describir su tamaño? Creo que, de no haber estado panza arriba, un hombre alto habría podido sentarse sobre su caparazón sin que sus pies tocaran el suelo. Tendría quizás un metro cincuenta de largo y un metro veinte de ancho, con un caparazón alto y abovedado de gran belleza.</p>
+                        
+                        <p>El pescador que la capturara la había tumbado de panza arriba para que no pudiera escapar. Había también una gruesa soga atada alrededor del caparazón y un pescador orgulloso, delgado, negro y sin más vestimenta que un pequeño taparrabo se encontraba a poca distancia del animal, sujetando el extremo de la soga con ambas manos.</p>
+                        
+                        <p>De panza arriba yacía aquella magnífica criatura, con sus cuatro gruesas patas agitándose frenéticamente en el aire y su cuello largo y arrugado sobresaliendo considerablemente del caparazón. En el extremo de las patas tenía unas garras grandes y afiladas.</p>
+                        
+                        <p>—¡Apártense, por favor, damas y caballeros! —exclamó el pescador—. ¡Apártense! ¡Las garras son peligrosas! ¡Pueden arrancarles un brazo!</p>
+                        
+                        <p>La multitud de huéspedes del hotel se mostraba excitada y a la vez encantada ante aquel espectáculo. Una docena de cámaras enfocaba el animal disparando sin cesar. Muchas mujeres soltaban grititos de placer y se aferraban al brazo de sus hombres, mientras que estos demostraban su ausencia de temor y su masculinidad haciendo comentarios estúpidos en voz alta.</p>
+                        
+                        <p>—Bonito par de gafas con montura de concha te harías con ese caparazón, ¿eh, Al?</p>
+                        
+                        <p>—¡La muy condenada debe de pesar más de una tonelada!</p>
+                        
+                        <p>—¿Pretendes decirme que realmente puede flotar?</p>
+                        
+                        <p>—Claro que flota. Y es una estupenda nadadora, además. Capaz de tirar fácilmente de una barca.</p>
+                        
+                        <p>—Es mordedora, ¿verdad?</p>
+                        
+                        <p>—Esa no es de las que muerden. Las tortugas mordedoras no son tan grandes como esa. Pero de una cosa puedes estar seguro: te arrancará la mano de un mordisco si te acercas demasiado.</p>
+                        
+                        <p>—¿De veras haría eso? —preguntó una de las mujeres al pescador—. ¿Le arrancaría la mano a una persona?</p>
+                        
+                        <p>—Ahora mismo —dijo el pescador, sonriendo con sus dientes blanquísimos—. No le hará ningún daño cuando esté en el océano, pero si la captura, la arrastra a la playa y la coloca panza arriba, ¡entonces hay que andarse con cuidado! ¡Morderá cualquier cosa que se ponga a su alcance!</p>
+                        
+                        <p>—Supongo que a mí también me entrarían ganas de dar mordiscos —dijo la mujer— si me encontrase en esta situación.</p>
+                        
+                        <p>Un idiota acababa de encontrar un tablón que el agua había arrojado a la playa y se acercaba con él a la tortuga. Era un tablón bastante grande, de alrededor de un metro cincuenta de largo y quizá dos centímetros y medio de grueso. Con la punta del mismo empezó a tascar la cabeza de la tortuga.</p>
+                        
+                        <p>—Yo no haría eso —dijo el pescador—. Solo conseguirá enfurecerla más.</p>
+                        
+                        <p>Cuando el extremo del tablón tocó el cuello de la tortuga, ésta volvió rápidamente su cabezota, abrió la boca y, ¡zas!, cogió el tablón y lo atravesó con sus dientes como si fuera un pedazo de queso.</p>
+                        
+                        <p>—¡Atiza! —gritaron los espectadores—. ¿Habéis visto? ¡Me alegro de que no fuera mi brazo!</p>
+                        
+                        <p>—Déjenla en paz —dijo el pescador—. No es conveniente excitarla.</p>
+                        
+                        <p>Un hombre barrigudo, de muslos gruesos y piernas muy cortas se acercó al pescador y dijo:<br>—Escuche, buen hombre. Quiero ese caparazón. Se lo compro —y dirigiéndose a su regordeta esposa, añadió—: ¿Sabes qué voy a hacer, Mildred? Me llevaré ese caparazón a casa y haré que un experto le saque brillo. ¡Luego lo instalaré en el centro mismo de nuestra salita de estar! ¿Verdad que quedará bonito?</p>
+                        
+                        
+                        <p>—Fantástico —dijo la esposa regordeta—. Adelante, cómpralo, querido.</p>
+                        
+                        <p>—No te preocupes —dijo él—. Ya es mío —y volviéndose al pescador, dijo—: ¿Cuánto pide por el caparazón?</p>
+                        
+                        <p>—Ya la he vendido —dijo el pescador—. La he vendido con caparazón y todo.</p>
+                        
+                        <p>—No tan aprisa, buen hombre —dijo el hombre barrigudo—. Yo le pagaré más. Vamos. ¿Cuánto le han ofrecido?</p>
+                        
+                        <p>—No hay nada que hacer —contestó el pescador—. Ya la he vendido.</p>
+                        
+                        <p>—¿A quién? —preguntó el hombre barrigudo.</p>
+                        
+                        <p>—Al director.</p>
+                        
+                        <p>—¿Qué director?</p>
+                        
+                        <p>—El director del hotel.</p>
+                        
+                        <p>—¿Lo han oído? —gritó otro hombre—. ¡La ha vendido al director de nuestro hotel! ¿Y saben qué significa eso? ¡Significa sopa de tortuga! ¡Eso es lo que significa!</p>
+                        
+                        <p>—¡Tiene mucha razón! ¡Y bistec de tortuga! ¿Alguna vez has comido filete de tortuga, Bill?</p>
+                        
+                        <p>—Nunca, Jack. Pero ardo en deseos de probarlo.</p>
+                        
+                        <p>—Un filete de tortuga es mejor que uno de buey si lo cocinas como es debido. Es más tierno y tiene mucho más sabor.</p>
+                        
+                        <p>—Oiga —dijo el hombre barrigudo, dirigiéndose al pescador—. No trato de comprar la carne. El director puede quedársela. Puede quedarse con todo lo que haya dentro incluyendo los dientes y las uñas. Lo único que quiero es el caparazón.</p>
+                        
+                        <p>—Y si te conozco bien, querido —dijo su esposa, sonriéndole de oreja a oreja—, tuyo será el caparazón.</p>
+                        
+                        <p>Permanecí allí de pie, escuchando la conversación de aquellos seres humanos. Hablaban de la destrucción, el consumo y el sabor de una criatura que, incluso estando panza arriba, parecía extraordinariamente digna. Una cosa era segura. Era de mayor edad que ellos. Probablemente se había pasado ciento cincuenta años surcando las verdes aguas de las Indias Occidentales. En ellas estaba ya cuando George Washington era presidente de los Estados Unidos y Napoleón recibía una buena paliza en Waterloo. Por aquel entonces debía de ser una tortuga pequeña, pero no había la menor duda de que ya estaba allí.</p>
+                        
+                        <p>Y ahora estaba aquí, tumbada de espaldas sobre la arena, esperando el momento de ser sacrificada y convertida en sopa y filetes. Era evidente que la alarmaban el ruido y los gritos que se oían a su alrededor. Alargaba el cuello viejo y arrugado y su cabezota se volvía a un lado y a otro como si buscase a alguien capaz de explicarle el motivo de tantos malos tratos.</p>
+                        
+                        <p class="resaltado">Y ahora estaba aquí, tumbada de espaldas sobre la arena, esperando el momento de ser sacrificada y convertida en sopa y filetes.</p>
+                        
+                        <p>—¿Cómo la llevará hasta el hotel? —preguntó el hombre barrigudo.</p>
+                        
+                        <p>—Arrastrándola por la playa con la soga —repuso el pescador—. El personal del hotel vendrá pronto a llevársela. Harán falta diez hombres y que todos tiren a la vez.</p>
+                        
+                        <p>—¡Escuchen! —exclamó un joven musculoso—. ¿Por qué no la arrastramos nosotros? —el joven musculoso llevaba unos «bermudas» color magenta y verde guisante e iba sin camisa. Su pecho era excepcionalmente peludo y saltaba a la vista que la ausencia de camisa era un detalle premeditado—. ¿Qué les parece si trabajamos un poco para ganarnos la cena? —dijo, moviendo los músculos—. ¡Vamos, amigos! ¿Quién quiere hacer un poco de ejercicio?</p>
+                        
+                        <p>—¡Magnífica idea! —gritaron los demás—. ¡Un plan espléndido!</p>
+                        
+                        <p>Los hombres entregaron sus copas a las mujeres y corrieron a coger la soga. Se colocaron al lado de ella como si se dispusieran a practicar el juego de la cuerda, y el joven del pecho peludo se nombró a sí mismo capitán del equipo.</p>
+                        
+                        <p>—¡Vamos, muchachos! —gritó—. Cuando diga «¡ahora!» todos a tirar a la vez, ¿entendido?</p>
+                        
+                        <p>Aquello no pareció hacerle mucha gracia al pescador.</p>
+                    
+                        <p>—Es mejor que ese trabajo lo dejen para los del hotel —dijo.</p>
+                        
+                        <p>—¡Tonterías! —gritó el del pecho peludo—. ¡Ahora, muchachos, ahora!</p>
+                        
+                        
+                        <p>Tiraron todos. La gigantesca tortuga se tambaleó sobre su espalda y estuvo a punto de volcar.</p>
+                        
+                        <p>—¡Que no vuelque! —chilló el pescador—. ¡Harán que vuelque si tiran así! Y si vuelve a quedar patas abajo, pueden estar seguros de que se escapará.</p>
+                        
+                        
+                        <p>—Cálmese, buen hombre —dijo el del pecho peludo con aire de protección—. ¿Cómo quiere que se escape? La tenemos atada con una soga, ¿no es así?</p>
+                        
+                        <p>—Si le dan la oportunidad, ¡los arrastrará a todos! —exclamó el pescador—. ¡Los arrastrará hasta el océano! ¡A todos!</p>
+                        
+                        <p>—¡Ahora! —gritó el del pecho peludo, haciendo caso omiso del pescador—. ¡Ahora, muchachos, ahora!</p>
+                        
+                        <p>Y la gigantesca tortuga empezó a deslizarse muy lentamente playa arriba, hacia el hotel, hacia la cocina, hacia el lugar donde se guardaban los cuchillos grandes. Las mujeres y los hombres más viejos, más gordos y menos atléticos siguieron a la comitiva jaleando a los que tiraban de la soga.</p>
+                        
+                        <p>—¡Ahora! —gritó el peludo capitán del equipo—. ¡Ánimo, muchachos! ¡Más fuerte todavía!</p>
+                        
+                        <p>De repente oí gritos. Todo el mundo los oyó.</p>
+                        
+                        <p>Eran unos gritos tan agudos, tan estridentes y tan apremiantes que se impusieron a los demás ruidos.</p>
+                        
+                        <p>—¡No-o-o-o-o! —decían los gritos—. ¡No! ¡No! ¡No! ¡No! ¡No!</p>
+                        
+                        <p>La multitud se quedó helada. Los hombres que tiraban de la soga dejaron de tirar y los mirones dejaron de gritar mientras todos los presentes se volvían hacia el lugar de donde venían los gritos.</p>
+                        
+                        <p>Medio caminando, medio corriendo, bajaban por la playa, procedentes del hotel, tres personas: un hombre, una mujer y un chico. Medio corrían porque el chico tiraba del hombre. El hombre tenía al chico cogido por la muñeca y trataba de hacerle aflojar el paso, pero el pequeño seguía tirando. Al mismo tiempo daba botes, se retorcía y trataba de librarse de la mano del padre. Era el chico quien gritaba.</p>
+                        
+                        <p>—¡No! —gritó—. ¡No lo hagan! ¡Déjenla ir! ¡Déjenla ir, por favor!</p>
+                        
+                        <p>La mujer, que era la madre del muchacho, trataba de sujetarle por el otro brazo y de esta manera ayudar al padre, pero el chico pegaba tantos botes que no lo consiguió,</p>
+                        
+                        <p>—¡Suéltenla! —gritó el pequeño—. ¡Lo que hacen es horrible! ¡Déjenla, por favor!</p>
+                        
+                        <p>—¡Basta ya, David! —dijo la madre, tratando aún de cogerle el otro brazo—. ¡No seas tan infantil! Te estás poniendo en ridículo.</p>
+                        
+                        <p>—¡Papá! —gritó el chico—. ¡Papá! ¡Diles que la suelten!</p>
+                        
+                        <p>—No puedo, David —contestó el padre—. No es asunto nuestro.</p>
+                        
+                        
+                        <p>Los que arrastraban a la tortuga permanecieron inmóviles, aunque sin soltar la soga en cuyo extremo se hallaba atado el gigantesco animal. Todo el mundo estaba callado y sorprendido, mirando fijamente al chico. Parecían todos algo turbados. Todos presentaban la expresión ligeramente avergonzada de la gente a la que han pillado haciendo algo que no es del todo honorable.</p>
+                        
+                        <p>—Vamos, David —dijo el padre, tirando del niño—. Volvamos al hotel y dejemos a esta gente en paz.</p>
+                        
+                        <p>—¡Vamos, David! —dijo la madre.</p>
+                        
+                        <p>—Largo de aquí, mocoso —dijo el del pecho peludo.</p>
+                        
+                        <p>—¡Es usted horrible y cruel! —gritó el muchacho—. ¡Todos ustedes son horribles y crueles! —pronunció las palabras muy claramente, lanzándolas contra los cuarenta o cincuenta adultos que se encontraban en la playa, y nadie, ni siquiera el joven del pecho peludo, le contestó esta vez—. ¿Por qué no la devuelven al mar? —gritó el chico—. ¡Ella no les ha hecho nada! ¡Suéltenla!</p>
+                        
+                        <p>El padre se sentía azorado ante el comportamiento de su hijo, pero en modo alguno avergonzado.</p>
+                        
+                        <p>—Está loco por los animales —explicó, dirigiéndose a la multitud—. En casa tiene animales de todas las especies que existen bajo el sol. Habla con ellos.</p>
+                        
+                        <p>—Los quiere mucho —dijo la madre.</p>
+                        
+                        <p>Varias personas empezaron a moverse nerviosamente. Aquí y allá se advertía cierto cambio de actitud entre los espectadores, una sensación de incomodidad, incluso un leve toque de vergüenza. El chico, que no tendría más de ocho o nueve años, ya había dejado de forcejear con su padre. Este seguía sujetándole la muñeca, pero sin demasiada fuerza.</p>
+                        
+                        <p>—;Vamos! —gritó el pequeño—. ¡Déjenla ir! ¡Desátenle la soga y dejen que se vaya!</p>
+                        
+                        <p>Se encaró a la multitud, pequeño y erguido, con los ojos brillándole como dos estrellas y el pelo agitado por el viento. Estaba magnífico.</p>
+                        
+                        <p>—No hay nada que podamos hacer, David —dijo el padre con tono bondadoso—. Volvamos al hotel.</p>
+                        
+                        <p>—¡No! —exclamó el niño.</p>
+                        
+                        <p>Y en aquel momento dio un tirón repentino y se soltó al mismo tiempo que echaba a correr por la arena hacia la gigantesca tortuga tumbada panza arriba.</p>
+                        
+                        <p>—¡David! —chilló el padre, echando a correr tras él—. ¡Detente! ¡Vuelve aquí!</p>
+                        
+                        <p>El muchacho atravesó la multitud como un jugador de rugby corriendo con la pelota y la única persona que se adelantó para interceptarle fue el pescador.</p>
+                        
+                        
+                        <p>—¡No te acerques a esa tortuga, muchacho! —gritó mientras trataba de echársele encima para detenerle. Pero el chico le esquivó y siguió corriendo—. ¡Te despedazará a mordiscos! —chilló el pescador—. ¡Detente, muchacho, detente!</p>
+                        
+                        
+                        <p>Pero ya era demasiado tarde para detenerle y, al llegar corriendo hasta la tortuga, el animal le vio y su enorme cabezota se volvió para mirarle de frente.</p>
+                        
+                        <p>La voz de la madre del chico, el gemido aterrado y atormentado de la madre, se alzó en el cielo crepuscular.</p>
+                        
+                        <p>—¡David! ¡Oh, David!</p>
+                        
+                        <p>Y segundos después el muchacho se postraba de rodillas en la arena, rodeaba con sus brazos el cuello viejo y arrugado del animal y apretaba a este contra su pecho. La mejilla del chico se apretaba contra la cabezota de la tortuga mientras sus labios se movían, susurrando palabras dulces que nadie más podía oír. La tortuga se quedó absolutamente quieta. Incluso sus gigantescas patas dejaron de azotar el aire.</p>
+                        
+                        <p>Un gran suspiro, un largo suspiro de alivio, surgió de la multitud. Muchas personas dieron uno o dos pasos hacia atrás, como si tratasen de alejarse un poco más de algo que escapaba a su comprensión. Pero el padre y la madre se adelantaron juntos y se detuvieron a unos tres metros del hijo.</p>
+                        
+                        <p>—¡Papá! —exclamó el chico, sin dejar de acariciar la cabeza parda—. ¡Haz algo, por favor, papá! ¡Haz que la suelten, por favor!</p>
+                        
+                        <p>—¿Puedo ayudarles en algo? —dijo un hombre vestido con un traje blanco que acababa de bajar del hotel. El hombre, como sabía todo el mundo, era míster Edwards, el director. Era un inglés alto y narigudo de cara larga y sonrosada—. </p>
+                        
+                        <p>¡Qué cosa más extraordinaria! —dijo, mirando al chico y a la tortuga—. Tiene suerte de que no le haya arrancado la cabeza de una dentellada —y dirigiéndose al chico, añadió—: Será mejor que te apartes de ella, muchacho. Ese bicho es peligroso.</p>
+                        
+                        <p>—¡Quiero que la suelten! —exclamó el pequeño, que seguía acunando la cabezota del animal entre sus brazos—. ¡Dígales que la suelten!</p>
+                        
+                        <p>—Se dará usted cuenta de que el animal podría matarle en cualquier instante —dijo el director al padre del chico.</p>
+                        
+                        <p>—Déjele en paz —contestó el padre.</p>
+                        
+                        <p>—Ni pensarlo —dijo el director—. Haga el favor de apartarle de ahí. Pero dese prisa. Y tenga cuidado.</p>
+                        
+                        <p>—No —dijo el padre.</p>
+                        
+                        <p>—¿Cómo que no? —dijo el director—. ¡Estas cosas son letales! ¿Es que no lo comprende?</p>
+                        
+                        <p>—Sí —dijo el padre,</p>
+                        
+                        <p>—Entonces, por el amor de Dios, hombre, ¡sáquelo de ahí! —exclamó el director—. Si no lo hace, se producirá un accidente muy desagradable.</p>
+                        
+                        <p>—¿De quién es? —preguntó el padre—. ¿Quién es el propietario de la tortuga?</p>
+                        
+                        <p>—Nosotros —repuso el director—. El hotel la ha comprado.</p>
+                        
+                        <p>—En tal caso, hágame un favor —dijo el padre—. Permítame que se la compre.</p>
+                        
+                        <p>El director miró al padre, pero no dijo nada.</p>
+                        
+                        <p>—No conoce usted a mi hijo —explicó el padre, hablando con voz tranquila—. Se volverá loco si se llevan la tortuga al hotel y la matan. Se pondrá histérico.</p>
+                        
+                        <p>—Limítese a apartarle de su lado —dijo el director—. Y dese prisa.</p>
+                        
+                        <p>—Ama a los animales —insistió el padre—. Los ama de veras. Se comunica con ellos.</p>
+                        
+                        <p>La multitud guardaba silencio, tratando de oír lo que decían los dos hombres. Nadie se alejó de allí. Parecían hipnotizados.</p>
+                        
+                        <p>—Si la soltamos —dijo el director—, solo servirá para que vuelvan a capturarla.</p>
+                        
+                        <p>—Quizás sea así —dijo el padre—. Pero esos bichos saben nadar.</p>
+                        
+                        <p>—Ya sé que saben nadar —contestó el director—. Pero la capturarán de todos modos. </p>
+                        
+                        <p>Se trata de un ejemplar valioso. Métaselo en la cabeza. El caparazón solo ya vale un montón de dinero.</p>
+                        
+                        <p>—El coste no me importa —dijo el padre—. No se preocupe por eso. Quiero comprarla.</p>
+                        
+                        <p>El niño seguía arrodillado en la arena al lado de la tortuga, acariciándole la cabeza.</p>
+                        
+                        <p>El director se sacó un pañuelo del bolsillo del pecho y empezó a secarse los dedos. No tenía ganas de soltar a la tortuga. Probablemente ya tenía pensado el menú de la cena. Por otro lado, no quería que se produjese otro accidente horrible en su playa privada aquella temporada. Se dijo que míster Wasserman y su coco ya eran suficientes por un año.</p>
+                        
+                        <p>—Lo consideraría un gran favor personal, míster Edwards —dijo el padre—, si me permitiera comprarla. Y le prometo que no lo lamentará. Ya me aseguraré de que así sea.</p>
+                        
+                        <p>El director levantó ligeramente las cejas. Había captado la insinuación. Le estaban ofreciendo un soborno. Eso era distinto. Durante unos segundos siguió secándose las manos con el pañuelo. Luego se encogió de hombros y dijo:</p>
+                        
+                        <p>—Bueno, supongo que si su chico va a sentirse mejor...</p>
+                        <p>—Gracias —dijo el padre.</p>
+                        <p>—¡Muchas gracias! —exclamó la madre—. ¡Muchísimas gracias!</p>
+                        
+                        <p>—Willy —dijo míster Edwards, haciendo una seña al pescador.</p>
+                        
+                        <p>Willy se adelantó. Se le veía totalmente perplejo.</p>
+                        
+                        <p>—Nunca he visto nada parecido en toda mi vida —dijo—. ¡Esta tortuga vieja era la más feroz de cuantas he capturado! ¡Luchó como un diablo cuando la izamos a bordo! ¡Los seis nos las vimos y deseamos para desembarcarla! ¡Ese chico está loco!</p>
+                        
+                        <p>—Sí, ya lo sé —dijo el director—. Pero ahora quiero que la sueltes.</p>
+                        
+                        <p>—¡Soltarla! —exclamó el pescador, horrorizado—. ¡No debe soltarla, míster Edwards! ¡Ha batido el récord! ¡Es la tortuga más grande que jamás se haya capturado en esta isla! ¡Con mucho la más grande! ¿Y qué me dice de nuestro dinero?</p>
+                        
+                        <p>—Recibiréis vuestro dinero.</p>
+                        
+                        <p>—Tengo que pagar a los otros cinco también —dijo el pescador, señalando a los cinco hombres semidesnudos y de piel negra que esperaban en la orilla, junto a una segunda barca—. Los seis estamos en el negocio, a partes iguales —prosiguió el pescador—. No puedo soltarla hasta que recibamos el dinero.</p>
+                        
+                        <p>—Te garantizo que lo recibiréis —dijo el director—. ¿No te basta con que te lo garantice?</p>
+                        
+                        <p>—Yo avalaré la garantía —dijo el padre del chico, dando un paso hacia adelante— Y habrá una propina para los seis pescadores, siempre y cuando la suelten en seguida. Quiero decir inmediatamente, en este mismo instante.</p>
+                        
+                        <p>El pescador miró al padre, luego miró al director.</p>
+                        
+                        <p>—De acuerdo —dijo—. Si eso es lo que quiere.</p>
+                        
+                        <p>—Hay una condición —dijo el padre—. Antes de recibir su dinero, tiene que prometer que no saldrá a la mar inmediatamente para volver a capturarla. Al menos no esta noche. ¿Entendido?</p>
+                        
+                        <p>—Desde luego —dijo el pescador—. Trato hecho.</p>
+                        
+                        <p>Giró en redondo y echó a correr playa abajo, llamando a los otros cinco pescadores. Les gritó algo que no pudimos oír y al cabo de uno o dos minutos los seis volvieron juntos. Cinco de ellos llevaban unos palos de madera largos y gruesos.</p>
+                        
+                        <p>El chico seguía arrodillado junto al animal.</p>
+                        
+                        <p>—David —le dijo el padre con voz dulce—. Ya está todo arreglado, David. Van a soltarla.</p>
+                        
+                        <p>El pequeño miró a su alrededor, pero no separó los brazos del cuello de la tortuga ni se levantó.</p>
+                        
+                         <p class="resaltado">El pequeño miró a su alrededor, pero no separó los brazos del cuello de la tortuga ni se levantó.</p>
+                        
+                        <p>—¿Cuándo? —preguntó.</p>
+                        
+                        <p>—Ahora —dijo el padre—. Ahora mismo. De modo que será mejor que te apartes.</p>
+                        
+                        <p>—¿Lo prometes? —dijo el chico.</p>
+                        
+                        <p>—Sí, David, te lo prometo.</p>
+                        
+                        <p>El niño apartó los brazos, se levantó y retrocedió varios pasos.</p>
+                        
+                        <p>—¡Que retrocedan todos! —gritó el pescador llamado Willy—. ¡Por favor, échense atrás!</p>
+                        
+                        <p>La multitud retrocedió unos cuantos metros.</p>
+                        
+                        <p>Los hombres que habían arrastrado la tortuga soltaron la soga y retrocedieron con el resto de la gente.</p>
+                        
+                        <p>Willy se puso a gatas y con mucha cautela se acercó a la tortuga. Después empezó a deshacer el nudo de la soga, procurando mantenerse fuera del alcance de las enormes patas del animal.</p>
+                        
+                        <p>Una vez deshecho el nudo, Willy retrocedió a gatas. Entonces los otros cinco pescadores se adelantaron con sus palos, que medían algo más de dos metros y eran inmensamente gruesos. Metieron los palos debajo del caparazón de la tortuga y se pusieron a balancearla de un lado a otro. El caparazón formaba una cúpula muy alta que se prestaba a que la balancearan.</p>
+                        
+                        <p>—¡Arriba y abajo! —cantaban los pescadores mientras balanceaban al animal—. ¡Arriba y abajo! ¡Arriba y abajo! ¡Arriba y abajo!</p>
+                        
+                        <p>La vieja tortuga se enfadó muchísimo. ¿Y quién podría culparla por ello? Las enormes patas se agitaban frenéticamente en el aire y la cabeza no cesaba de entrar y salir del caparazón.</p>
+                        
+                        <p>—¡Démosle la vuelta! —cantaban los pescadores—. ¡Démosle la vuelta! ¡Otro empujón y ya está!</p>
+                        
+                        <p>La tortuga se inclinó sobre un costado y luego cayó de cuatro patas sobre la arena.</p>
+                        
+                        <p>Pero no se puso a andar inmediatamente. Asomó su cabezota parda y miró cautelosamente a su alrededor.</p>
+                        
+                        <p>—¡Vete, tortuga, vete! —exclamó el chico—. ¡Vuelve al mar!</p>
+                        
+                        <p>Los dos ojos negros de la tortuga se alzaron hacia el chico. Los ojos eran brillantes y animados, llenos de la sabiduría que da la vejez. El chico le devolvió la mirada a la tortuga y esta vez le habló con voz suave e íntima.</p>
+                        
+                        <p>—Adiós, viejo —dijo—. Esta vez vete muy lejos de aquí.</p>
+                        
+                        <p>Los ojos negros siguieron posados en el chico unos cuantos segundos más. Nadie se movió. Luego, con gran dignidad, la inmensa bestia se volvió y comenzó a andar torpemente hacia el borde del océano. No se dio ninguna prisa.</p>
+                        
+                        <p>Avanzaba calmosamente por la arena de la playa y su enorme caparazón se balanceaba ligeramente.</p>
+                        
+                        <p>La multitud miraba en silencio.<br>El animal entró en el agua.<br>Siguió avanzando.</p>
+                        
+                        <p>Pronto empezó a nadar. Ahora se encontraba en su elemento. Nadaba con mucha gracia y rapidez, con la cabeza bien alta. El mar estaba calmado y la tortuga producía pequeñas olas que se extendían en abanico a ambos lados de ella, como las que hace una embarcación. Pasaron varios minutos antes de que la perdiéramos de vista, y para entonces ya estaba a medio camino del horizonte.</p>
+                        
+                        <p>Los huéspedes iniciaron el regreso al hotel.</p>
+                        
+                        <p>Se les veía curiosamente callados. Ya no se oían bromas, risas ni burlas. Algo había sucedido. Algo extraño había cruzado aleteando la playa.</p>
+                        
+                        <p>Volví a mi pequeño balcón y me senté a fumar un cigarrillo. Me sentía inquieto y tenía la impresión de que el asunto aún no había terminado.</p>
+                        
+                        <p>A las ocho del día siguiente la muchacha jamaicana, la que me había contado lo de míster Wasserman y el coco, me trajo un vaso de zumo de naranja a la habitación.</p>
+                        
+                        <p>—¡La que se ha armado en el hotel esta mañana! —dijo mientras dejaba el vaso sobre la mesita y corría las cortinas—. Todo el mundo vuela de un lado a otro. Parecen locos.</p>
+                        
+                        <p>—¿Por qué? ¿Qué ha pasado?</p>
+                        
+                        <p>—El muchachito de la número doce... ha desaparecido. Desapareció durante la noche.</p>
+                        
+                        <p>—¿Se refiere al chico de la tortuga?</p>
+                        
+                        <p>—Ese mismo —dijo—. Sus padres han puesto el grito en el cielo y el director se está volviendo loco.</p>
+                        
+                        <p>—¿Cuándo notaron su desaparición?</p>
+                        
+                        <p>—Hará unas dos horas su padre encontró la cama vacía. Aunque el chico puede haberse marchado en cualquier momento de la noche.</p>
+                        
+                        <p>—Sí —dije—. Es posible.</p>
+                        
+                        <p>—Le están buscando por todas partes —continuó la chica—. Y acaba de llegar un coche de la policía.</p>
+                        
+                        <p>—Puede que se levantase temprano y fuera a escalar las rocas —insinué.</p>
+                        
+                        <p>Sus ojos grandes, negros y obsesionados se posaron un momento en mi rostro, luego se desviaron hacia otro sitio.</p>
+                        
+                        <p>—No lo creo —dijo y salió.</p>
+                        
+                        <p>Me vestí a toda prisa y bajé corriendo a la playa. Dos policías nativos con uniforme caqui se encontraban allí con míster Edwards, el director. Era míster Edwards quien llevaba la voz cantante. Los dos policías le escuchaban pacientemente. A lo lejos, en ambos extremos de la playa, pude ver pequeños grupos de gente, sirvientes del hotel además de huéspedes, que se extendían en abanico y se encaminaban hacia las rocas. Hacía una hermosa mañana. El cielo era azul como el humo, con un leve toque amarillo. El sol estaba en lo alto y dibujaba diamantes sobre toda la superficie del mar tranquilo. Y míster Edwards hablaba en voz alta con los dos policías nativos y agitaba los brazos.</p>
+                        
+                        <p>Yo quería ayudar. ¿Qué debía hacer? ¿Hacia dónde debía dirigirme? No hubiese servido de nada limitarme a seguir a los demás. De modo que continué caminando hacia míster Edwards. Fue más o menos entonces cuando divisé la barca de pesca. La larga canoa de madera con un solo mástil y una vela marrón agitada por la brisa se encontraba aún bastante lejos de la playa, pero hacia ella se dirigía. Los dos nativos que iban a bordo, uno en cada extremo, remaban con fuerza. Remaban con gran energía. Los remos se alzaban y caían con tan tremenda velocidad que hubiérase dicho que se trataba de una regata. Me detuve para contemplarlos. ¿Por qué tendrían tanta prisa por alcanzar la playa? Era obvio que tenían algo que contar. Mantuve los ojos sobre la canoa. A mi izquierda pude oír que míster Edwards les decía a los dos policías:</p>
+                        
+                        <p>—Es perfectamente ridículo. No puedo tolerar que la gente desaparezca por las buenas del hotel. Será mejor que se den prisa en encontrarle, ¿entendido? Una de dos: o ha salido a dar una vuelta y se ha perdido o le han secuestrado. En uno u otro caso, es responsabilidad de la policía...</p>
+                        
+                        <p>La barca de pesca pasó rozando el mar y aterrizó sobre la arena al borde del agua. Los dos nativos dejaron caer los remos y saltaron a tierra. Luego echaron a correr playa arriba. Reconocí al que iba delante: era Willy. Cuando divisó al director y a los dos policías, se dirigió rápidamente hacia ellos.</p>
+                        
+                        <p>—¡Eh, míster Edwards! —gritó Willy—. </p>
+                        
+                        <p>¡Acabamos de ver una cosa rarísima!</p>
+                        
+                        <p>El director se puso rígido y volvió la cabeza. Los dos policías permanecieron impasibles. Estaban acostumbrados a las personas excitables. Se las encontraban cada día.</p>
+                        
+                        <p>Willy se detuvo enfrente del grupo, con el pecho subiéndole y bajándole y la respiración entrecortada. El otro pescador le seguía de cerca. Ambos iban desnudos salvo por un diminuto taparrabo, y su piel negra relucía a causa del sudor.</p>
+                        
+                        <p>—Hemos remado a toda velocidad durante un largo trecho —dijo Willy, excusándose por tener la respiración entrecortada—. Creímos que debíamos regresar lo más aprisa posible y dar parte.</p>
+                        
+                        <p>—¿Dar parte de qué? —preguntó el director—. ¿Qué habéis visto?</p>
+                        
+                        <p>—¡Algo raro! ¡Rarísimo!</p>
+                        
+                        <p>—Desembucha de una vez, Willy. ¡Por el amor de Dios!</p>
+                        
+                        <p>—No me creerá —dijo Willy—. Nadie nos creerá. ¿No es así, Tom?</p>
+                        
+                        <p>—Así es —dijo el otro pescador, moviendo la cabeza vigorosamente—. Si Willy no hubiese estado conmigo para confirmarlo, ¡ni yo mismo me lo hubiese creído!</p>
+                        
+                        <p>—¿Qué es lo que no te hubieses creído? —preguntó míster Edwards—. Vamos, decidnos qué habéis visto.</p>
+                        
+                        <p>—Salimos a primera hora —dijo Willy—, sobre las cuatro de la madrugada y estaríamos a unas dos millas mar adentro cuando hubo luz suficiente para distinguir las cosas con claridad. De repente, al emerger el sol, vemos ante nosotros, a no más de cincuenta metros, vemos algo que no podíamos creer ni siquiera con nuestros ojos...</p>
+                        
+                        <p>—¿Qué? —dijo secamente míster Edwards—. ¡Sigue, por lo que más quieras!</p>
+                        
+                        <p>—Vemos aquella tortuga monstruosa nadando en el mar, la misma que ayer arrastramos a la playa, y vemos al chico sentado en lo alto del caparazón de la tortuga ¡cabalgando por el mar como si fuera a caballo!</p>
+                        
+                        <p>—¡Tienen que creernos! —exclamó el otro pescador—. ¡Yo también lo vi! ¡Tienen que creernos!</p>
+                        
+                        <p>Míster Edwards miró a los dos policías. Los dos policías miraron a los pescadores.</p>
+                        
+                        <p>—No nos estaréis tomando el pelo, ¿eh? —dijo uno de los policías.</p>
+                        
+                        <p>—¡Lo juro! —exclamó Willy—. ¡Es la pura verdad! ¡El muchachito cabalgaba a lomos de la vieja tortuga y sus pies ni siquiera tocaban el agua! ¡Estaba seco como un hueco y sentada tan cómodamente como podía estar! Así que fuimos tras él. Desde luego que fuimos tras él. Al principio tratamos de acercarnos a ellos silenciosamente, como hacemos siempre que perseguimos una tortuga, pero el chico nos vio. En aquel momento ya no estábamos muy lejos de ellos, ¿entienden? No más lejos que de aquí a la orilla. Y cuando nos vio, el chico se inclinó hacia adelante como si le dijera algo a la vieja tortuga y el animal levantó la cabeza y se puso a nadar como si la persiguiera el diablo. ¡Cómo corría la tortuga! Tom y yo podemos remar muy aprisa cuando queremos, ¡pero no teníamos ninguna probabilidad de alcanzar a aquel monstruo! ¡Ninguna! ¡Por lo menos corría el doble que nosotros! ¿Qué opinas tú, Tom?</p>
+                        
+                        <p>—Diría que por lo menos corría tres veces más —contestó Tom—. Y les diré por qué. Al cabo de diez o quince minutos nos llevaban una milla de ventaja.</p>
+                        
+                        <p>—¿Por qué diablo no llamasteis al pequeño? —preguntó el director—. ¿Por qué no le hablasteis antes, cuando estabais más cerca?</p>
+                        
+                        <p>—¡Pero si no paramos de llamarle! —exclamó Willy—. En cuanto el chico nos vio y dejamos de acércanos sigilosamente a él, entonces nos pusimos a chillar. Chillamos y le llamamos de todo para conseguir que subiese a bordo. “¡Eh, chico!”, le grité. “¡Vuelve con nosotros! ¡Te llevaremos a casa! ¡Eso que haces no está nada bien, chico! ¡Salta de ahí y nada mientras puedas y nosotros te recogeremos! ¡Vamos, muchacho, salta! Tu mamá te estará esperando en casa, pequeño, así que, ¿por qué no vienes con nosotros?” Y otra vez le grité: “¡Escúchame, chico! ¡Vamos a prometerte algo! ¡Te prometemos no capturar esa tortuga si te vienes con nosotros!”.</p>
+                        
+                        <p>—¿El os contestó? —preguntó el director.</p>
+                        
+                        <p>—¡Ni siquiera se volvió para mirarnos! —dijo Willy—. ¡Siguió sentado allí arriba, balanceando el cuerpo hacia adelante y hacia atrás como si azuzase a la vieja tortuga para que corriera más! ¡Perderá usted a ese muchachito, míster Edwards, a menos que alguien vaya a buscarlo en seguida y se lo traiga para acá!</p>
+                        
+                        <p>El rostro sonrosado del director se había vuelto blanco como el papel.</p>
+                        
+                        <p>—¿En qué dirección iban? —preguntó secamente.</p>
+                        
+                        <p>—Hacia el norte —contestó Willy—. Casi directamente hacia el norte.</p>
+                        
+                        <p>—¡Muy bien! —exclamó el director—. ¡Cogeremos la lancha rápida! Quiero que vengas con nosotros, Willy. Y tú también, Tom.</p>
+                        
+                        <p>El director, los dos policías y los dos pescadores echaron a correr hacia la lancha que se utilizaba para el esquí náutico, que se encontraba varada en la arena. La empujaron hacia el mar, e incluso el director les echó una mano, metiéndose en el mar hasta que el agua llegó hasta las rodillas de sus pantalones blancos y bien planchados. Luego subieron todos a bordo.</p>
+                        
+                        <p>Vi cómo se alejaban velozmente.</p>
+                        
+                        <p>Dos horas después les vi regresar. No habían visto nada.</p>
+                        
+                        <p>Durante todo el día lanchas rápidas y yates de los demás hoteles de la costa barrieron el océano. Por la tarde el padre del chico alquiló un helicóptero. El mismo subió al aparato, que estuvo en el aire durante tres horas. No encontraron ni rastro de la tortuga y del chico.</p>
+                        
+                        <p>La búsqueda se prolongó durante toda la semana, pero sin resultado alguno.</p>
+
+                        <p>Y ahora ha transcurrido casi un año desde aquel día. Durante este tiempo solo se ha recibido una noticia significativa. Un grupo de norteamericanos zarpó de Nassau, en las Bahamas, para pescar en alta mar, a la altura de una isla llamada Eleuthera. En aquella zona hay literalmente millares de arrecifes de coral e islotes deshabitados, y en uno de estos el capitán del yate divisó a través de sus prismáticos la figura de una persona de baja estatura. En el islote había una playa de arena y la persona estaba paseando por ella. Los prismáticos circularon de mano en mano y todos los que miraron a través de ellos coincidieron en afirmar que se trataba de algún niño. Huelga decir que se armó un gran alboroto a bordo del yate y que rápidamente recogieron los sedales. El capitán puso proa hacia el islote. Cuando se encontraban a media milla pudieron ver claramente, gracias a los prismáticos, que la figura que se paseaba por la playa era un chico y que este, pese a estar tostado por el sol, era de raza blanca y no un nativo. En aquel momento los que iban en el yate divisaron también algo que parecía una tortuga gigantesca y que se encontraba en la arena, cerca del muchacho. Lo que ocurrió a continuación sucedió muy rápidamente. El pequeño, que probablemente había visto el yate que se acercaba, saltó sobre la tortuga y el inmenso animal, tras meterse en el agua, empezó a nadar velozmente, dio la vuelta al islote, y se perdió de vista. El yate estuvo buscándoles durante un par de horas, pero no volvieron a ver ni al chico ni a la tortuga.</p>
+                        
+                        <p>No hay razón para no creer en esta noticia. Había cinco personas a bordo del yate.</p>
+                        
+                        <p>Cuatro de ellas eran americanas y el capitán era de Nassau. Todas ellas vieron sucesivamente al muchacho a través de los prismáticos.</p>
+                        
+                        <p>Para llegar por mar a la isla de Eleuthera desde Jamaica, primero hay que navegar doscientas cincuenta millas en dirección nordeste y cruzar el Paso de los Vientos entre Cuba y Haití. Luego hay que navegar otras trescientas millas como mínimo en dirección noroeste. Esto significa una distancia total de quinientas cincuenta millas, lo cual representa una travesía muy larga para un niño pequeño montado a lomos de una tortuga gigante.</p>
+                        
+                        <p>¿Quién sabe cómo interpretar todo esto?</p>
+                        
+                        <p>Puede que algún día el chico regrese, aunque personalmente dudo que lo haga. Tengo la impresión de que se siente muy feliz allí donde se encuentra.</p>
+                        <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                 <!-- /Cuento 1 -->
+                
+                <!--Cuento 2 -->
+                
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Rudyard Kipling</h2>
+                    <h1 class="chapter-title cafe">El gato que <br/><span class="oswald-light cafe">caminaba solo</span></h1>
+                   
+                    <div class="content-text">
+                        
+                        <p class="first-paragraph">Sucedieron estos hechos que voy a contarte, oh, querido mío, cuando los animales domésticos eran salvajes. El Perro era salvaje, como lo eran también el Caballo, la Vaca, la Oveja y el Cerdo, tan salvajes como pueda imaginarse, y vagaban por la húmeda y salvaje espesura en compañía de sus salvajes parientes; pero el más salvaje de todos los animales salvajes era el Gato. El Gato caminaba solo y no le importaba estar aquí o allá.</p>
+                        
+                        
+                        <p>También el Hombre era salvaje, claro está. Era terriblemente salvaje. No comenzó a domesticarse hasta que conoció a la Mujer y ella repudió su montaraz modo de vida. La Mujer escogió para dormir una bonita cueva sin humedades en lugar de un montón de hojas mojadas, y esparció arena limpia sobre el suelo, encendió un buen fuego de leña al fondo de la cueva y colgó una piel de Caballo Salvaje, con la cola hacia abajo, sobre la entrada; después dijo:</p>
+                        
+                        
+                        <p>—Límpiate los pies antes de entrar; de ahora en adelante tendremos un hogar.</p>
+                        
+                        
+                        <p>Esa noche, querido mío, comieron Cordero Salvaje asado sobre piedras calientes y sazonado con ajo y pimienta silvestres, y Pato Salvaje relleno de arroz silvestre, y alholva y cilantro silvestres, y tuétano de Buey Salvaje, y cerezas y granadillas silvestres. Luego, cuando el Hombre se durmió más feliz que un niño delante de la hoguera, la Mujer se sentó a cardar lana. Cogió un hueso del hombro de cordero, la gran paletilla plana, contempló los portentosos signos que había en él, arrojó más leña al fuego e hizo un conjuro, el primer Conjuro Cantado del mundo.</p>
+                        
+                    
+                        
+                        <p>En la húmeda y salvaje espesura, los animales salvajes se congregaron en un lugar desde donde se alcanzaba a divisar desde muy lejos la luz del fuego y se preguntaron qué podría significar aquello.</p>
+                        
+                        <p>Entonces Caballo Salvaje golpeó el suelo con la pezuña y dijo:</p>
+                        
+                        <p>—Oh, amigos y enemigos míos, ¿por qué han hecho esa luz tan grande el Hombre y la Mujer en esa enorme cueva?, ¿cómo nos perjudicará a nosotros?</p>
+                        
+                        <p>Perro Salvaje alzó el morro, olfateó el aroma del asado de cordero y dijo:</p>
+                        
+                        <p>—Voy a ir allí, observaré todo y me enteraré de lo que sucede, y me quedaré, porque creo que es algo bueno. Acompáñame, Gato.</p>
+                        
+                        <p>—¡Ni hablar! —replicó el Gato—. Soy el Gato que camina solo y a quien no le importa estar aquí o allá. No pienso acompañarte.</p>
+                        
+                        <p>—Entonces nunca volveremos a ser amigos —apostilló Perro Salvaje, y se marchó trotando hacia la cueva.</p>
+                        
+                        <p>Pero cuando el Perro se hubo alejado un corto trecho, el Gato se dijo a sí mismo:</p>
+                        
+                        <p>—Si no me importa estar aquí o allá, ¿por qué no he de ir allí para observarlo todo y enterarme de lo que sucede y después marcharme?</p>
+                        
+                        <p>De manera que siguió al Perro con mucho, muchísimo sigilo, y se escondió en un lugar desde donde podría oír todo lo que se dijera.</p>
+                        
+                        <p>Cuando Perro Salvaje llegó a la boca de la cueva, levantó ligeramente la piel de Caballo con el morro y husmeó el maravilloso olor del cordero asado. La Mujer lo oyó, se rio y dijo:</p>
+                        
+                        <p>—Aquí llega la primera criatura salvaje de la salvaje espesura. ¿Qué deseas?</p>
+                        
+                        <p>—Oh, enemiga mía y esposa de mi enemigo, ¿qué es eso que tan buen aroma desprende en la salvaje espesura? —preguntó Perro Salvaje.</p>
+                        
+                        <p>Entonces la Mujer cogió un hueso de cordero asado y se lo arrojó a Perro Salvaje diciendo:</p>
+                        
+                        <p>—Criatura salvaje de la salvaje espesura, si ayudas a mi Hombre a cazar de día y a vigilar esta cueva de noche, te daré tantos huesos asados como quieras.</p>
+                        
+                        <p>—¡Ah! —exclamó el Gato al oírla—, esta Mujer es muy sabia, pero no tan sabia como yo.</p>
+                        
+                        <p>Perro Salvaje entró a rastras en la cueva, recostó la cabeza en el regazo de la Mujer y dijo:</p>
+                        
+                        <p>—Oh, amiga mía y esposa de mi amigo, ayudaré a tu Hombre a cazar durante el día y de noche vigilaré vuestra cueva.</p>
+                        
+                        <p>—¡Ah! —repitió el Gato, que seguía escuchando—, este Perro es un verdadero estúpido.</p>
+                        
+                        <p>Y se alejó por la salvaje y húmeda espesura meneando la cola y andando sin otra compañía que su salvaje soledad. Pero no le contó nada a nadie.</p>
+                        
+                        <p class="resaltado">Y se alejó por la salvaje y húmeda espesura meneando la cola y andando sin otra compañía que su salvaje soledad.</p>
+                        
+                        <p>Al despertar por la mañana, el Hombre exclamó:</p>
+                        
+                        <p>—¿Qué hace aquí Perro Salvaje?</p>
+                        
+                        <p>—Ya no se llama Perro Salvaje —lo corrigió la Mujer—, sino Primer Amigo, porque va a ser nuestro amigo por los siglos de los siglos. Llévalo contigo cuando salgas de caza.</p>
+                        
+                        <p>La noche siguiente la Mujer cortó grandes brazadas de hierba fresca de los prados y las secó junto al fuego, de manera que olieran como heno recién segado; luego tomó asiento a la entrada de la cueva y trenzó una soga con una piel de caballo; después se quedó mirando el hueso de hombro de cordero, la enorme paletilla, e hizo un conjuro, el segundo Conjuro Cantado del mundo.</p>
+                        
+                        <p>En la salvaje espesura, los animales salvajes se preguntaban qué le habría ocurrido a Perro Salvaje. Finalmente, Caballo Salvaje golpeó el suelo con la pezuña y dijo:</p>
+                        
+                        <p>—Iré a ver por qué Perro Salvaje no ha regresado. Gato, acompáñame.</p>
+                        
+                        <p>—¡Ni hablar! —respondió el Gato—. Soy el Gato que camina solo y a quien no le importa estar aquí o allá. No pienso acompañarte.</p>
+                        
+                        <p>Sin embargo, siguió a Caballo Salvaje con mucho, muchísimo sigilo, y se escondió en un lugar desde donde podría oír todo lo que se dijera.</p>
+                        
+                        <p>Cuando la Mujer oyó a Caballo Salvaje dando traspiés y tropezando con sus largas crines, se rio y dijo:</p>
+                        
+                        
+                        <p>—Aquí llega la segunda criatura salvaje de la salvaje espesura. ¿Qué deseas?</p>
+                        
+                        <p>—Oh, enemiga mía y esposa de mi enemigo —respondió Caballo Salvaje—, ¿dónde está Perro Salvaje?</p>
+                        
+                        <p>La Mujer se rio, cogió la paletilla de cordero, la observó y dijo:</p>
+                        
+                        <p>—Criatura salvaje de la salvaje espesura, no has venido buscando a Perro Salvaje, sino porque te ha atraído esta hierba tan rica.</p>
+                        
+                        <p>Y dando traspiés y tropezando con sus largas crines, Caballo Salvaje dijo:</p>
+                        
+                        <p>—Es cierto, dame de comer de esa hierba.</p>
+                        
+                        <p>Criatura salvaje de la salvaje espesura —repuso la Mujer—, inclina tu salvaje cabeza, ponte esto que te voy a dar y podrás comer esta maravillosa hierba tres veces al día.</p>
+                        
+                        <p>—¡Ah! —exclamó el Gato al oírla—, esta Mujer es muy lista, pero no tan lista como yo.</p>
+                        
+                        <p>Caballo Salvaje inclinó su salvaje cabeza y la Mujer le colocó la trenzada soga de piel en torno al cuello. Caballo Salvaje relinchó a los pies de la Mujer y dijo:</p>
+                        
+                        
+                        <p>—Oh, dueña mía y esposa de mi dueño, seré tu servidor a cambio de esa hierba maravillosa.</p>
+                        
+                        <p>—¡Ah! —repitió el Gato, que seguía escuchando—, ese Caballo es un verdadero estúpido.</p>
+                        
+                        <p>Y se alejó por la salvaje y húmeda espesura meneando la cola y andando sin otra compañía que su salvaje soledad.</p>
+                        
+                        <p>Cuando el Hombre y el Perro regresaron después de la caza, el Hombre preguntó:</p>
+                        
+                        <p>—¿Qué está haciendo aquí Caballo Salvaje?</p>
+                        
+                        <p>—Ya no se llama Caballo Salvaje —replicó la Mujer—, sino Primer Servidor, porque nos llevará a su grupa de un lado a otro por los siglos de los siglos. Llévalo contigo cuando vayas de caza.</p>
+                        
+                        <p>Al día siguiente, manteniendo su salvaje cabeza enhiesta para que sus salvajes cuernos no se engancharan en los árboles silvestres, Vaca Salvaje se aproximó a la cueva, y el Gato la siguió y se escondió como lo había hecho en las ocasiones anteriores; y todo sucedió de la misma forma que las otras veces; y el Gato repitió las mismas cosas que había dicho antes, y cuando Vaca Salvaje prometió darle su leche a la Mujer día tras día a cambio de aquella hierba maravillosa, el Gato se alejó por la salvaje y húmeda espesura, caminando solo como era su costumbre.</p>
+                        
+                        <p>Y cuando el Hombre, el Caballo y el Perro regresaron a casa después de cazar y el Hombre formuló las mismas preguntas que en las ocasiones anteriores, la Mujer dijo:</p>
+                        
+                        <p>—Ya no se llama Vaca Salvaje, sino Donante de Cosas Buenas. Nos dará su leche blanca y tibia por los siglos de los siglos, y yo cuidaré de ella mientras ustedes tres salen de caza.</p>
+                    
+                        
+                        <p>Al día siguiente, el Gato aguardó para ver si alguna otra criatura salvaje se dirigía a la cueva, pero como nadie se movió, el Gato fue allí solo, y vio a la Mujer ordeñando a la Vaca, y vio la luz del fuego en la cueva, y olió el aroma de la leche blanca y tibia.</p>
+                        
+                        <p>—Oh, enemiga mía y esposa de mi enemigo —dijo el Gato—, ¿a dónde ha ido Vaca Salvaje?</p>
+                        
+                        <p>La Mujer rio y respondió:</p>
+                        
+                        <p>—Criatura salvaje de la salvaje espesura, regresa a los bosques de donde has venido, porque ya he trenzado mi cabello y he guardado la paletilla, y no nos hacen falta más amigos ni servidores en nuestra cueva.</p>
+                        
+                        <p>—No soy un amigo ni un servidor —replicó el Gato—. Soy el Gato que camina solo y quiero entrar en tu cueva.</p>
+                        
+                        <p>—¿Por qué no viniste con Primer Amigo la primera noche? —preguntó la Mujer.</p>
+                        
+                        <p>—¿Ha estado contando chismes sobre mí Perro Salvaje? —inquirió el Gato, enfadado.</p>
+                        
+                        <p>Entonces la Mujer se rio y respondió:</p>
+                        
+                        <p>—Eres el Gato que camina solo y a quien no le importa estar aquí o allá. No eres un amigo ni un servidor. Tú mismo lo has dicho. Márchate y camina solo por cualquier lugar.</p>
+                        
+                        <p>Fingiendo estar compungido, el Gato dijo:</p>
+                        
+                        <p>—¿Nunca podré entrar en la cueva? ¿Nunca podré sentarme junto a la cálida lumbre? ¿Nunca podré beber la leche blanca y tibia? Eres muy sabia y muy hermosa. No deberías tratar con crueldad ni siquiera a un gato.</p>
+                        
+                        <p>—Que era sabia no me era desconocido, mas hasta ahora no sabía que fuera hermosa. Por eso voy a hacer un trato contigo. Si alguna vez te digo una sola palabra de alabanza, podrás entrar en la cueva.</p>
+                        
+                        <p>—¿Y si me dices dos palabras de alabanza? —preguntó el Gato.</p>                        
+                        <p>—Nunca las diré —repuso la Mujer—, mas si te dijera dos palabras de alabanza, podrías sentarte en la cueva junto al fuego.</p>
+                        
+                        <p>—¿Y si me dijeras tres palabras? —insistió el Gato.</p>
+                        
+                        <p>—Nunca las diré —replicó la Mujer—, pero si llegara a decirlas, podrías beber leche blanca y tibia tres veces al día por los siglos de los siglos.</p>
+                        
+                        <p>Entonces el Gato arqueó el lomo y dijo:</p>
+                        
+                        <p>—Que la cortina de la entrada de la cueva y el fuego del rincón del fondo y los cántaros de leche que hay junto al fuego recuerden lo que ha dicho mi enemiga y esposa de mi enemigo —y se alejó a través de la salvaje y húmeda espesura meneando su salvaje rabo y andando sin más compañía que su propia y salvaje soledad.</p>
+                        
+                        <p>Por la noche, cuando el Hombre, el Caballo y el Perro volvieron a casa después de la caza, la Mujer no les contó el trato que había hecho, pensando que tal vez no les parecería bien.</p>
+                        
+                        <p>El Gato se fue lejos, muy lejos, y se escondió en la salvaje y húmeda espesura sin más compañía que su salvaje soledad durante largo tiempo, hasta que la Mujer se olvidó de él por completo. Solo el Murciélago, el pequeño Murciélago Cabezabajo que colgaba del techo de la cueva sabía dónde se había escondido el Gato y todas las noches volaba hasta allí para transmitirle las últimas novedades.<br>Una noche el Murciélago dijo:</p>
+                        
+                        <p>—Hay un Bebé en la cueva. Es una criatura recién nacida, rosada, rolliza y pequeña, y a la Mujer le gusta mucho.</p>
+                        
+                        <p>—Ah —dijo el Gato, sin perderse una palabra—, pero ¿qué le gusta al Bebé?</p>
+                        
+                        <p>—Al Bebé le gustan las cosas suaves que hacen cosquillas —respondió el Murciélago—. Le gustan las cosas cálidas a las que puede abrazarse para dormir. Le gusta que jueguen con él. Le gustan todas esas cosas.</p>
+                        
+                        <p>—Ah —concluyó el Gato—, entonces ha llegado mi hora.</p>
+                        
+                        <p>La noche siguiente, el Gato atravesó la salvaje y húmeda espesura y se ocultó muy cerca de la cueva a la espera de que amaneciera. Al alba, la mujer se afanaba en cocinar y el Bebé no cesaba de llorar ni de interrumpirla; así que lo sacó fuera de la cueva y le dio un puñado de piedrecitas para que jugara con ellas. Pero el Bebé continuó llorando.</p>
+                        
+                        <p>Entonces el Gato extendió su almohadillada pata y le dio unas palmaditas en la mejilla, y el Bebé hizo gorgoritos; luego el Gato se frotó contra sus rechonchas rodillas y le hizo cosquillas con el rabo bajo la regordeta barbilla. Y el Bebé rio; al oírlo, la Mujer sonrío.</p>
+                        
+                        <p>Entonces el Murciélago, el pequeño Murciélago Cabezabajo que estaba colgado a la entrada de la cueva dijo:</p>
+                        
+                        <p>—Oh, anfitriona mía, esposa de mi anfitrión y madre de mi anfitrión, una criatura salvaje de la salvaje espesura está jugando con tu Bebé y lo tiene encantado.</p>
+                        
+                        <p>—Loada sea esa criatura salvaje, quienquiera que sea —dijo la Mujer enderezando la espalda—, porque esta mañana he estado muy ocupada y me ha prestado un buen servicio.</p>
+                        
+                        <p>En ese mismísimo instante, querido mío, la piel de caballo que estaba colgada con la cola hacia abajo a la entrada de la cueva cayó al suelo… ¡Cómo así!… porque la cortina recordaba el trato, y cuando la Mujer fue a recogerla… ¡hete aquí que el Gato estaba confortablemente sentado dentro de la cueva!</p>
+                        
+                        <p>—Oh, enemiga mía, esposa de mi enemigo y madre de mi enemigo —dijo el Gato—, soy yo, porque has dicho una palabra elogiándome y ahora puedo quedarme en la cueva por los siglos de los siglos. Mas sigo siendo el Gato que camina solo y a quien no le importa estar aquí o allá.</p>
+                        
+                        <p>Muy enfadada, la Mujer apretó los labios, cogió su rueca y comenzó a hilar.</p>
+                        
+                        <p>Pero el Bebé rompió a llorar en cuanto el Gato se marchó; la Mujer no logró apaciguarlo y él no cesó de revolverse ni de patalear hasta que se le amorató el semblante.</p>
+                        
+                        <p>—Oh, enemiga mía, esposa de mi enemigo y madre de mi enemigo —dijo el Gato—, coge una hebra del hilo que estás hilando y átala al huso, luego arrastra este por el suelo y te enseñaré un truco que hará que tu Bebé ría tan fuerte como ahora está llorando.</p>
+                        
+                        <p>—Voy a hacer lo que me aconsejas —comentó la Mujer—, porque estoy a punto de volverme loca, pero no pienso darte las gracias.</p>
+                        
+                        <p>Ató la hebra al pequeño y panzudo huso y empezó a arrastrarlo por el suelo. El Gato se lanzó en su persecución, lo empujó con las patas, dio una voltereta y lo tiró hacia atrás por encima de su hombro; luego lo arrinconó entre sus patas traseras, fingió que se le escapaba y volvió a abalanzarse sobre él. Viéndole hacer estas cosas, el Bebé terminó por reír tan fuerte como antes llorara, gateó en pos de su amigo y estuvo retozando por toda la cueva hasta que, ya fatigado, se acomodó para descabezar un sueño con el Gato en brazos.</p>
+                        
+                        <p>—Ahora —dijo el Gato— le voy a cantar a Bebé una canción que lo mantendrá dormido durante una hora.</p>
+                        
+                        <p>Y comenzó a ronronear subiendo y bajando el tono hasta que el Bebé se quedó profundamente dormido. contemplándolos, la Mujer sonrió y dijo:</p>
+                        
+                        <p>—Has hecho una labor estupenda. No cabe duda de que eres muy listo, oh, Gato.</p>
+                        
+                         <p class="resaltado">—Has hecho una labor estupenda. No cabe duda de que eres muy listo, oh, Gato.</p>
+                        
+                        <p>En ese preciso instante, querido mío, el humo de la fogata que estaba encendida al fondo de la cueva descendió desde el techo cubriéndolo todo de negros nubarrones, porque el humo recordaba el trato, y cuando se disipó, hete aquí que el Gato estaba cómodamente sentado junto al fuego.</p>
+                        
+                        <p>—Oh, enemiga mía, esposa de mi enemigo y madre de mi enemigo —dijo el Gato—, aquí me tienes, porque me has elogiado por segunda vez y ahora podré sentarme junto al cálido fuego del fondo de la cueva por los siglos de los siglos. Pero sigo siendo el Gato que camina solo y a quien no le importa estar aquí o allá.</p>
+                        
+                        <p>Entonces la Mujer se enfadó mucho, muchísimo, se soltó el pelo, echó más leña al fuego, sacó la ancha paletilla de cordero y comenzó a hacer un conjuro que le impediría elogiar al Gato por tercera vez. No fue un Conjuro Cantado, querido mío, sino un Conjuro Silencioso; y, poco a poco, en la cueva se hizo un silencio tan profundo que un Ratoncito diminuto salió sigilosamente de un rincón y echó a correr por el suelo.</p>
+                        
+                        <p>—Oh, enemiga mía, esposa de mi enemigo y madre de mi enemigo —dijo el Gato—, ¿forma parte de tu conjuro ese Ratoncito?</p>
+                        
+                        <p>—No —repuso la Mujer, y, tirando la paletilla al suelo, se encaramó a un escabel que había frente al fuego y se apresuró a recoger su melena en una trenza por miedo a que el Ratoncito trepara por ella.</p>
+                        
+                        <p>—¡Ah! —exclamó el Gato, muy atento—, entonces ¿el Ratón no me sentará mal si me lo zampo?</p>
+                        
+                        <p>—No —contestó la Mujer, trenzándose el pelo—; zámpatelo ahora mismo y te quedaré eternamente agradecida.</p>
+                        
+                        <p>El Gato dio un salto y cayó sobre el Ratón.</p>
+                        
+                        <p>—Un millón de gracias, oh, Gato —dijo la Mujer—. Ni siquiera Primer Amigo es lo bastante rápido para atrapar Ratoncitos como tú lo has hecho. Debes de ser muy inteligente.</p>
+                        
+                        <p>En ese preciso instante, querido mío, el cántaro de leche que estaba junto al fuego se partió en dos pedazos… ¿Cómo así?… porque recordaba el trato, y cuando la Mujer bajó del escabel… ¡hete aquí que el Gato estaba bebiendo a lametazos la leche blanca y tibia que quedaba en uno de los pedazos rotos!</p>
+                        
+                        <p>—Oh, enemiga mía, esposa de mi enemigo y madre de mi enemigo —dijo el Gato—, aquí me tienes, porque me has elogiado por tercera vez y ahora podré beber leche blanca y tibia tres veces al día por los siglos de los siglos. Pero sigo siendo el Gato que camina solo y a quien no le importa estar aquí o allá.</p>
+                        
+                        <p>Entonces la Mujer rompió a reír, puso delante del Gato un cuenco de leche blanca y tibia y comentó:</p>
+                        
+                        <p>—Oh, Gato, eres tan inteligente como un Hombre, pero recuerda que ni el Hombre ni el Perro han participado en el trato y no sé qué harán cuando regresen a casa.</p>
+                        
+                        <p>—¿Y a mí qué más me da? —exclamó el Gato—.</p>
+                        
+                        <p>Mientras tenga un lugar reservado junto al fuego y leche para beber tres veces al día me da igual lo que puedan hacer el Hombre o el Perro.</p>
+                        
+                        <p>Aquella noche, cuando el Hombre y el Perro entraron en la cueva, la Mujer les contó de cabo a rabo la historia del acuerdo, y el Hombre dijo:</p>
+                        
+                        <p>—Está bien, pero el Gato no ha llegado a ningún acuerdo conmigo ni con los Hombres cabales que me sucederán.</p>
+                        
+                        <p>Se quitó las dos botas de cuero, cogió su pequeña hacha de piedra (y ya suman tres) y fue a buscar un trozo de madera y su cuchillo de hueso (y ya suman cinco), y colocando en fila todos los objetos, prosiguió:</p>
+                        
+                        <p>—Ahora vamos a hacer un trato. Si cuando estás en la cueva no atrapas Ratones por los siglos de los siglos, arrojaré contra ti estos cinco objetos siempre que te vea y todos los Hombres cabales que me sucedan harán lo mismo.</p>
+                        
+                        <p>—Ah —dijo la Mujer, muy atenta—. Este Gato es muy listo, pero no tan listo como mi Hombre.</p>
+                        
+                        <p>El Gato contó los cinco objetos (todos parecían muy contundentes) y dijo:</p>
+                        
+                        <p>—Atraparé Ratones cuando esté en la cueva por los siglos de los siglos, pero sigo siendo el Gato que camina solo y a quien no le importa estar aquí o allá.</p>
+                        
+                        <p>—No será así mientras yo esté cerca —concluyó el Hombre—. Si no hubieras dicho eso, habría guardado estas cosas (por los siglos de los siglos), pero ahora voy arrojar contra ti mis dos botas y mi pequeña hacha de piedra (y ya suman tres) siempre que tropiece contigo, y lo mismo harán todos los Hombres cabales que me sucedan.</p>
+                        
+                        <p>—Espera un momento —terció el Perro—, yo todavía no he llegado a un acuerdo con él —se sentó en el suelo, lanzando terribles gruñidos y enseñando los dientes, y prosiguió—: si no te portas bien con el Bebé por los siglos de los siglos mientras yo esté en la cueva, te perseguiré hasta atraparte, y cuando te coja te morderé, y lo mismo harán todos los Perros cabales que me sucedan.</p>
+                        
+                        <p>—¡Ah! —exclamó la Mujer; que estaba escuchando—. Este Gato es muy listo, pero no es tan listo como el Perro.</p>
+                        
+                        <p>El Gato contó los dientes del Perro (todos parecían muy afilados) y dijo:</p>
+                        
+                        <p>—Me portaré bien con el Bebé mientras esté en la cueva por los siglos de los siglos, siempre que no me tire del rabo con demasiada fuerza. Pero sigo siendo el Gato que camina solo y a quien no le importa estar aquí o allá.</p>
+                        
+                        <p>—No será así mientras yo esté cerca —dijo el Perro—. Si no hubieras dicho eso, habría cerrado la boca por los siglos de los siglos, pero ahora pienso perseguirte y hacerte trepar a los árboles siempre que te vea, y lo mismo harán los Perros cabales que me sucedan.</p>
+                        
+                        <p>A continuación, el Hombre arrojó contra el Gato sus dos botas y su pequeña hacha de piedra (que suman tres), y el Gato salió corriendo de la cueva perseguido por el Perro, que lo obligó a trepar a un árbol; y desde entonces, querido mío, tres de cada cinco Hombres cabales siempre han arrojado objetos contra el Gato cuando se topaban con él y todos los Perros cabales lo han perseguido, obligándolo a trepar a los árboles. Pero el Gato también ha cumplido su parte del trato. Ha matado Ratones y se ha portado bien con los Bebés mientras estaba en casa, siempre que no le tirasen del rabo con demasiada fuerza. Pero una vez cumplidas sus obligaciones y en sus ratos libres, es el Gato que camina solo y a quien no le importa estar aquí o allá, y si miras por la ventana de noche lo verás meneando su salvaje rabo y andando sin más compañía que su salvaje soledad… como siempre lo ha hecho.</p>
+                        
+                        
+                        <hr class="line-separator line-orange" />
+                    </div>
+                </div>
+                
+                
+                <!-- /Cuento 2 -->
+                
+                 <!--Cuento 3 -->
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Alexandr Pushkin</h2>
+                    <h1 class="chapter-title cafe">El fabricante<br/><span class="oswald-light cafe">de ataúdes</span></h1>
+                  
+                    <div class="content-text">
+                        
+                        <p class="first-paragraph">Los últimos enseres del fabricante de ataúdes Adrián Prójorov se cargaron sobre el coche fúnebre, y la pareja de rocines se arrastró por cuarta vez de la Basmánnaya a la Nikítinskaya, calle a la que el fabricante se trasladaba con todos los suyos. Tras cerrar la tienda, clavó a la puerta un letrero en el que se anunciaba que la casa se vendía o arrendaba, y se dirigió a pie al nuevo domicilio. Cerca ya de la casita amarilla, que desde hacía tanto había tentado su imaginación y que por fin había comprado por una respetable suma, el viejo artesano sintió con sorpresa que no había alegría en su corazón.</p>
+                        
+                        
+                        <p>Al atravesar el desconocido umbral y ver el alboroto que reinaba en su nueva morada, suspiró recordando su vieja casucha donde a lo largo de dieciocho años todo se había regido por el más estricto orden; comenzó a regañar a sus dos hijas y a la sirvienta por su parsimonia, y él mismo se puso a ayudarlas.</p>
+                        
+                        
+                        <p>Pronto todo estuvo en su lugar: el rincón de las imágenes con los iconos, el armario con la vajilla; la mesa, el sofá y la cama ocuparon los rincones que él les había destinado en la habitación trasera; en la cocina y el salón se pusieron los artículos del dueño de la casa: ataúdes de todos los colores y tamaños, así como armarios con sombreros, mantones y antorchas funerarias. Sobre el portón se elevó un anuncio que representaba a un corpulento Eros con una antorcha invertida en una mano, con la inscripción: “Aquí se venden y se tapizan ataúdes sencillos y pintados, se alquilan y se reparan los viejos”. Las muchachas se retiraron a su salita. Adrián recorrió su vivienda, se sentó junto a una ventana y mandó que prepararan el samovar.</p>
+                        
+                        
+                        <p>El lector versado sabe bien que tanto Shakespeare como Walter Scott han mostrado a sus sepultureros como personas alegres y dadas a la broma, para así, con el contraste, sorprender nuestra imaginación. Pero en nuestro caso, por respeto a la verdad, no podemos seguir su ejemplo y nos vemos obligados a reconocer que el carácter de nuestro fabricante de ataúdes casaba por entero con su lúgubre oficio. Adrián Prójorov por lo general tenía un aire sombrío y pensativo. Solo rompía su silencio para regañar a sus hijas cuando las encontraba de brazos cruzados mirando a los transeúntes por la ventana, o bien para pedir una suma exagerada por sus obras a los que tenían la desgracia (o la suerte, a veces) de necesitarlas.</p>
+                        
+                        <p>De modo que Adrián, sentado junto a la ventana y tomándose la séptima taza de té, se hallaba sumido como de costumbre en sus tristes reflexiones. Pensaba en el aguacero que una semana atrás había sorprendido justo a las puertas de la ciudad al entierro de un brigadier retirado. Por culpa de la lluvia muchos mantos se habían encogido, y torcido muchos sombreros. Los gastos se preveían inevitables, pues las viejas reservas de prendas funerarias se le estaban quedando en un estado lamentable. Confiaba en resarcirse de las pérdidas con la vieja comerciante Triújina, que estaba al borde de la muerte desde hacía cerca de un año. Pero Triújina se estaba muriendo en Razguliái, y Prójorov temía que sus herederos, a pesar de su promesa, se ahorraran el esfuerzo de mandar a buscarlo tan lejos y se las arreglaran con la funeraria más cercana.</p>
+                        
+                        <p>Estas reflexiones se vieron casualmente interrumpidas por tres golpes francmasones en la puerta.</p>
+                        
+                        <p>—¿Quién hay? —preguntó Adrián.</p>
+                        
+                        <p>La puerta se abrió y un hombre en quien a primera vista se podía reconocer a un alemán artesano entró en la habitación y con aspecto alegre se acercó al fabricante de ataúdes.</p>
+                        
+                        <p>Excúseme, amable vecino —dijo aquel con un acento que hasta hoy no podemos oír sin echarnos a reír—, perdone que le moleste… Quería saludarlo cuanto antes. Soy zapatero, me llamo Gotlib Schultz, y vivo al otro lado de la calle, en la casa que está frente a sus ventanas. Mañana celebro mis bodas de plata y le ruego que usted y sus hijas vengan a comer a mi casa como buenos amigos.</p>
+                        
+                        <p>La invitación fue aceptada con benevolencia. El dueño de la casa rogó al zapatero que se sentara y tomara con él una taza de té, y gracias al natural abierto de Gotlib Schultz, al poco se pusieron a charlar amistosamente.</p>
+                        
+                        <p>—¿Cómo le va el negocio a su merced? —preguntó Adrián.</p>
+                        
+                        <p>—He-he-he —contestó Schultz—, ni mal ni bien. No puedo quejarme. Aunque, claro está, mi mercancía no es como la suya: un vivo puede pasarse sin botas, pero un muerto no puede vivir sin su ataúd.</p>
+                        
+                        <p>—Tan cierto como hay Dios —observó Adrián—. Y, sin embargo, si un vivo no tiene con qué comprarse unas botas, mal que le pese, seguirá andando descalzo; en cambio, un difunto pordiosero, aunque sea de balde, se llevará su ataúd.</p>
+                        
+                        <p>Así prosiguió cierto rato la charla entre ambos; al fin el zapatero se levantó y antes de despedirse del fabricante de ataúdes, le renovó su invitación.</p>
+                        
+                        <p>Al día siguiente, justo a las doce, el fabricante de ataúdes y sus hijas salieron de su casa recién comprada y se dirigieron a la de su vecino. No voy a describir ni el caftán ruso de Adrián Prójorov, ni los atavíos europeos de Akulina y Daria, apartándome en este caso de la costumbre adoptada por los novelistas actuales. No me parece, sin embargo, superfluo señalar que ambas muchachas llevaban sombreritos amarillos y zapatos rojos, algo que sucedía solo en ocasiones solemnes.</p>
+                        
+                        <p>La estrecha vivienda del zapatero estaba repleta de invitados, en su mayoría alemanes artesanos con sus esposas y sus oficiales. Entre los funcionarios rusos se encontraba un guardia de garita, el finés Yurko, que, a pesar de su humilde grado, había sabido ganarse la especial benevolencia del dueño.</p>
+                        
+                        <p>Había servido en este cargo de cuerpo y alma durante veinticinco años, como el cartero de Pogorelski. El incendio del año doce que destruyó la primera capital de Rusia, devoró también la garita amarilla del guardia. Pero tan pronto como fue expulsado el enemigo, en el lugar de la garita apareció una nueva, de color grisáceo, con blancas columnillas de estilo dórico, y Yurko volvió a ir y venir junto a ella con “su seguro y su coraza de arpillera”. Lo conocían casi todos los alemanes que vivían cerca de la Puerta Nikitínskie, y algunos de ellos incluso habían pasado en la garita de Yurko alguna noche del domingo al lunes.</p>
+                        
+                        <p>Adrián en seguida trabó relación con él, pues era persona a la que tarde o temprano podría necesitar, y en cuanto los convidados se dirigieron a la mesa, se sentaron juntos.</p>
+                        
+                        <p>El señor y la señora Schultz y su hija Lotchen, una muchacha de diecisiete años, reunidos con los comensales, atendían juntos a los invitados y ayudaban a servir a la cocinera. La cerveza corría sin parar. Yurko comía por cuatro: Adrián no se quedaba atrás; sus hijas hacían remilgos; la conversación en alemán se hacía por momentos más ruidosa. De pronto, el dueño reclamó la atención de los presentes y, tras descorchar una botella lacrada, pronunció en voz alta en ruso:</p>
+                        
+                        <p>—¡A la salud de mi buena Luise!</p>
+                  
+                        
+                        <p>—Brotó la espuma del vino achampañado. El anfitrión besó tiernamente la cara fresca de su cuarentona compañera, y los convidados bebieron ruidosamente a la salud de la buena Luise.</p>
+                        
+                        <p>—¡A la salud de mis amables invitados! —proclamó el anfitrión descorchando la segunda botella.</p>
+                        
+                        <p> los convidados se lo agradecieron vaciando de nuevo sus copas. Y uno tras otro siguieron los brindis: bebieron a la salud de cada uno de los invitados por separado, bebieron a la salud de Moscú y de una docena entera de ciudades alemanas, bebieron a la salud de todos los talleres en general y de cada uno en particular, bebieron a la salud de los maestros y de los oficiales. Adrián bebía con tesón, y se animó hasta tal punto que llegó a proponer un brindis ocurrente. De pronto uno de los invitados, un gordo panadero, levantó la copa y exclamó:</p>
+                        
+                        <p>—¡A la salud de aquellos para quienes trabajamos, unserer Kundleute!</p>
+                        
+                        <p>La propuesta, como todas, fue recibida con alegría y de manera unánime. Los convidados comenzaron a hacerse reverencias los unos a los otros: el sastre al zapatero, el zapatero al sastre, el panadero a ambos, todos al panadero, etcétera. Yurko, en medio de tales reverencias recíprocas, gritó dirigiéndose a su vecino:</p>
+                        
+                        <p>—¿Y tú? ¡Hombre, brinda a la salud de tus muertos!</p>
+                        
+                        <p>Todos se echaron a reír, pero el fabricante de ataúdes se sintió ofendido y frunció el ceño. Nadie lo había notado, los convidados siguieron bebiendo, y ya tocaban a vísperas cuando empezaron a levantarse de la mesa.</p>
+                        
+                        <p class="resaltado">Todos se echaron a reír, pero el fabricante de ataúdes se sintió ofendido y frunció el ceño. Nadie lo había notado, los convidados siguieron bebiendo, y ya tocaban a vísperas cuando empezaron a levantarse de la mesa.</p>
+                        
+                        <p>os convidados se marcharon tarde y la mayoría achispados. El gordo panadero y el encuadernador, cuya cara parecía envuelta en encarnado cordobán, llevaron del brazo a Yurko a su garita, observando en esta ocasión el proverbio ruso: “Hoy por ti, mañana por mí”. El fabricante de ataúdes llegó a casa, borracho y de mal humor.</p>
+                        
+                       
+                        
+                        <p>—Porque, vamos a ver —reflexionaba en voz alta—; ¿en qué es menos honesto mi oficio que el de los demás? ¡Ni que fuera yo hermano del verdugo! Y ¿de qué se ríen estos herejes? ¿O tengo yo algo de payaso de feria? Tenía ganas de invitarlos para remojar mi nueva casa, de darles un banquete por todo lo alto, ¿pero ahora?, ¡ni pensarlo! En cambio voy a llamar a aquellos para los que trabajo: a mis buenos muertos.</p>
+                        
+                        <p>—¿Qué dices, hombre? —preguntó la sirvienta que en aquel momento lo estaba descalzando—. ¡Qué tonterías dices? ¡Santíguate! ¡Convidar a los muertos! ¿A quién se le ocurre?</p>
+                        
+                        <p>—¡Como hay Dios que lo hago! —prosiguió Adrián—. Y mañana mismo. Mis buenos muertos, les ruego que mañana por la noche vengan a mi casa a celebrarlo, que he de agasajarles con lo mejor que tenga…</p>
+                        
+                        <p>Tras estas palabras, el fabricante de ataúdes se dirigió a la cama y no tardó en ponerse a roncar.</p>
+                        
+                        <p>En la calle aún estaba oscuro cuando vinieron a despertarlo. La mercadera Triújina había fallecido aquella misma noche y un mensajero de su administrador había llegado a caballo para darle la noticia. El fabricante de ataúdes le dio por ello una moneda de diez kopeks para vodka, se vistió de prisa, tomó un coche y se dirigió a Razguliái.</p>
+                        
+                        
+                        <p>Junto a la puerta de la casa de la difunta ya estaba la policía y, como los cuervos cuando huelen la carne muerta, deambulaban otros mercaderes. La difunta yacía sobre la mesa, amarilla como la cera, pero aún no deformada por la descomposición. A su alrededor se agolpaban parientes, vecinos y criados. Todas las ventanas estaban abiertas, las velas ardían, los sacerdotes rezaban.</p>
+                        
+                        <p>Adrián se acercó al sobrino de Triújina, un joven mercader con una levita a la moda, y le informó que el féretro, las velas, el sudario y demás accesorios fúnebres llegarían al instante y en perfecto estado. El heredero le dio distraído las gracias, le dijo que no iba a regatearle el precio y que se encomendaba en todo a su honesto proceder. El fabricante, como de costumbre, juró que no le cobraría más que lo justo y, tras intercambiar una mirada significativa con el administrador, fue a disponerlo todo.</p>
+                        
+                        <p>Se pasó el día entero yendo de Razguliái a la Puerta Nikítinskie y de vuelta: hacia la tarde lo tuvo listo todo y, dejando libre a su cochero, se marchó andando para su casa.</p>
+                        
+                        <p>Era una noche de luna. El fabricante de ataúdes llegó felizmente hasta la Puerta Nikítinskie. Junto a la iglesia de la Ascensión le dio el alto nuestro conocido Yurko que, al reconocerlo, le deseó las buenas noches. Era tarde. El fabricante de ataúdes ya se acercaba a su casa, cuando de pronto le pareció que alguien llegaba a su puerta, la abría y desaparecía tras ella.</p>
+                        
+                        <p>“¿Qué significará esto? —pensó Adrián—. ¿Quién más me necesitará? ¿No será un ladrón que se ha metido en casa? ¿O es algún amante que viene a ver a las bobas de mis hijas? ¡Lo que faltaba!”.</p>
+                        
+                        
+                        <p>Y el constructor de ataúdes se disponía ya a llamar en su ayuda a su amigo Yurko, cuando alguien que se acercaba a la valla y se disponía a entrar en la casa, al ver al dueño que corría hacia él, se detuvo y se quitó de la cabeza un sombrero de tres picos. A Adrián le pareció reconocer aquella cara, pero con las prisas no tuvo tiempo de observarlo como es debido.</p>
+                        
+                        <p>—¿Viene usted a mi casa? —dijo jadeante Adrián—, pase, tenga la bondad.</p>
+                        
+                        <p>—¡Nada de cumplidos, hombre! —contestó el otro con voz sorda—. ¡Pasa delante y enseña a los invitados el camino!</p>
+                        
+                        <p>Adrián tampoco tuvo tiempo para andarse con cumplidos. La portezuela de la verja estaba abierta, se dirigió hacia la escalera, y el otro le siguió. Le pareció que por las habitaciones andaba gente.</p>
+                        
+                        <p>“¡¿Qué diablos pasa?!”, pensó.</p>
+                        
+                        <p>Se dio prisa en entrar… y entonces se le doblaron las rodillas. La sala estaba llena de difuntos. La luna a través de la ventana iluminaba sus rostros amarillentos y azulados, las bocas hundidas, los ojos turbios y entreabiertos y las afiladas narices… Horrorizado, Adrián reconoció en ellos a las personas enterradas gracias a sus servicios, y en el huésped que había llegado con él, al brigadier enterrado durante aquel aguacero.</p>
+                        
+                        <p>Todos, damas y caballeros, rodearon al fabricante de ataúdes entre reverencias y saludos; salvo uno de ellos, un pordiosero al que había dado sepultura de balde hacía poco. El difunto, cohibido y avergonzado de sus harapos, no se acercaba y se mantenía humildemente en un rincón. Todos los demás iban vestidos decorosamente: las difuntas con sus cofias y lazos, los funcionarios fallecidos, con levita, aunque con la barba sin afeitar, y los mercaderes con caftanes de día de fiesta.</p>
+                        
+                        <p>—Ya lo ves, Prójorov —dijo el brigadier en nombre de toda la respetable compañía—, todos nos hemos levantado en respuesta a tu invitación; solo se han quedado en casa los que no podían hacerlo, los que se han desmoronado ya del todo y aquellos a los que no les queda ni la piel, solo los huesos; pero incluso entre ellos uno no lo ha podido resistir, tantas ganas tenía de venir a verte.</p>
+                        
+                        <p>En este momento un pequeño esqueleto se abrió paso entre la muchedumbre y se acercó a Adrián. Su cráneo sonreía dulcemente al fabricante de ataúdes. Jirones de paño verde claro y rojo y de lienzo apolillado colgaban sobre él aquí y allá como sobre una vara, y los huesos de los pies repicaban en unas grandes botas como las manos en los morteros.</p>
+                        
+                        <p>—No me has reconocido, Prójorov —dijo el esqueleto—. ¿Recuerdas al sargento retirado de la Guardia Piotr Petróvich Kurilkin, el mismo al que en el año 1799 vendiste tu primer ataúd, y además de pino en lugar del de roble?</p>
+                        
+                        <p>Dichas estas palabras, el muerto le abrió sus brazos de hueso, pero Adrián, reuniendo todas sus fuerzas, lanzó un grito y le dio un empujón. Piotr Petróvich se tambaleó, cayó y todo él se derrumbó. Entre los difuntos se levantó un rumor de indignación: todos salieron en defensa del honor de su compañero y se lanzaron sobre Adrián entre insultos y amenazas. El pobre dueño, ensordecido por los gritos y casi aplastado, perdió la presencia de ánimo y, cayendo sobre los huesos del sargento retirado, se desmayó.</p>
+                        
+                        <p>El sol hacía horas que iluminaba la cama en la que estaba acostado el fabricante de ataúdes. Este por fin abrió los ojos y vio frente a él a la criada que atizaba el fuego del samovar. Adrián recordó lleno de horror los sucesos del día anterior. Triújina, el brigadier y el sargento Kurilkin aparecieron confusos en su mente. Adrián esperaba en silencio que la criada le dirigiera la palabra y le refiriese las consecuencias del episodio nocturno.</p>
+                    
+                        <p>—Se te han pegado las sábanas, Adrián Prójorovich —dijo Aksinia acercándole la bata—. Te ha venido a ver tu vecino el sastre, y el de la garita ha pasado para avisarte que es el santo del comisario. Pero tú has tenido a bien seguir durmiendo y no hemos querido despertarte.</p>
+                        
+                        <p>—¿Y de la difunta Triújina no ha venido nadie?</p>
+                        
+                        <p>—¿Difunta? ¿Es que se ha muerto?</p>
+                        
+                        <p>—¡Serás estúpida! ¿O no fuiste tú quien ayer me ayudó a preparar su entierro?</p>
+                        
+                        <p>—¿Qué dices, hombre? ¿Te has vuelto loco, o es que aún no se te ha pasado la resaca? ¿Ayer qué entierro hubo? Si te pasaste todo el día de jarana en casa del alemán, volviste borracho, caíste redondo en la cama y has dormido hasta la hora que es, que ya han tocado a misa.</p>
+                        
+                        <p>—¡No me digas! —exclamó con alegría el fabricante de ataúdes.</p>
+                        
+                        <p>—Como lo oyes —contestó la sirvienta.</p>
+                        
+                        <p>—Pues si es así, trae en seguida el té y ve a llamar a mis hijas. </p>
+                        
+                        
+                        
+                        <hr class="line-separator line-orange" />
+                  
+                    </div>
+                </div>
+
+                
+                <div class="slides slide">
+                
+                <h2 class="section-title">María Gripe</h2>
+                     <h1 class="chapter-title cafe">La maldición</h1>
+                   
+                 <div class="content-text">
+
+                     
+                        <p class="first-paragraph">David no tenía prisa por volver a casa. Quería estar solo. Cuando se separó de Jonás y Annika, se fue en dirección opuesta, a través del bosque. Todo le iba mal cuando no se paraba a pensar de vez en cuando. No sobre algo concreto, sino para poner un poco de orden en su cabeza. No podía entender cómo había personas que se arreglaran de otra manera.</p>
+                     
+                        <p>David se reía para sí. ¡Jonás era un tipo curioso! Podía hacer de un mosquito un elefante. ¡Qué historias inventaba! Sin ir más lejos, transformaba al pobre hombre del bote en el hombre más sospechoso del mundo, en el misterioso hombre de la sombra y la tos.</p>
+                     
+                        <p>¡Qué noche más maravillosa! Templada, silenciosa y llena de luz de luna. David empezó a pensar de nuevo en su sueño. Lo había olvidado completamente. Ni por la mañana, cuando se despertó, había pensado en él. Lo recordó al llegar allá abajo, junto al río. Nunca había vivido algo parecido.</p>
+                        
+                        <p>Era, en realidad, una especie de sueño real.</p>
+                     
+                        <p>¿Podría tener algún significado?</p>
+                     
+                        <p>Le parecía como si fuese cómplice de algo prohibido. Como si hubiera estado, en sueños, en algún sitio donde no debería haber estado. Le parecía estar merodeando por un terreno donde uno sabe que hay un cartel que dice: “¡Prohibida la entrada a toda persona ajena!”</p>
+                     
+                        <p>David paseó al azar por el bosque. Papá estaría todavía en la iglesia. Siempre se le hacía tarde cuando hablaba con Prosbst Lindroth. Estarían hablando de la canción que papá estaba componiendo para el coro parroquial.</p>
+                     
+                         <p>Rara vez había alguien en casa cuando David regresaba. La mayor parte de las veces estaba silenciosa. Nadie le esperaba. Cuando aún era pequeño, encontraba eso un poco triste; sin embargo, ahora le gustaba. Se había acostumbrado a ello. Había pasado ya tanto tiempo desde que se fue mamá... Ya no preguntaba por ella, y papá no la mencionaba nunca. No quería estar triste... Poco a poco creció en él el sentimiento de que ella nunca había existido.</p>
+                     
+                        <p>¡Qué silencio había en el bosque! Andaba con cuidado para no asustar a ningún animal. De pronto crujieron unas ramas delante de él. Se quedó parado, asustado. ¿Habría despertado a un alce? Pero no...: lo que venía hacia él, por el bosque, en medio de la oscuridad era un hombre. </p>
+                     
+                        <p>No pudo evitar que su corazón diera un salto.</p>
+                     
+                        <p>Al principio no reconoció al que venía, pero luego vio que era el viejo Natte, borracho como de costumbre. Así que no tenía nada que temer; aun así, intentó esquivarlo. Cuando estaba bebido, ¡se volvía tan agresivo...! Pero, al final, no pudo esquivarlo. Fue descubierto. Natte vino tambaleándose hacia él y gritó furioso:</p>
+                        
+                        <p>—¿Quién anda ahí fisgando por el bosque? ¡Sal, que te pueda ver!</p>
+                     
+                        <p>—¡Buenas! Soy yo, David.</p>
+                     
+                        <p>Natte se quedó parado. Agitaba la botella que llevaba, escuchando atentamente si tenía todavía algo dentro.</p>
+                     
+                        <p>—Soy David, ya me conoces —dijo, y se adelantó.</p>
+                     
+                        <p>—¡No, no te conozco!</p>
+                     
+                        <p>—David Stenfäldt, del pueblo...</p>
+                     
+                        <p>—¡Cierra la boca! —lo interrumpió Natte— No puedo oír si hay alguien más por ahí.</p>
+                     
+                        <p>David no tenía ganas de continuar y dio un paso adelante.</p>
+                     
+                        <p>—Bueno, entonces adiós, Natte. Me voy a casa, que ya es hora de que me meta a la cama.</p>
+                     
+                        <p>—¡Al demonio con la cama! ¡Quiero hablar contigo! ¡Quiero saber qué estás haciendo aquí!</p>
+                     
+                        <p>—Sencillamente, estoy dando una vuelta por el bosque. </p>
+                     
+                        <p>Estaban de pie, uno frente al otro. Natte quitó el tapón de la botella y se la metió en la boca.</p>
+                     
+                        <p>Receloso, miraba fijamente a David, mientras tragaba. Le temblaban peligrosamente las piernas, y tuvo que sentarse sobre el tocón de un árbol.</p>
+                     
+                        <p>—¡Ni en el “Monte de la Horca” puede uno tener tranquilidad! —dijo.</p>
+                     
+                        <p>—Yo no quiero molestar...</p>
+                     
+                        <p>—¡Ya has molestado! ¡Y ahora quiero hablar contigo!</p>
+                     
+                     
+                        <p>David miró a su alrededor. ¿Por qué estaría Natte tan fuera de sí?</p>
+                     
+                        <p>—¿De verdad era este, hace tiempo, el lugar donde ahorcaban a los condenados? —preguntó por decir algo.</p>
+                     
+                        <p>Natte lo miró con la boca abierta.</p>
+                     
+                        <p>—¿Nos conocemos? —preguntó desconfiado—. ¿Has dicho que nos conocemos?</p>
+                     
+                        <p>—Sí, nos vemos de vez en cuando allá abajo, en el pueblo.</p>
+                     
+                     
+                        <p>—¡No puedo acordarme!</p>
+                     
+                        <p>David sentía como Natte se iba poniendo por momentos más furioso. Por supuesto, Natte era digno de lástima; pero ¿acaso tenía él la culpa?</p>
+                     
+                        <p>—¡Al infierno contigo! —gritó el borracho—. </p>
+                     
+                        <p>¡Ahora escúchame, pues quiero hablar contigo!</p>
+                     
+                        <p>—¿Es algo importante?</p>
+                     
+                        <p>—¿Ahora también te vuelves impertinente? </p>
+                     
+                        <p>¡Cuando yo digo que quiero hablar, es que es algo importante! ¿Entendido?</p>
+                     
+                        <p>—Por supuesto, está claro.</p>
+                     
+                        <p>—¿Por dónde has estado andando esta noche?</p>
+                     
+                        <p>—Hemos estado dando una vuelta por el pueblo.</p>
+                     
+                        <p>—¿Qué significa “hemos”?</p>
+                     
+                        <p>Aquello resultaba ya un interrogatorio. David no sabía cómo ponerle fin. No tenía nada que pudiera interesarle a Natte. Sin embargo, lo mejor sería contestarle.</p>
+                     
+                        <p>—Jonás, Annika y yo. ¿Por qué, Natte?</p>
+                     
+                        <p>—¡No deberías ir por ahí de noche!</p>
+                     
+                        <p>—Pero, ¿Por qué, Natte? Solo hemos estado paseando, viendo cosas.</p>
+                     
+                        <p>—¡Viendo cosas! ¡Exactamente eso! Pero ¿dónde?</p>
+                     
+                        <p>—Por ejemplo, estuvimos allá abajo, en el río, y llegamos hasta la quinta Selanderschen.</p>
+                     
+                        <p>Natte se levantó del tocón del árbol. Temblaba violentamente. Tiró contra una piedra la botella, que se rompió en mil pedazos.</p>
+                     
+                        <p>Después se dominó y atravesó a David con la mirada.</p>
+                     
+                        <p>—¿He entendido bien? ¿La quinta Selanderschen? ¿Qué demonios se os ha perdido allí?</p> 
+                     
+                        <p>—Nada. Llegamos casualmente.</p>
+                     
+                        <p>—¡Ah, sí, casualmente! ¿Y piensas que me lo voy a creer?</p>
+                     
+                        <p>—¡Pues claro que fue casualmente!</p>
+                     
+                        <p>Natte se quedó callado por un momento. David retrocedió con cuidado un paso. Tal vez fuera el momento oportuno para... Natte lo miró otra vez con atención. La expresión de su rostro había cambiado. Miraba a David con ojos llorosos y empezó a sollozar.</p>
+                     
+                        <p>—No, no..., no vuelvo a ir allí otra vez. ¡Lo juro, no vuelvo a poner los pies en esa casa! Nadie me llevará más allí. ¡Nunca jamás! </p>
+                     
+                        <p>—Claro que no —David creyó que lo mejor sería seguirle la corriente.</p>
+                     
+                        <p>—¡Esa maldita quinta Selanderschen! —Natte miraba fijamente hacia adelNatte, sollozaba y gemía, mientras rebuscaba en sus bolsillos, hasta que finalmente encontró la colilla de un puro, que encendió con la ayuda de David. El tono de su voz había cambiado completamente, y de repente rebosaba afecto.</p>
+                     
+                        <p>—¡Prométeme que te mantendrás alejado de la quinta Selanderschen!</p>
+                     
+                     
+                        <p>—Pero ¿por qué?</p>
+                     
+                        <p>—¿Por qué? ¿Por qué? —Natte fumaba a grandes bocanadas y suspiraba—. No puedo recordar por qué..., ¡pero prométemelo!</p>
+                     
+                        <p>David calló. Natte echaba humo e inclinaba la cabeza observándolo. Dio un paso tambaleante y se agarró a David. Empezó otra vez a gemir:</p>
+                     
+                        <p>Cuando, hace ya mucho tiempo, yo era pequeño... Tan pequeño era yo entonces, que jugaba en la quinta Selanderschen, pues mi padre tenía que hacer allí. Era ebanista, y yo tenía que ir con él... Y esto, te lo digo a ti, lo he lamentado toda mi vida...</p>
+                     
+                        <p>—Comprendo...</p>
+                     
+                        <p>—Comprendo... Comprendo... ¡Ahora dices eso, pero no lo hubieras dicho si hubieras estado entonces allí! Aquel hombre del demonio exigió a mi padre que serrara una muñeca..., una preciosa muñeca grande y delicada..., así, ¿sabes?, por la mitad.</p>
+                     
+                        <p>—¿Por qué lo hizo?</p>
+                     
+                        <p>—Fue algo horrible, una atrocidad que me afectó muchísimo. ¡Fue un asesinato!</p>
+                     
+                        <p>—¿Era tu muñeca, Natte?</p>
+                     
+                        <p>—¿Qué es lo que dices? ¡Yo no he jugado nunca con muñecas! ¿Crees que mi padre tenía dinero para comprármelas? Pero mi madre era muy lista, ella lo sabía, y siempre decía que sobre aquella casa pesaba una maldición. Eso es lo que decía mi madre. Por eso sé yo todo lo que sé, y lo que sé... lo sé —dijo solemnemente.</p>
+                     
+                        <p>—Entiendo —le dijo David.</p>
+                     
+                        <p>Entonces Natte lo miró atentamente, con desconfianza.</p>
+                     
+                        <p>—¿Lo entiendes? —preguntó—. ¡No! ¡Eso no lo entiende nadie! ¡Vete ya!</p>
+                     
+                        <p>Hizo un movimiento como si quisiera alejar a David. Parecía encolerizarse de nuevo.</p>
+                     
+                        <p>—Bueno, entonces, adiós, Natte.</p>
+                     
+                        <p>David lo dejó allí, de pie. Luego dio un par de pasos, pero Natte le gritó otra vez, amenazadoramente:</p>
+                     
+                        <p>—¡Mantente lejos de la quinta Selanderschen, todo lo lejos que puedas! ¿Me oyes?</p>
+                     
+                        <p>—¡Sí, te oigo! —le respondió David dando un grito. Y se alejó apresuradamente.</p>
+                    <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+ 
+                <!-- /Cuento 3 --> 
+
+                   <div class="slides slide">
+                <h2 class="section-title naranjaOs">Ray Bradbury</h2>
+                    <h1 class="chapter-title cafe">El otro<br/><span class="oswald-light cafe">pie</span></h1>
+                 <div class="content-text">
+
+                     
+                        <p class="first-paragraph">Cuando oyeron las noticias salieron de los restaurantes y los cafés y los hoteles y observaron el cielo. Las manos oscuras protegieron los ojos en blanco. Las bocas se abrieron. A lo largo de miles de kilómetros, bajo la luz del mediodía, se extendían unos pueblitos donde unas gentes oscuras, de pie sobre sus sombras, alzaban los ojos.</p>
+                     
+                        <p>Hattie Johnson tapó la olla donde hervía la sopa, se secó los dedos con un trapo, y fue lentamente hacia el fondo de la casa.</p>
+                     
+                     <p class="resaltado">Hattie Johnson tapó la olla donde hervía la sopa, se secó los dedos con un trapo, y fue lentamente hacia el fondo de la casa.</p>
+                     
+                        <p>—¡Ven, Ma!</p>
+                        
+                        <p>—¡Eh, Ma, ven!</p>
+                     
+                        <p>—¡Te lo vas a perder!</p>
+                     
+                        <p>—¡Eh, Ma!</p>
+                     
+                        <p>Los tres negritos bailaban chillando en el patio polvoriento. De cuando en cuando miraban ansiosamente hacia la casa.</p>
+                     
+                         <p>—Ya voy —dijo Hattie, y abrió la puerta de tela de alambre—. ¿Dónde oísteis la noticia?</p>
+                     
+                        <p>—En casa de Jones, Ma. Dicen que viene un cohete. Por primera vez después de veinte años.</p>
+                     
+                        <p>—¡Y con un hombre blanco dentro!</p>
+                     
+                        <p>—¿Cómo es un hombre blanco, Ma? Nunca vi ninguno.</p>
+                        
+                        <p>—Ya sabrás cómo es —dijo Hattie—. Sí, ya lo sabrás, de veras.</p>
+                     
+                        <p>—Dinos cómo es, Ma. Cuéntanos, por favor.<br>Hattie frunció el ceño.</p>
+                     
+                        <p>—Bueno, han pasado muchos años. Yo era solo una niñita, ¿sabéis? Fue en 1965.</p>
+                     
+                        <p>—¡Cuéntanos del hombre blanco, Ma!</p>
+                     
+                        <p>Hattie salió al patio, y miró el cielo marciano, claro y azul, con las tenues nubes blancas marcianas, y más allá, a lo lejos, las colinas marcianas que se tostaban al sol. Y dijo al fin:</p>
+                     
+                        <p>—Bueno, ante todo tienen manos blancas.</p>
+                     
+                        <p>—¡Manos blancas!</p>
+                     
+                        <p>Los chicos se rieron lanzándose manotones.</p>
+                     
+                        <p>—Y tienen brazos blancos.</p>
+                     
+                        <p>—¡Brazos blancos!</p>
+                     
+                        <p>—Y caras blancas.</p>
+                     
+                        <p>—¡Caras blancas! ¿De veras?</p>
+                     
+                        <p>—¿Blanca como esta, Ma? —El más pequeño de los negritos se arrojó un puñado de polvo a la cara y lanzó un estornudo—. ¿Así de blanca?</p>
+                     
+                        <p>—Más blanca aún —dijo la negra gravemente, y se volvió otra vez hacia el cielo. Tenía como una sombra de inquietud en los ojos, como si esperara una tormenta y no pudiese verla—. Será mejor que entréis, chicos.</p>
+                     
+                        <p>—¡Oh, Ma! —Los negritos la miraron asombrados—. Tenemos que verlo, Ma. No va a pasar nada, ¿no?</p>
+                     
+                        <p>—No sé. Tengo un mal presentimiento.</p>
+                     
+                     
+                        <p>—Solo queremos ver el cohete, e ir al aeródromo, y ver al hombre blanco. ¿Cómo es el hombre blanco, Ma?</p>
+                     
+                        <p>—No lo sé. No lo sé de veras —murmuró la mujer, sacudiendo la cabeza.</p>
+                     
+                        <p>—¡Cuéntanos algo más!</p>
+                     
+                        <p>—Bueno, los blancos viven en la Tierra, el lugar de donde vinimos todos nosotros hace veinte años. Salimos de allí y nos vinimos a Marte y construimos las ciudades, y aquí estamos. Ahora somos marcianos y no terrestres. Y ningún hombre blanco vino a Marte en todo este tiempo. Eso es todo.</p>
+                     
+                        <p>—¿Por qué no vinieron, Ma?</p>
+                     
+                     
+                        <p>—Bueno, porque... Apenas llegamos, estalló en la Tierra una guerra atómica. Pelearon entre ellos, de un modo terrible. Se olvidaron de nosotros. Cuando terminaron de pelear, no tenían más cohetes. Solo hace poco pudieron construir algunos. Y ahora vienen a visitarnos después de tanto tiempo. —La mujer miró distraídamente a sus hijos, y se alejó unos metros—. Esperad aquí. Voy a ver a Elizabeth Brown.</p>
+                     
+                        <p>—Bueno, Ma.</p>
+                     
+                        <p>La mujer se alejó calle abajo.</p>
+                     
+                        <p>Llegó a la casa de los Brown en el momento en que todos se subían al coche.</p>
+                     
+                        <p>—Eh, Hattie, ¡ven con nosotros!</p>
+                     
+                        <p>—¿A dónde van? —dijo la mujer, sin aliento, corriendo hacia ellos.</p>
+                     
+                        <p>—¡A ver al hombre blanco!</p>
+                     
+                        <p>—Eso es —dijo el señor Brown, muy serio—. Mis chicos nunca vieron uno, y yo casi no me acuerdo.</p>
+                     
+                        <p>—¿Qué van a hacer con el hombre blanco? —les preguntó Hattie.</p>
+                     
+                        <p>—¿A hacer? Vamos a verlo, nada más.</p>
+                
+                     
+                        <p>—¿Seguro?</p>
+                     
+                        <p>—¿Y qué podíamos hacer?</p>
+                     
+                        <p>No sé —dijo Hattie vagamente, algo avergonzada—. ¿No van a lincharlo?</p>
+                     
+                        <p>—¿A lincharlo? —Todos se rieron. El señor Brown se palmeó una rodilla—. ¡Dios te bendiga, criatura! Vamos a estrecharle la mano. ¿No es cierto? Todos nosotros.</p>
+                     
+                        <p>—¡Claro, claro!</p>
+                     
+                        <p>Otro coche se acercó corriendo. Hattie lanzó un grito:   </p>
+                     
+                        <p>—¡Willie!</p>
+                     
+                        <p>—¿A dónde piensan ir? ¿Dónde están los chicos? —les gritó agriamente el marido de Hattie, mirándolos con furia—. Se van como idiotas a ver a ese blanco...</p>
+                     
+                        <p>—Exactamente —asintió el señor Brown, sonriendo.</p>
+                     
+                        <p>—Bueno, llévense sus armas —dijo Willie—. Yo voy a buscar la mía ahora mismo.</p> 
+                     
+                        <p>—¡Willie!</p>
+                     
+                        <p>—¡Entra en este coche, Hattie. —El negro abrió la puerta, y así la sostuvo, hasta que la mujer obedeció. Sin volver a hablar con los otros, se lanzó por el camino polvoriento.</p>
+                     
+                        <p>—¡Willie, no tan rápido!</p>
+                     
+                        <p>—No tan rápido, ¿eh? Ya lo veremos. —Willie miró el camino que se precipitaba bajo el coche—. ¿Con qué derecho vienen aquí después de tantos años? ¿Por qué no nos dejan tranquilos? ¿Por qué no se habrán matado unos a otros en ese viejo mundo, permitiéndonos vivir en paz?</p>
+                     
+                        <p>—Willie, no hablas como un cristiano.</p>
+                     
+                        <p>—No me siento como un cristiano —dijo Willie furiosamente, asiendo con fuerza el volante—. Me siento malvado. Después de hacernos, durante tantos años, todo lo que nos hicieron... A mis padres y a los tuyos... ¿Recuerdas? ¿Recuerdas cómo colgaron a mi padre en Knockwood Hill, y cómo mataron a mamá? ¿Recuerdas? ¿O tienes tan poca memoria como los otros?</p>
+                     
+                        <p>—Recuerdo —dijo la mujer.</p>
+                     
+                        <p>—¿Recuerdas al doctor Phillips, y al señor Burton, y sus casas enormes, y la cabaña de mi madre, y a mi viejo padre que seguía trabajando a pesar de sus años? El doctor Phillips y el señor Burton le dieron las gracias poniéndole una soga al cuello. Bueno —dijo Willie—, todo ha cambiado.</p>
+                     
+                     
+                        <p>El zapato aprieta ahora en el otro pie. Veremos quién dicta leyes contra quién, quién lincha, quién viaja en el fondo de los coches, quién sirve de espectáculo en las ferias. Vamos a verlo.</p>
+                     
+                        <p>—Oh, Willie, no hables así. Nos traerá mala suerte.</p>
+                     
+                        <p>—Todo el mundo habla así. Todo el mundo ha pensado en este día, creyendo que nunca iba a llegar. Todos pensábamos: “¿Qué pasará el día que un hombre blanco venga a Marte?”. Pues bien, el día ha llegado, y ya no podemos retroceder.</p>
+                     
+                        <p>—¿No vamos a dejar que los blancos vivan aquí en Marte?</p>
+                     
+                        <p>—Sí, seguro —Willie sonrió, pero con una ancha sonrisa de maldad. Había furia en sus ojos—. Pueden venir y trabajar aquí. ¿Por qué no? Pero para merecerlo tendrán que vivir en los barrios bajos, y lustrarnos los zapatos, y barrernos los pisos, y sentarse en la última fila de butacas. Solo eso les pedimos. Y una vez por semana colgaremos a uno o dos. Nada más.</p>
+                     
+                        <p>—No hablas como un ser humano, y no me gusta.</p>
+                     
+                        <p>—Tendrás que acostumbrarte —dijo Willie. Se detuvo frente a la casa y saltó fuera del coche—. Voy a buscar mis armas y un trozo de cuerda. Respetaremos el reglamento.</p>
+                     
+                        <p>—¡Oh, Willie! —gimió la mujer, y allí se quedó, sentada en el coche, mientras su marido subía de prisa las escaleras y entraba en la casa dando un portazo.</p>
+                     
+                        <p>Al fin Hattie siguió a su marido. No quería seguirlo, pero allá estaba Willie, agitándose en la buhardilla, maldiciendo como un loco, buscando las cuatro armas. Hattie veía el salvaje metal de los caños que brillaba en la oscura bohardilla, pero no podía ver a Willie.</p>
+                     
+                        <p>¡Era tan negro! Solo oía sus juramentos. Al fin las piernas de Willie aparecieron en la escalera, envueltas en una nube de polvo. Willie amontonó los cartuchos de cápsulas amarillas, y sopló en los cargadores, y metió en ellos las balas, con un rostro serio y grave, como ocultando una amargura interior.</p>
+                     
+                        <p>—Déjennos solos —murmuraba, abriendo mecánicamente los brazos—. Déjennos solos.</p>
+                     
+                        <p>¿Por qué no nos dejan?</p>
+                     
+                        <p>—Willie, Willie.</p>
+                     
+                        <p>—Tú también... tú también.</p>
+                     
+                        <p>Y Willie miró a su mujer con la misma mirada, y Hattie se sintió tocada por todo ese odio. A través de la ventana se veía a los niños que hablaban entre ellos.</p>
+                     
+                        <p>—Blanco como la leche, dijo Ma. Blanco como la leche.</p>
+                     
+                        <p>—Blanco como esta flor vieja, ¿ves?</p>
+                     
+                        <p>—Blanco como una piedra como la tiza del colegio.</p>
+                     
+                        <p>Willie salió de la casa.</p>
+                     
+                        <p>—Chicos, adentro. Os encerraré. No habrá hombre blanco para vosotros. No hablaréis de él. Nada.</p>
+                        <p>—Pero, papá.</p>
+                        <p>El hombre los empujó al interior de la casa, y fue a buscar una lata de pintura y un pincel, y sacó del garaje una cuerda peluda y gruesa, en la que hizo un nudo corredizo, con manos torpes, mientras examinaba cuidadosamente el cielo. Y luego se metieron en el coche, y se alejaron sembrando a lo largo de la carretera unas apretadas nubes de polvo.</p>
+                        <p>—Despacio, Willie.</p>
+                        <p>—No es tiempo de ir despacio —dijo Willie—. Es tiempo de ir de prisa, y yo tengo prisa.</p>
+                     
+                        <p>Las gentes miraban el cielo desde los bordes del camino, o subidas a los coches, o llevadas por los coches, y las armas asomaban como telescopios orientados hacia los males de un mundo en agonía.</p>
+                     
+                        <p>Hattie miró las armas.</p>
+                     
+                        <p>—Has estado hablando —dijo acusando a su marido.</p>
+                     
+                        <p>—Sí, eso he hecho —gruñó Willie, y observó orgullosamente el camino—. Me detuve en todas las casas, y les dije qué debían hacer: sacar las armas, buscar la pintura, traer las cuerdas, y estar preparados. Y aquí estamos ahora: el comité de bienvenida, para entregarles las llaves de la ciudad. ¡Sí, señor!</p>
+                     
+                        <p>La mujer juntó las manos delgadas y oscuras, como para rechazar el terror que estaba invadiéndola.</p>
+                     
+                     
+                        <p>El coche saltaba y se sacudía entre los otros coches.</p>
+                     
+                        <p>Hattie oía las voces que gritaban:</p>
+                        <p>—¡Eh, Willie! ¡Mira! —y veía pasar rápidamente las manos que alzaban las cuerdas y las armas, y las bocas que sonreían.</p>
+                     
+                     
+                        <p>—Hemos llegado —dijo Willie, y detuvo el automóvil en el polvo y el silencio. Abrió la puerta de un puntapié, salió cargado con sus armas, y se metió en los campos del aeródromo.</p>
+                        <p>—¿Lo has pensado, Willie?</p>
+                     
+                        <p>—No he hecho otra cosa en veinte años. Tenía dieciséis años cuando dejé la Tierra. Y muy contento. No había nada allí para mí, ni para ti, ni para ninguno de nosotros. Jamás me he arrepentido. Aquí vivimos en paz. Por primera vez respiramos a gusto. Vamos, adelante.</p>
+                     
+                     <p>Willie se abrió paso entre la oscura multitud que venía a su encuentro.</p>
+                     
+                     <p>—Willie, Willie, ¿qué vamos a hacer? —decían los hombres.</p>
+                     
+                     <p>—Aquí tienen un fusil —les dijo Willie—. Aquí otro fusil. Y otro. —Les entregaba las armas con bruscos movimientos—. Aquí tienen. Una pistola. </p>
+                     
+                     <p>Un rifle.</p>
+                     
+                     <p>La gente estaba tan apretada que semejaba un solo cuerpo oscuro, con mil brazos extendidos hacia las armas.</p>
+                     
+                     <p>—Willie, Willie.</p>
+                     
+                     <p>Hattie, erguida y silenciosa, apretaba los labios, con los grandes ojos trágicos y húmedos.</p>
+                     
+                     <p>—Trae la pintura —le dijo Willie.</p>
+                     
+                     <p>Y la mujer cruzó el campo con una lata de pintura, hasta el lugar donde en ese momento se detenía un ómnibus con un letrero recién pintado en el frente: A LA PISTA DE ATERRIZAJE DEL HOMBRE BLANCO. El ómnibus traía un grupo de gente armada que salió de un salto y corrió trastabillando por el aeródromo, con los ojos fijos en el cielo.</p>
+                     
+                     <p>Mujeres con canastas de comida; hombres con sombreros de paja, en mangas de camisa.</p>
+                     
+                     <p>El ómnibus se quedó allí, vacío, zumbando.</p>
+                     
+                     <p>Willie se meció en el coche, instaló las latas, las abrió, revolvió la pintura, probó un pincel, y se subió a un asiento.</p>
+                     
+                     <p>—¡Eh, oiga! —El conductor se acercó por detrás, con su tintineante cambiador de monedas—. ¿Qué hace? ¡Fuera de aquí!</p>
+                     
+                     <p>—Vas a ver lo que hago. Espera un poco.</p>
+                     
+                     <p>Y Willie mojó el pincel en la pintura amarilla.</p>
+                     
+                     <p>Pintó una B y una L y una A y una N y una C y una O y una S con una minuciosa y terrible aplicación. Y cuando Willie terminó su trabajo, el conductor arrugó los párpados y leyó: BLANCOS: ASIENTOS DE ATRÁS. Leyó otra vez: BLANCOS. Guiñó un ojo. ASIENTOS DE ATRÁS. El conductor miró a Willie y sonrió.</p>
+                     
+                     <p>—¿Te gusta? —le preguntó Willie descendiendo.<br>Y el conductor respondió:</p>
+                     
+                     <p>—Mucho, señor. Me gusta mucho.</p>
+                     
+                     <p>Hattie miraba el letrero desde afuera, con las manos apretadas contra el pecho.</p>
+                     <p>Willie volvió a reunirse con la multitud. Esta aumentaba con cada coche que se detenía gruñendo, y con cada ómnibus que llegaba tambaleándose desde el pueblo cercano.</p>
+                     
+                     <p>Willie se subió a un cajón.</p>
+                     
+                     <p>—Nombremos a unos delegados para que pinten todos los ómnibus en la hora próxima.</p>
+                     
+                     <p>¿Hay voluntarios?</p>
+                     
+                     <p>Las manos se alzaron.</p>
+                     
+                     <p>—¡Adelante!</p>
+                     
+                     <p>Los hombres se fueron a pintar.</p>
+                     
+                     <p>—Nombremos a unos delegados para separar con cuerdas los asientos de los cines. Las dos últimas filas para los blancos.</p>
+                     
+                     <p>Más manos.</p>
+                     
+                     <p>—¡Adelante!</p>
+                     
+                     <p>Los hombres corrieron.</p>
+                     
+                     <p>Willie miró a su alrededor, transpirado, fatigado por el esfuerzo, orgulloso de su energía, con la mano en el hombro de su mujer. Hattie miraba el suelo con los ojos bajos.</p>
+                     
+                     <p>—Veamos —anunció Willie—. Ah, sí. Tenemos que votar una ley esta misma tarde. ¡Se prohíben los matrimonios entre razas de distinto color!</p>
+                     
+                     <p>—Eso es —dijeron algunos.</p>
+                     
+                     <p>—Todos los lustrabotas dejan hoy su empleo.</p>
+                     
+                     <p>—¡Ahora mismo!</p>
+                     
+                     <p>Algunos de los hombres arrojaron al suelo unos trapos que habían traído del pueblo, aturdidos por la excitación.</p>
+                     
+                     <p>—Votaremos una ley sobre salarios mínimos, ¿no es cierto?</p>
+                     
+                     <p>—¡Seguro!</p>
+                     
+                     <p>—Se les pagará, por lo menos, diez centavos por hora.</p>
+                     
+                     <p>—¡Eso es!</p>
+                     
+                     <p>El alcalde de la ciudad se acercó corriendo.</p>
+                     
+                     <p>—Oye, Willie Johnson. ¡Bájate de ese cajón!</p>
+                     
+                     <p>—Alcalde, nada podrá sacarme de aquí.</p>
+                     
+                     <p>—Estás provocando un tumulto, Willie Johnson.</p>
+                     
+                     <p>—Justo.</p>
+                     
+                     <p>—Cuando eras chico, odiabas todo esto. No eres mejor que esos blancos que ahora atacas.</p>
+                     
+                     <p>—Las cosas han cambiado, alcalde —dijo Willie, desviando la vista y mirando los rostros que se extendían ante él: algunos sonrientes, otros titubeantes, otros asombrados, y otros que se alejaban disgustados y temerosos.</p>
+                     
+                     <p>—Te arrepentirás, Willie —dijo el alcalde.</p>
+                     
+                     <p>—Haremos una elección y tendremos otro alcalde —dijo Willie, y volvió los ojos hacia el pueblo, donde, calles abajo y calles arriba, se colgaban unos letreros recién pintados:</p>
+                     
+                     <p>EL ESTABLECIMIENTO SE RESERVA EL DERECHO DE NO ACEPTAR A ALGÚN CLIENTE.</p>
+                     <p>Willie mostró los dientes y golpeó las manos.</p>
+                     
+                     <p>¡Señor! Y se detuvo a los ómnibus y se pintaron de blanco los últimos asientos, como para sugerir quiénes serían los futuros ocupantes. Y unos hombres alegres invadieron los teatros y tendieron unas cuerdas, mientras sus mujeres los miraban desde las aceras, sin saber qué hacer. Y algunos encerraron a sus niños en las casas, para apartarlos de esas horas terribles.</p>
+                     
+                     <p>—¿Todos listos? —preguntó Willie Johnson, alzando una soga bien anudada.</p>
+                     
+                     <p>—¡Listos! —gritó media multitud. La otra mitad murmuró y se movió como figuras de una pesadilla de la que deseaban huir.</p>
+                     
+                     <p>—¡Ahí viene! —dijo un niño.</p>
+                     
+                     <p>Como cabezas de títeres, movidas por una sola cuerda, las cabezas de la multitud se volvieron hacia arriba.</p>
+                     
+                     <p>En lo más alto del cielo, un hermoso cohete lanzaba un ardiente penacho anaranjado.</p>
+                     
+                     <p>El cohete describió un círculo amplio y descendió, y todos lo miraron con la boca abierta.</p>
+                     
+                     <p>El campo ardió, aquí y allá, y luego el fuego se fue apagando. El cohete inmóvil descansó unos instantes. Y al fin, mientras la multitud esperaba en silencio, en un costado de la nave se abrió una puerta y dejó escapar una bocanada de oxígeno.</p>
+                     
+                     <p>Un hombre viejo apareció en el umbral.</p>
+                     
+                     <p>—Un blanco, un blanco, un blanco...</p>
+                     
+                     <p>Las palabras corrieron por la expectante multitud. Los niños se hablaron al oído, empujándose suavemente; las palabras retrocedieron en ondas hasta los últimos hombres y hasta los ómnibus bañados por la luz y golpeados por el viento. De las abiertas ventanillas salía un olor a pintura fresca. El murmullo se alejó lentamente, y al fin dejó de oírse. Nadie se movió.</p>
+                     
+                     <p>El hombre blanco era alto y esbelto, pero llevaba en el rostro las huellas de un profundo cansancio. No se había afeitado ese día, y sus ojos eran tan viejos como pueden serlo los ojos de un hombre todavía vivo. Eran ojos incoloros, casi blancos. Las cosas que había visto en su vida habían destruido la mirada. El hombre era delgado como un arbusto en invierno. Le temblaban las manos, y mientras miraba a la multitud buscó apoyo en los quicios de la puerta.</p>
+                     
+                     <p>El hombre blanco sonrió débilmente, y extendió una mano, y la dejó caer.</p>
+                     
+                     <p>Nadie se movió.</p>
+                     
+                     <p>El hombre observó atentamente los rostros, y quizá vio, sin verlos, los fusiles y las cuerdas, y quizá olió la pintura. Nadie llegó a preguntárselo.</p>
+                     
+                     <p>El hombre blanco comenzó a hablar. Comenzó lentamente, dulcemente, como si no esperase ninguna interrupción.</p>
+                     
+                     <p>Nadie lo interrumpió. Su voz era una voz fatigada, vieja y uniforme.</p>
+                     
+                     <p class="resaltado">Nadie lo interrumpió. Su voz era una voz fatigada, vieja y uniforme.</p>
+                     
+                     <p>—No importa quién soy —les dijo—. De todos modos, no sería más que un nombre para vosotros. Yo tampoco sé vuestros nombres. Eso vendrá más tarde. —Se detuvo, cerró los ojos un momento, y luego continuó—: Hace veinte años dejasteis la Tierra. Han sido años tan largos, tan largos...</p>
+                     
+                     <p>Pasaron tantas cosas... Son más de veinte siglos. Cuando os fuisteis estalló la guerra. —El hombre asintió con un lento movimiento de cabeza—. Sí, la gran guerra, la tercera. Duró mucho. Hasta el año pasado. Bombardeamos todas las ciudades. Destruimos Nueva York y Londres, y Moscú, y París, y Shanghái, y Bombay, y Alejandría. Lo arruinamos todo. Y cuando terminamos con las grandes ciudades, nos volvimos hacia las más pequeñas, y lanzamos sobre ellas nuestras bombas atómicas...</p>
+                     
+                     <p>Y el hombre nombró ciudades y lugares y calles.</p>
+                     
+                     <p>Y mientras los nombraba un murmullo se elevó de la multitud.</p>
+                     
+                     <p>—Destruimos Natchez...</p>
+                     
+                     <p>Un murmullo.</p>
+                     
+                     <p>—Y Columbus, Georgia...</p>
+                     
+                     <p>Otro murmullo.</p>
+                     
+                     <p>—Quemamos Nueva Orleans...</p>
+                     <p>Un suspiro.</p>
+                     
+                     <p>—Y Atlanta...</p>
+                     
+                     <p>Un nuevo suspiro.</p>
+                     
+                     <p>—Y no quedó nada de Green Water, Alabama.</p>
+                     <p>Willie Johnson alzó la cabeza y abrió la boca. </p>
+                     
+                     <p>Hattie vio el gesto de Willie y los recuerdos que le venían a los ojos.</p>
+                     
+                     <p>—No quedó nada —dijo el viejo, hablando lentamente—. Ardieron los algodonales.</p>
+                     
+                     <p>—¡Oh! —dijeron todos.</p>
+                     
+                     <p>—Los molinos de algodón cayeron bajo las bombas...</p>
+                     
+                     <p>—¡Oh!</p>
+                     
+                     <p>—Y las fábricas, radiactivas; todo radiactivo. Los caminos y las granjas y los alimentos, radiactivos. Todo.</p>
+                     
+                     <p>El hombre nombró otras ciudades y pueblos.</p>
+                     
+                     <p>—Tampa.</p>
+                     
+                     <p>—Mi pueblo —dijo alguien.</p>
+                     
+                     <p>—Fulton.</p>
+                     
+                     <p>—El mío —murmuró otro.</p>
+                     
+                     <p>—Memphis.</p>
+                     
+                     <p>Una voz indignada:</p>
+                     
+                     <p>—¿Memphis? ¿Quemaron Memphis?</p>
+                     
+                     <p>—Memphis saltó en pedazos.</p>
+                     
+                     <p>—¿La calle Cuatro de Memphis?</p>
+                     
+                     <p>—Toda la ciudad —dijo el viejo.</p>
+                     
+                     <p>La multitud comenzó a agitarse. Una ola los llevaba al pasado. Veinte años. Los pueblos y las plazas, los árboles y los edificios de ladrillo, los carteles y las iglesias y las tiendas familiares. Todo volvía a la superficie entre las gentes del aeródromo. Cada nombre despertaba un recuerdo, y todos pensaban en algún otro día. Todos eran, excepto los niños, suficientemente viejos.</p>
+                     
+                     <p>—Laredo.</p>
+                     
+                     <p>—Recuerdo Laredo.</p>
+                     
+                     <p>—Nueva York.</p>
+                     
+                     <p>—Yo tenía una tienda en Harlem.</p>
+                     
+                     <p>—Harlem, bombardeado.</p>
+                     
+                     <p>Las palabras siniestras. Los lugares familiares.</p>
+                     
+                     <p>El esfuerzo de imaginar todo en ruinas.</p>
+                     
+                     <p>Willie Johnson murmuró:</p>
+                     
+                     <p>—Green Water, Alabama. El pueblo donde nací. Lo veo aún.</p>
+                     
+                     <p>—Destruido. Todo.</p>
+                     
+                     <p>Destruido. Todo. Así decía el hombre.</p>
+                     
+                     <p>Y el hombre continuó:</p>
+                     
+                     <p>—Destruimos todo y arruinamos todo, como estúpidos que éramos y somos todavía. Matamos a millones. No creo que los sobrevivientes pasen de quinientos mil. Y de todo ese desastre salvamos un poco de metal, construimos este único cohete, y vinimos a Marte, a pediros ayuda.</p>
+                     
+                     <p>El hombre se detuvo y miró hacia abajo, y escrutó los rostros como para ver qué podía esperar. Pero no estaba seguro.</p>
+                     
+                     <p>Hattie Johnson sintió que el brazo de su marido se endurecía y vio que sus dedos apretaban la cuerda.</p>
+                     
+                     <p>—Hemos sido unos insensatos —dijo el hombre serenamente—. Destruimos la Tierra y su civilización. No vale ya la pena reconstruir las ciudades. La radiactividad durará todo un siglo. La Tierra ha muerto. Su vida ha terminado. Vosotros tenéis cohetes. Cohetes que no habéis intentado usar, pues no queríais volver a la Tierra. Yo ahora os pido que los uséis. Que vayáis a la Tierra a recoger a los sobrevivientes y traerlos a Marte. Os pido vuestra ayuda. Hemos sido unos estúpidos. Confesamos ante Dios nuestra estupidez y nuestra maldad. Chinos, hindúes, y rusos, e ingleses y americanos. Os pedimos que nos dejéis venir. El suelo marciano se mantiene casi virgen desde hace innumerables siglos. Hay sitio para todos. Es un buen suelo... Lo he visto desde el aire. Vendremos y trabajaremos la tierra para vosotros. Sí, hasta haremos eso. Merecemos cualquier castigo; pero no nos cerréis las puertas. No podemos obligaros ahora. Si queréis subiré a mi nave y volveré a la Tierra. Pero si no, vendremos y haremos todo lo que vosotros hacíais... Limpiaremos las casas, cocinaremos, os lustraremos los zapatos, y nos humillaremos ante Dios por lo que hemos hecho durante siglos contra nosotros mismos, contra otras gentes, contra vosotros.</p>
+                     
+                     <p>El hombre calló. Había terminado.</p>
+                     
+                     <p>Se oyó un silencio hecho de silencios. Un silencio que uno podía tomar con la mano, un silencio que cayó sobre la multitud como la sensación de una tormenta distante. Los largos brazos de los negros colgaban como péndulos oscuros a la luz del sol, y sus ojos se clavaban en el viejo. El viejo no se movía. Esperaba.</p>
+                     
+                     <p>Willie Johnson sostenía aún la cuerda entre las manos. Los hombres a su alrededor lo observaban atentamente. Su mujer Hattie esperaba, tomada de su brazo.</p>
+                     
+                     <p>Hattie Johnson hubiese querido entrar en el interior de aquel odio, y examinarlo hasta descubrir una grieta, una falla. Entonces podría sacar un guijarro o una piedra, o un ladrillo, y luego parte de una pared, y pronto todo el edificio se vendría abajo. Ahora mismo ya estaba tambaleándose. ¿Pero dónde estaba la piedra angular? ¿Cómo llegar a ella? ¿Cómo sacarla y convertir ese odio en un montón de ruinas?</p>
+                     
+                     <p>Hattie miró a su marido, hundido en el silencio. No entendía qué pasaba, pero conocía a su marido, conocía su vida, y de pronto comprendió que él, Willie, era la piedra angular. Comprendió que sin él todo caería en pedazos.</p>
+                     
+                     <p>—Señor... —Hattie dio un paso adelante. No sabía cómo empezar. La multitud le clavó los ojos en la espalda. Sintió esas miradas—. Señor...</p>
+                     
+                     <p>El hombre se volvió hacia Hattie con una débil sonrisa.</p>
+                     
+                     <p>—Señor —dijo Hattie—, ¿conoce usted Knockwood Hill en Green Water, Alabama?</p>
+                     
+                     <p>El viejo le habló por encima del hombro a alguien que estaba dentro de la nave. Un momento después le alcanzaban un mapa fotográfico. El hombre esperó.</p>
+                     
+                     <p>—¿Conoce el viejo roble en la cima de la colina, señor?</p>
+                     
+                     <p>El viejo roble. El sitio donde habían baleado al padre de Willie, donde lo habían colgado. El sitio donde lo habían descubierto, balanceado por el viento del alba.</p>
+                     
+                     <p>—Sí.</p>
+                     
+                     <p>—¿Todavía está? —preguntó Hattie.</p>
+                     
+                     <p>—No —dijo el viejo—. Saltó en pedazos. Toda la colina ha desaparecido, y el árbol también.</p>
+                     
+                     <p>¿Ve? —Señaló el lugar en el mapa.</p>
+                     
+                     <p>—Déjeme ver —dijo Willie adelantándose y mirando la fotografía.</p>
+                     
+                     <p>Hattie parpadeó ante el hombre blanco. El corazón se le salía del pecho.</p>
+                     
+                     <p>—Hábleme de Green Water —dijo rápidamente.</p>
+                     
+                     <p>—¿Qué quiere saber?</p>
+                     
+                     <p>—El doctor Phillips, ¿vive todavía?</p>
+                     
+                     <p>Pasó un momento. Encontraron la información en una máquina tintineante, en el interior del cohete...</p>
+                     
+                     <p>—Muerto en la guerra.</p>
+                     
+                     <p>—¿Y su hijo?</p>
+                     
+                     <p>—Muerto.</p>
+                     
+                     <p>—¿Qué pasó con la casa?</p>
+                     
+                     <p>—Se incendió. Como todas las casas.</p>
+                     
+                     <p>—¿Y qué pasó con aquel otro viejo árbol de Knockwood Hill?</p>
+                     
+                     <p>—Todos los árboles murieron.</p>
+                     
+                     <p>—¿Aquel árbol también? ¿Está usted seguro? —preguntó Willie.</p>
+                     
+                     <p>—Sí.</p>
+                     
+                     <p>El cuerpo de Willie pareció aflojarse.</p>
+                     
+                     <p>—¿Y qué pasó con la casa del señor Burton, y el señor Burton?</p>
+                     
+                     <p>—No quedó en pie ninguna casa. Murieron todos los hombres.</p>
+                     
+                     <p>—¿Y la cabaña de la señora Johnson, mi madre?<br>El sitio donde la habían matado.</p>
+                     
+                     <p>—Desapareció también. Todo desapareció. Aquí están las fotografías. Usted mismo puede verlo.</p>
+                     
+                     <p>Allí estaban las fotografías. Podía tenerlas en la mano, mirarlas, pensar en ellas. El cohete estaba lleno de fotografías y respuestas. Cualquier pueblo, cualquier edificio, cualquier sitio. Willie se quedó, allí, inmóvil, con la cuerda en las manos.</p>
+                     
+                     <p>Estaba recordando la Tierra, la Tierra verde y el pueblo verde donde había nacido y crecido. Y pensaba en ese pueblo, hecho pedazos, destruido, arruinado, y en todos sus lugares, en todos aquellos lugares relacionados con algún mal, y en todos sus hombres muertos, y en los establos, y las herrerías, y las tiendas de antigüedades, los cafés, las tabernas, los puentes, los árboles con sus ahorcados, las colinas sembradas de balas, los senderos, las vacas, las mimosas, y su propia casa, y las casas de columnas a orillas del río, esas tumbas blancas en donde mujeres delicadas como polillas revoloteaban a la luz del otoño, distantes, lejanas. Esas casas en donde los hombres fríos se balanceaban en sus mecedoras, con los vasos de alcohol en la mano, y los fusiles apoyados en las balaustradas del porche, mientras aspiraban el aire del otoño y meditaban en la muerte. Ya no estaban allí, ya nunca volverían. Solo quedaba, de toda aquella civilización, un poco de papel picado esparcido por el suelo. Nada, nada que él, Willie, pudiese odiar... ni la cápsula vacía de una bala, ni una cuerda de cáñamo, ni un árbol, ni siquiera una colina. Nada sino unos desconocidos en un cohete, unos desconocidos que podían lustrarle los zapatos y viajar en los últimos asientos de los ómnibus o sentarse en las últimas filas de los cines oscuros.</p>
+                     
+                     <p>—No tienen por qué hacer eso —murmuró Willie Johnson.</p>
+                     
+                     <p>Su mujer le miró las manos. Los dedos de Willie estaban abriéndose. La cuerda cayó al suelo y se dobló sobre sí misma.</p>
+                     
+                     <p>Los hombres corrieron por las calles del pueblo y arrancaron los letreros tan rápidamente dibujados y borraron la pintura amarilla de los ómnibus, y cortaron los cordones que dividían los teatros, y descargaron los fusiles, y guardaron las cuerdas.</p>
+                     
+                     <p>—Un nuevo principio para todos —dijo Hattie, en el coche, al regresar.</p>
+                     
+                     <p>—Sí —dijo Willie al cabo de un rato—. El Señor ha salvado a algunos: unos pocos aquí y unos pocos allá. Y el futuro está ahora en nuestras manos. El tiempo de la tortura ha concluido. Seremos cualquier cosa, pero no tontos. Lo comprendí en seguida al oír a ese hombre. Comprendí que los blancos están ahora tan solos como lo estuvimos nosotros.</p>
+                     
+                     <p>No tienen casa y nosotros tampoco la teníamos. Somos iguales. Podemos empezar otra vez. Somos iguales.</p>
+                     
+                     <p>Willie detuvo el coche y se quedó sentado, inmóvil, mientras Hattie hacía salir a los chicos. Los chicos corrieron hacia el padre.</p>
+                     
+                     <p>—¿Has visto al hombre blanco? ¿Lo has visto? —gritaron.</p>
+                     
+                     <p>—Sí, señor —dijo Willie, sentado al volante, pasándose lentamente la mano por la cara—.</p>
+                     
+                     <p>Me parece que hoy he visto por primera vez al hombre blanco... Lo he visto de veras, claramente.</p>
+
+                     
+                    <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                <div class="slides slide">
+                <h2 class="section-title naranjaOs">Selma Lagerlöf</h2>
+                    <h1 class="chapter-title cafe">En Nazaret</h1>
+                 <div class="content-text">
+
+                     
+                        <p class="first-paragraph">Cuando Jesús tenía cinco años, hallábase una vez sentado en el umbral del taller de su padre, ocupado en hacer figurillas de barro con un trozo de blanda arcilla que le había regalado el cacharrero de enfrente.</p>
+                     
+                        <p>Estaba Jesús más satisfecho que nunca, pues todos los niños del barrio le habían contado que el cacharrero era un hombre brusco que no se dejaba conquistar ni con miradas suplicantes ni con melosas zalamerías, por cuyo motivo no había osado manifestarle un solo ruego. Pero, ved, ¡apenas sí sabía él mismo cómo había sucedido aquello! El caso es que hallándose en la puerta de su casa mirando con ojos anhelantes cómo trabajaba sus moldes, el vecino salió de su taller y le regaló tanta arcilla, que bastaba para hacer con ella una gran jarra de las que se emplean para el envase del vino.</p>
+                     
+                        <p>Junto a la escalera de la casa próxima estaba sentado Judas, un muchacho feo y pelirrojo, con la cara llena de manchas blanquecinas y los vestidos llenos de desgarrones que se había hecho en sus continuas peleas con los chicos de la calle. Por el momento estaba tranquilo; no importunaba a nadie ni se peleaba con ningún chico, y, como Jesús, estaba ocupado con un trozo de arcilla.</p>
+                        
+                        <p>Pero esta arcilla no había podido procurársela él, pues apenas si se atrevía a pasar por delante de la casa del cacharrero, quien se quejaba siempre de que Judas tiraba piedras a su quebradiza mercancía y seguramente le habría echado a palos; pero Jesús había partido con él su provisión.</p>
+                     
+                        <p>Las figurillas que iban modelando las colocaban ambos niños en torno a él. Tenían el mismo aspecto que todas las figurillas de barro de todos los tiempos. En lugar de pies tenían una gran bola de barro, y, en la espalda, unas alas apenas perceptibles y una cola insignificante.</p>
+
+                     
+                        <p>Pero, de todos modos, observábase en seguida una diferencia en el trabajo de los dos compañeros.</p>
+                     
+                        <p>Los pájaros de Judas eran tan desequilibrados que no lograban mantenerse en pie, y por más esfuerzos que hacía con sus menudos y duros dedos, no lograba dar a sus cuerpos una forma bella y presentable. A veces miraba a hurtadillas hacia Jesús para ver cómo hacía sus pájaros, tan regulares y lisos como las hojas de las encinas de los bosques del monte Tabor.</p>
+                     
+                         <p>A medida que terminaba sus pajarillos, Jesús iba alegrándose más y más. Cada uno le parecía más bonito que el otro, y los contemplaba lleno de orgullo y amor. Serían sus compañeros de juego, sus pequeños hermanitos, y debían dormir en su camita, hacerle compañía, cantarle su cariño en ausencia de su madre.</p>
+                     
+                        <p>Jamás se había creído tan rico: nunca volvería a sentirse solo y abandonado.</p>
+                     
+                        <p>Un corpulento aguador pasó por delante, inclinado bajo el peso de su pesada cuba, y tras él siguió un vendedor de legumbres, balanceándose sobre el lomo de su asno, entre dos grandes cestas de sauce, vacías ya. El aguador puso su mano sobre la cabeza de dorados rizos de Jesús, y le preguntó por sus pájaros. Jesús le contó que tenían nombre y que podían cantar. Todos sus pajarillos habían venido volando hacia él desde lejanos países y le contaban infinitas cosas de las que solo ellos y él sabían algo. Y Jesús hablaba de tal manera que el aguador y el verdulero olvidaron su trabajo, durante un largo rato, para escucharle.</p>
+                     
+                        <p>Mas cuando iban a marcharse, Jesús les señaló a Judas:</p>
+                        
+                        <p>—¡Mirad qué pájaros más bonitos hace Judas!</p>
+                     
+                        <p>Entonces el verdulero detuvo bondadosamente su asno, y preguntó a Judas si sus pájaros tenían también nombre y podían cantar.</p>
+                     
+                        <p>Pero Judas, no sabiendo qué contestar, calló obstinadamente y no levantó la mirada de su trabajo, de modo que el verdulero le aplastó, disgustado, uno de los pájaros, y siguió su camino.</p>
+                     
+                        <p>Y así pasó la tarde. El sol se hallaba en su ocaso y su brillo penetraba por la baja puerta de la ciudad, que se hallaba adornada con un águila romana y que se levantaba al final de la calleja. Este resplandor que llegaba con el crepúsculo era de un color rosa vivo; y como si estuviera mezclado con sangre bañaba en su color todo lo que se ponía en su camino, al atravesar la estrecha callejuela. Lo mismo bañaba los platos y jarros del cacharrero, que la tabla que chirriaba bajo los dientes de la sierra de José o el blanco velo que cubría el rostro de María.</p>
+                     
+                        <p>Pero donde más bellamente fulguraba el sol era en los pequeños charcos que se habían formado entre los desiguales adoquines del empedrado de la calle. Y, de repente, metió Jesús su manita en el charco que tenía más próximo. Se le había ocurrido pintar sus pajarillos grises con el fulgurante resplandor solar que había revestido de tan bellos matices el agua, los muros de las casas y todo cuanto alcanzaban sus rayos.</p>
+                     
+                        <p>Y el brillo del sol tuvo un gran placer en dejarse extraer, como pintura de un cubo, y cuando Jesús revistió con ella sus pajarillos de barro, quedaron estos envueltos de pies a cabeza con un brillo diamantino.</p>
+                     
+                        <p>Judas, que de vez en cuando lanzaba una mirada a Jesús para ver si este hacía más bellos pájaros y en mayor cantidad que él mismo, lanzó un grito de admiración al ver que Jesús revestía sus pajarillos con el brillo solar que tomaba de los charcos de la calleja.</p>
+                     
+                        <p>Y también Judas sumergió su menuda mano en la fulgurante agua, intentando extraer igualmente el brillo del sol.</p>
+                     
+                        <p>Pero el dorado resplandor no se dejó coger por él. Se le escapaba entre los dedos y por más que movía sus manos para cazarle no le era posible retener ni una pizca de resplandor para sus pobres pajarillos.</p>
+                     
+                        <p>—¡Espera, Judas! —exclamó Jesús—. Ahora voy a pintarte los pájaros.</p>
+                     
+                        <p>—No —dijo Judas—, no quiero que los toques, están bien así.</p>
+                     
+                        <p>Levantose, frunció las cejas y se mordió los labios. Entonces fue colocando su ancho pie sobre los pájaros y los pisoteó uno tras otro, convirtiéndolos en un informe montón de barro.</p>
+                     
+                        <p>Cuando hubo destruido así todos sus pájaros, se acercó a Jesús, que acariciaba a los suyos, resplandecientes como joyas.</p>
+                     
+                        <p>Judas los contempló silencioso durante un rato, después alzó un pie y aplastó uno de ellos.</p>
+                     
+                        <p>Cuando Judas retiró el pie y vio el menudo pajarillo transformado en un bulto grisáceo de barro, sintió tal alivio que empezó a reír y levantó el pie para aplastar otro.</p>
+                     
+                        <p>—¡Judas! —exclamó Jesús—. ¿Qué estás haciendo? ¿No sabes que viven y pueden cantar?</p>
+                     
+                     
+                        <p>Pero Judas riose y aplastó otro pajarillo.</p>
+                     
+                        <p>Jesús buscó auxilio en torno suyo. Judas era más corpulento y fuerte y Jesús no tenía fuerza para retenerle. Miró hacia su madre, pero esta se hallaba bastante alejada y antes de que hubiera tenido tiempo de llegar, Judas habría conseguido aplastar todos sus pajarillos.</p>
+                     
+                        <p>Los ojos de Jesús se llenaron de lágrimas. Ya había destruido Judas cuatro de sus pájaros y no le quedaban más que tres.</p>
+                     
+                        <p>Y le apenó ver que sus pájaros siguieran allí tan tranquilos y se dejaran aplastar sin huir del peligro.</p>
+                     
+                        <p>Jesús palmoteó con sus manitas para despertarlos y les gritó:</p>
+                     
+                     
+                        <p>—¡Volad, volad!</p>
+                     
+                     <p>Entonces los tres pajarillos empezaron a agitar sus alitas y temerosos volaron hacia el alero del tejado.</p>
+                     
+                     <p>Cuando Judas vio que los pajarillos agitaron las alas y volaron al conjuro de Jesús, se puso a llorar amargamente.</p>
+                     
+                     <p>Se mesó los cabellos como había visto hacer a las personas mayores dominadas por la desesperación, y se echó a los pies de Jesús.</p>
+                     
+                     <p>Y Judas permaneció ante Jesús revolcándose en el polvo como un perro, besándole los pies y conjurándole para que levantara el pie y le aplastara como él había hecho con sus pajarillos de barro, pues Judas amaba a Jesús; le admiraba y le odiaba al mismo tiempo.</p>
+                     
+                     <p>María, que había observado el juego de los niños, levantó a Judas del suelo y le acarició.</p>
+                     
+                     <p>—¡Pobre niño! —le dijo—. Tú no sabes que has intentado hacer algo que no puede realizar ninguna criatura viviente. Que no se te vuelva a ocurrir hacer lo mismo si no quieres ser el más desgraciado de los hombres.</p>
+                     
+                     <p>¡Qué suerte correría aquel de entre nosotros que osara rivalizar con el que puede pintar con brillo de sol y vivificar el muerto barro con el hálito de la vida!</p>
+                     
+                    <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                <div class="slides slide">
+                <h2 class="section-title naranjaOs">Gianni Rodari</h2>
+                    <h1 class="chapter-title cafe">El tamborilero<br/><span class="oswald-light cafe">mágico</span></h1>
+                    <h3 class="story-title">Instrucciones para el uso</h3>
+                 <div class="content-text">
+
+                     
+                        <p class="first-paragraph">Esta historia fue escrita para un programa radiofónico que se titulaba Cuentos para jugar, que fue emitido en los años 1969-70.</p>
+                     
+                        <p>Tiene tres finales, a escoger.</p>
+                     
+                        <p>Al final, el autor ha indicado cuál es el final que él prefiere.</p>
+                        
+                        <p>El lector lee, mira, piensa y si no encuentra un final a su gusto puede inventarlo, escribirlo o dibujarlo por sí mismo. ¡Que os divirtáis!<br><br><br><br></p>
+                     
+                        <p class="first-paragraph">Érase una vez un tamborilero que volvía de la guerra. Era pobre, sólo tenía el tambor, pero a pesar de ello estaba contento porque volvía a casa después de tantos años. Se le oía tocar desde lejos: barabán, barabán, barabán...</p>
+                     
+                        <p>Andando y andando encontró a una viejecita.</p>
+                     
+                        <p>—Buen soldadito, ¿me das una moneda?</p>
+                     
+                         <p>—Abuelita, si tuviese, te daría dos, incluso una docena. Pero no tengo. </p>
+                
+                     
+                        <p>—¿Estás seguro?</p>
+                     
+                        <p>—He rebuscado en los bolsillos durante toda la mañana y no he encontrado nada.</p>
+                     
+                        <p>—Mira otra vez, mira bien.</p>
+                        
+                        <p>—¿En los bolsillos? Miraré para darte gusto. Pero estoy seguro de que... ¡Vaya! ¿Qué es esto?</p>
+                     
+                        <p>—Una moneda. ¿Has visto cómo tenías?</p>
+                     
+                        <p>—Te juro que no lo sabía. ¡Qué maravilla! Toma, te la doy de buena gana porque debes necesitarla más que yo.</p>
+                     
+                        <p>—Gracias, soldadito —dijo la viejecita—, y yo te daré algo a cambio.</p>
+                     
+                        <p>—¿En serio? Pero no quiero nada.</p>
+                     
+                        <p>—Sí, quiero darte un pequeño encantamiento. Será este: siempre que tu tambor redoble todos tendrán que bailar.</p>
+                     
+                        <p>—Gracias, abuelita. Es un encantamiento verdaderamente maravilloso.</p>
+                     
+                        <p>—Espera, no he terminado: todos bailarán y no podrán pararse si tú no dejas de tocar.</p>
+                     
+                        <p>—¡Magnífico! Aún no sé lo que haré con este encantamiento pero me parece que me será útil.</p>
+                     
+                        <p>—Te será utilísimo.</p>
+                     
+                        <p>—Adiós, soldadito.</p>
+                     
+                        <p>—Adiós, abuelita.</p>
+                     
+                        <p>Y el soldadito reemprendió el camino para regresar a casa. Andando y andando... De repente salieron tres bandidos del bosque.</p>
+                     
+                        <p>—¡La bolsa o la vida!</p>
+                     
+                        <p>—¡Por amor de Dios! ¡Adelante! Tomen la bolsa. ¡Pero les advierto que está vacía!</p>
+                     
+                        <p>—¡Manos arriba o eres hombre muerto!</p>
+                     
+                     
+                        <p>Obedezco, obedezco, señores bandidos.</p>
+                     
+                        <p>—¿Dónde tienes el dinero?</p>
+                     
+                        <p>—Lo que es por mí, lo tendría hasta en el sombrero.</p>
+                     
+                        <p>Los bandidos miran en el sombrero: no hay nada.</p>
+                     
+                        <p>—Por mí lo tendría hasta en la oreja.</p>
+                     
+                        <p>—Os digo que lo tendría incluso en la punta de la nariz, si tuviera.</p>
+                        
+                        <p>Los bandidos miran, buscan, hurgan. Naturalmente no encuentran ni siquiera una moneda.</p>
+                        <p>—Eres un desarrapado —dice el jefe de los bandidos—. Paciencia. Nos llevaremos el tambor para tocar un poco.</p>
+                        <p>—Tomadlo —suspira el soldadito—; siento separarme de él porque me ha hecho compañía durante muchos años. Pero si realmente lo queréis...</p>
+                        <p>—Lo queremos.</p>
+                        <p>—¿Me dejaréis tocar un poquito antes de llevároslo? Así os enseño cómo se hace ¿eh?</p>
+                     
+                        <p>—Pues claro, toca un poco.</p>
+                     
+                        <p>—Eso, eso —dijo el tamborilero—, yo toco y vosotros (barabán, barabán, barabán) ¡y vosotros bailáis!</p>
+                     
+                        <p>Y había que verlos bailar a esos tres tipejos. Parecían tres osos de feria.</p>
+                     
+                        <p>Al principio se divertían, reían y bromeaban.</p>
+                     
+                        <p>—¡Ánimo, tamborilero! ¡Dale al vals!</p>
+                     
+                        <p>—¡Ahora la polka, tamborilero!</p>
+                        <p>—¡Adelante con la mazurca!</p>
+                     
+                     <p>Al cabo de un rato empiezan a resoplar. Intentan pararse y no lo consiguen. Están cansados, sofocados, les da vueltas la cabeza, pero el encantamiento del tambor les obliga a bailar, bailar, bailar...</p>
+                     
+                     <p>—¡Socorro!<br>—¡Bailad!<br>—¡Piedad!<br>—¡Bailad!<br>—¡Misericordia!<br>—¡Bailad, bailad!<br>—¡Basta, basta!</p>
+                     
+                     <p>—¿Puedo quedarme el tambor?</p>
+                     
+                     <p>—Quédatelo... No queremos saber nada de brujerías...</p>
+                     
+                     <p>—¿Me dejaréis en paz?</p>
+                     
+                     <p>—Todo lo que quieras, basta con que dejes de tocar.</p>
+                     
+                     <p>Pero el tamborilero, prudentemente, solo paró cuando los vio derrumbarse en el suelo sin fuerzas y sin aliento.</p>
+                     
+                     <p>—¡Eso es, así no podréis perseguirme!</p>
+                     
+                     <p>Y él, a escape. De vez en cuando, por precaución, daba algún golpecillo al tambor. Y enseguida se ponían a bailar las liebres en sus madrigueras, las ardillas sobre las ramas, las lechuzas en los nidos, obligadas a despertarse en pleno día...</p>
+                     
+                     <p>Y siempre adelante, el buen tamborilero caminaba y corría, para llegar a su casa...</p>
+                     <hr class="line-separator line-orange" />
+                    
+                     
+                     <p>Primer final</p>
+                     
+                     <p>Andando y andando el tamborilero empieza a pensar: “Este hechizo hará mi fortuna. En el fondo he sido estúpido con aquellos bandidos. Podía haber hecho que me entregaran su dinero. Casi casi, vuelvo a buscarlos...”.</p>
+                     
+                     <p>Y ya daba la vuelta para volver sobre sus pasos cuando vio aparecer una diligencia al final del sendero.</p>
+                     
+                     <p>—He ahí algo que me viene bien.</p>
+                     
+                     <p>Los caballos, al trotar, hacían tintinear los cascabeles. El cochero, en el pescante, silbaba alegremente una canción. Junto a él iba sentado un policía armado.</p>
+                     
+                     <p>—Salud, tamborilero, ¿quieres subir?</p>
+                     
+                     <p>—No, estoy bien aquí.</p>
+                     
+                     <p>—Entonces apártate del camino porque tenemos que pasar.</p>
+                     
+                     <p>—Un momento. Echad primero un bailecito.</p>
+                     
+                     <p>Barabán, barabán... El tambor empieza a redoblar. Los caballos se ponen a bailar. El cochero se tira de un salto y se lanza a menear las piernas. Baila el policía, dejando caer el fusil. Bailan los pasajeros.</p>
+                     
+                     <p>Hay que aclarar que aquella diligencia transportaba el oro de un banco. Tres cajas repletas de oro. Serían unos trescientos kilos. El tamborilero, mientras seguía tocando el tambor con una mano, con la otra hace caer las cajas en el sendero y las empuja tras un arbusto con los pies.</p>
+                     
+                     <p>—¡Bailad! ¡Bailad!</p>
+                     
+                     <p>—¡Basta ya! ¡No podemos más!</p>
+                     
+                     <p>—Entonces marchaos a toda velocidad, y sin mirar hacia atrás...</p>
+                     
+                     <p>La diligencia vuelve a ponerse en camino sin su preciosa carga. Y hete aquí al tamborilero millonario... Ahora puede construirse un chalet, vivir de las rentas, casarse con la hija de un comendador. Y cuando necesite dinero, no tiene que ir al banco: le basta su tambor.</p>
+                     <hr class="line-separator line-orange" />
+                    
+                     
+                     <p>Segundo final</p>
+                     
+                     <p>Andando y andando, el tamborilero ve a un cazador a punto de disparar a un tordo. Barabán, barabán... el cazador deja caer la carabina y empieza a bailar. El tordo escapa.</p>
+                     
+                     <p>—¡Desgraciado! ¡Me las pagarás!</p>
+                     
+                     <p>—Mientras tanto, baila. Y si quieres hacerme caso, no vuelvas a disparar a los pajaritos.</p>
+                     
+                     <p>Andando y andando, ve a un campesino que golpea a su burro…</p>
+                     
+                     <p>—¡Baila!</p>
+                     
+                     <p>—¡Socorro!</p>
+                     
+                     <p>—¡Baila! Solamente dejaré de tocar si me juras que nunca volverás a pegar a tu burro.</p>
+                     
+                     <p>—¡Lo juro!</p>
+                     
+                     <p>Andando y andando, el generoso soldadito echa mano de su tambor siempre que se trata de impedir un acto de prepotencia, una injusticia, un abuso. Y encuentra tantas arbitrariedades que nunca consigue llegar a casa. Pero de todas formas está contento y piensa: “Mi casa estará donde pueda hacer el bien con mi tambor”.</p>
+                     <hr class="line-separator line-orange" />
+                    
+                     
+                     <p>Tercer final</p>
+                     
+                     <p>Andando y andando... Mientras anda, el tamborilero piensa: extraño encantamiento y extraño tambor. Me gustaría mucho saber cómo funciona el encantamiento.</p>
+                     
+                     <p>Mira los palillos, los vuelve por todos lados: parecen dos palitos de madera normales.</p>
+                     
+                     <p>—¡A lo mejor el secreto está dentro, bajo la piel del tambor!</p>
+                     
+                     <p>El soldadito hace un agujerito en la piel con el cuchillo.</p>
+                     
+                     <p>—Echaré un vistazo —dice. Dentro no hay nada de nada.</p>
+                     
+                     <p>—Paciencia, me conformaré con el tambor como es.</p>
+                     
+                     <p>Y reemprende su camino, batiendo alegremente los palillos. Pero ahora ya no bailan al son del tambor las liebres, las ardillas ni los pájaros en las ramas. Las lechuzas no se despiertan.<br>—Barabán, barabán...</p>
+                     
+                     <p>El sonido parece el mismo, pero el hechizo ya no funciona.</p>
+                     
+                     <p>¿Vais a creerlo? El tamborilero está más contento así. </p>
+                     
+                     <p>El final del autor</p>
+                     
+                     <p>El primer final no me gusta: ¿cómo un tamborilero alegre y generoso se va a convertir de repente en un salteador de caminos? El tercer final no me va: me parece una maldad poner fin a la magia para castigar una pequeña, inocente curiosidad. La curiosidad no es un defecto. Si los científicos no fueran curiosos, nunca descubrirían nada nuevo. Estoy por el segundo.</p>
+                    <hr class="line-separator line-orange" />
+                    
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="slides slide">
+                
+                <h2 class="section-title">Biografías</h2>
+                    <h1 class="chapter-title cafe">Roald Dahl</h1>
+                   
+                 <div class="content-text">
+                        
+                         <img class="img-fluid-50" src="img/dahl.png" alt="Roald Dahl">
+                     
+                        <p>(Llandaff, 1916 - Oxford, 1990). Escribió varios guiones para la serie de películas de James Bond.</p>
+                     
+                        <p>Aunque es recordado por sus narraciones para niños y jóvenes, escribió numerosas obras para adultos, Relatos de lo inesperado, Mi tío Oswald, La venganza es mía, Génesis y catástrofe, Historias extraordinarias y El gran cambiazo. Charlie y la fábrica de chocolate, Charlie y el ascensor de cristal, James y el melocotón gigante, Las brujas, y Los cretinos, Danny, el campeón del mundo, El dedo mágico, Matilda.</p>
+            
+                    </div>
+                    
+                    <h1 class="chapter-title cafe">Rudyard Kipling<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/kipling.png" alt="Rudyard Kipling ">
+                        <p>Bombay, 1865 - Londres, 1936). Algunas de sus obras son: La luz que se apaga, Invenciones varias, Capitanes intrépidos. El libro de la jungla y su continuación se trata de la primera obra maestra para muchachos. Siguieron Historias para niños, Puck y Recompensas y hadas.</p>
+                        <p>En 1907 obtuvo el Premio Nobel y en 1926 la medalla de oro de la Royal Society of Literature. Otras obras son Debits and Credit (1926) y Limite and Renewals (1932). La obra maestra de Kipling es Kim (1901).</p>
+                      
+                    
+                    </div>
+                    
+                    
+                      <h1 class="chapter-title cafe">Aleksandr Pushkin<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/pushkin.png" alt="Aleksandr Pushkin ">
+                        <p>(Aleksandr o Alexander Sergeyevich Pushkin; Moscú, 1799 - San Petersburgo, 1837).<br>Poeta y novelista ruso. </p>
+                        <p>Publicó sus primeros poemas en la revista Vestnik Evropy. Ruslan y Lyudmila, (1820).</p>
+                        <p>La libertad, 1817; El pueblo, 1819. A consecuencia de ello, acusado de actividades subversivas, fue obligado a exiliarse. Fue confinado en Ucrania primero y luego, en Crimea, donde compuso varios de sus principales poemas: El prisionero del Cáucaso (1822), Los hermanos bandoleros (1821-1822) y La fuente de Bakhcisaraj(1824). Su novela en verso Yevgeny Onegin (1833), la tragedia Boris Godunov (1824-1825). Sus últimas obras: Poltava (1829), Relatos de Belkin (1830), El caballero de bronce (1833) y La hija del capitán (1836). </p>
+                    
+                    </div>
+                    
+                      <h1 class="chapter-title cafe">María Gripe<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/gripe.png" alt="María Gripe">
+                        <p>(Vaxholm, 1923 - Salem, 2007).</p>
+                        <p>Tuvo gran éxito en el género infantil y juvenil. Recibió la medalla Hans Christian Andersenen en 1974.</p>
+                        <p>Firmó más de una treintena de obras. Muchas de ellas se han traducido al castellano como Hugo y Josefina, La sombra sobre el banco de piedra o Elvis Karlsson. Otras de sus obras son La hija del espantapájaro y Papá de noche.</p>
+                    
+                    </div>
+                    
+                     <h1 class="chapter-title cafe">Ray Bradbury<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/bradbury.png" alt="Ray Bradbury">
+                        <p>(Ray Douglas Bradbury; Waukenaun, Illinois, 1920 - Los Ángeles, California, 2012).</p>
+                        <p>Novelista y cuentista estadounidense conocido principalmente por sus libros de ciencia ficción. Crónicas marcianas (1950). En 1951 publicó uno de sus libros mayores, El hombre ilustrado, y dos años más tarde Fahrenheit 451 (título que alude a la temperatura en que los libros empiezan a arder). Otros títulos: Casa dividida y El robo del siglo, El vino del estío.</p>
+                        <p>Escribió también guiones de cine, como el de la película Moby Dick, de John Huston, así como guiones para series televisivas como Alfred Hitchcock presenta y La dimensión desconocida. </p>
+                        
+                        <p>En 1963 se publicaron sus obras teatrales, reunidas bajo el título The Anthem Sprinters. El árbol de las brujas y Cementerio para lunáticos.</p>
+                    
+                    </div>
+                    
+                    <h1 class="chapter-title cafe">Selma Lagerlöf<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/selma.png" alt="Selma Lagerlöf">
+                        <p>(Selma Ottiliana Lovisa Lagerlöf; Marbacka, 1858 - 1940).</p>
+                        <p>Novelista sueca. Fue la primera doctora sueca honoris causa de filosofía, premio Nobel en 1909 y miembro de la Academia sueca en 1914. </p>
+                        <p>Obras: El cuento de Gösta Berling (1891), Los milagros del Anticristo (1897), Jerusalén (I-II, 1901-1902), El dinero del señor Arne (1903), El maravilloso viaje de Nils Holgersson por Suecia (1906-1907).</p>
+                    
+                    </div>
+                    
+                      <h1 class="chapter-title cafe">Gianni Rodari<br/></h1>
+                    <div class="content-text">
+                        
+                        <img class="img-fluid-50" src="img/gianni.png" alt="Gianni Rodari">
+                        <p>(Omegna, 1920 - Roma, 1980).<br>Periodista y escritor italiano.</p>
+                        <p>Durante muchos años fue maestro antes de ser redactor del periódico Paese Sera y dedicarse a la creación literaria para niños.</p>
+                        <p>Obras: Las aventuras de Cebollín (1951), Cuentos por teléfono (1960), Cuentos para jugar (1963), El libro de los errores (1964), La flecha azul (1964), La tarta voladora (1966), Cuentos escritos a máquina (1968), La góndola fantasma (1978), Las dos veces el barón Lamberto (1978) y Los enanos de Mantúa (1980).</p>
+                        
+                        <p>En La gramática de la fantasía. Introducción al arte de inventar historias (1973) reflexiona sobre la literatura infantil. </p>
+                        <p>En 1970 ganó el Premio Andersen.</p>
+                    
+                    </div>
+    
+                    
+                    
+                    
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+
+<footer>
+   <div class="main-container main-container-flex main-container-home">
+     <p class="brand-palabras">Palabras rodantes</p>
+     <h1 class="brand footer-brand">Comfama</h1>    
+   </div>
+   <div class="copyright"><p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p></div>
+</footer>
+    
+    <script>
+window.createMenu('8');    
+</script>
+</body>
+</html>

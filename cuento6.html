@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palabras rodantes</title>
+    
+<!-- estilos -->    
+<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+    
+<!-- acciones -->
+<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+<script src="js/jq-sticky-anything.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/base.js" type="text/javascript"></script>     
+<script type="text/javascript" src="js/queryloader2.min.js"></script>
+<script type="text/javascript">
+window.addEventListener("DOMContentLoaded", function() {
+    new QueryLoader2(document.querySelector("html"), {
+        barColor: "#fff",
+        backgroundColor: "#000",
+        percentage: true,
+        barHeight: 0,
+        minimumTime: 1000,
+        maxTime: 50000,
+        fadeOutTime: 1000
+    });
+});
+    
+
+</script>
+</head>
+    
+<style>
+.menu li:hover{
+    background-color: #B36D31;
+    color: #000;
+    
+    }
+    
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-left: 24%;
+    padding-top: 4%;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url(img/btnLect.png);
+    background-repeat: no-repeat;
+    width: 305px;
+    height: 100px;
+}
+    
+.first-paragraph::first-letter{
+    font-size: 5em;
+    line-height: 0;
+    font-family: 'oswaldmedium';
+    color: #EA6020;
+    
+}
+    
+.menu-selected{
+    color: #fff;
+    background-color: #B36D31;
+}
+   
+.line-orange{
+    border: 1px solid #ff8e1e;
+    margin-top: 6%;
+    margin-bottom: 30px;
+}    
+    </style>
+
+<body class="bg-book7">
+<header>
+    <a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+    <h1 class="brand">Comfama</h1>
+    
+    <img class="botonA" src="img/buttonA.png" alt="boton cambio">
+    
+    <div class="slideHeader">
+         
+        <img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+        <img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+        <img class="resetFont" src="img/reset.png" alt="resetear">
+        <br>
+        <img class="blanco" src="img/blanco.png" alt="btn blanco">
+        <img class="morado" src="img/morado.png" alt="btn morado">
+        <img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+        
+    </div>
+    
+</header>
+     
+    <div class="presentation">
+        
+        <div class="main-container presentation-container">
+            <button id="presentation-close">Cerrar</button>
+            <div class="presentation-scroll">
+                
+                <h1 class="presentation-title">Créditos</h1>
+                
+
+               <p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía</p>
+                
+                <p>Ilustración carátula:<br>• Godie Arboleda</p>
+                
+                <p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+                <p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+
+                
+            </div>
+            
+        </div>
+    </div> 
+    
+     
+    <div class="global-container">
+        
+        
+        
+        
+        
+        <hr class="line-separator line-title" />
+        <h1 class="cafe main-title">Tontos Sagrados<br><span class="cafe oswald-light">monstruos amados</span></h1>
+        <hr class="line-separator line-title" />
+        <div class="main-credits"><p>Fanny Buitrago</p></div>
+        
+        <img class="img-fluid" src="img/imagenlibro5.png" alt="imagenLibro">
+        
+        
+        
+        
+        <div class="main-container-flex" id="container-controls">
+
+            <div class="mobile-menu"></div>
+
+            <div class="invisibleMenu">
+                
+            <div class="menu "></div>
+            
+            </div>
+            <div class="content-container">
+                
+                
+         <div class="slides">
+                    <h2 class="section-title naranjaOs">Prólogo</h2>
+             
+                    <h1 class="cafe chapter-title">Las fábulas morales<br>de Fanny Buitrago</h1>
+                
+                    <div class="content-text">
+                        <p class="first-paragraph">La simple descripción de  aquello que veo no constituye en modo alguno, tal como en literatura lo demuestra el mal realismo, una comprensión de aquello que como paisaje o costumbres humanas me rodea y termina por determinarme. Fanny Buitrago desde sus primeros relatos abierta y desaforadamente fieles a la estética de los jóvenes de entonces, tuvo la rara virtud de dar coherencia interna a sus personajes, atmósfera a su narrativa, es decir de no dejarse llevar por un estereotipado entusiasmo de adolescente y racionalizar con la debida poética un universo narrativo a veces cruel como en sus últimas novelas donde la mujer está de frente a sus situaciones y no presentada bajo una óptica supuestamente  reivindicatoria. Conducta y no clichés. Esta posición de narradora parte de un conocimiento profundo de lo que significa narrar y por supuesto de una irrestricta fidelidad a aquellos maestros y maestras bajo cuya sombra nos acogemos un día con devoción y respeto para “buscar lo que ellos buscaron”.</p>
+
+                        
+                        <p>Lo que sucede a veces al voraz lector y lectora es que se produzca ese milagro que señala Blanchot cuando al leer un libro descubrimos que aquello que en sus páginas se dice ya lo habíamos dicho nosotros. Especialmente en “Los amores de Afrodita” y “Señora de miel” lo femenino se deconstruye  desde el seudolenguaje del folletín, la cursilería de las historias de amor codificadas por las telenovelas hasta dar con el fondo del desamparado personaje que fuera de esa retórica recupera su iniciativa y balbucea.</p>
+                        
+                        <p>Aquí en estas historias Fanny escoge el tono de la fábula y de la farsa para enmarcar los momentos y sobre todo los lugares que se convierten en significantes de un lapso de vida en una ciudad inventada o que se tiene que inventar para darle alojamiento a tanto personaje perdido en el tiempo: un tempo onírico de marionetas desplazándose a través de un pálido juego de luces, opinando sobre sopas, cartas de menú, sueños de artista, adentrándose gracias a la mano piadosa de la escritora en ese tiempo de los ensueños de verano. ¿Eras tú mi amiga perdida entre el polvo del progreso? Pues aquí te he regresado a este presente. La vida es este tiempo de fábula donde la ironía pellizca la piel de cada personaje para que no se duerma y para que nunca termine la función. Pero la fábula sólo nace en el fabulador  y en la maravillosa prosa que los hace verosímiles pero ya en esa otra realidad que se sueñan repetidamente.</p>
+                        
+                        <p>De ahí un estilo literario que es único y es escritura porque lo han  decantado la inteligencia y la sensibilidad de Fanny.</p>
+                        
+                        <p>Donde otros necesitan enciclopedias de argumentos para aceptar la vida, a Whitman le bastaba ver una ardilla, una nube, un ratón. Le dio el nombre de Hojas de hierba a su libro porque sabía, como Hölderlin, que lo divino es como la hierba, abundante, sencillo, elemental, inexplicable. Whitman es un sacerdote del dios de las viñas, pero es el más extraño de todos porque no nos aconseja embriagarnos con vino sino con agua elemental, intoxicarnos con aire puro; ver en las nubes un dios que esculpe con la evanescencia; ver en la fealdad la cara secreta y acaso más sagrada de la belleza, en el error el camino más misterioso de la verdad, en el sueño el verdadero desciframiento de la vigilia, en la muerte la semilla escondida de la vida y acaso su principal tesoro.</p>
+                        
+                        <p>En un mundo donde los sabios son laberínticos como Heidegger, tortuosamente densos como Hegel, crípticos, y herméticos, y elípticos, parece imposible aceptar que es sabio alguien tan diáfano, tan comprensible, tan espontáneo como Walt Whitman, cuyo oficio dicen que era el de periodista, pero que para nosotros más que un escritor es un poeta, más que un poeta es un profeta, y más que un profeta es el ángel de las buenas noticias.</p>
+                        
+                        <p>Aunque lo leamos muchas veces siempre queda pendiente algo completamente nuevo y distinto que espera en sus poemas, algo que siempre modifica la idea que tenemos de él. El secreto de su poesía quizá no está en el verso libre, ni en el tono conversado y cordial, ni en el entusiasmo incesante, ni en la naturalidad de su voz, ni en la absoluta novedad de sus temas y de su mirada sobre todo lo existente: tal vez está en la alegre y convincente santidad de su actitud, una santidad inocente e impúdica, como la de los venados por las llanuras.</p>
+                        
+                        <p>Whitman no sólo siente que su propia existencia es lo más asombroso, sensible, comprensivo y curioso que ha conocido: siente que él es también cada uno de los otros seres humanos que hay en el planeta, que por su boca fugaz lo que está hablando es el milagro del mundo, la perplejidad de dios ante su propia creación. Whitman es milagroso: nadie ha estado tan cerca de convencernos de que somos dioses, de que esa condición divina la compartimos con las gacelas, con las salamandras, con los guisantes y con las piedras; que la traviesa divinidad que somos derrocha como en juego sus arenas y sus galaxias; que ante esta deslumbrante urdimbre de seres y de acontecimientos, de inventos y de sombras, la muerte bien puede no ser más que un truco mágico, un sutil espejismo de quién sabe qué otras cosas impredecibles; que sabemos muy poco, pero que cada mirto, cada rana, cada estrella son como un signo, un mensaje y un acertijo.</p>
+                        
+                        <p>Nadie dijo tantas cosas enormes con una voz tan feliz, y quién sabe si en Whitman está hablando solamente un hombre que se enamoró de la vida y del universo, a pesar de toda su fatalidad, o si detrás de ese rostro barbado y hermoso no se hizo carne y habló para nosotros el propio inventor de este sueño.</p>
+
+                        
+                        <p class="text-align-right">Darío Ruiz Gómez</p>
+
+                        <div class="leerMas">¡Comienza la lectura!</div>
+
+
+                        <hr class="line-separator line-orange" />
+
+                    </div>
+                </div>
+                
+  
+                
+               <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Fábula I</h2>
+                   <h1 class="cafe chapter-title">Los encandilados</h1>
+                   
+                   <div class="content-text">
+
+                       <p class="first-paragraph">Aquella puede considerarse una temporada sombría, azotada por los idus de la historia. Evocar fechas exactas sería como rociar sal en las heridas, aniquilar los sedimentos fastuosos que superviven en la tragedia que a muchos ha despojado del hogar y norte espiritual. Digamos que sucedió en el año del oprobio, cuando las termitas entraron en <span class="italic-text"><span class="italic-text">La Cava</span></span> y las tropas del enemigo iniciaron la arremetida que culminaría con su destrucción.</p>
+                        
+                        <p>En ejercicio de la verdad y la gloria futura no faltaron advertencias. Lo dijo Gaspar Trujillo en una tarde calurosa frente a la máquina Remington, pues vivía peleando con los computadores. Sin zapatos, el calcetín izquierdo agujereado en el talón, la camiseta enrollada sobre la panza.</p>
+                            
+                        <p>—Tanta armonía y plenitud son engañosas. Lo irreal y lo maravilloso terminan por traicionarnos. Tiempos aciagos nos esperan.</p>    
+                            
+                        <p>A Gaspar le agradaba utilizar tonos grandilocuentes, alardear de poeta maldito. Tenía relaciones con Miranda Canovas, la hija de un poderoso banquero, que lo celaba hasta con su sombra y esperaba obsequios constantes e invitaciones a restaurantes exclusivos. Enamorado a morir, <span class="italic-text">La Cava</span> era el único lugar en donde escapaba de su dominio.</p>    
+                            
+                        <p>—…Dios ahuyente el calentamiento global, la  lluvia ácida  y la  multiplicación de las ratas…—tecleaba al ritmo de una melodía nostálgica y pegajosa de Edmundo Díaz y su trompeta.</p> 
+                            
+                        <p>Sobre un mesón mugroso, Tito Salinas se dedicaba a firmar unas mujeres peces salidas de la fundición el día anterior. Aunque sus versiones sensuales de iguanas, gaviotas, orcas y alacranes interesaban a dueñas de boutiques, decoradores y jefes de relaciones públicas, a causa de sus puntuales imitadores no acertaba a cobrar lo justo ni a imponer su nombre.</p>
+                            
+                        <p>Lorenzo Andrade aspiraba a ser un gran actor, trepado en una banca rinconera y con ocho sillas vacías alrededor, memorizaba un monólogo. Durante cinco noches a la semana trabajaba como recepcionista de hotel y los sábados asistía a una academia de teatro. Ahorraba la mitad de su sueldo y, aunque no lo decía, Bogotá primero y Hollywood a continuación eran sus metas.</p>
+                            
+                        <p>Juan Mistral, que gastaba su tiempo en <span class="italic-text">La Cava</span> o en la biblioteca, planeaba un juego de video: huérfano de padre y madre, educado e idolatrado por una joven madrastra, todo le era permitido. Era consciente de su precocidad, odiaba los estudios formales, pero le faltaba un semestre para terminar el bachillerato. No le temía al fracaso sino a espantar el éxito. Favorito de la directora de su colegio, de los profesores y de los vigilantes, iba y venía a su antojo. Al respecto Gaspar Trujillo afirmaba: </p>
+                            
+                        <p>—Juan es un profesional de la inteligencia, el encanto y la sonrisa, y con  vocación de profeta en su tierra. Tarde o temprano va a sacar la cara por todos nosotros.</p>
+                   
+                        <p>En cuanto a Rafael Doria,  quien acababa de alcanzar la mayoría de edad, no lo tenía en cuenta. Soportaba su presencia, siempre y cuando no abriera la boca y no insistiera en tomar cerveza ni intervenir en las conversaciones. No es que lo subestimara, ni lo irrespetara, no quería que se acusara al grupo de corromper a la juventud, menos de inducirla a cultivar ideas caprichosas, alejarla de los estudios formales. Con las miradas sospechosas de los intelectuales reconocidos y las mujeres inteligentes de la ciudad, tenía más que suficiente. </p>
+                       
+                       <p>Así que todos-todos estaban en lo suyo, tal como sucedía desde meses atrás, cuando —al heredar una casa de su abuelo en la Calle de los Siete Infantes y romper las baldosas de un corredor para cambiar la plomería— Gaspar descubrió un sótano atestado de toneles de brandy, ron, vino, malvasía, ginebra, calvados y aguardiente, escondidos allí desde los tiempos del tatarabuelo. Tamaño botín y de labios de su madre, un lastre negativo:</p>
+                       
+                       <p>—Una caja de vino o de champaña es un obsequio fabuloso, pero una cava hasta los topes equivale al regalo envenenado. </p>
+                       
+                       <p>Contaría la historia de sus antiguos propietarios, los Trujillo-Milán-Niebles-Solís y otros que se jactaban de haber luchado en la gesta de independencia, pero que nunca pudieron administrar la propiedad, resistirse a su maléfica influencia o salvarse de su embestida. Así continuaría:</p>
+                       
+                       <p class="resaltado">Contaría la historia de sus antiguos propietarios, los Trujillo-Milán-Niebles-Solís y otros que se jactaban de haber luchado en la gesta de independencia, pero que nunca pudieron administrar la propiedad, resistirse a su maléfica influencia o salvarse de su embestida.</p>
+                       
+                       <p>—Heredar esa casa, se dice que pertenecía al Virrey Solís, es como aceptar todas las resacas de tus antepasados y alborotar la vena alcohólica de la familia —sentenciaría la madre—: tu tatarabuelo el violinista falleció por exceso de conciertos y copas de honor; el hermano mayor de ese tatarabuelo peleó en  la guerra de los mil días y terminó agobiado por los brindis, las condecoraciones y los cargos diplomáticos; una de las tías abuelas aprendió a batir fabulosos Martinis y se convirtió en ardiente defensora del feminismo. En su momento, cada uno de ellos tuvo que salir del país y sellar el sótano antes de alquilar.</p>
+                       
+                       <p>—¿Entonces sabías de la existencia de <span class="italic-text">La Cava</span>? </p>
+                       
+                       <p>—Es como lo del Virrey, otra leyenda familiar. A todos los que llevan los apellidos Trujillo, Solís, Milán o Niebles, les gusta darse tonos.</p>
+                       
+                       <p>—Tú eres una de nosotros, mamá. </p>
+                       
+                       <p>—A causa del matrimonio; entre los míos nunca tuvimos fantasiosos. Somos gente de orden plantada en la tierra.</p>
+                       <p>Con el nombre de <span class="italic-text">La Cava</span>, fumigada, pintada de blanco y naranjaOs, con los debidos permisos de los ministerios de Turismo y Medio Ambiente, la casa funcionaba como una mezcla de taller y guarida, dado que Gaspar hubiese necesitado diez vidas para consumir tanto licor. A <span class="italic-text">La Cava</span>, en donde a los amigos no se les cobraba el consumo sino una simbólica suma mensual, acudían también boxeadores, maestros de la construcción, futbolistas y mensajeros, estibadores y artesanos, sin necesidad de asociarse, porque Gaspar ejercía absoluta dictadura, obtenía ganancias razonables con un trabajo simple. Allí cada cual hacía su real gana, todo lo que les estaba vedado en sus oficinas, apartamentos, fincas, universidades, aún en descampado. Los precios se consideraban irrisorios comparados con los beneficios.</p>
+                       
+                       <p>La atmósfera del lugar, intensa claridad en unos rincones y penumbra en otros, el olor a salitre, humo y tabaco, madera mohosa y orines, calmaba sensibilidades exasperadas y atraía gustos aberrantes. Prohibida la televisión y los teléfonos celulares. </p>
+                       
+                       <p>Desde la noche de la inauguración,  estuvo descartada la asistencia femenina. Las mujeres se arriesgaban a sufrir ofensas, contemplar a esposos, novios, hijos y amantes sudados en licor, escuchar lenguaje soez, discusiones. No sobra decir que a muchos les asustaba la diaria fidelidad de Tobías Rangel, Orígenes de segundo nombre, a quien se acusaba de contestatario, gorrón, aficionado a la coca y de tomar vodka con agua caliente para mantener su flacura excesiva; otro que se las daba de poeta maldito y excelso. Daba la impresión de tener unos cuarenta años y no veinticinco, de no asistir a cursos de cocina sino de mala catadura.</p>
+                       
+                       <p>Nada qué hacer, la mala fama cunde. De vez en cuando irrumpían en <span class="italic-text">La Cava</span>  clientes amargados, fugitivos de convenciones y cenas a manteles. Era el caso de  Martín Duque, otro poeta; de  Renán Linares, activista del medio ambiente y vegetariano, hijo del dueño de una fábrica de enlatados (sardinas, atún, salmonete, calamares) quien a los veinte años despreciaba el comercio. En su primera visita se amarraría una borrachera monumental, que lo empujaría a bailar descalzo, aullar al brillo de la luna que doraba los ventanales, guindarse de una lámpara y caer entre añicos filosos. Esa misma noche se casaba su hermana mayor y, cuando Tito Salinas y Gaspar Trujillo lo llevaron a su casa no fueron ni siquiera invitados a sentarse. La madre de Linares estuvo durante una hora sacándole vidrios de las plantas de los pies.</p>
+                       
+                       <p>Por añadidura, mientras Renán lloraba y cantaba vallenatos a grito herido, la escandalizada señora tuvo que obligarlo a tomarse cinco vasos de agua, dos tazones de café negro, un Alka-Seltzer y cuatro aspirinas; no fuera a vomitar en la iglesia sobre la pechera del smoking. Los padrinos de boda suelen emocionarse.</p>
+                       
+                       <p>—Buenas noches, Trujillo, buenas noches, Salinas, gracias por cuidar a Renán—  dijo en voz alta al despedirlos, mientras entre susurros advertía—: ¡No los quiero más por aquí, hijos de Judas! ¡No vengan a corromper a un buen muchacho! </p>
+                       
+                       <p>Gaspar Trujillo, recién graduado en sociología, había sido seducido por las sirenas de la literatura. Sus obras, editadas del propio bolsillo y que nunca superaban los quinientos ejemplares, tenían impacto de cóctel y páginas sociales e iban acumulándose en un depósito de <span class="italic-text">La Cava</span>, entre tarros de pintura, cajas de cerveza, herramientas. De cuando en cuando un ejemplar era despachado por correo, a solicitud de profesores de idiomas radicados en Copenhague, Ontario, Illinois. Pero, a su alrededor reinaba la desconfianza y el desdén. A su novia, Miranda Canovas, le interesaba un futuro con casa amplia, piscina y jardín, automóvil último modelo, juegos de cartas, fiestas de club. Toda actividad que no proporcionara dividendos concretos y franquicias le suscitaba desconfianza.</p>
+                       
+                       <p>—¿El lanzamiento de tu libro? Te felicito mi amor. Es el número seis. ¡Ay! A tal paso vamos a tener que inaugurar una librería de viejo.</p>
+                       
+                       <p>Mientras que Tito Salinas aspiraba a uno de los primeros lugares en el arte nacional. Era un muchachote alegre y fornido, de recias manos, ojazos luminosos y mandíbula cuadrada. Aunque escultor nato, como su obra era sofocada por las imitaciones, tenía que atender otros menesteres. Con un metro en el bolsillo y al timón de un carromato repleto de papel de aluminio, tacos de serpentinas, cintajos y maniquíes, trabajaba en puntos extremos de la ciudad. Lo mismo acudía a decorar terrazas para matrimonios, grados y bautizos, que a engalanar casas de mala nota. ¡La sarna!: su talento invertido en agasajar a una matrona que cumplía treinta años de ejercer raros oficios o divertir a sujetos recién llegados de Europa o de la cárcel. Durante los reinados de belleza y carnavales, sus castillos, pagodas y laberintos de plástico, iluminados a la entrada de pistas de baile y cervecerías, de cerca y de lejos encandilaban la visión, exasperaban los sentidos. ¡El rey de las rumbas! Tras los destellos y confetis llegaron los gerentes y administradores, que necesitaban decorar centros comerciales, parques de diversiones, escenarios de rock. Le horrorizaban las alturas, pero vivía trepado en aviones. Como buen amigo cargaba en el equipaje los poemas de Gaspar Trujillo y Martín Duque, las grabaciones de Edmundo Díaz; lo mismo que tocaba  el acordeón, la guitarra o la trompeta. Creaciones que en su viajar de ciudad en ciudad atraían a críticos, estudiosos y ensayistas, quienes comenzaron a escribir, opinar, señalar a <span class="italic-text">La Cava</span> como un centro de la cultura nacional, a compararla con la Casa de poesía Silva de Bogotá, y que se confundía con la desaparecida Cueva de Barranquilla.</p>
+                       
+                       <p>Para entonces Tito Salinas se jactaba de ser heredero de Alejandro Obregón y de  Benvenuto Cellini, la reencarnación de Enrique Grau o de Leonardo Da Vinci. Si conseguía la financiación de las autoridades y el respaldo de la ciudadanía, iba a convertir a Cartagena en otra Venecia y a la isla de San Andrés en un polo turístico capaz de opacar a Mónaco y a Las Vegas. Urgido de comenzar por casa, cuando planeaba hacer de <span class="italic-text">La Cava</span> otra Capilla Sixtina, una viga suelta le fracturó la crisma.</p>
+                       
+                       <p>Así que permanecería tres meses en un letargo que no admitía sonidos, pestañeos, auxiliado en sus funciones orgánicas. El único signo vital era el oscilar de la mano derecha con un pincel invisible.</p>
+                       
+                       <p>Al despertar, en una habitación llena de flores, cajas de chocolates y novelas policiacas, supo de labios de una novicia y ayudante de enfermería que… ¡su alma estaba expuesta a horrorosos peligros! Tarde o temprano se extraviaría en los carnavales de Barranquilla o Río de Janeiro, sufriría un infarto en el Festival de Poesía de Medellín, seria corneado por un toro en el Sinú o mataría a una actriz porno.</p>
+                       
+                       <p>—¿Qué debo suponer? ¿Usted quién es, y nosotros en qué situación nos encontramos?</p>
+                       
+                       <p>—En que usted primero toma juicio y se dedica a estudiar, a trabajar y leer en serio. Y como yo he visto y tocado a un hombre desnudo, es preciso que abandone el convento. En dos meses cumplo la mayoría de edad, entonces o usted se casa conmigo o yo me caso con usted. </p>
+                       
+                       <p>—¿Eso cuándo? —preguntaría seducido por el aliento suave y el cutis de manzana bajo una cofia.</p>
+                       
+                       <p>—Cuando se lo merezca. Primero yo tengo que aclarar mi identidad. En el registro civil me llamo Fedora Albán, pero en el convento tengo nombre de santa. Me gustaría estrenar el apellido Salinas en mi próxima vida. Igual que usted, quiero ser una artista. Una de verdad, no de las que venden manillas en las calles.</p>
+                       
+                       <p>—Eso lo veremos.</p>
+                       
+                       <p>Tito Salinas se trasladó de Cartagena a Bogotá a matricularse en la escuela de Bellas Artes. Estudiaba las técnicas de Botero, Samudio, Cárdenas, Picasso y Dalí. Aprendía a leer a José Eustasio Rivera, a Dostoievski y a Faulkner. Tan ocupado, que apenas hablaba con los amigos de <span class="italic-text">La Cava</span> por celular, y eso de tarde en tarde. </p>
+                       
+                       <p>Entretanto, graduado de bachiller con honores, Juan Mistral optaría también por viajar e instalarse en la capital.</p>
+                       
+                       <p class="resaltado">Entretanto, graduado de bachiller con honores, Juan Mistral optaría también por viajar e instalarse en la capital.</p>
+                       
+                       <p>Al mismo tiempo Gaspar Trujillo recibía invitaciones que lo comprometían a leer sus poemas en universidades y ferias del libro, escribir prólogos, dictar conferencias. Su correo electrónico invadido por amenazas de secuestro, anónimos, esquelas de colegialas y secretarias enamoradas. Mientras su blog alcanzaba ¡por fin!... la atención de los lectores, los libros acumulaban polvo y caca de ratón en <span class="italic-text">La Cava</span>. Ejecutivos, taxistas, lustrabotas y televidentes lo saludaban respetuosos. Miranda Canovas, lo miraba atónita como a una personalidad ilustre; mínimo, al casarse, iba a exigir que le llevaran el primer café del día a la cama. </p>
+                       
+                       <p>Arcángel de la trompeta y excelente guitarrista, Edmundo Díaz estaba en la mira de los periodistas: atraía a los fanáticos lo mismo en New York, Múnich, Santiago o Berlín,  que en las redes sociales. Causaba infartos, alaridos, llanto y alucinaciones. Tras su rastro y en ausencia, las instalaciones de <span class="italic-text">La Cava</span> servían de escenario a grabaciones de cine alternativo  y documentales.</p>
+                       
+                       <p>Tobías Orígenes Rangel, de grandes ojeras, melena a los hombros y trajes de lino arrugados, era el único a quien no afectaba la popularidad. Podía darse el lujo de ocupar al atardecer su silla favorita, sorber ron blanco o vodka con agua caliente, junto a una ventana, aunque golpeado por el desasosiego y el insomnio.</p>
+                       
+                       <p>Mientras tanto, Hernán, el mayor de los Trujillo retornaría al país en compañía de su esposa española, Begoña Hidalgo, y de Tristán, el hijo de tres años. Escudado en flamantes diplomas de Economía y Finanzas, se apresuró a exigir participación en <span class="italic-text">La Cava</span>, así el abuelo no lo hubiese mencionado en ese capítulo de su testamento. Incluido en la sociedad, le entraría el afán de renovar. Después de hacer pintar las paredes de amarillos y magentas hizo instalar una barra de mármol, techos vidriados, mesas con manteles y servilletas. Vetaría la costumbre de enviar por el almuerzo o la cena a los restaurantes vecinos, cada cual a su bolsillo y acomodo. Desterrados el sancocho, el arroz con coco y la mojarra, <span class="italic-text">La Cava</span> comenzó a depender de un chef extranjero, aunque Gaspar tuvo que imponerse y rechazar camareras uniformadas.</p>
+                       
+                       <p>Desde la renovación cambiaría el público. Los nuevos clientes preguntaban: ¿A qué horas se presenta Edmundo Díaz? ¿Dónde se puede conseguir la hierba? ¿Y el grupo de rock? Hacia el atardecer se agrupaban muchachos vestidos de blanco, imitaciones deformadas de Gaspar, Martín Duque y Tito Salinas. No faltaban políticos y ejecutivos que bebían whisky a rodos, los ojos fijos en tabletas y computadores. Modistos, estilistas y diseñadores entraban con sandalias y pasos leves, como si caminaran sobre pétalos de rosas.</p>
+                       
+                       <p>Afuera sonaban grabadoras a todo volumen, la calle colonizada por vendedores ambulantes y filas de automóviles; racimos de adolescentes sentados en las capotas tomaban cerveza, aullaban, bailaban rap y champeta, compartían hierba. Camino de la brisa y del mar junto a las murallas, de las plazas de San Diego y de Santo Domingo, o del Portal de los Dulces, los turistas asoleados trotaban, admiraban, tomaban fotografías. El desorden en aumento. Nada para lamentar o celebrar. Vaya y pase.</p>
+                       
+                       <p>Hasta que una noche, unas siete muchachas de sonrisas y aspectos rutilantes, aspirantes a modelos, unas de pantaloncitos mínimos y otras de faldas vaporosas, que competían en La Chica Internacional, en un descuido del portero, entraron a pisar fuerte. Como Gaspar se negara a mirarlas, en resistencia pasiva, una de ellas, Honorata Vanegas, se plantó detrás de la barra y se dedicó a servir agua mineral y gaseosas, mientras informaba a las otras: —Ese grosero se llama Gaspar Trujillo, y aquel de las ojeras violetas es Tobías Rangel, un monstruo come niñas, y ese de más allá no tengo ni idea…— y de repente, en éxtasis, corrió hacia una mesa rinconera mientras exclamaba:— ¡Martín Duque! ¡Es Martín Duque! El poeta más grande todos los tiempos. ¡Un ángel de paraíso! Mi favorito. </p>
+                       
+                       <p>Salieron cuando les dio la real gana, una multiplicada V de la Victoria en movimiento, las manos y uñas decoradas en alto.</p>
+                       
+                       <p>A la madrugada Gaspar sufrió un severo ataque de asma y se tuvo que llamar al médico domiciliario. No pasaron tres días cuando la celosa de Miranda Canovas entró como una tromba, tijeras en ristre, para cortarle la coleta y la sonrisa, volverlo un Cristo. Una humillación sin nombre que lo forzaría a tomar un avión con destino a Medellín, en donde tenía lugar una fiesta en honor de Carlos Gardel. </p>
+                       
+                       <p>Begoña Hidalgo, sin amistades todavía y aburrida de estar en casa y a solas, empezó a frecuentar <span class="italic-text">La Cava</span> con su televisor portátil, el niño y su triciclo. Se dedicaba a las telenovelas mientras Tristán se columpiaba en las sillas altas, comía jamón y pan, sorbía cerveza a hurtadillas, correteaba y quería hacer pipí, aprendía a jugar billar. </p>
+                       
+                       <p>Debido a que los vecinos presentaban denuncias en las comisarías del centro y a las redes sociales llegaban toneladas de quejas, la policía sellaría <span class="italic-text">La Cava</span> durante una quincena. La multa por la sospecha de vender licor a menores y contaminar el ambiente sería de quince salarios mínimos. El contratiempo minimizado por una horrible fechoría de Tito Salinas, a quien se acusaba de haber raptado y violado a una monja.</p>
+                       
+                       <p>En los meses posteriores, Hernán Trujillo incorporado a una poderosa empresa multinacional, como asesor de reservas petroleras, entraría en una frenética vida de reuniones y juntas directivas, transformándose en un prisionero glorificado. No podía  salir a la calle sin escoltas ni atender asuntos propios o de <span class="italic-text">La Cava</span>.</p>
+                       
+                       <p>Como para no quedarse atrás, Gaspar se movía como un reflector en la dimensión de lo inesperado: invitado a ser jurado de concursos literarios y reinados de belleza, a dictar charlas sobre la supervivencia del planeta, el genoma humano, los platillos volantes y la clonación. Baste decir que en esa época se gestaron sus ensayos sobre la tiranía del computador, tan famosos ahora. Rechazado por Miranda Canovas, de pronto novia de un poderoso hotelero, se lanzó a un exilio itinerante. Los cambios de residencia apenas conocidos por familiares y amigos.</p>
+                       
+                       <p>Ni los obreros ni los artesanos ni los estibadores ni los futbolistas volvieron a pisar <span class="italic-text">La Cava</span>, aunque ciertas muchachas se mantenían firmes y entusiastas, a la espera de mirar de cerca o de lejos a sus ídolos, ¿por qué no?, dirigirles la  palabra. Eso sí, ahora la Calle de los Siete Infantes es la favorita de turistas  gringos y japoneses. En una de las esquinas de <span class="italic-text">La Cava</span> se tomaron  las fotografías de la celebrada ganadora del certamen La Chica Internacional, la modelo Honorata Vanegas.</p>
+                       
+                       
+                        <p>Tobías Rangel, de reconocida fidelidad a sus amistades, una tarde, aburrido de clamar durante horas por una copa de vodka y una taza de agua caliente, se marcharía en medio de bufidos: </p>
+                       
+                       <p>—Ahí les regalo su cava de mierda. ¡Que les aproveche!</p>
+                       
+                       <p>En la deserción le seguiría Renán Linares, asediado por la depresión y la avitaminosis, en secreto encaprichado de Honorata Vanegas: ¡que se la ligaba, se la ligaba! Obligado por la familia a consultar a una nutricionista, tuvo que incluir en su dieta carne, pollo y pescado. Es así como encontró en su padre a un nuevo amigo y comenzó a mirar la vida con ojos realistas. Sin herencia ni dinero, ¿cómo seduciría a una modelo famosa? No iba a permitir que un poeta a la antigua como Martín Duque se la birlara. Resuelto, dedicaría una nueva sección de la fábrica paterna a enlatar palmitos, frutas en su jugo, maíz, verduras, chontaduros. En sus ratos de ocio jugaba con números, con la idea de reunir a los amigos dispersos, fundar otro sitio de corte masculino que superara a <span class="italic-text">La Cava</span> y creara su propia leyenda.</p>
+                       
+                       <p>A sus anchas, la madre de los Trujillo y su nuera, Begoña Hidalgo, decidieron que era hora de capitalizar la asistencia femenina, cambiar el nombre de La  Cava, sacarle jugo a los negocios. Les sonaba Floresta; vender café de exportación, tortas, helados, sándwiches y crepes. Como a dicha concurrencia no iba a interesarle el vino añejo, ni el calvados, ni la malvasía, arrumaron los toneles, cajas, barriles, odres, botellas en el sótano.  Cerraron el establecimiento… ¡y punto!</p>
+                       
+                       <p>A muchas personas en la ciudad amurallada les afectaría el cierre de <span class="italic-text">La Cava</span>, pero  dicen y dicen por ahí que las autoridades de policía respiraron aliviadas. En la distancia, el más afectado sería Tito Salinas, quien no tuvo oportunidad de comprar el mesón en donde encalleciera sus manos. Cierto, su nombre comienza a sonar como escultor, está a punto de casarse con una muchacha encantadora, que resultaría ser hija de un zar de las confecciones, a quien sus hermanastros quisieron matar desde que era niña. Como medida de precaución, educada por su madre en un convento.</p>
+                       
+                       <p>De un día para a otro, sin informarle a nadie y por democrática votación, el sótano de <span class="italic-text">La Cava</span> sería cerrado y condenado al olvido. Primero con una doble puerta de madera de pino, después con un ensamble de plástico reforzado, luego con una espesa capa de cemento y por ultimo con  unas baldosas opacas que simulaban el piso de un patio de ropas o de una cocina abandonada. </p>
+                       
+                       <p class="resaltado">De un día para a otro, sin informarle a nadie y por democrática votación, el sótano de <span class="italic-text">La Cava</span> sería cerrado y condenado al olvido.</p>
+                       
+                       <p>Los futuros herederos de las familias Trujillo-Milán-Niebles-Solís-Hidalgo no debían siquiera sospechar la existencia de los toneles de brandy, ron, vino, malvasía, ginebra, calvados y aguardiente, escondidos allí. En quince días o menos <span class="italic-text">La Cava</span> sería desmantelada, la dotación de cocina obsequiada a un albergue de menores, los muebles del taller bar, marcos y ventanas feriados baratos. Era el momento de remodelar en serio, abrir locales a la calle, la hotelería y los negocios turísticos estaban en auge, cada contrato de arrendamiento iba a reportar una millonada. </p>
+                       
+                       <p>En la confabulación de su señora madre Antonieta María y de su cuñada Begoña Hidalgo se unirían en sociedad Hernán Trujillo y Miranda Canovas, todavía allegada a la familia. Ellas, frustradas en sus primeras aspiraciones jugaban con la idea de invertir y reinvertir ganancias e instalar —en años venideros— hoteles boutiques, heladerías, pequeños restaurantes con diez o doce mesas en donde se hicieran reservaciones con meses de anticipación.</p>
+                       
+                       <p>A Gaspar Trujillo, en boca llena no entran discusiones, la familia lo recompensaría con una buena renta en ascenso, dividendos por cada local, de todas maneras era el dueño de la casa de la Calle de los Siete Infantes y el socio mayoritario: que se dedicara a editar libros, a ser mecenas, a lo que le viniera en gana. Todos-todos contentos. Mientras, y lo narrado sucedió en menos de un lustro, cuerdas de amigos y personas emprendedoras han fundado muchos bares y clubes con la idea de emular y superar a <span class="italic-text">La Cava</span>, pero ningún establecimiento ha dado la talla.</p>
+                       
+                            <hr class="line-separator line-orange" />
+                   </div> 
+                </div>
+             
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Fábula II</h2>
+                   <h1 class="cafe chapter-title">Sopa de tomate usted</h1>
+                   
+                   <div class="content-text">
+
+                        <p class="first-paragraph">Si bien mi receta favorita no está consignada en el índice de su famoso libro de cocina, tan celebrado por los amantes de la buena mesa, el secreto de la misma me sería confiado  por su  propio creador en tiempos pasados e inciertos, aunque bastante felices. Una sopa agradable, reconfortante, ligera y fácil de preparar. Lo que se dice fácil. </p>
+                        
+                        <p>El gran maestro de la cocina Tobías Rangel, también eximio poeta, que en su cédula de identificación lleva el nombre de Tobías Cardona Orígenes Rangel, preparaba la mencionada sopa en una famosa cafetería de la Carrera Séptima, Punto y Coma, copiada  de otra llamada <span class="italic-text">La Cava</span> y de otra antigua y famosa, conocida como El Cisne, que funcionaba en pleno centro de Bogotá y en donde ahora se impone el edificio Colpatria,  durante décadas el más alto de la ciudad.</p>
+                            
+                        <p>Punto y Coma era un lugar  especializado en comida italiana, amplio, cálido, con precios aceptables que, contemplado desde la puerta batiente   (el punto y la coma en forma de un ave naranjaOs empollada en el cristal) semejaba un horizonte romántico pintado al óleo siempre en claroscuro. Allí las camareras uniformadas de gris sonreían a los artistas y clientes asiduos ¿quién iba a saberlo?, a futuros directores de teatro, novelistas, estrellas de cine, que noche tras noche llenaban el lugar de risas, discusiones, un ambiente que anticipaba la fiesta, la camaradería y quizá el éxtasis de un nuevo amor.</p>    
+                            
+                        <p>Aquel horizonte  desvanecido era el predilecto de Juan Mistral, el favorito de las revistas del corazón y las mujeres bellas, capaz de golpear una serie de corazones con su rechinante aureola. Su nombre y fotografías, la novia de turno, protagonismo en la televisión y las redes sociales. La fama de ser el más hermoso y atractivo,  apuntalada por  el aspecto patibulario de Tobías Rangel  y la  sapiencia de Avelino Cadena. ...¿Por qué semejante fama?</p>    
+                            
+                        <p>Pero mi asunto gira alrededor de la sopa. En los dominios de Punto y Coma lo importante era atraer a los inteligentes o  los despistados, ocupar una mesa al filo de la penumbra. No a la montonera, más bien cuatro o cinco entusiastas de la literatura,  dedicados a competir, pontificar, jurar por los nombres de Gaspar Trujillo y Álvaro Mutis, García Márquez, Manuel  Mejía Vallejo, Darío Ruiz, Carlos Castro Saavedra, Martín Duque, Rojas Herazo, Eduardo García Aguilar, Tito Salinas.</p> 
+                            
+                        <p>¡Cuidado!  Era preciso sacar el quite a los vitalistas que atacaban los espaguetis y minestrones como  hambrientos que regresaran de la guerra.</p>
+                            
+                        <p>En el lugar estratégico, usted solicitaba una taza de té con tostadas,  mantequilla, mermelada, crema de leche, Té Hindú.  Mientras los otros reían a carcajadas e  inundaban el aire de frases brillantes  y profundas sentencias, usted  retiraba la almohadilla del agua  caliente.  Agregaba sal y pimienta, cualquier otro condimento a mano. El principal ingrediente lo constituía  la salsa de tomate, siempre había una botella  entronizada sobre el mantel inmaculado y al lado del queso parmesano. Enseguida la crema en abundancia para dar consistencia y  sabor, afinar el apetito.</p>
+                            
+                        <p>Sin alharaca, usted pedía más agua, tostadas y mantequilla. Si se caía en el grupo de Juan Mistral, Gaspar Trujillo  o quizá otro amigo generoso, un vodka puro. Así, un poeta moderno y todavía sin nombre, de aquellos que los insoportables dueños de la crítica han bautizado menores,  disfrutaba de una cena amable y frugal: entre ocurrencias, genialidades, vigorosa camaradería, quizá la invitación a una fiesta improvisada por los admiradores de Mistral o los incautos que se fascinaban con el aspecto patibulario de Tobías Rangel, —música y whisky, tal vez salame y ahumados, alitas de pollo—, a la cacería de nuevos horizontes…  ¡rumbas y amistades!...</p>
+                            
+                        <p>Toda esa diversión por el precio de dos almohadillas de Té Hindú que, además, con tanta algarabía y charla y pedidos extravagantes en la mesa propia y las mesas ajenas, a menudo las fatigadas camareras ni siquiera se molestaban en cobrar.</p>
+                       
+                            <hr class="line-separator line-orange" />
+                   </div> 
+                </div>
+             
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Fábula III</h2>
+                   <h1 class="cafe chapter-title">Escencia del favorito</h1>
+                   
+                   <div class="content-text">
+                       
+                       <p>—<span class="first-paragraph1">L</span>o sentimos, lo lamentamos.<br><br><br></p>
+
+                        <p >Nada qué hacer. Era como una cantinela, repetida y vuelta a repetir en todas las instituciones dedicadas al fomento de las bellas artes. A nombre de las reglas, los estatutos o las objeciones de una junta directiva, Tito Salinas encontraba un sostenido rechazo. Su trabajo, trayectoria y renombre estaban en contra, tarde o temprano iba a chocar con profesores y alumnos.</p>
+                        
+                        <p>—Lo lamentamos, lo sentimos, no es nuestro deseo ignorar su  talento y deseo de surgir, no tenemos la intención de minimizar sus capacidades…—decían unos y otros al rechazar sus peticiones. La cortesía  a mano con el desdén—.  Además..., ¡y es una lástima!  Todavía su nombre no figura en Google ni en ninguna enciclopedia virtual, así que…— No alcanzaban a decir que ni siquiera existe…, y que nadie le otorgaría un grado oficial o le invitaría a exponer en galerías, pero daba lo mismo.</p>
+                            
+                        <p>Tito Salinas había cometido un gran error durante su examen de admisión  en Bellas Artes, al presentar una carpeta con proyectos y fotografías, y admitir que  en  Cartagena recorría plazas, hoteles, boutiques  para negociar sus esculturas y que tales esculturas eran copiadas por artesanos y se exhibían en las calles del centro amurallado, vendidas y revendidas como ceniceros, portavasos, floreros,  tazones de café,  servilleteros.</p>    
+                            
+                        <p>Cansado  de rechazos, no quería utilizar la idea de las humillaciones, había pedido auxilio a Gaspar Trujillo, uno de sus grandes amigos, dueño de locales y cervecerías, que le había prestado dinero sin intereses, para que ingresara en uno de los talleres más prestigiosos y costosos de Bogotá.</p>    
+                            
+                        <p>En plan de recuperar el tiempo gastado en la tarea  de buscar maestros, vivía en una casa hostal de La Candelaria en donde le alquilaban un galpón  de paredes húmedas, sin teléfono e infestado de cucarachas, que a ningún turista le interesaba. Tenía un lavamanos, una cocineta, acceso a un baño  al final del pasillo y a media hora de internet gratis en el salón principal. Allí se dedicaba a trabajar,  sin que nada ni nadie le interrumpiera.  A las clases de dibujo asistía los lunes y jueves en las mañanas, lo martes a historia del arte, los viernes tenía acceso a una zona dedicada a la escultura en donde podía utilizar los mesones con luz  de día, siempre y cuando pagara el barro y la arcilla, no consumiera ni alimentos ni bebidas que pudieran contaminar el ambiente. Con el tiempo, la directora del taller, que había estudiado en Italia y tenía fama de buena  pintora y acuarelista, terminaría por apreciarlo. Mientras recorría los salones se detenía a mirar y le daba indicaciones en materia de dibujo, trazos, escorzos, claroscuros.  Era una mujer de hombros redondos y caderas estrechas que se vestía de negro o gris plata, con blusas y chaquetas adustas, faldas a los tobillos,  botas o botines con medias gruesas que minimizaban su figura. El cabello negro muy corto, de ojos oscuros nimbados por largas pestañas, y maquillada en colores desvanecidos.  Afirmaba tratar a todos por igual, pero  ofrecía mayor atención a los estudiantes de artes visuales, que entraban y salían con sus tabletas, cámaras y celulares, bebían  gaseosas energéticas  y yogures, comían barras de cereal antes y después de clases. Ellas y ellos con sus jeans rotos o deslucidos, de botas y morrales, piercings y tatuajes, llamándose parces y maricas y  hermanos en continua  y horrenda monotonía, así hablaran de festivales de cine, Cannes, Berlín, Cartagena y la misma Bogotá. Tito no podía entender esa ferocidad de tornar abominable el lenguaje, además de vivir hambriento se sentía muy viejo.</p> 
+                            
+                        <p>Tito, que en las noches  de viernes no tenía intenciones de regresar temprano al  galpón que llamaba su casa y le sacaba partido al último destello de claridad, una noche se había tropezado con la mujer, quien con llaves en mano se dirigía a cerrar el salón.  Respondía al nombre de  Juliana.</p>
+                            
+                        <p>—¿Todavía por aquí?</p>
+                            
+                        <p>—Todavía.</p>
+                            
+                        <p>—Es curioso, hace días que deseaba hablar con usted. ¿Tiene prisa? </p>
+                   
+                        <p>—De ninguna manera.</p>
+                       
+                       <p>—Entonces acompáñeme a cenar, mi apartamento está al frente.  </p>
+                       
+                       <p>El edificio era una mole de cemento, plástico y vidrio, con amplios ventanales que miraban hacia las montañas,  diseñado y construido para otorgar una  poderosa sensación de libertad. Al apartamento en el piso quince se llegaba por un ascensor particular, las puertas eran dobles, dos cámaras de vigilancia giraban en el pasillo de la entrada. En la sala los muebles eran escasos, un sofá, tres sillones cómodos,  dos mesas rinconeras. Nada de adornos superfluos. Había dos esculturas de Grau, un alcatraz de  Alejandro Obregón, dos escudos de Antonio Gras, un desnudo de Antonio Morales  y un Tito Salinas  sin firma, una de sus mujeres peces.</p>
+                       
+                       <p class="resaltado">Había dos esculturas de Grau, un alcatraz de  Alejandro Obregón, dos escudos de Antonio Gras, un desnudo de Antonio Morales  y un Tito Salinas  sin firma, una de sus mujeres peces.</p>
+                       
+                       <p>—¿Es suya?</p>
+                       
+                       <p>—Sí.</p>
+                       
+                       <p>—No está mal, nada mal. ¿Tiene hambre?</p>
+                       
+                       <p>Tito no encontraba palabras, esa noche el hambre lo acosaba. A veces el dinero no le alcanzaba ni para tomar autobuses, tenía que caminar durante horas, a menudo comprar tiza china o insecticida para espantar las cucarachas, solía engañar el apetito con avena, o café y  pan  integral durante todo el día. </p>
+                       
+                       <p>—Tengo y mucha, no me placen los restaurantes.</p>
+                       
+                       <p>Siguieron a un comedor auxiliar presidido por una nevera gigante y de puertas dobles, una cocina de seis hornillos, un bello y tosco mesón con ocho sillas disparejas.</p>
+                       
+                       <p>—Se puede sentar donde quiera.</p>
+                       
+                       <p>Tito Salinas se acomodó  en  la silla que le pareció más fuerte,  desde donde podía ver a la mujer, quien se había metido en un delantal y  sobre el mesón abría latas de salmón. En un plato hondo amontonaría cebollas rojas y tomates verdes cortados por la mitad. Después de rociar con aceite de oliva, vinagre y sal, cubrir  con papel transparente, introduciría la mezcla en horno microondas durante unos segundos. Agregaría tal mezcla al salmón desmenuzado, con jugo de limones y alcaparras. En quince minutos en la mesa había pan en torrejas, mantequilla, una botella de vino rojo. Hacía varios días que Tito no disfrutaba de un verdadero alimento, así que comió despacio y cada bocado como si fuese el último, su hambre era tan desmesurada que no le importaba el ridículo.  Ella seguiría su ritmo, sin desdeñar  ni una miga de pan ni un resto de salsa, por piedad o por cortesía.</p>
+                       
+                       <p>—El  viernes es el día más difícil para mí, me siento muy sola ¿Quiere acompañarme a cenar? — diría ella  a la semana siguiente, y le brindaría una crema de ostras, lonjas de pollo y ensalada de brócoli.</p>
+                       
+                       <p>Después no había necesidad de invitaciones,  la cena del viernes con pescado de lata o sopa era una grata rutina que Tito esperaba con ansiedad, alegría y cierto resquemor, no sabía con exactitud… ¿en qué se estaba metiendo…?, ella no le hacía preguntas sobre su vida, y a Tito la mujer le despertaba una inquietud temerosa en la que no deseaba bucear. </p>
+                       
+                       <p>—¿Cuánto llevas con nosotros? –preguntaría ella una noche mientras comían, ambos con lentitud y como de acuerdo en alargar el tiempo.</p>
+                       
+                       <p>—Un año y cuatro meses. Se me está acabando el dinero.</p>
+                       
+                       <p>—Eso pensaba, usted tiene cara de tigre hambriento, casi en los huesos— nuca le suspendía el usted. </p>
+                       
+                       <p>—¿Se nota tanto?</p>
+                       
+                       <p>—Se  nota demasiado.</p>
+                       
+                       <p>—¿Qué me quiere decir? Detesto los preámbulos. </p>
+                       
+                       <p>—Es el mejor alumno que hemos  tenido en años, esa es mi opinión y la de sus otros maestros. Lamento que tenga que irse. Pero es su hora de volar, si necesita certificados, cartas de recomendación, la academia esta ciento por ciento con usted.  </p>
+                       
+                       <p>—Gracias, es una gran noticia— sentía un infinito placer de saberse libre, de haber cumplido consigo mismo y una inmensa ternura hacia ella lo invadió. Tuvo la tentación de acariciarle la frente, las mejillas, besarle los párpados, aunque su mano se detuvo en el aire.</p>
+                       
+                       <p>—No, por favor. Ni siquiera lo intente —  ella corrió su copa y su silla, los gestos dominados por el pavor y  una expresión  de fatigada desesperanza.</p>
+                       
+                       <p>—¿De qué se trata...? ¿Qué es lo que tengo que saber?  </p>
+                       
+                       <p>—Sin preguntas, por favor —ella tomaría los dedos correosos de Tito entre los suyos, como si se tratara de joyas, sonriente. No obstante y de súbito el rostro estaba inmerso en una palidez espectral que dolía y dolía en la piel del corazón, sus dientes blancos y separados mordiéndose los labios, los gritos, sollozos, alaridos, suplicas.</p>
+                       
+                       <p>—Gracias, gracias —dijo, al apartar sus manos y su cercanía como si se tratara de objetos quemantes.</p>
+                       
+                       <p>—¿Qué es lo que tengo que saber? —repitió, sin  convicción, en el fondo preferiría no ser depositario de confidencias ni secretos.</p>
+                       
+                       <p>—Hace unos cinco años tuve la oportunidad de participar en una exposición colectiva, recibí muchos elogios y mi cuadro y mi fotografía estremecieron las redes sociales. Apenas tenía veinte años, una beca para estudiar en Italia y era la niña de papá y de mamá, la consentida... </p>
+                       
+                       <p>Tito no se atrevía a preguntar, a comentar, en la voz femenina latían ecos de oraciones y plegarias, de un inmenso terror contenido.</p>
+                       
+                       <p>—Desde entonces es la primera vez que puedo hablar a solas con un hombre, compartir, sentirme cómoda. Le doy las gracias.</p>
+                       
+                       <p>Tito reprimiría su intención de preguntar y protestar, ¿gracias de qué?</p>
+                       
+                       <p>—…He podido salir a cenar con amigos, sonreírle a un hombre que me espera desde hace años. Quizá pueda hacer una vida normal.</p>
+                       
+                       <p class="resaltado">—…He podido salir a cenar con amigos, sonreírle a un hombre que me espera desde hace años. Quizá pueda hacer una vida normal.</p>
+                       
+                       <p>Tito se mantuvo en silencio, mientras ella lo trataba como al confidente que no deseaba ser, el amigo obligado de brazos y hombros sólidos en donde había decidido descansar: toda una vida futura de éxitos y alegría se había desmoronado a causa de aquella exposición. De la puerta de su casa la raptaría un grupo de hombres armados, quienes después de amarrarla y vendarle los ojos la trasladarían en avioneta a una gran hacienda. Todavía el lugar era para ella desconocido. De acuerdo con órdenes que tenían, la llevaron a la presencia de un hombre arrogante y déspota, de uñas manicuradas, panza a medio domar bajo la camisa de algodón a cuadros blancos y naranjaOses, con jeans y botas de piel de cocodrilo. Quería que lo pintara en tamaño natural como el gran hombre que creía ser, rodeado de sus válidos, como un César, un Napoleón o un Bolívar. En vano ella le dijo que no era retratista, que la figura humana no era su fuerte, lo suyo era el espacio, el color en los cambios de la luz y del agua y de la niebla y del verdenaranjaOs añil de las montañas.</p>
+                       
+                       <p>—No lo digas, no por favor —dijo Tito. </p>
+                       
+                       <p>—Todos sus hombres pasaron por encima de mí, unos con violencia y otros en plan de ser amables, unos borrachos y otros con furia de conquistadores ofendidos. Luego me sacaron medio muerta de la finca, me metieron de nuevo en una avioneta y me tiraron a la entrada de Bogotá. Me salvé de enloquecer gracias al amor de mis padres y a mi deseo de volver a pintar, a jugar con la claridad y los pinceles.</p>
+                       
+                       <p>—La he visto enseñar, trazar, pero nunca pintar en serio. </p>
+                       
+                       <p>—Por fin, por fin pude hacerlo hace unos días, contagiada por su pasión y agradecida con su trato. Nunca ha intentado insinuarse, nunca ha pretendido seducirme, nunca. </p>
+                       
+                       <p>—Mi hambre era más fuerte que todo lo demás, inclusive que una mujer como usted, una de las más bellas que he visto en mi vida. </p>
+                       
+                       <p>—Dígame, tengo mucha curiosidad, ¿Usted qué quiere, qué es lo que más quiere en la vida? Necesito saberlo ya mismo.</p>
+                       
+                       <p>Tito Salinas no tuvo la menor duda al responder, ni siquiera al pensar, su respuesta seria automática y sorpresiva para él mismo: </p>
+                       
+                       <p>—Antes que nada mi propio estudio, sin tener que pagar renta, en donde pueda trabajar a solas cuando amanezca o anochezca, en donde no tenga que seguir reglas o mirar rostros ajenos. </p>
+                       
+                       <p>—¿Seguro?</p>
+                       
+                       
+                        <p>—No tengo la menor duda.</p>
+                       
+                       <p>—Es una lástima, pensé que me querrías a mí, que iba a tener una oportunidad de olvidar todos mis terrores. </p>
+                       
+                       <p>—Discúlpame, yo quiero lo que quiero, y en primer lugar una mujer enamorada y no agradecida. De encima, tengo una especie de novia… </p>
+                       
+                       <p>—De todas maneras es una lástima, me voy a trabajar a Italia, a pintar para mí misma y  quería hacerlo contigo.</p>
+                       
+                       <p>—Voy a extrañarte —terminaron la botella de vino y hablaron de otros temas hasta la madrugada, cuando Tito tuvo que caminar a la estación de buses de Transmilenio para regresar a la Avenida Jiménez y caminar otra vez de regreso a La Candelaria.</p>
+                       
+                       <p>Antes de entrar al galpón en donde trabajaba y dormía se detuvo a desayunar en un restaurante popular abierto las veinticuatro horas en donde por siete mil pesos comería, como diría una de sus hermanas, hasta que se le parara el ombligo. No regresaría al taller del norte ni vería nunca más a Julieta… ¿Juliana?, ¿cómo era su apellido?, no porque fuera imposible hacerlo, sino porque temía ser incapaz de responder a las esperanzas depositadas en su talento, a un caudal de sentimientos, no lo sabía muy bien,  provocados por una amnesia repentina, la súbita ausencia del dolor o de la resurrección.</p>
+                       
+                       <p>Dos meses después,  y por intermedio de un abogado sorprendido y curioso, que lo había citado primero en una notaría de la calle trece con décima y luego en una oficina de la calle ochenta y dos, Tito Salinas había recibido —en medio de un sostenido desdén y actitudes burlonas del hombre— la escritura y las llaves de un estudio, por diez años libre de impuestos y en un barrio arborizado.</p>
+                       
+                       <p>—Está cerca de la Feria Exposición y a dos cuadras de esos edificios del Centro Nariño, tiene todos los servicios, una zona de vivienda y otra de taller. Firma y cédula, por favor— en forma constante el abogado tomaba un teléfono celular que titilaba sobre el escritorio.</p>
+                       
+                       <p>Tito Salinas deslizaría la firma, el número de identificación, la huella del pulgar en el original del documento. Al retirar la silla e incorporarse, hizo una mínima venia. El abogado no le había dado la mano, lo trataba como si hubiese adquirido la peste aviar, un ántrax. </p>
+                       
+                       <p>—¿Cuál es el secreto? </p>
+                       
+                       <p>—¿Qué secreto?</p>
+                       
+                       <p>—Pescar una amante como Juliana... ¡Una joya!, además de bella generosa, agradecida.</p>
+                       
+                       <p>—¡Váyase al diablo!— su voz se negó a sonar y a vociferar. Era media mañana, estaba mareado y sin desayuno, tenía demasiada hambre para iniciar una disputa, destrozarle a trompadas el rostro al entrometido.</p>
+                       
+                            <hr class="line-separator line-orange" />
+                   </div> 
+                </div>
+            
+            <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Fábula IV</h2>
+                   <h1 class="cafe chapter-title">Festejos en tu honor</h1>
+                   
+                   <div class="content-text">
+                       
+
+                        <p class="first-paragraph">HONORATA había departido en contadas oportunidades con Martín Duque en Punto y Coma, escuchado sus palabras bajo el tintineo del cristal y los cubiertos, de otras voces. En los últimos meses corrían rumores ligados a su muerte, la ascendente fama literaria, la incomprensible devoción por ella. </p>
+                        
+                        <p>Punto y Coma.  Ahora Honorata  tenía allí una reservación permanente. El legado del escritor, capítulo de libre disposición, en un sesenta por ciento la favorecía. Anticipos y regalías de sus libros, tres dedicatorias, pago de cuentas. Hasta en los sencillos actos de tomar un café, cenar, charlar, Martín Duque la tuvo presente. Siempre y cuando frecuentara el lugar, su mesa favorita junto a una ventana.</p>
+                            
+                        <p>Honorata, como para acentuar la tristeza y el aburrimiento que sitiaban al restaurante medio vacío, sentía pena de sí misma, el acoso de la incertidumbre; una voluntad invisible y férrea, manipulándola. </p>    
+                            
+                        <p>La irritación de no haber conocido bien a Martín Duque, apuntalaba su decisión de renunciar a lo inmerecido. ¿Por qué, por qué? Si el hombre tenía familia, amigos íntimos, colegas. Honorata era una modelo sin trabajo o casi, que filmaba dos o tres comerciales al año, y medio se defendía con desfiles de pasarela. Cada vez menos; la competencia era feroz y lo de mostrar las nalgas, los senos, una vislumbre del sexo para mantenerse en la cumbre, golpeaba su sensibilidad. No menospreciaba el desnudo, no; tampoco quería ser a toda hora carne de portadas, pantallas, vitrina y asador. Por otra parte, Renán nunca lo hubiese permitido.</p>    
+                            
+                        <p>¿Tanto había impresionado su belleza a Martín Duque?—… ¿o las asociaciones con su nombre? La gente siempre la miraba extrañada al presentarse, “Honorata Vanegas”, igual les sucedía a sus hermanas Eyre y Morgana. Menos mal que a su padre, lector empedernido y autor secreto, no se le ocurrió bautizarla Karenina.</p> 
+                            
+                        <p>—¿Por qué motivo? ¿Te fuiste a la cama con él, le rendiste con tus encantos?— preguntó Renán, mientras pesaba cereales y calculaba vitaminas, calorías, los minerales necesarios para hacer rendir su jornada al máximo. </p>
+                            
+                        <p>El sentirse cuestionada era asunto diario, así como la mirada asqueada de Renán al jamón y  los huevos tibios, que ella tomaba al desayuno.</p>
+                            
+                        <p>—¿Qué dirán mamá, mis hermanos...? Es una vergüenza, te mezclas con cualquiera, tiendes a elegir pésimas amistades. No quiero problemas, ni saber que acudiste al encuentro de ese tipo... ¿qué deuda tenía contigo?</p>
+                            
+                        <p>—No alcanza a tipo, ni a muerto en ataúd, son sus cenizas. A Duque lo vi dos o tres veces en mi vida. Nunca me dijo palabra, ni siquiera parecía interesarle.</p>
+                   
+                        <p>—Bonita historia —dijo, antes de tomar la primera cucharada y mascar treinta veces. Hacerlo era de gran valor energético y digestivo, había explicado a diario durante los tres años de matrimonio—. A ti te convendría adquirir otros hábitos alimenticios, renunciar a tóxicos, cadaverina. La salud brillaría por todos tus poros.</p>
+                       
+                       <p>—Soy flaca, como lo que se me antoja.</p>
+                       
+                       <p>—Morirás de infarto o isquemia.</p>
+                       
+                       <p>—Me conociste así.</p>
+                       
+                       <p>—Estaba muy tierno cuando me enamoraste, recién llegado a Bogotá, no sabía nada de la vida, bien lo ha dicho mamá... ¡y cuidado!, no quiero saber que fuiste al Punto y Coma, es un lugar sospechoso, de quinta, vaya gustos. ¡Y ni se te ocurra presentarte en el aeropuerto...!, o...</p>
+                       
+                       <p>—¿O qué...? ¿Me expulsarán del sacrosanto hogar...?  Estoy harta de las tantas y tantas escalas de la palabra no. Soy mayor de edad, dueña de mí misma.</p>
+                       
+                       <p>Eso quiso decir Honorata, y no lo dijo. Renán era cuatro años mayor que ella, pero según la madre y los hermanos merecía una quinceañera, noviazgo formal, compromiso, después un matrimonio rumboso. No unión por lo civil con una mujer dedicada a exhibirse en las revistas y la televisión como si fuese cerveza enlatada o marca de jabón.</p>
+                       
+                       <p>—¿O qué de qué...?</p>
+                       
+                       <p>—Nada, me mareas, usas demasiada colonia.</p>
+                       
+                       <p>—Como diría tu mamá —remató ella.</p>
+                       
+                       <p>Honorata vaciló hasta última hora, crecientes el temor y el fastidio. Renán con sus veladas amenazas, la sombra de aquel insólito e inoportuno enamorado proyectada a destiempo. ¿Cuánto le costaría aquella cita macabra? Tenía que huir, buscar refugio, airear el espíritu. </p>
+                       
+                       <p class="resaltado">¿Cuánto le costaría aquella cita macabra? Tenía que huir, buscar refugio, airear el espíritu.</p>
+                       
+                       <p>Gerardo Soria, el gerente o dueño del Punto y Coma, se acercó solícito: </p>
+                       
+                       <p>—Todos están en el aeropuerto, se cansaron de esperarla. No quieren fallarle a Miguel Encino, el encargado de traer las cenizas.</p>
+                       
+                       <p>Tuvo que tragarse un —¿a mí qué?— y acomodarse a la expresión acongojada del hombre. Había almorzado por cuenta de Martín Duque y tal hecho no podía negarse.</p>
+                       
+                       <p>—No he tenido fuerzas.</p>
+                       
+                       <p>—Por favor, tome una copa de brandy. Todavía está a tiempo; si desea puedo conducir su automóvil. Don Martín siempre me distinguió con su afecto; durante la crisis, cuando estuve al borde de la quiebra, me facilitó dinero.</p>
+                       
+                       <p>—No es necesario, gracias. </p>
+                       
+                       <p>—A usted. Es un honor atenderla.</p>
+                       
+                       <p>—No quiero molestar.</p>
+                       
+                       <p>El local solo estará lleno hacia las seis, así como le gustaba a Don Martín. Tengo suficientes camareros y todavía estamos a tiempo —repitió.</p>
+                       
+                       <p>...¿Cómo resistir la tentación? Honorata había escuchado su nombre asociado al de Martín Duque, en el espacio radial  A la media noche, en la voz de un locutor que mezclaba farándula con noticias culturales, declamaba fragmentos poéticos que disputaban la sintonía a cantantes de rancheras y vallenatos. Un programa destinado a los trabajadores del insomnio obligatorio: camioneros, camareros, enfermeras, panaderos, vigilantes, basureros, prostitutas, verduleras y negociantes al por mayor, celadores y carniceros.</p>
+                       
+                       <p class="italic-text">—“Mañana, a las catorce horas, llegan a Bogotá las cenizas de Don Martín Duque, fallecido hace un mes en España, en donde se había refugiado para huir de la indiferencia de los críticos y los medios de comunicación ante su obra. Rescatado del anonimato por la tragedia, sus libros figuran ahora entre los más vendidos. De acuerdo con su testamento, que constituye una pieza literaria, las cenizas —que viajan en la aerolínea colombiana Avianca— pasarán a la custodia de sus mejores amigos, entre otros Luciano Echeverri, Gaspar Trujillo,  Miguel Encino, Ivo Sánchez, Fernán Montoya y la modelo Honorata Vanegas...”</p>
+                       
+                       <p>Cada diez minutos el locutor agregaba nuevos detalles. En los próximos días las cenizas serían esparcidas desde el cerro de Monserrate sobre Bogotá, la ciudad que el escritor tanto amaba. Después de la ceremonia, en la Biblioteca Nacional, un destacado grupo de narradores realizaría una lectura de textos recopilados por la Editorial Camaleones, en un lujoso volumen, que sería lanzado en simultánea en varias capitales, como Barcelona, Buenos Aires, Miami, Santiago y Ciudad de Panamá. Al sentirse cortejado por la muerte, el poeta había reservado con muchísima anticipación el auditorio Aurelio Arturo, escrito de puño y letra las invitaciones, programado  un vino de honor.  </p>
+                       
+                       <p>HONORATA, destacada como la figura del día en dos periódicos y cuatro noticieros de televisión, quien al rozar la cumbre del éxito había sonreído en las portadas de las revistas Aló y Cromos, no pudo sustraerse a la gentileza de Gerardo Soria, con quien se dirigió al aeropuerto ¿Qué más daba?, Renán nunca olvidaría uno de los comentarios: “La bellísima modelo, a quien Martín Duque inmortalizó en  sus poemas amorosos”. Su suegra y sus cuñados exigirían explicaciones, reparación, penitencia. Ella  no tenía defensa ni disculpas. </p>
+                       
+                       <p>—Su perfume es delicioso—  experto conductor, atento a las señales, Soria se tomó veinte minutos en llegar a El Dorado y otros cinco en situar el automóvil de Honorata en la zona de estacionamiento.</p>
+                       
+                       <p>Mientras esperaban frente a las puertas de salida de pasajeros marcadas con letreros de Internacional, tropezaron con el profesor Ramiro Almagro. El avión había aterrizado a tiempo, pero la aduana, el papeleo y el equipaje detenían al portador de las cenizas.</p>
+                       
+                       <p>—Un día de locos. Todos están en la cafetería del segundo piso, tal como lo dispuso Martín. A él le encantaba organizar, decir la última palabra, meter a sus amigos en líos...— en su rostro enjuto, con huellas del gesto infantil, los ojos chispearon burlones.</p>
+                       
+                       <p>El gerente de Punto y Coma, un ojo en la pantalla de horarios, otro en su reloj. Su nerviosismo no le permitía abandonar el teléfono celular que sonaba a cada momento: inconvenientes relacionados con el menú, los proveedores y reservaciones. Se despidió entre acelerados me voy,  la entrego a buenas manos, no falten esta noche.</p>
+                       
+                       <p>—Con uno que aguante frío es suficiente. Apenas Miguel salga de la aduana nos reuniremos con ustedes.</p>
+                       
+                       <p>—¿Miguel…? </p>
+                       
+                       <p>—Encino. Otro fundido en el mismo molde que Martín. De los que tienen que legar originales, la pipa y las cenizas cuando mueren, incapaces de aceptar el olvido. Nos guste o no, vivos o muertos, siempre en la brecha... —pontificaba Almagro.</p>
+                       
+                       <p>Ella sofocó la risa. Los literatos son capaces de complicarle la vida al más sensato. La vida se repetía como estribillo de canción. A una tía tatarabuela suya, al legarle su corazón embalsamado, otro irresponsable la había condenado a la mala fama, a vivir entre el equívoco fulgor de aventuras escabrosas y amantes inexistentes. Decían sus descendientes que la pobre, incapaz de rebeliones o protestas, había muerto en salazón, es decir, virginidad inconsolable.</p>
+                       
+                       <p>¿A ella qué le podía suceder?,  había quemado titulares y encendido televisión durante día y medio; a lo mejor un buen contrato, repuntar como modelo, publicar un calendario, responder unas cuantas entrevistas. La tía abuela pertenecía al pasado, Honorata al siglo XXI. </p>
+                       
+                       <p>En el bar cafetería la reconocieron enseguida, personas a quienes saludaba en los cocteles, mientras iba de un grupo a otro, de ráfaga, pendiente de Renán. Eso, cuando todavía los invitaban. En los últimos meses los acontecimientos divertidos escaseaban, debía contentarse con cenas de negocios y reuniones familiares.</p>
+                       
+                       <p>—La musa, en persona. Hola, preciosa. Cada vez más bella. </p>
+                       
+                       <p class="resaltado">—La musa, en persona. Hola, preciosa. Cada vez más bella. </p>
+                       
+                       <p>“HONORATA”, Honorata, se presentó. Los conocía de vista: el poeta Hornos, José Eladio, Luciano Echeverri, Ivo Sánchez y Fernán Montoya, tomaban café negro. Honorata rodó la única silla libre. En otra mesa, tres muchachos de jeans jugaban a enviarse mensajes desde sus celulares, sin mirarse unos a otros. Desde la barra, tres chicas conocidas como Las Pamelas, coqueteaban con turistas gringos; boinas, falsos brillantes en las aletas de las narices y pabellones de las orejas, cabellos teñidos de violeta, rojo, zanahoria, adornos en las mejillas.</p>
+                       
+                       <p>—Buena esa, regio tenerte con nosotras, una nota. Bienvenida al combo.</p>
+                       
+                       <p>Camino al aeropuerto, había elaborado una minuciosa historia acerca de su diáfana amistad con Martín Duque, para evitar suspicacias, pero nadie le preguntó mayor cosa.  En cambio, un mulato gigantesco, a quien los otros llamaban Tigelino, comentó:</p>
+                       
+                       <p>—Me lo imaginaba, capté las miradas oblicuas de Martín, vivías en su lente. Ja, una verdadera proeza. ¿Cómo se las arreglaron...? Su viuda es el mejor detective de Bogotá, conocía todos sus movimientos y pisadas. Lo celaba hasta con los maniquíes, las chicas pechugonas que se asoman a toda hora en la tele y el Internet. Miren, el hombre tenía su secreto, ya lo sospechaba. </p>
+                       
+                       <p>—No sé de qué hablas.</p>
+                       
+                       <p>Oscurecía cuando el profesor Ramiro Almagro depositó sobre la mesa un paquete envuelto en papel manila, cerrado con cinta aislante e hilo plástico.</p>
+                       
+                       
+                        <p>—El viejo Martín en cenizas —dijo acezante; voz de atleta aficionado al llegar a la meta.</p>
+                       
+                       <p>as palabras restantes se extraviaron entre el desorden, tras los fotógrafos, camarógrafos y periodistas de T.V., sucesión de micrófonos y logotipos de los más importante noticieros. Las reporteras enfatizaban los nombres Martín Duque - Honorata Vanegas, hablaban ante las cámaras con rapidez. Al terminar mostraban primeros planos de los poetas, el paquete con las cenizas, Honorata.  El ambiente informal del bar-cafetería de pronto espeso, sofocante.</p>
+                       
+                       <p>—¿Miguel...?</p>
+                       
+                       <p>—Lo veremos en Punto y Coma. Ha ido a descansar, le tiene miedo a la altura, el soroche, las entrevistas.</p>
+                       
+                       <p>Los periodistas graneaban.</p>
+                       
+                       <p>—Como una cita relámpago con el dentista —dijo el profesor Almagro en voz alta—, hay que aprender de los comunicadores, saben multiplicar y economizar la prisa.</p>
+                       
+                       <p>—Nos zafamos por un rato. Esto apenas comienza —Luciano Echeverri acarició el paquete...— ¿Quién te entendía, Martín? ¿Quién podía saber lo que tenías en mente...?</p>
+                       
+                       <p>—Estoy cansada y tengo hambre —dijo una de las Pamelas; mirada cosmética color borgoña, medias naranjaOs rey.</p>
+                       
+                       <p>Un camarógrafo retrasado mascaba palabrotas. Los camareros anotaban nuevos pedidos, café tinto, aromáticas, capuchinos, cerveza.</p>
+                       
+                       <p>—¿De qué ha muerto? —preguntó Honorata. El temor al rechazo uncido a la curiosidad.</p>
+                       
+                       <p>—Unos dicen que de cáncer, otros que minado por el anonimato. El éxito lo besó demasiado tarde...—dijo Fernán Montoya.</p>
+                       
+                       <p>—¿Suicidio...?</p>
+                       
+                       <p>—¿Qué tal el sida? Es otra manera de trascender, ganarles a la indiferencia y al silencio. Dejar de ser ninguno.</p>
+                       
+                       <p>En las mesas vecinas atestadas, viajeros rodeados de niños, maletines, tulas, miraban sin disimulo. Almagro pidió la cuenta. Honorata no supo si la última voluntad de Martín Duque les tenía sin cuidado o le temían a su memoria, o fingían no amarlo, o les dolía demasiado.</p>
+                       
+                       <p>El camarero colocó una bandeja sobre la mesa. Almagro examinó el recibo, palpó sus jeans y sacó una cartera del bolsillo trasero.</p>
+                       
+                       <p>—Hoy me siento generoso —dijo sin mirar a nadie en particular, y una de sus manos velludas rozaba la nuca de Honorata.</p>
+                       
+                       <p>—Eso se llama conmover a las piedras y honrar al difunto —Jota Eladio se animaba. </p>
+                       
+                       <p>—Es hora de hacer una visita. A mí no me es posible cumplir las demandas de Martín sin contar con la viuda y los hijos— al pagar  la cuenta Almagro tomó el paquete.</p>
+                       
+                       <p>—¿Está ahí...?—con las mejillas sonrosadas, sin gota de maquillaje y lágrimas de cuarzo engarzadas a las cejas, una de las Pamelas se estremeció.</p>
+                       
+                       <p>—Sí. Está ahí.</p>
+                       
+                       <p>—¿Y la esposa...? </p>
+                       
+                       <p>—En plan de urdir acusaciones y demandas, conceder entrevistas.</p>
+                       <p>José Eladio agregó otro billete y unas monedas.</p>
+                       
+                       <p>—Se merecen una buena propina. Dimos lata toda la tarde... y la esposa idolatraba a Martín, pero odiaba su literatura. Un drama griego. Armará un alboroto, demandará el testamento con uñas y dientes, se cagará hasta en la última rima del último verso.</p>
+                       
+                       <p>—Con o sin trifulca, hay que llevarlo a su casa. Es lo más indicado.</p>
+                       
+                       <p>—No puedo acompañarlos. Lo siento muchísimo —Honorata intentó disculparse. Inútil, nadie la tenía en cuenta.</p>
+                       
+                       <p>Ramiro Almagro retiraba el hilo plástico, la cinta aislante, desdoblaba el arrugado papel marrón.</p>
+                       
+                       <p>—Siempre fue de malas el viejo Martín, odiaba los colores terrosos. Ni siquiera esparcir sus cenizas desde los cerros resulta original, aunque exigió que se mezclaran con limaduras de oro, gasa de ángel y papel celofán.  Garcilaso Ovalle le robó la idea, escogió el edificio Colpatria para lanzar las suyas y aumentar la contaminación  metropolitana.</p>
+                       
+                       <p>HONORATA advirtió que bajo el papel había más envolturas, las hojas de una revista dominical con  la imagen de un feto nadando en gelatina verdosa. Entre dos recortes de cartón piedra y un nido de algodones surgió una caja rectangular barnizada de laca china, refulgente, con delicados arabescos. </p>
+                       
+                       <p>—¡Aquí lo tienen! —José Eladio elevó la caja— ¡Martín Duque, igual que entero!</p>
+                       
+                       <p class="resaltado">—¡Aquí lo tienen! —José Eladio elevó la caja— ¡Martín Duque, igual que entero!</p>
+                       
+                       <p>Con un micrófono, una chica de falda roja y chaquetón negro, voz modulada, decía: “Nos encontramos en el aeropuerto El Dorado de Bogotá, con su Noticiero de las Nueve, cuando son las seis de la tarde, para recibir las cenizas del escritor Martín Duque, acontecimiento signado por el escándalo...”</p>
+                       
+                       <p>—Me encantó conocerlos —se despidió Honorata.</p>
+                       
+                       <p>Nadie le prestaba atención. Las Pamelas susurraban; lo más granado de la poesía femenina. Un altavoz les indicaba a los pasajeros con destino a Medellín abordar por la puerta número tres. Enseguida solicitaba la presencia de Ramiro Almagro, Miguel Encino, Ivo Sánchez, en las oficinas de Avianca.</p>}
+                       
+                       <p>—¡Esposa a la vista...!</p>
+                       
+                       <p>—Los veré en la biblioteca, el día de la ceremonia.</p>
+                       
+                       <p>Una cáscara movible comenzó a emerger de los algodones. Honorata escuchó gritar a las Pamelas con una sola voz.</p>
+                       
+                       <p>—¡Una cucaracha... Una cucaracha! </p>
+                       
+                       <p>Jota Eladio aplastó un escarabajo mecánico, que se convirtió en alas y tripas metálicas. Alguien estaba en plan de bromas. Los camarógrafos invadían otra vez el café bar, como si la caja de laca china fuese un poderoso imán y la mesa estuviese ocupada por estrellas de la farándula.</p>
+                       
+                       <p>—En marcha —dijo Fernán Montoya—. Hay que atender la invitación de Martín, una tenida en Punto y Coma. ¡Chitón!, que no se enteren los filisteos.</p>
+                       
+                       <p>—En mi automóvil hay sitio para cuatro —ofreció Honorata.</p>
+                       
+                       <p>—Lo que tú ordenes, niña Balzac. Te sienta el nombre y el perfume.</p>
+                       
+                       <p>Honorata, de lavanda y carmesí, camisa y pantalones flotantes—, los cabellos largos con visos plateados, sonrió. Con tristeza pensó en Renán, la madre, los hermanos. Sabía, con diáfana certeza, que al regresar al apartamento le sería imposible entrar: el timbre sin respuesta, la puerta agresiva, nuevas guardas y cerraduras; sus maletas, belleza, éxito futuro, sentimientos depositados en la portería del edificio. </p>
+                       
+                       <p>—Vamos —dijo Honorata.</p>
+                            <hr class="line-separator line-orange" />
+                   </div> 
+                </div>
+                
+            <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Fábula V</h2>
+                   <h1 class="cafe chapter-title">Inventario de las ideas felices</h1>
+                   
+                   <div class="content-text">
+                       
+
+                        <p class="first-paragraph">Tanto renegar. Tanto discutir y argumentar. Tanto suplicarle a Gaspar Trujillo, su asociado en el bar cafetería Punto y Coma, el número tres, que se hiciera sentir y respetar, que evitara la entrada de tantos ociosos y holgazanes; echara a patadas a esos vagos que se las daban de intelectuales y que distraían tardes enteras frente a una taza de café, un computador portátil, o dedicados a charlas y charlas. </p>
+                        
+                        <p>—¡Por mí, les prohibiría la entrada…! — le dijo a Gaspar, quien con su aire burlón de Mandamás, había encogido los hombros…</p>
+                            
+                        <p>—Esa gente es la sal de la tierra... ¡alegran la vida...! Total, a mí en estos negocios nunca me va bien, es usted quien insiste en maquillar y dar importancia a Punto y Coma, y tener una franquicia, a mí solo me interesan las lecturas de poesía y trabajar con una persona que sepa de gerencia… </p>    
+                            
+                        <p>Tanto aleccionar a las camareras, recalcar a diario que se dedicaran a atender a clientes de importancia; a esa plaga había que desterrarla,… ¡y de sonrisas nada! La mitad del quince por ciento de las propinas que incrementaban su sueldo de anfitriona no justificaba ni el estrés ni el atafago. </p>    
+                            
+                        <p>Pero, ¿quién iba a imaginarlo? Noemi ha terminado por extrañarlos. Necesita saber a dónde se mudaron. Preguntarse a diario a donde trasladaron sus mentes, charlas y tarjetas de crédito. Ha decidido invitar a un cóctel por todo lo alto para reinaugurar Punto y Coma 3, copia de unas cafeterías y restaurantes famosos al final del milenio, que eran copia de otras cafeterías de los años sesenta, cuando ella no había nacido siquiera. No sobraría resaltar en las tarjetas el R.S.V.P. y repetir las invitaciones por el correo electrónico.</p> 
+                            
+                        <p>Desea tener contento a Gaspar Trujillo, verlo de nuevo sonreír, detener sus ojos en ella con ese afecto y esa intensidad que reserva a sus amistades cercanas y libros favoritos. Todavía no puede aspirar a su amor, a él le han clavado un abandono, una traición. La novia idolatrada se había casado con otro, sin una carta, sin un email, ni las explicaciones obligatorias. Un rechazo signado por la mofa y la traición que continuaba doliéndole.  </p>
+                            
+                        <p>Noemi se había enamorado a su pesar y con lentitud, sin saber… ¿a qué horas? difícil conquistarlo. Era como entrar a un castillo de oro y jade medio destruido, quitar las malezas y cortinajes ahumados por incendios y devastaciones, espantar alimañas. ¿Cómo y cuándo había sucedido? Ni idea. Ella misma se había lanzado de cabeza en una telaraña, la tentativa de huir le estrujaba el corazón, amarraba sus manos y sus sentimientos. Noemi supuso que lo importante era no caer en las preguntas ni en los reclamos, fingir que nada sucedía, que ella nunca había manipulado el destierro de los amigos, de los gorrones, de los gotereros, de esos y esas: del clan de los engreídos, narcisistas o insoportables.</p>
+                            
+                        <p>¿Para qué mentirse? La realidad tenía dientes de fiera. Si perdía a Punto y Coma 3, quizá iba a perder su única oportunidad de ser deseada, amada y cortejada por Gaspar Trujillo.</p>
+                            
+                        <p>—Punto y Coma no es un lugar creado para ganar dinero, sino para elevar el espíritu y espantar el aburrimiento. Hay que olvidar el alboroto de fiestas y cocteles, que atraen la sal y las cucarachas. El éxito de Gaspar suscita mucha envidia y resquemor… ¡no hay que mortificar a los filisteos...! —le había advertido Martín Duque, uno de los socios quien,  después de tantos sermones se había marchado a España de un día para otro, sin aceptar fiestas de despedida o dar explicaciones. Un amargado.  </p>
+                   
+                        <p>—¿Qué puedo hacer?— le había preguntado ella.</p>
+                       
+                       <p>—Abrir los ojos y hablar con Tobías Rangel. </p>
+                       
+                       <p>—¿Qué? </p>
+                       
+                       <p>— Es el hombre más extraño que he visto en mi vida, y por lo mismo oscurece el lugar y me causa mal genio. Es como un actor disfrazado de vampiro y de cine mexicano en blanco y negro. </p>
+                       
+                       <p>—Los vampiros nunca pasan de moda, ni en las novelas ni en el  cine, Tobías Rangel es el único que tenemos en el centro de Bogotá. Estoy seguro de que a causa de Tobías la muchachada nos visita, acude desde el norte y el sur y el occidente sin inventar pretextos. ¡Arriba los vampiros! </p>
+                       
+                       <p>Cierto. La muchachada entraba entre risas y empujones y esos dichos de jerga electrónica. Tomaban capuchinos o cerveza, alelados, sin quitar sus ojos de la mesa que había colonizado el hombre de ojeras naranjaOses, traje negro y camisa blanca, en noches de lluvia embutido en un abrigo negro o en una capa de paño negro forrada de seda roja. Ni siquiera miraban las pantallas de sus celulares, guardaban silencio, respeto.</p>
+                       
+                       <p>—No me gusta ni cinco, no lo quiero en mis predios. Creí que la atracción de la casa se llamaba Juan Mistral, y en su ausencia Lorenzo Andrade o Tito Salinas.</p>
+                       
+                       <p>—Juan es como todos los genios de la informática que van y vienen, no se puede contar con ellos la mayoría del tiempo. Lorenzo Andrade es peor, tiene que estudiar o ensayar o trasnochar, salir de gira. Durante semanas no le vemos el pelo. Los actores viven más de una vida, y les gusta así. En cambio Tobías Rangel es predecible, amable, inteligente, fiel.</p>
+                       
+                       <p>—No me lo soporto, no lo quiero soportar, me resulta antipático con sus ínfulas de poeta, de gourmet, de genio incomprendido. Me desagrada su amistad con Gaspar Trujillo, me espanta su rostro. </p>
+                       
+                       <p>—Esa amistad viene de una época que todos amamos y no queremos olvidar y tampoco es asunto suyo, jovencita. Sin embargo, se lo digo y vuelvo a decir, es mejor que Tobías y sus amigos regresen a Punto y Coma, que la vida tome un cauce normal.</p>
+                       
+                       <p>—¿A que llama usted normalidad? — Martín Duque tardaría en responder:</p>
+                       
+                       <p>—Es mejor no mover demasiado la rutina ni atraer malas voluntades. Estamos en un país en donde a mucha gente le gusta hablar y hablar y hablar, pero evita aquello de hacer. Si convertimos a Punto y Coma en foco de atención, vamos a tener que esquivar las pedradas. La mayoría sobre la testa de Gaspar.</p>
+                       
+                       <p class="resaltado">Estamos en un país en donde a mucha gente le gusta hablar y hablar y hablar, pero evita aquello de hacer.</p>
+                       
+                       <p>—¿A ustedes quien los entiende? </p>
+                       
+                       <p>El miedo a ser desterrada de los afectos de Gaspar se convirtió en una amenaza constante. ¿...Qué tal si cancelaba la sociedad? La idea resultaba enloquecedora y tan cercana que le dolía y dolía y le tornaba a doler. El amor era un sentimiento que la atacaba o la hería de súbito. Noemi era incapaz de controlarlo. Nadie era capaz.</p>
+                       
+                       <p>Durante unas semanas, supuso que había triunfado en su afán de hacer de Punto y Coma un sitio rentable y acogedor, que atraía a los prohombres que frecuentaban el sector, congresistas, senadores y representantes a la cámara, abogados de trajes formales, camisas  y corbatas de marca. ¡Nada peor que las ideas y las  acciones felices! Sí-sí- de la Plaza de Bolívar, del Palacio de Justicia, de la Contraloría y otras oficinas públicas acudieron en grupos los hombres más importantes del país. ¿Y qué? Al multiplicar las conversaciones pedantes y el monto de las propinas, comenzaría a desaparecer la energía, a notarse la ausencia de los clientes anteriores, esas voces quedas o tonantes que leían o declamaban o recreaban poemas ante auditorios cautivos... Escucha Escucha Escucha la voz de los hoteles… las voces de Álvaro Mutis o Juan Manuel Roca… Entre árboles que levitaban su floración oscura, la casa nos guardaba de la tarde… Fascinado con la evocación de sus autores favoritos, Gaspar hacía discreta presencia al atardecer, y a veces la acompañaba los viernes en la noche a cerrar y hacer cuentas, tal vez por miedo a los ladrones.</p>
+                       
+                       <p>Noemi no tardaría en saber que Gaspar se dedicaba a tomar whisky en las rocas, en compañía de Tobías Rangel y otros desadaptados, en una de las cervecerías que les salen al paso a los estudiantes, a los turistas y a las amas de casa por las estrechas aceras del barrio La Candelaria. Tanto hablar, discutir, renegar, decir que ¡no me soporto esos vagos! para luego humillar el ego y la cabeza al colocar un letrero de Reservado en la mesa favorita de Tobías Rangel. Se decía que, en la cédula de ciudadanía, Tobías sumaba una tropa de nombres, entre ellos Orígenes y Abelardo.</p>
+                       
+                       <p>—Buenas tardes —había dicho ella y tomado asiento sin ser invitada, en uno de esos huecos, con ínfulas de bar-cafetería-restaurante, impregnado de olores a cerveza, frituras y pisos a medio limpiar, las camareras con delantales deformados y espesos maquillajes.</p>
+                       
+                       <p>—¿Qué desea, mi niña? Estoy para servirle, primero están la inteligencia y la belleza, usted manda. </p>
+                       
+                       <p>Noemi tuvo que contenerse para no gritar o vomitar, decir lo que tenía que decir, su corazón en bandeja como la cabeza del Bautista. Decir, decir, no dijo nada. Su actitud era en sí misma explicación, no había tratado bien a Tobías ni a sus amigos, estaba en falta, pero… ¿qué sabía de la poesía?, sus conocimientos eran tomados en la marcha y por internet. </p>
+                       
+                       <p>—No hay necesidad de gastar esfuerzos, mi niña. Lo primero es lo primero, en un orden armonioso voy a desnudar mi alma ante su candidez, su hermosura y simpatía. Le aseguro que no pienso abusar de mi buena fortuna, y que mis exigencias para regresar a Punto y Coma son mínimas. Quiero una mesa doble con exclusividad y junto al ventanal del segundo piso. ¿Comprendido?</p>
+                       
+                       <p>—Sí, maestro.</p>
+                       
+                       
+                       <p>Las exigencias de Tobías Orígenes Rangel, dada la situación, pecaban de moderadas: la mesa doble y el ventanal reservados, una cena frugal solicitada al cercano Hotel Augusta, una botella de aguardiente o vodka cada viernes en la noche. No quería nada gratis, Tobías Rangel pagaba sus cuentas. Eso sí, cultivaba la fama de vivir del aire de los otros. </p>
+                       
+                       <p>—No necesito ayudas, no creo que mi vida sea de su interés. Me voy a contentar a diario con su presencia y colaboración. </p>
+                       
+                       <p>—Su vida sí es de mi interés, también los asuntos de mi amigo Gaspar. Usted, niña, no sea tan alzada, ni tan respondona. Como dice ese dicho que no pasa de moda, en la puerta del horno se quema el pan y escuche uno que acabo de inventar: en una fluctuación de voltaje se borran los archivos del computador. Se lo advierto, tenga cuidado.</p>
+                       
+                       <p>—¿Por qué debo tener cuidado?</p>
+                       
+                       <p>—Se llama Miranda Canovas, ha sido el gran amor de Gaspar y ha recobrado su libertad. Con toda seguridad, no tarda en pedir perdón, llorar a mares y reclamar derechos. Es inteligente, preciosa, hija de gente muy adinerada, quiere lo mejor de la vida, y es capaz de obscurecer o embellecerlo todo a su alrededor. Una autentica hechicera, como Circe.</p>
+                       
+                       <p>—¿Quién es esa?</p>
+                       
+                       <p>—Lo primero es lo primero, tienes que comprar un diccionario Larousse. Después leer La Odisea.</p>
+                       
+                       <p>—Me importa  un carajo Circe, y de la Miranda Canovas me voy a encargar después. Ahora tengo que organizar un cóctel. En el colegio tuve que leer la tal Ilíada y de La Odisea ni me acuerdo. </p>
+                       
+                       <p>—Le deseo buena suerte —dijo Tobías Rangel.</p>
+                       
+                       <p>Noemi cumpliría el reto de organizar un sonado coctel con invitaciones impresas, vasos de cristal, pasabocas con jamón york y selva negra, muslos de codorniz, empanaditas y papas criollas. Lo importante, la lista de invitados. A Gaspar Trujillo en particular le agradaba cierta gente a quienes llamaba su gente. En su haber se apilaban los famosos y los desconocidos: Avelino Cadena y el poeta Hornos, Honorata Vanegas, Jota Eladio, Miguel Encino, Tito Salinas y Juan Mistral, Marcela Olivares y Avelino Cadena. Lo difícil era concretar a los otros, las camadas de chicas y muchachos que llegaban con las bocas abiertas a mirar a Tobías Rangel, a Tito Salinas y al mismo Gaspar, como los máximos representantes del arte y la cultura. Tenía que hacer memoria de nombres y sobrenombres, que si Micaela Guerrero, que si las Pamelas, El Gorrión, Pancho Vallecas, Tigelino y el profesor Almagro ¿Cómo se llamaban? Monina, Zoroastro, una que le decían “Yo no fuí” y a otra World Center, Abalorio, Divino Uno, Doña Afrodita, Bayardo, Muñeca, Star Walker, Marlon Brando en dos, Antonioni de Noche, Peligro y Peligrito. Todos-Todos, incluidas cuatro matronas que los visitaban los sábados y tomaban ron puro en tazas de café.</p>
+                       
+                       <p class="resaltado">Todos-Todos, incluidas cuatro matronas que los visitaban los sábados y tomaban ron puro en tazas de café.</p>
+                       
+                       <p>Noemi iba a recobrar a los amigos de Gaspar, falsos o verdaderos, le daba lo mismo. Tenía que estar a su lado para admirar, comprender y complacer, en tiempo breve decirle: —Sí, mi amor, lo que quieras, mi amor, lo que tú digas.  </p>
+                       
+                       <p>Tobías Rangel, que siempre obtenía lo que deseaba, había prometido darle su apoyo. Terco y decidido, actuaba de mentor y oscuro ángel guardián. Aunque, ¿por qué albergar tantos temores? Gaspar, Gaspar Trujillo a menudo solía reposar, descansar la mirada y los anhelos de sus ojos aniñados en los ojos de ella. ¿Quién iba a perderse la reinauguración de Punto y Coma 3? Un cóctel organizado por la anfitriona estrella Noemi Alfaro y el poeta laureado Gaspar Trujillo en honor de una gloria de Colombia, Tobías Rangel.</p>
+                       
+                       <p>Lo que nunca pudo imaginar, es que todo se iría al traste a causa de otra mujer: no Miranda Canovas ni la tal Circe, sino una intrusa que la había obligado a dar marcha atrás, y permitido que todos aquellos personajes y no personajes que había soñado con agasajar y deslumbrar se fueran a los auditorios de la Casa de Poesía Silva, de la Biblioteca Luis Ángel Arango, y las universidades cercanas, la Tadeo Lozano, la Central y los Andes.</p>
+                       
+                       <p>Había llegado temprano en una camioneta destartalada y cubierta con una capa de polvo sobre un sarro de barro apelmazado, hojas podridas e insectos sobre el parabrisas; armado tal escándalo con el claxon, que el vigilante atemorizado le había permitido ingresar al estacionamiento de invitados. Grandota, de largas piernas y anchas caderas, metida a la brava en una camisa de dril y unos pantalones estampados, el cabello agarrado bajo la nuca y unos lentes ahumados. Calzaba sandalias de tacón alto y ancho, las uñas de manos y pies esmaltadas en dorado. Olía a limpieza de toalla mojada y de esa colonia fugaz bautizada  Agua de Florida. </p>
+                       
+                       <p>—¿Esta casa es la de Punto y Coma? ¿La casa de Avelino Cadena?—preguntaría con voz sonora y acento cuidado, plantada bajo la luz  del atardecer bogotano y una lluvia finísima que apenas mojaba.</p>
+                       
+                       <p>—Avelino Cadena es uno de nuestros socios, pero la casa no es suya.</p>
+                       
+                       <p>La mujer alzó una mano grande sobre los labios estrechos y emitió un silbido prolongado y luego otro y otro y de pronto comenzó a dar gritos jubilosos: —¡Aquí, niños, aquí! ¡Mis amores, llegamos y coronamos! </p>
+                       
+                       <p>Sin saber en qué momento o debido a qué retorcida plegaria o invocación se hizo realidad  todo lo que Martín Duque había pronosticado: las fuerzas y voluntades contrarias a la literatura, y en particular a la poesía, irrumpieron en la casona de Punto y Coma 3, como si se tratara de tanques de guerra; unos seis muchachitos, dos de ellos cagados, a gritos y codazos, que cargaban tulas, colchonetas enrolladas, ollas gigantes, ropa y zapatos. Apestaban  a orines y a ñica, pero se comportaban como dueños y no como invasores. </p>
+                       
+                       <p>—¿Que sucede?  ¿Quiénes son ustedes?</p>
+                       
+                       
+                        <p>—Yo soy la esposa de Avelino Cadena, la esposa legitima por el civil y por la iglesia.  Necesito un café, ya mismo ¡y rápido!</p>
+                       
+                       <p>—Señora, por favor, el señor Cadena no vive aquí, es apenas un poeta de número. El bar cafetería pertenece a Gaspar Trujillo y asociados.</p>
+                       
+                       <p>—Lo sé. Ese tal Gaspar Trujillo puede vivir del cuento y la poesía, mientras Avelino tiene a la mujer y a los hijos abandonados en un pueblo de mierda. (…) Se lo dije a tiempo,  ¡esta vaina se tiene que acabar! Se lo escribí por correo normal y por internet a Trujillo. A mi marido se le acabó la vida gloriosa en Bogotá, y eso de visitarnos tres veces al año... ¡Me aburrí de besos, besitos, mordiscos y a la cama!, las mismas promesas de amor y vida celeste. Es a mí a quien le toca echar panza y parir y dar teta y volver a parir ¡Se le acabó la dicha! Me hice ligar. (...) ¡Viva la menopausia!</p>
+                       
+                       <p>—Está bien, me rindo —se dijo Noemi Alfaro, cruzada de brazos, mientras los niños iban y regresaban de los garajes, entraban y salían de la casona, el patio lleno de mantas y colchonetas. Unos gemelos como de nueve años le daban patadas a una pelota de fútbol.</p>
+                       
+                       <p>—Usted no se apure niña, yo me encargo —la mujer enseguida dueña de la cocina, tajaba pan y queso, disponía las lonjas de jamón serrano y selva negra sobre una tabla, mientras hablaba y se quejaba y a veces se permitía suspirar. De pronto sonreír. </p>
+                       
+                       <p>A Noemi  le dolía la cabeza, era mejor atajar el desastre que vivir humillaciones en público, no era asunto suyo enfrentar a Cadena, ni obligarlo a responder por su familia. El pedido de licor no tenía problemas, lo guardaría bajo llave y lo reservaría para otra ocasión. Su fracaso como anfitriona no le interesaba sino a ella misma. Lástima de las tarjetas de invitación y salsamentaría fina, de los ahumados y pistachos. ¡Horror! De todas maneras tenía que pagarles a los banqueteros.</p>
+                       
+                       <p>—¿Qué tal el sinvergüenza de mi marido? Nosotros a punta de mote, de sancocho, mientras el hombre vive a lo grande. ¿Qué tal? ...Niñooooos, todos a bañarse, en alguna parte hay jabón, ¡cuidado con el agua caliente! Busquen ropa limpia, no pedimos limosna,  su papá nos tiene que dar lo que nos debe. Por fortuna no hace tanto frío, y eso que a Bogotá le dicen la nevera. Por favor, mi doña, ¡tan simpática usted...! Dígame, ¿...en dónde puedo conseguir a Trujillo, al Manda Más..?. Tengo que darle las gracias por su hospitalidad, después Avelino me va a escuchar. ¡Le guste o no le guste!</p>
+                       
+                       <p>—Le creo, ustedes quedan en su casa, yo tengo que trabajar. Si me necesitan estoy en la oficina —dijo Noemi—. ¿Han visto mi teléfono celular? </p>
+                       
+                       <p>Aquello era el desastre y nada podría ser peor, a menos que Avelino Cadena se llevara enseguida a su familia de langostas, compensara los gastos, le ayudara a espantar los maleficios. De pronto llovía a chorros.</p>
+                       
+                       <p class="resaltado">Aquello era el desastre y nada podría ser peor, a menos que Avelino Cadena se llevara enseguida a su familia de langostas, compensara los gastos, le ayudara a espantar los maleficios.</p>
+                       
+                       <p>Todo tenía solución y la falta de cama y de comodidades no tardaría en mortificar a Avelino Cadena, que no respondía el celular y menos el teléfono fijo. (…) ¿Quizás? Quizá esa era su oportunidad de llegar a los afectos de Gaspar y permanecer en ellos. Aunque no hay nada más difícil que localizar a un poeta laureado cuando urge su presencia y en cambio los paracaidistas pululan, gente que merece los sobrenombres de Peligro y Peligrito y que surgen de todos los rincones y callejones y peatonales de la ciudad de Bogotá.</p>
+                       
+                       <p>Sonaban portazos, maldiciones, vulgaridades, Noemí creyó escuchar el sonido de motores, no hizo caso. Su dolor de cabeza aumentaba. De codos en su escritorio y con el celular a mano, la libreta de teléfonos, una taza de té ya tibio, intentaba localizar a gente ilocalizable e impredecible. La lluvia cesaba. </p>
+                       
+                       <p>—Señora, usted… ¿es la gerente? —un muchacho alto con los brazos tatuados y cráneo engominado, llenaba el marco de la puerta.</p>
+                       
+                       <p>—Soy yo. ¿Qué se le ofrece? </p>
+                       
+                       <p>—Necesitamos ahora mismo esta oficina.</p>
+                       
+                       <p>—Necesitamos es mucha gente.</p>
+                       
+                       <p>— Somos como doce, y ustedes como nueve. </p>
+                       
+                       <p>El vigilante debía haber olvidado cerrar la puerta de la casona, todavía no era la hora del cóctel, si es que se llegaba al cóctel. </p>
+                       
+                       <p>—No entiendo nada.</p>
+                       
+                       <p>—No tiene que entender. Solo estar quieta y callada… ¡bien callada…! —al muchacho, un  jayán de metro ochenta, con una camiseta negra forrada sobre un pecho que parecía de cuero, pantalones a la rodilla y zapatones de doble suela, arete, reloj, le siguieron unos cinco matones que parecían uniformados con jeas y chaquetas naranjaOs índigo. De relojes brillantes y aretes y manillas, más y más tatuajes, empujaban a la mujer de Avelino Cadena, en pantuflas, con un bebé en el brazo izquierdo y un  sándwich de lechuga, tomate y jamón serrano, que mordisqueaba despacio. </p>
+                       
+                       <p>—La culpa no es mía, yo había cerrado la puerta, creo que abrieron con ganzúas y no hay nada que podamos hacer.</p>
+                       
+                       <p>—Lo único que faltaba… ¿ladrones?</p>
+                       
+                       <p>—Ladrones, las güevas… ¡somos legionarios del pueblo! ¡Venimos por lo nuestro…!   Antes de morir el patrón vivía en esta casa...,  que el gobierno ha decomisado y regalado a un cualquiera. ¡Al baño, todos al baño!</p>
+                       <p>José Eladio agregó otro billete y unas monedas.</p>
+                       
+                       <p>Por fortuna era una casa de verdad antigua, con amplios espacios, y la mujer de Avelino Cadena que era una mandona feroz y maternal, le había pedido (y conseguido) al jefe  de los asaltantes que los instalaran en la cocina, extendido en el suelo mantas para los niños y preparado una enorme olla de chocolate, más y más sándwiches, bata que bata huevos, los bárbaros acudían a cada momento a la cocina.</p>
+                       
+                       <p>—¿Madre, linda, me puedo tomar un café? ¿Qué más tiene por ahí? </p>
+                       
+                       <p>—Lo que quieras, mi rey. Hay pan francés con tortilla a la española y tocineta, salchichón cervecero y salchichas. Lo que quieran.</p>
+                       
+                       <p>Sentada frente a los ladrones, feos, panzones y tatuados, pero con ínfulas de actores de T.V…,  Noemi los veía destruir a pico, pala y barrenos las paredes, los pisos de madera lustrada, las mesas de nogal, las estanterías de la biblioteca, destripar los sillones y baúles de cuero, sin que aparecieran ni los barriles atestados de billetes ni los lingotes de oro. En la cocina los niños dormían, se escuchaba lloriquear al bebé y la voz de la madre que decía…—ya ya…todavía no hay teta… ya ya… </p>
+                       
+                       <p>¡Unos estúpidos mal informados! Hacía más de un año que Gaspar había recibido del Ministerio de Educación unas casas en comodato, para instalar centros de saber y poesía, y era obvio —a pesar de su calculada sencillez— que cada vez era más y más rico, que se había adelantado a los ladrones, y por una vez en la legendaria existencia de la poesía había sacado la cara por los tontos y los sabihondos que se dedican en cuerpo y alma a cultivarla. </p>
+                       
+                       <p>A Nohemi solo le restaba esperar, quizá era su oportunidad del Edén; a Gaspar Trujillo le encantaban las mujeres indefensas y ella necesitaba consuelo, alguien que acariciara su rostro hinchado por el llanto y se dedicara a confortarla. ¡Adiós a Punto y Coma 3! ¿Qué iba a decir Tobías Rangel? </p>
+                       
+                       
+                            <hr class="line-separator line-orange" />
+                   </div> 
+                </div>
+                
+                
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Fábula VI</h2>
+                   <h1 class="cafe chapter-title">Amistades de piel de antílope</h1>
+                   
+                   <div class="content-text">
+                       
+
+                        <p class="first-paragraph">Noctámbulo desde su estudiosa y sacrificada juventud, Donato Vanegas era un hombre de bares acogedores, librerías cafeterías, que jamás había vibrado con los trajines de la música rock, ni con el rap o los vallenatos. Frecuentaba bares pequeños en penumbra, remansos del tango, el jazz y el bolero, sitios ideales para hablar y ser escuchado, lejos de intelectuales corrosivos. Historiador, critico, ensayista, hasta hacía unos dos años autor desconocido, y secreto (como decía Honorata, su hija mayor), Donato Vanegas se había dedicado a las letras con la tenacidad del donjuán que persigue a una coqueta descarriada. Aunque todavía no disfrutaba del respeto y la estima de otros creadores, había comenzado a publicar, su nombre en páginas culturales y redes sociales, desde que Honorata había tomado las riendas de sus asuntos, tanto económicos como literarios.</p>
+                        
+                        <p>De mediana estatura, rostro ancho y nariz aquilina, cabellera poblada y canosa,  rostro de abultadas mejillas, torso y piernas fuertes, Donato vigilaba el mundo tras lentes ovales con montura dorada que le conferían un aire ambiguo, a lo clérigo sin templo, o cultor de tecnología avanzada. A ello contribuían sus labios de remolacha, la voz recitativa. Debido a tal voz, insistían los rumores, su primera esposa le había abandonado al año del matrimonio fugándose con un arquitecto, de esos que comen pan con salchichón con sus obreros, tocan guitarra, construyen edificios de noventa pisos, no temen saltar en las alturas entre tablones, grúas y andamios.</p>
+                            
+                        <p>La noche de su encuentro con el vendedor de libros, Donato Vanegas cambiaba impresiones con profesores de lingüística procedentes de Iowa City, a sus anchas, ante la admiración de las esposas rubias y el embeleso de una joven discípula, con roce de rodillas y manos de tanto en tanto. El whisky era excelente, la comida típica pasable, sonaba música impregnada de intensa melancolía.</p>    
+                            
+                        <p>—¡Buenas noches! ¡Saludos a la concurrencia! —interrumpió un graznido carrasposo—: ¡Baco escancia el licor y Tobías Rangel surte la palabra escrita!</p>    
+                            
+                        <p>Ante la mesa jadeaba un hombre flaco y anguloso, de frente amplísima, mechones lacios, nariz afilada, ojos amarillos entre pocitos de zinc y ojeras violáceas. Vestía un traje negro de solapas anticuadas, camisa blanca de seda y corbatín rojo. Brillaban sus zapatos de charol... ¡y zaaaaazzz!... Sus manos forradas por guantes negros depositaron, entre vasos y platos, un libro de tapas duras, naranjaOses.</p> 
+                            
+                        <p>—Me permito recomendar su lectura, es una obra maestra. </p>
+                            
+                        <p>—No, gracias, no es hora de comprar  libros —Vanegas intentaría ser tajante sin resultar ofensivo, mientras rozaba la mano de su discípula, su ¡No! resultaba demasiado tibio.</p>
+                            
+                        <p>—Siempre hay tiempo para el trigo y el pensamiento —amonestaría el intruso— Estoy brindándole lectura privilegiada, el libro más importante que se ha escrito en Latinoamérica en los últimos tiempos, de la estirpe del El huracán, El bogotazo, La vorágine y Las venas abiertas de América Latina...</p>
+                            
+                        <p>—No ser ni estar interesados —dijo uno de los profesores.</p>
+                   
+                        <p>El vendedor los envolvió en una mirada altiva y aliento lavado en astringente: —también el prólogo es una joya del género.</p>
+                       
+                       <p>Como el nombre en la portada Tobías Orígenes Rangel Cardona, no figuraba en su listado de autores favoritos, ni entre los rechazados, Donato Vanegas se metió en la trampa:</p>
+                       
+                       <p>—¿El prólogo? ¿De quién es? —¿Lo ignora? ¡Cuánto desdén, cuanta petulancia! ¡Lo ha elogiado la nueva autoridad en la crítica literaria del país, el profesor Donato Vanegas —acusaría el  vendedor.</p>
+                       
+                       <p>Los comentarios y aplausos retumbaron por encima de la música y el sonido de su nombre. Donato Vanegas no tuvo otra alternativa que comprar seis ejemplares para obsequiar a sus acompañantes y reservar uno para sí. Resultaba inoportuno negar, discutir, espantar al falsario y embaucador. El sortilegio nocturno había fenecido. Los profesores y sus esposas se tornaron reverentes. Respetuosa, la discípula había retirado su embeleso y sus rodillas para siempre.</p>
+                       
+                       <p>Amanecía cuando abrió la puerta de su casa —el libro consigo— y estuvo a punto de ser lanzado a las tinieblas exteriores. Magdalena, Malena, su esposa, se comportaba como una extraña: ¡Estaba agotada! ¡Furibunda! Harta de aguantar esa literatura que en su vida era La sucursal y la otra. Aburrida de su tanto salir y charlar y trasnochar, apadrinar alumnas de  chicles forrados a los muslos, botas y minifaldas. Quería a Donato en casa y cama, a horas sensatas, ayudándole con las tareas y la lidia de las hijas.</p>
+                       
+                       <p>— Eso ni lo sueñes.</p>
+                       
+                       <p>Malena no era una desalmada como su primera esposa, ni amazona feminista como la segunda. Aún iracunda, deformada por la cólera y con los ojos y labios hinchados de llorar, resultaba tierna.</p>
+                       
+                       <p>—Tienes que escoger.</p>
+                       
+                       <p>— Me niego a renunciar. ¡La literatura es trabajo y nutrición, la noche mi refugio!  Estás  invitada siempre a venir conmigo, eres mi mejor compañía. Las chicas están crecidas, no necesitan niñera. Si quieres podemos invitar a los amigos, yo necesito música y conversación en lugar de sueño. </p>
+                       
+                       <p>— Mejor cuéntame una película de vampiros. ¡Eres un padre de familia! Debes elegir, la vagabundería o tu hogar. Sabes muy bien que me gusta quedarme en casa.</p>
+                       
+                       <p>Donato escucharía los lejanos acordes de una guitarra. Apretaba contra su pecho el libro de Tobías Rangel como quien ha encontrado la piedra del destino. ¿De qué hablaba ella? Renunciar a la noche y a la literatura era como vagar el resto de su vida bajo un aguacero, en una ciudad bombardeada y sin aleros. ¿Magdalena, quién se creía? </p>
+                       
+                       <p>—¡Fuera de mi casa! —envalentonada le arrebató el libro, mascó y escupió la portada antes de lanzarlo al jardín por una venta abierta.</p>
+                       
+                       <p>—¿No dices nada? ¿No te inmutas? Tu literatura es una pérdida de tiempo, una engañifa para marear a los tontos. ¡Sirve para el basurero!</p>
+                       
+                       <p>—Es preferible que te calles, mujer.  Nos conocimos por causa de esa literatura —Donato reprimía bostezos triunfales. Malena lloraba.</p>
+                       
+                       <p>—No me recuerdes cómo nos conocimos. ¿Qué es eso de mujer? Tengo nombre propio —Malena corrió como enajenada hacia el estudio y se posesionó del escritorio en donde se apilaban mil seiscientas cuartillas de una historia de la literatura hispanoamericana, ya corregidas.</p>
+                       
+                       <p>—Nooo,  Nooooooo —suplicaría Donato, con voz de baladista resfriado.</p>
+                       
+                       <p>Ella comenzaría a rasgar  las páginas de un escrito en donde Donato Vanegas invirtiera cinco años de trabajo. Había tal cólera asesina en su rostro alunado que no intentaría atajarla. Un rumor de lluvia y el frío de una ventisca procedentes de las montañas entraban por los ventanales.</p>
+                       
+                       <p>—Mamá por favor mamá —Eyre, la hija menor, todavía medio dormida intentaba detener el desastre—: Tranquila vieja, tranquila.</p>
+                       
+                       <p>—¡Ve a decirle vieja a tu abuela!—Malena se desgonzó mientras Eyre le limpiaba las lágrimas con el ruedo de su camiseta.</p>
+                       
+                       <p>—Tranquila mami, tranquila, no le hagas caso al viejo, ya sabes que está un poco tocado por tanto leer y escribir.</p>
+                       
+                       <p>Era domingo y la otra hija, Morgana, rezongaba en la cocina:</p>
+                       
+                       
+                       <p>—¡Acaben con el alboroto! ¡Me despertaron! Se portan como gente de telenovela. ¿Qué quieren para desayunar? Mejor me toman la palabra, estoy en plan de batir chocolate y huevos pericos, calentar pan de bono y envueltos de mazorca.</p>
+                       
+                       <p>Terminado el desayuno, Eyre y Morgana salieron a estampida en sus bicicletas. Los domingos Bogotá se vuelca en la ciclovía, en una especie de caldero repleto en donde hierven, como si todos apostaran a invadir las calles desde temprano, vendedores ambulantes, globos, aromas, gritos, ventas, pestilencia, noctámbulos, deportistas y saltimbanquis, músicos de toda laya, padres y niños, cuchilleros y ladrones. Unos suben al Santuario de Monserrate, otros van a misa, la mayoría salen a vender, gritar, alborotar, pedalear, empujar; Enmugrar el asfalto con agua sucia y el aire con el humo de asados y fritangas, las aceras con revistas y libros manoseados.</p>
+                       
+                       <p>—Perdóname.</p>
+                       
+                       <p>—Tú a mí.</p>
+                       
+                       <p>¡Donato y Malena solos por fin! …en el reino de las promesas y los juramentos, el ardor y el amor en comunión, sus cuerpos vigorizados en la ducha. Esa mañana de domingo podían hacer el amor en la sala, en la cocina, en el estudio. La promesa del éxtasis y de la perfección y el paraíso quebrada primero en la grabadora telefónica por la voz de una vecina y colega, que hablaba de un libro, los Testigos de Jehová con sonoros nudillos en la puerta: ¡aleluya! ¡Aleluya!, los niños del conjunto que apostaban al poema Suenan timbres y un matrimonio amigo que, de sorpresa, quería invitarlos a almorzar a un restaurante de moda en la carretera a Chía.</p>
+                       
+                       <p>Al mes siguiente y en otro domingo, la vecina y colega trajo consigo el libro de Tobías Rangel, que había rescatado de las fauces de su perro.</p>
+                       
+                       <p>—Me he permitido leerlo y hacerlo empastar —monedas rosadas animaban su rostro y mejillas de adicta a las novelas de suspenso.</p>
+                       
+                       <p>—Muy agradecido —musitaría Vanegas. </p>
+                       
+                       <p>—¡Estupendo! Lo felicito. Su prólogo es genial, tan emocionante como el libro en sí, quizá superior… y no lo tome a mal. Por supuesto que Tobías Rangel merece un sitio preferencial en las letras hispanoamericanas. Usted tiene razón, maestro.</p>
+                       
+                       <p>—Es que yo no…</p>
+                       
+                       <p>—…Usted es un espíritu selecto, que desconoce la envidia. Solamente alguien de su talla le dedicaría tanta atención a un autor desconocido. </p>
+                       
+                       <p>El lunes, rumbo a la nueva Biblioteca del Sur, en donde dirigía un taller de escrituras creativas, Donato Vanegas arrojó el libro de Tobías Rangel a una caneca antes de entrar a la estación de los autobuses Transmilenio. Con renovado fervor, se entregaría a sus tertulias nocturnas. Era una lástima que Malena no quisiera acompañarle, no se arriesgara. El libro de Tobías Rangel borrado de su horizonte, como si no tuviese lomo, portada, separador de seda, prólogo embustero.</p>
+                       
+                       <p>Quince días más tarde le visitaría el poeta Gaspar Trujillo, hasta entonces esquivo.  Tenía prisa y no quiso ni aceptar un café.</p>
+                       
+                       <p>—Vine a traerte un libro que de seguro te robaron, con la dedicatoria y agradecimientos del autor. Lo compré en la calle de ganga. No conocía tu prólogo sobre la obra de Tobías Rangel, mi gran amigo… ¡felicitaciones! </p>
+                       
+                       <p>Con un resonar de batería estallándole en los tímpanos, Donato Vanegas recibió un volumen con tapas manoseadas y leyó, aterrorizado, la dedicatoria trazada con tinta negra de pluma Parker: “A Donato Vanegas con afecto de hermano por su fe incondicional en mi talento” Pero, tampoco en ese momento encontró el instante oportuno y la verdad, Gaspar Trujillo, que se marchó con paso de recluta, no le daría tiempo.</p>
+                       
+                       <p>Gaspar era un poeta con fama de todopoderoso, amante de prolongados silencios o larguísimas disertaciones. Solía tenderse días y días en un sofá, con un rimero de lápices a mano, una tableta, dos grabadoras. Ni temblor, ni noticias de asalto guerrillero, tsunami, estallido de bomba o huelga nacional... ¡nada ni nadie conseguía moverlo! Su médico afirmaba que tenía el cráneo hendido bajo el cabello rizado, y que arriba de su nuca se podía verter un tintero de aguardiente. Dios guardase a los otros cuando se lanzaba al movimiento, inventaba e inauguraba negocios, apabullaba a los habladores y emotivos, contaba anécdotas, fundaba casas de poesía, publicaba libros, visitaba amigos. </p>
+                       
+                       <p>La visita y los elogios inesperados de Gaspar Trujillo abrumaron a Donato Vanegas y le sonaron a campanazos. Iracundo consigo mismo y sin consultar a Honorata, su hija y mejor amiga, tomaría la decisión de destruir un libro que un iluso le había atado al cuello como piedra de molino. No era hombre rico, apenas acomodado. Recibía un sueldo aceptable como profesor, honorarios por sus artículos, unos dólares por sus talleres y conferencias en colegios y universidades y por Internet. Sin embargo, por intermedio de un librero amigo, confiable, se propuso adquirir todos los ejemplares del libro de Tobías Orígenes Rangel Cardona, si es que se llamaba así. Era una edición de apenas quinientos ejemplares. Él mismo comenzó a rastrearlo en mercados de pulgas y en la calle de las librerías en el centro. A Gaspar Trujillo, que dirigía una editorial independiente, le encargaría negociar los derechos de autor. Tenía la firme intención de hundir el mamotreto en el cieno del anonimato de donde procedía.</p>
+                       
+                       <p>Las drásticas medidas surtieron efecto. A mediados del año el libro de Tobías Rangel había desaparecido. Donato Vanegas, cuyo prestigio como autoridad literaria surgía con la grandeza de un oráculo, comenzaba a olvidar esa noche impía en donde toda su carrera se vería amenazada por causa de un vendedor inoportuno, una publicación abominable y un prólogo falso. Era hora, el presente y el futuro le sonreían. En definitiva, Malena no le acompañaría en sus jornadas nocturnas, había comenzado a trabajar medio tiempo con su hija Honorata, quien se dedicaba a la representación de autores, apuntalada por un negocio que incluía fotocopiado, digitación, corrección de tesis, discursos y novelas; diseño de páginas web. A Honorata le debía la publicación casi simultánea de cuatro libros y docenas de artículos, así como su propio taller en la web.</p>
+                       
+                       <p>Entre tanto ajetreo, Donato había olvidado su cumpleaños número cincuenta y tres. Cinco y tres suman ocho, en numerología la cifra del dinero. Si bien no disfrutaba en pleno de los halagos de la fama, acumulaba en su haber tres matrimonios, el lujo de haber procreado unas hijas inteligentes y bonitas. En Honorata, sus desvaídos rasgos formaban líneas precisas, armónicas: la estatura, ojos, piel, el cuerpo de Antonieta, su primera mujer, transformados en maravillosos adornos. Las chicas menores, Eyre y Morgana no se le quedaban atrás. </p>
+                       
+                       
+                        <p>Independiente y cáustica a los veinticuatro años, incapaz de juzgar a su padre o cuestionarle, Honorata era la joya de la corona. Sería la primera persona en felicitarle, tenía llave de la casa. Donato, aún bajo las sabanas, esperaba a que Malena le llevase el café tinto a la cama.</p>
+                       
+                       <p>—¡Felicidades, papá! ¡Buena suerte! —Honorata movía cortinas, abría ventanales, recibía contenta el aire sabanero—. ¡Que cumplas un millón! Mamá viene en la tarde a saludar… yo encargué el desayuno al Hotel Augusta, lo traen en media hora, así que ¡a levantarse! … —y sentándose en la cama le extendió un paquete satinado.</p>
+                       
+                       <p>—Encuadernado en autentica piel de antílope —dijo.</p>
+                       
+                       <p>Rasgado el papel, un sudor helado estremecería a Donato. Aguantaría un grito. Entre sus manos un libro empastado en cuero rojo e impreso en letras plateadas, su nombre  y el nombre de Tobías Rangel asociados en la ignominia. ¿Cómo rechazar un obsequio de Honorata?  Honorata-Honorata la bella. Tan inteligente y comprensiva, sin prejuicios, capaz de darle una oportunidad a Malena. Le daría un beso, un apretado abrazo, sin abrir la boca y con los ojos llenos de lágrimas, desazón y a la vez agradecimiento.</p>
+                       
+                       <p>Donato había conocido a Malena, una chica de buena familia bogotana, que hablaba de manera aceptable el inglés y mejor el francés, en un correccional, a donde había ido a dictar un taller de comprensión de lectura. Malena había sido elegida por la directora del plantel para ayudarle, guiarlo, servirle de secretaria. Ella misma le contaría, estaba allí para recibir una lección, había sustraído una tetera de plata a una amiga de la familia. Cuando la acusaron, en lugar de aceptar el robo había aplastado el objeto a martillazos. Era una víctima, ¡no era su culpa si el brillo de ciertos objetos la volvía loca! Enternecido y fascinado, Donato la había visitado con regularidad durante seis meses. Se casaron al año de conocerse, y durante la crianza de Eyre y Morgana no tuvieron problemas, el matrimonio marcharía sobre ruedas. Luego, Malena había comenzado a robar en casas ajenas, a veces una tacita de porcelana, un cucharón dorado, que Donato tenía que devolver sin que, en apariencia, los amigos se dieran cuenta. De cierto modo, era prisionera en su propia casa, Donato cargaba con fama de ogro celoso que no llevaba a la esposa a ninguna parte.</p>
+                       
+                       <p>—Tienes un gusto extraño, papá, le había dicho una vez Honorata, y quizá tenía razón.</p>
+                       
+                       <p>A la madre de Honorata no le interesaban demasiado las personas, y por equivocación (al leer su poema dedicado a los felinos) creyó a Donato fanático de los animales y se obsesionó hasta conquistarlo. Pero, con el tiempo, descubrió que a él le fastidiaban sus exclamaciones de ¡Miau—Miau!  y ¡Marramamiau!…Grrr brrrr y pío pío,  en los momentos culminantes del amor, así que lo abandonó sin remordimientos y terminó casada con un veterinario.</p>
+                       
+                       <p>La familia no había terminado el desayuno cuando sonó el timbre de la puerta. Era Gaspar Trujillo  que traía  dos garrafones de ron y diez botellas de aguardiente. Para contribuir a la fiesta, dijo:</p>
+                       
+                       <p>—Viejo, Donato, tengo una sorpresa.</p>
+                       
+                       <p>De la mochila  que siempre llevaba colgada al hombro surgió una edición de lujo del libro de Tobías Rangel, con breve introducción de un catedrático norteamericano que  alababa el prólogo: </p>
+                       
+                       <p>—¡Congratulaciones! ¡Feliz cumpleaños!</p>
+                       
+                       <p>Trujillo le abrazaría haciéndole traquear el corpachón, los éxitos de los demás eran también sus éxitos.</p>
+                       
+                       <p>Por si acaso, desde el teléfono del vestíbulo, Honorata se comunicó con un restaurante especializado en típicos, encargaría tamalitos, yuca frita, morcillas, guacamole,  costillas. Con Malena no se podía contar, tenía un compromiso ineludible contraído de tiempo atrás, una de sus amigas del correccional había terminado en la cárcel del Buen Pastor, y cada tres meses le llevaba arroz con pollo, ajiaco, frijoles ¡pobrecita! Había encontrado al marido con su mejor amiga y en su propia cama, los había matado a balazos y enterrado bajo las baldosas de un baño de emergencia. Condenada a cuarenta años, nada se podía hacer por ella excepto llevarle un almuerzo decente de vez en cuando.</p>
+                       
+                       <p>—Mejor que saliera ese día de casa, así no tenía tentaciones —se decía Vanegas.</p>
+                       
+                       <p>Ni Morgana, ni Honorata, ni Eyre daban abasto, al caer la tarde la casa se mecía repleta. Donato tuvo que comprar unas cajas de vinos para las señoras, dos de cervezas,  seis de Colombiana y Coca-Cola; de afán, vasos desechables, porque Malena había cerrado con llave la vitrina de la cristalería. Era el primer reconocimiento masivo que Donato Vanegas recibía de sus colegas y de gente de la radio y de la televisión, la noticia del cumpleaños regado por Facebook y Twiter. Por supuesto que no faltaron los chistes y comentarios malsanos: se decía que Tobías Rangel no existía, era un invento de redes sociales, en tal movida estaba un grupo conocido como Los Ociólogos, gente asidua al café bar Punto y Coma 3, en donde Gaspar Trujillo tenía intereses. El whisky, el aguardiente comenzaban a dominar, el poeta Hornos, Tigelino, Jota Eladio, Juan Mistral, y otros que pretendían ser herederos del grupo legendario de <span class="italic-text">La Cava</span>, se empeñaban en bromas de rojo calibre.</p>
+                       
+                       <p>—Fraude y más fraude, el libro de Tobías Rangel es un fraude —insistía un tal profesor Almagro, temerario de lengua venenosa, detestado por muchos y a quien ningún autor vivo convencía.</p>
+                       
+                       <p>—Es lo que se dice una estafa al por mayor, un engaño bien diseñado.</p>
+                       
+                       <p>—¿Un gigantesco qué? —inquirió irritado Gaspar Trujillo.</p>
+                       
+                       <p>—Un fraude colosal… —aclararía Juan Mistral, de ojos claros y sonrisa espléndida,  que acaba de entrar a la plana mayor de una poderosa empresa de videos y era afecto a opiniones lapidarias; aunque interrumpido por el timbre insistente de la puerta y el de su celular, se guardaría la frase.</p>
+                       
+                       <p>La música cambiaba de rock a jazz, a vallenatos según los gustos y exigencias. La torta encargada por Honorata a Cascabel era una preciosidad.</p>
+                       
+                       <p>—¡No sean cabrones! —Gaspar Trujillo no le tenía miedo a las trifulcas: Donato Vanegas era su nuevo amigo y no iba a permitir que nadie lo ofendiera.</p>
+                       
+                       <p>Eyre y Morgana decidieron que era hora de cantar ¡Cumpleaños feliz te deseamos a ti...!, llenaron la mesa de platos reposteros y cucharas, cucharitas: casi las siete, la fiesta podría terminar en caos, Honorata encendió las velas, un cinco y un tres, las discusiones y chistes acallados. Donato estaba a punto de soplar y apagar las candelas, el chisporroteo, cuando a los timbrazos se unieron golpes. ¿Quién podía tocar de esa manera? Aquellos golpes le recordaron a su padre —fallecido tiempo atrás— su afecto, determinación, autoridad. Él mismo estuvo a punto de atender el reclamo, mientras amigos, admiradores, colegas y lagartos se apartaban deferentes. No haría falta, Honorata abriría la puerta. De vuelta a la torta, las velas y las felicitaciones, escucharía el vozarrón:</p>
+                       
+                       <p>—¡Donato! ¡Aquí me tienes! Vine a felicitarle.</p>
+                       
+                       <p>A la sala había entrado el hombre del bar, el vendedor inoportuno. Vestido con un elegante traje de paño gris, camisa de seda rosa, corbata naranjaOs turquí y fucsia, capa, hondas ojeras, una  sonrisa inesperada en el rostro de líneas angulosas. Con gestos de mago escapado de fiesta infantil movió sus manos huesudas y de un maletín extrajo un cerro de hojas tamaño folio. Con voz clara y tonante dijo:</p>
+                       
+                       <p>—Es mi regalo de cumpleaños, los originales de mi nuevo libro.</p>
+                       
+                       <p>—Un regalo inmerecido…—musitaría Donato Vanegas. </p>
+                       
+                       <p>—Ningún homenaje resulta excesivo para el crítico y maestro.</p>
+                       
+                       <p>Mientras la superficie de la torta y de la crema ardían, Donato Vanegas y Tobías Rangel se abrazaron, náufragos que han permanecido a la deriva en el océano, azotados por coléricas tormentas, en distintas balsas. Amigos entrañables y hermanos al llegar a puerto, sobrevivientes de sangre espesa, a salvo de piratas, de tormentas y huracanes, tsunamis, escorbuto y otros peligros, finalmente a salvo y en casa.</p>
+                       
+                       <p>—¡Todo en orden! —dijo Honorata, mientras de refilón detectaba la presencia de su exmarido, quien no quería firmar los papeles de divorcio, otro que había llegado a última hora y con una botella de whisky.</p>
+                       
+                       
+                            <hr class="line-separator line-orange" />
+                   </div> 
+                </div>
+                
+                
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Fábula VII</h2>
+                   <h1 class="cafe chapter-title">El dueño de la ciudad</h1>
+                   
+                   <div class="content-text">
+                       
+
+                        <p class="first-paragraph">La esposa, doña Soraya, había dicho por teléfono que Avelino Cadena había iniciado su día  con quince minutos de ejercicios y una ducha helada, entusiasmo desbordante, café negro bien cargado, chocolate y pan integral. Solía estar en la calle a las cinco de la madrugada, dedicado al combate:</p>
+                        
+                        <p>—¡Vamos a cambiar el mundo!.</p>
+                            
+                        <p>Sin embargo, en concesión amorosa, ese sábado en la mañana, después de besar a los hijos uno a uno, examinar y responder el correo electrónico, la había acompañado al supermercado. Al regreso, sentado de espaldas a una ventana, Avelino había comenzado a llorar y a llorar, con la mirada fija en una acuarela rutilante de un pintor cartagenero, Rodolfo Castillo, un mar soleado de color azafrán al atardecer y surcado de veleros blancos y azules. Ni ella ni los niños pudieron contener sus lágrimas ni recibir sus explicaciones. </p>    
+                            
+                        <p>El médico domiciliario, llamado de urgencia, dijo que en los últimos meses tuvo que atender casos similares, y que para tales eventos solo existían unas medicinas infalibles –Avelino no tenía dolencias concretas: —descanso, silencio, soledad, mantener al paciente alejado del ruido y la contaminación, del gentío y el tráfico de las calles bogotanas. Le había suministrado un somnífero, logrando que durmiera unas horas. Pero, al despertar con el llanto renovado, Avelino no encontraría palabras ni para responder ni para explicar. Se quedaría inmóvil en un sofá, los ojos aguados y los párpados como virutas. Ni el reclamo del teléfono celular, ni el sonido de la televisión, nada lo rescataba del limbo. </p>    
+                            
+                        <p>—¡Socorrroooo! No soy capaz de enfrentar a solas esta situación, ustedes tienen que ayudarme—. Doña Soraya se comunicó con los hermanos y amigos de Avelino, en busca de consuelo y soluciones que nadie encontraba la manera de brindarle.</p> 
+                            
+                        <p>El asunto, un tanto delirante y complicado, era culpa del mismo Avelino Cadena,  venía de atrás y más  atrás, cuando había decidido dedicarse a la política… ¡a lo grande..!, hecho al que nadie le daba importancia. Un detalle de cortesía era aceptar y fingir que se apoya a un iluso que desea lanzarse a la presidencia de la república, estampar la firma y el número de cédula en un papel, otra tomar el asunto en serio. Como la pretensión de Avelino no pertenecía a la esfera de la poesía, sino a la vida real, era preferible mirar hacia otros lados. Sí, el hecho se discutiría y tornaría a discutir por los socios del bar cafetería Punto y Coma 3, entre intelectuales de vanguardia y editores independientes. Alejados de la política activa, tampoco pertenecían a entidades bancarias o fundaciones: eran poetas nada más, unos premiados y otros laureados, y como tales decidieron (de forma unánime) que no apoyarían ni invertirían un solo peso en la locura de Avelino. Con las firmas era suficiente.</p>
+                            
+                        <p>Sin embargo, los miembros del grupo no tardarían en sentirse burlados, utilizados;  involucrados en una aventura extravagante, que terminaría en una tragedia que los dejaría ilesos, aunque por siempre contaminados.</p>
+                            
+                        <p>Al ser rechazadas sus peticiones de dinero, sin consultar con nadie, Avelino Cadena, (a quienes unos le decían Ave y otros Lino), no socio de número sino asociado al prestigio de las casas de poesía Punto y Coma, resolvió tomar un camino sesgado y presentarse como un padre de familia ejemplar que había estudiado las carencias del pueblo raso. Tanto que había gastado cinco pares de zapatos mientras recogía las firmas que avalaban su  aspiración al primer cargo de la República de Colombia.</p>
+                            
+                        <p>¿Quién iba a siquiera a imaginarlo? </p>
+                   
+                        <p>De un día para otro Avelino Cadena… ¡auténtica locura!, había recibido el respaldo de su poderoso amigo Gaspar Trujillo, quien a última hora había sido incapaz de negarle su ayuda, y había contratado a una docena de muchachos para aquello de obtener las firmas exigidas por la Registraduría Nacional del Estado Civil, para respaldar la aspiración presidencial. Además le facilitaría una suma mensual para gastos personales y, en arriendo  simbólico, varias casas para sedes de campaña, en Bogotá, Cali, Barranquilla, Cúcuta y Medellín, entregadas con sellos notariales. Una deuda que Avelino tardaría décadas en pagar, si es que pagaba, así no existieran obligaciones financieras de por medio. Eso sí, claridad en todos los documentos. Gaspar Trujillo era un hombre que se cuidaba del olvido y trabajaba el presente.</p>
+                       
+                       <p class="resaltado">Eso sí, claridad en todos los documentos. Gaspar Trujillo era un hombre que se cuidaba del olvido y trabajaba el presente.</p>
+                       
+                       <p>Confrontado por su señora madre y hermanos que estaban al frente de los negocios familiares, Gaspar dijo que el dinero aportado a la campaña le pertenecía y no tenía que dar cuentas a nadie. A diario Avelino Cadena atraía a más y más seguidores. Lo que opinara su familia o los poetas, desconocidos o laureados, le importaba un culo. Si la posible candidatura se concretaba, el futuro de la literatura, de la poesía y de las clases populares  podría tomar otro cariz. ¿Por qué no? El mismo Gaspar estaría llamado a ser una eminencia gris detrás del gobierno, casos se han visto, en su radio de amistades existían personas de gran inteligencia y sensatez. Colombia tenía oportunidad de cambiar, cortar de raíz una guerra que lo envenenaba todo desde décadas atrás. La alianza era entre caballeros y de índole personal. Aunque Gaspar tenía sesos y olfato para las finanzas, su actitud resultaba incomprensible. Cierto que sus empresas particulares no alcanzaban a multinacionales y, sin embargo, su patrimonio se incrementaba gracias a franquicias y fundaciones. Sabía siempre a quien respaldar y por qué, a la larga nunca erraba. Aquellos que trabajaban con él o estaban asociados a sus empresas obtenían excelentes beneficios. De modo que los críticos, terminaron por mirar hacia otros lados y esperar tranquilos y proféticos la gestación y el diluvio mismo, la catástrofe ineludible.</p>
+                       
+                       <p>Avelino Cadena que tenía el concurso del poeta Tobías Rangel —quien le escribía los discursos— y de otros ociosos, desde un comienzo había comenzado a formar su gabinete y a trabajar quince horas diarias. De paso, le dijo a todo aquel que quería escuchar o simulaba hacerlo, que había iniciado su campaña desde años atrás en las calles, en los barrios, en los extramuros, en las lomas y vericuetos. Llovizna, aguacero, vendaval o tiempo soleado. No se andaba con rodeos, quería la presidencia e iba por ella, de la mano con los despojados, los excluidos, los ignorados, los poetas menores. Para lograrlo, repartía comunicados por celular, Twiter, Facebook, e iba de calle en calle y de plaza en plaza, de mercado en mercado, desde las cuatro de la mañana a las nueve  de la noche. Hacia las diez se reunía en un lugar escogido con seguidores y convocados, a veces en una calle cerrada o en una cancha de fútbol, en las casas de Punto y Coma. ¿Quién iba a creerlo?, se formaban tumultos cuando entraba o salía, unos iban a burlarse, los demás a reforzar aspiraciones, sin contar con los vagos que se contentaban con mirar, aplaudir, empujar, chiflar, a menudo robar. De pronto calaban sus quejas. Quizá existía esperanza en donde antes no existía nada de nada. De repente existía la posibilidad de ser y mejorar en la vida, no formar parte de multitudes sin trabajo y sin esperanzas.</p>
+                       
+                       <p>Como todos sus amigos dijeron que las pretensiones de Avelino Cadena eran  exageradas, unos por sólidas razones y otros por estar encaramados en prejuicios, los espontáneos se tomaron las primeras filas, decididos a luchar, ayudar, aconsejar, dignificar; el ¿qué tal que sea el próximo presidente?, iba de boca en boca. Desde los barrios del sur, del occidente, de los cerros y del mismo norte, comenzaron a respaldarlo brigadas juveniles que hacían teatro, cine alternativo y rock en el Parque Nacional y en el Parque Simón Bolívar, eso primero, y luego miembros de juntas comunales, fundaciones, casas de cultura.</p>
+                       
+                       <p>Avelino Cadena no  hacía promesas de bienestar ilimitado o de riqueza, sino que se refería a todo aquello que al pueblo le había sido arrebatado, así que los simpatizantes y seguidores aumentaban. Les ofrecía el regreso a esos trabajos pequeños que a sus padres les permitieron vivir, y que ahora detentaban las multinacionales. De nuevo el uso de las manos para los artesanos de juguetes de madera y marquetería; a la gente que ordeñaba y vendía su propia leche y fabricaba suero y kumis; a los que amasaban y vendían pan y empanadas de barrio en barrio, y también clientela a las modistas reemplazadas por la ropa de confección y que estaban condenadas a deslomarse para cumplir con fabricantes que no pagan por unidad sino por contrato. Ofrecía esperanza a todos aquellos que ya no podían sostener a sus familias e ignoraban que sus padres afilaron cuchillos y repararon sombrillas, fabricaron muebles, tuvieron terrenos y casas propias, los que cerraban sus camisas o blusas ¡espantaban el frío! antes de que el botón de los cuellos fuera suprimido. Daba confianza a los que ya no podían fabricar ladrillos ni  tejas, ni  siquiera lavar platos, porque todo es fugaz y desechable y a cualquiera lo puede reemplazar una máquina promocionada y vendida por la televisión.</p>
+                       
+                       <p>El que las pretensiones de Avelino Cadena fueran consideradas ridículas por los columnistas de prensa, los comentaristas de radio y los autores de afamados blogs, no importaba a los seguidores. Continuaban multiplicándose, en tímidos grupos primero, después en gavillas y bandadas y turbamultas, de modo que en las calles en donde funcionaban las sedes de campaña el tránsito peatonal y vehicular comenzó a tornarse imposible: las directivas de los ministerios de obras públicas y movilidad comenzaron a detectar inmensos problemas: a toda hora ciertas calles de Bogotá, Popayán, Cali y Barranquilla convertidas en un inmenso imperio del griterío, los vendedores y los músicos ambulantes desmandados. Quienes respondían la convocatoria multiplicaban lo multiplicado.</p>
+                       
+                       <p>El hombre citaba a todos aquellos que no tenían y no sabían utilizar un computador y menos podían comprarlo —A los que nunca dispararon un arma—  A los que añoraban mesa y comida caliente—  A los que querían caminar del trabajo a la casa y de la casa al trabajo—  A los que insistían en leer— A los que no pueden instalar un televisor en cada alcoba y también a los que no tienen alcobas y duermen en las calles —A los que no pueden celebrar los quince años de las hijas ni  invitar a bautizos— A los que no tienen cuentas bancarias ni tarjetas de crédito— A los que no pertenecen a iglesias, clubes, asociaciones— A los que no pueden comprar ni automóvil ni motocicleta ni bicicleta  y viajan en bus— A los que todavía no tienen agua ni luz eléctrica— A los que esperan dos meses por una cita médica y se mueren de cáncer y de sida—  A los indignados, a los ofendidos, a los humillados, a los traicionados— A los que se les ha despojado hasta del vello en los brazos y el pecho, del olor masculino, de la chaqueta y la corbata, el aspecto adusto que suponía el ser hombres. Una lista interminable que generaba mensajes por Facebook, chats y Twiter, así como caricaturas, grafitis, chistes obscenos.</p>
+                       
+                       <p class="resaltado">Una lista interminable que generaba mensajes por Facebook, chats y Twiter, así como caricaturas, grafitis, chistes obscenos.</p>
+                       
+                       <p>Los líderes de todos los partidos, nuevos y  tradicionales, lo mismo que las organizaciones religiosas y ambientales comenzaron a tener en cuenta al futuro candidato, a pedir citas y entrevistas, a prometer y prometer. Mientras las grandes cadenas de televisión y radio  —en sus juntas semanales—  discutían si era oportuno entrevistarlo o ignorarlo. Lo que a él, Avelino, le daba lo mismo, su nombre y su figuraba copaba las redes sociales y sus frases millones de teléfonos celulares. </p>
+                       
+                       <p>El número de firmas exigidas por la Registraduría triplicaba las expectativas. Se acercaba el día anhelado por las legiones de seguidores y simpatizantes de Avelino Cadena. Pero, entonces, el hombre se había obsequiado un sábado en familia y acompañado a  su esposa al supermercado. Se lo debía hacía meses. Eligieron uno de los almacenes Éxito, o tal vez Carulla, (y eso que doña Soraya solía mercar en tiendas D1, por ser más barato) en donde cada módulo desborda de productos nacionales e importados— ¡una medio fiesta!  Eligieron granos, frutas, verduras, y de último se asomaron las secciones de carnes y pescados. Fue allí, ante un inmenso trozo de res del tamaño de un niño crecido, húmedo, rojo y brillante que ocupaba todo un mesón, que alguien le había gritado: —¡Felicitaciones!   —¡Usted es el próximo presidente…! Exclamaciones que sorprendieron tanto al candidato que había terminado de culo en el piso en medio de horrendas convulsiones.</p>
+                       
+                       <p>—¡No te mueras! ¡No me dejes!—le suplicaba la esposa.</p>
+                       
+                       <p>Al despertar en su casa y cama, Avelino  Cadena había comenzado a llorar y a llorar, a desvariar. Era obvio que no le era imposible responder por sí mismo ni por los demás. Los ideales y las futuras acciones en bien del pueblo borradas de su mente. Doña Soraya no sabía qué hacer, ni a quién acudir. De manera que Gaspar Trujillo, que se había metido en el asunto de las firmas, ¡y de cabeza!, tuvo entre las manos una serie de espinosos y álgidos problemas, por no decir montañas de ellos. </p>
+                       
+                       <p>De todas maneras, los socios de las casas de cultura y bares cafeterías de las franquicias poéticas de Punto y Coma —aunque distanciados de Avelino y de su egolatría, se mantenían al tanto de la campaña—. Con excepción de Trujillo y de unos cuantos lambones, esperaban el desastre como todos aquellos idealistas que en un día lejano (eran jovencitos entonces) fundaron un bar cafetería conocido como <span class="italic-text">La Cava</span>, y  que en sus inicios solo agrupaba rebeldes. ¿Qué soluciones proponían? A ninguno se le ocurría nada, estaban al tanto para reír y divertirse, enviarse mensajes por celular. Exclamar ¡no hay que hacer ni caso! ¡Joder!  ¡Te lo dije!</p>
+                       
+                       <p>Gaspar Trujillo,  que había llevado un diario de los acontecimientos, comenzó a  reunirse con ciertos personajes, a pactar alianzas e insistir en que Avelino Cadena iba a retirar su candidatura a la presidencia y eso implicaba pactos. ¿Qué, si había conseguido las firmas? Desde que recibiera la buena noticia de su buena suerte se había dedicado a llorar y quizá perdido la razón.</p>
+                       
+                       <p>Doña Soraya, quien no creía ni en médicos ni en siquiatras, tuvo que empeñar todas sus joyas, consiguió la ayuda de un santón que después de rapar y vapulear a Avelino, a fuerzas de rezos y exorcismos agotaría sus lágrimas y lo traería de nuevo a la realidad.  Mientras que la mitad de los barrios populares y de invasión, de toda Colombia, se llenaría de mujeres y hombres coléricos y rapados en honor de su ídolo. Luego, le llegaría el turno a Trujillo quien sin consultar con nadie tomaría el toro por los cuernos. Enfrentaría a  Avelino mostrándole minuto a minuto los videos grabados por sus seguidores durante su campaña triunfante, y a la multitud silenciosa que acampaba a las afueras de la casa. Multitud que esperaba superara sus dolencias y traumas, los llevara de la mano a la nueva vida que, suponían, les había prometido.</p>
+                       
+                       <p>—¿De qué vida se trata? —había preguntado Gaspar.</p>
+                       
+                       <p>—De la vida cómoda y armoniosa, la verdadera vida.</p>
+                       
+                       <p>—Pa’ fregarte...</p>
+                       
+                       <p>—No he prometido nada —entre sábanas y almohadas sudorosas, frente al televisor,  Avelino tiritaba mordiéndose los labios, los nudillos, las uñas.</p>
+                       
+                       <p>Avelino Cadena nunca hizo promesas concretas. No había tocado el tema de los impuestos, ni de la vivienda social, ni del trabajo. Gaspar lo sabía y se hizo cargo. Narrar detalle a detalle el proceso de efímera recuperación conseguido por doña Soraya, con su sonrisa constante y lengua viperina, no viene al caso. Basta decir que Gaspar señalaría el camino a seguir, cuando los fanáticos y admiradores, desilusionados, abandonaron la esperanza y regresaron a sus barrios y se dedicaron a conseguir empleos de sueldo mínimo o apoyar al candidato elegido por Gaspar y señalado por Avelino Cadena, antes de sufrir un infarto masivo.</p>
+                       
+                       <p>Es obvio que Gaspar Trujillo realizaría cierto tipo de pactos y alianzas con el supuesto aval del difunto, que llevarían a un joven dinámico e inteligente al codiciado solio presidencial y a Doña Soraya a una embajada europea. ¡Así es la vida! Por fortuna todos los hijos del matrimonio son inteligentes y brillantes, han estudiado o estudian en firme —unos becados y otros a punta de tesón— en prestigiosas universidades, colombianas y extranjeras, al mismo tiempo que doña Soraya ha iniciado una brillante carrera en el mundo diplomático.</p>
+                       
+                       <p>El destino de los olvidados repite el mismo final que los juguetes de factura artesanal que no pueden competir con los Walt Disney, apenas tienen salida en los mercados de pulgas. Nadie se apiada de las chaquetas y jeans rotos de los descontentos: la ropa con huecos y los zapatos desastrados están de moda. La gente que no puede comprar ni automóviles ni motocicletas utiliza y reniega del bus, compra al fiado en las tiendas y toma el kumis envasado que antes preparaban en sus casas, cuando la leche no era sometida a  procesos de larga vida… ¡pobre gente! </p>
+                       
+                       
+                       <p>Gaspar Trujillo declinaría ministerios, altas magistraturas, las embajadas de Washington, Londres y Madrid, ofrecidas por el nuevo gobierno. Diría a sus amigos íntimos que al proteger a la viuda del querido Avelino, honraba en su tumba a un personaje admirado y reverenciado, caballero y padre de familia por excelencia, intelectual eximio y oráculo de las redes sociales, bienamado por su generación.</p>
+
+                       
+                            <hr class="line-separator line-orange" />
+                   </div> 
+                </div>
+                
+                
+                
+                <div class="slides slide">
+                    <h2 class="section-title naranjaOs">Fábula VIII</h2>
+                   <h1 class="cafe chapter-title">Informa el comité</h1>
+                   
+                   <div class="content-text">
+                       
+
+                        <p class="first-paragraph">Nosotros, reunidos en Bogotá, Distrito Capital, y después de previas sesiones dedicadas al trabajo en equipo, vamos a presentar a la Junta Directiva y a los asistentes a nuestra Asamblea Extraordinaria los resultados de una labor destinada a enaltecer el talento de los asociados, destacar sus obras en distintas disciplinas, impulsarles a irrumpir en el panorama nacional e internacional con fuerza, energía, osadas realizaciones. ¡Esperamos que el esfuerzo intelectual sea ejemplo y se convierta en el movimiento cultural más importante de las redes sociales y del mundo entero!</p>
+                        
+                        <p>Cuando tuvimos tan brillante idea, solicitamos a los Ministerios de Educación, Cultura y Medio Ambiente, que nos cedieran una casa señorial, de ser posible en el centro colonial, tal como han sido otorgadas a otras entidades. Ejemplos: la Casa de Poesía Silva y Punto y Coma.</p>
+                            
+                        <p>Tales peticiones con el ánimo de facilitar que en nuestra amada Colombia se destaquen valores excepcionales que aporten, además de inteligencia, y genialidad, realizaciones universales en arte y cultura.</p>    
+                            
+                        <p>Referir los detalles del trabajo concreto, que implicaría cartas fotocopiadas, citas, peticiones, reuniones, cenas y almuerzos, cócteles y centenares de eventos, seria tedioso y nada amable para los aquí reunidos. No vale la pena extendernos, ni en las nimiedades ni en la desmesura. Vamos a los hechos concretos. Transcurrida la temporada de trabajo y papeleo, tuvimos la suerte de obtener en comodato una casona de corte inglés, en Teusaquillo, un hermoso sitio de la ciudad, casona que había sido decomisada a uno de esos personajes nefastos que durante décadas asolaron el país y lo ensombrecieron con historias siniestras de narcotráfico. Le faltaban puertas, artesonados, pero los pisos y los techos y las paredes y las áreas sociales eran rescatables, lo mismo que el yacusi y la piscina techada. De tal manera que, comparado con el tiempo de escritos, documentos y peticiones, en donde nuestros socios gastarían alma y talento, apenas si notamos los dos años y cuatro meses que exigirían los trabajos de remodelación. En la vida hay momentos felices y felices, aunque breves. La cesión está contemplada a treinta años, cuatro meses, siete días, y al finalizar el plazo pasaría a ser de nuestra propiedad. </p>    
+                            
+                        <p>Ante todo, damos gracias a la Presidencia de la República y al Ministerio de Cultura, que al discutir, estudiar, aquilatar el estado de la casa, por medio de un decreto extraordinario, nos ha liberado del pago de multas y sanciones onerosas, gracias a las gestiones de Gaspar Trujillo, el famoso mecenas, y a las amistades que nos han colaborado con los incontables gastos de restauración. Si bien la casona no puede ser vendida durante los treinta años, si se llegaren a encontrar joyas, dinero o documentos, los mismos pertenecerían a nuestra sociedad y estarían destinados a ser base económica de la misma. No es necesario dar aviso a las autoridades de ningún hallazgo, ni al Banco de la Republica, ni al Tesoro Nacional, a no ser que se trate de lingotes de oro. Hay que agradecer tanta generosidad, y amor por las bellas artes, dedicar la inauguración de la sede a todos esos espíritus generosos que desde las cumbres del poder velan por la permanencia del conocimiento y la promoción de la cultura.</p> 
+                            
+                        <p>Reconocemos la generosidad de los amigos y socios que aportaron influencias, tiempo y dinero al proyecto, y han asumido que existen pérdidas con elegancia y altura moral. No obstante, nos sentimos obligados a referirnos a los lamentables sucesos que, otra y otra vez, culminaron con el cierre de un centro destinado a enaltecer la mente y el espíritu, como sucedió años ha con <span class="italic-text">La Cava</span>  en Cartagena y que aquí estuvieron a punto de extinguir las casas de poesía Punto y coma. En nuestro caso particular hubo multiplicación de sombras y leyendas perversas, infiltración de nombres torcidos, codicia, acaso rastros de sangre. </p>
+                            
+                        <p>Alcanzamos a bautizar la casa, a preparar comunicados y gacetillas, a diseñar una página web, a incluir los nombres de los socios en Facebook y hacer avances en Twiter, cuando una noche —mientras Gaspar Trujillo, Renán Linares, y los socios más antiguos instalaban mesas y estanterías en la biblioteca, sillas en los patios destinadas a la lectura— sentimos el rugido de automotores, golpes en las puertas de los garajes, gritos obscenos y voces insultantes. En el salón irrumpieron nueve hombres armados que vestían pantalones, buzos grises de manga larga y chaquetas de colores chillones, como gente que ha salido a correr o a la ciclovía, era domingo en la madrugada.</p>
+                            
+                        <p>—¡Todos de cara a la pared! —comenzó a gritar un grandote con atronadora voz  de mando— ¡Nadie nos mira y al que mueva un ojo le damos plomo al garete! Reculen, sigan, a sus marcas!</p>
+                            
+                        <p>Nosotros éramos once hombres, las mujeres acababan de irse, para fortuna de todos, entre las socias diligentes se encontraban la mujer de Tito Salinas y  Honorata Vanegas, ambas de buen ver y parecer; en llamar la atención y derrochar atractivos nadie les gana. La de Salinas estuvo metida a monja y Honorata a modelo. De haber permanecido en la casa, la historia estaría teñida de sangre, infamia, violaciones. Eso no quiere decir que los sujetos no atacaran la dignidad, el orgullo y la hombría de cada uno de nosotros al apuntarnos con sus ametralladoras, despojarnos del dinero y las tarjetas de crédito, golpearnos y amarrarnos.</p>
+                   
+                        <p>Cada uno de los granujas, que respondían a sobrenombres ominosos: Carate, Colmillo,  Rastrojo, Drácula y Hacha, traía consigo un plano de la casa, picas, palas y barrenos, baldes. Decir que venían preparados es decir poco, despojados de las chaquetas cada uno era como un calco del otro. Sabían en qué lugares cavar y cómo hacerlo, utilizaron pequeños explosivos, antes de picar todo el piso del bar, de las alacenas y zona del lavado de la ropa, de la cocina, convertir la piscina interior en un lodazal, sacar de cuajo los estantes de la biblioteca. Quiso la buena fortuna que encontraran fajos y fajos llenos de  cincuenta verdes, nuevecitos, en cuatro barriles de plástico tapiados en una alacena y al lado de treinta cajas de whisky y ochenta de aguardiente, y que la euforia del hallazgo les impidiera sentarse a evaluar los esfuerzos realizados. Al consumo de licor se aplicarían enseguida, escuchábamos los alaridos de júbilo, la multiplicación de las expresiones vulgares, las amenazas contra otras bandas y las disputas relacionadas con el reparto del dinero. </p>
+                       
+                        <p class="resaltado">Al consumo de licor se aplicarían enseguida, escuchábamos los alaridos de júbilo, la multiplicación de las expresiones vulgares, las amenazas contra otras bandas y las disputas relacionadas con el reparto del dinero.</p>
+                       
+                       <p>Hemos podido terminar allí; uno de ellos a quien llamaban Crápula nos quería sentenciar a muerte.</p>
+                       
+                       <p>—¿Por qué no? —decía—, ¿qué tal si uno de estos huevones recuerda nuestras caras?</p>
+                       
+                       <p>—¡Que va! Están cagados de miedo, nadie tiene ganas de protestar —le respondía la voz que sonaba al jefe, quien ordenaría al amanecer la retirada.</p>
+                       
+                       <p>Del final de la banda nos informaron las autoridades, quienes les siguieron la pista e investigaron durante meses. Con excepción del jefe, descubrieron que los invasores eran muchachos, jovencitos de barrios de invasión, que ni de cerca ni de lejos vieron a los patrones. Escucharon la historia de tesoros enterrados en casonas en La Soledad, Teusaquillo, La Macarena. Es de presumir que por medio de las redes sociales supieron de la fundación y resurrección de <span class="italic-text">La Cava</span>, consiguieron los planos de la casa y el dinero para comprar armas, dos camiones y motocicletas, realizar el asalto que culminaría con la disolución del grupo, una o dos muertes, el encarcelamiento de tres de sus miembros, y la huida al exterior del jefe máximo quien, según la policía vive en un país en donde no existe extradición y se ha transformado en hombre de familia. Su fotografía y la de su esposa adornan revistas del corazón y muchas personas ignorantes deliran por sus invitaciones.</p>
+                       
+                       <p>Lamento haberme desviado tanto del informe, al contar detalles acerca de los intrusos, invasores, secuestradores, engendros del infierno que de todas maneras tenían razones para suponer que en la casa se había enterrado un tesoro. Entiendo que el mismo pálpito tuvo nuestro mecenas, al serle presentado un listado de las propiedades decomisadas a los narcotraficantes y que el gobierno, con buen juicio, ha destinado a mejorar la vida ciudadana y a ser convertidas en jardines infantiles del Bienestar Familiar, comedores gratuitos, canchas de fútbol, albergues y piscinas de uso comunal. Entre noventa y seis propiedades a elegir, y realizado un estudio concienzudo de los dueños y sus costumbres,  Gaspar Trujillo, sin pedir la opinión de nadie, ni siquiera de sus mejores amigos escogería la casona de Teusaquillo que había pertenecido a un personaje extraño a quien le decían El Cerebro o El Profesor, dueño de una selecta biblioteca y numerosas obras de arte. De tales obras con firmas rutilantes, de la fabulosa cristalería y los muebles de marcas afamadas y muchos de ellos comprados en subastas, no había quedado nada, ni tampoco ninguno de los libros costosos o bellamente encuadernados. Solamente restaban las enciclopedias y las copias de cuadros famosos, los libros de autoayuda, centenares de novelas policiacas,  cerros de revistas y folletos destinados a superar el karma, viajar al más allá, rescatar a los carnívoros y hacer de ellos honorables veganos y vegetarianos, dividir el mundo entre amantes de la paz y opositores a la guerra.</p>
+                       
+                       <p>Para nuestra fortuna, Gaspar Trujillo, quien nos honra con su presencia, y que como lector fanático nunca ha desdeñado ninguna información, había seguido a distancia la historia de todas aquellas mansiones y haciendas y edificios adquiridos con dineros mal habidos y que el decomiso había transformado en propiedades del estado.</p>
+                       
+                       <p>Liberados de nuestras ataduras gracias a la fuerza descomunal de Renán Linares, quien conseguiría hacerlo en pocos minutos, en lugar de llamar enseguida a la policía, decidimos imitar a los ladrones y continuar con la búsqueda. Tal como lo anticipara Gaspar, dueño de una brújula y un péndulo espiritual, encontramos el verdadero botín: estaba en la biblioteca y en cajones bajo el piso y estanterías dobles: fajos y fajos de dólares y euros, diamantes y  joyas guardados con cuidado en cajas de madera y plástico, claves de cuentas bancarias con sus cuantiosos saldos en Suiza, Mónaco, Bahamas, Panamá y otros lugares, títulos valores y documentos al portador, gracias al cielo nada de lingotes de oro. Ese sujeto conocido como Cerebro o El Profesor, y que ahora yace en una tumba en Los Jardines de Paz, cuando era adolescente soñaba con tener una gran biblioteca y, decía, hacer de ella una cava de tesoros. </p>
+                       
+                       <p>Da la casualidad que Gaspar Trujillo, uno de los fundadores de <span class="italic-text">La Cava</span>, Punto y  Coma y Cisne 3  y de otros centros del saber, recordaba las frases de El Profesor, de quien se dice que en la cárcel prefirió morir de inanición al ser privado de la lectura; estaba suscrito a nuestro boletín ¿Qué leer? y compraba los libros aconsejados por nosotros y nuestros asesores.</p>
+                       
+                       <p>Sabemos que a un cierto número de socios, ante todo los jóvenes y dinámicos poetas y novelistas que se disputan las editoriales, tanto las de libros impresos como las de pantalla digital, han armado un alboroto y censurado que la presidencia del grupo corresponda año tras año a uno de los miembros fundadores ¡el primero! Y que ninguno de los miembros de la Junta Directiva tome cartas en el asunto y se oponga a lo que tales miembros califican de tiranía y abuso de poder. Pues bien, como vocero de este comité (esperamos que ninguno de ustedes se oponga), señoras y señores, me permito anunciar que la presidencia, los bienes raíces, las avionetas y automóviles que pertenecen a la organización están a disposición de tales socios, así como sus cuentas bancarias. Eso sí, a cambio de votos, documentos legalizados, apoyo incondicional.</p>
+                       
+                       <p>A los enemigos hay que ignorarlos. ¡Que hagan lo que les venga en gana! Nosotros, los aquí presentes, que somos como la Hermandad de la Lanza, los Caballeros del Santo Grial, máximos herederos de los Piedracelistas, desde esta hora e instante iniciamos un camino hacia la redención del arte y del lenguaje. No sabemos todavía si adquirir una isla, una montaña, extensiones de tierra junto al mar o los páramos, condominios con mansiones flotantes o aéreas. No nos importan las puertas que vamos a tocar o derribar, qué autopistas y cielos recorrer, a quiénes debemos retar o combatir. Se trata de enaltecer la luz de la palabra y el libro, del teatro y la verdadera música, gobernar las redes sociales, imponer la poesía a escala global y asumir las consecuencias. ¡Todos con las copas de champaña en alto y a una sola voz!</p>
+                       
+                       <p>—¡Vamos a fundar un reino!</p>
+
+                            <hr class="line-separator line-orange" />
+                   </div> 
+                </div>
+                <div class="slides slide"></div>
+                
+            </div>
+        </div>
+    </div>
+  
+
+<footer>
+   <div class="main-container main-container-flex main-container-home">
+     <p class="brand-palabras">Palabras rodantes</p>
+     <h1 class="brand footer-brand">Comfama</h1>    
+   </div>
+   <div class="copyright"><p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p></div>
+</footer>
+    <script>
+window.createMenu('6');    
+</script>
+</body>
+</html>

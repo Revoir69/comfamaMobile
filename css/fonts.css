@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'CrimsonText-Roman';
+  src: url('../fonts/CrimsonText-Roman.eot');
+  src: url('../fonts/CrimsonText-Roman.woff') format('woff'),
+       url('../fonts/CrimsonText-Roman.ttf') format('truetype'),
+       url('../fonts/CrimsonText-Roman.svg#CrimsonText-Roman') format('svg'),
+       url('../fonts/CrimsonText-Roman.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'crimson_textitalic';
+    src: url('../fonts/crimsontext-italic-webfont.woff2') format('woff2'),
+         url('../fonts/crimsontext-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'crimson_textsemibold';
+    src: url('../fonts/crimsontext-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/crimsontext-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'oswaldlight';
+    src: url('../fonts/oswald-light-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-light-webfont.woff') format('woff'),
+         url('../fonts/Oswald-Light.ttf') format('truetype');
+    
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'oswaldmedium';
+    src: url('../fonts/oswald-medium-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-medium-webfont.woff') format('woff'),
+        url('../fonts/Oswald-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'oswaldregular';
+    src: url('../fonts/oswald-regular-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-regular-webfont.woff') format('woff'),
+        url('../fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

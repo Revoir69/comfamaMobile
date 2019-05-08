@@ -1,0 +1,83 @@
+.home{
+    background:  url(../img/motivo-home.png);
+}
+
+.home-header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.book-container{
+    padding-top: 90px;
+}
+.cuentosP{
+    width: 20%;
+    margin-bottom: 43px;
+    margin-left: 1px;
+    position: relative;
+    
+}
+
+.cuentosP p{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 21px;
+}
+.book-cover{
+    width: 20%;
+    margin-bottom: 43px;
+    margin-left: 1px;
+   
+    position: relative;
+}
+
+.book-cover img:hover {
+    -ms-transform: scale(1.06); /* IE 9 */
+    -webkit-transform: scale(1.06); /* Safari 3-8 */
+    transform: scale(1.06); 
+}
+
+.book-cover img{
+    width: 100%;
+    transition: transform .5s;
+    margin-bottom: -5px;
+     -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.57);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.57);
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.57);
+}
+
+.announcement{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 101%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 40px;
+    text-align: center;
+    z-index: 10000;
+}
+.announcement-bg1{background-color: rgba(95,6,65,0.9)}
+.announcement-bg2{background-color: rgba(95,6,65,0.8)}
+.announcement-bg3{background-color: rgba(95,6,65,0.7)}
+.announcement-bg4{background-color: rgba(95,6,65,0.5)}
+.announcement-bg5{background-color: rgba(0,0,0,0.85)}
+.announcement-bg6{background-color: rgba(0,0,0,0.75)}
+.announcement-bg7{background-color: rgba(0,0,0,0.55)}
+.announcement-bg8{background-color: rgba(255,142,30,0.45)}
+.announcement-bg9{background-color: rgba(255,142,30,0.50)}
+
+/*===================================0
+            RESPONSIVE
+=====================================*/
+
+@media (max-width: 970px){
+    .cuentosP{
+        width: 45%;
+    }
+    
+}

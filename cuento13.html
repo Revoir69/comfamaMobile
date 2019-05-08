@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="es">
+	
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Palabras rodantes</title>
+
+		<!-- estilos -->    
+		<link rel="stylesheet" href="css/reset.css" type="text/css"/>
+		<link rel="stylesheet" href="css/fonts.css" type="text/css"/>
+		<link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+
+
+		<!-- acciones -->
+		<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+		<script src="js/jq-sticky-anything.min.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/base.js" type="text/javascript"></script>     
+		<script type="text/javascript" src="js/queryloader2.min.js"></script>
+		<script type="text/javascript">
+			window.addEventListener("DOMContentLoaded", function() {
+				new QueryLoader2(document.querySelector("html"), {
+					barColor: "#fff",
+					backgroundColor: "#000",
+					percentage: true,
+					barHeight: 0,
+					minimumTime: 1000,
+					maxTime: 50000,
+					fadeOutTime: 1000
+				});
+			});
+		</script>
+		
+	</head>
+	
+	<style>
+		
+		.content-text{
+			margin-top: 5%;
+		}
+		
+		.menu li:hover{
+			background-color: #91caa7;
+			color: #FFF;
+		}
+
+		.first-paragraph::first-letter{
+			font-size: 5em;
+			line-height: 0;
+			font-family: 'oswaldmedium';
+			color: #006e47;
+		}
+
+		.menu-selected{
+			color: #fff;
+			background-color: #006E48;
+		}
+
+		.line{
+			border: 1px solid #7ba27c;
+			margin-top: 6%;
+			margin-bottom: 30px;
+		}    
+
+		.leerMas {
+			font-family: 'oswaldmedium';
+			font-size: 30px;
+			text-align: center;
+			color: #FFF;
+			margin-left: 24%;
+			padding-top: 3%;
+			text-decoration: none;
+			cursor: pointer;
+			width: 305px;
+			height: 80px;
+			background-image: none;
+		}
+		
+		.leerMas1{
+			background: #006e47;
+		}
+		
+		.resaltado{
+		   color: #006E48;
+			font-size: 38px;
+			background-image: url(img/comillas.png);
+			text-align: center;
+			background-repeat: no-repeat;
+			width: 80%;
+			margin-left: 50px;
+			margin-top: 30px;
+			padding-right: 5px;
+			font-family: 'oswaldregular';
+		}
+		
+		.section-title{
+			font-size: 2em;
+		}
+		
+		.subTitle1, .subTitle2{
+			margin: 0;
+			font-family: 'oswaldregular';
+			font-size: 1.5em;
+			text-align: center;
+		}
+		
+		.subTitle1{
+			color: #006E48;
+		}
+		
+		.subTitle2{
+			color: #6EBD91;
+			margin-top: 10%;
+		}
+		
+		.img-fluid{
+			margin: 5% auto;
+            display: block;
+			width: 60%;
+		}
+		.bg_themes1{
+			background-color: #6EBD91;
+			background-image: url(img/motivo_6.png);
+		}
+		.chapter-title{
+			font-size: 2em;
+		}
+		.chapter-title1{
+			font-size: 2em;
+		}
+	</style>
+	
+	<body class="bg_themes1">
+		
+		<header>
+			<a href="index.html"><img class="botonHome" src="img/homeBtn.png" alt="boton home"></a>
+			<h1 class="brand">Comfama</h1>
+			<img class="botonA" src="img/buttonA.png" alt="boton cambio">
+
+			<div class="slideHeader">
+				<img class="biggerFont" src="img/aumentar.png" alt="aumentar">
+				<img class="smallerFont" src="img/disminuir.png" alt="disminuir">
+				<img class="resetFont" src="img/reset.png" alt="resetear">
+				<br>
+				<img class="blanco" src="img/blanco.png" alt="btn blanco">
+				<img class="morado" src="img/morado.png" alt="btn morado">
+				<img class="amarillo" src="img/amarillo.png" alt="btn amarillo">
+			</div>
+		</header>
+		
+		<div class="presentation">
+			<div class="main-container presentation-container">
+				<button id="presentation-close">Cerrar</button>
+				
+				<div class="presentation-scroll">
+					<h1 class="presentation-title">Créditos</h1>
+				   	<p>Consejo editorial:<br><br> David Escobar Arango<br>• Tomás Andrés Elejalde Escobar<br>• Juan Luis Mejía Arango<br>• Héctor Abad Faciolince<br>• Sergio Osvaldo Restrepo Jaramillo<br>• Luis Fernando Macías Zuluaga<br>• María Elena Restrepo Vélez<br>• Luis Ignacio Pérez Uribe<br>• Juan Correa Mejía<br>• Juan David Correa López<br>• Mauricio Mosquera Restrepo<br>• Juan Diego Mejía Mejía</p>
+					<p>Comfama<br>www.comfama.com<br>palabrasrodantes@comfama.com.co<br>Central de llamadas de Comfama 360 70 80<br>Twitter: @comfama</p>
+					<p>Metro de Medellín<br>www.metrodemedellin.gov.co<br>Línea Hola Metro 444 95 98<br>Twitter: @metrodemedellin</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="global-container">
+		
+			<hr class="line-separator line-title"/>
+			<h1 class="verde main-title">Divino amor,<br> <span class="verde oswald-light">amor profano</span> </h1>
+			<hr class="line-separator line-title"/>
+			<div class="main-credits">
+				<p>Sor Juana Inés de la Cruz</p>
+			</div>
+			
+			<div class="main-credits">
+				<p>Selección de Luis Fernando Macías</p>
+			</div>
+			
+			<img class="img-fluid" src="img/imagenlibro13.png" alt="imagenlibro13">
+			
+			<div class="main-container-flex" id="container-controls">
+			
+				<div class="mobile-menu"></div>
+				
+				<div class="invisibleMenu">
+					<div class="menu"></div>
+				</div>
+				
+				<!--Prólogo-->
+				<div class="content-container">
+					<div class="slides">
+						<h2 class="section-title verde">Prólogo</h2>
+						
+						<div class="content-text">
+						
+							<p class="verdeP chapter-title1">Salvación y condena por la palabra: Sor Juana Inés de la Cruz</p>
+
+							<p class="p_center">1</p>
+							<p class="first-paragraph">La mexicana Juana Inés de Asbaje y Ramírez de Santillana nació en 1651 en San Miguel Nepantla, en lo que se conoció como la Nueva España, un importante Virreinato de la Corona española, símbolo de la Conquista (y, a la vez, de la caída de México-Tenochtitlán, el imperio mexica) que se sostendría, con esplendores y miserias, por tres siglos hasta la independencia de México en 1821. Tal circunstancia determinará, sin lugar a dudas, la formación de Sor Juana, sus influencias en lo que a la creación literaria se refiere y su rara condición de exponente del Siglo de Oro español. En ella, aun así, confluyen, como bien lo señala ese estudioso de su obra, su coterráneo, Octavio Paz, los rasgos que, a su vez, dan sentido a la Nueva España: los elementos de la cultura indígena, sus usos, sus costumbres y, sobre todo, sus lenguas, pero también la influencia directa de la llamada cultura occidental. Esta marca de época se verá ricamente compensada en una niña, y luego en una joven, legendariamente dotada: dice ella misma que aprendió a leer a los tres años y que compuso una loa a los ocho.</p>
+
+							<p class="p_center">2</p>
+							<p>Los ámbitos de interés, conocimiento y escritura de Sor Juana abarcan desde las ciencias, la filosofía, la teología y la música hasta los géneros literarios como la poesía, el teatro y el ensayo. Famosa es, por ejemplo, la controversia que se generó por una carta de Sor Juana (denominada “Carta atenagórica”), a propósito de un discurso del jesuita Antonio Vieira (varias versiones señalan que la discusión real se dio con “el monstruo de ascetismo”, el misógino arzobispo de México, Francisco de Aguiar y Seijas), en el que este pontificaba sobre “las finezas de Cristo”. La controversia, más allá de los asuntos teologales en discusión, es botón de muestra de las disputas que generaban los escritos de la monja, toda vez que tuvo respuesta por parte del obispo Manuel Fernández de Santa Cruz en un escrito titulado “Carta de Sor Filotea de la Cruz”, en el que se reivindican los atributos de la inteligencia y de la escritura de Sor Juana. Una consecuente respuesta a lo que justamente la monja jerónima reclama para sí y para las mujeres, como son los derechos a saber, pensar y hablar.</p>
+
+							<p class="p_center">3</p>
+							<p>Leer la obra de sor Juana Inés es adentrarse en una vasta y compleja producción que exige, quizás con mayor rigor, en el caso de la lírica, situarse en los modos de decir barrocos y en una métrica, ya en desuso, pero no por ello menos sonora y poderosa con las palabras. Aquello de</p>
+							
+							<p><em>Hombres necios que acusáis<br>a la mujer sin razón,<br>sin ver que sois la ocasión<br>de lo mismo que culpáis.<br></em>[…]</p>
+							
+							<p>O:</p>
+
+							<p>[…]<br><em>¿O cuál es más de culpar,<br>aunque cualquiera mal haga: <br>la que peca por la paga<br>o el que paga por pecar?</em><br>[…]</p>
+							
+							<p>son umbrales obligados y repetidos para referirse a una obra, más que mística mundana, más culterana que inspirada, más enamorada de la palabra que enamoradora con ella. La obra de Sor Juana está construida, en todo caso, con los recursos propios del oficio poético, con las herramientas de la retórica. Su “universo sonoro”, como lo nombra uno de sus críticos, lo supo nutrir de los tonos, matices, intensidades, tanto de la lengua española como de la lengua náhuatl. Y esta diversidad multicultural, pues la Nueva España incluyó geografías tan distantes y diversas como los territorios colonizados de España en América del Norte, América Central, Asia y Oceanía, supo integrarla Sor Juana en su obra, bien en la asimilación de los rituales indígenas en las ceremonias religiosas occidentales, bien en la incorporación pareada o directa de las voces indígenas.</p>
+
+							<p class="p_center">4</p>
+							<p>Aquejada alma y postergada amante, sus versos se emplean consistentemente en el ejercicio de la ironía, de la tensión dialéctica, del amor pleno nunca saciado (y allí radica su éxtasis), del desamor como padecimiento superior al amor:</p>
+							
+							<p><em>Pero yo, por mejor partido, escojo, <br>De quien no quiero, ser violento empleo,<br>Que de quien no me quiere, vil despojo</em></p>
+
+							<p>y de la realización del deseo en la sola expresión y en la auto contemplación:</p>
+							
+							<p>[…]<br><em>Yo bien quisiera, cuando llego a verte,z<br>viendo mi infame amor, poder negarlo;<br>mas luego la razón justa me advierte</em></p>
+							
+							<p><em>que sólo me remedia en publicarlo;<br>porque del gran delito de quererte,<br>solo es bastante pena, confesarlo.</em></p>
+
+							<p>Pero también son sus poemas despliegue de su erudición científica, de su amplio conocimiento de los textos bíblicos y de la simbología y la mitología universales, de su interés por los temas sensibles al humanismo de su época. Pero cualquiera sea el caso, los poemas de Sor Juana tensan finas tramas para hablarle al mundo del que se distanció cuando se hizo monja de clausura: entabla diálogos en sus poemas, ya interpelando a los interlocutores para defender su predicamento, ya para declararles sus padecimientos y sentires: Fabio, Silvio, Alcino, Feliciano, Lisardo, Lisi y Laura, entre otros, son los paradigmáticos conversadores y receptores de su habla.</p>
+							
+							<p class="p_center">5</p>
+							<p><em>En perseguirme, Mundo, ¿qué interesas?<br>¿En qué te ofendo, cuando sólo intento<br>poner bellezas en mi entendimiento<br>y no mi entendimiento en las bellezas?</em>[…]</p>
+
+							<p>A la intelectual, teóloga y poeta Sor Juana le exigieron, como en la parábola de los talentos, el doble. Sor Juana no fue una mística religiosa; Sor Juana es una mística mundana y racional. Como bien lo dice Octavio Paz: “Sus afanes intelectuales y morales están muy lejos de los de una Santa Teresa o un San Juan de la Cruz. Ella no quiere, como el santo, anular su entendimiento sino aguzarlo; no busca, como Santa Teresa, que la penetre la luz divina: quiere penetrar, con la luz de su razón, el opaco misterio de las cosas”.</p>
+							
+							<p>Acorralada por las fiebres de una peste que, al parecer solo sitió al convento de San Jerónimo, Sor Juana Inés de la Cruz murió en 1695.</p>
+							
+							<p class="text-align-right">Doris Elena Aguirre Grisales<br>Marzo de 2019</p>
+							
+							<img class="img-fluid" src="img/libro13_DorisImg.png"/>
+							
+							<img class="img-fluid-30" src="img/Linro13_Firma.png"/>
+							
+							<div class="leerMas leerMas1">¡Comienza tu lectura!</div>
+							
+							<hr class="line-separator line">
+							
+						</div>
+					</div>
+					
+					<!--Cuento-->
+					<div class="slides slide">
+						
+						<h1 class="section-title verde chapter-title title1">Divino amor, amor profano</h1>
+						<h1 class="verde subTitle1">Sor Juana Inés de la Cruz </h1>
+						
+						<h2 class="subTitle2 verde"><em>En que satisface un recelo con la retórica del llanto.</em></h2>						
+						<div class="content-text">
+							<p>Esta tarde, mi bien, cuando te hablaba,<br>como en tu rostro y en tus acciones vía<br>que con palabras no te persuadía,<br>que el corazón me vieses deseaba;</p>
+						
+							<p>y Amor, que mis intentos ayudaba,<br>venció lo que imposible parecía:<br>pues entre el llanto que el dolor vertía,<br>el corazón deshecho destilaba.</p>
+
+							<p>Baste ya de rigores, mi bien, baste;<br>no te atormenten más celos tiranos,<br>ni el vil recelo tu quietud contraste</p>
+
+							<p>con sombras necias, con indicios vanos,<br>pues ya en líquido humor viste y tocaste<br>mi corazón deshecho entre tus manos.</p>
+	
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Arguye de inconsecuentes el gusto y la censura de los hombres, que en las mujeres acusan lo que causan.</em></h2>
+						<div class="content-text">
+							<p>Hombres necios que acusáis<br>a la mujer sin razón,<br>sin ver que sois la ocasión<br>de lo mismo que culpáis:</p>
+							
+							<p>Si con ansia sin igual<br>solicitáis su desdén,<br>¿por qué queréis que obren bien<br>si las incitáis al mal?</p>
+							
+							<p>Combatís su resistencia<br>y luego con gravedad<br>decís que fue liviandad<br>lo que hizo la diligencia.</p>
+							
+							<p>Parecer quiere el denuedo<br>de vuestro parecer loco<br>al niño que pone el coco<br>y luego le tiene miedo.</p>
+							
+							<p>Queréis, con presunción necia,<br>hallar a la que buscáis,<br>para pretendida, Thais,<br>y en la posesión, Lucrecia. </p>
+							
+							<p>¿Qué humor puede ser más raro<br>que el que, falto de consejo, <br>él mismo empaña el espejo,<br>y siente que no esté claro?</p>
+							
+							<p>Con el favor y el desdén<br>tenéis condición igual,<br>quejándoos, si os tratan mal,<br>burlándoos, si os quieren bien.</p>
+							
+							<p>Opinión ninguna gana;<br>pues la que más se recata,<br>si no os admite, es ingrata,<br>y si os admite, es liviana.</p>
+							
+							<p>Siempre tan necios andáis<br>que con desigual nivel<br>a una culpáis por cruel<br>y a otra por fácil culpáis.</p>
+							
+							<p>¿Pues cómo ha de estar templada<br>la que vuestro amor pretende,<br>si la que es ingrata, ofende,<br>y la que es fácil, enfada?</p>
+							
+							<p>Mas, entre el enfado y pena<br>que vuestro gusto refiere,<br>bien haya la que no os quiere<br>y queja enhorabuena.</p>
+							
+							<p>Dan vuestras amantes penas<br>a sus libertades alas,<br>y después de hacerlas malas<br>las queréis hallar muy buenas.</p>
+							
+							<p>¿Cuál mayor culpa ha tenido<br>en una pasión errada:<br>la que cae de rogada,<br>o el que ruega de caído?</p>
+							
+							<p>¿O cuál es más de culpar,<br>aunque cualquiera mal haga:<br>la que peca por la paga<br>o el que paga por pecar?</p>
+							
+							<p>Pues ¿para qué os espantáis<br>de la culpa que tenéis?<br>Queredlas cual las hacéis<br>o hacedlas cual las buscáis.</p>
+							
+							<p>Dejad de solicitar,<br>y después, con más razón,<br>acusaréis la afición <br>de la que os fuere a rogar.</p>
+							
+							<p>Bien con muchas armas fundo<br>que lidia vuestra arrogancia,<br>pues en promesa e instancia<br>juntáis diablo, carne y mundo. </p>
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Que contiene una fantasía contenta con amor decente.</em></h2>
+						<div class="content-text">
+							<p>Detente, sombra de mi bien esquivo,<br>imagen del hechizo que más quiero,<br>bella ilusión por quien alegre muero,<br>dulce ficción por quien penosa vivo.</p>
+							
+							<p>Si al imán de tus gracias, atractivo,<br>sirve mi pecho de obediente acero,<br>¿para qué me enamoras lisonjero,<br>si has de burlarme luego fugitivo?</p>
+							
+							<p>Mas blasonar no puedes, satisfecho,<br>de que triunfa de mí tu tiranía:<br>que aunque dejas burlado el lazo estrecho</p>
+							
+							<p>que tu forma fantástica ceñía,<br>poco importa burlar brazos y pecho<br>si te labra prisión mi fantasía.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>En que da moral censura a una rosa, y en ella a sus semejantes.</em></h2>
+						<div class="content-text">
+							<p>Rosa divina, que en gentil cultura<br>eres, con tu fragante sutileza,<br>magisterio purpúreo en la belleza,<br>enseñanza nevada a la hermosura.</p>
+							
+							<p>Amago de la humana arquitectura,<br>ejemplo de la vana gentileza,<br>en cuyo ser unió naturaleza<br>la cuna alegre y triste sepultura.</p>
+							
+							<p>¡Cuán altiva en tu pompa, presumida,<br>soberbia, el riesgo de morir desdeñas,<br>y luego, desmayada y encogida,</p>
+							
+							<p>de tu caduco ser das mustias señas,<br>con que con docta muerte y necia vida,<br>viviendo engañas y muriendo enseñas!</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>De una reflexión cuerda con que mitiga el dolor de una pasión.</em></h2>
+						<div class="content-text">
+							<p>Con el dolor de la mortal herida,<br>de un agravio de amor me lamentaba;<br>y por ver si la muerte se llegaba,<br>procuraba que fuese más crecida.</p>
+							
+							<p>Toda en el mal el alma divertida,<br>pena por pena su dolor sumaba,<br>y en cada circunstancia ponderaba<br>que sobraban mil muertes a una vida.</p>
+							
+							<p>Y cuando, al golpe de uno y otro tiro,<br>rendido el corazón daba, penoso,<br>señas de dar el último suspiro,</p>
+							
+							<p>no sé con qué destino prodigioso<br>volví a mi acuerdo y dije: ¿Qué me admiro?<br>¿Quién en amor ha sido más dichoso?</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Quéjase de la suerte: insinúa su aversión a los vicios, y justifica su divertimento a las Musas.</em></h2>
+						<div class="content-text">
+							<p>En perseguirme, Mundo, ¿qué interesas?<br>¿En qué te ofendo, cuando sólo intento<br>poner bellezas en mi entendimiento<br>y no mi entendimiento en las bellezas?</p>
+							
+							<p>Yo no estimo tesoros ni riquezas;<br>y así, siempre me causa más contento<br>poner riquezas en mi entendimiento<br>que no mi entendimiento en las riquezas.</p>
+							
+							<p>Yo no estimo hermosura que, vencida,<br>es despojo civil de las edades,<br>ni riqueza me agrada fementida,</p>
+							
+							<p>teniendo por mejor, en mis verdades,<br>consumir vanidades de la vida<br>que consumir la vida en vanidades.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Procura desmentir los elogios que a un retrato de la poetisa inscribió la verdad, que llama pasión.</em></h2>
+						<div class="content-text">
+							<p>Éste que ves, engaño colorido,<br>que, del arte ostentando los primores,<br>con falsos silogismos de colores<br>es cauteloso engaño del sentido;</p>
+							
+							<p>este en quien la lisonja ha pretendido<br>excusar de los años los horrores<br>y, venciendo del tiempo los rigores,<br>triunfar de la vejez y del olvido,</p>
+							
+							<p>es un vano artificio del cuidado,<br>es una flor al viento delicada,<br>es un resguardo inútil para el hado:</p>
+							
+							<p>es una necia diligencia errada,<br>es un afán caduco y, bien mirado,<br>es cadáver, es polvo, es sombra, es nada.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Sospecha crueldad disimulada, al alivio que la esperanza da.</em></h2>
+						<div class="content-text">
+							<p>Diuturna enfermedad de la esperanza,<br>que así entretienes mis cansados años,<br>y en el fiel de los bienes y los daños<br>tienes en equilibrio la balanza</p>
+							
+							<p>que, siempre suspendida, en la tardanza<br>de inclinarse, no dejan tus engaños<br>que lleguen a excederse en los tamaños<br>la desesperación o la confianza.</p>
+							
+							<p>¿Quién te ha quitado el nombre de homicida?<br>Pues lo eres más severa, si se advierte<br>que suspendes el alma entretenida;</p>
+							
+							<p>y entre la infausta o la felice suerte,<br>no lo haces tú por conservar la vida,<br>sino por dar más dilatada muerte.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Resuelve la cuestión de cuál sea pesar más molesto en encontradas correspondencias, amar o aborrecer. </em></h2>
+						<div class="content-text">
+							<p>Que no me quiera Fabio, al verse amado,<br>es dolor sin igual, en mi sentido;<br>mas que me quiera Silvio, aborrecido,<br>es menor mal, mas no menor enfado.</p>
+							
+							<p>¿Qué sufrimiento no estará cansado<br>si siempre le resuenan al oído<br>tras la vana arrogancia de un querido<br>el cansado gemir de un desdeñado?</p>
+							
+							<p>Si de Silvio me cansa el rendimiento,<br>a Fabio canso con estar rendida;<br>si de éste busco el agradecimiento,</p>
+							
+							<p>a mí me busca el otro agradecida:<br>por activa y pasiva es mi tormento,<br>pues padezco en querer y ser querida.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Continúa el asunto aun le expresa con más viva elegancia.</em></h2>
+						<div class="content-text">
+							<p>Feliciano me adora y le aborrezco;<br>Lisardo me aborrece y yo le adoro;<br>por quien no me apetece ingrato, lloro,<br>y al que me llora tierno, no apetezco;</p>
+
+							<p>a quien más me desdora, el alma ofrezco;<br>a quien me ofrece víctimas, desdoro;<br>desprecio al que enriquece mi decoro,<br>y al que le hace desprecios, enriquezco.</p>
+							
+							<p>Si con mi ofensa al uno reconvengo,<br>me reconviene el otro a mí, ofendido;<br>y a padecer de todos modos vengo,</p>
+							
+							<p>pues ambos atormentan mi sentido:<br>aquéste con pedir lo que no tengo,<br>y aquél con no tener lo que le pido.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Prosigue el mismo asunto, y determina que prevalezca la razón contra el gusto.</em></h2>
+						<div class="content-text">
+							<p>Al que ingrato me deja, busco amante;<br>al que amante me sigue, dejo ingrata;<br>constante adoro a quien mi amor maltrata;<br>maltrato a quien mi amor busca constante.</p>
+							
+							<p>Al que trato de amor, hallo diamante;<br>y soy diamante al que de amor me trata;<br>triunfante quiero ver al que me mata,<br>y mato a quien me quiere ver triunfante.</p>
+							
+							<p>Si a éste pago, padece mi deseo;<br>si ruego a aquél, mi pundonor enojo:<br>de entrambos modos infeliz me veo.</p>
+							
+							<p>Pero yo, por mejor partido, escojo<br>de quien no quiero, ser violento empleo,<br>que de quien no me quiere, vil despojo.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Soneto atribuido a la poetisa.</em></h2>
+						<div class="content-text">
+							<p>Cítara de carmín que amaneciste<br>trinando endechas a tu amada esposa<br>y, paciéndole el ámbar a la rosa,<br>el pico de oro, de coral teñiste;</p>
+							
+							<p>dulce jilguero, pajarito triste,<br>que apenas el aurora viste hermosa<br>cuando el tono primero de una glosa<br>la muerte hallaste y el compás perdiste:</p>
+							
+							<p>no hay en la vida, no, segura suerte;<br>tu misma voz al cazador convida<br>para que el golpe cuando tire acierte.</p>
+							
+							<p>¡Oh fortuna buscada aunque temida!<br>¿Quién pensara que cómplice en tu muerte<br>fuera, por no callar, tu propia vida?</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>De amor, puesto antes en sujeto indigno, es enmienda blasonar del arrepentimiento. </em></h2>
+						<div class="content-text">
+							<p>Cuando mi error y tu vileza veo,<br>contemplo, Silvio, de mi amor errado,<br>cuán grave es la malicia del pecado,<br>cuán violenta la fuerza de un deseo.</p>
+							
+							<p>A mi mesma memoria apenas creo<br>que pudiese caber en mi cuidado<br>la última línea de lo despreciado,<br>el término final de un mal empleo.</p>
+							
+							<p>Yo bien quisiera, cuando llego a verte,<br>viendo mi infame amor, poder negarlo;<br>mas luego la razón justa me advierte</p>
+							
+							<p>que sólo me remedia en publicarlo;<br>porque del gran delito de quererte,<br>sólo es bastante pena, confesarlo.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Convaleciente de una enfermedad grave, discretea con la señora virreina, marquesa de Mancera, atribuyendo a su mucho amor aun su mejoría en morir. </em></h2>
+						<div class="content-text">
+							<p>En la vida que siempre tuya fue,<br>Laura divina, y siempre lo será,<br>la Parca fiera, que en seguirme da,<br>quiso asentar por triunfo el mortal pie.</p>
+							
+							<p>Yo de su atrevimiento me admiré:<br>que si debajo de su imperio está,<br>tener poder no puede en ella ya,<br>pues del suyo contigo me libré.</p>
+							
+							<p>Para cortar el hilo que no hiló,<br>la tijera mortal abierta vi.<br>¡Ay, parca fiera!, dije entonces yo:</p>
+							
+							<p>mira que sola Laura manda aquí.<br>Ella, corrida, al punto se apartó,<br>y dejome vivir sólo por ti.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>En la muerte de la excelentísima señora marquesa de Mancera.</em></h2>
+						<div class="content-text">
+							<p>De la beldad de Laura enamorados<br>los Cielos, la robaron a su altura,<br>porque no era decente a su luz pura<br>ilustrar estos valles desdichados;</p>
+							
+							<p>o porque los mortales, engañados<br>de su cuerpo en la hermosa arquitectura,<br>admirados de ver tanta hermosura<br>no se juzgasen bienaventurados.</p>
+							
+							<p>Nació donde el Oriente el rojo velo<br>corre al nacer al astro rubicundo,<br>y murió donde, con ardiente anhelo,</p>
+							
+							<p>da sepultura a su luz el mar profundo:<br>que fue preciso a su divino vuelo<br>que diese como el sol la vuelta al mundo.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Soneto a lo mismo.</em></h2>
+						<div class="content-text">
+							<p>Bello compuesto en Laura dividido,<br>alma inmortal, espíritu glorioso,<br>¿por qué dejaste cuerpo tan hermoso<br>Y para qué tal alma has despedido?</p>
+							
+							<p>Pero ya ha penetrado en mi sentido<br>que sufres el divorcio riguroso,<br>porque el día final puedas, gozoso,<br>volver a ser enteramente unido.</p>
+							
+							<p>Alza tú, alma dichosa, el presto vuelo,<br>y, de tu hermosa cárcel desatada,<br>dejando vuelto su arrebol en hielo,</p>
+							
+							<p>sube a ser de luceros coronada:<br>que bien es necesario todo el cielo<br>porque no eches de menos tu morada.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Alaba, con especial acierto, el de un músico primoroso.</em></h2>
+						<div class="content-text">
+							<p>Dulce deidad del viento armoniosa,<br>suspensión del sentido deseada,<br>donde gustosamente aprisionada<br>se mira la atención más bulliciosa:</p>
+							
+							<p>perdona a mi zampoña licenciosa<br>si, al escuchar tu lira delicada,<br>canta con ruda voz desentonada<br>prodigios de la tuya milagrosa.</p>
+							
+							<p>Pause su lira el Tracio: que, aunque calma<br>puso a las negras sombras del olvido,<br>cederte debe más gloriosa palma,</p>
+							
+							<p>pues más que a ciencia el arte has reducido,<br>haciendo suspensión de toda un alma<br>el que sólo era objeto de un sentido.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Sólo con aguda ingeniosidad esfuerza el dictamen de que sea la ausencia mayor mal que los celos. </em></h2>
+						<div class="content-text">
+							<p>El ausente, el celoso, se provoca,<br>aquél con sentimiento, éste con ira;<br>presume éste la ofensa que no mira,<br>y siente aquél la realidad que toca.</p>
+							
+							<p>Éste templa tal vez su furia loca<br>cuando el discurso en su favor delira;<br>y sin intermisión aquél suspira,<br>pues nada a su dolor la fuerza apoca.</p>
+							
+							<p>Éste aflige dudoso su paciencia,<br>y aquél padece ciertos sus desvelos;<br>éste al dolor opone resistencia,</p>
+							
+							<p>aquél, sin ella, sufre desconsuelos;<br>y si es pena de daño, al fin, la ausencia,<br>luego es mayor tormento que los celos.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>En que describe los efectos irracionales del amor, racionalmente.</em></h2>
+						<div class="content-text">
+							<p>Este amoroso tormento<br>que en mi corazón se ve,<br>sé que lo siento, y no sé<br>la causa por que lo siento.</p>
+							
+							<p>Siento una grave agonía<br>por lograr un devaneo,<br>que empieza como deseo<br>y para en melancolía.</p>
+							
+							<p>Y cuando con más terneza<br>mi infeliz estado lloro,<br>sé que estoy triste e ignoro<br>la causa de mi tristeza.</p>
+							
+							<p>Siento un anhelo tirano<br>por la ocasión a que aspiro,<br>y cuando cerca la miro<br>yo misma aparto la mano;</p>
+							
+							<p>porque, si acaso se ofrece,<br>después de tanto desvelo,<br>la desazona el recelo<br>o el susto la desvanece.</p>
+							
+							<p>Y si alguna vez sin susto<br>consigo tal posesión,<br>cualquiera leve ocasión<br>me malogra todo el gusto.</p>
+							
+							<p>Siento mal del mismo bien<br>con receloso temor,<br>y me obliga el mismo amor<br>tal vez a mostrar desdén.</p>
+							
+							<p>Cualquier leve ocasión labra<br>en mi pecho, de manera,<br>que el que imposibles venciera<br>se irrita de una palabra.</p>
+							
+							<p>Con poca causa ofendida,<br>suelo, en mitad de mi amor,<br>negar un leve favor<br>a quien le diera la vida.</p>
+							
+							<p>Ya sufrida, ya irritada,<br>con contrarias penas lucho,<br>que por él sufriré mucho<br>y con él sufriré nada.</p>
+							
+							<p>No sé en qué lógica cabe<br>el que tal cuestión se pruebe:<br>que por él lo grave es leve,<br>y con él lo leve es grave.</p>
+							
+							<p>Sin bastantes fundamentos<br>forman mis tristes cuidados,<br>de conceptos engañados,<br>un monte de sentimientos;</p>
+							
+							<p>y en aquel fiero conjunto<br>hallo, cuando se derriba,<br>que aquella máquina altiva<br>sólo estribaba en un punto.</p>
+							
+							<p>Tal vez el dolor me engaña,<br>y presumo, sin razón,<br>que no habrá satisfacción<br>que pueda templar mi saña;</p>
+							
+							<p>y cuando a averiguar llego<br>el agravio por que riño,<br>es como espanto de niño<br>que para en burlas y juego.</p>
+							
+							<p>Y aunque el desengaño toco,<br>con la misma pena lucho,<br>de ver que padezco mucho<br>padeciendo por tan poco.</p>
+							
+							<p>A vengarse se abalanza<br>tal vez el alma ofendida;<br>y después, arrepentida,<br>toma de mí otra venganza.</p>
+							
+							<p>Y si al desdén satisfago,<br>es con tan ambiguo error,<br>que yo pienso que es rigor<br>y se remata en halago.</p>
+							
+							<p>Hasta el labio desatento<br>suele, equívoco, tal vez,<br>por usar de la altivez,<br>encontrar el rendimiento.</p>
+							
+							<p>Cuando por soñada culpa<br>con más enojo me incito,<br>yo le acrimino el delito<br>y le busco la disculpa.</p>
+							
+							<p>No huyo el mal ni busco el bien:<br>porque, en mi confuso error,<br>ni me asegura el amor<br>ni me despecha el desdén.</p>
+							
+							<p>En mi ciego devaneo,<br>bien hallada con mi engaño,<br>solicito el desengaño<br>y no encontrarlo deseo.</p>
+							
+							<p>Si alguno mis quejas oye,<br>más a decirlas me obliga<br>porque me las contradiga,<br>que no porque las apoye.</p>
+							
+							<p>Porque si con la pasión<br>algo contra mi amor digo,<br>es mi mayor enemigo<br>quien me concede razón.</p>
+							
+							<p>Y si acaso en mi provecho<br>hallo la razón propicia,<br>me embaraza la injusticia<br>y ando cediendo el derecho.</p>
+							
+							<p>Nunca hallo gusto cumplido,<br>Porque, entre alivio y dolor,<br>hallo culpa en el amor<br>y disculpa en el olvido.</p>
+							
+							<p>Esto de mi pena dura<br>es algo del dolor fiero;<br>y mucho más no refiero<br>porque pasa de locura.</p>
+							
+							<p>Si acaso me contradigo<br>en este confuso error,<br>aquel que tuviese amor<br>entenderá lo que digo. </p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Enseña cómo un solo empleo en amar es razón y conveniencia.</em></h2>
+						<div class="content-text">
+							<p>Fabio: en el ser de todos adoradas,<br>son todas las beldades ambiciosas,<br>porque tienen las aras por ociosas<br>si no las ven de víctimas colmadas.</p>
+							
+							<p>Y así, sí de uno solo son amadas,<br>viven de la fortuna querellosas;<br>porque piensan que más que ser hermosas<br>constituyen deidad al ser rogadas.</p>
+							
+							<p>Mas yo soy en aquesto tan medida,<br>que en viendo a muchos mi atención zozobra,<br>y sólo quiero ser correspondida</p>
+							
+							<p>de aquel que de mi amor réditos cobra;<br>porque es la sal del gusto al ser querida:<br>que daña lo que falta y lo que sobra.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Soneto de consonantes forzadas en un doméstico solaz.</em></h2>
+						<div class="content-text">
+							<p>Inés, cuando te riñen por bellaca, <br>para disculpas no te falta achaque,<br>porque dices que traque y que barraque,<br>con que sabes muy bien tapar la caca.</p>
+							
+							<p>Si coges la parola, no hay urraca,<br>que así la gorja de mal año saque;<br>y con tronidos, más que un triquitraque,<br>a todo el Mundo aturdes cual matraca.</p>
+							
+							<p>Este bullicio todo lo trabuca,<br>este embeleco todo lo embeleca;<br>mas, aunque eres, Inés, tan mala cuca,</p>
+							
+							<p>sabe mi amor muy bien lo que se peca;<br>y así con tu afición no se embabuca,<br>aunque eres Zancarrón, y yo de Meca.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Engrandece el hecho de Lucrecia.</em></h2>
+						<div class="content-text">
+							<p>¡Oh, famosa Lucrecia, gentil dama,<br>de cuyo ensangrentado noble pecho<br>salió la sangre que extinguió, a despecho<br>del rey injusto, la lasciva llama!</p>
+							
+							<p>¡Oh, con cuánta razón el mundo aclama<br>tu virtud, pues por premio de tal hecho,<br>aun es para tus sienes cerco estrecho<br>la amplísima corona de tu fama!</p>
+							
+							<p>Pero si el modo de tu fin violento<br>puedes borrar del tiempo y sus anales,<br>quita la punta del puñal sangriento</p>
+							
+							<p>con que pusiste fin a tantos males;<br>que es mengua de tu honrado sentimiento<br>decir que te ayudaste de puñales.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Nueva alabanza del hecho mismo.</em></h2>
+						<div class="content-text">
+							<p>Intenta de Tarquino el artificio<br>a tu pecho, Lucrecia, dar batalla;<br>ya amante llora, ya modesto calla,<br>ya ofrece toda el alma en sacrificio.</p>
+							
+							<p>Y cuando piensa ya que más propicio<br>tu pecho a tanto imperio se avasalla,<br>el premio, como Sísifo, que halla,<br>es empezar de nuevo el ejercicio.</p>
+							
+							<p>Arde furioso, y la amorosa tema<br>crece en la resistencia de tu honra,<br>con tanta privación más obstinada.</p>
+							
+							<p>¡Oh providencia de deidad suprema!<br>¡Tu honestidad motiva tu deshonra,<br>y tu deshonra te eterniza honrada!</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Admira, con el suceso que refiere, los efectos imprevenibles de algunos acuerdos.</em></h2>
+						<div class="content-text">
+							<p>La heroica esposa de Pompeyo altiva,<br>al ver su vestidura en sangre roja,<br>con generosa cólera se enoja<br>de sospecharlo muerto y estar viva.</p>
+							
+							<p>Rinde la vida en que el sosiego estriba<br>de esposo y padre, y con mortal congoja<br>la concebida sucesión arroja,<br>y de la paz con ella a Roma priva.</p>
+							
+							<p>Si el infeliz concepto que tenía<br>en las entrañas Julia, no abortara,<br>la muerte de Pompeyo excusaría:</p>
+							
+							<p>¡Oh tirana fortuna! ¡Quién pensara,<br>que con el mismo amor que la temía,<br>con ese mismo amor se la causara!</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Escoge antes el morir que exponerse a los ultrajes de la vejez.</em></h2>
+						<div class="content-text">
+							<p>Miró Celia una rosa que en el prado<br>ostentaba feliz la pompa vana,<br>y con afeites de carmín y grana<br>bañaba alegre el rostro delicado;</p>
+							
+							<p>y dijo: “Goza, sin temor del hado,<br>el curso breve de tu edad lozana,<br>pues no podrá la muerte de mañana<br>quitarte lo que hubieres hoy gozado;</p>
+							
+							<p>y aunque llega la muerte presurosa<br>y tu fragante vida se te aleja,<br>no sientas el morir tan bella y moza:</p>
+							
+							<p>mira que la experiencia te aconseja<br>que es fortuna morirte siendo hermosa<br>y no ver el ultraje de ser vieja”.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Contrapone el amor al fuego material, y quiere achacar remisiones a éste, con ocasión de contar el suceso de Porcia.</em></h2>
+						<div class="content-text">
+							<p>¿Qué pasión, Porcia, qué dolor tan ciego<br>te obliga a ser de ti fiera homicida?<br>¿O en qué te ofende tu inocente vida,<br>que así le das batalla a sangre y fuego?</p>
+							
+							<p>Si la Fortuna airada al justo ruego<br>de tu esposo se muestra endurecida,<br>bástale el mal de ver su acción perdida:<br>no acabes, con tu vida, su sosiego.</p>
+							
+							<p>Deja las brasas, Porcia, que mortales<br>impaciente tu amor elegir quiere:<br>no al fuego de tu amor el fuego iguales;</p>
+							
+							<p>porque si bien de tu pasión se infiere,<br>mal morirá a las brasas materiales<br>quien a las llamas del amor no muere.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Encarece de animosidad la elección de estado durable hasta la muerte.</em></h2>
+						<div class="content-text">
+							<p>Si los riesgos del mar considerara,<br>ninguno se embarcara; si antes viera<br>bien su peligro, nadie se atreviera<br>ni al bravo toro osado provocara;</p>
+							
+							<p>si del fogoso bruto ponderara<br>la furia desbocada en la carrera<br>el jinete prudente, nunca hubiera<br>quien con discreta mano le enfrenara.</p>
+							
+							<p>Pero si hubiera algo tan osado<br>que, no obstante el peligro, al mismo Apolo<br>quisiera gobernar con atrevida</p>
+							
+							<p>mano el rápido carro en luz bañado,<br>todo lo hiciera, y no tomara sólo<br>estado que ha de ser toda la vida.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Que responde a un caballero que dijo ponerse hermosa la mujer con querer bien.</em></h2>
+						<div class="content-text">
+							<p>Silvio, tu opinión va errada;<br>que en lo común, si se apura,<br>no admiten por hermosura<br>hermosura enamorada;</p>
+							
+							<p>pues si hacen, de la extrañeza<br>el atractivo más grato,<br>es el agrio de lo ingrato<br>la sazón de la belleza,</p>
+							
+							<p>porque, gozando exenciones<br>de perfección más que humana,<br>la acredita soberana<br>lo libre de las pasiones:</p>
+							
+							<p>que no se conserva bien,<br>ni tiene seguridad,<br>la rosa de la beldad<br>sin la espina del desdén.</p>
+							
+							<p>Mas si el amor hace hermosas,<br>pudiera excusar, ufana,<br>con merecer la manzana,<br>la contienda de las diosas.</p>
+							
+							<p>Belleza llego a tener<br>de mano ten generosa,<br>que dices que seré hermosa<br>solamente con querer.</p>
+							
+							<p>Y así en lid contenciosa<br>fuera siempre la triunfante;<br>que, pues nadie es tan amante,<br>luego nadie tan hermosa.</p>
+							
+							<p>Mas si de amor el primor<br>la belleza me asegura,<br>te deberé la hermosura,<br>pues me causas el amor.</p>
+							
+							<p>Del amor tuyo confío<br>la beldad que me atribuyo;<br>porque siendo obsequio tuyo,<br>resulta en provecho mío.</p>
+							
+							<p>Pero a todo satisfago<br>con ofrecerte, de nuevo,<br>la hermosura que te debo<br>y el amor con que te pago.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Muestra sentir que la baldonen por los aplausos de su habilidad.</em></h2>
+						<div class="content-text">
+							<p>¿Tan grande, ¡ay hado!, mi delito ha sido<br>que, por castigo de él, o por tormento,<br>no basta el que adelanta el pensamiento,<br>sino el que le previenes al oído?</p>
+							
+							<p>Tan severo en mi contra has procedido,<br>que me persuado, de tu duro intento,<br>a que sólo me diste entendimiento<br>por que fuese mi daño más crecido.</p>
+							
+							<p>Dísteme aplausos, para más baldones;<br>subir me hiciste, para penas tales;<br>y aun pienso que me dieron tus traiciones</p>
+							
+							<p>penas a mi desdicha desiguales,<br>por que, viéndome rica de tus dones,<br>nadie tuviese lástima a mis males.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Otro soneto a la esperanza.</em></h2>
+						<div class="content-text">
+							<p>Verde embeleso de la vida humana,<br>loca esperanza, frenesí dorado,<br>sueño de los despiertos intrincado,<br>como de sueños, de tesoros vana;</p>
+							
+							<p>alma del mundo, senectud lozana,<br>decrépito verdor imaginado;<br>el hoy de los dichosos esperado<br>y de los desdichados el mañana.</p>
+							
+							<p>Sigan tu sombra en busca de tu día<br>los que, con verdes vidrios por anteojos,<br>todo lo ven pintado a su deseo;</p>
+							
+							<p>que yo, más cuerda en la fortuna mía,<br>tengo en entrambas manos ambos ojos<br>y solamente lo que toco veo.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Efectos muy penosos de amor, y que no por grandes se igualan con las prendas de quien le causa.</em></h2>
+						<div class="content-text">
+							<p>¿Vesme, Alcino, que atada a la cadena<br>de amor, paso, en sus hierros aherrojada<br>mísera esclavitud, desesperada<br>de libertad y de consuelo ajena?</p>
+							
+							<p>¿Ves de dolor y angustia el alma llena,<br>de tan fieros tormentos lastimada,<br>y entre las vivas llamas abrasada<br>juzgarse por indigna de su pena?</p>
+							
+							<p>¿Vesme seguir sin alma un desatino<br>que yo misma condeno por extraño?<br>¿Vesme derramar sangre en el camino</p>
+							
+							<p>siguiendo los vestigios de un engaño?<br>¿Muy admirado estás? ¿Pues ves, Alcino?<br>Más merece la causa de mi daño.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Un celoso refiere el común pesar que todos padecen, y advierte a la causa el fin que puede tener la lucha de afectos encontrados. </em></h2>
+						<div class="content-text">
+							<p>Yo no dudo, Lisarda, que te quiero,<br>aunque sé que me tienes agraviado;<br>mas estoy tan amante y tan airado,<br>que afectos que distingo no prefiero.</p>
+							
+							<p>De ver que odio y amor te tengo, infiero<br>que ninguno estar puede en sumo grado,<br>pues no le puede el odio haber ganado<br>sin haberle perdido amor primero.</p>
+							
+							<p>Y si piensas que el alma que te quiso<br>ha de estar siempre a tu afición ligada,<br>de tu satisfacción vana te aviso:</p>
+							
+							<p>pues si el amor al odio ha dado entrada,<br>el que bajó de sumo a ser remiso<br>de lo remiso pasará a ser nada.</p>
+							
+							<p>Mas ¿cuándo, ¡ay gloria mía!,<br>mereceré gozar tu luz serena?<br>¿Cuándo llegará el día<br>que pongas dulce fin a tanta pena?<br>¿Cuándo veré tus ojos, dulce encanto,<br>y de los míos secarás el llanto?</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Liras que expresan sentimientos de ausente.</em></h2>
+						<div class="content-text">
+							<p>Amado dueño mío,<br>escucha un rato mis cansadas quejas,<br>pues del viento las fio,<br>que breve las conduzca a tus orejas,<br>si no se desvanece el triste acento,<br>como mis esperanzas en el viento.</p>
+							
+							<p>Óyeme con los ojos,<br>ya que están tan distantes los oídos,<br>y de ausentes enojos<br>en ecos de mi pluma mis gemidos;<br>y ya que a ti no llega mi voz ruda,<br>óyeme sordo, pues me quejo muda.</p>
+							
+							<p>Si del campo te agradas,<br>goza de sus frescuras venturosas,<br>sin que aquestas cansadas<br>lágrimas te detengan, enfadosas;<br>que en él verás, si atento te entretienes,<br>ejemplos de mis males y mis bienes.</p>
+							
+							<p>Si al arroyo parlero<br>ves, galán de las flores, en el prado,<br>que, amante y lisonjero,<br>a cuantas mira íntima su cuidado,<br>en su corriente mi dolor te avisa<br>que a costa de mi llanto tiene risa.</p>
+							
+							<p>Si ves que triste llora<br>su esperanza marchita, en ramo verde,<br>tórtola gemidora,<br>en él y en ella mi dolor te acuerde,<br>que imitan, con verdor y con lamento,<br>él mi esperanza y ella mi tormento.</p>
+							
+							<p>Si la flor delicada,<br>si la pena que, altiva, no consiente<br>del tiempo ser hollada,<br>ambas me imitan, aunque variamente,<br>ya con fragilidad, ya con dureza,<br>mi dicha aquélla y ésta mi firmeza.</p>
+							
+							<p>Si ves el ciervo herido<br>que baja por el monte, acelerado,<br>buscando, dolorido,<br>alivio al mal en un arroyo helado,<br>y sediento al cristal se precipita,<br>no en el alivio, en el dolor me imita.</p>
+							
+							<p>Si la liebre encogida<br>huye medrosa de los galgos fieros,<br>y por salvar la vida<br>no deja estampa de los pies ligeros,<br>tal mi esperanza, en dudas y recelos,<br>se ve acosada de villanos celos.,</p>
+							
+							<p>Si ves el cielo claro,<br>tal es la sencillez del alma mía;<br>y si, de luz avaro,<br>de tinieblas se emboza el claro día,<br>es con su obscuridad y su inclemencia,<br>imagen de mi vida en esta ausencia.</p>
+							
+							<p>Así que, Fabio amado,<br>saber puedes mis males sin costarte<br>la noticia cuidado,<br>pues puedes de los campos informarte;<br>y, pues yo a todo mi dolor ajusto,<br>saber mi pena sin dejar tu gusto.</p>
+							
+							<p>Mas ¿cuando, ¡ay gloria mía!,<br>mereceré gozar tu luz serena?<br>¿Cuándo llegará el día<br>que pongas dulce fin a tanta pena?<br>¿Cuándo veré tus ojos, dulce encanto,<br>y de los míos quitarás el llanto?</p>
+							
+							<p>¿Cuándo tu voz sonora<br>herirá mis oídos, delicada,<br>y el alma que te adora,<br>de inundación de gozos anegada,<br>a recibirte con amante prisa<br>saldrá a los ojos desatada en risa?</p>
+							
+							<p>¿Cuándo tu luz hermosa<br>revestirá de gloria mis sentidos?<br>¿Y cuándo yo, dichosa,<br>mis suspiros daré por bien perdidos,<br>teniendo en poco el precio de mi llanto?:<br>que tanto ha de penar quien goza tanto.</p>
+							
+							<p>¿Cuándo de tu apacible<br>rostro alegre veré el semblante afable,<br>y aquel bien indecible<br>a toda humana pluma inexplicable,<br>que mal se ceñirá a lo definido<br>lo que no cabe en todo lo sentido?</p>
+							
+							<p>Ven, pues, mi prenda amada,<br>que ya fallece mi cansada vida<br>de esta ausencia pesada;<br>ven, pues: que mientras tarda tu venida,<br>aunque me cueste su verdor enojos,<br>regaré mi esperanza con mis ojos.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Solicitada de amor importuno, responde con entereza tan cortés, que aun hace bienquisto el desaire.</em></h2>
+						<div class="content-text">
+							<p>Dos dudas en que escoger<br>tengo, y no sé a cuál prefiera:<br>pues vos sentís que no quiera<br>y yo sintiera querer;</p>
+							
+							<p>conque, si a cualquiera lado<br>quiero inclinarme, es forzoso,<br>quedando el uno gustoso,<br>que otro quede disgustado.</p>
+							
+							<p>Si daros gusto me ordena<br>la obligación, es injusto<br>que por daros a vos gusto<br>haya yo de tener pena.</p>
+							
+							<p>Y no juzgo que habrá quién<br>apruebe sentencia tal,<br>como que me trate mal<br>por trataros a vos bien.</p>
+							
+							<p>Mas por otra parte siento<br>que es también mucho rigor<br>que lo que os debo en amor<br>pague en aborrecimiento; </p>
+							
+							<p>y aun irracional parece<br>este rigor, pues se infiere:<br>si aborrezco a quien me quiere,<br>¿qué haré con quien aborrece?</p>
+							
+							<p>No sé cómo despacharos:<br>pues hallo, al determinarme,<br>que amaros es disgustarme,<br>y no amaros, disgustaros.</p>
+							
+							<p>Pero dar un medio justo<br>en estas dudas pretendo,<br>pues no queriendo, os ofendo,<br>y queriéndoos, me disgusto,</p>
+							
+							<p>y sea ésta la sentencia,<br>por que no os podáis quejar:<br>que entre aborrecer y amar<br>se parta la diferencia,</p>
+							
+							<p>de modo que, entre el rigor<br>y el llegar a querer bien,<br>ni vos encontréis desdén<br>ni yo pueda hallar amor. </p>
+							
+							<p>Esto el discurso aconseja:<br>pues con esta conveniencia,<br>ni yo quedo con violencia<br>ni vos partís con queja;</p>
+							
+							<p>y que estaremos infiero,<br>gustosos con lo que ofrezco:<br>vos, de ver que no aborrezco;<br>yo, de saber que no quiero.</p>
+							
+							<p>Sólo este medio es bastante<br>a ajustarnos, si os contenta<br>que vos me logréis atenta<br>sin que yo pase a lo amante.</p>
+							
+							<p>Y así quedo, en mi entender,<br>esta vez bien con los dos:<br>con agradecer, con vos;<br>conmigo, con no querer.</p>
+							
+							<p>Que aunque a nadie llegue a darse<br>en esto gusto cumplido,<br>ver que es igual el partido<br>servirá de resignarse.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Refiere con ajuste, y envidia sin él, la tragedia de Píramo y Tisbe.</em></h2>
+						<div class="content-text">
+							<p>De un funesto moral la negra sombra,<br>de horrores mil y confusiones llena,<br>en cuyo hueco tronco aún hoy resuena<br>el eco que doliente a Tisbe nombra,</p>
+							
+							<p>cubrió la verde matizada alfombra<br>en que Píramo amante abrió la vena<br>del corazón, y Tisbe de su pena<br>dio la señal que aún hoy al mundo asombra.</p>
+							
+							<p>Mas viendo del amor tanto despecho,<br>la Muerte, entonces de ellos lastimada,<br>sus dos pechos juntó con lazo estrecho.</p>
+							
+							<p>¡Mas ay de la infeliz y desdichada<br>que a su Píramo dar no puede el pecho<br>ni aun por los duros filos de una espada!</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>No quiere pasar por olvido lo descuidado.</em></h2>
+						<div class="content-text">
+							<p>Dices que yo te olvido, Celio, y mientes<br>en decir que me acuerdo de olvidarte,<br>pues no hay en mi memoria alguna parte<br>en que, aun como olvidado, te presentes.</p>
+							
+							<p>Mis pensamientos son tan diferentes<br>y en todo tan ajenos de tratarte,<br>que ni saben ni pueden agraviarte,<br>ni si te olvidan saben si lo sientes.</p>
+							
+							<p>Si tú fueras capaz de ser querido,<br>fueras capaz de olvido; y ya era gloria,<br>al menos, la potencia de haber sido;</p>
+							
+							<p>mas tan lejos estás de esa victoria, <br>que aqueste no acordarme no es olvido <br>sino una negación de la memoria.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Prosigue en su pesar, y dice que aun no quisiera aborrecer tan indigno sujeto, por no tenerle así aún cerca del corazón.</em></h2>
+						<div class="content-text">
+							<p>Silvio, yo te aborrezco, y aun condeno <br>el que estés de esta suerte en mi sentido: <br>que infama al hierro el escorpión herido, <br>y a quien lo huella, mancha inmundo cieno.</p>
+							
+							<p>Eres como el mortífero veneno  <br>que daña quien lo vierte inadvertido; <br>que aun para aborrecido no eres bueno.</p>
+							
+							<p>Tu aspecto vil a mi memoria ofrezco, <br>aunque con susto me lo contradice,  <br>por darme yo la pena que merezco:</p>
+							
+							<p>pues cuando considero lo que hice, <br>no sólo a ti, corrida, te aborrezco, <br>pero a mí, por el tiempo que te quise.</p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Acusa la hidropesía de mucha ciencia, que teme inútil aun para saber, y nociva para vivir.</em></h2>
+						<div class="content-text">
+							<p>Finjamos que soy feliz, <br>triste Pensamiento, un rato;		<br>quizá podréis persuadirme,		<br>aunque yo sé lo contrario:		</p>
+							
+							<p>Que pues sólo en la aprehensión <br>dicen que estriban los daños,		<br>si os imagináis dichoso		<br>no seréis tan desdichado. </p>
+							
+							<p>Sírvame el entendimiento		<br>alguna vez de descanso,	 	<br>y no siempre esté el ingenio		<br>con el provecho encontrado.		</p>
+							
+							<p>Todo el mundo es opiniones		<br>de pareceres tan varios,		<br>que lo que el uno que es negro, 	<br>el otro prueba que es blanco.		</p>
+							
+							<p>A uno sirve de atractivo		<br>lo que otro concibe enfado;		<br>y lo que éste por alivio,		<br>aquél tiene por trabajo.	 	</p>
+							
+							<p>El que está triste, censura		<br>al alegre de liviano;		<br>y el que está alegre, se burla		<br>de ver al triste penando.		</p>
+							
+							<p>Los dos filósofos griegos 	<br>bien esta verdad probaron:		<br>pues lo que en el uno risa,		<br>causaba en el otro llanto.		</p>
+							
+							<p>Célebre su oposición		<br>ha sido por siglos tantos, 	<br>sin que cuál acertó, esté		<br>hasta agora averiguado.		</p>
+							
+							<p>Antes, en sus dos banderas		<br>el mundo todo alistado,		<br>conforme el humor le dicta,		<br>sigue cada cual el bando.		</p>
+							
+							<p>Uno dice que de risa		<br>sólo es digno el mundo vario,		<br>y otro, que sus infortunios		<br>son sólo para llorados.	 	</p>
+							
+							<p>Para todo se halla prueba		<br>y razón en que fundarlo;		<br>y no hay razón para nada,		<br>de haber razón para tanto.	</p>
+							
+							<p>Todos son iguales jueces; 	<br>y siendo iguales y varios,		<br>no hay quien pueda decidir		<br>cuál es lo más acertado.		</p>
+							
+							<p>Pues, si no hay quien lo sentencie,		<br>¿por qué pensáis vos, errado,		<br>que os sometió Dios a vos		<br>la decisión de los casos?		</p>
+							
+							<p>¿O por qué, contra vos mismo		<br>severamente inhumano,		<br>entre lo amargo y lo dulce		<br>queréis elegir lo amargo?		</p>
+							
+							<p>Si es mío mi entendimiento		<br>¿por qué siempre he de encontrarlo		<br>tan torpe para el alivio,		<br>tan agudo para el daño? 	</p>
+							
+							<p>El discurso es un acero		<br>que sirve por ambos cabos:		<br>de dar muerte, por la punta;		<br>por el pomo, de resguardo.		</p>
+							
+							<p>Si vos, sabiendo el peligro, 	<br>queréis por la punta usarlo,		<br>¿qué culpa tiene el acero		<br>del mal uso de la mano?		</p>
+							
+							<p>No es saber, saber hacer		<br>discursos sutiles vanos;	 	<br>que el saber consiste sólo		<br>en elegir lo más sano.		</p>
+							
+							<p>Especular las desdichas		<br>y examinar los presagios,		<br>sólo sirve de que el mal	 	<br>crezca con anticiparlo.		</p>
+							
+							<p>En los trabajos futuros,		<br>la atención, sutilizando,		<br>más formidable que el riesgo		<br>suele fingir el amago.	 	</p>
+							
+							<p>¡Qué feliz es la ignorancia		<br>del que, indoctamente sabio,		<br>halla de lo que padece,		<br>en lo que ignora, sagrado!		</p>
+							
+							<p>No siempre suben seguros		<br>vuelos del ingenio osados,		<br>que buscan trono en el fuego		<br>y hallan sepulcro en el llanto.		</p>
+							
+							<p>También es vicio, el saber,		<br>que, si no se va atajando,		<br>cuanto menos se conoce		<br>es más nocivo el estrago;		</p>
+							
+							<p>y si el vuelo no le abaten,		<br>es sutilezas cebado,		<br>por cuidar de lo curioso	 	<br>olvida lo necesario.		</p>
+							
+							<p>Si culta mano no impide		<br>crecer al árbol copado,		<br>quitan la sustancia al fruto		<br>la locura de los ramos.	 	</p>
+							
+							<p>Si andar a nave ligera		<br>no estorba lastre pesado,		<br>sirve el vuelo de que sea		<br>el precipicio más alto.		</p>
+							
+							<p>En amenidad inútil,	 	<br>¿qué importa al florido campo,		<br>si no halla fruto el otoño,		<br>que ostente flores el mayo?		</p>
+							
+							<p>¿De qué le sirve al ingenio		<br>el producir muchos partos,		<br>si a la multitud se sigue		<br>el malogro de abortarlos?		</p>
+							
+							<p>Ya a esta desdicha, por fuerza		<br>ha de seguirse el fracaso		<br>de quedar, el que produce,	 	<br>si no muerto, lastimado.		</p>
+							
+							<p>El ingenio es como el fuego,		<br>que, con la materia ingrato,		<br>tanto la consume más		<br>cuando él se ostenta más claro.	 	</p>
+							
+							<p>Es de su propio señor		<br>tan rebelado vasallo,		<br>que convierte en sus ofensas		<br>las armas de su resguardo.		</p>
+							
+							<p>Este pésimo ejercicio,	 	<br>este duro afán pesado,		<br>a los hijos de los hombres		<br>dio Dios para ejercitarlos.		</p>
+							
+							<p>¿Qué loca ambición nos lleva,		<br>de nosotros olvidados?	 	<br>Si es que vivir tan poco,		<br>¿de qué sirve saber tanto?		</p>
+							
+							<p>¡Oh, si como hay de saber,		<br>hubiera algún seminario		<br>o escuela donde a ignorar		<br>se enseñaran los trabajos!		</p>
+							
+							<p>¡Qué felizmente viviera		<br>el que, flojamente cauto,		<br>burlara las amenazas		<br>del influjo de los astros!		</p>
+							
+							<p>Aprendamos a ignorar,		<br>pensamiento, pues hallamos		<br>que cuanto añado al discurso,		<br>tanto le usurpo a los años. </p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Romance (en que califica de amores acciones todas las de Cristo para con las almas en afectos amorosos) A Cristo Sacramentado, día de la comunión.</em></h2>
+						<div class="content-text">
+							<p>Amante dulce del alma, <br>bien soberano a que aspiro; <br>tú que sabes las ofensas<br>castigar a beneficios; </p>
+							
+							<p>divino imán en que adoro: <br>hoy que tan propicio os miro, <br>que me mimáis la osadía<br>de poder llamaros mío; </p>
+
+							<p>hoy que en unión amorosa<br>pareció a vuestro cariño<br>que si no estabais en mí<br>era poco estar conmigo; </p>
+
+							<p>hoy que para examinar<br>el afecto con que os sirvo, <br>al corazón en persona	<br>habéis entrado vos mismo, </p>
+
+							<p>pregunto: ¿Es amor o celos<br>tan cuidadoso escrutinio? <br>Que quien lo registra todo, <br>da de sospechar indicios.</p>
+
+							<p>Mas ¡ay, bárbara ignorante, <br>y qué de errores he dicho, <br>como si el estorbo humano<br>obstara al lince divino!	</p>
+
+							<p>Para ver los corazones<br>no es menester asistirlos; <br>que para vos son patentes<br>las entrañas del abismo: </p>
+
+							<p>Con una intuición presente<br>tenéis, en vuestro registro, <br>el infinito pasado<br>hasta el presente finito. </p>
+
+							<p>Luego no necesitabais, <br>para ver el pecho mío,	<br>si lo estáis mirando, sabio, <br>entrar a mirarlo, fino:</p>
+
+							<p>Luego es amor, no celos, <br>lo que en vos miro. </p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Exhorta a conocer los bienes frágiles.</em></h2>
+						<div class="content-text">
+							<p>En vano tu canto suena: <br>pues no advierte en su desdicha,<br>que será el fin de tu dicha<br>el principio de tu pena.	<br>El loco orgullo refrena,<br>de que tan ufano estás<br>sin advertir, cuando das<br>cuenta al aire de tus bienes,<br>que, si ahora dichas tienes,<br>presto celos llorarás.</p>
+							
+							<p>En lo dulce de tu canto,<br>el justo temor te avisa<br>que en un amante no hay risa<br>que no se alterne con llanto.<br>No te desvanezca tanto<br>el favor: que te hallarás<br>burlado y conocerás<br>cuánto es necio un confiado;<br>que si hoy blasonas de amado,	<br>presto celos llorarás.</p>
+
+							<p>Advierte que el mismo estado<br>que al amante venturoso<br>le constituye dichoso,<br>le amenaza desdichado,<br>pues le da tan alto grado<br>por derribarle, no más:	<br>y así tú, que ahora estás<br>en tal altura, no ignores<br>que, si hoy ostentas favores,<br>presto celos llorarás.</p>
+
+							<p>La gloria más levantada<br>que amor a tu dicha ordena<br>contémplala como ajena<br>y tenla como prestada.<br>No tu ambición, engañada,<br>piense que eterno serás<br>en las dichas; pues verás<br>que hay áspid entre las flores,<br>y que si hoy cantas favores,<br>presto celos llorarás. </p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Oración publicada en latín por la Santidad del Papa Urbano Octavo, de feliz memoria, traducida en castellano, para edificación del que leyere, por la delicadísima viveza y claridad de la poetisa.</em></h2>
+						<div class="content-text">
+							<p>Ante tus ojos benditos<br>Las culpas manifestamos,<br>y las heridas mostramos<br>que hicieron nuestros delitos.</p>
+							
+							<p>Si el mal que hemos cometido,<br>viene a ser considerado,<br>menor es lo tolerado,<br>mayor es lo merecido.</p>
+
+							<p>La conciencia nos condena,<br>no hallando en ella disculpa;<br>que respecto de la culpa,<br>es muy liviana la pena.</p>
+
+							<p>Del pecado el duro azar<br>sentimos, que padecemos;<br>y nunca enmendar queremos<br>la costumbre de pecar.</p>
+
+							<p>Cuando en tus azotes suda<br>sangre la naturaleza,<br>se rinde nuestra flaqueza <br>y la maldad no se muda.</p>
+
+							<p>Cuando el pecado mancilla<br>la mente con fiera herida,<br>padece el alma afligida, <br>y la cerviz no se humilla.</p>
+
+							<p>La vida suelta la rienda<br>en su acostumbrado error:<br>suspira por el dolor, <br>y en el obrar no se enmienda.</p>
+
+							<p>Puestos entre dos extremos,<br>en cualquiera peligramos:<br>si esperas, no la enmendamos;<br>si te vengas, nos perdemos.</p>
+
+							<p>De la aflicción el quebranto<br>nos obliga a la contricción;<br>y en pasando la aflicción,<br>se olvida también el llanto.</p>
+
+							<p>Cuando tu castigo empieza,<br>promete el temor humano;<br>y en suspendiendo la mano,<br>no se cumple la promesa.</p>
+
+							<p>Cuando nos hieres, clamamos<br>que el perdón nos des, que puedes;<br>y así que nos lo concedes,<br>otra vez te provocamos.</p>
+
+							<p>Tienes a la humana gente<br>convicta en su confesión, <br>que si no le das perdón, <br>la acabarás justamente.</p>
+
+							<p>Concede al humilde ruego<br>sin mérito a quien criaste,<br>tú que de nada formaste<br>a quien te rogara luego. </p>
+
+						</div>
+						
+						<h2 class="subTitle2 verde"><em>Romance en que expresa los efectos del amor divino, y propone morir amante, a pesar de todo riesgo.</em></h2>
+						<div class="content-text">
+							<p>Traigo conmigo un cuidado,<br>y tan esquivo, que creo<br>que, aunque sé sentirlo tanto,<br>aun yo misma no lo siento.</p>
+							
+							<p>Es amor, pero es amor<br>que, faltándole lo ciego,<br>los ojos que tiene son<br>para darle más tormento.</p>
+
+							<p>El término no es a quo,<br>que causa el pesar que veo:<br>que siendo el término el bien<br>todo el dolor es el medio.</p>
+
+							<p>Si es lícito, y aun debido<br>este cariño que tengo,<br>¿por qué me han de dar castigo<br>porque pago lo que debo?</p>
+
+							<p>¡Oh cuánta fineza, oh cuántos <br>cariños he visto tiernos!<br>Que amor que se tiene en Dios<br>es calidad sin opuestos.</p>
+
+							<p>De lo lícito no puede <br>hacer contrarios conceptos,<br>con que es amor que al olvido<br>no puede vivir expuesto.</p>
+
+							<p>Yo me acuerdo (¡oh nunca fuera!),<br>que he querido en otro tiempo<br>lo que pasó de locura<br>y lo que excedió de extremo;</p>
+
+							<p>más como era amor bastardo<br>y de contrarios compuesto,<br>fue fácil desvanecerse<br>de achaque de su ser mesmo.</p>
+
+							<p>Mas ahora (¡ay de mí!) está <br>tan en su natural centro,<br>que la virtud y razón<br>son quien aviva su incendio.</p>
+
+							<p>Quien tal oyere, dirá <br>que si es así ¿por qué peno?<br>Más mi corazón ansioso<br>dirá que por eso mesmo.</p>
+
+							<p>¡Oh humana flaqueza nuestra,<br>adonde el más puro afecto<br>aun no sabe desnudarse<br>del natural sentimiento!</p>
+
+							<p>Tan precisa es la apetencia<br>que a ser amados tenemos,<br>que, aun sabiendo que no sirve,<br>nunca dejarla sabemos.</p>
+
+							<p>Que corresponda a mi amor,<br>nada añade; mas no puedo,<br>por más que lo solicito,<br>dejar yo de apetecerlo.</p>
+
+							<p>Si es delito, ya lo digo;<br>si es culpa, ya lo confieso;<br>mas no puedo arrepentirme,<br>por más que hacerlo pretendo.</p>
+
+							<p>Bien ha visto quien penetra<br>lo interior de mis secretos,<br>que yo misma estoy formando<br>los dolores que padezco;</p>
+
+							<p>bien sabe que soy yo misma<br>verdugo de mis deseos,<br>pues, muertos entre mis ansias,<br>tienen sepulcro en mi pecho.</p>
+
+							<p>Muero (¿quién lo creerá?) a manos<br>de la cosa que más quiero,<br>y el motivo de matarme<br>es el amor que le tengo.</p>
+
+							<p>Así alimentando, triste,<br>la vida con el veneno,<br>la misma muerte que vivo,<br>es la vida con que muero.</p>
+
+							<p>Pero valor, corazón:<br>porque en tan dulce tormento,<br>en medio de cualquier suerte<br>no dejar de amar protesto.</p>
+
+						</div>
+						
+						
+						<h2 class="subTitle2 verde"><em>Romance al mismo intento.</em></h2>
+						<div class="content-text">
+							<p>Mientras la Gracia me excita<br>por elevarse a la esfera,<br>más me abate a lo profundo<br>el peso de mis miserias.</p>
+							
+							<p>La virtud y la costumbre<br>en el corazón pelean,<br>y el corazón agoniza<br>en tanto que lidian ellas.</p>
+
+							<p>Y aunque es la virtud tan fuerte,<br>temo que tal vez la venzan.<br>que es muy grande la costumbre<br>y está la virtud muy tierna.</p>
+
+							<p>Obscurécese el discurso<br>entre confusas tinieblas;<br>pues ¿quién podrá darme luz<br>si está la razón a ciegas?</p>
+
+							<p>De mí misma soy verdugo<br>y soy cárcel de mí mesma.<br>¿quién vio que pena y penante<br>una propia cosa sean?</p>
+
+							<p>Hago disgusto a lo mismo<br>que más agradar quisiera;<br>y del disgusto que doy,<br>en mí resulta la pena.</p>
+
+							<p>Amo a Dios y siento en Dios;<br>y hace mi voluntad mesma<br>de lo que es alivio, cruz;<br>del mismo puerto, tormenta.</p>
+
+							<p>Padezca, pues Dios lo manda,<br>mas de tal manera sea,<br>que si son penas las culpas,<br>que no sean culpas las penas.</p>
+
+							
+						</div>
+						
+					</div>
+					
+					<div class="slides slide"></div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		
+		<footer>
+   			<div class="main-container main-container-flex main-container-home">
+				<p class="brand-palabras">Palabras rodantes</p>
+				<h1 class="brand footer-brand">Comfama</h1>    
+   			</div>
+   			<div class="copyright">
+				<p>Todos los derechos reservados. Consulta nuestros Términos y condiciones y Política de privacidad.</p>
+			</div>
+		</footer>
+    
+    	<script>
+			window.createMenu('13');    
+		</script>
+		
+	</body>
+	
+</html>

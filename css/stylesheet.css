@@ -1,0 +1,767 @@
+
+body,html{
+    font-family: 'CrimsonText-Roman';
+    font-size: 22px;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+.columna {
+    flex: 50%;
+}
+
+.row {
+    display: flex;
+}
+
+strong{
+    font-family: 'crimson_textsemibold';
+}
+
+h2 sup{
+    font-size: 0.35em;
+}
+
+
+sup {
+    cursor: pointer;
+    vertical-align: super;
+    font-size: 0.7em;
+}
+
+.footnote{
+	cursor: pointer;
+}
+
+/*===================================0
+            HEADER
+=====================================*/
+
+.brand{
+    text-indent: -10000px;
+    background: url(../img/logo.png) no-repeat;
+    width: 159px;
+    height: 27px;
+    margin: 0 auto;
+}
+
+header{
+    background: rgba(26,26,26,0.9);
+    padding: 4px 30px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    z-index: 99;
+}
+
+.botonA{
+    width: 60px;
+    height: 60px;
+    justify-content: flex-end;
+    cursor:pointer;
+     
+}
+
+.botonAc{
+    width: 168px;
+    height: 47px;
+    justify-content: flex-end;
+    cursor:pointer;
+    background-image: url(../img/acercaBtn.png);
+     
+}
+
+.botonHome {
+    width: 60px;
+    height: 60px;
+    justify-content:space-between;
+    cursor: pointer;
+}
+
+.biggerFont{
+    margin-right: 5%;
+    margin-left: 17%;
+    margin-top: 40%;
+    
+}
+
+.resetFont{
+    
+    margin-left: 28.5%;
+    margin-top: -90%;
+    
+}
+
+.smallerFont{
+    
+    margin-left: 30%;
+    margin-bottom: 4%;
+    
+}
+
+.amarillo{
+    margin-top: 20%;
+    margin-left: 4%;
+}
+
+.blanco{
+    margin-top: 20%;
+    margin-left: 16%
+}
+
+.morado{
+    margin-top: 20%;
+    margin-left: 4%;
+}
+
+
+
+/*===================================0
+            FONDOS BODY
+=====================================*/
+.bg-book1 {
+    background:  url(../img/motivo-morado.png);
+}
+
+.bg-book2 {
+    background: url(../img/motivo-cafe.png);
+}
+
+.bg-book3 {
+    background: url(../img/motivo-verde.png);
+}
+
+.bg-book4 {
+    background: url(../img/motivo-rojo.png);
+}
+
+.bg-book5 {
+    background: url(../img/motivo-azul.png);
+}
+
+.bg-book7 {
+    background: url(../img/motivo_caf.png);
+}
+
+.bg-book9 {
+
+    background: url(../img/motivo-azulOscuro.png);
+}
+
+.bg-book8 {
+
+
+    background: url(../img/motivo-cafecito.png);
+
+}
+
+.bg-book9 {
+
+
+    background: url(../img/motivo-cafe1.png);
+
+}
+
+.bg-book6 {
+    background: url(../img/motivoac.png);
+    background-position: center;
+    background-repeat:round
+}
+
+.bg_themes1{
+	background-repeat: repeat;
+	background-image: url(../img/motivo_2.png);
+}
+/*===================================0
+/*===================================
+            GENERALES
+=====================================*/
+.main-container{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.main-container-home{
+   padding: 20px 40px;
+   justify-content: space-around;
+   align-items: center; 
+}
+
+.main-container-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.global-container{
+    background-color: #FFFFFF;
+    max-width: 1023px;
+    margin: 0 auto;
+    padding: 5% 0;
+    margin-bottom: 5%;
+    padding-top:15%;
+    
+}
+
+.text-align-right{
+    text-align: right;
+}
+
+.text-align-center{
+    text-align: center;
+	font-size: .8em;
+}
+
+.oswald-light{
+    font-family: 'oswaldlight';
+   
+}
+
+.oswald-med{
+    font-family: 'oswaldmedium';
+}
+
+.slide{
+    display: none;
+}
+
+.slideHeader{
+    position: absolute;
+    right: 30px;
+    top:80px;
+    display: none;
+    background-image:url("../img/opciones.png");
+    width: 178px;
+    height: 214px;
+    
+}
+
+
+
+/*===================================0
+            imágenes
+=====================================*/
+.img-fluid {
+    width: 100%;
+    margin: 5% 0;
+}
+
+.img-fluid-80{
+   width: 80%;
+   margin: 5% auto;
+   display: block;
+}
+
+.img-fluid-50{
+   width: 50%;
+   margin: 5% auto;
+   display: block;
+    margin-bottom: 17%;
+
+}
+
+.img-fluid-30{
+   width: 30%;
+   margin: 5% auto;
+   display: block;
+   margin-bottom: 8%;
+
+}
+
+/*===================================0
+            TITULOS
+=====================================*/
+.main-title, .main-presentation-title{
+    font-family: 'oswaldmedium';
+    font-size: 4em;
+    color: #8E278A;
+    margin: 3% 0;
+    text-align: center;
+    
+}
+
+.section-title, .presentation-title{
+    font-family: 'oswaldmedium';
+    font-size: 2em;
+    color: #FF8e1e;
+    text-align: right;
+    margin-top: 10%;
+}
+
+.presentation-title{
+    font-size: 2em;
+}
+
+.chapter-title, .chapter-title1{
+    font-family: 'oswaldregular';
+    font-size: 3em;
+    color: #8E278A;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+
+.story-title{
+    font-family: 'crimson_textsemibold';
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+
+.story-title-acto3{
+    font-family: 'crimson_textsemibold';
+    text-align: center;
+    margin-top: -13%;
+    margin-bottom: 20%;
+}
+
+.title1{
+	text-transform: uppercase;
+}
+
+.naranja {
+    font-size: 1em;
+    color: #EA6020;
+}
+
+.naranjaOs{
+    color: #EA6020;
+}
+
+.cafe {
+
+    color: #B36D31;
+}
+
+.verde {
+    color: #006E48;
+}
+
+.verdeP {
+    color: #009F79;
+}
+
+.azul {
+    color: #6da5a8;
+}
+
+.amarilloL {
+    color: #EEAA1E;
+}
+
+.azulOscuro {
+    color: #10295b;
+}
+
+.azulClaro {
+    color: #0063a4;
+}
+
+.main-credits{
+    text-align: center;
+    margin-top: 5%;
+}
+
+/*===================================0
+            MENU
+=====================================*/
+.menu{
+    width: 100%;
+    display: block;
+}
+.invisibleMenu{
+    width: 20%;
+    
+    
+}
+
+.menu ul{
+    padding: 10%;
+    font-family: 'oswaldlight';
+    display: none;
+    background-color: #fff;
+}
+
+.menu-item, #presentation-button, .menu-download{
+    border-bottom: 1px solid #8e278a;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-item p, #presentation-button, .menu-download{
+    padding: 15px 10px;
+}
+
+.menu-item div{
+    width: 0px;
+    height: 4px;
+    background: #2b142a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.menu li:hover{
+    background-color: #8e278a;
+    color: #fff;
+}
+
+.menu-selected{
+    color: #fff;
+    background-color: #8e278a;
+}
+
+.mobile-menu{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #8e278a;
+    padding: 10px;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 70px;
+    font-family: 'oswaldmedium';
+}
+/*===================================0
+            TEXTOS
+=====================================*/
+
+.content-container{
+    padding: 0 15% 10% 5%;
+    /*margin-left: 25%;*/
+    width: 80%;
+}
+
+.content-text{
+    margin-top: 10%;
+    line-height: 1.4;
+}
+
+.first-paragraph::first-letter{
+    float: left;
+      font-size: 80px;
+      font-family: 'oswaldmedium';
+      color: #ff8e1e;
+      padding: 5px 0px;
+      margin: 40px 10px 45px 0; 
+      border-radius: 5px;
+      line-height: 1;
+    
+    
+}
+
+.first-paragraph1{
+    font-size: 5em;
+    line-height: 0;
+    font-family: 'oswaldmedium';
+    color: #ff8e1e;
+    
+}
+
+.columna p{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    line-height: 1.4;
+    font-size: 21px;
+}
+
+.content-text p{
+    margin-bottom: 5%;
+}
+
+.leerMas {
+    font-family: 'oswaldmedium';
+    font-size: 30px;
+    text-align: center;
+    color: #8E278A;
+    margin: 0 auto !important;
+    padding-top: 5%;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url(../img/btnLect.png);
+    background-repeat: no-repeat;
+    max-width: 305px;
+    max-height: 100px;
+}
+
+.leerMas1{
+	background-image: none;
+	border-radius: 20px 20px 20px 20px;
+    width: 305px;
+    height: 100px;
+	box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.38);
+}
+
+.italic-text, em{
+    font-family: 'crimson_textitalic';
+}
+
+.semibold-text{
+    font-family: 'crimson_textsemibold';
+}
+
+.text-center{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.text-center p{
+    margin-bottom: 5%;
+}
+
+.resaltado{
+    color: #B36D31;
+    font-size: 38px;
+    background-image: url(../img/comillas.png);
+    text-align: center;
+    background-repeat: no-repeat;
+    width: 80%;
+    margin-left: 55px;
+    margin-top: 10px;
+    font-family: 'oswaldregular';
+    
+}
+
+.p_center{
+	text-align: center;
+	margin-bottom: 0;
+}
+
+
+/*===================================0
+            LINEAS
+=====================================*/
+  
+.line-separator{
+    width: 20%;
+    margin: 0 auto;
+}
+
+
+.line-orange{
+    border: 1px solid #ff8e1e;
+    margin-top: 6%;
+}
+
+.line{
+    border: 1px solid #ff8e1e;
+    margin-top: 6%;
+}
+.line-title{
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+/*===================================0
+            CUENTO 9
+=====================================*/
+.cuento9_ganadores{
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.cuento9_ganadores h3{
+    font-family: 'crimson_textsemibold';
+}
+
+.cuento9_ganadores ol{
+    list-style: decimal;
+}
+
+.cuento9_number{
+    margin-bottom: 0!important;
+    font-family: 'oswaldmedium';
+}
+
+.cuento9_title{
+    font-family: 'oswaldregular';
+}
+
+.cuento9_title span{
+    font-family: 'oswaldmedium';
+}
+
+.general-list{
+	padding-left: 20px;
+}
+/*===================================0
+            FOOTER
+=====================================*/
+footer{
+    background: #5f0641;
+}
+
+.footer-brand{
+    margin: 0;
+}
+
+.brand-super{
+    background: url(../img/logoSub.png) no-repeat;
+    text-indent: -10000px; 
+    width: 24px;
+    height: 200px;
+    float: right;
+    margin-top: -210px
+   
+    
+    
+    
+}
+
+.brand-palabras{
+    background: url(../img/logo1.png) no-repeat;
+    text-indent: -10000px;
+    width: 510px;
+    height: 100px;
+    
+}
+.copyright{
+    background: rgba(255,255,255,0.9);
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+/*===================================
+            PRESENTACIÓN
+=====================================*/
+.presentation{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    color: #fff;
+    display: none;
+}
+
+.presentation-container{
+    background-color: rgb(95, 6, 65);
+    height: 100%;
+    padding: 3% 15%;
+    position: relative;
+}
+
+
+.presentation-title{
+    color: #fff;
+    
+}
+
+
+.main-presentation-title{
+    color: #ff8e1e;
+    margin-bottom: 10%;
+}
+
+.presentation p{
+    margin-bottom: 5%;
+    line-height: 1.4;
+}
+
+.presentation-scroll{
+    overflow-y: scroll;
+    height: 100%;
+    width: 125%;
+    padding-right:  5%;
+    position: relative;
+}
+
+.presentation-scroll::-webkit-scrollbar {
+    width: 0.2em;
+    background-color: #fff;
+}
+ 
+
+.presentation-scroll::-webkit-scrollbar-thumb {
+  background-color: #ff8e1e;
+  height: 100px;
+  width: 0.5em;
+  outline: 1px solid slategrey;
+}
+
+#presentation-close{
+    text-indent: -10000px;
+    position: absolute;
+    top: 2%;
+    right: 3%;
+    cursor: pointer;
+    background: url(../img/cerrar.png) no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.final-notes{
+	padding: 20px 0 0 20px;
+}
+
+.final-notes h1, .final-notes span, sup{
+	font-family: 'oswaldmedium';
+	color: #009f79;
+}
+
+.final-notes h1{
+	font-size: 1.3em;
+}
+
+.final-notes span{
+	font-size: 0.8em;
+}
+
+/*===================================0
+            RESPONSIVE
+=====================================*/
+
+@media (max-width: 970px){
+    .content-container{
+        width: 100%;
+        padding: 5%;
+    }
+    .menu{
+        display: none;
+        width: 100%;
+    }
+    .menu ul{
+        padding: 3%;
+    }
+    
+    .botonAc{
+        width: 41px;
+        height: 41px;
+        justify-content: flex-end;
+        cursor:pointer;
+        background-image: url(../img/btnAcer.png);
+    }
+    
+    .brand-palabras{
+        background: url(../img/logo12.png) no-repeat;
+        text-indent: -10000px;
+        width: 300px;
+        height: 59px;
+    
+    }
+    
+}
+
+@media (max-height: 700px){
+    .invisibleMenu ul{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 550px;
+    }
+    
+}
+
