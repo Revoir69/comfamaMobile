@@ -430,7 +430,7 @@ header{
     display: none;
     cursor: pointer;
     position: fixed;
-    top: 70px;
+    bottom: 0;
     font-family: 'oswaldmedium';
 }
 /*===================================0
