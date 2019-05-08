@@ -487,7 +487,6 @@ header{
     text-align: center;
     color: #8E278A;
     margin: 0 auto !important;
-    padding-top: 5%;
     text-decoration: none;
     cursor: pointer;
     background-image: url(../img/btnLect.png);
@@ -756,12 +755,17 @@ footer{
     
 }
 
-@media (max-height: 700px){
+@media (max-height: 900px){
     .invisibleMenu ul{
         overflow-x: hidden;
         overflow-y: scroll;
         height: 550px;
     }
+  
+  .main-title, .main-presentation-title{
+    font-size: 2.8em;
+    margin-top: 7%;
+}
     
 }
 
