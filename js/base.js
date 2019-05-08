@@ -5,10 +5,10 @@ $(document).ready(function(){
     
     $(".leerMas").click(function(){
         
-            $(".slide").slideDown(200, function(){
+            $(".slide").slideDown(600, function(){
                 window.createHeights();    
             });
-            $(".menu ul").slideDown(500);
+            $(".menu ul").slideDown(1300);
         
             if(window.innerWidth <= 970){
                 $('.mobile-menu').show();

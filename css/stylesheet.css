@@ -430,9 +430,8 @@ header{
     display: none;
     cursor: pointer;
     position: fixed;
-    bottom: 0;
+    top: 70px;
     font-family: 'oswaldmedium';
-    z-index: 999;
 }
 /*===================================0
             TEXTOS
@@ -736,6 +735,7 @@ footer{
     }
     .menu ul{
         padding: 3%;
+        height: 3000px;
     }
     
     .botonAc{
@@ -760,7 +760,7 @@ footer{
     .invisibleMenu ul{
         overflow-x: hidden;
         overflow-y: scroll;
-        position: absolute;
+        
     }
   
   .main-title, .main-presentation-title{
